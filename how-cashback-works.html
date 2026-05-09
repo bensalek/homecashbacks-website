@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>How Buyer Cashback Works in Ontario | HomeCashbacks</title>
+<meta name="description" content="Buyer cashback is legal in Ontario. Learn how the commission flows, how much you get back, and why most realtors don't offer it. Serving Toronto and GTA."/>
+<meta name="keywords" content="buyer cashback Ontario, how cashback works real estate, cashback realtor Toronto, real estate commission cashback GTA"/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://homecashbacks.ca/how-cashback-works.html"/>
+<meta property="og:title" content="How Buyer Cashback Works in Ontario | HomeCashbacks"/>
+<meta property="og:description" content="The commission was always your money. Here is how you get it back."/>
+<meta property="og:url" content="https://homecashbacks.ca/how-cashback-works.html"/>
+<meta property="og:type" content="article"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#f0f4f8;--bg2:#e2eaf2;--bg3:#ccd8e8;
+  --ink:#1a2332;--ink2:#2d3d52;
+  --muted:#5a6a82;--border:rgba(26,35,50,.1);
+  --white:#fff;
+  --amber:#e8a020;
+  --blue:#2563eb;
+  --red:#b83232;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;padding-top:118px}
+
+/* TOP BAR */
+.top-bar{position:fixed;top:0;left:0;right:0;z-index:600;background:#1a2332;height:58px;padding:0 1.5rem;display:flex;align-items:center;justify-content:center;gap:12px}
+.top-bar-phone{display:inline-flex;align-items:center;gap:5px;font-size:13px;color:rgba(255,255,255,.8);text-decoration:none;font-family:'Outfit',sans-serif}
+.top-bar-phone:hover{color:#fff}
+.top-bar-sep{width:1px;height:20px;background:rgba(255,255,255,.2)}
+.top-btn{display:inline-flex;align-items:center;gap:6px;padding:9px 22px;border-radius:4px;font-size:13px;font-weight:700;border:none;cursor:pointer;font-family:'Outfit',sans-serif;transition:opacity .2s;background:#e8a020;color:#1a2332}
+.top-btn:hover{opacity:.85}
+
+/* NAV */
+nav{position:fixed;top:58px;left:0;right:0;z-index:570;background:#f0f4f8;border-bottom:1px solid var(--border);height:60px;padding:0 2rem;display:flex;align-items:center;justify-content:space-between}
+.logo{text-decoration:none;display:flex;align-items:center}
+.nav-cred-wrap{display:flex;flex-direction:row;align-items:center;gap:.6rem;margin-left:.75rem}
+.nav-headshot{width:32px;height:32px;border-radius:50%;object-fit:cover;object-position:center top;border:2px solid #e8a020;flex-shrink:0}
+.nav-cred-wrap > div{display:flex;flex-direction:column;gap:1px}
+.nav-cred{font-size:11px;color:var(--muted);white-space:nowrap}
+.nav-cred-line2{font-size:10px;color:var(--muted);white-space:nowrap}
+.nav-links{display:flex;align-items:center;gap:4px;list-style:none}
+.nav-links a{font-size:13px;color:var(--muted);text-decoration:none;transition:color .2s;padding:6px 10px;border-radius:4px}
+.nav-links a:hover{color:var(--ink);background:rgba(26,35,50,.05)}
+.nav-item{position:relative}
+.nav-link-btn{font-size:13px;color:var(--muted);background:none;border:none;cursor:pointer;font-family:'Outfit',sans-serif;display:flex;align-items:center;gap:4px;padding:6px 10px;border-radius:4px;transition:all .15s}
+.nav-link-btn:hover{color:var(--ink);background:rgba(26,35,50,.05)}
+.nav-link-btn svg{width:10px;height:10px;transition:transform .2s}
+.nav-item:hover .nav-link-btn svg{transform:rotate(180deg)}
+.nav-pill{background:#e8a020!important;color:#1a2332!important;padding:7px 18px;border-radius:4px;font-weight:700!important}
+.dropdown{position:absolute;top:calc(100% + 8px);left:0;background:var(--white);border:1px solid var(--border);border-radius:6px;box-shadow:0 8px 24px rgba(26,35,50,.1);min-width:210px;padding:.4rem 0;opacity:0;visibility:hidden;transform:translateY(-4px);transition:all .15s;z-index:100}
+.nav-item:hover .dropdown{opacity:1;visibility:visible;transform:translateY(0)}
+.dropdown a{display:block;padding:.65rem 1rem;font-size:13px;color:var(--ink2);text-decoration:none;transition:background .1s;border-radius:0}
+.dropdown a:hover{background:var(--bg);color:var(--ink)}
+.dropdown-label{font-weight:500;font-size:13px;color:var(--ink)}
+.dropdown-sub{font-size:11px;color:var(--muted);margin-top:1px}
+.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
+.hamburger span{display:block;width:22px;height:2px;background:var(--ink);border-radius:2px;transition:all .25s}
+
+/* PAGE */
+.page-wrap{max-width:720px;margin:0 auto;padding:3.5rem 2rem 5rem}
+
+/* HERO */
+.page-hero{background:#1a2332;padding:4rem 2rem;text-align:center;position:relative;overflow:hidden}
+.page-hero::before{content:'';position:absolute;top:-40px;right:-40px;width:220px;height:220px;border-radius:50%;border:40px solid rgba(37,99,235,.1)}
+.page-hero-eyebrow{font-size:11px;font-weight:600;letter-spacing:1.4px;text-transform:uppercase;color:var(--amber);margin-bottom:1rem}
+.page-hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(32px,5vw,50px);font-weight:600;color:#fff;line-height:1.1;margin-bottom:1rem}
+.page-hero h1 em{font-style:italic;color:#e8edf5}
+.page-hero-sub{font-size:16px;color:rgba(232,237,245,.5);max-width:480px;margin:0 auto}
+
+/* SECTIONS */
+.section{padding:3rem 0;border-bottom:1px solid var(--border)}
+.section:last-of-type{border-bottom:none}
+.section-label{font-size:10px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:var(--amber);margin-bottom:.6rem}
+.section h2{font-family:'Cormorant Garamond',serif;font-size:clamp(24px,3.5vw,32px);font-weight:600;color:var(--ink);line-height:1.2;margin-bottom:1.1rem}
+.section p{font-size:15px;color:#2d3d52;line-height:1.75;margin-bottom:1rem}
+.section p:last-child{margin-bottom:0}
+
+/* STEPS */
+.steps{display:flex;flex-direction:column;gap:0;margin-top:1.5rem}
+.step{display:grid;grid-template-columns:48px 1fr;gap:1rem;padding:1.25rem 0;border-bottom:1px solid var(--border)}
+.step:last-child{border-bottom:none}
+.step-num{font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:600;color:var(--bg3);line-height:1;padding-top:2px}
+.step-body{}
+.step-title{font-size:16px;font-weight:600;color:var(--ink);margin-bottom:.3rem}
+.step-text{font-size:14px;color:var(--muted);line-height:1.65}
+
+/* EXAMPLE */
+.example-box{background:var(--white);border:1px solid var(--border);border-radius:6px;overflow:hidden;margin-top:1.5rem}
+.example-header{background:#1a2332;padding:1rem 1.5rem;display:flex;justify-content:space-between;align-items:baseline}
+.example-header span{font-size:12px;color:rgba(255,255,255,.4);letter-spacing:.5px;text-transform:uppercase}
+.example-header strong{font-family:'Cormorant Garamond',serif;font-size:22px;color:#fff;font-weight:600}
+.example-row{display:flex;justify-content:space-between;align-items:baseline;padding:.85rem 1.5rem;border-bottom:1px solid var(--border);font-size:14px}
+.example-row:last-child{border-bottom:none}
+.example-row-label{color:var(--muted)}
+.example-row-val{font-weight:500;color:var(--ink)}
+.example-row-val.strike{text-decoration:line-through;color:var(--muted);font-weight:400}
+.example-row-val.amber{color:var(--amber);font-size:18px;font-family:'Cormorant Garamond',serif;font-weight:600}
+.example-row.highlight{background:#fef3dc}
+.example-note{font-size:12px;color:var(--muted);padding:.75rem 1.5rem;background:var(--bg);border-top:1px solid var(--border)}
+
+/* CASHBACK SLIDER */
+.slider-section{background:#1a2332;padding:2.75rem 2rem}
+.slider-inner{max-width:780px;margin:0 auto}
+.slider-eyebrow{font-size:11px;font-weight:500;letter-spacing:1.2px;text-transform:uppercase;color:#e8a020;margin-bottom:.4rem}
+.slider-title{font-family:'Cormorant Garamond',serif;font-size:clamp(22px,3.2vw,32px);font-weight:600;color:#e8edf5;margin-bottom:.3rem;line-height:1.15}
+.slider-sub{font-size:15px;color:rgba(232,237,245,.45);margin-bottom:1.5rem}
+.slider-price-label{font-size:13px;color:rgba(232,237,245,.5);margin-bottom:.5rem}
+.slider-price-label b{color:#e8a020;font-size:17px}
+input[type=range]{width:100%;-webkit-appearance:none;appearance:none;height:4px;border-radius:4px;background:rgba(232,237,245,.15);outline:none;cursor:pointer;margin-bottom:.4rem}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;border-radius:50%;background:#e8a020;cursor:pointer;border:2px solid #1a2332}
+input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;background:#e8a020;cursor:pointer;border:2px solid #1a2332}
+.slider-ticks{display:flex;justify-content:space-between;margin-bottom:1.5rem}
+.slider-tick{font-size:10px;color:rgba(232,237,245,.25)}
+.cb-layout{display:grid;grid-template-columns:175px 1fr;gap:1.1rem;align-items:center;margin-bottom:1rem}
+.cb-main{background:rgba(232,160,32,.1);border:1px solid rgba(232,160,32,.25);border-radius:4px;padding:1.25rem;text-align:center}
+.cb-main-label{font-size:10px;font-weight:500;letter-spacing:.8px;text-transform:uppercase;color:rgba(232,237,245,.45);margin-bottom:.4rem}
+.cb-main-num{font-family:'Cormorant Garamond',serif;font-size:38px;font-weight:600;color:#e8a020;line-height:1;margin-bottom:.3rem}
+.cb-main-sub{font-size:11px;color:rgba(232,237,245,.35);line-height:1.4}
+.cb-cards-two{display:flex;align-items:center;gap:.75rem}
+.cb-or{font-size:11px;font-weight:500;letter-spacing:1px;color:rgba(232,237,245,.35);flex-shrink:0;text-transform:uppercase}
+.cb-card{flex:1;background:rgba(232,237,245,.05);border:1px solid rgba(232,237,245,.1);border-radius:4px;padding:1rem;text-align:center}
+.cb-card-num{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;color:#e8edf5;line-height:1.1;margin-bottom:.2rem}
+.cb-card-label{font-size:11px;color:rgba(232,237,245,.45);line-height:1.35}
+.slider-note{font-size:11px;color:rgba(232,237,245,.28);line-height:1.5}
+
+/* LEGAL BOX */
+.legal-box{background:var(--white);border-left:3px solid var(--blue);border-radius:0 6px 6px 0;padding:1.25rem 1.5rem;margin-top:1.5rem}
+.legal-box p{font-size:14px;color:var(--ink2);line-height:1.7;margin:0}
+.legal-box strong{color:var(--ink);font-weight:600}
+
+/* WHY BOX */
+.why-box{background:#fff8ec;border:1px solid rgba(232,160,32,.2);border-radius:6px;padding:1.5rem;margin-top:1.5rem}
+.why-box p{font-size:14px;color:var(--ink2);line-height:1.75;margin:0}
+
+/* FAQ */
+.faq-list{margin-top:1.5rem;display:flex;flex-direction:column;gap:6px}
+.faq-item{background:var(--white);border:1px solid var(--border);border-radius:4px;overflow:hidden}
+.faq-q{display:flex;justify-content:space-between;align-items:flex-start;padding:.9rem 1.1rem;cursor:pointer;gap:12px}
+.faq-q-text{font-size:14px;font-weight:500;color:var(--ink);line-height:1.4}
+.faq-icon{font-size:16px;color:var(--muted);flex-shrink:0;transition:transform .25s}
+.faq-item.open .faq-icon{transform:rotate(45deg)}
+.faq-a{display:none;padding:.5rem 1.1rem 1rem;font-size:14px;color:var(--muted);line-height:1.7;border-top:1px solid var(--border)}
+.faq-item.open .faq-a{display:block}
+
+/* CTA */
+.cta-block{background:#1a2332;border-radius:6px;padding:2.5rem 2rem;text-align:center;margin-top:3rem}
+.cta-block h3{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:600;color:#fff;margin-bottom:.5rem}
+.cta-block p{font-size:14px;color:rgba(232,237,245,.5);margin-bottom:1.5rem;line-height:1.6}
+.cta-btn{background:#e8a020;color:#1a2332;padding:13px 30px;border-radius:4px;font-size:15px;font-weight:700;border:none;cursor:pointer;font-family:'Outfit',sans-serif;display:inline-block;text-decoration:none;transition:opacity .2s}
+.cta-btn:hover{opacity:.88}
+
+/* FOOTER */
+footer{background:#1a2332;padding:2rem;text-align:center;margin-top:0}
+.foot-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1.5rem;max-width:1100px;margin:0 auto 1.5rem;text-align:left}
+.foot-agent{display:flex;align-items:center;gap:.75rem}
+.foot-headshot{width:52px;height:52px;border-radius:50%;object-fit:cover;object-position:center top;border:2px solid #e8a020;flex-shrink:0}
+.foot-agent-name{color:#fff;font-weight:600;font-size:15px}
+.foot-agent-title{color:rgba(255,255,255,.5);font-size:11px;line-height:1.5;margin-top:2px}
+.foot-agent-badge{display:inline-block;background:rgba(232,160,32,.15);color:#e8a020;font-size:10px;padding:2px 8px;border-radius:20px;margin-top:4px;border:1px solid rgba(232,160,32,.3)}
+.foot-links{display:flex;flex-direction:column;gap:.4rem}
+.foot-links a{color:rgba(255,255,255,.55);font-size:13px;text-decoration:none;transition:color .2s}
+.foot-links a:hover{color:#e8a020}
+.foot-cta{display:flex;flex-direction:column;align-items:flex-start;gap:.4rem}
+.foot-cta-btn{background:#e8a020;color:#1a2332;border:none;padding:.6rem 1.4rem;border-radius:6px;font-weight:700;font-size:14px;cursor:pointer;transition:background .2s}
+.foot-cta-btn:hover{background:#f0b030}
+.foot-cta-sub{color:rgba(255,255,255,.35);font-size:11px}
+.foot-bottom{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.75rem;max-width:1100px;margin:0 auto;padding-top:1rem;border-top:1px solid rgba(255,255,255,.1);font-size:12px;color:rgba(255,255,255,.3)}
+.foot-social-link{color:rgba(255,255,255,.4);text-decoration:none;font-size:12px;transition:color .2s}
+.foot-social-link:hover{color:#e8a020}
+.foot-logo{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;color:#fff;margin-bottom:.4rem}
+footer p{font-size:12px;color:rgba(255,255,255,.3);line-height:1.8}
+footer a{color:#e8a020;text-decoration:none}
+.foot-disclaimer{font-size:10px;color:rgba(255,255,255,.18)!important;line-height:1.6!important;max-width:700px;margin:.9rem auto 0!important;border-top:1px solid rgba(255,255,255,.08);padding-top:.9rem}
+
+/* MOBILE */
+@media(max-width:680px){
+  body{padding-top:118px}
+  nav{padding:0 1rem}
+  .nav-links{display:none;position:fixed;top:118px;left:0;right:0;background:#f0f4f8;border-bottom:1px solid var(--border);flex-direction:column;gap:0;padding:0;z-index:569;overflow:hidden}
+  .nav-links.open{display:flex}
+  .nav-links li{width:100%}
+  .nav-links a{display:block;padding:.85rem 1.5rem;font-size:16px;color:var(--ink);border-bottom:1px solid var(--border);background:none}
+  .nav-link-btn{width:100%;text-align:left;padding:.85rem 1.5rem;font-size:16px;color:var(--ink);border-bottom:1px solid var(--border);border-radius:0}
+  .dropdown{position:static;opacity:1;visibility:hidden;transform:none;box-shadow:none;border:none;border-radius:0;max-height:0;overflow:hidden;transition:max-height .25s,visibility .25s;padding:0}
+  .nav-item.open .dropdown{visibility:visible;max-height:200px}
+  .dropdown a{padding:.7rem 2rem;font-size:15px;border-bottom:1px solid var(--border);background:#f8fafc}
+  .dropdown-sub{display:none}
+  .nav-pill{background:#e8a020!important;color:#1a2332!important;margin:.5rem 1rem;border-radius:4px;text-align:center;font-weight:700!important;display:block;padding:.85rem 1.5rem!important}
+  .hamburger{display:flex}
+  .nav-cred{display:block;font-size:10px}
+  .nav-cred-line2{display:block}
+  .slider-section{padding:2.25rem 1.25rem}
+  .cb-layout{grid-template-columns:1fr}
+  .cb-cards-two{flex-direction:row}
+  .page-hero{padding:3rem 1.25rem}
+  .page-wrap{padding:2rem 1.25rem 4rem}
+  .example-header{flex-direction:column;gap:.25rem}
+  .logo svg{width:110px;height:22px}
+}
+
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(28,25,22,.6);z-index:900;align-items:center;justify-content:center;padding:1.5rem}
+.modal-overlay.open{display:flex}
+.modal{background:#fff;border-radius:6px;padding:2.25rem;max-width:420px;width:100%;position:relative;animation:mIn .22s ease}
+@keyframes mIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.modal-close{position:absolute;top:1rem;right:1rem;width:30px;height:30px;border-radius:50%;background:#e2eaf2;border:none;cursor:pointer;font-size:15px;color:#5a6a82;display:flex;align-items:center;justify-content:center}
+.modal-tag{font-size:10px;font-weight:500;letter-spacing:1px;text-transform:uppercase;color:#5a6a82;margin-bottom:.4rem}
+.modal-title{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:600;color:#1a2332;margin-bottom:.25rem}
+.modal-sub{font-size:15px;color:#5a6a82;margin-bottom:1.4rem;line-height:1.5}
+.f-field{margin-bottom:.9rem}
+.f-label{font-size:12px;font-weight:500;color:#1a2332;margin-bottom:.3rem;display:block}
+.f-input{width:100%;padding:10px 13px;border:1.5px solid #ccd8e8;border-radius:4px;font-size:14px;font-family:'Outfit',sans-serif;color:#1a2332;background:#f0f4f8;outline:none;transition:border-color .2s}
+.f-input:focus{border-color:#1a2332}
+.f-input.err{border-color:#b83232}
+.f-note{font-size:11px;color:#5a6a82;margin-top:.4rem;padding:7px 10px;border-radius:4px;background:#fef9ec}
+.f-error{font-size:11px;color:#b83232;margin-top:.3rem;padding:6px 10px;background:#fef2f2;border-radius:3px;border-left:2px solid #b83232;display:none}
+.f-error.show{display:block!important}
+.f-consent{font-size:11px;color:#5a6a82;line-height:1.5;margin-top:.6rem}
+.f-consent a{color:#2563eb;text-decoration:underline}
+.f-submit{width:100%;padding:14px;border-radius:4px;font-size:15px;font-weight:700;font-family:'Outfit',sans-serif;border:none;cursor:pointer;margin-top:.75rem;background:#e8a020;color:#1a2332;transition:opacity .2s}
+.f-submit:hover{opacity:.88}
+.f-success{display:none;text-align:center;padding:1.25rem 0}
+.f-success-icon{font-size:36px;margin-bottom:.6rem}
+.f-success h3{font-family:'Cormorant Garamond',serif;font-size:21px;color:#1a2332;margin-bottom:.3rem}
+.f-success p{font-size:13px;color:#5a6a82}
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+  <a href="tel:4374437556" class="top-bar-phone">
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1.25h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.84a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16.92z"/></svg>
+    (437) 443-7556
+  </a>
+  <div class="top-bar-sep"></div>
+  <button class="top-btn" onclick="openModal()">Book Free Showing</button>
+</div>
+
+<!-- NAV -->
+<nav>
+  <a class="logo" href="/">
+    <svg width="155" height="28" viewBox="0 0 190 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="32" height="32" rx="6" fill="#1a2332" y="2"/>
+      <path d="M9 22 L16 12 L23 22" stroke="#e8a020" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <path d="M16 12 L23 12" stroke="#e8a020" stroke-width="2" stroke-linecap="round"/>
+      <path d="M23 12 L23 19" stroke="#e8a020" stroke-width="2" stroke-linecap="round"/>
+      <text x="42" y="22" font-size="17" font-weight="500" fill="#1a2332" font-family="Outfit,sans-serif" letter-spacing="-0.5">Home<tspan fill="#e8a020" font-weight="700">Cashbacks</tspan></text>
+    </svg>
+  </a>
+  <div class="nav-cred-wrap">
+    <img src="headshot.webp" alt="Laleh Mousavi" class="nav-headshot"/>
+    <div>
+      <span class="nav-cred">Laleh Mousavi, Realtor</span>
+      <span class="nav-cred-line2">Toronto Real Estate Realty Plus Inc.</span>
+    </div>
+  </div>
+  <ul class="nav-links" id="nav-links">
+    <li class="nav-item"><a href="how-cashback-works.html" style="color:var(--ink);font-weight:500">How It Works</a></li>
+    <li class="nav-item"><a href="our-story.html" onclick="closeMobMenu()">Our Story</a></li>
+    <li class="nav-item">
+      <button class="nav-link-btn" onclick="this.parentElement.classList.toggle('open')">Tools<svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 1l4 4 4-4"/></svg></button>
+      <div class="dropdown">
+        <a href="checklist.html" onclick="closeMobMenu()">
+          <div class="dropdown-label">Home Buyer Checklist</div>
+          <div class="dropdown-sub">5 phase guide to buying</div>
+        </a>
+        <a href="calculators.html" onclick="closeMobMenu()">
+          <div class="dropdown-label">Calculators</div>
+          <div class="dropdown-sub">Closing costs and monthly ownership</div>
+        </a>
+        <a href="offer-strategy.html" onclick="closeMobMenu()">
+          <div class="dropdown-label">Offer Strategy Tool</div>
+          <div class="dropdown-sub">Build your offer strategy</div>
+        </a>
+      </div>
+    </li>
+    <li class="nav-item"><a href="/#faq" onclick="closeMobMenu()">FAQ</a></li>
+    <li class="nav-item"><a href="#" class="nav-pill" onclick="openModal();closeMobMenu();return false">Free Showing</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" onclick="toggleMobMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<section class="page-hero">
+  <div class="page-hero-eyebrow">How it works</div>
+  <h1>The commission was<br>always yours.<br><em>Now you get it back.</em></h1>
+  <p class="page-hero-sub">Most buyers never see a cent of the buyer's agent commission. We think that's worth changing.</p>
+</section>
+
+<!-- MAIN CONTENT -->
+<div class="page-wrap">
+
+  <!-- HOW IT WORKS -->
+  <div class="section">
+    <div class="section-label">The simple version</div>
+    <h2>Three things happen when you buy a home</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">01</div>
+        <div class="step-body">
+          <div class="step-title">The seller sets aside a buyer's agent commission</div>
+          <div class="step-text">Typically 2 to 2.5% of the sale price, built into the listing before you make any offer. On a $1,000,000 home, that's up to $25,000.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <div class="step-body">
+          <div class="step-title">We take $4,999. You keep the rest.</div>
+          <div class="step-text">Traditional agents keep the full commission. We charge a flat $4,999 and send you everything above that. No negotiation, no fine print.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <div class="step-body">
+          <div class="step-title">Your cashback arrives 6 to 8 weeks after closing</div>
+          <div class="step-text">After closing, the commission flows through the brokerage. Once released, your cashback is sent to you directly.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CASHBACK SLIDER -->
+  <div class="section" style="padding:0;border-bottom:none">
+    <div class="slider-section">
+      <div class="slider-inner">
+        <div class="slider-eyebrow">Cashback calculator</div>
+        <div class="slider-title">See what your cashback could do</div>
+        <div class="slider-sub">Move the slider to your home price and see how much comes back to you.</div>
+        <div class="slider-price-label">Home price: <b id="slider-display">$900,000</b></div>
+        <input type="range" id="price-slider" min="400000" max="3000000" step="1" value="900000" oninput="updateCalc()"/>
+        <div class="slider-ticks">
+          <span class="slider-tick">$400K</span><span class="slider-tick">$900K</span><span class="slider-tick">$1.4M</span><span class="slider-tick">$1.9M</span><span class="slider-tick">$2.4M</span><span class="slider-tick">$3M</span>
+        </div>
+        <div class="cb-layout">
+          <div class="cb-main">
+            <div class="cb-main-label">Your cashback</div>
+            <div class="cb-main-num" id="calc-cashback">$17,501</div>
+            <div class="cb-main-sub">commission minus our $4,999 flat fee</div>
+          </div>
+          <div class="cb-cards-two">
+            <div class="cb-card">
+              <div class="cb-card-num" id="cv-mortgage">—</div>
+              <div class="cb-card-label">months of mortgage payments</div>
+            </div>
+            <div class="cb-or">OR</div>
+            <div class="cb-card">
+              <div class="cb-card-num" id="cv-closing">—</div>
+              <div class="cb-card-label">of your closing costs covered</div>
+            </div>
+          </div>
+        </div>
+        <div class="slider-note">Assumes 2.5% buyer's commission. Mortgage calc assumes 3.89%, 25yr. Estimates only.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LEGAL -->
+  <div class="section">
+    <div class="section-label">Fully legal in Ontario</div>
+    <h2>Yes, this is allowed. And it's in writing.</h2>
+    <p>Buyer cashback is permitted under TRESA (Trust in Real Estate Services Act, 2002) and regulated by RECO. All transactions at HomeCashbacks are processed through Toronto Real Estate Realty Plus Inc., a licensed brokerage. The cashback amount is formally disclosed in your transaction documents.</p>
+    <div class="legal-box">
+      <p><strong>Can a realtor walk it back after the deal closes?</strong> No. Your cashback is written into your representation agreement with the brokerage before we start working together. It is a contractual obligation, not a verbal promise. Once the deal closes and the commission is released, the brokerage processes the payment. There is no way to reverse it.</p>
+    </div>
+  </div>
+
+  <!-- WHY OTHERS DON'T -->
+  <div class="section">
+    <div class="section-label">A fair question</div>
+    <h2>Why don't other realtors offer this?</h2>
+    <p>No incentive. An agent who keeps the full commission earns $25,000 on a single GTA sale. One who offers cashback earns $4,999 for the same work. Most brokerages have no interest in changing that math.</p>
+    <div class="why-box">
+      <p>Today's buyers already do most of the work. You search on HouseSigma, shortlist on Realtor.ca, and often find the home before calling anyone. The commission model was built for a different era. We charge for what we actually do, and give back what we don't earn.</p>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div class="section">
+    <div class="section-label">Common questions</div>
+    <h2>What buyers ask us most</h2>
+    <div class="faq-list" id="faq-list"></div>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-block">
+    <h3>Ready to claim your cashback?</h3>
+    <p>First showing is free. No commitment, no paperwork, no pressure.</p>
+    <a class="cta-btn" href="/">Book a Free Showing</a>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot-inner">
+    <div class="foot-agent">
+      <img src="headshot.webp" alt="Laleh Mousavi" class="foot-headshot"/>
+      <div>
+        <div class="foot-agent-name">Laleh Mousavi</div>
+        <div class="foot-agent-title">Realtor · Toronto Real Estate Realty Plus Inc.<br>Registered with RECO · Serving Toronto &amp; GTA</div>
+        <div class="foot-agent-badge">Licensed in Ontario</div>
+      </div>
+    </div>
+    <div class="foot-links">
+      <a href="how-cashback-works.html">How It Works</a>
+      <a href="our-story.html">Our Story</a>
+      <a href="tel:4374437556">(437) 443-7556</a>
+      <a href="mailto:Laleh@homecashbacks.ca">Laleh@homecashbacks.ca</a>
+    </div>
+    <div class="foot-cta">
+      <button class="foot-cta-btn" onclick="openModal()">Book a Free Showing</button>
+      <span class="foot-cta-sub">No commitment · First showing free</span>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>&copy; 2026 HomeCashbacks. All rights reserved. &nbsp;|&nbsp; <a href="/privacy.html" style="color:#e8a020">Privacy Policy</a></span>
+    <div style="display:flex;align-items:center;gap:.75rem">
+      <a href="https://www.linkedin.com/company/homecashbacks/about/" target="_blank" rel="noopener" class="foot-social-link">LinkedIn</a>
+      <a href="https://www.instagram.com/homecashbacks/" target="_blank" rel="noopener" class="foot-social-link">Instagram</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+const FAQ=[
+  {q:'Do I have to do anything to receive the cashback?',a:'No. Once your transaction closes, the funds flow automatically through the brokerage. You don\'t need to submit a claim or request anything separately. We send your cashback to you once the brokerage releases the commission funds, which typically takes 6 to 8 weeks after closing.'},
+  {q:'What if the seller is only offering 2% commission?',a:'Your cashback is calculated on whatever commission the seller has offered. If the offer is 2%, your cashback would be 2% of the purchase price minus our $4,999 flat fee. We are upfront about this before you make any offer.'},
+  {q:'Does the cashback affect my mortgage approval?',a:'In some cases, lenders may ask about cashback if it is disclosed in the transaction. We recommend telling your mortgage broker early so they can account for it properly. It rarely creates issues, but transparency with your lender is important.'},
+  {q:'Is the cashback taxable?',a:'In most cases, buyer cashback is considered a reduction in your purchase price rather than income, which means it is generally not taxable. That said, tax situations vary and we always recommend confirming with a licensed accountant or tax advisor for your specific circumstances.'},
+];
+
+function renderFAQ(){
+  const el=document.getElementById('faq-list');
+  FAQ.forEach(f=>{
+    const item=document.createElement('div');item.className='faq-item';
+    item.innerHTML=`<div class="faq-q"><span class="faq-q-text">${f.q}</span><span class="faq-icon">+</span></div><div class="faq-a">${f.a}</div>`;
+    item.querySelector('.faq-q').onclick=()=>item.classList.toggle('open');
+    el.appendChild(item);
+  });
+}
+renderFAQ();
+
+function fmtC(n){return'$'+Math.round(n).toLocaleString();}
+function updateCalc(){
+  const price=parseInt(document.getElementById('price-slider').value);
+  const cb=Math.max(0,price*0.025-4999);
+  document.getElementById('slider-display').textContent=fmtC(price);
+  document.getElementById('calc-cashback').textContent=fmtC(cb);
+  const mo=price*0.8*0.00492;
+  document.getElementById('cv-mortgage').textContent=cb>0?(cb/mo).toFixed(1):'—';
+  const estClosing=price*0.02;
+  const closingPct=cb>0?Math.min(100,Math.round(cb/estClosing*100)):0;
+  const surplus=cb>estClosing?fmtC(cb-estClosing):'';
+  document.getElementById('cv-closing').textContent=cb>0?(closingPct===100&&surplus?'100% + '+surplus+' extra':closingPct+'%'):'—';
+}
+updateCalc();
+
+
+function closeMobMenu(){
+  document.getElementById('nav-links').classList.remove('open');
+  document.getElementById('hamburger').classList.remove('open');
+}
+function toggleMobMenu(){
+  document.getElementById('nav-links').classList.toggle('open');
+  document.getElementById('hamburger').classList.toggle('open');
+}
+</script>
+<div class="modal-overlay" id="modal" onclick="if(event.target===this)closeModal()">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <div id="modal-form-wrap">
+      <div class="modal-tag">Book a Free Showing</div>
+      <div class="modal-title">Let's get started</div>
+      <div class="modal-sub">Your first showing is free. We'll follow up within a few hours.</div>
+      <form id="form-showing" name="contact" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+        <input type="hidden" name="form-name" value="contact"/>
+        <p style="display:none"><input name="bot-field"/></p>
+        <div class="f-field">
+          <label class="f-label" for="f-name">Full name <span style="color:#5a6a82;font-size:11px;font-weight:400">(required)</span></label>
+          <input class="f-input" type="text" id="f-name" name="name" required/>
+          <div class="f-error" id="err-name"></div>
+        </div>
+        <div class="f-field">
+          <label class="f-label" for="f-email">Email address <span style="color:#5a6a82;font-size:11px;font-weight:400">(or phone)</span></label>
+          <input class="f-input" type="text" id="f-email" name="email" inputmode="email" autocomplete="email"/>
+        </div>
+        <div class="f-field">
+          <label class="f-label" for="f-phone">Phone number <span style="color:#5a6a82;font-size:11px;font-weight:400">(or email)</span></label>
+          <input class="f-input" type="tel" id="f-phone" name="phone"/>
+          <div class="f-note">At least one of email or phone is required.</div>
+          <div class="f-error" id="err-contact"></div>
+        </div>
+        <p class="f-consent">By submitting, you agree to be contacted by HomeCashbacks. View our <a href="/privacy.html" target="_blank">Privacy Policy</a>.</p>
+        <button type="button" class="f-submit" onclick="handleFormSubmit()">Claim My Free Showing</button>
+      </form>
+    </div>
+    <div class="f-success" id="form-success">
+      <div class="f-success-icon">✓</div>
+      <h3>We'll be in touch!</h3>
+      <p>Expect a call or email from us within a few hours.</p>
+    </div>
+  </div>
+</div>
+<script>
+function openModal(){
+  document.getElementById('modal').classList.add('open');
+  document.getElementById('form-success').style.display='none';
+  document.getElementById('modal-form-wrap').style.display='block';
+  ['err-name','err-contact'].forEach(id=>{
+    const el=document.getElementById(id);
+    if(el){el.classList.remove('show');el.style.display='none';el.textContent='';}
+  });
+  ['f-name','f-email','f-phone'].forEach(id=>document.getElementById(id).classList.remove('err'));
+}
+function closeModal(){document.getElementById('modal').classList.remove('open');}
+function validateEmail(e){return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e);}
+function validatePhone(p){return p.replace(/\D/g,'').length>=10;}
+function handleFormSubmit(){
+  const nameVal=document.getElementById('f-name').value.trim();
+  const emailVal=document.getElementById('f-email').value.trim();
+  const phoneVal=document.getElementById('f-phone').value.trim();
+
+  // Reset errors
+  ['err-name','err-contact'].forEach(id=>{
+    const el=document.getElementById(id);
+    if(el){el.textContent='';el.classList.remove('show');}
+  });
+  ['f-name','f-email','f-phone'].forEach(id=>{
+    const el=document.getElementById(id);
+    if(el)el.style.borderColor='';
+  });
+
+  let ok=true;
+
+  if(!nameVal){
+    const el=document.getElementById('err-name');
+    el.textContent='Please enter your full name.';
+    el.classList.add('show');
+    document.getElementById('f-name').style.borderColor='#b83232';
+    document.getElementById('f-name').focus();
+    ok=false;
+  }
+
+  if(!emailVal&&!phoneVal){
+    const el=document.getElementById('err-contact');
+    el.textContent='Please enter an email address or phone number.';
+    el.classList.add('show');
+    document.getElementById('f-email').style.borderColor='#b83232';
+    document.getElementById('f-phone').style.borderColor='#b83232';
+    ok=false;
+  } else if(emailVal&&!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailVal)){
+    const el=document.getElementById('err-contact');
+    el.textContent='Please enter a valid email address.';
+    el.classList.add('show');
+    document.getElementById('f-email').style.borderColor='#b83232';
+    document.getElementById('f-email').focus();
+    ok=false;
+  } else if(phoneVal&&phoneVal.replace(/\D/g,'').length<10){
+    const el=document.getElementById('err-contact');
+    el.textContent='Phone number must be at least 10 digits.';
+    el.classList.add('show');
+    document.getElementById('f-phone').style.borderColor='#b83232';
+    document.getElementById('f-phone').focus();
+    ok=false;
+  }
+
+  if(!ok)return;
+
+  const formEl=document.getElementById('form-showing');
+  const formData=new FormData(formEl);
+  fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(formData).toString()})
+    .then(()=>{document.getElementById('modal-form-wrap').style.display='none';document.getElementById('form-success').style.display='block';formEl.reset();})
+    .catch(()=>{document.getElementById('modal-form-wrap').style.display='none';document.getElementById('form-success').style.display='block';});
+}
+</script>
+</body>
+</html>
