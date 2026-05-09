@@ -9,7 +9,7 @@
 <link rel="canonical" href="https://homecashbacks.ca/checklist.html"/>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -25,10 +25,12 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--ink);line-
 
 /* TOP BAR */
 .top-bar{position:fixed;top:0;left:0;right:0;z-index:600;background:#1a2332;height:58px;padding:0 1.5rem;display:flex;align-items:center;justify-content:center;gap:12px}
+.top-bar-text{font-size:13px;color:rgba(255,255,255,.45);white-space:nowrap;margin-right:4px}
 .top-bar-phone{display:inline-flex;align-items:center;gap:5px;font-size:13px;color:rgba(255,255,255,.8);text-decoration:none}
 .top-bar-phone:hover{color:#fff}
-.top-btn{padding:9px 22px;border-radius:4px;font-size:13px;font-weight:700;border:none;cursor:pointer;font-family:'Outfit',sans-serif;transition:opacity .2s;background:#e8a020;color:#1a2332}
+.top-btn{display:inline-flex;align-items:center;gap:6px;padding:10px 24px;border-radius:4px;font-size:14px;font-weight:700;border:none;cursor:pointer;font-family:'Outfit',sans-serif;white-space:nowrap;transition:opacity .2s}
 .top-btn:hover{opacity:.85}
+.top-btn.light{background:#e8a020;color:#1a2332;font-weight:700}
 
 /* NAV */
 nav{position:fixed;top:58px;left:0;right:0;z-index:570;background:#f0f4f8;border-bottom:1px solid var(--border);height:60px;padding:0 2rem;display:flex;align-items:center;justify-content:space-between}
@@ -132,10 +134,28 @@ nav{position:fixed;top:58px;left:0;right:0;z-index:570;background:#f0f4f8;border
 .hook-desc{font-size:13px;color:rgba(255,255,255,.45);line-height:1.5;margin-bottom:.75rem}
 .hook-cta{display:inline-flex;align-items:center;gap:5px;padding:8px 15px;border-radius:4px;font-size:12px;font-weight:700;border:none;cursor:pointer;font-family:'Outfit',sans-serif;background:#e8a020;color:#1a2332}
 .celebrate{display:none;text-align:center;background:var(--charcoal);border-radius:4px;padding:2.25rem 2rem;margin:1.1rem 0}
+.section{padding:3rem 2rem}.sec-inner{max-width:860px;margin:0 auto}
+.eyebrow{font-size:12px;font-weight:500;letter-spacing:1.2px;text-transform:uppercase;color:var(--taupe);margin-bottom:.5rem}
+.sec-title{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,6vw,60px);font-weight:600;color:var(--ink);line-height:1.1;margin-bottom:.65rem}
+.faq-section{background:var(--bg2);border-top:1px solid var(--border)}
+.faq-cols{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:1.5rem}
+.faq-col-title{font-size:12px;font-weight:500;letter-spacing:.8px;text-transform:uppercase;color:#e8a020;margin-bottom:.9rem;padding-bottom:.6rem;border-bottom:2px solid #e8a020}
+.faq-list{display:flex;flex-direction:column;gap:7px;margin-top:1.4rem}
+.faq-item{background:var(--white);border:1px solid var(--border);border-radius:4px;overflow:hidden}
+.faq-q{display:flex;justify-content:space-between;align-items:flex-start;padding:.85rem 1rem;cursor:pointer;gap:10px}
+.faq-q-text{font-size:15px;font-weight:500;color:var(--ink);line-height:1.4}
+.faq-icon{font-size:15px;color:var(--muted);flex-shrink:0;transition:transform .25s;margin-top:1px}
+.faq-item.open .faq-icon{transform:rotate(45deg)}
+.faq-a{display:none;padding:.55rem 1rem .85rem;font-size:14px;color:var(--muted);line-height:1.7;border-top:1px solid var(--border)}
+.faq-item.open .faq-a{display:block}
+.faq-show-more{margin-top:.75rem;padding:8px 16px;border:1.5px solid var(--border);border-radius:4px;font-size:13px;font-weight:500;font-family:'Outfit',sans-serif;color:var(--muted);background:transparent;cursor:pointer;transition:all .2s}
+.faq-show-more:hover{color:var(--ink);border-color:var(--ink)}
+@media(max-width:680px){.faq-cols{grid-template-columns:1fr}}
 .celebrate h2{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:600;color:#fff;margin-bottom:.5rem}
 .celebrate p{font-size:14px;color:rgba(255,255,255,.4);max-width:340px;margin:0 auto 1.1rem;line-height:1.6}
 .celebrate a{background:#e8a020;color:#1a2332;padding:10px 22px;border-radius:4px;font-size:13px;font-weight:500;text-decoration:none;display:inline-block}
 
+.foot-disclaimer{font-size:10px;color:rgba(255,255,255,.2)!important;line-height:1.6!important;max-width:700px;margin:.9rem auto 0!important;border-top:1px solid rgba(255,255,255,.08);padding-top:.9rem}
 /* FOOTER */
 footer{background:#1a2332;padding:2.5rem 2rem 1.5rem}
 .foot-inner{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:2rem;padding-bottom:1.75rem;border-bottom:1px solid rgba(255,255,255,.08);max-width:980px;margin:0 auto}
@@ -152,7 +172,7 @@ footer{background:#1a2332;padding:2.5rem 2rem 1.5rem}
 .foot-cta-btn:hover{opacity:.85}
 .foot-cta-sub{font-size:11px;color:rgba(255,255,255,.25)}
 .foot-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:1.25rem;max-width:980px;margin:0 auto;font-size:11px;color:rgba(255,255,255,.2)}
-.foot-social-link{color:rgba(255,255,255,.35);font-size:12px;text-decoration:none;transition:color .2s}
+.foot-social-link{color:rgba(255,255,255,.35);display:inline-flex;align-items:center;gap:4px;font-size:12px;text-decoration:none;transition:color .2s}
 .foot-social-link:hover{color:#e8a020}
 @media(max-width:768px){
   .foot-inner{grid-template-columns:1fr;gap:1.5rem}
@@ -223,8 +243,8 @@ footer{background:#1a2332;padding:2.5rem 2rem 1.5rem}
     <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1.25h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.84a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16.92z"/></svg>
     (437) 443-7556
   </a>
-  <div style="width:1px;height:20px;background:rgba(255,255,255,.2)"></div>
-  <button class="top-btn" onclick="openModal()">Book Free Showing</button>
+  <div class="top-bar-sep"></div>
+  <button class="top-btn light" onclick="openModal()">Book Free Showing</button>
 </div>
 
 <!-- NAV -->
@@ -314,6 +334,25 @@ footer{background:#1a2332;padding:2.5rem 2rem 1.5rem}
   </div>
 </section>
 
+<!-- FAQ -->
+<section class="faq-section section">
+  <div class="sec-inner">
+    <div class="eyebrow">Common questions</div>
+    <h2 class="sec-title">FAQ</h2>
+    <p style="font-size:15px;color:var(--muted);line-height:1.8;max-width:600px;margin-bottom:.5rem">Buying a home in the GTA involves dozens of steps and it is easy to feel overwhelmed. Below are the questions we hear most from buyers using this checklist, from mortgage pre-approvals and closing costs to how HomeCashbacks cashback works.</p>
+    <div class="faq-cols">
+      <div>
+        <div class="faq-col-title">Using this checklist</div>
+        <div class="faq-list" id="faq-checklist"></div>
+      </div>
+      <div>
+        <div class="faq-col-title">The buying process</div>
+        <div class="faq-list" id="faq-process"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <footer>
   <div class="foot-inner">
     <div class="foot-agent">
@@ -338,10 +377,15 @@ footer{background:#1a2332;padding:2.5rem 2rem 1.5rem}
   <div class="foot-bottom">
     <span>&copy; 2026 HomeCashbacks. All rights reserved. &nbsp;|&nbsp; <a href="/privacy.html" style="color:#e8a020">Privacy Policy</a></span>
     <div style="display:flex;align-items:center;gap:.75rem">
-      <a href="https://www.linkedin.com/company/homecashbacks/about/" target="_blank" rel="noopener" class="foot-social-link">LinkedIn</a>
-      <a href="https://www.instagram.com/homecashbacks/" target="_blank" rel="noopener" class="foot-social-link">Instagram</a>
+            <a href="https://www.linkedin.com/company/homecashbacks/about/" target="_blank" rel="noopener" class="foot-social-link">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>LinkedIn
+      </a>
+            <a href="https://www.instagram.com/homecashbacks/" target="_blank" rel="noopener" class="foot-social-link">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>Instagram
+      </a>
     </div>
   </div>
+  <p class="foot-disclaimer">The information on this website is provided for general guidance purposes only and does not constitute legal, financial, real estate, or mortgage advice. HomeCashbacks makes no representations or warranties regarding the accuracy, completeness, or timeliness of any information on this site. All calculations, estimates, and figures are approximations and should not be relied upon as professional advice. Real estate transactions involve significant financial risk. Always consult a licensed real estate lawyer, mortgage professional, and financial advisor before making any decisions. HomeCashbacks is not liable for any losses, damages, or decisions made based on information contained on this website.</p>
 </footer>
 
 <!-- MODAL -->
@@ -504,6 +548,8 @@ function render(){
 render();
 
 function openModal(){document.getElementById('modal').classList.add('open');document.getElementById('form-success').style.display='none';document.getElementById('modal-form-wrap').style.display='block';}
+
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){const overlay=document.querySelector('.modal-overlay');if(overlay&&overlay.classList.contains('open'))closeModal();}});
 function closeModal(){document.getElementById('modal').classList.remove('open');}
 function validateEmail(e){return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e);}
 function validatePhone(p){return p.replace(/\D/g,'').length>=10;}
@@ -524,6 +570,38 @@ function handleFormSubmit(){
 }
 function toggleMobMenu(){document.getElementById('nav-links').classList.toggle('open');document.getElementById('hamburger').classList.toggle('open');}
 function closeMobMenu(){document.getElementById('nav-links').classList.remove('open');document.getElementById('hamburger').classList.remove('open');}
+
+const FAQ_CHECKLIST=[
+  {q:'What is the 21-step home buyer checklist?',a:'It is a step-by-step guide for GTA buyers that covers every stage of the purchase, from mortgage pre-approval to getting your keys and claiming your cashback. The steps are split into five phases so you always know where you are and what comes next.'},
+  {q:'Do I need to complete every step in order?',a:'Mostly yes. The phases follow the natural sequence of a purchase, so skipping steps can cause problems later. For example, you cannot arrange title insurance before you have an accepted offer, and making an offer without a pre-approval puts you at a real disadvantage in the GTA market.'},
+  {q:'Can I use this checklist for a condo purchase?',a:'Yes. The checklist works for all property types: freehold, condo, and semi-detached. Condo buyers have a few extra steps in the due diligence phase, including reviewing the status certificate, which your lawyer should look at before you firm up your offer.'},
+  {q:'What does HomeCashbacks charge?',a:'A flat $4,999 buyer agent fee. The rest of the buyer agent commission, typically 2 to 2.5% of the purchase price, comes back to you after closing. On the average GTA home that is over $20,000 in cashback. Your first showing is free, no commitment required.'},
+];
+const FAQ_PROCESS=[
+  {q:'How long does it take to buy a home in the GTA?',a:'Most buyers spend 2 to 4 months from the start of their search to closing day. Getting pre-approved early and knowing your criteria ahead of time helps you move fast when the right home comes up.'},
+  {q:'What is a mortgage pre-approval and why do I need one?',a:'A pre-approval is a written commitment from a lender confirming how much they will lend you, based on your income, debts, and credit score. In the GTA, most sellers expect buyers to be pre-approved before viewing homes or making offers. It also locks in your rate for 90 to 120 days.'},
+  {q:'What closing costs should I budget for in Ontario?',a:'Plan for 1.5% to 4% of the purchase price. The biggest item is land transfer tax. Toronto buyers pay both provincial and municipal LTT. Other costs include legal fees ($1,200 to $1,400), title insurance ($350 to $950 depending on purchase price), and a home inspection ($400 to $600). First-time buyers may qualify for LTT rebates.'},
+  {q:'What happens after my offer is accepted?',a:'You get a conditional period, typically 3 to 5 business days, to complete your due diligence: home inspection, mortgage confirmation, and lawyer review. Once everything checks out you waive conditions and the deal firms up. Your lawyer then handles the legal transfer through to closing day.'},
+  {q:'When do I receive my cashback from HomeCashbacks?',a:'Your cashback is sent 6 to 8 weeks after your closing date, once the buyer agent commission is released from the seller\'s lawyer to our brokerage. The exact amount is written into your agreement before you sign anything.'},
+];
+function renderFAQ(){
+  [['faq-checklist',FAQ_CHECKLIST],['faq-process',FAQ_PROCESS]].forEach(([id,data])=>{
+    const el=document.getElementById(id);if(!el)return;
+    data.forEach((f,i)=>{
+      const item=document.createElement('div');item.className='faq-item';
+      if(i>=3){item.classList.add('faq-hidden');item.style.display='none';}
+      item.innerHTML=`<div class="faq-q"><span class="faq-q-text">${f.q}</span><span class="faq-icon">+</span></div><div class="faq-a">${f.a}</div>`;
+      item.querySelector('.faq-q').onclick=()=>item.classList.toggle('open');
+      el.appendChild(item);
+    });
+    if(data.length>3){
+      const btn=document.createElement('button');btn.className='faq-show-more';btn.textContent='Show more questions';
+      btn.onclick=()=>{const hidden=el.querySelectorAll('.faq-hidden');const isHidden=hidden[0].style.display==='none';hidden.forEach(h=>h.style.display=isHidden?'block':'none');btn.textContent=isHidden?'Show fewer':'Show more questions';};
+      el.appendChild(btn);
+    }
+  });
+}
+renderFAQ();
 </script>
 </body>
 </html>

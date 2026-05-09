@@ -31,16 +31,18 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--ink);line-
 
 /* TOP BAR */
 .top-bar{position:fixed;top:0;left:0;right:0;z-index:600;background:#1a2332;height:58px;padding:0 1.5rem;display:flex;align-items:center;justify-content:center;gap:12px}
+.top-bar-text{font-size:13px;color:rgba(255,255,255,.45);white-space:nowrap;margin-right:4px}
 .top-bar-phone{display:inline-flex;align-items:center;gap:5px;font-size:13px;color:rgba(255,255,255,.8);text-decoration:none;font-family:'Outfit',sans-serif}
 .top-bar-phone:hover{color:#fff}
 .top-bar-sep{width:1px;height:20px;background:rgba(255,255,255,.2)}
-.top-btn{display:inline-flex;align-items:center;gap:6px;padding:9px 22px;border-radius:4px;font-size:13px;font-weight:700;border:none;cursor:pointer;font-family:'Outfit',sans-serif;transition:opacity .2s;background:#e8a020;color:#1a2332}
+.top-btn{display:inline-flex;align-items:center;gap:6px;padding:10px 24px;border-radius:4px;font-size:14px;font-weight:700;border:none;cursor:pointer;font-family:'Outfit',sans-serif;white-space:nowrap;transition:opacity .2s}
 .top-btn:hover{opacity:.85}
+.top-btn.light{background:#e8a020;color:#1a2332;font-weight:700}
 
 /* NAV */
 nav{position:fixed;top:58px;left:0;right:0;z-index:570;background:#f0f4f8;border-bottom:1px solid var(--border);height:60px;padding:0 2rem;display:flex;align-items:center;justify-content:space-between}
 .logo{text-decoration:none;display:flex;align-items:center}
-.nav-cred-wrap{display:flex;flex-direction:row;align-items:center;gap:.6rem;margin-left:.75rem}
+.nav-cred-wrap{display:flex;flex-direction:row;align-items:center;gap:.6rem}
 .nav-headshot{width:32px;height:32px;border-radius:50%;object-fit:cover;object-position:center top;border:2px solid #e8a020;flex-shrink:0}
 .nav-cred-wrap > div{display:flex;flex-direction:column;gap:1px}
 .nav-cred{font-size:11px;color:var(--muted);white-space:nowrap}
@@ -158,9 +160,11 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
 
 /* FOOTER */
 footer{background:#1a2332;padding:2rem;text-align:center;margin-top:0}
-.foot-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1.5rem;max-width:1100px;margin:0 auto 1.5rem;text-align:left}
+.foot-logo{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;color:#fff;margin-bottom:.4rem}
+footer p{font-size:12px;color:rgba(255,255,255,.3);line-height:1.8}
+footer a{color:#e8a020;text-decoration:none}
+.foot-inner{display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:1.5rem;max-width:1100px;margin:0 auto 1.5rem;text-align:left}
 .foot-agent{display:flex;align-items:center;gap:.75rem}
-.foot-headshot{width:52px;height:52px;border-radius:50%;object-fit:cover;object-position:center top;border:2px solid #e8a020;flex-shrink:0}
 .foot-agent-name{color:#fff;font-weight:600;font-size:15px}
 .foot-agent-title{color:rgba(255,255,255,.5);font-size:11px;line-height:1.5;margin-top:2px}
 .foot-agent-badge{display:inline-block;background:rgba(232,160,32,.15);color:#e8a020;font-size:10px;padding:2px 8px;border-radius:20px;margin-top:4px;border:1px solid rgba(232,160,32,.3)}
@@ -168,15 +172,11 @@ footer{background:#1a2332;padding:2rem;text-align:center;margin-top:0}
 .foot-links a{color:rgba(255,255,255,.55);font-size:13px;text-decoration:none;transition:color .2s}
 .foot-links a:hover{color:#e8a020}
 .foot-cta{display:flex;flex-direction:column;align-items:flex-start;gap:.4rem}
-.foot-cta-btn{background:#e8a020;color:#1a2332;border:none;padding:.6rem 1.4rem;border-radius:6px;font-weight:700;font-size:14px;cursor:pointer;transition:background .2s}
-.foot-cta-btn:hover{background:#f0b030}
-.foot-cta-sub{color:rgba(255,255,255,.35);font-size:11px}
+.foot-cta-btn{background:#e8a020;color:#1a2332;border:none;padding:.6rem 1.4rem;border-radius:6px;font-weight:700;font-size:14px;cursor:pointer}
 .foot-bottom{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.75rem;max-width:1100px;margin:0 auto;padding-top:1rem;border-top:1px solid rgba(255,255,255,.1);font-size:12px;color:rgba(255,255,255,.3)}
-.foot-social-link{color:rgba(255,255,255,.4);text-decoration:none;font-size:12px;transition:color .2s}
+.foot-headshot{width:84px;height:84px;border-radius:50%;object-fit:cover;object-position:center top;border:2px solid #e8a020;flex-shrink:0}
+.foot-social-link{color:rgba(255,255,255,.35);display:inline-flex;align-items:center;gap:4px;font-size:12px;text-decoration:none;transition:color .2s}
 .foot-social-link:hover{color:#e8a020}
-.foot-logo{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;color:#fff;margin-bottom:.4rem}
-footer p{font-size:12px;color:rgba(255,255,255,.3);line-height:1.8}
-footer a{color:#e8a020;text-decoration:none}
 .foot-disclaimer{font-size:10px;color:rgba(255,255,255,.18)!important;line-height:1.6!important;max-width:700px;margin:.9rem auto 0!important;border-top:1px solid rgba(255,255,255,.08);padding-top:.9rem}
 
 /* MOBILE */
@@ -240,7 +240,7 @@ footer a{color:#e8a020;text-decoration:none}
     (437) 443-7556
   </a>
   <div class="top-bar-sep"></div>
-  <button class="top-btn" onclick="openModal()">Book Free Showing</button>
+  <button class="top-btn light" onclick="openModal()">Book Free Showing</button>
 </div>
 
 <!-- NAV -->
@@ -258,6 +258,7 @@ footer a{color:#e8a020;text-decoration:none}
     <img src="headshot.webp" alt="Laleh Mousavi" class="nav-headshot"/>
     <div>
       <span class="nav-cred">Laleh Mousavi, Realtor</span>
+      <span class="nav-cred nav-cred-line2">Toronto Real Estate Realty Plus Inc.</span>
       <span class="nav-cred-line2">Toronto Real Estate Realty Plus Inc.</span>
     </div>
   </div>
@@ -424,10 +425,16 @@ footer a{color:#e8a020;text-decoration:none}
   <div class="foot-bottom">
     <span>&copy; 2026 HomeCashbacks. All rights reserved. &nbsp;|&nbsp; <a href="/privacy.html" style="color:#e8a020">Privacy Policy</a></span>
     <div style="display:flex;align-items:center;gap:.75rem">
-      <a href="https://www.linkedin.com/company/homecashbacks/about/" target="_blank" rel="noopener" class="foot-social-link">LinkedIn</a>
-      <a href="https://www.instagram.com/homecashbacks/" target="_blank" rel="noopener" class="foot-social-link">Instagram</a>
+      <a href="https://www.linkedin.com/company/homecashbacks/about/" target="_blank" rel="noopener" class="foot-social-link">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>LinkedIn
+      </a>
+      <a href="https://www.instagram.com/homecashbacks/" target="_blank" rel="noopener" class="foot-social-link">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>Instagram
+      </a>
+
     </div>
   </div>
+  <p class="foot-disclaimer">The information on this website is provided for general guidance purposes only and does not constitute legal, financial, real estate, or mortgage advice. HomeCashbacks makes no representations or warranties regarding the accuracy, completeness, or timeliness of any information on this site. All calculations, estimates, and figures are approximations and should not be relied upon as professional advice. Real estate transactions involve significant financial risk. Always consult a licensed real estate lawyer, mortgage professional, and financial advisor before making any decisions. HomeCashbacks is not liable for any losses, damages, or decisions made based on information contained on this website.</p>
 </footer>
 
 <script>
@@ -521,6 +528,8 @@ function openModal(){
   });
   ['f-name','f-email','f-phone'].forEach(id=>document.getElementById(id).classList.remove('err'));
 }
+
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){const overlay=document.querySelector('.modal-overlay');if(overlay&&overlay.classList.contains('open'))closeModal();}});
 function closeModal(){document.getElementById('modal').classList.remove('open');}
 function validateEmail(e){return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e);}
 function validatePhone(p){return p.replace(/\D/g,'').length>=10;}
