@@ -192,14 +192,14 @@ nav{position:fixed;top:58px;left:0;right:0;z-index:570;background:#f0f4f8;border
 .faq-show-more:hover{color:var(--ink);border-color:var(--ink)}
 
 /* FINAL CTA */
-.final-cta{background:#1a2332;padding:3.5rem 2rem;text-align:center}
+.final-cta{background:var(--bg2);padding:3.5rem 2rem;text-align:center;border-top:1px solid var(--border)}
 .final-cta-inner{max-width:520px;margin:0 auto}
-.final-cta-eyebrow{font-size:11px;font-weight:500;letter-spacing:1.2px;text-transform:uppercase;color:#e8a020;margin-bottom:.75rem}
-.final-cta-title{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,4vw,40px);font-weight:600;color:#fff;line-height:1.15;margin-bottom:.75rem}
-.final-cta-sub{font-size:15px;color:rgba(232,237,245,.45);line-height:1.7;margin-bottom:1.75rem}
+.final-cta-eyebrow{font-size:11px;font-weight:500;letter-spacing:1.2px;text-transform:uppercase;color:var(--taupe);margin-bottom:.75rem}
+.final-cta-title{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,4vw,40px);font-weight:600;color:var(--ink);line-height:1.15;margin-bottom:.75rem}
+.final-cta-sub{font-size:15px;color:var(--muted);line-height:1.7;margin-bottom:1.75rem}
 .final-cta-btn{background:#e8a020;color:#1a2332;padding:14px 32px;border-radius:4px;font-size:15px;font-weight:700;border:none;cursor:pointer;font-family:'Outfit',sans-serif;display:inline-flex;align-items:center;gap:8px;transition:opacity .2s;box-shadow:0 2px 14px rgba(232,160,32,.35)}
 .final-cta-btn:hover{opacity:.88}
-.final-cta-note{font-size:12px;color:rgba(232,237,245,.28);margin-top:.75rem}
+.final-cta-note{font-size:12px;color:var(--muted);margin-top:.75rem;opacity:.6}
 
 /* FOOTER */
 footer{background:#1a2332;padding:2.5rem 2rem 1.5rem}
@@ -363,6 +363,7 @@ footer{background:#1a2332;padding:2.5rem 2rem 1.5rem}
     <div class="page-hero-eyebrow">First-Time Buyer Guide</div>
     <h1>First-Time Home Buyer<br>Guide Toronto</h1>
     <p class="page-hero-sub">A practical guide to buying your first home or condo in Toronto and the GTA, from budgeting and mortgage pre-approval to closing costs, condo reviews, and cashback.</p>
+    <p style="font-size:11px;color:rgba(232,237,245,.3);margin-top:1rem;letter-spacing:.5px">Last updated May 2026</p>
   </div>
 </div>
 
@@ -582,6 +583,9 @@ footer{background:#1a2332;padding:2.5rem 2rem 1.5rem}
     <div class="foot-links">
       <a href="how-cashback-works.html">How It Works</a>
       <a href="our-story.html">Our Story</a>
+      <a href="first-time-buyer-guide.html">First-Time Buyer Guide</a>
+      <a href="checklist.html">Home Buyer Checklist</a>
+      <a href="calculators.html">Calculators</a>
       <a href="tel:4374437556">(437) 443-7556</a>
       <a href="mailto:Laleh@homecashbacks.ca">Laleh@homecashbacks.ca</a>
     </div>
@@ -648,9 +652,9 @@ window.addEventListener('scroll',function(){
 // FAQ
 const FAQ_BUDGET=[
   {q:'How much down payment do I need in Ontario?',a:'As of December 2024, the rules changed. For homes up to $500,000 the minimum is 5%. For homes between $500,000 and $1,499,999 it is 5% on the first $500,000 and 10% on the remainder. For homes $1,500,000 and above the minimum is 20%. So a $1,000,000 home now requires $75,000 down. Anything below 20% requires CMHC mortgage insurance.'},
-  {q:'What closing costs should I budget for as a first-time buyer in Toronto?',a:'Budget 1.5% to 4% of the purchase price. The biggest item is land transfer tax, Toronto buyers pay both provincial and municipal LTT. First-time buyers qualify for rebates of up to $4,000 provincial and $4,475 municipal, which can significantly reduce this cost. Other expenses include legal fees ($1,200 to $1,400), title insurance (ask your lawyer for a quote), and a home inspection ($400 to $600). Use our <a href="/calculators.html" style="color:#e8a020;text-decoration:none;font-weight:500">closing cost calculator</a> to see your exact figures.'},
+  {q:'What closing costs should I budget for as a first-time buyer in Toronto?',a:'Budget 1.5% to 4% of the purchase price. The biggest item is land transfer tax. Toronto buyers pay both provincial and municipal LTT. First-time buyers qualify for rebates of up to $4,000 provincial and $4,475 municipal, which can significantly reduce this cost. Other expenses include legal fees ($1,200 to $1,400), title insurance (ask your lawyer for a quote), and a home inspection ($400 to $600). Use our <a href="/calculators.html" style="color:#e8a020;text-decoration:none;font-weight:500">closing cost calculator</a> to see your exact figures.'},
   {q:'What is CMHC mortgage insurance and do I need it?',a:'Required when your down payment is below 20%. The premium (2.8% to 4.0% of the insured mortgage) is added to your mortgage principal, not due at closing. It increases your total loan and the interest you pay over time.'},
-  {q:'Is cashback from a realtor legal in Ontario?',a:'Yes, completely legal. Rebating a portion of the buyer agent commission back to the buyer is permitted under RECO regulations in Ontario. HomeCashbacks is a registered brokerage and the cashback amount is written into your agreement before you sign anything.'},
+  {q:'Is cashback from a realtor legal in Ontario?',a:'Yes, completely legal. Rebating a portion of the buyer agent commission back to the buyer is permitted under RECO regulations in Ontario. The cashback amount is written into your agreement before you sign anything.'},
 ];
 const FAQ_TORONTO=[
   {q:'Are condos a good option for first-time buyers in Toronto?',a:'For many first-time buyers, a condo is the most realistic entry point. Be selective about the building. Two-bedroom units in well-managed buildings in walkable areas hold value better than small one-bedroom units in oversupplied towers.'},
