@@ -69,10 +69,7 @@ function stripSharedJs(scriptContent) {
   s = s.replace(/document\.addEventListener\('keydown'[^\n]+\n?/g, '');
   s = s.replace(/document\.addEventListener\("keydown"[^\n]+\n?/g, '');
   s = s.replace(/document\.getElementById\('modal'\)\.addEventListener[^\n]+\n?/g, '');
-  // Remove handleFormSubmit on inner pages (shared.js provides it)
-  s = s.replace(/function validateEmail[^\n]+\n?/g, '');
-  s = s.replace(/function validatePhone[^\n]+\n?/g, '');
-  s = s.replace(/function handleFormSubmit\([\s\S]*?(?=\nfunction |\nrender\b|\nrenderFAQ\b|\n\/\/\s*[A-Z]|$)/g, '');
+  // Note: handleFormSubmit kept in page - shared.js overrides it by loading after
   // Remove shared.js src tag
   s = s.replace(/<script src=['"]\/?assets\/shared\.js['"]><\/script>\s*\n?/g, '');
   return s;
@@ -152,8 +149,8 @@ pages.forEach(function(filename) {
     nav + '\n\n' +
     bodyClean + '\n\n' +
     footer + '\n\n' +
-    '<script>\n' + sharedJs + '\n</script>\n' +
     pageScripts + '\n' +
+    '<script>\n' + sharedJs + '\n</script>\n' +
     '</body>\n' +
     '</html>';
 
