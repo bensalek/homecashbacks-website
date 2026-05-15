@@ -1,12 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<link rel="icon" type="image/x-icon" href="/favicon.ico"/>
-<link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png"/>
-<link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
-<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <title>First-Time Home Buyer Guide Toronto | HomeCashbacks</title>
 <meta name="description" content="A practical guide to buying your first home or condo in Toronto and the GTA. Covers budgeting, mortgage pre-approval, closing costs, condo buying, and cashback."/>
 <meta name="author" content="Laleh Mousavi, HomeCashbacks"/>
@@ -16,8 +10,6 @@
 <meta property="og:url" content="https://homecashbacks.ca/first-time-buyer-guide.html"/>
 <meta name="robots" content="index, follow"/>
 <link rel="canonical" href="https://homecashbacks.ca/first-time-buyer-guide.html"/>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-068EB5V10X"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -248,115 +240,6 @@ footer{background:#1a2332;padding:2.5rem 2rem 1.5rem}
 </style>
 </head>
 <body>
-
-<!-- MODAL -->
-<div class="modal-overlay" id="modal">
-  <div class="modal">
-    <button class="modal-close" onclick="closeModal()">✕</button>
-    <div id="modal-form-wrap">
-      <div class="modal-tag">Book a Free Consultation</div>
-      <div class="modal-title">Let's get started</div>
-      <div class="modal-sub">No pressure. We'll answer your questions and walk you through the process.</div>
-      <form id="form-showing" method="post" name="contact" novalidate onsubmit="return false" style="display:block">
-        <input type="hidden" name="form-name" value="contact"/>
-        <p style="display:none"><input name="bot-field"/></p>
-        <div class="f-field">
-          <label class="f-label" for="f-name">Full name <span style="color:var(--muted);font-size:11px">(required)</span></label>
-          <input class="f-input" type="text" id="f-name" name="name" autocomplete="name"/>
-          <div class="f-error" id="err-name"></div>
-        </div>
-        <div class="f-field">
-          <label class="f-label" for="f-email">Email address <span style="color:var(--muted);font-size:11px;font-weight:400">(or phone)</span></label>
-          <input class="f-input" type="text" id="f-email" name="email" inputmode="email" autocomplete="email"/>
-          <div class="f-error" id="err-email"></div>
-        </div>
-        <div class="f-field">
-          <label class="f-label" for="f-phone">Phone number <span style="color:var(--muted);font-size:11px;font-weight:400">(optional)</span></label>
-          <input class="f-input" type="tel" id="f-phone" name="phone" autocomplete="tel"/>
-        </div>
-        <div class="f-field">
-          <label class="f-label" for="f-budget">Approximate budget</label>
-          <select class="f-input" id="f-budget" name="budget">
-            <option value="">Select range</option>
-            <option>Under $600,000</option>
-            <option>$600,000 to $800,000</option>
-            <option>$800,000 to $1,000,000</option>
-            <option>$1,000,000 to $1,500,000</option>
-            <option>Over $1,500,000</option>
-          </select>
-        </div>
-        <p class="f-consent">By submitting, you agree to be contacted by HomeCashbacks. View our <a href="/privacy.html" target="_blank">Privacy Policy</a>.</p>
-        <button class="f-submit" type="button" onclick="submitForm()">Book Free Consultation</button>
-      </form>
-    </div>
-    <div class="f-success" id="form-success">
-      <div class="f-success-icon">✓</div>
-      <h3>We'll be in touch</h3>
-      <p>Usually within a few hours. No commitment required.</p>
-    </div>
-  </div>
-</div>
-
-<!-- TOP BAR -->
-<div class="top-bar">
-  <a href="tel:4374437556" class="top-bar-phone">
-    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1.25h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.84a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16.92z"/></svg>
-    (437) 443-7556
-  </a>
-  <div class="top-bar-sep"></div>
-  <button class="top-btn light" onclick="openModal()">Book Free Showing</button>
-</div>
-
-<!-- NAV -->
-<nav>
-  <a class="logo" href="/index.html">
-    <svg width="155" height="28" viewBox="0 0 190 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect width="32" height="32" rx="6" fill="#1a2332" y="2"/>
-      <path d="M9 22 L16 12 L23 22" stroke="#e8a020" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-      <path d="M16 12 L23 12" stroke="#e8a020" stroke-width="2" stroke-linecap="round"/>
-      <path d="M23 12 L23 19" stroke="#e8a020" stroke-width="2" stroke-linecap="round"/>
-      <text x="42" y="22" font-size="17" font-weight="500" fill="#1a2332" font-family="Outfit,sans-serif" letter-spacing="-0.5" class="logo-text">Home<tspan fill="#e8a020" font-weight="700">Cashbacks</tspan></text>
-    </svg>
-  </a>
-  <div class="nav-cred-wrap">
-    <img src="headshot.webp" alt="Laleh Mousavi" class="nav-headshot"/>
-    <div>
-      <span class="nav-cred">Laleh Mousavi, Realtor</span>
-      <span class="nav-cred nav-cred-line2">Toronto Real Estate Realty Plus Inc.</span>
-    </div>
-  </div>
-  <ul class="nav-links" id="nav-links">
-    <li class="nav-item"><a href="how-cashback-works.html" onclick="closeMobMenu()">How It Works</a></li>
-    <li class="nav-item"><a href="our-story.html" onclick="closeMobMenu()">Our Story</a></li>
-    <li class="nav-item">
-      <button class="nav-link-btn" onclick="this.parentElement.classList.toggle('open')">Resources<svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 1l4 4 4-4"/></svg></button>
-      <div class="dropdown">
-        <a href="checklist.html" onclick="closeMobMenu()">
-          <div class="dropdown-label">Home Buyer Checklist</div>
-          <div class="dropdown-sub">5 phase guide to buying</div>
-        </a>
-        <a href="calculators.html" onclick="closeMobMenu()">
-          <div class="dropdown-label">Calculators</div>
-          <div class="dropdown-sub">Closing costs and monthly ownership</div>
-        </a>
-        <a href="offer-strategy.html" onclick="closeMobMenu()">
-          <div class="dropdown-label">Offer Strategy Tool</div>
-          <div class="dropdown-sub">Build your offer strategy</div>
-        </a>
-        <a href="first-time-buyer-guide.html" onclick="closeMobMenu()">
-          <div class="dropdown-label">First-Time Buyer Guide</div>
-          <div class="dropdown-sub">Everything you need to get started</div>
-        </a>
-      </div>
-    </li>
-    <li class="nav-item"><a href="/#faq" onclick="closeMobMenu()">FAQ</a></li>
-    <li class="nav-item"><a href="#" class="nav-pill" onclick="openModal();closeMobMenu();return false">Free Showing</a></li>
-  </ul>
-  <button class="hamburger" id="hamburger" onclick="toggleMobMenu()" aria-label="Menu">
-    <span></span><span></span><span></span>
-  </button>
-</nav>
-
 <!-- HERO -->
 <div class="page-hero">
   <div class="page-hero-inner">
@@ -570,69 +453,22 @@ footer{background:#1a2332;padding:2.5rem 2rem 1.5rem}
 </section>
 
 <!-- FOOTER -->
-<footer>
-  <div class="foot-inner">
-    <div class="foot-agent">
-      <img src="headshot.webp" alt="Laleh Mousavi" class="foot-headshot"/>
-      <div>
-        <div class="foot-agent-name">Laleh Mousavi</div>
-        <div class="foot-agent-title">Realtor · Toronto Real Estate Realty Plus Inc.<br>Registered with RECO · Serving Toronto &amp; GTA</div>
-        <div class="foot-agent-badge">Licensed in Ontario</div>
-      </div>
-    </div>
-    <div class="foot-links">
-      <a href="how-cashback-works.html">How It Works</a>
-      <a href="our-story.html">Our Story</a>
-      <a href="first-time-buyer-guide.html">First-Time Buyer Guide</a>
-      <a href="checklist.html">Home Buyer Checklist</a>
-      <a href="calculators.html">Calculators</a>
-      <a href="tel:4374437556">(437) 443-7556</a>
-      <a href="mailto:Laleh@homecashbacks.ca">Laleh@homecashbacks.ca</a>
-    </div>
-    <div class="foot-cta">
-      <button class="foot-cta-btn" onclick="openModal()">Book a Free Showing</button>
-      <span class="foot-cta-sub">No commitment · First showing free</span>
-    </div>
-  </div>
-  <div class="foot-bottom">
-    <span>&copy; 2026 HomeCashbacks. All rights reserved.</span>
-    <div style="display:flex;align-items:center;gap:.75rem">
-      <a href="https://www.linkedin.com/company/homecashbacks/about/" target="_blank" rel="noopener" class="foot-social-link">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>LinkedIn
-      </a>
-      <a href="https://www.instagram.com/homecashbacks/" target="_blank" rel="noopener" class="foot-social-link">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>Instagram
-      </a>
-      <a href="/privacy.html" class="foot-social-link">Privacy Policy</a>
-    </div>
-  </div>
-  <p class="foot-disclaimer">The information on this website is provided for general guidance purposes only and does not constitute legal, financial, real estate, or mortgage advice. HomeCashbacks makes no representations or warranties regarding the accuracy, completeness, or timeliness of any information on this site. All calculations, estimates, and figures are approximations and should not be relied upon as professional advice. Real estate transactions involve significant financial risk. Always consult a licensed real estate lawyer, mortgage professional, and financial advisor before making any decisions. HomeCashbacks is not liable for any losses, damages, or decisions made based on information contained on this website.</p>
-</footer>
-
 <script>
 // Modal
-function openModal(){document.getElementById('modal').classList.add('open');document.body.style.overflow='hidden';}
-function closeModal(){document.getElementById('modal').classList.remove('open');document.body.style.overflow='';}
-document.getElementById('modal').addEventListener('click',function(e){if(e.target===this)closeModal();});
-document.addEventListener('keydown',function(e){if(e.key==='Escape')closeModal();});
-function submitForm(){
-  var name=document.getElementById('f-name').value.trim();
-  var email=document.getElementById('f-email').value.trim();
-  var ok=true;
-  document.querySelectorAll('.f-error').forEach(function(el){el.classList.remove('show');el.textContent='';});
-  document.querySelectorAll('.f-input').forEach(function(el){el.classList.remove('err');});
-  if(!name){document.getElementById('err-name').textContent='Please enter your name.';document.getElementById('err-name').classList.add('show');document.getElementById('f-name').classList.add('err');ok=false;}
+
+
+});
+});
   if(!email){document.getElementById('err-email').textContent='Please enter your email or phone.';document.getElementById('err-email').classList.add('show');document.getElementById('f-email').classList.add('err');ok=false;}
   if(!ok)return;
   var fd=new FormData(document.getElementById('form-showing'));
   fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(fd).toString()})
     .then(function(){document.getElementById('modal-form-wrap').style.display='none';document.getElementById('form-success').style.display='block';})
     .catch(function(){document.getElementById('modal-form-wrap').style.display='none';document.getElementById('form-success').style.display='block';});
-}
 
 // Nav
-function toggleMobMenu(){document.getElementById('nav-links').classList.toggle('open');document.getElementById('hamburger').classList.toggle('open');}
-function closeMobMenu(){document.getElementById('nav-links').classList.remove('open');document.getElementById('hamburger').classList.remove('open');}
+
+
 
 // Jump nav active state on scroll
 const sections=['process','costs','cashback','condo','faq'];
@@ -683,10 +519,10 @@ function renderFAQ(){
         btn.textContent=isHidden?'Show fewer':'Show more questions';
       };
       el.appendChild(btn);
-    }
   });
-}
 renderFAQ();
 </script>
+
+<script src="/assets/shared.js"></script>
 </body>
 </html>

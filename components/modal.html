@@ -1,0 +1,37 @@
+<!-- MODAL -->
+<div class="modal-overlay" id="modal">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <div id="modal-form-wrap">
+      <div class="modal-tag" id="modal-tag">Book a Showing</div>
+      <div class="modal-title" id="modal-title">Let's get started</div>
+      <div class="modal-sub" id="modal-sub">We'll follow up within a few hours. No commitment required.</div>
+      <form id="form-showing" name="contact" data-netlify="true" netlify-honeypot="bot-field" style="display:block" novalidate onsubmit="return false">
+        <input type="hidden" name="form-name" value="contact"/>
+        <p style="display:none"><input name="bot-field"/></p>
+        <div class="f-field">
+          <label class="f-label" for="f-name">Full name <span style="color:var(--muted);font-size:11px">(required)</span></label>
+          <input class="f-input" type="text" id="f-name" name="name" autocomplete="name"/>
+          <div class="f-error" id="err-name"></div>
+        </div>
+        <div class="f-field">
+          <label class="f-label" for="f-email">Email address <span style="color:var(--muted);font-size:11px;font-weight:400">(or phone)</span></label>
+          <input class="f-input" type="text" id="f-email" name="email" inputmode="email" autocomplete="email"/>
+        </div>
+        <div class="f-field">
+          <label class="f-label" for="f-phone">Phone number <span style="color:var(--muted);font-size:11px;font-weight:400">(or email)</span></label>
+          <input class="f-input" type="tel" id="f-phone" name="phone" inputmode="tel" autocomplete="tel"/>
+          <div class="f-note">At least one of email or phone is required.</div>
+          <div class="f-error" id="err-contact"></div>
+        </div>
+        <p class="f-consent">By submitting, you agree to be contacted by HomeCashbacks. View our <a href="/privacy.html" target="_blank">Privacy Policy</a>.</p>
+        <button type="button" class="f-submit" onclick="handleFormSubmit('contact')">Claim My Free Showing</button>
+      </form>
+    </div>
+    <div class="f-success" id="form-success">
+      <div class="f-success-icon">✓</div>
+      <h3>We'll be in touch!</h3>
+      <p>Expect a call or email from us within a few hours.</p>
+    </div>
+  </div>
+</div>

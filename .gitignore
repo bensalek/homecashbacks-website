@@ -1,0 +1,10 @@
+# Build output — Netlify generates this, don't commit it
+dist/
+
+# Node
+node_modules/
+.netlify/
+
+# OS
+.DS_Store
+Thumbs.db
