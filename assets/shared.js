@@ -14,7 +14,8 @@ function closeMobMenu(){document.getElementById('nav-links').classList.remove('o
 
 // Form submission
 function handleFormSubmit(formName){
-  var form=document.getElementById('form-'+formName);
+  var form=document.getElementById('form-showing');
+  if(!form){return;}
   var nameEl=document.getElementById('f-name');
   var emailEl=document.getElementById('f-email');
   var phoneEl=document.getElementById('f-phone');
