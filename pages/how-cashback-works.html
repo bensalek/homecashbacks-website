@@ -394,7 +394,7 @@ footer a{color:#e8a020;text-decoration:none}
   <div class="section">
     <div class="section-label">A fair question</div>
     <h2>Why don't other realtors offer this?</h2>
-    <p>No incentive. An agent who keeps the full commission earns $25,000 on a single GTA sale. One who offers cashback earns $4,999 for the same work. Most brokerages have no interest in changing that math.</p>
+    <p>Because the current system works very well for them. A traditional buyer agent earns a percentage of whatever you pay. On a $1M home that can be $20,000 to $25,000, for the same work we do for $4,999. Most agents and brokerages have no interest in questioning a model that pays them that well. We do.</p>
     <div class="why-box">
       <p>Today's buyers already do most of the work. You search on HouseSigma, shortlist on Realtor.ca, and often find the home before calling anyone. The commission model was built for a different era. We charge for what we actually do, and give back what we don't earn.</p>
     </div>
@@ -411,7 +411,7 @@ footer a{color:#e8a020;text-decoration:none}
   <div class="cta-block">
     <h3>Ready to claim your cashback?</h3>
     <p>First showing is free. No commitment, no paperwork, no pressure.</p>
-    <a class="cta-btn" href="/">Book a Free Showing</a>
+    <button class="cta-btn" onclick="openModal()">Book a Free Showing</button>
   </div>
 
 </div>
@@ -550,6 +550,65 @@ function openModal(){
 
 document.addEventListener('keydown',function(e){if(e.key==='Escape'){const overlay=document.querySelector('.modal-overlay');if(overlay&&overlay.classList.contains('open'))closeModal();}});
 function closeModal(){document.getElementById('modal').classList.remove('open');}
+function validateEmail(e){return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e);}
+function validatePhone(p){return p.replace(/\D/g,'').length>=10;}
+function handleFormSubmit(){
+  const nameVal=document.getElementById('f-name').value.trim();
+  const emailVal=document.getElementById('f-email').value.trim();
+  const phoneVal=document.getElementById('f-phone').value.trim();
+
+  // Reset errors
+  ['err-name','err-contact'].forEach(id=>{
+    const el=document.getElementById(id);
+    if(el){el.textContent='';el.classList.remove('show');}
+  });
+  ['f-name','f-email','f-phone'].forEach(id=>{
+    const el=document.getElementById(id);
+    if(el)el.style.borderColor='';
+  });
+
+  let ok=true;
+
+  if(!nameVal){
+    const el=document.getElementById('err-name');
+    el.textContent='Please enter your full name.';
+    el.classList.add('show');
+    document.getElementById('f-name').style.borderColor='#b83232';
+    document.getElementById('f-name').focus();
+    ok=false;
+  }
+
+  if(!emailVal&&!phoneVal){
+    const el=document.getElementById('err-contact');
+    el.textContent='Please enter an email address or phone number.';
+    el.classList.add('show');
+    document.getElementById('f-email').style.borderColor='#b83232';
+    document.getElementById('f-phone').style.borderColor='#b83232';
+    ok=false;
+  } else if(emailVal&&!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailVal)){
+    const el=document.getElementById('err-contact');
+    el.textContent='Please enter a valid email address.';
+    el.classList.add('show');
+    document.getElementById('f-email').style.borderColor='#b83232';
+    document.getElementById('f-email').focus();
+    ok=false;
+  } else if(phoneVal&&phoneVal.replace(/\D/g,'').length<10){
+    const el=document.getElementById('err-contact');
+    el.textContent='Phone number must be at least 10 digits.';
+    el.classList.add('show');
+    document.getElementById('f-phone').style.borderColor='#b83232';
+    document.getElementById('f-phone').focus();
+    ok=false;
+  }
+
+  if(!ok)return;
+
+  const formEl=document.getElementById('form-showing');
+  const formData=new FormData(formEl);
+  fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(formData).toString()})
+    .then(()=>{document.getElementById('modal-form-wrap').style.display='none';document.getElementById('form-success').style.display='block';formEl.reset();})
+    .catch(()=>{document.getElementById('modal-form-wrap').style.display='none';document.getElementById('form-success').style.display='block';});
+}
 </script>
 </body>
 </html>
