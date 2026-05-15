@@ -15,7 +15,7 @@ const footer = fs.readFileSync(path.join(COMPONENTS_DIR, 'footer.html'), 'utf8')
 
 // Netlify form detection — hidden form Netlify scans at deploy time
 const NETLIFY_FORM_DETECTION = `<!-- Netlify form detection -->
-<form name="contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
+<form name="contact" data-netlify="true" netlify-honeypot="bot-field" hidden style="display:none!important">
   <input type="text" name="name"/>
   <input type="text" name="email"/>
   <input type="tel" name="phone"/>
@@ -57,9 +57,18 @@ pages.forEach(function(filename) {
   var headStyleMatches = fullHeadContent.match(/<style[^>]*>[\s\S]*?<\/style>/gi) || [];
   var pageHeadStyles = headStyleMatches.join('\n');
 
-  // Strip styles from head content so we have just meta/title/canonical
+  // Strip styles and shared items from head - keep only page-specific meta
   var pageMetaContent = fullHeadContent
     .replace(/<style[^>]*>[\s\S]*?<\/style>/gi, '')
+    .replace(/<meta charset[^>]*>/gi, '')
+    .replace(/<meta name="viewport"[^>]*>/gi, '')
+    .replace(/<link rel="icon"[^>]*>/gi, '')
+    .replace(/<link rel="apple-touch-icon"[^>]*>/gi, '')
+    .replace(/<link rel="preconnect"[^>]*>/gi, '')
+    .replace(/<link href="https:\/\/fonts\.googleapis[^>]*>/gi, '')
+    .replace(/<script async src="https:\/\/www\.googletagmanager[^>]*><\/script>/gi, '')
+    .replace(/<script>[\s\S]*?gtag\([\s\S]*?<\/script>/gi, '')
+    .replace(/<link rel="stylesheet" href="\/assets\/styles[^>]*>/gi, '')
     .trim();
 
   // Extract body content
@@ -99,7 +108,7 @@ pages.forEach(function(filename) {
     nav + '\n\n' +
     bodyClean + '\n\n' +
     footer + '\n\n' +
-    '<script src="/assets/shared.js"></script>\n' +
+    '<script>\n' + sharedJs + '\n</script>\n' +
     pageScripts + '\n' +
     '</body>\n' +
     '</html>';

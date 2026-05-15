@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
   <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
@@ -179,9 +178,9 @@ footer{background:#1a2332;padding:2.5rem 2rem 1.5rem}
   gtag("js", new Date());
   gtag("config", "G-068EB5V10X");
 </script>
-
 </head>
 <body>
+
 <!-- HERO -->
 <section class="page-hero">
   <div class="page-hero-eyebrow">Our Story</div>
@@ -227,54 +226,10 @@ footer{background:#1a2332;padding:2.5rem 2rem 1.5rem}
 </div>
 
 <!-- FOOTER -->
-
 <script>
-
-function toggleMobMenu(){
-  document.getElementById('nav-links').classList.toggle('open');
-  document.getElementById('hamburger').classList.toggle('open');
-}
-
 </script>
 <script>
-
-function openModal(){
-  document.getElementById('modal').classList.add('open');
-  document.getElementById('form-success').style.display='none';
-  document.getElementById('modal-form-wrap').style.display='block';
-  ['err-name','err-contact'].forEach(id=>{
-    const el=document.getElementById(id);
-    if(el){el.classList.remove('show');el.style.display='none';el.textContent='';}
-  });
-  ['f-name','f-email','f-phone'].forEach(id=>document.getElementById(id).classList.remove('err'));
-}
-
-function handleFormSubmit(){
-  const nameVal=document.getElementById('f-name').value.trim();
-  const emailVal=document.getElementById('f-email').value.trim();
-  const phoneVal=document.getElementById('f-phone').value.trim();
-
-  // Reset errors
-  ['err-name','err-contact'].forEach(id=>{
-    const el=document.getElementById(id);
-    if(el){el.textContent='';el.classList.remove('show');}
-  });
-  ['f-name','f-email','f-phone'].forEach(id=>{
-    const el=document.getElementById(id);
-    if(el)el.style.borderColor='';
-  });
-
-  let ok=true;
-
-
-
-  if(!ok)return;
-
-  const formData=new FormData(formEl);
-}
-
 </script>
-
 <script src="/assets/shared.js"></script>
 </body>
 </html>

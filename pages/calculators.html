@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
   <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
@@ -222,9 +221,9 @@ footer{background:#1a2332;padding:2.5rem 2rem 1.5rem}
   gtag("js", new Date());
   gtag("config", "G-068EB5V10X");
 </script>
-
 </head>
 <body>
+
 <!-- PAGE HERO -->
 <div class="page-hero">
   <div class="page-hero-eyebrow">Tools</div>
@@ -381,31 +380,8 @@ footer{background:#1a2332;padding:2.5rem 2rem 1.5rem}
   </div>
 </section>
 
-
-        <div class="f-field">
-          <label class="f-label" for="f-email">Email address <span style="color:#5a6a82;font-size:11px;font-weight:400">(or phone)</span></label>
-          <input class="f-input" type="text" id="f-email" name="email" inputmode="email"/>
-        </div>
-        <div class="f-field">
-          <label class="f-label" for="f-phone">Phone number <span style="color:#5a6a82;font-size:11px;font-weight:400">(or email)</span></label>
-          <input class="f-input" type="tel" id="f-phone" name="phone"/>
-          <div class="f-note">At least one of email or phone is required.</div>
-          <div class="f-error" id="err-contact"></div>
-        </div>
-        <p class="f-consent">By submitting, you agree to be contacted by HomeCashbacks. View our <a href="/privacy.html" target="_blank">Privacy Policy</a>.</p>
-        <button type="button" class="f-submit" onclick="handleFormSubmit()">Claim My Free Showing</button>
-      </form>
-    </div>
-    <div class="f-success" id="form-success" style="display:none">
-      <div class="f-success-icon">✓</div>
-      <h3>We'll be in touch!</h3>
-      <p>Expect a call or email from us within a few hours.</p>
-    </div>
-  </div>
-</div>
-
+<!-- MODAL -->
 <script>
-
 const fmtC=n=>'$'+Math.round(n).toLocaleString('en-CA');
 
 function switchTab(idx){
@@ -470,15 +446,6 @@ calcClosing();calcMonthly();
 const params=new URLSearchParams(window.location.search);
 if(params.get('tab')==='1')switchTab(1);
 
-function handleFormSubmit(){
-  const nameVal=document.getElementById('f-name').value.trim();
-  const emailVal=document.getElementById('f-email').value.trim();
-  const phoneVal=document.getElementById('f-phone').value.trim();
-  ['err-name','err-contact'].forEach(id=>{const el=document.getElementById(id);if(el){el.textContent='';el.classList.remove('show');}});
-  ['f-name','f-email','f-phone'].forEach(id=>{const el=document.getElementById(id);if(el)el.style.borderColor='';});
-  let ok=true;
-  if(!ok)return;
-}
 const FAQ_CLOSING=[
   {q:'What are closing costs when buying a home in Ontario?',a:'Closing costs are what you pay on top of your down payment to complete the purchase. The biggest item is land transfer tax, calculated on a sliding scale from 0.5% to 2.5% of the purchase price. Toronto buyers pay this twice, provincial and municipal, which makes the city one of the most expensive in Canada for closing costs. You also pay legal fees (typically $1,200 to $1,400), title insurance ($350 to $950 depending on purchase price), and a home inspection ($400 to $600). Budget 2% to 4% of the purchase price in total. See our <a href="/first-time-buyer-guide.html" style="color:#e8a020;text-decoration:none;font-weight:500">first-time buyer guide</a> for a full breakdown.'},
   {q:'How does Toronto\'s land transfer tax work?',a:'Ontario\'s provincial LTT starts at 0.5% on the first $55,000 of the purchase price and goes up to 2.5% on amounts above $2,000,000. Toronto adds a municipal LTT on top of that for any property within city limits. On a $900,000 Toronto home, that works out to roughly $14,475 in provincial LTT and another $14,475 in municipal LTT, close to $29,000 in land transfer tax before any other closing costs. Use the calculator above to see your exact figures.'},
@@ -520,9 +487,7 @@ function renderFAQ(){
   });
 }
 renderFAQ();
-
 </script>
-
 <script src="/assets/shared.js"></script>
 </body>
 </html>

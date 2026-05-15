@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8"/>
   <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
   <link rel="shortcut icon" href="/favicon.svg"/>
@@ -199,9 +198,9 @@ footer{background:#1a2332;padding:2.5rem 2rem 1.5rem}
   gtag("js", new Date());
   gtag("config", "G-068EB5V10X");
 </script>
-
 </head>
 <body>
+
 <section class="page-hero">
   <div class="page-hero-eyebrow">Offer strategy tool</div>
   <h1>Know your number.<br>Know your strategy.<br><em>Don't decide under pressure.</em></h1>
@@ -273,7 +272,6 @@ footer{background:#1a2332;padding:2.5rem 2rem 1.5rem}
 </div>
 
 <script>
-
 const questions=[
   {key:'offer_date',text:'Is there an offer date set for this property?',opts:[['held','Yes — offers are being held'],['open','No — open for offers anytime']]},
   {key:'days',text:'How long has it been listed?',opts:[['fresh','Under 7 days'],['moderate','7 to 21 days'],['long','Over 21 days']]},
@@ -403,19 +401,9 @@ function buildResult(){
   document.getElementById('result-card').scrollIntoView({behavior:'smooth',block:'start'});
 }
 
-function closeMobMenu(){
-  document.getElementById('nav-links').classList.remove('open');
-  document.getElementById('hamburger').classList.remove('open');
-}
-function toggleMobMenu(){
-  document.getElementById('nav-links').classList.toggle('open');
-  document.getElementById('hamburger').classList.toggle('open');
-}
 
 render();
-
 </script>
-
 <script src="/assets/shared.js"></script>
 </body>
 </html>

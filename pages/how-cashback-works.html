@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
   <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
@@ -243,9 +242,9 @@ footer a{color:#e8a020;text-decoration:none}
   gtag("js", new Date());
   gtag("config", "G-068EB5V10X");
 </script>
-
 </head>
 <body>
+
 <!-- HERO -->
 <section class="page-hero">
   <div class="page-hero-eyebrow">How it works</div>
@@ -357,9 +356,7 @@ footer a{color:#e8a020;text-decoration:none}
 </div>
 
 <!-- FOOTER -->
-
 <script>
-
 const FAQ=[
   {q:'Do I have to do anything to receive the cashback?',a:'No. Once your transaction closes, the funds flow automatically through the brokerage. You don\'t need to submit a claim or request anything separately. We send your cashback to you once the brokerage releases the commission funds, which typically takes 6 to 8 weeks after closing.'},
   {q:'What if the seller is only offering 2% commission?',a:'Your cashback is calculated on whatever commission the seller has offered. If the offer is 2%, your cashback would be 2% of the purchase price minus our $4,999 flat fee. We are upfront about this before you make any offer.'},
@@ -394,55 +391,9 @@ function updateCalc(){
 updateCalc();
 
 
-function closeMobMenu(){
-  document.getElementById('nav-links').classList.remove('open');
-  document.getElementById('hamburger').classList.remove('open');
-}
-function toggleMobMenu(){
-  document.getElementById('nav-links').classList.toggle('open');
-  document.getElementById('hamburger').classList.toggle('open');
-}
-
 </script>
 <script>
-
-function openModal(){
-  document.getElementById('modal').classList.add('open');
-  document.getElementById('form-success').style.display='none';
-  document.getElementById('modal-form-wrap').style.display='block';
-  ['err-name','err-contact'].forEach(id=>{
-    const el=document.getElementById(id);
-    if(el){el.classList.remove('show');el.style.display='none';el.textContent='';}
-  });
-  ['f-name','f-email','f-phone'].forEach(id=>document.getElementById(id).classList.remove('err'));
-}
-
-function handleFormSubmit(){
-  const nameVal=document.getElementById('f-name').value.trim();
-  const emailVal=document.getElementById('f-email').value.trim();
-  const phoneVal=document.getElementById('f-phone').value.trim();
-
-  // Reset errors
-  ['err-name','err-contact'].forEach(id=>{
-    const el=document.getElementById(id);
-    if(el){el.textContent='';el.classList.remove('show');}
-  });
-  ['f-name','f-email','f-phone'].forEach(id=>{
-    const el=document.getElementById(id);
-    if(el)el.style.borderColor='';
-  });
-
-  let ok=true;
-
-
-
-  if(!ok)return;
-
-  const formData=new FormData(formEl);
-}
-
 </script>
-
 <script src="/assets/shared.js"></script>
 </body>
 </html>

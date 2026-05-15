@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8"/>
   <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
   <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
@@ -21,7 +20,7 @@
 <meta name="twitter:description" content="Flat $4,999 fee. Avg. $20,446 cashback on a GTA home. First showing free."/>
 <meta name="robots" content="index, follow"/>
 <link rel="canonical" href="https://homecashbacks.ca"/>
-<script type="application/ld+json">
+<script>
 {
   "@context": "https://schema.org",
   "@type": "RealEstateAgent",
@@ -710,55 +709,10 @@ footer a{color:#e8a020;text-decoration:none}
   .cmp-them,.cmp-us{font-size:12px;padding:.6rem .6rem}
 }
 </style>
-
 </head>
 <body>
+
 <!-- Hidden Netlify form for detection -->
-        <div class="f-field">
-          <label class="f-label" for="f-email">Email address <span style="color:var(--muted);font-size:11px;font-weight:400">(or phone)</span></label>
-          <input class="f-input" type="text" id="f-email" name="email" inputmode="email" autocomplete="email"/>
-        </div>
-        <div class="f-field">
-          <label class="f-label" for="f-phone">Phone number <span style="color:var(--muted);font-size:11px;font-weight:400">(or email)</span></label>
-          <input class="f-input" type="tel" id="f-phone" name="phone" inputmode="tel" autocomplete="tel"/>
-          <div class="f-note">At least one of email or phone is required.</div>
-          <div class="f-error" id="err-contact"></div>
-        </div>
-        <p class="f-consent">By submitting, you agree to be contacted by HomeCashbacks. View our <a href="/privacy.html" target="_blank">Privacy Policy</a>.</p>
-        <button type="button" class="f-submit" onclick="handleFormSubmit('contact')">Claim My Free Showing</button>
-      </form>
-
-      <!-- MORTGAGE FORM -->
-      <form id="form-mortgage" name="mortgage" data-netlify="true" netlify-honeypot="bot-field" style="display:none" novalidate onsubmit="return false">
-        <input type="hidden" name="form-name" value="mortgage"/>
-        <p style="display:none"><input name="bot-field"/></p>
-        <div class="f-field">
-          <label class="f-label" for="m-name">Full name <span style="color:var(--muted);font-size:11px;font-weight:400">(required)</span></label>
-          <input class="f-input" type="text" id="m-name" name="name" autocomplete="name"/>
-          <div class="f-error" id="err-m-name"></div>
-        </div>
-        <div class="f-field">
-          <label class="f-label" for="m-email">Email address <span style="color:var(--muted);font-size:11px;font-weight:400">(or phone)</span></label>
-          <input class="f-input" type="text" id="m-email" name="email" inputmode="email" autocomplete="email"/>
-        </div>
-        <div class="f-field">
-          <label class="f-label" for="m-phone">Phone number <span style="color:var(--muted);font-size:11px;font-weight:400">(or email)</span></label>
-          <input class="f-input" type="tel" id="m-phone" name="phone" inputmode="tel" autocomplete="tel"/>
-          <div class="f-note">At least one of email or phone is required.</div>
-          <div class="f-error" id="err-m-contact"></div>
-        </div>
-        <p class="f-consent">By submitting, you agree to be contacted by HomeCashbacks. View our <a href="/privacy.html" target="_blank">Privacy Policy</a>.</p>
-        <button type="button" class="f-submit" onclick="handleFormSubmit('mortgage')">Get Pre-Approved</button>
-      </form>
-
-    </div>
-    <div class="f-success" id="form-success">
-      <div class="f-success-icon">✓</div>
-      <h3>We'll be in touch!</h3>
-      <p>Expect a call or email from us within a few hours.</p>
-    </div>
-  </div>
-</div>
 
 <!-- HERO -->
 <section class="hero">
@@ -1069,7 +1023,6 @@ footer a{color:#e8a020;text-decoration:none}
   </div>
 </section>
 
-
 <script>
 // CASHBACK SLIDER (desktop only)
 function updateCalc(){
@@ -1118,87 +1071,9 @@ const FAQ_BUYING=[
 ];
 
 // MODAL
-function openModal(type){
-  const isMortgage=type==='mortgage';
-  document.getElementById('modal').classList.add('open');
-  document.getElementById('form-success').style.display='none';
-  document.getElementById('modal-form-wrap').style.display='block';
-  document.getElementById('form-showing').style.display=isMortgage?'none':'block';
-  document.getElementById('form-mortgage').style.display=isMortgage?'block':'none';
-  document.getElementById('modal-tag').textContent=isMortgage?'Mortgage pre-approval':'Book a Free Showing';
-  document.getElementById('modal-title').textContent=isMortgage?"Get pre-approved":"Let's get started";
-  document.getElementById('modal-sub').textContent=isMortgage?"We'll connect you with a trusted mortgage broker within one business day.":"Your first showing is free. We'll follow up within a few hours.";
-  ['err-name','err-contact','err-m-name','err-m-contact'].forEach(id=>{
-    const el=document.getElementById(id);
-    if(el){el.textContent='';el.classList.remove('show');}
-  });
-  ['f-name','f-email','f-phone','m-name','m-email','m-phone'].forEach(id=>{
-    const el=document.getElementById(id);
-    if(el){el.style.borderColor='';el.value='';}
-  });
-}
 // FORM VALIDATION
-function validateEmail(e){return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e);}
-function validatePhone(p){return p.replace(/\D/g,'').length>=10;}
-
-function handleFormSubmit(formType){
-  const nameId=formType==='mortgage'?'m-name':'f-name';
-  const emailId=formType==='mortgage'?'m-email':'f-email';
-  const phoneId=formType==='mortgage'?'m-phone':'f-phone';
-  const errNameId=formType==='mortgage'?'err-m-name':'err-name';
-  const errContactId=formType==='mortgage'?'err-m-contact':'err-contact';
-  const nameVal=document.getElementById(nameId).value.trim();
-  const emailVal=document.getElementById(emailId).value.trim();
-  const phoneVal=document.getElementById(phoneId).value.trim();
-  [errNameId,errContactId].forEach(id=>{
-    const el=document.getElementById(id);
-    if(el){el.textContent='';el.classList.remove('show');}
-  });
-  [nameId,emailId,phoneId].forEach(id=>{
-    const el=document.getElementById(id);
-    if(el)el.style.borderColor='';
-  });
-  let ok=true;
-  if(!nameVal){
-    const el=document.getElementById(errNameId);
-    el.textContent='Please enter your full name.';el.classList.add('show');
-    document.getElementById(nameId).style.borderColor='var(--red)';
-    document.getElementById(nameId).focus();ok=false;
-  }
-  if(!emailVal&&!phoneVal){
-    const el=document.getElementById(errContactId);
-    el.textContent='Please enter an email address or phone number.';el.classList.add('show');
-    document.getElementById(emailId).style.borderColor='var(--red)';
-    document.getElementById(phoneId).style.borderColor='var(--red)';ok=false;
-  } else if(emailVal&&!validateEmail(emailVal)){
-    const el=document.getElementById(errContactId);
-    el.textContent='Please enter a valid email address.';el.classList.add('show');
-    document.getElementById(emailId).style.borderColor='var(--red)';
-    document.getElementById(emailId).focus();ok=false;
-  } else if(phoneVal&&!validatePhone(phoneVal)){
-    const el=document.getElementById(errContactId);
-    el.textContent='Phone number must be at least 10 digits.';el.classList.add('show');
-    document.getElementById(phoneId).style.borderColor='var(--red)';
-    document.getElementById(phoneId).focus();ok=false;
-  }
-  if(!ok)return;
-  const formEl=document.getElementById(formType==='mortgage'?'form-mortgage':'form-showing');
-  const formData=new FormData(formEl);
-  fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(formData).toString()})
-    .then(()=>{document.getElementById('modal-form-wrap').style.display='none';document.getElementById('form-success').style.display='block';formEl.reset();})
-    .catch(()=>{document.getElementById('modal-form-wrap').style.display='none';document.getElementById('form-success').style.display='block';});
-}
 
 // NAV
-function toggleMobMenu(){
-  document.getElementById('nav-links').classList.toggle('open');
-  document.getElementById('hamburger').classList.toggle('open');
-}
-function closeMobMenu(){
-  document.getElementById('nav-links').classList.remove('open');
-  document.getElementById('hamburger').classList.remove('open');
-}
-
 // FAQ
 function renderFAQ(){
   [['faq-service',FAQ_SERVICE],['faq-buying',FAQ_BUYING]].forEach(([id,data])=>{
@@ -1229,7 +1104,6 @@ function renderFAQ(){
 
 renderFAQ();
 </script>
-
 <script src="/assets/shared.js"></script>
 </body>
 </html>

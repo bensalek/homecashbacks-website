@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
   <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
@@ -247,9 +246,9 @@ footer{background:#1a2332;padding:2.5rem 2rem 1.5rem}
   gtag("js", new Date());
   gtag("config", "G-068EB5V10X");
 </script>
-
 </head>
 <body>
+
 <!-- PAGE HERO -->
 <div class="page-hero">
   <div class="page-hero-eyebrow">Step by step</div>
@@ -311,31 +310,8 @@ footer{background:#1a2332;padding:2.5rem 2rem 1.5rem}
   </div>
 </section>
 
-
-        <div class="f-field">
-          <label class="f-label" for="f-email">Email address <span style="color:#5a6a82;font-size:11px;font-weight:400">(or phone)</span></label>
-          <input class="f-input" type="text" id="f-email" name="email" inputmode="email"/>
-        </div>
-        <div class="f-field">
-          <label class="f-label" for="f-phone">Phone number <span style="color:#5a6a82;font-size:11px;font-weight:400">(or email)</span></label>
-          <input class="f-input" type="tel" id="f-phone" name="phone"/>
-          <div class="f-note">At least one of email or phone is required.</div>
-          <div class="f-error" id="err-contact"></div>
-        </div>
-        <p class="f-consent">By submitting, you agree to be contacted by HomeCashbacks. View our <a href="/privacy.html" target="_blank">Privacy Policy</a>.</p>
-        <button type="button" class="f-submit" onclick="handleFormSubmit()">Claim My Free Showing</button>
-      </form>
-    </div>
-    <div class="f-success" id="form-success" style="display:none">
-      <div class="f-success-icon">✓</div>
-      <h3>We'll be in touch!</h3>
-      <p>Expect a call or email from us within a few hours.</p>
-    </div>
-  </div>
-</div>
-
+<!-- MODAL -->
 <script>
-
 const PHASES=[
   {id:'p1',label:'Finance',title:'Get Your Finances Ready',desc:'Understand your credit, savings, and borrowing power before anything else.',
    tip:'<strong>Tip:</strong> Open an FHSA now — up to $8,000/year ($40K lifetime) tax-free toward your first home. Also explore the RRSP Home Buyer\'s Plan (up to $60K) and the First-Time Buyer\'s Tax Credit.',
@@ -456,15 +432,6 @@ function render(){
 }
 render();
 
-function handleFormSubmit(){
-  const nameVal=document.getElementById('f-name').value.trim();
-  const emailVal=document.getElementById('f-email').value.trim();
-  const phoneVal=document.getElementById('f-phone').value.trim();
-  ['err-name','err-contact'].forEach(id=>{const el=document.getElementById(id);if(el){el.textContent='';el.classList.remove('show');}});
-  ['f-name','f-email','f-phone'].forEach(id=>{const el=document.getElementById(id);if(el)el.style.borderColor='';});
-  let ok=true;
-  if(!ok)return;
-}
 const FAQ_CHECKLIST=[
   {q:'What is the 21-step home buyer checklist?',a:'It is a step-by-step guide for GTA buyers that covers every stage of the purchase, from mortgage pre-approval to getting your keys and claiming your cashback. The steps are split into five phases so you always know where you are and what comes next. New to buying? See our <a href="/first-time-buyer-guide.html" style="color:#e8a020;text-decoration:none;font-weight:500">first-time buyer guide</a>.'},
   {q:'Do I need to complete every step in order?',a:'Mostly yes. The phases follow the natural sequence of a purchase, so skipping steps can cause problems later. For example, arranging a home inspection or reviewing a status certificate only makes sense once you have an accepted offer, and making an offer without a pre-approval puts you at a real disadvantage in the GTA market.'},
@@ -496,9 +463,7 @@ function renderFAQ(){
   });
 }
 renderFAQ();
-
 </script>
-
 <script src="/assets/shared.js"></script>
 </body>
 </html>
