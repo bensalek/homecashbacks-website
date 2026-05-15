@@ -8,10 +8,11 @@ const ASSETS_DIR     = './assets';
 const DIST_DIR       = './dist';
 
 // Read components
-const head   = fs.readFileSync(path.join(COMPONENTS_DIR, 'head.html'),   'utf8');
-const nav    = fs.readFileSync(path.join(COMPONENTS_DIR, 'nav.html'),    'utf8');
-const modal  = fs.readFileSync(path.join(COMPONENTS_DIR, 'modal.html'),  'utf8');
-const footer = fs.readFileSync(path.join(COMPONENTS_DIR, 'footer.html'), 'utf8');
+const head     = fs.readFileSync(path.join(COMPONENTS_DIR, 'head.html'),   'utf8');
+const nav      = fs.readFileSync(path.join(COMPONENTS_DIR, 'nav.html'),    'utf8');
+const modal    = fs.readFileSync(path.join(COMPONENTS_DIR, 'modal.html'),  'utf8');
+const footer   = fs.readFileSync(path.join(COMPONENTS_DIR, 'footer.html'), 'utf8');
+const sharedJs = fs.readFileSync(path.join(ASSETS_DIR,     'shared.js'),   'utf8');
 
 // Netlify form detection - truly hidden, won't render visibly
 const NETLIFY_FORM_DETECTION = '<div aria-hidden="true" style="position:absolute;left:-9999px;top:-9999px;width:1px;height:1px;overflow:hidden"><form name="contact" data-netlify="true" netlify-honeypot="bot-field"><input type="text" name="name"/><input type="text" name="email"/><input type="tel" name="phone"/></form></div>';
