@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<meta charset="UTF-8"/>
+<link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png"/>
+<link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <title>First-Time Home Buyer Guide Toronto | HomeCashbacks</title>
 <meta name="description" content="A practical guide to buying your first home or condo in Toronto and the GTA. Covers budgeting, mortgage pre-approval, closing costs, condo buying, and cashback."/>
 <meta name="author" content="Laleh Mousavi, HomeCashbacks"/>
@@ -10,12 +16,111 @@
 <meta property="og:url" content="https://homecashbacks.ca/first-time-buyer-guide.html"/>
 <meta name="robots" content="index, follow"/>
 <link rel="canonical" href="https://homecashbacks.ca/first-time-buyer-guide.html"/>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-068EB5V10X"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+  gtag("config", "G-068EB5V10X");
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#f0f4f8;--bg2:#e2eaf2;--bg3:#ccd8e8;
+  --ink:#1a2332;--ink2:#2d3d52;
+  --muted:#5a6a82;--border:rgba(26,35,50,.1);
+  --white:#fff;
+  --taupe:#6b7fa0;--gold-light:#fef3dc;
+  --charcoal:#1a2332;--amber:#e8a020;--amber-dark:#c4861a;
+  --blue:#2563eb;--green:#16a34a;--green2:#16a34a;--red:#b83232;
 }
+html{scroll-behavior:smooth}
+body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;padding-top:118px}
+
+/* TOP BAR */
+.top-bar{position:fixed;top:0;left:0;right:0;z-index:600;background:#1a2332;height:58px;padding:0 1.5rem;display:flex;align-items:center;justify-content:center;gap:12px}
+.top-bar-text{font-size:13px;color:rgba(255,255,255,.45);white-space:nowrap;margin-right:4px}
+.top-btn{display:inline-flex;align-items:center;gap:6px;padding:10px 24px;border-radius:4px;font-size:14px;font-weight:700;border:none;cursor:pointer;font-family:'Outfit',sans-serif;white-space:nowrap;transition:opacity .2s}
+.top-btn:hover{opacity:.85}
+.top-btn.light{background:#e8a020;color:#1a2332;font-weight:700}
+.top-bar-phone{display:inline-flex;align-items:center;gap:5px;font-size:13px;color:rgba(255,255,255,.8);text-decoration:none;font-family:'Outfit',sans-serif;transition:color .2s}
+.top-bar-phone:hover{color:#fff}
+.top-bar-sep{width:1px;height:20px;background:rgba(255,255,255,.2)}
+
+/* NAV */
+nav{position:fixed;top:58px;left:0;right:0;z-index:570;background:#f0f4f8;border-bottom:1px solid var(--border);height:60px;padding:0 2rem;display:flex;align-items:center;justify-content:space-between}
+.logo{text-decoration:none;display:flex;align-items:center}
+.nav-cred{font-size:11px;color:var(--muted);letter-spacing:.2px;font-family:'Outfit',sans-serif;white-space:nowrap;margin-left:.75rem}
+.nav-cred-line2{font-size:10px;color:var(--muted);letter-spacing:.2px;font-family:'Outfit',sans-serif;white-space:nowrap;margin-left:.75rem}
+.nav-cred-wrap{display:flex;flex-direction:row;align-items:center;gap:.6rem}
+.nav-headshot{width:32px;height:32px;border-radius:50%;object-fit:cover;object-position:center top;border:2px solid #e8a020;flex-shrink:0}
+.nav-cred-wrap > div{display:flex;flex-direction:column;gap:1px}
+.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
+.hamburger span{display:block;width:22px;height:2px;background:var(--ink);border-radius:2px;transition:all .25s}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.nav-links{display:flex;align-items:center;gap:4px;list-style:none}
+.nav-links a{font-size:13px;color:var(--muted);text-decoration:none;transition:color .2s;padding:6px 10px;border-radius:4px}
+.nav-links a:hover{color:var(--ink);background:rgba(26,35,50,.05)}
+.nav-item{position:relative}
+.nav-link-btn{font-size:13px;color:var(--muted);background:none;border:none;cursor:pointer;font-family:'Outfit',sans-serif;display:flex;align-items:center;gap:4px;padding:6px 10px;border-radius:4px;transition:all .15s}
+.nav-link-btn:hover{color:var(--ink);background:rgba(26,35,50,.05)}
+.nav-link-btn svg{width:10px;height:10px;transition:transform .2s}
+.nav-item:hover .nav-link-btn svg{transform:rotate(180deg)}
+.nav-pill{background:#e8a020!important;color:#1a2332!important;padding:7px 18px;border-radius:4px;font-weight:700!important}
+.dropdown{position:absolute;top:calc(100% + 8px);left:0;background:var(--white);border:1px solid var(--border);border-radius:6px;box-shadow:0 8px 24px rgba(26,35,50,.1);min-width:210px;padding:.4rem 0;opacity:0;visibility:hidden;transform:translateY(-4px);transition:all .15s;z-index:100}
+.nav-item:hover .dropdown{opacity:1;visibility:visible;transform:translateY(0)}
+.dropdown a{display:block;padding:.65rem 1rem;font-size:13px;color:var(--ink2);text-decoration:none;transition:background .1s}
+.dropdown a:hover{background:var(--bg);color:var(--ink)}
+.dropdown-label{font-weight:500;font-size:13px;color:var(--ink)}
+.dropdown-sub{font-size:11px;color:var(--muted);margin-top:1px}
+
+/* MODAL */
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(28,25,22,.6);z-index:900;align-items:center;justify-content:center;padding:1.5rem}
+.modal-overlay.open{display:flex}
+.modal{background:var(--white);border-radius:6px;padding:2.25rem;max-width:420px;width:100%;position:relative;animation:mIn .22s ease}
+@keyframes mIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.modal-close{position:absolute;top:1rem;right:1rem;width:30px;height:30px;border-radius:50%;background:var(--bg2);border:none;cursor:pointer;font-size:15px;color:var(--muted);display:flex;align-items:center;justify-content:center}
+.modal-tag{font-size:10px;font-weight:500;letter-spacing:1px;text-transform:uppercase;color:var(--taupe);margin-bottom:.4rem}
+.modal-title{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:600;color:var(--ink);margin-bottom:.25rem}
+.modal-sub{font-size:16px;color:var(--muted);margin-bottom:1.4rem;line-height:1.5}
+.f-field{margin-bottom:.9rem}
+.f-label{font-size:12px;font-weight:500;color:var(--ink);margin-bottom:.3rem;display:block}
+.f-input{width:100%;padding:10px 13px;border:1.5px solid var(--bg3);border-radius:4px;font-size:14px;font-family:'Outfit',sans-serif;color:var(--ink);background:var(--bg);outline:none;transition:border-color .2s}
+.f-input:focus{border-color:var(--ink)}
+.f-input.err{border-color:var(--red)}
+.f-error{font-size:11px;color:var(--red);margin-top:.3rem;padding:6px 10px;background:#fef2f2;border-radius:3px;border-left:2px solid var(--red);display:none!important}
+.f-error.show{display:block!important}
+.f-consent{font-size:11px;color:var(--muted);line-height:1.5;margin-top:.6rem}
+.f-consent a{color:var(--blue);text-decoration:underline}
+.f-submit{width:100%;padding:14px;border-radius:4px;font-size:15px;font-weight:700;font-family:'Outfit',sans-serif;border:none;cursor:pointer;margin-top:.75rem;transition:opacity .2s;background:#e8a020;color:#1a2332}
+.f-submit:hover{opacity:.88}
+.f-success{display:none;text-align:center;padding:1.25rem 0}
+.f-success-icon{font-size:36px;margin-bottom:.6rem}
+.f-success h3{font-family:'Cormorant Garamond',serif;font-size:21px;color:var(--ink);margin-bottom:.3rem}
+.f-success p{font-size:13px;color:var(--muted)}
+
 /* SHARED */
 .section{padding:3rem 2rem}
+.sec-inner{max-width:860px;margin:0 auto}
+.eyebrow{font-size:12px;font-weight:500;letter-spacing:1.2px;text-transform:uppercase;color:var(--taupe);margin-bottom:.5rem}
+.sec-title{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,6vw,60px);font-weight:600;color:var(--ink);line-height:1.1;margin-bottom:.65rem}
+.sec-sub{font-size:15px;color:var(--muted);line-height:1.7;max-width:600px}
+
 /* PAGE HERO */
 .page-hero{background:#1a2332;padding:3rem 2rem 3.5rem;position:relative;overflow:hidden;isolation:isolate}
+.page-hero::before{content:'';position:absolute;top:-60px;right:-60px;width:300px;height:300px;border-radius:50%;border:50px solid rgba(37,99,235,.1)}
+.page-hero::after{content:'';position:absolute;bottom:-80px;left:-40px;width:220px;height:220px;border-radius:50%;border:36px solid rgba(232,160,32,.08)}
+.page-hero-inner{max-width:860px;margin:0 auto;position:relative;z-index:1}
+.page-hero-eyebrow{display:inline-flex;align-items:center;gap:6px;background:rgba(232,160,32,.15);color:#e8a020;font-size:11px;font-weight:500;letter-spacing:1.2px;text-transform:uppercase;padding:5px 13px;border-radius:3px;margin-bottom:1.25rem}
+.page-hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(32px,5vw,52px);font-weight:600;color:#fff;line-height:1.1;margin-bottom:.9rem}
+.page-hero-sub{font-size:15px;color:rgba(232,237,245,.55);max-width:580px;line-height:1.75}
+
 /* STICKY JUMP NAV */
 .jump-nav{background:var(--white);border-bottom:1px solid var(--border);padding:.75rem 2rem;position:sticky;top:118px;z-index:300;overflow-x:auto;scrollbar-width:none}
 .jump-nav::-webkit-scrollbar{display:none}
@@ -24,6 +129,7 @@
 .jump-btn{padding:6px 14px;border-radius:3px;border:1px solid var(--border);background:transparent;font-family:'Outfit',sans-serif;font-size:12px;color:var(--muted);cursor:pointer;transition:all .15s;text-decoration:none;display:inline-block;white-space:nowrap}
 .jump-btn:hover{background:var(--charcoal);color:#fff;border-color:var(--charcoal)}
 .jump-btn.active{background:var(--charcoal);color:#fff;border-color:var(--charcoal)}
+
 /* BUYING PROCESS STEPS */
 .steps-section{background:var(--white);border-top:1px solid var(--border)}
 .steps-grid{display:grid;gap:1px;margin-top:1.5rem;background:var(--border)}
@@ -36,6 +142,7 @@
 .step-cta-text{font-size:14px;color:var(--ink);font-weight:500}
 .step-cta-link{font-size:13px;font-weight:700;color:#e8a020;text-decoration:none;white-space:nowrap}
 .step-cta-link:hover{text-decoration:underline}
+
 /* HIDDEN COSTS */
 .costs-section{background:var(--bg)}
 .costs-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);margin-top:1.5rem;border-radius:6px;overflow:hidden}
@@ -47,6 +154,7 @@
 .costs-note{font-size:13px;color:var(--muted);line-height:1.7;margin-top:1.25rem}
 .costs-note a{color:#e8a020;text-decoration:none;font-weight:500}
 .costs-note a:hover{text-decoration:underline}
+
 /* CASHBACK SECTION */
 .cashback-section{background:#1a2332;padding:3rem 2rem}
 .cashback-inner{max-width:860px;margin:0 auto}
@@ -58,6 +166,7 @@
 .cashback-use-label{font-size:13px;color:rgba(232,237,245,.6);line-height:1.4;padding:.25rem 0}
 .cashback-cta-btn{background:#e8a020;color:#1a2332;padding:12px 26px;border-radius:4px;font-size:14px;font-weight:700;border:none;cursor:pointer;font-family:'Outfit',sans-serif;display:inline-flex;align-items:center;gap:6px;transition:opacity .2s}
 .cashback-cta-btn:hover{opacity:.88}
+
 /* CONDO SECTION */
 .condo-section{background:var(--white);border-top:1px solid var(--border)}
 .condo-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1.5rem}
@@ -65,6 +174,23 @@
 .condo-card-icon{width:36px;height:36px;border-radius:6px;background:#1a2332;display:flex;align-items:center;justify-content:center;margin-bottom:.75rem}
 .condo-card-title{font-size:14px;font-weight:600;color:var(--ink);margin-bottom:.4rem}
 .condo-card-desc{font-size:13px;color:var(--muted);line-height:1.7}
+
+
+/* FAQ */
+.faq-section{background:var(--bg2);border-top:1px solid var(--border)}
+.faq-cols{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:1.5rem}
+.faq-col-title{font-size:12px;font-weight:500;letter-spacing:.8px;text-transform:uppercase;color:#e8a020;margin-bottom:.9rem;padding-bottom:.6rem;border-bottom:2px solid #e8a020}
+.faq-list{display:flex;flex-direction:column;gap:7px;margin-top:1.4rem}
+.faq-item{background:var(--white);border:1px solid var(--border);border-radius:4px;overflow:hidden}
+.faq-q{display:flex;justify-content:space-between;align-items:flex-start;padding:.85rem 1rem;cursor:pointer;gap:10px}
+.faq-q-text{font-size:15px;font-weight:500;color:var(--ink);line-height:1.4}
+.faq-icon{font-size:15px;color:var(--muted);flex-shrink:0;transition:transform .25s;margin-top:1px}
+.faq-item.open .faq-icon{transform:rotate(45deg)}
+.faq-a{display:none;padding:.55rem 1rem .85rem;font-size:14px;color:var(--muted);line-height:1.7;border-top:1px solid var(--border)}
+.faq-item.open .faq-a{display:block}
+.faq-show-more{margin-top:.75rem;padding:8px 16px;border:1.5px solid var(--border);border-radius:4px;font-size:13px;font-weight:500;font-family:'Outfit',sans-serif;color:var(--muted);background:transparent;cursor:pointer;transition:all .2s}
+.faq-show-more:hover{color:var(--ink);border-color:var(--ink)}
+
 /* FINAL CTA */
 .final-cta{background:var(--bg2);padding:3.5rem 2rem;text-align:center;border-top:1px solid var(--border)}
 .final-cta-inner{max-width:520px;margin:0 auto}
@@ -74,19 +200,163 @@
 .final-cta-btn{background:#e8a020;color:#1a2332;padding:14px 32px;border-radius:4px;font-size:15px;font-weight:700;border:none;cursor:pointer;font-family:'Outfit',sans-serif;display:inline-flex;align-items:center;gap:8px;transition:opacity .2s;box-shadow:0 2px 14px rgba(232,160,32,.35)}
 .final-cta-btn:hover{opacity:.88}
 .final-cta-note{font-size:12px;color:var(--muted);margin-top:.75rem;opacity:.6}
-.nav-item .dropdown{position:static;opacity:1;visibility:visible;transform:none;box-shadow:none;border:none;padding:0 0 0 1rem;background:transparent;min-width:auto}
-.nav-item .dropdown{display:none}
+
+/* FOOTER */
+footer{background:#1a2332;padding:2.5rem 2rem 1.5rem}
+.foot-headshot{width:84px;height:84px;border-radius:50%;object-fit:cover;object-position:center top;border:2px solid #e8a020;flex-shrink:0}
+.foot-inner{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:2rem;padding-bottom:1.75rem;border-bottom:1px solid rgba(255,255,255,.08);max-width:980px;margin:0 auto}
+.foot-agent{display:flex;align-items:center;gap:1rem}
+.foot-agent-name{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:600;color:#fff;margin-bottom:.2rem}
+.foot-agent-title{font-size:11px;color:rgba(255,255,255,.35);line-height:1.6}
+.foot-agent-badge{display:inline-block;background:rgba(232,160,32,.15);color:#e8a020;font-size:10px;font-weight:600;padding:2px 8px;border-radius:3px;margin-top:.3rem}
+.foot-links{display:flex;flex-direction:column;gap:.35rem;padding-left:2rem;border-left:1px solid rgba(255,255,255,.08)}
+.foot-links a{font-size:12px;color:rgba(255,255,255,.35);text-decoration:none;transition:color .2s}
+.foot-links a:hover{color:#e8a020}
+.foot-cta{display:flex;flex-direction:column;align-items:flex-end;gap:.4rem}
+.foot-cta-btn{background:#e8a020;color:#1a2332;font-size:13px;font-weight:700;padding:10px 22px;border-radius:4px;border:none;cursor:pointer;font-family:'Outfit',sans-serif;transition:opacity .2s;white-space:nowrap}
+.foot-cta-btn:hover{opacity:.85}
+.foot-cta-sub{font-size:11px;color:rgba(255,255,255,.25)}
+.foot-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:1.25rem;max-width:980px;margin:0 auto;font-size:11px;color:rgba(255,255,255,.2)}
+.foot-social-link{color:rgba(255,255,255,.35);display:inline-flex;align-items:center;gap:4px;font-size:12px;text-decoration:none;transition:color .2s}
+.foot-social-link:hover{color:#e8a020}
+.foot-disclaimer{font-size:10px;color:rgba(255,255,255,.2)!important;line-height:1.6!important;max-width:700px;margin:.9rem auto 0!important;border-top:1px solid rgba(255,255,255,.08);padding-top:.9rem}
+
+/* MOBILE */
+@media(max-width:768px){
+  .hamburger{display:flex}
+  .nav-links{display:none;position:absolute;top:60px;left:0;right:0;background:var(--white);border-bottom:1px solid var(--border);padding:1rem;flex-direction:column;gap:4px;box-shadow:0 4px 12px rgba(26,35,50,.1)}
+  .nav-links.open{display:flex}
+  .nav-cred-wrap{display:none}
+  .nav-item .dropdown{position:static;opacity:1;visibility:visible;transform:none;box-shadow:none;border:none;padding:0 0 0 1rem;background:transparent;min-width:auto}
+  .nav-item.open .dropdown{display:block}
+  .nav-item .dropdown{display:none}
+  .foot-inner{grid-template-columns:1fr;gap:1.5rem}
+  .foot-links{padding-left:0;border-left:none;border-top:1px solid rgba(255,255,255,.08);padding-top:1.25rem;flex-direction:row;flex-wrap:wrap;gap:.5rem 1.25rem}
+  .foot-cta{align-items:flex-start}
+  .foot-bottom{flex-direction:column;gap:.75rem;align-items:flex-start}
 }
-.step-card{grid-template-columns:40px 1fr;gap:1rem}
-.step-num{width:40px;height:40px;font-size:18px}
-.costs-grid{grid-template-columns:1fr}
-.condo-grid{grid-template-columns:1fr}
-.cashback-uses{grid-template-columns:1fr 1fr}
-.jump-nav{top:118px}
+@media(max-width:680px){
+  .steps-grid{gap:0}
+  .step-card{grid-template-columns:40px 1fr;gap:1rem}
+  .step-num{width:40px;height:40px;font-size:18px}
+  .costs-grid{grid-template-columns:1fr}
+  .condo-grid{grid-template-columns:1fr}
+  .cashback-uses{grid-template-columns:1fr 1fr}
+  .faq-cols{grid-template-columns:1fr}
+    .jump-nav{top:118px}
 }
 </style>
 </head>
 <body>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modal">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <div id="modal-form-wrap">
+      <div class="modal-tag">Book a Free Consultation</div>
+      <div class="modal-title">Let's get started</div>
+      <div class="modal-sub">No pressure. We'll answer your questions and walk you through the process.</div>
+      <form id="form-showing" method="post" name="contact" novalidate onsubmit="return false" style="display:block">
+        <input type="hidden" name="form-name" value="contact"/>
+        <p style="display:none"><input name="bot-field"/></p>
+        <div class="f-field">
+          <label class="f-label" for="f-name">Full name <span style="color:var(--muted);font-size:11px">(required)</span></label>
+          <input class="f-input" type="text" id="f-name" name="name" autocomplete="name"/>
+          <div class="f-error" id="err-name"></div>
+        </div>
+        <div class="f-field">
+          <label class="f-label" for="f-email">Email address <span style="color:var(--muted);font-size:11px;font-weight:400">(or phone)</span></label>
+          <input class="f-input" type="text" id="f-email" name="email" inputmode="email" autocomplete="email"/>
+          <div class="f-error" id="err-email"></div>
+        </div>
+        <div class="f-field">
+          <label class="f-label" for="f-phone">Phone number <span style="color:var(--muted);font-size:11px;font-weight:400">(optional)</span></label>
+          <input class="f-input" type="tel" id="f-phone" name="phone" autocomplete="tel"/>
+        </div>
+        <div class="f-field">
+          <label class="f-label" for="f-budget">Approximate budget</label>
+          <select class="f-input" id="f-budget" name="budget">
+            <option value="">Select range</option>
+            <option>Under $600,000</option>
+            <option>$600,000 to $800,000</option>
+            <option>$800,000 to $1,000,000</option>
+            <option>$1,000,000 to $1,500,000</option>
+            <option>Over $1,500,000</option>
+          </select>
+        </div>
+        <p class="f-consent">By submitting, you agree to be contacted by HomeCashbacks. View our <a href="/privacy.html" target="_blank">Privacy Policy</a>.</p>
+        <button class="f-submit" type="button" onclick="submitForm()">Book Free Consultation</button>
+      </form>
+    </div>
+    <div class="f-success" id="form-success">
+      <div class="f-success-icon">✓</div>
+      <h3>We'll be in touch</h3>
+      <p>Usually within a few hours. No commitment required.</p>
+    </div>
+  </div>
+</div>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+  <a href="tel:4374437556" class="top-bar-phone">
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1.25h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.84a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16.92z"/></svg>
+    (437) 443-7556
+  </a>
+  <div class="top-bar-sep"></div>
+  <button class="top-btn light" onclick="openModal()">Book Free Showing</button>
+</div>
+
+<!-- NAV -->
+<nav>
+  <a class="logo" href="/index.html">
+    <svg width="155" height="28" viewBox="0 0 190 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="32" height="32" rx="6" fill="#1a2332" y="2"/>
+      <path d="M9 22 L16 12 L23 22" stroke="#e8a020" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <path d="M16 12 L23 12" stroke="#e8a020" stroke-width="2" stroke-linecap="round"/>
+      <path d="M23 12 L23 19" stroke="#e8a020" stroke-width="2" stroke-linecap="round"/>
+      <text x="42" y="22" font-size="17" font-weight="500" fill="#1a2332" font-family="Outfit,sans-serif" letter-spacing="-0.5" class="logo-text">Home<tspan fill="#e8a020" font-weight="700">Cashbacks</tspan></text>
+    </svg>
+  </a>
+  <div class="nav-cred-wrap">
+    <img src="headshot.webp" alt="Laleh Mousavi" class="nav-headshot"/>
+    <div>
+      <span class="nav-cred">Laleh Mousavi, Realtor</span>
+      <span class="nav-cred nav-cred-line2">Toronto Real Estate Realty Plus Inc.</span>
+    </div>
+  </div>
+  <ul class="nav-links" id="nav-links">
+    <li class="nav-item"><a href="how-cashback-works.html" onclick="closeMobMenu()">How It Works</a></li>
+    <li class="nav-item"><a href="our-story.html" onclick="closeMobMenu()">Our Story</a></li>
+    <li class="nav-item">
+      <button class="nav-link-btn" onclick="this.parentElement.classList.toggle('open')">Resources<svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 1l4 4 4-4"/></svg></button>
+      <div class="dropdown">
+        <a href="checklist.html" onclick="closeMobMenu()">
+          <div class="dropdown-label">Home Buyer Checklist</div>
+          <div class="dropdown-sub">5 phase guide to buying</div>
+        </a>
+        <a href="calculators.html" onclick="closeMobMenu()">
+          <div class="dropdown-label">Calculators</div>
+          <div class="dropdown-sub">Closing costs and monthly ownership</div>
+        </a>
+        <a href="offer-strategy.html" onclick="closeMobMenu()">
+          <div class="dropdown-label">Offer Strategy Tool</div>
+          <div class="dropdown-sub">Build your offer strategy</div>
+        </a>
+        <a href="first-time-buyer-guide.html" onclick="closeMobMenu()">
+          <div class="dropdown-label">First-Time Buyer Guide</div>
+          <div class="dropdown-sub">Everything you need to get started</div>
+        </a>
+      </div>
+    </li>
+    <li class="nav-item"><a href="/#faq" onclick="closeMobMenu()">FAQ</a></li>
+    <li class="nav-item"><a href="#" class="nav-pill" onclick="openModal();closeMobMenu();return false">Free Showing</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" onclick="toggleMobMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
 <!-- HERO -->
 <div class="page-hero">
   <div class="page-hero-inner">
@@ -299,8 +569,63 @@
   </div>
 </section>
 
+<!-- FOOTER -->
+<footer>
+  <div class="foot-inner">
+    <div class="foot-agent">
+      <img src="headshot.webp" alt="Laleh Mousavi" class="foot-headshot"/>
+      <div>
+        <div class="foot-agent-name">Laleh Mousavi</div>
+        <div class="foot-agent-title">Realtor · Toronto Real Estate Realty Plus Inc.<br>Registered with RECO · Serving Toronto &amp; GTA</div>
+        <div class="foot-agent-badge">Licensed in Ontario</div>
+      </div>
+    </div>
+    <div class="foot-links">
+      <a href="how-cashback-works.html">How It Works</a>
+      <a href="our-story.html">Our Story</a>
+      <a href="first-time-buyer-guide.html">First-Time Buyer Guide</a>
+      <a href="checklist.html">Home Buyer Checklist</a>
+      <a href="calculators.html">Calculators</a>
+      <a href="tel:4374437556">(437) 443-7556</a>
+      <a href="mailto:Laleh@homecashbacks.ca">Laleh@homecashbacks.ca</a>
+    </div>
+    <div class="foot-cta">
+      <button class="foot-cta-btn" onclick="openModal()">Book a Free Showing</button>
+      <span class="foot-cta-sub">No commitment · First showing free</span>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>&copy; 2026 HomeCashbacks. All rights reserved.</span>
+    <div style="display:flex;align-items:center;gap:.75rem">
+      <a href="https://www.linkedin.com/company/homecashbacks/about/" target="_blank" rel="noopener" class="foot-social-link">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>LinkedIn
+      </a>
+      <a href="https://www.instagram.com/homecashbacks/" target="_blank" rel="noopener" class="foot-social-link">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>Instagram
+      </a>
+      <a href="/privacy.html" class="foot-social-link">Privacy Policy</a>
+    </div>
+  </div>
+  <p class="foot-disclaimer">The information on this website is provided for general guidance purposes only and does not constitute legal, financial, real estate, or mortgage advice. HomeCashbacks makes no representations or warranties regarding the accuracy, completeness, or timeliness of any information on this site. All calculations, estimates, and figures are approximations and should not be relied upon as professional advice. Real estate transactions involve significant financial risk. Always consult a licensed real estate lawyer, mortgage professional, and financial advisor before making any decisions. HomeCashbacks is not liable for any losses, damages, or decisions made based on information contained on this website.</p>
+</footer>
+
 <script>
 // Modal
+function openModal(){document.getElementById('modal').classList.add('open');document.body.style.overflow='hidden';}
+function closeModal(){document.getElementById('modal').classList.remove('open');document.body.style.overflow='';}
+document.getElementById('modal').addEventListener('click',function(e){if(e.target===this)closeModal();});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeModal();});
+function submitForm(){
+  var name=document.getElementById('f-name').value.trim();
+  var email=document.getElementById('f-email').value.trim();  document.querySelectorAll('.f-error').forEach(function(el){el.classList.remove('show');el.textContent='';});
+  document.querySelectorAll('.f-input').forEach(function(el){el.classList.remove('err');});
+  if(!name){document.getElementById('err-name').textContent='Please enter your name.';document.getElementById('err-name').classList.add('show');document.getElementById('f-name').classList.add('err');ok=false;}
+  if(!email){document.getElementById('err-email').textContent='Please enter your email or phone.';document.getElementById('err-email').classList.add('show');document.getElementById('f-email').classList.add('err');ok=false;}
+  if(!ok)return;}
+
+// Nav
+function toggleMobMenu(){document.getElementById('nav-links').classList.toggle('open');document.getElementById('hamburger').classList.toggle('open');}
+function closeMobMenu(){document.getElementById('nav-links').classList.remove('open');document.getElementById('hamburger').classList.remove('open');}
 
 // Jump nav active state on scroll
 const sections=['process','costs','cashback','condo','faq'];
@@ -355,12 +680,6 @@ function renderFAQ(){
   });
 }
 renderFAQ();
-</script>
-<script>
-// Form submission
-function isValidEmail(v){return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v);}
-function isValidPhone(v){return v.replace(/\D/g,'').length>=10;}
-
 </script>
 </body>
 </html>

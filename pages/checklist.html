@@ -1,12 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png"/>
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
 <title>Home Buyer Checklist | HomeCashbacks</title>
 <meta name="description" content="A 21-step home buyer checklist for GTA buyers. From finance to closing — everything you need to do, in order."/>
 <meta name="robots" content="index, follow"/>
 <link rel="canonical" href="https://homecashbacks.ca/checklist.html"/>
-
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#f0f4f8;--bg2:#e2eaf2;--bg3:#ccd8e8;
+  --ink:#1a2332;--ink2:#2d3d52;
+  --muted:#5a6a82;--border:rgba(26,35,50,.1);
+  --white:#fff;--amber:#e8a020;--blue:#2563eb;
+  --green:#16a34a;--green2:#16a34a;--red:#b83232;
+  --charcoal:#1a2332;--taupe:#6b7fa0;--gold-light:#fef3dc;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;padding-top:118px}
+
+/* TOP BAR */
+.top-bar{position:fixed;top:0;left:0;right:0;z-index:600;background:#1a2332;height:58px;padding:0 1.5rem;display:flex;align-items:center;justify-content:center;gap:12px}
+.top-bar-text{font-size:13px;color:rgba(255,255,255,.45);white-space:nowrap;margin-right:4px}
+.top-bar-phone{display:inline-flex;align-items:center;gap:5px;font-size:13px;color:rgba(255,255,255,.8);text-decoration:none}
+.top-bar-phone:hover{color:#fff}
+.top-btn{display:inline-flex;align-items:center;gap:6px;padding:10px 24px;border-radius:4px;font-size:14px;font-weight:700;border:none;cursor:pointer;font-family:'Outfit',sans-serif;white-space:nowrap;transition:opacity .2s}
+.top-btn:hover{opacity:.85}
+.top-btn.light{background:#e8a020;color:#1a2332;font-weight:700}
+
+/* NAV */
+nav{position:fixed;top:58px;left:0;right:0;z-index:570;background:#f0f4f8;border-bottom:1px solid var(--border);height:60px;padding:0 2rem;display:flex;align-items:center;justify-content:space-between}
+.logo{text-decoration:none;display:flex;align-items:center}
+.nav-cred-wrap{display:flex;flex-direction:row;align-items:center;gap:.6rem}
+.nav-headshot{width:32px;height:32px;border-radius:50%;object-fit:cover;object-position:center top;border:2px solid #e8a020;flex-shrink:0}
+.nav-cred-wrap > div{display:flex;flex-direction:column;gap:1px}
+.nav-cred{font-size:11px;color:var(--muted);white-space:nowrap}
+.nav-cred-line2{font-size:10px;color:var(--muted);white-space:nowrap}
+.nav-links{display:flex;align-items:center;gap:4px;list-style:none}
+.nav-links a{font-size:13px;color:var(--muted);text-decoration:none;transition:color .2s;padding:6px 10px;border-radius:4px}
+.nav-links a:hover{color:var(--ink);background:rgba(26,35,50,.05)}
+.nav-item{position:relative}
+.nav-link-btn{font-size:13px;color:var(--muted);background:none;border:none;cursor:pointer;font-family:'Outfit',sans-serif;display:flex;align-items:center;gap:4px;padding:6px 10px;border-radius:4px;transition:all .15s}
+.nav-link-btn:hover{color:var(--ink);background:rgba(26,35,50,.05)}
+.nav-link-btn svg{width:10px;height:10px;transition:transform .2s}
+.nav-item:hover .nav-link-btn svg{transform:rotate(180deg)}
+.nav-pill{background:#e8a020!important;color:#1a2332!important;padding:7px 18px;border-radius:4px;font-weight:700!important}
+.dropdown{position:absolute;top:calc(100% + 8px);left:0;background:var(--white);border:1px solid var(--border);border-radius:6px;box-shadow:0 8px 24px rgba(26,35,50,.1);min-width:210px;padding:.4rem 0;opacity:0;visibility:hidden;transform:translateY(-4px);transition:all .15s;z-index:100}
+.nav-item:hover .dropdown{opacity:1;visibility:visible;transform:translateY(0)}
+.dropdown a{display:block;padding:.65rem 1rem;font-size:13px;color:var(--ink2);text-decoration:none;transition:background .1s}
+.dropdown a:hover{background:var(--bg);color:var(--ink)}
+.dropdown-label{font-weight:500;font-size:13px;color:var(--ink)}
+.dropdown-sub{font-size:11px;color:var(--muted);margin-top:1px}
+.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
+.hamburger span{display:block;width:22px;height:2px;background:var(--ink);border-radius:2px;transition:all .25s}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
 /* PROGRESS STRIP */
 .progress-strip{background:var(--white);border-bottom:1px solid var(--border);padding:.85rem 2rem;position:sticky;top:118px;z-index:300}
 .prog-inner{max-width:860px;margin:0 auto;display:flex;align-items:center;gap:12px}
@@ -15,8 +73,13 @@
 .prog-track{flex:1;height:5px;background:var(--bg3);border-radius:4px;overflow:hidden}
 .prog-fill{height:100%;background:#2563eb;border-radius:4px;transition:width .5s ease;width:0%}
 .prog-pct{font-size:13px;font-weight:500;color:#2563eb;min-width:30px;text-align:right}
+
 /* PAGE HERO */
 .page-hero{background:#1a2332;padding:3.5rem 2rem;text-align:center}
+.page-hero-eyebrow{font-size:11px;font-weight:600;letter-spacing:1.4px;text-transform:uppercase;color:var(--amber);margin-bottom:.75rem}
+.page-hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(30px,4vw,46px);font-weight:600;color:#fff;line-height:1.1;margin-bottom:.6rem}
+.page-hero-sub{font-size:14px;color:rgba(232,237,245,.45);max-width:460px;margin:0 auto}
+
 /* CHECKLIST LAYOUT */
 .checklist-section{padding:0 0 3rem}
 .cl-layout{max-width:860px;margin:1.5rem auto 0;padding:0 2rem;display:grid;grid-template-columns:170px 1fr;gap:2rem;align-items:start}
@@ -75,26 +138,177 @@
 .hook-desc{font-size:13px;color:rgba(255,255,255,.45);line-height:1.5;margin-bottom:.75rem}
 .hook-cta{display:inline-flex;align-items:center;gap:5px;padding:8px 15px;border-radius:4px;font-size:12px;font-weight:700;border:none;cursor:pointer;font-family:'Outfit',sans-serif;background:#e8a020;color:#1a2332}
 .celebrate{display:none;text-align:center;background:var(--charcoal);border-radius:4px;padding:2.25rem 2rem;margin:1.1rem 0}
-}
+.section{padding:3rem 2rem}.sec-inner{max-width:860px;margin:0 auto}
+.eyebrow{font-size:12px;font-weight:500;letter-spacing:1.2px;text-transform:uppercase;color:var(--taupe);margin-bottom:.5rem}
+.sec-title{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,6vw,60px);font-weight:600;color:var(--ink);line-height:1.1;margin-bottom:.65rem}
+.faq-section{background:var(--bg2);border-top:1px solid var(--border)}
+.faq-cols{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:1.5rem}
+.faq-col-title{font-size:12px;font-weight:500;letter-spacing:.8px;text-transform:uppercase;color:#e8a020;margin-bottom:.9rem;padding-bottom:.6rem;border-bottom:2px solid #e8a020}
+.faq-list{display:flex;flex-direction:column;gap:7px;margin-top:1.4rem}
+.faq-item{background:var(--white);border:1px solid var(--border);border-radius:4px;overflow:hidden}
+.faq-q{display:flex;justify-content:space-between;align-items:flex-start;padding:.85rem 1rem;cursor:pointer;gap:10px}
+.faq-q-text{font-size:15px;font-weight:500;color:var(--ink);line-height:1.4}
+.faq-icon{font-size:15px;color:var(--muted);flex-shrink:0;transition:transform .25s;margin-top:1px}
+.faq-item.open .faq-icon{transform:rotate(45deg)}
+.faq-a{display:none;padding:.55rem 1rem .85rem;font-size:14px;color:var(--muted);line-height:1.7;border-top:1px solid var(--border)}
+.faq-item.open .faq-a{display:block}
+.faq-show-more{margin-top:.75rem;padding:8px 16px;border:1.5px solid var(--border);border-radius:4px;font-size:13px;font-weight:500;font-family:'Outfit',sans-serif;color:var(--muted);background:transparent;cursor:pointer;transition:all .2s}
+.faq-show-more:hover{color:var(--ink);border-color:var(--ink)}
+@media(max-width:680px){.faq-cols{grid-template-columns:1fr}}
 .celebrate h2{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:600;color:#fff;margin-bottom:.5rem}
 .celebrate p{font-size:14px;color:rgba(255,255,255,.4);max-width:340px;margin:0 auto 1.1rem;line-height:1.6}
 .celebrate a{background:#e8a020;color:#1a2332;padding:10px 22px;border-radius:4px;font-size:13px;font-weight:500;text-decoration:none;display:inline-block}
+
+.foot-disclaimer{font-size:10px;color:rgba(255,255,255,.2)!important;line-height:1.6!important;max-width:700px;margin:.9rem auto 0!important;border-top:1px solid rgba(255,255,255,.08);padding-top:.9rem}
+/* FOOTER */
+footer{background:#1a2332;padding:2.5rem 2rem 1.5rem}
+.foot-inner{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:2rem;padding-bottom:1.75rem;border-bottom:1px solid rgba(255,255,255,.08);max-width:980px;margin:0 auto}
+.foot-agent{display:flex;align-items:center;gap:1rem}
+.foot-headshot{width:84px;height:84px;border-radius:50%;object-fit:cover;object-position:center 15%;border:2.5px solid #e8a020;flex-shrink:0}
+.foot-agent-name{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:600;color:#fff;margin-bottom:.2rem}
+.foot-agent-title{font-size:11px;color:rgba(255,255,255,.35);line-height:1.6}
+.foot-agent-badge{display:inline-block;background:rgba(232,160,32,.15);color:#e8a020;font-size:10px;font-weight:600;padding:2px 8px;border-radius:3px;margin-top:.3rem}
+.foot-links{display:flex;flex-direction:column;gap:.35rem;padding-left:2rem;border-left:1px solid rgba(255,255,255,.08)}
+.foot-links a{font-size:12px;color:rgba(255,255,255,.35);text-decoration:none;transition:color .2s}
+.foot-links a:hover{color:#e8a020}
+.foot-cta{display:flex;flex-direction:column;align-items:flex-end;gap:.4rem}
+.foot-cta-btn{background:#e8a020;color:#1a2332;font-size:13px;font-weight:700;padding:10px 22px;border-radius:4px;border:none;cursor:pointer;font-family:'Outfit',sans-serif;transition:opacity .2s;white-space:nowrap}
+.foot-cta-btn:hover{opacity:.85}
+.foot-cta-sub{font-size:11px;color:rgba(255,255,255,.25)}
+.foot-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:1.25rem;max-width:980px;margin:0 auto;font-size:11px;color:rgba(255,255,255,.2)}
+.foot-social-link{color:rgba(255,255,255,.35);display:inline-flex;align-items:center;gap:4px;font-size:12px;text-decoration:none;transition:color .2s}
+.foot-social-link:hover{color:#e8a020}
+@media(max-width:768px){
+  .foot-inner{grid-template-columns:1fr;gap:1.5rem}
+  .foot-links{padding-left:0;border-left:none;border-top:1px solid rgba(255,255,255,.08);padding-top:1.25rem;flex-direction:row;flex-wrap:wrap;gap:.5rem 1.25rem}
+  .foot-cta{align-items:flex-start}
+  .foot-bottom{flex-direction:column;gap:.75rem;align-items:flex-start}
 }
-}
+
+/* MODAL */
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(28,25,22,.6);z-index:900;align-items:center;justify-content:center;padding:1.5rem}
+.modal-overlay.open{display:flex}
+.modal{background:#fff;border-radius:6px;padding:2.25rem;max-width:420px;width:100%;position:relative;animation:mIn .22s ease}
+@keyframes mIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.modal-close{position:absolute;top:1rem;right:1rem;width:30px;height:30px;border-radius:50%;background:#e2eaf2;border:none;cursor:pointer;font-size:15px;color:#5a6a82;display:flex;align-items:center;justify-content:center}
+.modal-tag{font-size:10px;font-weight:500;letter-spacing:1px;text-transform:uppercase;color:#5a6a82;margin-bottom:.4rem}
+.modal-title{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:600;color:#1a2332;margin-bottom:.25rem}
+.modal-sub{font-size:13px;color:#5a6a82;margin-bottom:1.5rem;line-height:1.5}
+.f-field{display:flex;flex-direction:column;gap:.3rem;margin-bottom:1rem}
+.f-label{font-size:13px;font-weight:500;color:#1a2332}
+.f-input{border:1.5px solid #ccd8e8;border-radius:4px;padding:0 12px;height:42px;font-size:14px;font-family:'Outfit',sans-serif;color:#1a2332;outline:none;transition:border-color .2s;background:#f0f4f8}
+.f-input:focus{border-color:#1a2332;background:#fff}
+.f-note{font-size:11px;color:#5a6a82}
+.f-error{font-size:12px;color:#b83232;display:none}
+.f-error.show{display:block}
+.f-consent{font-size:11px;color:#5a6a82;line-height:1.6;margin-bottom:1rem}
+.f-consent a{color:#2563eb}
+.f-submit{width:100%;padding:13px;border-radius:4px;background:#e8a020;color:#1a2332;font-size:15px;font-weight:700;border:none;cursor:pointer;font-family:'Outfit',sans-serif;transition:opacity .2s}
+.f-submit:hover{opacity:.88}
+.f-success{display:none;text-align:center;padding:1rem 0}
+.f-success-icon{font-size:32px;color:#16a34a;margin-bottom:.75rem}
+
 /* MOBILE */
 @media(max-width:680px){
   body{padding-top:118px}
-.cl-layout{grid-template-columns:1fr;padding:0 1.25rem}
-.cl-sidebar{display:none}
-.mob-tabs{display:flex}
-.progress-strip{top:118px}
+  nav{padding:0 1rem}
+  .nav-links{display:none;position:fixed;top:118px;left:0;right:0;background:#f0f4f8;border-bottom:1px solid var(--border);flex-direction:column;gap:0;padding:0;z-index:569;overflow:hidden}
+  .nav-links.open{display:flex}
+  .nav-links li{width:100%}
+  .nav-links a{display:block;padding:.85rem 1.5rem;font-size:16px;color:var(--ink);border-bottom:1px solid var(--border)}
+  .nav-link-btn{width:100%;text-align:left;padding:.85rem 1.5rem;font-size:16px;color:var(--ink);border-bottom:1px solid var(--border);border-radius:0}
+  .dropdown{position:static;opacity:1;visibility:hidden;transform:none;box-shadow:none;border:none;border-radius:0;max-height:0;overflow:hidden;transition:max-height .25s,visibility .25s;padding:0}
+  .nav-item.open .dropdown{visibility:visible;max-height:300px}
+  .dropdown a{padding:.7rem 2rem;font-size:15px;border-bottom:1px solid var(--border);background:#f8fafc}
+  .dropdown-sub{display:none}
+  .nav-pill{background:#e8a020!important;color:#1a2332!important;margin:.5rem 1rem;border-radius:4px;text-align:center;font-weight:700!important;display:block;padding:.85rem 1.5rem!important}
+  .hamburger{display:flex}
+  .nav-cred-line2{display:none}
+  .logo svg{width:110px;height:22px}
+  .cl-layout{grid-template-columns:1fr;padding:0 1.25rem}
+  .cl-sidebar{display:none}
+  .mob-tabs{display:flex}
+  .progress-strip{top:118px}
 }
-.prog-inner{max-width:980px}
+@media(min-width:1100px){
+  .cl-layout{max-width:980px;grid-template-columns:200px 1fr;gap:3rem}
+  .prog-inner{max-width:980px}
 }
+@media(min-width:769px){
+  .nav-cred-wrap{flex-direction:row;align-items:center;gap:.5rem}
 }
 </style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-068EB5V10X"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+  gtag("config", "G-068EB5V10X");
+</script>
 </head>
 <body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+  <a href="tel:4374437556" class="top-bar-phone">
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1.25h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.84a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16.92z"/></svg>
+    (437) 443-7556
+  </a>
+  <div class="top-bar-sep"></div>
+  <button class="top-btn light" onclick="openModal()">Book Free Showing</button>
+</div>
+
+<!-- NAV -->
+<nav>
+  <a class="logo" href="/">
+    <svg width="155" height="28" viewBox="0 0 190 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="32" height="32" rx="6" fill="#1a2332" y="2"/>
+      <path d="M9 22 L16 12 L23 22" stroke="#e8a020" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <path d="M16 12 L23 12" stroke="#e8a020" stroke-width="2" stroke-linecap="round"/>
+      <path d="M23 12 L23 19" stroke="#e8a020" stroke-width="2" stroke-linecap="round"/>
+      <text x="42" y="22" font-size="17" font-weight="500" fill="#1a2332" font-family="Outfit,sans-serif" letter-spacing="-0.5">Home<tspan fill="#e8a020" font-weight="700">Cashbacks</tspan></text>
+    </svg>
+  </a>
+  <div class="nav-cred-wrap">
+    <img src="headshot.webp" alt="Laleh Mousavi" class="nav-headshot"/>
+    <div>
+      <span class="nav-cred">Laleh Mousavi, Realtor</span>
+      <span class="nav-cred nav-cred-line2">Toronto Real Estate Realty Plus Inc.</span>
+    </div>
+  </div>
+  <ul class="nav-links" id="nav-links">
+    <li class="nav-item"><a href="how-cashback-works.html" onclick="closeMobMenu()">How It Works</a></li>
+    <li class="nav-item"><a href="our-story.html" onclick="closeMobMenu()">Our Story</a></li>
+    <li class="nav-item">
+      <button class="nav-link-btn" onclick="this.parentElement.classList.toggle('open')">Resources<svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 1l4 4 4-4"/></svg></button>
+      <div class="dropdown">
+        <a href="checklist.html" onclick="closeMobMenu()">
+          <div class="dropdown-label">Home Buyer Checklist</div>
+          <div class="dropdown-sub">5 phase guide to buying</div>
+        </a>
+        <a href="calculators.html" onclick="closeMobMenu()">
+          <div class="dropdown-label">Calculators</div>
+          <div class="dropdown-sub">Closing costs and monthly ownership</div>
+        </a>
+        <a href="offer-strategy.html" onclick="closeMobMenu()">
+          <div class="dropdown-label">Offer Strategy Tool</div>
+          <div class="dropdown-sub">Build your offer strategy</div>
+        </a>
+        <a href="first-time-buyer-guide.html" onclick="closeMobMenu()">
+          <div class="dropdown-label">First-Time Buyer Guide</div>
+          <div class="dropdown-sub">Everything you need to get started</div>
+        </a>
+      </div>
+    </li>
+    <li class="nav-item"><a href="/#faq" onclick="closeMobMenu()">FAQ</a></li>
+    <li class="nav-item"><a href="#" class="nav-pill" onclick="openModal();closeMobMenu();return false">Free Showing</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" onclick="toggleMobMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
 <!-- PAGE HERO -->
 <div class="page-hero">
   <div class="page-hero-eyebrow">Step by step</div>
@@ -155,6 +369,82 @@
     </div>
   </div>
 </section>
+
+<footer>
+  <div class="foot-inner">
+    <div class="foot-agent">
+      <img src="headshot.webp" alt="Laleh Mousavi" class="foot-headshot"/>
+      <div>
+        <div class="foot-agent-name">Laleh Mousavi</div>
+        <div class="foot-agent-title">Realtor · Toronto Real Estate Realty Plus Inc.<br>Registered with RECO · Serving Toronto &amp; GTA</div>
+        <div class="foot-agent-badge">Licensed in Ontario</div>
+      </div>
+    </div>
+    <div class="foot-links">
+      <a href="how-cashback-works.html">How It Works</a>
+      <a href="our-story.html">Our Story</a>
+      <a href="first-time-buyer-guide.html">First-Time Buyer Guide</a>
+      <a href="checklist.html">Home Buyer Checklist</a>
+      <a href="calculators.html">Calculators</a>
+      <a href="tel:4374437556">(437) 443-7556</a>
+      <a href="mailto:Laleh@homecashbacks.ca">Laleh@homecashbacks.ca</a>
+    </div>
+    <div class="foot-cta">
+      <button class="foot-cta-btn" onclick="openModal()">Book a Free Showing</button>
+      <span class="foot-cta-sub">No commitment · First showing free</span>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>&copy; 2026 HomeCashbacks. All rights reserved. &nbsp;|&nbsp; <a href="/privacy.html" style="color:#e8a020">Privacy Policy</a></span>
+    <div style="display:flex;align-items:center;gap:.75rem">
+            <a href="https://www.linkedin.com/company/homecashbacks/about/" target="_blank" rel="noopener" class="foot-social-link">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>LinkedIn
+      </a>
+            <a href="https://www.instagram.com/homecashbacks/" target="_blank" rel="noopener" class="foot-social-link">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>Instagram
+      </a>
+    </div>
+  </div>
+  <p class="foot-disclaimer">The information on this website is provided for general guidance purposes only and does not constitute legal, financial, real estate, or mortgage advice. HomeCashbacks makes no representations or warranties regarding the accuracy, completeness, or timeliness of any information on this site. All calculations, estimates, and figures are approximations and should not be relied upon as professional advice. Real estate transactions involve significant financial risk. Always consult a licensed real estate lawyer, mortgage professional, and financial advisor before making any decisions. HomeCashbacks is not liable for any losses, damages, or decisions made based on information contained on this website.</p>
+</footer>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modal" onclick="if(event.target===this)closeModal()">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <div id="modal-form-wrap">
+      <div class="modal-tag">Book a Free Showing</div>
+      <div class="modal-title">Let's get started</div>
+      <div class="modal-sub">Your first showing is free. We'll follow up within a few hours.</div>
+      <form id="form-showing" name="contact" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+        <input type="hidden" name="form-name" value="contact"/>
+        <p style="display:none"><input name="bot-field"/></p>
+        <div class="f-field">
+          <label class="f-label" for="f-name">Full name <span style="color:#5a6a82;font-size:11px;font-weight:400">(required)</span></label>
+          <input class="f-input" type="text" id="f-name" name="name"/>
+          <div class="f-error" id="err-name"></div>
+        </div>
+        <div class="f-field">
+          <label class="f-label" for="f-email">Email address <span style="color:#5a6a82;font-size:11px;font-weight:400">(or phone)</span></label>
+          <input class="f-input" type="text" id="f-email" name="email" inputmode="email"/>
+        </div>
+        <div class="f-field">
+          <label class="f-label" for="f-phone">Phone number <span style="color:#5a6a82;font-size:11px;font-weight:400">(or email)</span></label>
+          <input class="f-input" type="tel" id="f-phone" name="phone"/>
+          <div class="f-note">At least one of email or phone is required.</div>
+          <div class="f-error" id="err-contact"></div>
+        </div>
+        <p class="f-consent">By submitting, you agree to be contacted by HomeCashbacks. View our <a href="/privacy.html" target="_blank">Privacy Policy</a>.</p>
+        <button type="button" class="f-submit" onclick="handleFormSubmit()">Claim My Free Showing</button>
+      </form>
+    </div>
+    <div class="f-success" id="form-success" style="display:none">
+      <div class="f-success-icon">✓</div>
+      <h3>We'll be in touch!</h3>
+      <p>Expect a call or email from us within a few hours.</p>
+    </div>
+  </div>
+</div>
 
 <script>
 const PHASES=[
@@ -277,7 +567,27 @@ function render(){
 }
 render();
 
+function openModal(){document.getElementById('modal').classList.add('open');document.getElementById('form-success').style.display='none';document.getElementById('modal-form-wrap').style.display='block';}
 
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){const overlay=document.querySelector('.modal-overlay');if(overlay&&overlay.classList.contains('open'))closeModal();}});
+function closeModal(){document.getElementById('modal').classList.remove('open');}
+
+function toggleMobMenu(){document.getElementById('nav-links').classList.toggle('open');document.getElementById('hamburger').classList.toggle('open');}
+function closeMobMenu(){document.getElementById('nav-links').classList.remove('open');document.getElementById('hamburger').classList.remove('open');}
+
+const FAQ_CHECKLIST=[
+  {q:'What is the 21-step home buyer checklist?',a:'It is a step-by-step guide for GTA buyers that covers every stage of the purchase, from mortgage pre-approval to getting your keys and claiming your cashback. The steps are split into five phases so you always know where you are and what comes next. New to buying? See our <a href="/first-time-buyer-guide.html" style="color:#e8a020;text-decoration:none;font-weight:500">first-time buyer guide</a>.'},
+  {q:'Do I need to complete every step in order?',a:'Mostly yes. The phases follow the natural sequence of a purchase, so skipping steps can cause problems later. For example, arranging a home inspection or reviewing a status certificate only makes sense once you have an accepted offer, and making an offer without a pre-approval puts you at a real disadvantage in the GTA market.'},
+  {q:'Can I use this checklist for a condo purchase?',a:'Yes. The checklist works for all property types: freehold, condo, and semi-detached. Condo buyers have a few extra steps in the due diligence phase, including reviewing the status certificate, which your lawyer should look at before you firm up your offer.'},
+  {q:'What does HomeCashbacks charge?',a:'A flat $4,999 buyer agent fee. The rest of the buyer agent commission, typically 2 to 2.5% of the purchase price, comes back to you after closing. On the average GTA home that is over $20,000 in cashback. Your first showing is free, no commitment required.'},
+];
+const FAQ_PROCESS=[
+  {q:'How long does it take to buy a home in the GTA?',a:'Most buyers spend 2 to 4 months from the start of their search to closing day. Getting pre-approved early and knowing your criteria ahead of time helps you move fast when the right home comes up.'},
+  {q:'What is a mortgage pre-approval and why do I need one?',a:'A pre-approval is a written commitment from a lender confirming how much they will lend you, based on your income, debts, and credit score. In the GTA, most sellers expect buyers to be pre-approved before viewing homes or making offers. It also locks in your rate for 90 to 120 days.'},
+  {q:'What closing costs should I budget for in Ontario?',a:'Plan for 1.5% to 4% of the purchase price. The biggest item is land transfer tax. Toronto buyers pay both provincial and municipal LTT. Other costs include legal fees ($1,200 to $1,400), title insurance ($350 to $950 depending on purchase price), and a home inspection ($400 to $600). First-time buyers may qualify for LTT rebates.'},
+  {q:'What happens after my offer is accepted?',a:'If your offer includes conditions (financing, inspection, status certificate), you typically have 3 to 5 business days to complete your due diligence and waive them. Once conditions are waived, the deal firms up. If your offer is firm with no conditions, it is binding immediately upon acceptance. Either way, your lawyer then handles the legal transfer through to closing day.'},
+  {q:'When do I receive my cashback from HomeCashbacks?',a:'Your cashback is sent 6 to 8 weeks after your closing date, once the buyer agent commission is released from the seller\'s lawyer to our brokerage. The exact amount is written into your agreement before you sign anything.'},
+];
 function renderFAQ(){
   [['faq-checklist',FAQ_CHECKLIST],['faq-process',FAQ_PROCESS]].forEach(([id,data])=>{
     const el=document.getElementById(id);if(!el)return;
