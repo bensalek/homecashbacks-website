@@ -7,64 +7,8 @@
 <link rel="canonical" href="https://homecashbacks.ca/calculators.html"/>
 
 <style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{
-  --bg:#f0f4f8;--bg2:#e2eaf2;--bg3:#ccd8e8;
-  --ink:#1a2332;--ink2:#2d3d52;
-  --muted:#5a6a82;--border:rgba(26,35,50,.1);
-  --white:#fff;--amber:#e8a020;--amber-dark:#c4861a;--blue:#2563eb;
-  --green:#16a34a;--green2:#16a34a;--red:#b83232;
-  --charcoal:#1a2332;--taupe:#6b7fa0;--gold-light:#fef3dc;
-}
-html{scroll-behavior:smooth}
-body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;padding-top:118px}
-
-/* TOP BAR */
-.top-bar{position:fixed;top:0;left:0;right:0;z-index:600;background:#1a2332;height:58px;padding:0 1.5rem;display:flex;align-items:center;justify-content:center;gap:12px}
-.top-bar-text{font-size:13px;color:rgba(255,255,255,.45);white-space:nowrap;margin-right:4px}
-.top-btn{display:inline-flex;align-items:center;gap:6px;padding:10px 24px;border-radius:4px;font-size:14px;font-weight:700;border:none;cursor:pointer;font-family:'Outfit',sans-serif;white-space:nowrap;transition:opacity .2s}
-.top-btn:hover{opacity:.85}
-.top-btn.light{background:#e8a020;color:#1a2332;font-weight:700}
-.top-btn.ghost{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.55)}
-.top-bar-phone{display:inline-flex;align-items:center;gap:5px;font-size:13px;color:rgba(255,255,255,.8);text-decoration:none;font-family:'Outfit',sans-serif;transition:color .2s}
-.top-bar-phone:hover{color:#fff}
-.top-bar-sep{width:1px;height:20px;background:rgba(255,255,255,.2)}
-
-/* NAV */
-nav{position:fixed;top:58px;left:0;right:0;z-index:570;background:#f0f4f8;border-bottom:1px solid var(--border);height:60px;padding:0 2rem;display:flex;align-items:center;justify-content:space-between}
-.logo{text-decoration:none;display:flex;align-items:center}
-.nav-cred-wrap{display:flex;flex-direction:row;align-items:center;gap:.6rem}
-.nav-headshot{width:32px;height:32px;border-radius:50%;object-fit:cover;object-position:center top;border:2px solid #e8a020;flex-shrink:0}
-.nav-cred-wrap > div{display:flex;flex-direction:column;gap:1px}
-.nav-cred{font-size:11px;color:var(--muted);white-space:nowrap}
-.nav-cred-line2{font-size:10px;color:var(--muted);white-space:nowrap}
-.nav-links{display:flex;align-items:center;gap:4px;list-style:none}
-.nav-links a{font-size:13px;color:var(--muted);text-decoration:none;transition:color .2s;padding:6px 10px;border-radius:4px}
-.nav-links a:hover{color:var(--ink);background:rgba(26,35,50,.05)}
-.nav-item{position:relative}
-.nav-link-btn{font-size:13px;color:var(--muted);background:none;border:none;cursor:pointer;font-family:'Outfit',sans-serif;display:flex;align-items:center;gap:4px;padding:6px 10px;border-radius:4px;transition:all .15s}
-.nav-link-btn:hover{color:var(--ink);background:rgba(26,35,50,.05)}
-.nav-link-btn svg{width:10px;height:10px;transition:transform .2s}
-.nav-item:hover .nav-link-btn svg{transform:rotate(180deg)}
-.nav-pill{background:#e8a020!important;color:#1a2332!important;padding:7px 18px;border-radius:4px;font-weight:700!important}
-.dropdown{position:absolute;top:calc(100% + 8px);left:0;background:var(--white);border:1px solid var(--border);border-radius:6px;box-shadow:0 8px 24px rgba(26,35,50,.1);min-width:210px;padding:.4rem 0;opacity:0;visibility:hidden;transform:translateY(-4px);transition:all .15s;z-index:100}
-.nav-item:hover .dropdown{opacity:1;visibility:visible;transform:translateY(0)}
-.dropdown a{display:block;padding:.65rem 1rem;font-size:13px;color:var(--ink2);text-decoration:none;transition:background .1s}
-.dropdown a:hover{background:var(--bg);color:var(--ink)}
-.dropdown-label{font-weight:500;font-size:13px;color:var(--ink)}
-.dropdown-sub{font-size:11px;color:var(--muted);margin-top:1px}
-.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
-.hamburger span{display:block;width:22px;height:2px;background:var(--ink);border-radius:2px;transition:all .25s}
-.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
-.hamburger.open span:nth-child(2){opacity:0}
-.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-
 /* PAGE HERO */
 .page-hero{background:#1a2332;padding:3.5rem 2rem;text-align:center}
-.page-hero-eyebrow{font-size:11px;font-weight:600;letter-spacing:1.4px;text-transform:uppercase;color:var(--amber);margin-bottom:.75rem}
-.page-hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(30px,4vw,46px);font-weight:600;color:#fff;line-height:1.1;margin-bottom:.6rem}
-.page-hero-sub{font-size:14px;color:rgba(232,237,245,.45);max-width:460px;margin:0 auto}
-
 /* CALC WRAPPER */
 .calc-wrap{max-width:860px;margin:2.5rem auto;padding:0 2rem 4rem}
 .calc-tabs-outer{display:flex;gap:.5rem;margin-bottom:1.5rem;border-bottom:1px solid var(--border);padding-bottom:0}
@@ -72,7 +16,6 @@ nav{position:fixed;top:58px;left:0;right:0;z-index:570;background:#f0f4f8;border
 .calc-tab-outer.active{color:var(--ink);border-bottom-color:var(--charcoal);font-weight:600}
 .calc-panel-outer{display:none}
 .calc-panel-outer.active{display:block}
-
 /* CALCULATOR INNER */
 .calc-card{background:var(--white);border:1px solid var(--border);border-radius:8px;overflow:hidden}
 .calc-card-header{padding:1.25rem 1.5rem;border-bottom:1px solid var(--border)}
@@ -102,107 +45,25 @@ nav{position:fixed;top:58px;left:0;right:0;z-index:570;background:#f0f4f8;border
 .calc-line-total span:first-child{font-size:13px;font-weight:500;color:rgba(255,255,255,.7)}
 .calc-line-total span:last-child{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:600;color:#e8a020;white-space:nowrap}
 .calc-disclaimer{font-size:11px;color:rgba(255,255,255,.22);line-height:1.5;margin-top:.6rem}
-
 /* CTA STRIP */
 .cta-strip{background:#1a2332;border-radius:8px;padding:2rem;text-align:center;margin-top:2.5rem}
 .cta-strip h3{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:600;color:#fff;margin-bottom:.4rem}
 .cta-strip p{font-size:13px;color:rgba(232,237,245,.4);margin-bottom:1.25rem}
 .cta-strip-btn{background:#e8a020;color:#1a2332;padding:12px 28px;border-radius:4px;font-size:14px;font-weight:700;border:none;cursor:pointer;font-family:'Outfit',sans-serif;transition:opacity .2s}
 .cta-strip-btn:hover{opacity:.88}
-
 /* FAQ */
 .section{padding:3rem 2rem}
-.sec-inner{max-width:860px;margin:0 auto}
-.eyebrow{font-size:12px;font-weight:500;letter-spacing:1.2px;text-transform:uppercase;color:var(--taupe);margin-bottom:.5rem}
-.sec-title{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,6vw,60px);font-weight:600;color:var(--ink);line-height:1.1;margin-bottom:.65rem}
-.faq-section{background:var(--bg2);border-top:1px solid var(--border)}
-.faq-cols{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:1.5rem}
-.faq-col-title{font-size:12px;font-weight:500;letter-spacing:.8px;text-transform:uppercase;color:#e8a020;margin-bottom:.9rem;padding-bottom:.6rem;border-bottom:2px solid #e8a020}
-.faq-list{display:flex;flex-direction:column;gap:7px;margin-top:1.4rem}
-.faq-item{background:var(--white);border:1px solid var(--border);border-radius:4px;overflow:hidden}
-.faq-q{display:flex;justify-content:space-between;align-items:flex-start;padding:.85rem 1rem;cursor:pointer;gap:10px}
-.faq-q-text{font-size:15px;font-weight:500;color:var(--ink);line-height:1.4}
-.faq-icon{font-size:15px;color:var(--muted);flex-shrink:0;transition:transform .25s;margin-top:1px}
-.faq-item.open .faq-icon{transform:rotate(45deg)}
-.faq-a{display:none;padding:.55rem 1rem .85rem;font-size:14px;color:var(--muted);line-height:1.7;border-top:1px solid var(--border)}
-.faq-item.open .faq-a{display:block}
-.faq-show-more{margin-top:.75rem;padding:8px 16px;border:1.5px solid var(--border);border-radius:4px;font-size:13px;font-weight:500;font-family:'Outfit',sans-serif;color:var(--muted);background:transparent;cursor:pointer;transition:all .2s}
-.faq-show-more:hover{color:var(--ink);border-color:var(--ink)}
-@media(max-width:680px){.faq-cols{grid-template-columns:1fr}.sec-title{font-size:clamp(26px,3.2vw,38px)}}
-
-/* FOOTER */
-footer{background:#1a2332;padding:2.5rem 2rem 1.5rem}
-.foot-inner{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:2rem;padding-bottom:1.75rem;border-bottom:1px solid rgba(255,255,255,.08);max-width:980px;margin:0 auto}
-.foot-agent{display:flex;align-items:center;gap:1rem}
-.foot-headshot{width:84px;height:84px;border-radius:50%;object-fit:cover;object-position:center 15%;border:2.5px solid #e8a020;flex-shrink:0}
-.foot-agent-name{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:600;color:#fff;margin-bottom:.2rem}
-.foot-agent-title{font-size:11px;color:rgba(255,255,255,.35);line-height:1.6}
-.foot-agent-badge{display:inline-block;background:rgba(232,160,32,.15);color:#e8a020;font-size:10px;font-weight:600;padding:2px 8px;border-radius:3px;margin-top:.3rem}
-.foot-links{display:flex;flex-direction:column;gap:.35rem;padding-left:2rem;border-left:1px solid rgba(255,255,255,.08)}
-.foot-links a{font-size:12px;color:rgba(255,255,255,.35);text-decoration:none;transition:color .2s}
-.foot-links a:hover{color:#e8a020}
-.foot-cta{display:flex;flex-direction:column;align-items:flex-end;gap:.4rem}
-.foot-cta-btn{background:#e8a020;color:#1a2332;font-size:13px;font-weight:700;padding:10px 22px;border-radius:4px;border:none;cursor:pointer;font-family:'Outfit',sans-serif;transition:opacity .2s;white-space:nowrap}
-.foot-cta-btn:hover{opacity:.85}
-.foot-cta-sub{font-size:11px;color:rgba(255,255,255,.25)}
-.foot-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:1.25rem;max-width:980px;margin:0 auto;font-size:11px;color:rgba(255,255,255,.2)}
-.foot-social-link{color:rgba(255,255,255,.35);display:inline-flex;align-items:center;gap:4px;font-size:12px;text-decoration:none;transition:color .2s}
-.foot-social-link:hover{color:#e8a020}
-.foot-disclaimer{font-size:10px;color:rgba(255,255,255,.2)!important;line-height:1.6!important;max-width:700px;margin:.9rem auto 0!important;border-top:1px solid rgba(255,255,255,.08);padding-top:.9rem}
-@media(max-width:768px){
-  .foot-inner{grid-template-columns:1fr;gap:1.5rem}
-  .foot-links{padding-left:0;border-left:none;border-top:1px solid rgba(255,255,255,.08);padding-top:1.25rem;flex-direction:row;flex-wrap:wrap;gap:.5rem 1.25rem}
-  .foot-cta{align-items:flex-start}
-  .foot-bottom{flex-direction:column;gap:.75rem;align-items:flex-start}
 }
-
-/* MODAL */
-.modal-overlay{display:none;position:fixed;inset:0;background:rgba(28,25,22,.6);z-index:900;align-items:center;justify-content:center;padding:1.5rem}
-.modal-overlay.open{display:flex}
-.modal{background:#fff;border-radius:6px;padding:2.25rem;max-width:420px;width:100%;position:relative;animation:mIn .22s ease}
-@keyframes mIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
-.modal-close{position:absolute;top:1rem;right:1rem;width:30px;height:30px;border-radius:50%;background:var(--bg2);border:none;cursor:pointer;font-size:15px;color:var(--muted);display:flex;align-items:center;justify-content:center}
-.modal-tag{font-size:10px;font-weight:500;letter-spacing:1px;text-transform:uppercase;color:var(--taupe);margin-bottom:.4rem}
-.modal-title{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:600;color:#1a2332;margin-bottom:.25rem}
-.modal-sub{font-size:16px;color:var(--muted);margin-bottom:1.4rem;line-height:1.5}
-.f-field{display:flex;flex-direction:column;gap:.3rem;margin-bottom:1rem}
-.f-label{font-size:13px;font-weight:500;color:#1a2332}
-.f-input{width:100%;padding:10px 13px;border:1.5px solid var(--bg3);border-radius:4px;font-size:14px;font-family:'Outfit',sans-serif;color:var(--ink);background:var(--bg);outline:none;transition:border-color .2s}
-.f-input:focus{border-color:#1a2332;background:#fff}
-.f-note{font-size:11px;color:#5a6a82}
-.f-error{font-size:12px;color:#b83232;display:none}
-.f-error.show{display:block}
-.f-consent{font-size:11px;color:#5a6a82;line-height:1.6;margin-bottom:1rem}
-.f-consent a{color:#2563eb}
-.f-submit{width:100%;padding:13px;border-radius:4px;background:#e8a020;color:#1a2332;font-size:15px;font-weight:700;border:none;cursor:pointer;font-family:'Outfit',sans-serif;transition:opacity .2s}
-.f-submit:hover{opacity:.88}
-.f-success{display:none;text-align:center;padding:1rem 0}
-.f-success-icon{font-size:32px;color:#16a34a;margin-bottom:.75rem}
-
+}
+}
 /* MOBILE */
 @media(max-width:680px){
   body{padding-top:118px}
-  nav{padding:0 1rem}
-  .nav-links{display:none;position:fixed;top:118px;left:0;right:0;background:#f0f4f8;border-bottom:1px solid var(--border);flex-direction:column;gap:0;padding:0;z-index:569;overflow:hidden}
-  .nav-links.open{display:flex}
-  .nav-links li{width:100%}
-  .nav-links a{display:block;padding:.85rem 1.5rem;font-size:16px;color:var(--ink);border-bottom:1px solid var(--border)}
-  .nav-link-btn{width:100%;text-align:left;padding:.85rem 1.5rem;font-size:16px;color:var(--ink);border-bottom:1px solid var(--border);border-radius:0}
-  .dropdown{position:static;opacity:1;visibility:hidden;transform:none;box-shadow:none;border:none;border-radius:0;max-height:0;overflow:hidden;transition:max-height .25s,visibility .25s;padding:0}
-  .nav-item.open .dropdown{visibility:visible;max-height:300px}
-  .dropdown a{padding:.7rem 2rem;font-size:15px;border-bottom:1px solid var(--border);background:#f8fafc}
-  .dropdown-sub{display:none}
-  .nav-pill{background:#e8a020!important;color:#1a2332!important;margin:.5rem 1rem;border-radius:4px;text-align:center;font-weight:700!important;display:block;padding:.85rem 1.5rem!important}
-  .hamburger{display:flex}
-  .nav-cred-line2{display:none}
-  .logo svg{width:110px;height:22px}
-  .calc-wrap{padding:0 1.25rem 3rem;margin-top:1.5rem}
-  .calc-grid{grid-template-columns:1fr}
-  .calc-tabs-outer{overflow-x:auto;flex-wrap:nowrap;gap:.25rem}
-  .calc-tab-outer{white-space:nowrap;font-size:12px;padding:.65rem 1rem}
+.calc-wrap{padding:0 1.25rem 3rem;margin-top:1.5rem}
+.calc-grid{grid-template-columns:1fr}
+.calc-tabs-outer{overflow-x:auto;flex-wrap:nowrap;gap:.25rem}
+.calc-tab-outer{white-space:nowrap;font-size:12px;padding:.65rem 1rem}
 }
-@media(min-width:769px){
-  .nav-cred-wrap{flex-direction:row;align-items:center;gap:.5rem}
 }
 </style>
 </head>
@@ -427,37 +288,6 @@ calcClosing();calcMonthly();
 const params=new URLSearchParams(window.location.search);
 if(params.get('tab')==='1')switchTab(1);
 
-function validateEmail(e){return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e);}
-function validatePhone(p){return p.replace(/\D/g,'').length>=10;}
-function handleFormSubmit(){
-  const nameVal=document.getElementById('f-name').value.trim();
-  const emailVal=document.getElementById('f-email').value.trim();
-  const phoneVal=document.getElementById('f-phone').value.trim();
-  ['err-name','err-contact'].forEach(id=>{const el=document.getElementById(id);if(el){el.textContent='';el.classList.remove('show');}});
-  ['f-name','f-email','f-phone'].forEach(id=>{const el=document.getElementById(id);if(el)el.style.borderColor='';});
-  let ok=true;
-  if(!nameVal){const el=document.getElementById('err-name');el.textContent='Please enter your full name.';el.classList.add('show');document.getElementById('f-name').style.borderColor='#b83232';ok=false;}
-  if(!emailVal&&!phoneVal){const el=document.getElementById('err-contact');el.textContent='Please enter an email or phone number.';el.classList.add('show');ok=false;}
-  if(!ok)return;
-  const formEl=document.getElementById('form-showing');
-  fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(new FormData(formEl)).toString()})
-    .then(()=>{document.getElementById('modal-form-wrap').style.display='none';document.getElementById('form-success').style.display='block';formEl.reset();})
-    .catch(()=>{document.getElementById('modal-form-wrap').style.display='none';document.getElementById('form-success').style.display='block';});
-}
-
-const FAQ_CLOSING=[
-  {q:'What are closing costs when buying a home in Ontario?',a:'Closing costs are what you pay on top of your down payment to complete the purchase. The biggest item is land transfer tax, calculated on a sliding scale from 0.5% to 2.5% of the purchase price. Toronto buyers pay this twice, provincial and municipal, which makes the city one of the most expensive in Canada for closing costs. You also pay legal fees (typically $1,200 to $1,400), title insurance ($350 to $950 depending on purchase price), and a home inspection ($400 to $600). Budget 2% to 4% of the purchase price in total. See our <a href="/first-time-buyer-guide.html" style="color:#e8a020;text-decoration:none;font-weight:500">first-time buyer guide</a> for a full breakdown.'},
-  {q:'How does Toronto\'s land transfer tax work?',a:'Ontario\'s provincial LTT starts at 0.5% on the first $55,000 of the purchase price and goes up to 2.5% on amounts above $2,000,000. Toronto adds a municipal LTT on top of that for any property within city limits. On a $900,000 Toronto home, that works out to roughly $14,475 in provincial LTT and another $14,475 in municipal LTT, close to $29,000 in land transfer tax before any other closing costs. Use the calculator above to see your exact figures.'},
-  {q:'What is the first-time buyer LTT rebate in Ontario?',a:'Ontario\'s first-time buyer rebate reduces provincial land transfer tax by up to $4,000, which wipes it out entirely on purchases up to $368,000. Toronto adds a municipal rebate of up to $4,475 for buyers within city limits. To qualify you must be a Canadian citizen or permanent resident, at least 18 years old, have never owned a home anywhere in the world, and plan to occupy the property as your principal residence within nine months of closing. Your lawyer applies the rebate automatically at closing.'},
-  {q:'How much down payment do I need in Ontario?',a:'As of December 2024, the rules changed. For homes up to $500,000 the minimum is 5%. For homes between $500,000 and $1,499,999 it is 5% on the first $500,000 and 10% on the remainder. For homes $1,500,000 and above the minimum is 20%. So a $1,000,000 home now requires $75,000 down (5% on the first $500k plus 10% on the next $500k) instead of the old $200,000 minimum. Anything below 20% down requires CMHC mortgage insurance, which adds a premium of 2.8% to 4.0% to your insured loan amount.'},
-];
-
-const FAQ_MONTHLY=[
-  {q:'What is included in the true monthly cost of owning a home?',a:'Most buyers only think about the mortgage payment, but monthly ownership costs more than that. Property tax in the GTA typically runs $400 to $800 per month depending on location and assessed value. Utilities (hydro, gas, water) average $300 to $500 for a detached home. Home insurance is roughly $150 to $200 per month. If you are buying a condo, monthly fees in Toronto often run $500 to $1,200 or more. The calculator above adds all of these together so you can budget for the real number. Ready to start the process? Use our <a href="/checklist.html" style="color:#e8a020;text-decoration:none;font-weight:500">home buyer checklist</a>.'},
-  {q:'How is my monthly mortgage payment calculated?',a:'Your payment depends on four things: purchase price, down payment, interest rate, and amortization period. A longer amortization lowers your monthly payment but you pay more interest over time. A shorter amortization means a higher payment but you build equity faster and pay less interest overall. The calculator shows the principal and interest portion of your payment, which is the same number your lender will give you once your rate is confirmed.'},
-  {q:'How does amortization length affect my monthly costs?',a:'A 25-year amortization is the standard for insured mortgages in Canada. Going to 30 years reduces your monthly payment but costs more in interest over the life of the loan and slows equity growth. Dropping to 20 years raises your monthly payment but saves a lot in interest. Use the calculator to compare all three side by side.'},
-  {q:'How does HomeCashbacks reduce the cost of buying?',a:'The seller pays a buyer agent commission of roughly 2.5% of the purchase price. HomeCashbacks takes a flat $4,999 from that and sends you everything above it after closing. On a $900,000 home you would get back roughly $17,500. You still get full service: showings, offer writing, negotiation, and closing support. Cashback arrives 6 to 8 weeks after your closing date.'},
-];
 
 function renderFAQ(){
   [['faq-closing',FAQ_CLOSING],['faq-monthly',FAQ_MONTHLY]].forEach(([id,data])=>{
