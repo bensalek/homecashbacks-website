@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="shortcut icon" href="/favicon.svg"/>
+
+<meta charset="UTF-8"/>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+  <link rel="shortcut icon" href="/favicon.svg"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <title>Offer Strategy Tool | HomeCashbacks — Know Before You Submit</title>
 <meta name="description" content="Answer four questions, set your ceiling, and get a clear offer strategy before you submit."/>
 <meta name="robots" content="index, follow"/>
@@ -187,12 +191,15 @@ footer{background:#1a2332;padding:2.5rem 2rem 1.5rem}
   .situation-band,.advice-section,.commitment-box,.result-cta{padding:1.25rem}
 }
 </style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-068EB5V10X"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag("js", new Date());
   gtag("config", "G-068EB5V10X");
 </script>
+
 </head>
 <body>
 <section class="page-hero">
@@ -266,6 +273,7 @@ footer{background:#1a2332;padding:2.5rem 2rem 1.5rem}
 </div>
 
 <script>
+
 const questions=[
   {key:'offer_date',text:'Is there an offer date set for this property?',opts:[['held','Yes — offers are being held'],['open','No — open for offers anytime']]},
   {key:'days',text:'How long has it been listed?',opts:[['fresh','Under 7 days'],['moderate','7 to 21 days'],['long','Over 21 days']]},
@@ -283,6 +291,7 @@ function render(){
     `<button class="opt-btn${ans[questions[cur].key]===v?' sel':''}" onclick="pick('${v}')">${l}</button>`
   ).join('');
   document.getElementById('back-link').style.visibility=cur===0?'hidden':'visible';
+}
 function pick(v){
   ans[questions[cur].key]=v;
   render();
@@ -290,11 +299,13 @@ function pick(v){
     if(cur<questions.length-1){cur++;render();}
     else showCeiling();
   },300);
+}
 function goBack(){if(cur>0){cur--;render();}}
 function showCeiling(){
   document.getElementById('q-card').style.display='none';
   buildResult();
   setTimeout(()=>document.getElementById('ceiling-input').focus(),200);
+}
 function submitCeiling(){
   const val=parseFloat(document.getElementById('ceiling-input').value);
   if(!val||val<100000){
@@ -392,47 +403,17 @@ function buildResult(){
   document.getElementById('result-card').scrollIntoView({behavior:'smooth',block:'start'});
 }
 
-
-
-
-
-if(overlay&&overlay.classList.contains('open'))closeModal();}});
-
-function validateEmail(e){return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e);}
-function validatePhone(p){return p.replace(/\D/g,'').length>=10;}
-
-  // 2. Email or phone required
-  if(!emailVal&&!phoneVal){
-    err.textContent='Please provide an email address or phone number.';
-    err.style.display='block';
-    document.getElementById('f-email').style.borderColor='#b83232';
-    document.getElementById('f-phone').style.borderColor='#b83232';
-    return;
-  }
-
-  // 3. Validate email format if provided
-  if(emailVal&&!validateEmail(emailVal)){
-    err.textContent='Please enter a valid email address (e.g. name@email.com).';
-    err.style.display='block';
-    document.getElementById('f-email').style.borderColor='#b83232';
-    document.getElementById('f-email').focus();
-    return;
-  }
-
-  // 4. Validate phone format if provided
-  if(phoneVal&&!validatePhone(phoneVal)){
-    err.textContent='Phone number must be at least 10 digits.';
-    err.style.display='block';
-    document.getElementById('f-phone').style.borderColor='#b83232';
-    document.getElementById('f-phone').focus();
-    return;
-  }
-
-  // All good — show success, stay on page
-  document.getElementById('modal-form-wrap').style.display='none';
-  document.getElementById('f-success').style.display='block';
+function closeMobMenu(){
+  document.getElementById('nav-links').classList.remove('open');
+  document.getElementById('hamburger').classList.remove('open');
 }
+function toggleMobMenu(){
+  document.getElementById('nav-links').classList.toggle('open');
+  document.getElementById('hamburger').classList.toggle('open');
+}
+
 render();
+
 </script>
 
 <script src="/assets/shared.js"></script>

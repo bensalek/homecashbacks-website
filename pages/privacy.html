@@ -1,10 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Privacy Policy | HomeCashbacks</title>
-<meta name="description" content="Privacy policy for HomeCashbacks — how we collect and use your information."/>
-<meta name="robots" content="noindex, follow"/>
-<link rel="canonical" href="https://homecashbacks.ca/privacy.html"/>
+
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png"/>
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
+<title>Privacy Policy — HomeCashbacks | homecashbacks.ca</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{--bg:#f0f4f8;--bg2:#e2eaf2;--bg3:#ccd8e8;--ink:#1a2332;--ink2:#2d3d52;--muted:#5a6a82;--border:rgba(26,35,50,.1);--white:#fff;--amber:#e8a020}
@@ -127,6 +134,14 @@ footer{background:#1a2332;padding:2.5rem 2rem 1.5rem}
   .foot-bottom{flex-direction:column;gap:.75rem;align-items:flex-start}
 }
 </style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-068EB5V10X"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+  gtag("config", "G-068EB5V10X");
+</script>
 
 </head>
 <body>
@@ -195,7 +210,41 @@ footer{background:#1a2332;padding:2.5rem 2rem 1.5rem}
 
 </div>
 
-<!-- shared JS loaded below -->
+
+        <div class="f-field">
+          <label class="f-label" for="f-email">Email address <span style="color:#5a6a82;font-size:11px;font-weight:400">(or phone)</span></label>
+          <input class="f-input" type="text" id="f-email" name="email" inputmode="email"/>
+        </div>
+        <div class="f-field">
+          <label class="f-label" for="f-phone">Phone number <span style="color:#5a6a82;font-size:11px;font-weight:400">(or email)</span></label>
+          <input class="f-input" type="tel" id="f-phone" name="phone"/>
+          <div class="f-note">At least one of email or phone is required.</div>
+          <div class="f-error" id="err-contact"></div>
+        </div>
+        <p class="f-consent">By submitting, you agree to be contacted by HomeCashbacks. View our <a href="/privacy.html" target="_blank">Privacy Policy</a>.</p>
+        <button type="button" class="f-submit" onclick="handleFormSubmit()">Claim My Free Showing</button>
+      </form>
+    </div>
+    <div class="f-success" id="form-success" style="display:none">
+      <div class="f-success-icon">✓</div>
+      <h3>We'll be in touch!</h3>
+      <p>Expect a call or email from us within a few hours.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+
+function handleFormSubmit(){
+  const nameVal=document.getElementById('f-name').value.trim();
+  const emailVal=document.getElementById('f-email').value.trim();
+  const phoneVal=document.getElementById('f-phone').value.trim();
+  ['err-name','err-contact'].forEach(id=>{const el=document.getElementById(id);if(el){el.textContent='';el.classList.remove('show');}});
+  let ok=true;
+  if(!ok)return;
+}
+
+</script>
 
 <script src="/assets/shared.js"></script>
 </body>
