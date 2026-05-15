@@ -13,13 +13,8 @@ const nav    = fs.readFileSync(path.join(COMPONENTS_DIR, 'nav.html'),    'utf8')
 const modal  = fs.readFileSync(path.join(COMPONENTS_DIR, 'modal.html'),  'utf8');
 const footer = fs.readFileSync(path.join(COMPONENTS_DIR, 'footer.html'), 'utf8');
 
-// Netlify form detection — hidden form Netlify scans at deploy time
-const NETLIFY_FORM_DETECTION = `<!-- Netlify form detection -->
-<form name="contact" data-netlify="true" netlify-honeypot="bot-field" hidden style="display:none!important">
-  <input type="text" name="name"/>
-  <input type="text" name="email"/>
-  <input type="tel" name="phone"/>
-</form>`;
+// Netlify form detection - truly hidden, won't render visibly
+const NETLIFY_FORM_DETECTION = '<div aria-hidden="true" style="position:absolute;left:-9999px;top:-9999px;width:1px;height:1px;overflow:hidden"><form name="contact" data-netlify="true" netlify-honeypot="bot-field"><input type="text" name="name"/><input type="text" name="email"/><input type="tel" name="phone"/></form></div>';
 
 // Prepare dist
 if (fs.existsSync(DIST_DIR)) fs.rmSync(DIST_DIR, { recursive: true });
@@ -103,7 +98,7 @@ pages.forEach(function(filename) {
     pageStyles + '\n' +
     '</head>\n' +
     '<body>\n' +
-    NETLIFY_FORM_DETECTION + '\n\n' +
+    NETLIFY_FORM_DETECTION + '\n' +
     modal + '\n\n' +
     nav + '\n\n' +
     bodyClean + '\n\n' +

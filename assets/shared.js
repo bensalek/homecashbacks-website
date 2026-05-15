@@ -36,7 +36,7 @@ function handleFormSubmit(formName){
   }
   if(!ok)return;
   var fd=new FormData(form);
-  fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(fd).toString()})
+  fetch('https://homecashbacks.ca/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(fd).toString()})
     .then(function(){document.getElementById('modal-form-wrap').style.display='none';document.getElementById('form-success').style.display='block';})
     .catch(function(){document.getElementById('modal-form-wrap').style.display='none';document.getElementById('form-success').style.display='block';});
 }
