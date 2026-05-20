@@ -169,34 +169,50 @@ nav{position:fixed;top:58px;left:0;right:0;z-index:570;background:#f0f4f8;border
 .story-teaser-link{color:#2563eb;text-decoration:none;font-weight:500}
 .story-teaser-link:hover{text-decoration:underline}
 
-/* CASHBACK SLIDER */
-.slider-section{background:#1a2332;padding:2.75rem 2rem}
-.slider-inner{max-width:780px;margin:0 auto}
-.slider-eyebrow{font-size:11px;font-weight:500;letter-spacing:1.2px;text-transform:uppercase;color:#e8a020;margin-bottom:.4rem}
-.slider-title{font-family:'Cormorant Garamond',serif;font-size:clamp(30px,4.5vw,48px);font-weight:600;color:#e8edf5;margin-bottom:.3rem;line-height:1.1}
-.slider-sub{font-size:16px;color:rgba(232,237,245,.45);margin-bottom:1.5rem}
-.slider-price-label{font-size:13px;color:rgba(232,237,245,.5);margin-bottom:.5rem}
-.slider-price-label b{color:#e8a020;font-size:17px}
-input[type=range]{width:100%;-webkit-appearance:none;appearance:none;height:4px;border-radius:4px;background:rgba(232,237,245,.15);outline:none;cursor:pointer;margin-bottom:.4rem;touch-action:pan-x}
-input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;border-radius:50%;background:#e8a020;cursor:pointer;border:2px solid #1e2d48}
-input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;background:#e8a020;cursor:pointer;border:2px solid #1e2d48}
-.slider-ticks{display:flex;justify-content:space-between;margin-bottom:1.5rem}
-.slider-tick{font-size:10px;color:rgba(232,237,245,.25)}
-.cb-layout{display:grid;grid-template-columns:175px 1fr;gap:1.1rem;align-items:center;margin-bottom:1.4rem}
-.cb-main{background:rgba(232,160,32,.1);border:1px solid rgba(232,160,32,.25);border-radius:4px;padding:1.25rem;text-align:center}
-.cb-main-label{font-size:10px;font-weight:500;letter-spacing:.8px;text-transform:uppercase;color:rgba(232,237,245,.45);margin-bottom:.4rem}
-.cb-main-num{font-family:'Cormorant Garamond',serif;font-size:38px;font-weight:600;color:#e8a020;line-height:1;margin-bottom:.3rem}
-.cb-main-sub{font-size:11px;color:rgba(232,237,245,.35);line-height:1.4}
-.cb-cards-two{display:flex;align-items:center;gap:.75rem}
-.cb-or{font-size:11px;font-weight:500;letter-spacing:1px;color:rgba(232,237,245,.35);flex-shrink:0;text-transform:uppercase}
-.cb-card{flex:1;background:rgba(232,237,245,.05);border:1px solid rgba(232,237,245,.1);border-radius:4px;padding:1rem;text-align:center}
-.cb-card-icon-svg{display:flex;justify-content:center;margin-bottom:.5rem;color:#e8a020;opacity:.9}
-.cb-card-num{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;color:#e8edf5;line-height:1.1;margin-bottom:.2rem}
-.cb-card-label{font-size:11px;color:rgba(232,237,245,.45);line-height:1.35}
-.slider-cta-btn{background:#e8a020;color:#1a2332;padding:11px 22px;border-radius:4px;font-size:13px;font-weight:700;border:none;cursor:pointer;font-family:'Outfit',sans-serif;display:inline-flex;align-items:center;gap:6px;transition:opacity .2s;margin-bottom:.55rem;box-shadow:0 2px 10px rgba(232,160,32,.3)}
-.slider-cta-btn:hover{opacity:.88}
-.slider-note{font-size:11px;color:rgba(232,237,245,.28);line-height:1.5}
-
+/* CASHBACK CALCULATOR */
+.calc-section{background:#1a2332;padding:3rem 2rem}
+.calc-section-inner{max-width:680px;margin:0 auto}
+.calc-banner{text-align:center;background:rgba(255,255,255,.05);border:1px solid rgba(232,160,32,.15);border-radius:6px;padding:1.75rem 2rem;margin-bottom:1.75rem}
+.calc-banner-label{font-size:13px;color:rgba(255,255,255,.5);margin-bottom:.35rem;letter-spacing:.3px}
+.calc-banner-amt{font-size:54px;font-weight:700;color:#e8a020;line-height:1;letter-spacing:-2px}
+.calc-banner-sub{font-size:14px;color:rgba(255,255,255,.4);margin-top:.35rem}
+.calc-card{background:#fff;border-radius:6px;padding:1.75rem 2rem}
+.calc-card-eyebrow{font-size:10px;font-weight:500;letter-spacing:1.2px;text-transform:uppercase;color:#5a6a82;margin-bottom:.25rem}
+.calc-card-title{font-size:18px;font-weight:600;color:#1a2332;margin-bottom:1.25rem;font-family:'Outfit',sans-serif}
+.calc-inputs{display:flex;align-items:flex-end;gap:.75rem;margin-bottom:1.25rem}
+.calc-input-group{display:flex;flex-direction:column;gap:.35rem}
+.calc-input-group:first-child{flex:0 0 190px}
+.calc-input-small{flex:0 0 120px}
+.calc-input-label{font-size:11px;color:#5a6a82;font-weight:500;letter-spacing:.2px}
+.calc-price-wrap{position:relative;display:flex;align-items:center}
+.calc-price-sym{position:absolute;left:10px;font-size:14px;color:#5a6a82;pointer-events:none}
+.calc-price-input{padding:9px 10px 9px 22px;width:100%;border:1.5px solid #ccd8e8;border-radius:4px;font-size:15px;font-weight:600;color:#1a2332;background:#f0f4f8;font-family:'Outfit',sans-serif;outline:none}
+.calc-price-input:focus{border-color:#1a2332;background:#fff}
+.calc-pct-wrap{position:relative}
+.calc-pct-input{padding:9px 28px 9px 10px;width:100%;border:1.5px solid #ccd8e8;border-radius:4px;font-size:15px;font-weight:600;color:#1a2332;background:#f0f4f8;font-family:'Outfit',sans-serif;outline:none}
+.calc-pct-input:focus{border-color:#1a2332;background:#fff}
+.calc-pct-sym{position:absolute;right:10px;top:50%;transform:translateY(-50%);font-size:13px;color:#5a6a82;pointer-events:none}
+.calc-slider-wrap{margin-bottom:1.5rem}
+.calc-slider{width:100%;accent-color:#e8a020;margin-bottom:.5rem}
+.calc-ticks{display:flex;justify-content:space-between;font-size:10px;color:#9aabbc}
+.calc-result{background:#f0f4f8;border-radius:4px;padding:1.25rem 1.5rem;margin-bottom:.75rem}
+.calc-result-label{font-size:11px;font-weight:500;letter-spacing:.5px;text-transform:uppercase;color:#5a6a82;margin-bottom:.2rem}
+.calc-result-amt{font-size:38px;font-weight:700;color:#1a2332;line-height:1;margin-bottom:.3rem;font-family:'Outfit',sans-serif}
+.calc-result-sub{font-size:13px;color:#5a6a82}
+.calc-stat{background:#fff;border:1.5px solid #e2eaf2;border-radius:4px;padding:1rem 1.25rem;margin-bottom:.75rem}
+.calc-stat-label{font-size:11px;font-weight:500;letter-spacing:.5px;text-transform:uppercase;color:#5a6a82;margin-bottom:.15rem}
+.calc-stat-val{font-size:22px;font-weight:700;color:#1a2332;margin-bottom:.15rem;font-family:'Outfit',sans-serif}
+.calc-stat-sub{font-size:12px;color:#5a6a82}
+.calc-note{font-size:11px;color:#9aabbc;line-height:1.6}
+@media(max-width:600px){
+  .calc-banner{padding:1.25rem}
+  .calc-banner-amt{font-size:42px}
+  .calc-card{padding:1.25rem}
+  .calc-inputs{flex-direction:row;flex-wrap:wrap}
+  .calc-input-group:first-child{flex:1 1 160px}
+  .calc-input-small{flex:0 0 110px}
+  .calc-result-amt{font-size:30px}
+}
 /* WHY */
 .why-section{background:var(--white);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
 .wm-intro{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-items:center;margin-bottom:1.75rem}
@@ -942,39 +958,71 @@ footer a{color:#e8a020;text-decoration:none}
   </div>
 </section>
 
-<!-- CASHBACK SLIDER — shown on both mobile and desktop -->
-<div class="slider-section" id="calculator">
-  <div class="slider-inner">
-    <div class="slider-eyebrow">Cashback calculator</div>
-    <div class="slider-title">What could your cashback actually do?</div>
-    <div class="slider-sub">Most buyers think of cashback as a number. Here's what it means in real life.</div>
-    <div class="slider-price-label">Home price: <b id="slider-display">$900,000</b></div>
-    <input type="range" id="price-slider" min="400000" max="3000000" step="1000" value="900000" oninput="updateCalc()" onchange="updateCalc()"/>
-    <div class="slider-ticks">
-      <span class="slider-tick">$400K</span><span class="slider-tick">$900K</span><span class="slider-tick">$1.4M</span><span class="slider-tick">$1.9M</span><span class="slider-tick">$2.4M</span><span class="slider-tick">$3M</span>
-    </div>
-    <div class="cb-layout">
-      <div class="cb-main">
-        <div class="cb-main-label">Your cashback</div>
-        <div class="cb-main-num" id="calc-cashback">$17,501</div>
-        <div class="cb-main-sub">commission minus our $4,999 flat fee</div>
+<!-- CASHBACK CALCULATOR -->
+<section class="calc-section" id="calculator">
+  <div class="calc-section-inner">
+
+    <!-- Average banner -->
+    <div class="calc-banner">
+      <div class="calc-banner-left">
+        <div class="calc-banner-label">HomeCashbacks clients save</div>
+        <div class="calc-banner-amt">$20,000</div>
+        <div class="calc-banner-sub">on average</div>
       </div>
-      <div class="cb-cards-two">
-        <div class="cb-card">
-          <div class="cb-card-num" id="cv-mortgage">—</div>
-          <div class="cb-card-label">months of mortgage payments</div>
+      <div class="calc-banner-divider"></div>
+      
+    </div>
+
+    <!-- Calculator card -->
+    <div class="calc-card">
+      <div class="calc-card-eyebrow">Cashback calculator</div>
+      <div class="calc-card-title">What does your number look like?</div>
+
+      <!-- Inputs -->
+      <div style="display:flex;align-items:flex-end;gap:.75rem;margin-bottom:1.25rem">
+        <div style="display:flex;flex-direction:column;gap:.35rem;width:190px">
+          <label class="calc-input-label" for="price-text">Home price</label>
+          <div class="calc-price-wrap">
+            <span class="calc-price-sym">$</span>
+            <input class="calc-price-input" type="text" id="price-text" value="900,000" inputmode="numeric" autocomplete="off"/>
+          </div>
         </div>
-        <div class="cb-or">OR</div>
-        <div class="cb-card">
-          <div class="cb-card-num" id="cv-closing">—</div>
-          <div class="cb-card-label">of your closing costs covered</div>
+        <div style="display:flex;flex-direction:column;gap:.35rem;width:120px">
+          <label class="calc-input-label" for="commission-pct">Buyer commission</label>
+          <div class="calc-pct-wrap">
+            <input class="calc-pct-input" type="number" id="commission-pct" value="2.5" min="1" max="5" step="0.25"/>
+            <span class="calc-pct-sym">%</span>
+          </div>
         </div>
       </div>
+
+      <!-- Slider -->
+      <div class="calc-slider-wrap">
+        <input type="range" id="price-slider" class="calc-slider" min="300000" max="3000000" step="10000" value="900000"/>
+        <div class="calc-ticks">
+          <span>$300K</span><span>$750K</span><span>$1.2M</span><span>$1.65M</span><span>$2.1M</span><span>$3M</span>
+        </div>
+      </div>
+
+      <!-- Result -->
+      <div class="calc-result">
+        <div class="calc-result-label">Your estimated cashback</div>
+        <div class="calc-result-amt" id="calc-cashback">$17,501</div>
+        <div class="calc-result-sub" id="calc-sub">Commission of $22,500 minus our flat $4,999 fee</div>
+      </div>
+
+      <!-- Mortgage stat -->
+      <div class="calc-stat">
+        <div class="calc-stat-label">Use your cashback to</div>
+        <div class="calc-stat-val" id="cv-mortgage">cover 3 months</div>
+        <div class="calc-stat-sub">That is <span id="cv-mortgage-months">3 months</span> of mortgage payments you never have to make. Move in. Breathe. Let the cashback work.</div>
+      </div>
+
+      <div class="calc-note">Cashback arrives 6 to 8 weeks after closing. Amount depends on the commission the seller has offered. Estimates only.</div>
     </div>
-    <button class="slider-cta-btn" onclick="openModal()">Book a free showing and start earning your cashback</button>
-    <div class="slider-note">Assumes 2.5% buyer's commission. Mortgage calc assumes 3.89% over 25 years. Estimates only.</div>
+
   </div>
-</div>
+</section>
 
 <!-- WHY WE EXIST + COMPARISON -->
 <div class="why-exist">
@@ -1188,25 +1236,49 @@ footer a{color:#e8a020;text-decoration:none}
 <script>
 // CASHBACK SLIDER (desktop only)
 function updateCalc(){
-  const price=parseInt(document.getElementById('price-slider').value);
-  const commission=price*0.025;
-  const cashback=Math.max(0,commission-4999);
-  const fmt=n=>'$'+Math.round(n).toLocaleString('en-CA');
-  document.getElementById('slider-display').textContent=fmt(price);
+  var slider=document.getElementById('price-slider');
+  var price=parseInt(slider.value);
+  var pct=parseFloat(document.getElementById('commission-pct').value)||2.5;
+  var commission=price*(pct/100);
+  var cashback=Math.max(0,commission-4999);
+  var fmt=function(n){return '$'+Math.round(n).toLocaleString('en-CA');};
+  var fmtInput=function(n){return Math.round(n).toLocaleString('en-CA');};
   document.getElementById('calc-cashback').textContent=fmt(cashback);
-  // Mortgage months: assume 3.89% on 75% of price
-  const loan=price*0.75;
-  const r=3.89/100/12;
-  const n=25*12;
-  const monthly=loan*(r*Math.pow(1+r,n))/(Math.pow(1+r,n)-1);
-  const months=cashback>0?Math.round(cashback/monthly):0;
-  document.getElementById('cv-mortgage').textContent=months>0?months:'—';
-  // Closing cost % coverage (estimate closing = 2% of price)
-  const closing=price*0.02;
-  const pct=cashback>0?Math.min(100,Math.round(cashback/closing*100))+'%':'—';
-  document.getElementById('cv-closing').textContent=pct;
+  document.getElementById('calc-sub').textContent='Commission of '+fmt(commission)+' minus our flat $4,999 fee';
+  var loan=price*0.75;
+  var r=3.89/100/12;
+  var n=25*12;
+  var monthly=loan*(r*Math.pow(1+r,n))/(Math.pow(1+r,n)-1);
+  var months=cashback>0?Math.round(cashback/monthly):0;
+  var mText=months>0?months+(months===1?' month':' months'):'—';
+  document.getElementById('cv-mortgage').textContent='cover '+mText;
+  document.getElementById('cv-mortgage-months').textContent=mText;
 }
-if(document.getElementById('price-slider'))updateCalc();
+(function(){
+  var slider=document.getElementById('price-slider');
+  var priceText=document.getElementById('price-text');
+  var commInput=document.getElementById('commission-pct');
+  if(!slider)return;
+  slider.addEventListener('input',function(){
+    priceText.value=Math.round(parseInt(this.value)).toLocaleString('en-CA');
+    updateCalc();
+  });
+  priceText.addEventListener('input',function(){
+    var raw=parseInt(this.value.replace(/,/g,''))||0;
+    var clamped=Math.min(3000000,Math.max(300000,raw));
+    slider.value=clamped;
+    updateCalc();
+  });
+  priceText.addEventListener('blur',function(){
+    var raw=parseInt(this.value.replace(/,/g,''))||900000;
+    var clamped=Math.min(3000000,Math.max(300000,raw));
+    this.value=Math.round(clamped).toLocaleString('en-CA');
+    slider.value=clamped;
+    updateCalc();
+  });
+  commInput.addEventListener('input',updateCalc);
+  updateCalc();
+})();
 
 const FAQ_SERVICE=[
   {q:'Are there any hidden fees or commitments?',a:'No hidden fees. No commitment. No exclusive agreement. You pay nothing unless you buy, and even then the only fee is our flat $4,999 which comes out of the commission the seller already agreed to pay.'},

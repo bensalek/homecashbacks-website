@@ -233,6 +233,38 @@ footer a{color:#e8a020;text-decoration:none}
 .f-success-icon{font-size:36px;margin-bottom:.6rem}
 .f-success h3{font-family:'Cormorant Garamond',serif;font-size:21px;color:#1a2332;margin-bottom:.3rem}
 .f-success p{font-size:13px;color:#5a6a82}
+
+/* HOW-CASHBACK-WORKS CALCULATOR */
+.hcw-calc-section{background:#1a2332;padding:3rem 2rem}
+.hcw-calc-inner{max-width:680px;margin:0 auto}
+.hcw-calc-banner{text-align:center;background:rgba(255,255,255,.05);border:1px solid rgba(232,160,32,.15);border-radius:6px;padding:1.75rem 2rem;margin-bottom:1.75rem}
+.hcw-calc-banner-label{font-size:13px;color:rgba(255,255,255,.5);margin-bottom:.35rem}
+.hcw-calc-banner-amt{font-size:54px;font-weight:700;color:#e8a020;line-height:1;letter-spacing:-2px}
+.hcw-calc-banner-sub{font-size:14px;color:rgba(255,255,255,.4);margin-top:.35rem}
+.hcw-calc-card{background:#fff;border-radius:6px;padding:1.75rem 2rem}
+.hcw-calc-eyebrow{font-size:10px;font-weight:500;letter-spacing:1.2px;text-transform:uppercase;color:#5a6a82;margin-bottom:.25rem}
+.hcw-calc-title{font-size:18px;font-weight:600;color:#1a2332;margin-bottom:1.25rem}
+.hcw-input-label{font-size:11px;color:#5a6a82;font-weight:500}
+.hcw-price-wrap{position:relative;display:flex;align-items:center}
+.hcw-price-sym{position:absolute;left:10px;font-size:14px;color:#5a6a82;pointer-events:none}
+.hcw-price-input{padding:9px 10px 9px 22px;width:100%;border:1.5px solid #ccd8e8;border-radius:4px;font-size:15px;font-weight:600;color:#1a2332;background:#f0f4f8;font-family:'Outfit',sans-serif;outline:none}
+.hcw-price-input:focus{border-color:#1a2332;background:#fff}
+.hcw-pct-wrap{position:relative}
+.hcw-pct-input{padding:9px 28px 9px 10px;width:100%;border:1.5px solid #ccd8e8;border-radius:4px;font-size:15px;font-weight:600;color:#1a2332;background:#f0f4f8;font-family:'Outfit',sans-serif;outline:none}
+.hcw-pct-input:focus{border-color:#1a2332;background:#fff}
+.hcw-pct-sym{position:absolute;right:10px;top:50%;transform:translateY(-50%);font-size:13px;color:#5a6a82;pointer-events:none}
+.hcw-slider-wrap{margin-bottom:1.5rem}
+.hcw-slider{width:100%;accent-color:#e8a020;margin-bottom:.5rem}
+.hcw-ticks{display:flex;justify-content:space-between;font-size:10px;color:#9aabbc}
+.hcw-result{background:#f0f4f8;border-radius:4px;padding:1.25rem 1.5rem;margin-bottom:.75rem}
+.hcw-result-label{font-size:11px;font-weight:500;letter-spacing:.5px;text-transform:uppercase;color:#5a6a82;margin-bottom:.2rem}
+.hcw-result-amt{font-size:38px;font-weight:700;color:#1a2332;line-height:1;margin-bottom:.3rem}
+.hcw-result-sub{font-size:13px;color:#5a6a82}
+.hcw-stat{background:#fff;border:1.5px solid #e2eaf2;border-radius:4px;padding:1rem 1.25rem;margin-bottom:.75rem}
+.hcw-stat-label{font-size:11px;font-weight:500;letter-spacing:.5px;text-transform:uppercase;color:#5a6a82;margin-bottom:.15rem}
+.hcw-stat-val{font-size:22px;font-weight:700;color:#1a2332;margin-bottom:.15rem}
+.hcw-stat-sub{font-size:12px;color:#5a6a82}
+.hcw-note{font-size:11px;color:#9aabbc;line-height:1.6}
 </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-068EB5V10X"></script>
@@ -345,40 +377,63 @@ footer a{color:#e8a020;text-decoration:none}
     </div>
   </div>
 
-  <!-- CASHBACK SLIDER -->
-  <div class="section" style="padding:0;border-bottom:none">
-    <div class="slider-section">
-      <div class="slider-inner">
-        <div class="slider-eyebrow">Cashback calculator</div>
-        <div class="slider-title">See what your cashback could do</div>
-        <div class="slider-sub">Move the slider to your home price and see how much comes back to you.</div>
-        <div class="slider-price-label">Home price: <b id="slider-display">$900,000</b></div>
-        <input type="range" id="price-slider" min="400000" max="3000000" step="1" value="900000" oninput="updateCalc()"/>
-        <div class="slider-ticks">
-          <span class="slider-tick">$400K</span><span class="slider-tick">$900K</span><span class="slider-tick">$1.4M</span><span class="slider-tick">$1.9M</span><span class="slider-tick">$2.4M</span><span class="slider-tick">$3M</span>
-        </div>
-        <div class="cb-layout">
-          <div class="cb-main">
-            <div class="cb-main-label">Your cashback</div>
-            <div class="cb-main-num" id="calc-cashback">$17,501</div>
-            <div class="cb-main-sub">commission minus our $4,999 flat fee</div>
-          </div>
-          <div class="cb-cards-two">
-            <div class="cb-card">
-              <div class="cb-card-num" id="cv-mortgage">—</div>
-              <div class="cb-card-label">months of mortgage payments</div>
-            </div>
-            <div class="cb-or">OR</div>
-            <div class="cb-card">
-              <div class="cb-card-num" id="cv-closing">—</div>
-              <div class="cb-card-label">of your closing costs covered</div>
-            </div>
-          </div>
-        </div>
-        <div class="slider-note">Assumes 2.5% buyer's commission. Mortgage calc assumes 3.89%, 25yr. Estimates only.</div>
+  <!-- CASHBACK CALCULATOR -->
+  <section class="hcw-calc-section" id="calculator">
+    <div class="hcw-calc-inner">
+
+      <div class="hcw-calc-banner">
+        <div class="hcw-calc-banner-label">HomeCashbacks clients save</div>
+        <div class="hcw-calc-banner-amt">$20,000</div>
+        <div class="hcw-calc-banner-sub">on average</div>
       </div>
+
+      <div class="hcw-calc-card">
+        <div class="hcw-calc-eyebrow">Cashback calculator</div>
+        <div class="hcw-calc-title">What does your number look like?</div>
+
+        <div style="display:flex;align-items:flex-end;gap:.75rem;margin-bottom:1.25rem">
+          <div style="display:flex;flex-direction:column;gap:.35rem;width:190px">
+            <label class="hcw-input-label" for="hcw-price-text">Home price</label>
+            <div class="hcw-price-wrap">
+              <span class="hcw-price-sym">$</span>
+              <input class="hcw-price-input" type="text" id="hcw-price-text" value="900,000" inputmode="numeric" autocomplete="off"/>
+            </div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:.35rem;width:120px">
+            <label class="hcw-input-label" for="hcw-commission">Buyer commission</label>
+            <div class="hcw-pct-wrap">
+              <input class="hcw-pct-input" type="number" id="hcw-commission" value="2.5" min="1" max="5" step="0.25"/>
+              <span class="hcw-pct-sym">%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hcw-slider-wrap">
+          <input type="range" id="hcw-slider" class="hcw-slider" min="300000" max="3000000" step="10000" value="900000"/>
+          <div class="hcw-ticks">
+            <span>$300K</span><span>$750K</span><span>$1.2M</span><span>$1.65M</span><span>$2.1M</span><span>$3M</span>
+          </div>
+        </div>
+
+        <div class="hcw-result">
+          <div class="hcw-result-label">Your estimated cashback</div>
+          <div class="hcw-result-amt" id="hcw-cashback">$17,501</div>
+          <div class="hcw-result-sub" id="hcw-sub">Commission of $22,500 minus our flat $4,999 fee</div>
+        </div>
+
+        <div class="hcw-stat">
+          <div class="hcw-stat-label">Use your cashback to</div>
+          <div class="hcw-stat-val" id="hcw-months">cover 3 months</div>
+          <div class="hcw-stat-sub">That is <span id="hcw-months-sub">3 months</span> of mortgage payments you never have to make. Move in. Breathe. Let the cashback work.</div>
+        </div>
+
+        <div class="hcw-note">Cashback arrives 6 to 8 weeks after closing. Amount depends on the commission the seller has offered. Estimates only.</div>
+      </div>
+
     </div>
-  </div>
+  </section>
+
+
 
   <!-- LEGAL -->
   <div class="section">
@@ -474,6 +529,51 @@ function renderFAQ(){
   });
 }
 renderFAQ();
+
+function fmtC(n){return'$'+Math.round(n).toLocaleString();}
+function updateCalc(){
+  var slider=document.getElementById('hcw-slider');
+  var price=parseInt(slider.value);
+  var pct=parseFloat(document.getElementById('hcw-commission').value)||2.5;
+  var commission=price*(pct/100);
+  var cashback=Math.max(0,commission-4999);
+  var fmt=function(n){return '$'+Math.round(n).toLocaleString('en-CA');};
+  document.getElementById('hcw-cashback').textContent=fmt(cashback);
+  document.getElementById('hcw-sub').textContent='Commission of '+fmt(commission)+' minus our flat $4,999 fee';
+  var loan=price*0.75;
+  var r=3.89/100/12;
+  var n=25*12;
+  var monthly=loan*(r*Math.pow(1+r,n))/(Math.pow(1+r,n)-1);
+  var months=cashback>0?Math.round(cashback/monthly):0;
+  var mText=months>0?months+(months===1?' month':' months'):'—';
+  document.getElementById('hcw-months').textContent='cover '+mText;
+  document.getElementById('hcw-months-sub').textContent=mText;
+}
+(function(){
+  var slider=document.getElementById('hcw-slider');
+  var priceText=document.getElementById('hcw-price-text');
+  var commInput=document.getElementById('hcw-commission');
+  if(!slider)return;
+  slider.addEventListener('input',function(){
+    priceText.value=Math.round(parseInt(this.value)).toLocaleString('en-CA');
+    updateCalc();
+  });
+  priceText.addEventListener('input',function(){
+    var raw=parseInt(this.value.replace(/,/g,''))||0;
+    var clamped=Math.min(3000000,Math.max(300000,raw));
+    slider.value=clamped;
+    updateCalc();
+  });
+  priceText.addEventListener('blur',function(){
+    var raw=parseInt(this.value.replace(/,/g,''))||900000;
+    var clamped=Math.min(3000000,Math.max(300000,raw));
+    this.value=Math.round(clamped).toLocaleString('en-CA');
+    slider.value=clamped;
+    updateCalc();
+  });
+  commInput.addEventListener('input',updateCalc);
+  updateCalc();
+})();
 
 function fmtC(n){return'$'+Math.round(n).toLocaleString();}
 function updateCalc(){
