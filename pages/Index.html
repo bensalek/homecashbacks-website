@@ -780,6 +780,22 @@ footer a{color:#e8a020;text-decoration:none}
       "name": "How much down payment do I need in Ontario?",
       "acceptedAnswer": {"@type": "Answer", "text": "For homes up to $500,000 the minimum is 5%. For homes between $500,000 and $1,499,999 it is 5% on the first $500,000 and 10% on the remainder. For homes $1,500,000 and above the minimum is 20%. Anything below 20% requires CMHC mortgage insurance."}
     }
+,
+    {
+      "@type": "Question",
+      "name": "Is a flat fee realtor better than a percentage cashback competitor?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Mathematically yes, by thousands of dollars. Most cashback competitors give you 50% of the commission back. On a $1M GTA home with a 2.5% buyer commission, that means $12,500 to you and $12,500 kept by the brokerage. We charge $4,999 flat and give you $20,001. Same professional representation, same legal protections, $7,500 more in your pocket. Actual amounts depend on the commission the seller has offered."}
+    },
+    {
+      "@type": "Question",
+      "name": "Do I pay income tax on my cashback?",
+      "acceptedAnswer": {"@type": "Answer", "text": "If you are buying as your primary residence, the CRA generally treats a commission rebate as a reduction in your purchase price, not taxable income. If you are buying as an investment property or through a corporation, the rules may differ. We recommend speaking with your accountant for your specific situation."}
+    },
+    {
+      "@type": "Question",
+      "name": "What is the catch?",
+      "acceptedAnswer": {"@type": "Answer", "text": "There isn't one. Traditional agents earn $20,000 to $25,000 on a $1M home. Giving most of that back requires a different business model, not a different level of service. Ours runs leaner. We use technology where it makes sense, we work with buyers who know what they want, and we do not price in hours we do not spend. What you get is the same: a licensed realtor, full brokerage legal protections, showings, offer strategy, negotiation, and closing coordination. What you keep is the commission that was always yours to begin with."}
+    }
   ]
 }
 </script>
@@ -1340,16 +1356,19 @@ function updateCalc(){
 })();
 
 const FAQ_SERVICE=[
-  {q:'Are there any hidden fees or commitments?',a:'No hidden fees. No commitment. No exclusive agreement. You pay nothing unless you buy, and even then the only fee is our flat $4,999 which comes out of the commission the seller already agreed to pay.'},
+  {q:'What is the catch?',a:'There is not one. But we understand why you are asking. Traditional agents earn $20,000 to $25,000 on a $1M home. Giving most of that back requires a different business model, not a different level of service. Ours runs leaner. We use technology where it makes sense, we work with buyers who know what they want, and we do not price in hours we do not spend. What you get is the same thing: a licensed realtor, full brokerage legal protections, showings, offer strategy, negotiation, and closing coordination. What you keep is the commission that was always yours to begin with.'},
+  {q:'Is a flat fee realtor better than a percentage cashback competitor?',a:'Mathematically yes, by thousands of dollars. Most cashback competitors give you 50% of the commission back. On a $1M GTA home with a 2.5% buyer commission, that means $12,500 to you and $12,500 kept by the brokerage. We charge $4,999 flat and give you $20,001. Same professional representation, same legal protections, $7,500 more in your pocket. Actual amounts depend on the commission the seller has offered.'},
   {q:'Do I really get cashback? How does it work?',a:'Yes. When a home sells, the seller\'s agreement includes a buyer agent commission, typically 2 to 2.5% of the sale price. That money flows to your agent. We take a flat $4,999 from that commission and send you everything above that 6 to 8 weeks after closing. On the average GTA home ($1,018,000), you would receive approximately $20,446 back.'},
   {q:'Is cashback from a realtor legal in Ontario?',a:'Yes, completely legal. Rebating a portion of the buyer agent commission back to the buyer is permitted under RECO regulations in Ontario. The cashback is written into your contract before you sign anything.'},
-  {q:'What if I don\'t receive my cashback after closing?',a:'Your cashback amount is written into our contract before you sign. The commission flows from the seller\'s lawyer to our brokerage at closing, we take our flat $4,999, and the remainder comes to you within 6 to 8 weeks. If you have not received it by then, reach out directly and we will show you exactly where things stand.'},
-  {q:'Is the first showing really free?',a:'Yes, completely free, no commitment. Additional showings are $30 each.'},
+  {q:'Do I pay income tax on my cashback?',a:'If you are buying as your primary residence, the CRA generally treats a commission rebate as a reduction in your purchase price, not taxable income. If you are buying as an investment property or through a corporation, the rules may differ. We recommend speaking with your accountant for your specific situation.'},
+  {q:'Are there any hidden fees or commitments?',a:'No hidden fees. No commitment. No exclusive agreement. You pay nothing unless you buy, and even then the only fee is our flat $4,999 which comes out of the commission the seller already agreed to pay.'},
   {q:'Are you a licensed realtor?',a:'Yes. I am Laleh Mousavi, a registered Realtor in Ontario with Toronto Real Estate Realty Plus Inc., registered with RECO. You get everything a traditional agent provides: MLS access, showings, offer writing, negotiation, and full closing coordination, for a flat fee instead of a percentage commission.'},
   {q:'Do you charge for writing offers?',a:'No. Drafting, reviewing, and submitting offers is always free. Unlimited offers, no cap.'},
+  {q:'How much cashback can I get on a Toronto condo?',a:'It depends on the purchase price and the buyer agent commission offered by the seller. On a $650,000 Toronto condo with a 2.5% buyer agent commission, the total commission would be $16,250. We take our flat $4,999 and you receive approximately $11,251 back. On a $900,000 condo, that number rises to around $17,500. <a href="#calculator" style="color:#e8a020;text-decoration:none;font-weight:500">Calculate your cashback</a>'},
+  {q:'What if I don\'t receive my cashback after closing?',a:'Your cashback amount is written into our contract before you sign. The commission flows from the seller\'s lawyer to our brokerage at closing, we take our flat $4,999, and the remainder comes to you within 6 to 8 weeks. If you have not received it by then, reach out directly and we will show you exactly where things stand.'},
   {q:'What if I don\'t end up buying?',a:'No commitment, no fees owed beyond any showings you have had ($30 each after the first free one). If you do not buy, you owe nothing else.'},
   {q:'Why do traditional agents charge so much?',a:'The percentage commission model was built for an era when agents did all the research. Today buyers shortlist online, research neighbourhoods on Google, and often find the home themselves. The industry has not caught up. We have.'},
-  {q:'How much cashback can I get on a Toronto condo?',a:'It depends on the purchase price and the buyer agent commission offered by the seller. On a $650,000 Toronto condo with a 2.5% buyer agent commission, the total commission would be $16,250. We take our flat $4,999 and you receive approximately $11,251 back. On a $900,000 condo, that number rises to around $17,500. <a href="#calculator" style="color:#e8a020;text-decoration:none;font-weight:500">Calculate your cashback →</a>'},
+  {q:'Is the first showing really free?',a:'Yes, completely free, no commitment. Additional showings are $30 each.'},
 ];
 
 const FAQ_BUYING=[
