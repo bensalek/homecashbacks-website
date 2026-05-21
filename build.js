@@ -26,7 +26,9 @@ fs.mkdirSync(DIST_DIR, { recursive: true });
 var distAssets = path.join(DIST_DIR, 'assets');
 fs.mkdirSync(distAssets, { recursive: true });
 fs.readdirSync(ASSETS_DIR).forEach(function(file) {
-  fs.copyFileSync(path.join(ASSETS_DIR, file), path.join(distAssets, file));
+  var srcPath = path.join(ASSETS_DIR, file);
+  if (fs.statSync(srcPath).isDirectory()) return;
+  fs.copyFileSync(srcPath, path.join(distAssets, file));
   console.log('  copied: assets/' + file);
 });
 
