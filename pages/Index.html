@@ -568,6 +568,29 @@ footer a{color:#e8a020;text-decoration:none}
 .who-section{background:var(--white);border-top:1px solid var(--border)}
 .who-body{font-size:15px;color:var(--muted);line-height:1.9;max-width:720px}
 
+/* WHO WE WORK WITH grid */
+.who-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:2rem}
+.who-card{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:1.5rem 1.5rem 1.4rem;display:flex;flex-direction:column;gap:.6rem;transition:box-shadow .2s,border-color .2s}
+.who-card:hover{border-color:#e8a020;box-shadow:0 4px 18px rgba(232,160,32,.1)}
+.who-icon{color:#e8a020;flex-shrink:0;margin-bottom:.2rem}
+.who-card-title{font-size:15px;font-weight:600;color:var(--ink);line-height:1.3}
+.who-card-desc{font-size:13px;color:var(--muted);line-height:1.65}
+
+/* Areas we serve */
+.who-areas{margin-top:2rem;padding-top:1.5rem;border-top:1px solid var(--border)}
+.who-areas-label{display:block;font-size:11px;font-weight:600;letter-spacing:1.1px;text-transform:uppercase;color:var(--muted);margin-bottom:.85rem}
+.who-areas-pills{display:flex;flex-wrap:wrap;gap:.5rem}
+.who-pill{display:inline-block;padding:.35rem .85rem;border-radius:20px;border:1px solid var(--border);font-size:13px;color:var(--muted);text-decoration:none;transition:border-color .15s,color .15s,background .15s}
+.who-pill:hover{border-color:#e8a020;color:#e8a020}
+.who-pill-active{border-color:#e8a020;color:#e8a020;background:rgba(232,160,32,.07);font-weight:500}
+
+@media(max-width:600px){
+  .who-grid{grid-template-columns:1fr}
+}
+@media(min-width:769px){
+  .who-grid{grid-template-columns:repeat(4,1fr)}
+}
+
 /* DESKTOP: Option 1 — alternating spine */
 .how-steps-desktop{display:none;position:relative;max-width:780px;margin:0 auto}
 .how-spine{position:absolute;left:50%;top:0;bottom:0;width:1px;background:var(--border);transform:translateX(-50%)}
@@ -999,170 +1022,6 @@ footer a{color:#e8a020;text-decoration:none}
   </div>
 </section>
 
-<!-- TOP BAR -->
-<div class="top-bar">
-  <a href="tel:4374437556" class="top-bar-phone">
-    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1.25h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.84a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16.92z"/></svg>
-    (437) 443-7556
-  </a>
-  <div class="top-bar-sep"></div>
-  <button class="top-btn light" onclick="openModal()">Book Free Showing</button>
-</div>
-
-<!-- NAV -->
-<nav>
-  <a class="logo" href="#">
-    <svg width="155" height="28" viewBox="0 0 190 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect width="32" height="32" rx="6" fill="#1a2332" y="2"/>
-      <path d="M9 22 L16 12 L23 22" stroke="#e8a020" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-      <path d="M16 12 L23 12" stroke="#e8a020" stroke-width="2" stroke-linecap="round"/>
-      <path d="M23 12 L23 19" stroke="#e8a020" stroke-width="2" stroke-linecap="round"/>
-      <text x="42" y="22" font-size="17" font-weight="500" fill="#1a2332" font-family="Outfit,sans-serif" letter-spacing="-0.5" class="logo-text">Home<tspan fill="#e8a020" font-weight="700">Cashbacks</tspan></text>
-    </svg>
-  </a>
-  <div class="nav-cred-wrap">
-    <img src="headshot.webp" alt="Laleh Mousavi" class="nav-headshot"/>
-    <div>
-      <span class="nav-cred">Laleh Mousavi, Realtor</span>
-      <span class="nav-cred nav-cred-line2">Toronto Real Estate Realty Plus Inc.</span>
-    </div>
-  </div>
-  <ul class="nav-links" id="nav-links">
-    <li class="nav-item"><a href="how-cashback-works.html" onclick="closeMobMenu()">How It Works</a></li>
-    <li class="nav-item"><a href="our-story.html" onclick="closeMobMenu()">Our Story</a></li>
-    <li class="nav-item">
-      <button class="nav-link-btn" onclick="this.parentElement.classList.toggle('open')">Resources<svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 1l4 4 4-4"/></svg></button>
-      <div class="dropdown">
-        <a href="checklist.html" onclick="closeMobMenu()">
-          <div class="dropdown-label">Home Buyer Checklist</div>
-          <div class="dropdown-sub">5 phase guide to buying</div>
-        </a>
-        <a href="calculators.html" onclick="closeMobMenu()">
-          <div class="dropdown-label">Calculators</div>
-          <div class="dropdown-sub">Closing costs and monthly ownership</div>
-        </a>
-        <a href="offer-strategy.html" onclick="closeMobMenu()">
-          <div class="dropdown-label">Offer Strategy Tool</div>
-          <div class="dropdown-sub">Build your offer strategy</div>
-        </a>
-        <a href="first-time-buyer-guide.html" onclick="closeMobMenu()">
-          <div class="dropdown-label">First-Time Buyer Guide</div>
-          <div class="dropdown-sub">Everything you need to get started</div>
-        </a>
-      </div>
-    <li class="nav-item"><a href="#faq" onclick="closeMobMenu()">FAQ</a></li>
-    <li class="nav-item"><a href="#" class="nav-pill" onclick="openModal();closeMobMenu();return false">Free Showing</a></li>
-  </ul>
-  <button class="hamburger" id="hamburger" onclick="toggleMobMenu()" aria-label="Menu">
-    <span></span><span></span><span></span>
-  </button>
-</nav>
-
-
-<!-- HERO -->
-<section class="hero">
-  <h1>Full Service Toronto Realtor.<br><em>Cashback on Every Purchase.</em></h1>
-  <p class="hero-million">On a $1M home<br>you earn <em>$20,000 back.</em></p>
-  <div class="hero-btns">
-    <button class="btn-primary" onclick="openModal()">Book a Free Showing</button>
-  </div>
-</section>
-
-<!-- HOW IT WORKS -->
-<section class="how-section" id="how">
-  <div class="sec-inner">
-    <div class="how-eyebrow">How it works</div>
-    <div class="how-title">How Cashback Works for Toronto Home Buyers</div>
-    <p class="how-intro"></p>
-
-    <!-- DESKTOP: Option 1 — alternating spine -->
-    <div class="how-steps-desktop">
-      <div class="how-spine"></div>
-
-      <!-- Step 1: right side -->
-      <div class="how-step">
-        <div class="how-step-empty"></div>
-        <div class="how-step-center"><div class="how-step-num">1</div></div>
-        <div class="how-step-right">
-          <div class="how-step-name">Find your home</div>
-          <div class="how-step-desc">Search for homes and condos across Toronto and the GTA using any listing app, then send us the properties you're interested in. <a href="/checklist.html" style="color:#e8a020;text-decoration:none;font-weight:500">Use our home buyer checklist →</a></div>
-        </div>
-      </div>
-
-      <!-- Step 2: left side -->
-      <div class="how-step">
-        <div class="how-step-left">
-          <div class="how-step-name">Book a showing</div>
-          <div class="how-step-desc">We coordinate private showings and help buyers evaluate properties based on location, condition, and market value.</div>
-        </div>
-        <div class="how-step-center"><div class="how-step-num">2</div></div>
-        <div class="how-step-empty"></div>
-      </div>
-
-      <!-- Step 3: right side -->
-      <div class="how-step">
-        <div class="how-step-empty"></div>
-        <div class="how-step-center"><div class="how-step-num">3</div></div>
-        <div class="how-step-right">
-          <div class="how-step-name">Make an offer</div>
-          <div class="how-step-desc">We help buyers prepare offers, review comparable sales, and negotiate terms throughout the offer process. <a href="/offer-strategy.html" style="color:#e8a020;text-decoration:none;font-weight:500">See our offer strategy guide →</a></div>
-        </div>
-      </div>
-
-      <!-- Step 4: left side -->
-      <div class="how-step">
-        <div class="how-step-left">
-          <div class="how-step-name">Close the deal</div>
-          <div class="how-step-desc">We coordinate with your lender, lawyer, and other professionals to help ensure a smooth closing process.</div>
-        </div>
-        <div class="how-step-center"><div class="how-step-num">4</div></div>
-        <div class="how-step-empty"></div>
-      </div>
-
-      <!-- Step 5: right side — highlighted -->
-      <div class="how-step">
-        <div class="how-step-empty"></div>
-        <div class="how-step-center"><div class="how-step-num how-step-num--highlight">5</div></div>
-        <div class="how-step-right" style="background:#1a2332;border-radius:6px;padding:1.25rem 1.5rem">
-          <div class="how-step-name" style="color:#e8a020">Receive your cashback</div>
-          <div class="how-step-desc" style="color:rgba(232,237,245,.6)">Your cashback is written into our contract. It arrives 6 to 8 weeks after closing, once the commission is released.</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- MOBILE: compact 2-col card grid -->
-    <div class="how-steps-mobile">
-      <div class="how-steps-mob-grid">
-        <div class="how-step-mob-card">
-          <div class="how-step-mob-badge">1</div>
-          <div class="how-step-mob-card-name">Find your home</div>
-          <div class="how-step-mob-card-desc">Search Toronto and GTA listings on any app and send us your favourites. <a href="/checklist.html" style="color:#e8a020;text-decoration:none;font-weight:500">See our checklist →</a></div>
-        </div>
-        <div class="how-step-mob-card">
-          <div class="how-step-mob-badge">2</div>
-          <div class="how-step-mob-card-name">Book a showing</div>
-          <div class="how-step-mob-card-desc">We coordinate private showings across Toronto and the GTA.</div>
-        </div>
-        <div class="how-step-mob-card">
-          <div class="how-step-mob-badge">3</div>
-          <div class="how-step-mob-card-name">Make an offer</div>
-          <div class="how-step-mob-card-desc">We prepare your offer, review comparables, and negotiate terms. <a href="/offer-strategy.html" style="color:#e8a020;text-decoration:none;font-weight:500">See our guide →</a></div>
-        </div>
-        <div class="how-step-mob-card">
-          <div class="how-step-mob-badge">4</div>
-          <div class="how-step-mob-card-name">Close the deal</div>
-          <div class="how-step-mob-card-desc">We work with your lender and lawyer for a smooth close.</div>
-        </div>
-        <div class="how-step-mob-card how-step-mob-card--highlight">
-          <div class="how-step-mob-badge">5</div>
-          <div class="how-step-mob-card-name">Receive your cashback</div>
-          <div class="how-step-mob-card-desc">Written into your contract. Arrives 6 to 8 weeks after closing.</div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
 
 
 <!-- WHY WE EXIST + COMPARISON -->
