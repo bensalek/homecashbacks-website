@@ -607,11 +607,11 @@ footer a{color:#e8a020;text-decoration:none}
 .testi-card--featured{border-color:var(--amber);border-width:2px}
 .testi-quote-mark{font-family:'Cormorant Garamond',serif;font-size:48px;color:var(--amber);line-height:.8;opacity:.4;margin-bottom:-.5rem}
 .testi-quote{font-size:14px;color:var(--ink2);line-height:1.7;flex:1;font-style:italic}
+.testi-stars{color:#fbbc05;font-size:14px;letter-spacing:2px;flex-shrink:0;margin-bottom:.25rem}
 .testi-author{display:flex;align-items:center;gap:.75rem;padding-top:1rem;border-top:1px solid var(--border);margin-top:auto}
 .testi-avatar{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;flex-shrink:0}
 .testi-name{font-size:13px;font-weight:600;color:var(--ink)}
 .testi-detail{font-size:11px;color:var(--muted);margin-top:1px}
-.testi-stars{color:#fbbc05;font-size:12px;letter-spacing:.5px;margin-left:auto;flex-shrink:0}
 
 @media(max-width:768px){
   .testi-top{flex-direction:column;gap:1rem}
@@ -828,6 +828,103 @@ footer a{color:#e8a020;text-decoration:none}
   .cmp-them,.cmp-us{font-size:12px;padding:.6rem .6rem}
 }
 </style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the catch?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "There is not one. Traditional agents earn $20,000 to $25,000 on a $1M home. We charge $4,999 flat and return the rest. Same licensed realtor, full brokerage legal protections, showings, offer strategy, negotiation, and closing coordination."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is a flat fee realtor better than a percentage cashback competitor?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Mathematically yes. Most cashback competitors give you 50% of the commission back. On a $1M GTA home with a 2.5% buyer commission that means $12,500 to you. We charge $4,999 flat and give you $20,001. Same professional representation, $7,500 more in your pocket."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I really get cashback? How does it work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The seller pays a buyer agent commission, typically 2 to 2.5% of the sale price. We take a flat $4,999 from that commission and send you everything above that 6 to 8 weeks after closing. On the average GTA home ($1,018,000) you receive approximately $20,446 back."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is cashback from a realtor legal in Ontario?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, completely legal. Rebating a portion of the buyer agent commission back to the buyer is permitted under RECO regulations in Ontario. The cashback is written into your contract before you sign anything."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I pay income tax on my cashback?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If you are buying as your primary residence, the CRA generally treats a commission rebate as a reduction in your purchase price, not taxable income. If buying as an investment property or through a corporation the rules may differ."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are there any hidden fees or commitments?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No hidden fees. No commitment. No exclusive agreement. You pay nothing unless you buy, and even then the only fee is our flat $4,999 which comes out of the commission the seller already agreed to pay."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are you a licensed realtor?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Laleh Mousavi is a registered Realtor in Ontario with Toronto Real Estate Realty Plus Inc., registered with RECO. You get MLS access, showings, offer writing, negotiation, and full closing coordination."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can first-time buyers use a cashback realtor in Ontario?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The cashback can go toward moving expenses, renovations, or rebuilding savings. First-time buyers in Ontario may also qualify for land transfer tax rebates which can add up to over $8,000 in additional savings."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What areas in the GTA do you serve?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We work with buyers across the Greater Toronto Area including Toronto, Etobicoke, Scarborough, North York, Richmond Hill, Vaughan, Markham, Mississauga, Brampton, Oakville, and Burlington."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What closing costs should I budget for in Ontario?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Plan for 1.5% to 4% of the purchase price. The largest item is land transfer tax. Toronto buyers pay both provincial and municipal LTT. Other costs include legal fees ($1,200 to $1,400), title insurance ($350 to $950), and a home inspection ($400 to $600)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much down payment do I need in Ontario?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For homes up to $500,000 the minimum is 5%. For homes between $500,000 and $1,499,999 it is 5% on the first $500,000 and 10% on the remainder. For homes $1,500,000 and above the minimum is 20%. Anything below 20% requires CMHC mortgage insurance."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -961,7 +1058,8 @@ footer a{color:#e8a020;text-decoration:none}
   <h1>Full Service Toronto Realtor.<br><em>Cashback on Every Purchase.</em></h1>
   <p class="hero-million">On a $1M home<br>you earn <em>$20,000 back.</em></p>
   <div class="hero-btns">
-    <button class="btn-primary" onclick="openModal()">Book a Free Showing</button>
+    <button class="btn-primary" onclick="openModal()">Get My Cashback Estimate</button>
+    <a class="btn-secondary" href="#how">See how it works →</a>
   </div>
 </section>
 
@@ -1323,41 +1421,38 @@ footer a{color:#e8a020;text-decoration:none}
     <div class="testi-grid">
 
       <div class="testi-card testi-card--featured">
+        <div class="testi-stars">★★★★★</div>
         <div class="testi-quote-mark">"</div>
         <p class="testi-quote">Laleh has a real gift with people. During our condo search she spoke directly with residents in the building to get the inside story — things you'd never find online. And when it came to negotiating, she was sharp and confident. We felt genuinely looked after.</p>
         <div class="testi-author">
           <div class="testi-avatar" style="background:var(--gold-light);color:var(--amber-dark)">NG</div>
           <div>
-            <div class="testi-name">N.G.</div>
             <div class="testi-detail">First-time condo buyer · Toronto</div>
           </div>
-          <div class="testi-stars">★★★★★</div>
         </div>
       </div>
 
       <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
         <div class="testi-quote-mark">"</div>
         <p class="testi-quote">What I appreciated most was that Laleh never pushed us toward buying. She explained the cashback model clearly, it felt completely fair, and there was zero pressure. It made a stressful process feel honest for once.</p>
         <div class="testi-author">
           <div class="testi-avatar" style="background:var(--bg2);color:var(--ink2)">AH</div>
           <div>
-            <div class="testi-name">A.H.</div>
             <div class="testi-detail">First-time buyer · Etobicoke</div>
           </div>
-          <div class="testi-stars">★★★★★</div>
         </div>
       </div>
 
       <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
         <div class="testi-quote-mark">"</div>
         <p class="testi-quote">Responsive, organized, and professional throughout the entire process. Every question got a fast and clear answer. When you're making the biggest purchase of your life, that kind of communication matters more than people realize.</p>
         <div class="testi-author">
           <div class="testi-avatar" style="background:var(--bg2);color:var(--ink2)">MA</div>
           <div>
-            <div class="testi-name">M.A.</div>
             <div class="testi-detail">Home buyer · Richmond Hill</div>
           </div>
-          <div class="testi-stars">★★★★★</div>
         </div>
       </div>
 
@@ -1439,7 +1534,7 @@ footer a{color:#e8a020;text-decoration:none}
       <a href="mailto:Laleh@homecashbacks.ca">Laleh@homecashbacks.ca</a>
     </div>
     <div class="foot-cta">
-      <button class="foot-cta-btn" onclick="openModal()">Book a Free Showing</button>
+      <button class="foot-cta-btn" onclick="openModal()">Claim Your Cashback</button>
       <span class="foot-cta-sub">No commitment · First showing free</span>
     </div>
   </div>
