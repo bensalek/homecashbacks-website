@@ -662,6 +662,51 @@ const FAQ=[
   {q:'Is the cashback taxable?',a:'In most cases, buyer cashback is considered a reduction in your purchase price rather than income, which means it is generally not taxable. We recommend speaking with an accountant to confirm your specific situation.'},
 ];
 
+// CASHBACK CALCULATOR
+function hcwUpdateCalc(){
+  var slider = document.getElementById('hcw-slider');
+  var price = parseInt(slider.value);
+  var pct = parseFloat(document.getElementById('hcw-commission').value) || 2.5;
+  var commission = price * (pct / 100);
+  var cashback = Math.max(0, commission - 4999);
+  var fmt = function(n){ return '$' + Math.round(n).toLocaleString('en-CA'); };
+  document.getElementById('hcw-cashback').textContent = fmt(cashback);
+  var bannerEl = document.getElementById('hcw-banner-amt');
+  if(bannerEl) bannerEl.textContent = fmt(cashback);
+  var loan = price * 0.75;
+  var r = 3.89 / 100 / 12;
+  var n = 25 * 12;
+  var monthly = loan * (r * Math.pow(1+r,n)) / (Math.pow(1+r,n) - 1);
+  var months = cashback > 0 ? Math.round(cashback / monthly) : 0;
+  var mText = months > 0 ? months + (months === 1 ? ' month' : ' months') : 'cover costs';
+  document.getElementById('hcw-mortgage').textContent = 'cover ' + mText + ' of mortgage';
+}
+(function(){
+  var slider = document.getElementById('hcw-slider');
+  var priceText = document.getElementById('hcw-price-text');
+  var commInput = document.getElementById('hcw-commission');
+  if(!slider) return;
+  slider.addEventListener('input', function(){
+    priceText.value = Math.round(parseInt(this.value)).toLocaleString('en-CA');
+    hcwUpdateCalc();
+  });
+  priceText.addEventListener('input', function(){
+    var raw = parseInt(this.value.replace(/,/g,'')) || 0;
+    var clamped = Math.min(3000000, Math.max(300000, raw));
+    slider.value = clamped;
+    hcwUpdateCalc();
+  });
+  priceText.addEventListener('blur', function(){
+    var raw = parseInt(this.value.replace(/,/g,'')) || 900000;
+    var clamped = Math.min(3000000, Math.max(300000, raw));
+    this.value = Math.round(clamped).toLocaleString('en-CA');
+    slider.value = clamped;
+    hcwUpdateCalc();
+  });
+  commInput.addEventListener('input', hcwUpdateCalc);
+  hcwUpdateCalc();
+})();
+
 function renderFAQ(){
   const el=document.getElementById('faq-list');
   FAQ.forEach(f=>{
