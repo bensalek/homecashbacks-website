@@ -3,7 +3,7 @@
 <head>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <title>Toronto Listing Agent | Flat $4,999 | HomeCashbacks</title>
-<meta name="description" content="Full-service listing agent in Toronto and the GTA. Flat $4,999 listing fee. Professional photography, floor plan, Facebook and Instagram ads, agent outreach before and after launch, offer strategy and closing support."/>
+<meta name="description" content="Full-service listing agent in Toronto and the GTA. Flat $4,999 listing fee. High quality photography and video, floor plan, Facebook and Instagram ads, agent outreach before and after launch, offer strategy and closing support."/>
 <meta name="author" content="Laleh Mousavi, HomeCashbacks"/>
 <meta name="keywords" content="Toronto listing agent, flat fee listing agent Toronto, sell home Toronto, listing agent GTA, low commission realtor Toronto"/>
 <meta property="og:title" content="Toronto Listing Agent | Flat $4,999 | HomeCashbacks"/>
@@ -110,6 +110,23 @@
 .svc-title{font-size:13px;font-weight:600;color:var(--ink);line-height:1.3}
 
 
+/* MARKETING */
+.mkt-section{background:#f0f4f8;padding:3rem 2rem;border-top:1px solid rgba(26,35,50,.1)}
+.mkt-lead{font-size:14px;color:#5a6a82;line-height:1.65;max-width:560px;border-left:2px solid #e8a020;padding-left:.85rem;margin-bottom:1.75rem}
+.mkt-divider{display:flex;align-items:center;gap:.75rem;margin:.75rem 0}
+.mkt-divider-line{flex:1;height:1px;background:rgba(26,35,50,.1)}
+.mkt-divider-text{font-size:11px;font-weight:500;letter-spacing:.8px;text-transform:uppercase;color:#8a9ab2;white-space:nowrap}
+.mkt-grid{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}
+.mkt-grid-center{grid-template-columns:minmax(0,1fr);max-width:50%;margin-left:auto;margin-right:auto}
+.mkt-card{background:#fff;border:0.5px solid rgba(26,35,50,.1);border-radius:8px;padding:1.1rem 1.2rem;display:flex;flex-direction:column;gap:.4rem}
+.mkt-card-head{display:flex;align-items:flex-start;gap:.6rem}
+.mkt-step{width:22px;height:22px;border-radius:50%;background:#e8a020;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:#1a2332;flex-shrink:0;margin-top:1px}
+.mkt-card-title{font-size:13px;font-weight:600;color:#1a2332;line-height:1.35;flex:1}
+.mkt-card-body{font-size:12px;color:#5a6a82;line-height:1.6;padding-left:1.75rem}
+.mkt-badge{display:inline-block;font-size:10px;font-weight:500;letter-spacing:.4px;text-transform:uppercase;padding:2px 7px;border-radius:4px;flex-shrink:0;margin-top:1px}
+.mkt-badge-pre{background:#faeeda;color:#633806}
+.mkt-badge-live{background:#e1f5ee;color:#085041}
+
 /* OBJECTION */
 .obj-section{background:var(--bg);padding:2.5rem 2rem;border-top:1px solid var(--border)}
 .obj-inner{max-width:680px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:center}
@@ -150,13 +167,13 @@
 
 /* MOBILE */
 /* CALCULATOR */
-.sl-calc-section{background:#0f1a27;padding:3rem 2rem}
-.sl-calc-inner{max-width:680px;margin:0 auto;display:grid;grid-template-columns:180px 1fr;gap:1.5rem;align-items:start}
+.sl-calc-section{background:#fff;padding:3rem 2rem;border-top:1px solid rgba(26,35,50,.1)}
+.sl-calc-inner{max-width:680px;margin:0 auto}
 .sl-calc-banner{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:1.5rem 1.1rem;text-align:center}
 .sl-calc-banner-label{font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:rgba(232,237,245,.35);margin-bottom:.4rem;line-height:1.4}
 .sl-calc-banner-amt{font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:600;color:#e8a020;line-height:1;letter-spacing:-.5px}
 .sl-calc-banner-sub{font-size:11px;color:rgba(232,237,245,.3);margin-top:.35rem;line-height:1.4}
-.sl-calc-card{background:#fff;border-radius:8px;padding:1.5rem}
+.sl-calc-card{background:#f0f4f8;border:1px solid rgba(26,35,50,.1);border-radius:8px;padding:1.5rem}
 .sl-calc-eyebrow{font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:#8a9ab2;margin-bottom:.2rem}
 .sl-calc-title{font-size:16px;font-weight:600;color:#1a2332;margin-bottom:1.1rem}
 .sl-inputs-row{display:flex;align-items:flex-end;gap:.65rem;margin-bottom:1.1rem;flex-wrap:wrap}
@@ -261,6 +278,13 @@
   .sl-input-group{width:100%!important}
   .comp-table-wrap{font-size:12px}
   .comp-th,.comp-feature,.comp-cell{padding:.6rem .65rem}
+  .mkt-grid,.mkt-grid-center{grid-template-columns:1fr;max-width:100%}
+  .mkt-card{padding:.75rem .9rem}
+  .mkt-card-title{font-size:14px}
+  .mkt-card-body{display:none}
+  .mkt-badge{display:none}
+  .mkt-section{padding:1.75rem 1.25rem}
+  .mkt-lead{font-size:13px}
 
   .saving-strip-inner{flex-direction:column;align-items:flex-start}
   .calc-grid{grid-template-columns:1fr}
@@ -289,11 +313,6 @@
 <!-- CALCULATOR -->
 <section class="sl-calc-section" id="calculator">
   <div class="sl-calc-inner">
-    <div class="sl-calc-banner">
-      <div class="sl-calc-banner-label">You save on listing fees</div>
-      <div class="sl-calc-banner-amt" id="sl-banner-amt">$17,501</div>
-      <div class="sl-calc-banner-sub" id="sl-banner-sub">keeping $4,999 vs full commission</div>
-    </div>
     <div class="sl-calc-card">
       <div class="sl-calc-eyebrow">Listing fee calculator</div>
       <div class="sl-calc-title">How much more you walk away with</div>
@@ -318,6 +337,10 @@
         <div class="sl-ticks">
           <span>$400K</span><span>$900K</span><span>$1.4M</span><span>$2M</span><span>$3M</span>
         </div>
+      </div>
+      <div class="sl-result">
+        <div class="sl-result-label">Extra in your pocket at closing</div>
+        <div class="sl-result-amt" id="sl-saving-amt">$17,501</div>
       </div>
       <div class="sl-compare">
         <div class="sl-compare-row">
@@ -352,8 +375,8 @@
         </thead>
         <tbody>
           <tr>
-            <td class="comp-feature">Professional Photography</td>
-            <td class="comp-cell"><span class="comp-check comp-check-sometimes">Sometimes</span></td>
+            <td class="comp-feature">Photography and Video</td>
+            <td class="comp-cell"><span class="comp-check">Yes</span></td>
             <td class="comp-cell"><span class="comp-x">No</span></td>
             <td class="comp-cell comp-cell-us"><span class="comp-check">Yes</span></td>
           </tr>
@@ -405,6 +428,75 @@
   </div>
 </section>
 
+<!-- MARKETING -->
+<section class="mkt-section">
+  <div class="s-inner">
+    <div class="s-eye">How we market your home</div>
+    <h2 class="s-h2">Most homes get passive exposure.<br>Yours gets an active campaign.</h2>
+    <p class="mkt-lead">Before your listing goes live, we are already building demand. After it goes live, we keep it moving.</p>
+
+    <div class="mkt-divider">
+      <div class="mkt-divider-line"></div>
+      <span class="mkt-divider-text">Before launch</span>
+      <div class="mkt-divider-line"></div>
+    </div>
+
+    <div class="mkt-grid" style="margin-bottom:.75rem">
+      <div class="mkt-card">
+        <div class="mkt-card-head">
+          <div class="mkt-step">1</div>
+          <div class="mkt-card-title">Serious buyers see your home before it is listed</div>
+          <span class="mkt-badge mkt-badge-pre">Pre-launch</span>
+        </div>
+        <div class="mkt-card-body">We personally contact top buyer agents in your area and let them know about the opportunity. Their clients are pre-approved and ready to move.</div>
+      </div>
+      <div class="mkt-card">
+        <div class="mkt-card-head">
+          <div class="mkt-step">2</div>
+          <div class="mkt-card-title">Photography, video, and floor plan on day one</div>
+          <span class="mkt-badge mkt-badge-pre">Pre-launch</span>
+        </div>
+        <div class="mkt-card-body">Buyers who view floor plans and video stay on a listing significantly longer. More time on listing means more showings booked.</div>
+      </div>
+    </div>
+
+    <div class="mkt-divider">
+      <div class="mkt-divider-line"></div>
+      <span class="mkt-divider-text">After launch</span>
+      <div class="mkt-divider-line"></div>
+    </div>
+
+    <div class="mkt-grid">
+      <div class="mkt-card">
+        <div class="mkt-card-head">
+          <div class="mkt-step">3</div>
+          <div class="mkt-card-title">Targeted Facebook and Instagram ads</div>
+          <span class="mkt-badge mkt-badge-live">Live</span>
+        </div>
+        <div class="mkt-card-body">Facebook and Instagram ads targeted by location, income, and home-buying behaviour. Your listing reaches people actively searching in your price range.</div>
+      </div>
+      <div class="mkt-card">
+        <div class="mkt-card-head">
+          <div class="mkt-step">4</div>
+          <div class="mkt-card-title">Agent follow-up after launch</div>
+          <span class="mkt-badge mkt-badge-live">Live</span>
+        </div>
+        <div class="mkt-card-body">Once your home is listed, we reach back out to the agent network. We keep your listing top of mind throughout the entire listing period.</div>
+      </div>
+    </div>
+    <div class="mkt-grid mkt-grid-center" style="margin-top:.75rem">
+      <div class="mkt-card">
+        <div class="mkt-card-head">
+          <div class="mkt-step">5</div>
+          <div class="mkt-card-title">Dedicated listing page on our website</div>
+          <span class="mkt-badge mkt-badge-live">Live</span>
+        </div>
+        <div class="mkt-card-body">A dedicated property page that works 24/7, capturing buyer inquiries and directing serious leads directly to us.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- OBJECTION -->
 <section class="obj-section">
   <div class="obj-inner" style="max-width:860px;margin:0 auto">
@@ -416,39 +508,6 @@
   </div>
 </section>
 
-<!-- PRICING -->
-<section class="pricing-section">
-  <div class="pricing-inner">
-    <div class="s-eye">Simple pricing</div>
-    <h2 class="s-h2">Full service. No percentage.</h2>
-    <div class="pricing-card">
-      <div class="pricing-left">
-        <div class="pricing-amt">$4,999</div>
-        <div class="pricing-term">Flat fee<br>Due at closing only</div>
-      </div>
-      <ul class="pricing-list">
-        <li>Professional photography</li>
-        <li>Floor plan (if your home does not have one)</li>
-        <li>MLS listing and property page</li>
-        <li>Facebook and Instagram ad campaign</li>
-        <li>Agent outreach before and after launch</li>
-        <li>Open house coordination</li>
-        <li>Showing management and feedback</li>
-        <li>Offer review, negotiation, and sign-back</li>
-        <li>Closing coordination</li>
-        <li>Weekly market updates throughout</li>
-      </ul>
-      <div class="pricing-note">The buyer agent commission (typically 2 to 2.5% of the sale price) is separate and still offered by you as the seller. This is standard practice in Ontario and is not included in our $4,999 fee.</div>
-    </div>
-    <div class="trust-row">
-      <span class="trust-pill">RECO licensed</span>
-      <span class="trust-pill">Full brokerage backing</span>
-      <span class="trust-pill">Due at closing only</span>
-      <span class="trust-pill">No upfront fees</span>
-      <span class="trust-pill">No commitment to list</span>
-    </div>
-  </div>
-</section>
 
 <!-- FAQ -->
 <section class="faq-section">
@@ -525,8 +584,7 @@ function updateCalc(){
   var tradFee = price * (pct/100);
   var saving = tradFee - 4999;
   document.getElementById('sl-price-text').value = Math.round(price).toLocaleString('en-CA');
-  document.getElementById('sl-banner-amt').textContent = fmtFull(Math.max(0,saving));
-  document.getElementById('sl-banner-sub').textContent = 'saving on a '+fmtFull(price)+' home';
+  document.getElementById('sl-saving-amt').textContent = fmtFull(Math.max(0,saving));
   document.getElementById('sl-trad-fee').textContent = fmtFull(tradFee);
 }
 
