@@ -115,31 +115,6 @@
 .laleh-attr strong{color:var(--amber)}
 
 /* CALCULATOR */
-.miss-calc-section{background:var(--bg);padding:3rem 2rem;border-top:1px solid var(--border)}
-.miss-calc-inner{max-width:680px;margin:0 auto}
-.miss-calc-card{background:var(--white);border-radius:6px;padding:1.75rem 2rem;border:1px solid var(--border)}
-.miss-calc-eyebrow{font-size:10px;font-weight:500;letter-spacing:1.2px;text-transform:uppercase;color:var(--muted);margin-bottom:.25rem}
-.miss-calc-title{font-size:18px;font-weight:600;color:var(--ink);margin-bottom:1.25rem}
-.miss-input-label{font-size:11px;color:var(--muted);font-weight:500}
-.miss-price-wrap{position:relative;display:flex;align-items:center}
-.miss-price-sym{position:absolute;left:10px;font-size:14px;color:var(--muted);pointer-events:none}
-.miss-price-input{padding:9px 10px 9px 22px;width:100%;border:1.5px solid var(--bg3);border-radius:4px;font-size:15px;font-weight:600;color:var(--ink);background:var(--bg);font-family:'Outfit',sans-serif;outline:none}
-.miss-price-input:focus{border-color:var(--ink);background:var(--white)}
-.miss-pct-wrap{position:relative}
-.miss-pct-input{padding:9px 28px 9px 10px;width:100%;border:1.5px solid var(--bg3);border-radius:4px;font-size:15px;font-weight:600;color:var(--ink);background:var(--bg);font-family:'Outfit',sans-serif;outline:none}
-.miss-pct-input:focus{border-color:var(--ink);background:var(--white)}
-.miss-pct-sym{position:absolute;right:10px;top:50%;transform:translateY(-50%);font-size:13px;color:var(--muted);pointer-events:none}
-.miss-slider{width:100%;accent-color:var(--amber);margin-bottom:.5rem}
-.miss-ticks{display:flex;justify-content:space-between;font-size:10px;color:var(--taupe);margin-bottom:1.5rem}
-.miss-result{background:var(--bg);border-radius:4px;padding:1.25rem 1.5rem;margin-bottom:.75rem}
-.miss-result-label{font-size:11px;font-weight:500;letter-spacing:.5px;text-transform:uppercase;color:var(--muted);margin-bottom:.2rem}
-.miss-result-amt{font-size:38px;font-weight:700;color:var(--ink);line-height:1;margin-bottom:.3rem}
-.miss-result-sub{font-size:13px;color:var(--muted)}
-.miss-stat{background:var(--white);border:1.5px solid var(--bg2);border-radius:4px;padding:1rem 1.25rem;margin-bottom:.75rem}
-.miss-stat-label{font-size:11px;font-weight:500;letter-spacing:.5px;text-transform:uppercase;color:var(--muted);margin-bottom:.15rem}
-.miss-stat-val{font-size:22px;font-weight:700;color:var(--ink);margin-bottom:.15rem}
-.miss-stat-sub{font-size:12px;color:var(--muted)}
-.miss-note{font-size:11px;color:var(--taupe);line-height:1.6}
 
 /* FAQ */
 .miss-faq-list{display:flex;flex-direction:column;gap:7px;margin-top:1.5rem}
@@ -188,6 +163,43 @@
   .stat-strip{grid-template-columns:1fr 1fr}
   .hood-grid{grid-template-columns:1fr 1fr}
   .laleh-inner{grid-template-columns:1fr;gap:1.25rem}
+}
+
+/* CASHBACK CALCULATOR (index style) */
+.calc-section{background:#1a2332;padding:3rem 2rem}
+.calc-section-inner{max-width:680px;margin:0 auto}
+.calc-banner{text-align:center;background:rgba(255,255,255,.05);border:1px solid rgba(232,160,32,.15);border-radius:6px;padding:1.75rem 2rem;margin-bottom:1.75rem}
+.calc-banner-label{font-size:13px;color:rgba(255,255,255,.5);margin-bottom:.35rem}
+.calc-banner-amt{font-size:54px;font-weight:700;color:#e8a020;line-height:1;letter-spacing:-2px}
+.calc-banner-sub{font-size:14px;color:rgba(255,255,255,.4);margin-top:.35rem}
+.calc-card{background:#fff;border-radius:6px;padding:1.75rem 2rem}
+.calc-card-eyebrow{font-size:10px;font-weight:500;letter-spacing:1.2px;text-transform:uppercase;color:#5a6a82;margin-bottom:.25rem}
+.calc-card-title{font-size:18px;font-weight:600;color:#1a2332;margin-bottom:1.25rem}
+.calc-input-label{font-size:11px;color:#5a6a82;font-weight:500;letter-spacing:.2px}
+.calc-price-wrap{position:relative;display:flex;align-items:center}
+.calc-price-sym{position:absolute;left:10px;font-size:14px;color:#5a6a82;pointer-events:none}
+.calc-price-input{padding:9px 10px 9px 22px;width:100%;border:1.5px solid #ccd8e8;border-radius:4px;font-size:15px;font-weight:600;color:#1a2332;background:#f0f4f8;font-family:'Outfit',sans-serif;outline:none}
+.calc-price-input:focus{border-color:#1a2332;background:#fff}
+.calc-pct-wrap{position:relative}
+.calc-pct-input{padding:9px 28px 9px 10px;width:100%;border:1.5px solid #ccd8e8;border-radius:4px;font-size:15px;font-weight:600;color:#1a2332;background:#f0f4f8;font-family:'Outfit',sans-serif;outline:none}
+.calc-pct-input:focus{border-color:#1a2332;background:#fff}
+.calc-pct-sym{position:absolute;right:10px;top:50%;transform:translateY(-50%);font-size:13px;color:#5a6a82;pointer-events:none}
+.calc-slider-wrap{margin-bottom:1.5rem}
+.calc-slider{width:100%;accent-color:#e8a020;margin-bottom:.5rem}
+.calc-ticks{display:flex;justify-content:space-between;font-size:10px;color:#9aabbc}
+.calc-result{background:#f0f4f8;border-radius:4px;padding:1.25rem 1.5rem;margin-bottom:.75rem}
+.calc-result-label{font-size:11px;font-weight:500;letter-spacing:.5px;text-transform:uppercase;color:#5a6a82;margin-bottom:.2rem}
+.calc-result-amt{font-size:38px;font-weight:700;color:#1a2332;line-height:1}
+.calc-result-sub{font-size:13px;color:#5a6a82;margin-top:.3rem}
+.calc-stat{background:#fff;border:1.5px solid #e2eaf2;border-radius:4px;padding:1rem 1.25rem;margin-bottom:.75rem}
+.calc-stat-label{font-size:11px;font-weight:500;letter-spacing:.5px;text-transform:uppercase;color:#5a6a82;margin-bottom:.15rem}
+.calc-stat-val{font-size:22px;font-weight:700;color:#1a2332;margin-bottom:.15rem}
+.calc-stat-sub{font-size:12px;color:#5a6a82}
+.calc-note{font-size:11px;color:#9aabbc;line-height:1.6}
+@media(max-width:600px){
+  .calc-banner{padding:1.25rem}
+  .calc-banner-amt{font-size:42px}
+  .calc-card{padding:1.25rem}
 }
 </style>
 
@@ -264,18 +276,66 @@
 <div class="miss-jump">
   <div class="miss-jump-inner">
     <span class="miss-jump-label">Jump to</span>
+    <a href="#calculator" class="miss-jbtn">Your cashback</a>
     <a href="#market" class="miss-jbtn">Mississauga market</a>
     <a href="#neighbourhoods" class="miss-jbtn">Neighbourhoods</a>
     <a href="#laleh" class="miss-jbtn">Laleh's take</a>
-    <a href="#calculator" class="miss-jbtn">Your cashback</a>
     <a href="#faq" class="miss-jbtn">FAQ</a>
   </div>
 </div>
 
+<!-- CALCULATOR -->
+<section class="calc-section" id="calculator">
+  <div class="calc-section-inner">
+    <div class="calc-banner">
+      <div class="calc-banner-label">HomeCashbacks clients in Mississauga save</div>
+      <div class="calc-banner-amt">$19,000</div>
+      <div class="calc-banner-sub">on average</div>
+    </div>
+    <div class="calc-card">
+      <div class="calc-card-eyebrow">Cashback calculator</div>
+      <div class="calc-card-title">What does your number look like?</div>
+      <div style="display:flex;align-items:flex-end;gap:.75rem;margin-bottom:1.25rem">
+        <div style="display:flex;flex-direction:column;gap:.35rem;width:190px">
+          <label class="calc-input-label" for="miss-price-text">Home price</label>
+          <div class="calc-price-wrap">
+            <span class="calc-price-sym">$</span>
+            <input class="calc-price-input" type="text" id="miss-price-text" value="960,000" inputmode="numeric" autocomplete="off"/>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:.35rem;width:120px">
+          <label class="calc-input-label" for="miss-commission">Buyer commission</label>
+          <div class="calc-pct-wrap">
+            <input class="calc-pct-input" type="number" id="miss-commission" value="2.5" min="1" max="5" step="0.25"/>
+            <span class="calc-pct-sym">%</span>
+          </div>
+        </div>
+      </div>
+      <div class="calc-slider-wrap">
+        <input type="range" id="miss-slider" class="calc-slider" min="300000" max="3000000" step="10000" value="960000"/>
+        <div class="calc-ticks">
+          <span>$300K</span><span>$750K</span><span>$1.2M</span><span>$1.65M</span><span>$2.1M</span><span>$3M</span>
+        </div>
+      </div>
+      <div class="calc-result">
+        <div class="calc-result-label">Your estimated cashback</div>
+        <div class="calc-result-amt" id="miss-cashback">$17,501</div>
+        <div class="calc-result-sub" id="miss-sub">Commission of $25,000 minus our flat $4,999 fee</div>
+      </div>
+      <div class="calc-stat">
+        <div class="calc-stat-label">Use your cashback to</div>
+        <div class="calc-stat-val" id="miss-months">cover 3 months of mortgage</div>
+        <div class="calc-stat-sub">Move in. Breathe.</div>
+      </div>
+      <div class="calc-note">Cashback arrives 6 to 8 weeks after closing. Amount depends on the commission the seller has offered. Estimates only.</div>
+    </div>
+  </div>
+</section>
+
 <!-- MARKET SNAPSHOT -->
 <section class="miss-section" style="background:#fff;border-top:1px solid rgba(26,35,50,.1)" id="market">
   <div class="miss-inner">
-    <div class="miss-eyebrow-sm">Mississauga 2026</div>
+    <div class="miss-eyebrow-sm">Mississauga Market · May 2026</div>
     <h2 class="miss-h2">The Mississauga Market Right Now</h2>
     <p class="miss-body">Mississauga is a buyers market. Inventory is above the five-year average and prices are down year over year, which means buyers have more negotiating room than they have had in a long time. If you have been waiting, 2026 is worth a serious look.</p>
     <div class="stat-strip">
@@ -350,79 +410,16 @@
 </section>
 
 <!-- INTERNAL LINKS -->
-<section class="miss-section" style="background:#fff;border-top:1px solid rgba(26,35,50,.1)">
+<section style="background:#fff;border-top:1px solid rgba(26,35,50,.1);padding:1.25rem 2rem">
   <div class="miss-inner">
-    <div class="miss-eyebrow-sm">Helpful guides</div>
-    <h2 class="miss-h2">Resources for Mississauga Buyers</h2>
-    <p class="miss-body">Whether you are buying your first home or moving up, these guides will help you understand the process, the numbers, and your options.</p>
-    <div class="miss-resources-grid">
-
-      <a href="/first-time-buyer-guide.html" class="miss-resource-card">
-        <div class="miss-resource-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-        </div>
-        <div class="miss-resource-body">
-          <div class="miss-resource-title">First-Time Buyer Guide</div>
-          <div class="miss-resource-desc">Everything you need to know before you buy — from mortgage pre-approval to closing day. Includes first-time buyer rebates that can save you an extra $8,000.</div>
-          <div class="miss-resource-cta">Read the guide →</div>
-        </div>
-      </a>
-
-      <a href="/checklist.html" class="miss-resource-card">
-        <div class="miss-resource-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
-        </div>
-        <div class="miss-resource-body">
-          <div class="miss-resource-title">Home Buyer Checklist</div>
-          <div class="miss-resource-desc">A 5-phase checklist covering everything from choosing a neighbourhood to what happens on closing day. Print it, follow it, close with confidence.</div>
-          <div class="miss-resource-cta">View checklist →</div>
-        </div>
-      </a>
-
-      <a href="/calculators.html" class="miss-resource-card">
-        <div class="miss-resource-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="10" x2="16" y2="10"/><line x1="8" y1="14" x2="12" y2="14"/></svg>
-        </div>
-        <div class="miss-resource-body">
-          <div class="miss-resource-title">Closing Cost Calculator</div>
-          <div class="miss-resource-desc">See your exact land transfer tax, legal fees, and total closing costs for any Mississauga home. No surprises at the table.</div>
-          <div class="miss-resource-cta">Run the numbers →</div>
-        </div>
-      </a>
-
-      <a href="/how-cashback-works.html" class="miss-resource-card">
-        <div class="miss-resource-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-        </div>
-        <div class="miss-resource-body">
-          <div class="miss-resource-title">How Cashback Works</div>
-          <div class="miss-resource-desc">A step-by-step breakdown of exactly how the cashback is calculated, when it arrives, and how it is written into your purchase agreement.</div>
-          <div class="miss-resource-cta">Learn how it works →</div>
-        </div>
-      </a>
-
-      <a href="/condo-buying-guide.html" class="miss-resource-card">
-        <div class="miss-resource-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
-        </div>
-        <div class="miss-resource-body">
-          <div class="miss-resource-title">Condo Buying Guide</div>
-          <div class="miss-resource-desc">Buying a condo in Square One, Port Credit, or anywhere in Mississauga? This guide covers status certificates, maintenance fees, and what to watch out for.</div>
-          <div class="miss-resource-cta">Read the guide →</div>
-        </div>
-      </a>
-
-      <a href="/offer-strategy.html" class="miss-resource-card">
-        <div class="miss-resource-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-        </div>
-        <div class="miss-resource-body">
-          <div class="miss-resource-title">Offer Strategy Tool</div>
-          <div class="miss-resource-desc">Build your offer strategy before you walk into a showing. Understand when to go firm, when to add conditions, and how to compete without overpaying.</div>
-          <div class="miss-resource-cta">Build your strategy →</div>
-        </div>
-      </a>
-
+    <div style="display:flex;align-items:center;flex-wrap:wrap;gap:.6rem">
+      <span style="font-size:11px;font-weight:500;letter-spacing:.8px;text-transform:uppercase;color:var(--taupe);margin-right:.25rem;white-space:nowrap">Guides</span>
+      <a href="/first-time-buyer-guide.html" style="font-size:12px;color:var(--muted);text-decoration:none;padding:4px 11px;border:1px solid var(--border);border-radius:3px;transition:all .15s;white-space:nowrap" onmouseover="this.style.borderColor='var(--amber)';this.style.color='var(--ink)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)'">First-Time Buyer Guide</a>
+      <a href="/condo-buying-guide.html" style="font-size:12px;color:var(--muted);text-decoration:none;padding:4px 11px;border:1px solid var(--border);border-radius:3px;transition:all .15s;white-space:nowrap" onmouseover="this.style.borderColor='var(--amber)';this.style.color='var(--ink)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)'">Condo Buying Guide</a>
+      <a href="/checklist.html" style="font-size:12px;color:var(--muted);text-decoration:none;padding:4px 11px;border:1px solid var(--border);border-radius:3px;transition:all .15s;white-space:nowrap" onmouseover="this.style.borderColor='var(--amber)';this.style.color='var(--ink)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)'">Buyer Checklist</a>
+      <a href="/calculators.html" style="font-size:12px;color:var(--muted);text-decoration:none;padding:4px 11px;border:1px solid var(--border);border-radius:3px;transition:all .15s;white-space:nowrap" onmouseover="this.style.borderColor='var(--amber)';this.style.color='var(--ink)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)'">Closing Cost Calculator</a>
+      <a href="/offer-strategy.html" style="font-size:12px;color:var(--muted);text-decoration:none;padding:4px 11px;border:1px solid var(--border);border-radius:3px;transition:all .15s;white-space:nowrap" onmouseover="this.style.borderColor='var(--amber)';this.style.color='var(--ink)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)'">Offer Strategy</a>
+      <a href="/how-cashback-works.html" style="font-size:12px;color:var(--muted);text-decoration:none;padding:4px 11px;border:1px solid var(--border);border-radius:3px;transition:all .15s;white-space:nowrap" onmouseover="this.style.borderColor='var(--amber)';this.style.color='var(--ink)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)'">How Cashback Works</a>
     </div>
   </div>
 </section>
@@ -440,52 +437,6 @@
   </div>
 </section>
 
-<!-- CALCULATOR -->
-<section class="miss-calc-section" id="calculator">
-  <div class="miss-calc-inner">
-    <div class="miss-calc-card">
-      <div class="miss-calc-eyebrow">Cashback calculator</div>
-      <div class="miss-calc-title">Your cashback on a Mississauga home</div>
-
-      <div style="display:flex;align-items:flex-end;gap:.75rem;margin-bottom:1.25rem">
-        <div style="display:flex;flex-direction:column;gap:.35rem;width:190px">
-          <label class="miss-input-label" for="miss-price-text">Home price</label>
-          <div class="miss-price-wrap">
-            <span class="miss-price-sym">$</span>
-            <input class="miss-price-input" type="text" id="miss-price-text" value="960,000" inputmode="numeric" autocomplete="off"/>
-          </div>
-        </div>
-        <div style="display:flex;flex-direction:column;gap:.35rem;width:120px">
-          <label class="miss-input-label" for="miss-commission">Buyer commission</label>
-          <div class="miss-pct-wrap">
-            <input class="miss-pct-input" type="number" id="miss-commission" value="2.5" min="1" max="5" step="0.25"/>
-            <span class="miss-pct-sym">%</span>
-          </div>
-        </div>
-      </div>
-
-      <input type="range" id="miss-slider" class="miss-slider" min="300000" max="3000000" step="10000" value="960000"/>
-      <div class="miss-ticks">
-        <span>$300K</span><span>$750K</span><span>$1.2M</span><span>$1.65M</span><span>$2.1M</span><span>$3M</span>
-      </div>
-
-      <div class="miss-result">
-        <div class="miss-result-label">Your estimated cashback</div>
-        <div class="miss-result-amt" id="miss-cashback">$19,001</div>
-        <div class="miss-result-sub" id="miss-sub">Commission of $24,000 minus our flat $4,999 fee</div>
-      </div>
-
-      <div class="miss-stat">
-        <div class="miss-stat-label">Use your cashback to</div>
-        <div class="miss-stat-val" id="miss-months">cover 3 months</div>
-        <div class="miss-stat-sub">That is <span id="miss-months-sub">3 months</span> of mortgage payments you never have to make. Move in. Breathe.</div>
-      </div>
-
-      <div class="miss-note">Cashback arrives 6 to 8 weeks after closing. Amount depends on the commission the seller has offered. Estimates only.</div>
-    </div>
-  </div>
-</section>
-
 <!-- FAQ -->
 <section class="miss-section" style="background:#fff;border-top:1px solid rgba(26,35,50,.1)" id="faq">
   <div class="miss-inner">
@@ -495,6 +446,19 @@
   </div>
 </section>
 
+
+<!-- CITY LINKS -->
+<section style="background:var(--bg2);border-top:1px solid rgba(26,35,50,.1);padding:1.25rem 2rem">
+  <div class="miss-inner">
+    <div style="display:flex;align-items:center;flex-wrap:wrap;gap:.6rem">
+      <span style="font-size:11px;font-weight:500;letter-spacing:.8px;text-transform:uppercase;color:var(--taupe);margin-right:.25rem;white-space:nowrap">Also serving</span>
+      <a href="/toronto-cashback-realtor.html" style="font-size:12px;color:var(--muted);text-decoration:none;padding:4px 11px;border:1px solid var(--border);border-radius:3px;transition:all .15s;white-space:nowrap" onmouseover="this.style.borderColor='var(--amber)';this.style.color='var(--ink)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)'">Toronto</a>
+      <a href="/north-york-cashback-realtor.html" style="font-size:12px;color:var(--muted);text-decoration:none;padding:4px 11px;border:1px solid var(--border);border-radius:3px;transition:all .15s;white-space:nowrap" onmouseover="this.style.borderColor='var(--amber)';this.style.color='var(--ink)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)'">North York</a>
+      <a href="/etobicoke-cashback-realtor.html" style="font-size:12px;color:var(--muted);text-decoration:none;padding:4px 11px;border:1px solid var(--border);border-radius:3px;transition:all .15s;white-space:nowrap" onmouseover="this.style.borderColor='var(--amber)';this.style.color='var(--ink)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)'">Etobicoke</a>
+      <a href="/scarborough-cashback-realtor.html" style="font-size:12px;color:var(--muted);text-decoration:none;padding:4px 11px;border:1px solid var(--border);border-radius:3px;transition:all .15s;white-space:nowrap" onmouseover="this.style.borderColor='var(--amber)';this.style.color='var(--ink)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)'">Scarborough</a>
+    </div>
+  </div>
+</section>
 <!-- CTA -->
 <section class="miss-cta">
   <div class="miss-cta-inner">
@@ -507,47 +471,49 @@
 </section>
 
 <script>
+
 function missCalc(){
-  var slider = document.getElementById('miss-slider');
-  var price = parseInt(slider.value);
-  var pct = parseFloat(document.getElementById('miss-commission').value) || 2.5;
-  var commission = price * (pct / 100);
-  var cashback = Math.max(0, commission - 4999);
-  var fmt = function(n){ return '$' + Math.round(n).toLocaleString('en-CA'); };
-  document.getElementById('miss-cashback').textContent = fmt(cashback);
-  document.getElementById('miss-sub').textContent = 'Commission of ' + fmt(commission) + ' minus our flat $4,999 fee';
-  var loan = price * 0.75;
-  var r = 3.89 / 100 / 12;
-  var n = 25 * 12;
-  var monthly = loan * (r * Math.pow(1+r,n)) / (Math.pow(1+r,n)-1);
-  var months = cashback > 0 ? Math.round(cashback / monthly) : 0;
-  var mText = months > 0 ? months + (months === 1 ? ' month' : ' months') : ' ';
-  document.getElementById('miss-months').textContent = 'cover ' + mText;
-  document.getElementById('miss-months-sub').textContent = mText;
+  var slider=document.getElementById('miss-slider');
+  var price=parseInt(slider.value);
+  var pct=parseFloat(document.getElementById('miss-commission').value)||2.5;
+  var commission=price*(pct/100);
+  var cashback=Math.max(0,commission-4999);
+  var fmt=function(n){return '$'+Math.round(n).toLocaleString('en-CA');};
+  document.getElementById('miss-cashback').textContent=fmt(cashback);
+  document.getElementById('miss-sub').textContent='Commission of '+fmt(commission)+' minus our flat $4,999 fee';
+  var loan=price*0.75;
+  var r=3.89/100/12;
+  var n=25*12;
+  var monthly=loan*(r*Math.pow(1+r,n))/(Math.pow(1+r,n)-1);
+  var months=cashback>0?Math.round(cashback/monthly):0;
+  var mText=months>0?months+(months===1?' month':' months'):'--';
+  document.getElementById('miss-months').textContent='cover '+mText+' of mortgage';
 }
-
-var missSlider = document.getElementById('miss-slider');
-var missPriceText = document.getElementById('miss-price-text');
-
-missSlider.addEventListener('input', function(){
-  missPriceText.value = Math.round(parseInt(this.value)).toLocaleString('en-CA');
+(function(){
+  var slider=document.getElementById('miss-slider');
+  var priceText=document.getElementById('miss-price-text');
+  var commInput=document.getElementById('miss-commission');
+  if(!slider)return;
+  slider.addEventListener('input',function(){
+    priceText.value=Math.round(parseInt(this.value)).toLocaleString('en-CA');
+    missCalc();
+  });
+  priceText.addEventListener('input',function(){
+    var raw=parseInt(this.value.replace(/,/g,''))||0;
+    var clamped=Math.min(3000000,Math.max(300000,raw));
+    slider.value=clamped;
+    missCalc();
+  });
+  priceText.addEventListener('blur',function(){
+    var raw=parseInt(this.value.replace(/,/g,''))||960000;
+    var clamped=Math.min(3000000,Math.max(300000,raw));
+    this.value=Math.round(clamped).toLocaleString('en-CA');
+    slider.value=clamped;
+    missCalc();
+  });
+  commInput.addEventListener('input',missCalc);
   missCalc();
-});
-missPriceText.addEventListener('input', function(){
-  var raw = parseInt(this.value.replace(/,/g,'')) || 0;
-  var clamped = Math.min(3000000, Math.max(300000, raw));
-  missSlider.value = clamped;
-  missCalc();
-});
-missPriceText.addEventListener('blur', function(){
-  var raw = parseInt(this.value.replace(/,/g,'')) || 960000;
-  var clamped = Math.min(3000000, Math.max(300000, raw));
-  this.value = Math.round(clamped).toLocaleString('en-CA');
-  missSlider.value = clamped;
-  missCalc();
-});
-document.getElementById('miss-commission').addEventListener('input', missCalc);
-
+})();
 var MISS_FAQ = [
   {q:'Is there a cashback realtor in Mississauga?',a:'Yes. Home Cashbacks is a RECO-registered buyer agent serving all of Mississauga. We charge a flat $4,999 fee and return the rest of the buyer agent commission to you after closing.'},
   {q:'How much cashback can I get on a Mississauga home?',a:'On a $960,000 Mississauga home with a 2.5% buyer agent commission, the total commission is $24,000. We take our flat $4,999 and you receive approximately $19,001 back. Use the calculator above to see your number.'},
@@ -566,15 +532,13 @@ MISS_FAQ.forEach(function(f){
   faqEl.appendChild(item);
 });
 
-var jSecs = ['market','neighbourhoods','laleh','calculator','faq'];
+var jSecs = ['calculator','market','neighbourhoods','laleh','faq'];
 var jBtns = document.querySelectorAll('.miss-jbtn');
 window.addEventListener('scroll', function(){
   var y = window.scrollY + 160, cur = '';
   jSecs.forEach(function(id){ var el=document.getElementById(id); if(el&&el.offsetTop<=y)cur=id; });
   jBtns.forEach(function(b){ b.classList.toggle('active', b.getAttribute('href')==='#'+cur); });
 },{passive:true});
-
-missCalc();
 </script>
 </body>
 </html>
