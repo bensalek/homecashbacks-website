@@ -102,8 +102,12 @@ nav{position:fixed;top:58px;left:0;right:0;z-index:570;background:#f0f4f8;border
 .briefing-wrap{padding:2rem 1.75rem 1.5rem}
 .briefing-eyebrow{font-size:11px;font-weight:500;letter-spacing:1.2px;text-transform:uppercase;color:var(--muted);margin-bottom:.6rem}
 .briefing-headline{font-family:'Cormorant Garamond',serif;font-size:clamp(24px,4vw,32px);font-weight:600;color:var(--ink);line-height:1.15;margin-bottom:1rem}
-.briefing-why{font-size:15px;color:var(--ink2);line-height:1.8;margin-bottom:1rem;padding-bottom:1rem;border-bottom:1px solid var(--border)}
-.briefing-play{font-size:15px;color:var(--ink2);line-height:1.8;margin-bottom:.6rem}
+.briefing-why{font-size:15px;color:var(--ink2);line-height:1.8;margin-bottom:.75rem;padding-bottom:.75rem;border-bottom:1px solid var(--border)}
+.briefing-play{font-size:15px;color:var(--ink2);line-height:1.8;margin-bottom:.25rem}
+.adv-block{padding:.9rem 0;border-bottom:1px solid var(--border)}
+.adv-block:last-of-type{border-bottom:none;padding-bottom:0}
+.adv-label{font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--amber);margin-bottom:.4rem}
+.adv-note{font-size:12px;color:var(--muted);margin-top:.35rem;font-style:italic}
 .result-cta{background:#1a2332;padding:1.5rem 1.75rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap}
 .result-cta-text h3{font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:600;color:#fff;margin-bottom:.2rem}
 .result-cta-text p{font-size:13px;color:rgba(232,237,245,.4)}
@@ -372,17 +376,30 @@ footer{background:#1a2332;padding:2.5rem 2rem 1.5rem}
       <div class="briefing-eyebrow" id="sit-eyebrow"></div>
       <div class="briefing-headline" id="sit-headline"></div>
       <p class="briefing-why" id="sit-why"></p>
-      <p class="briefing-play" id="adv-opening"></p>
-      <p class="briefing-play" id="adv-conditions"></p>
-      <p class="briefing-play" id="adv-expect"></p>
+
+      <div class="adv-block">
+        <div class="adv-label">Opening price</div>
+        <p class="briefing-play" id="adv-opening"></p>
+        <div class="adv-note">Not sure what the home is worth? Ask Laleh to pull the comparable sales before you submit.</div>
+      </div>
+
+      <div class="adv-block">
+        <div class="adv-label">Conditions</div>
+        <p class="briefing-play" id="adv-conditions"></p>
+      </div>
+
+      <div class="adv-block">
+        <div class="adv-label">What to expect</div>
+        <p class="briefing-play" id="adv-expect"></p>
+      </div>
     </div>
 
     <div class="result-cta">
       <div class="result-cta-text">
-        <h3>Want Laleh to review this before you submit?</h3>
-        <p>She will pull the comps and walk through your specific situation.</p>
+        <h3>Want Laleh to review this property before you submit?</h3>
+        <p>She will pull the comparable sales and walk through your specific situation so you walk in with confidence.</p>
       </div>
-      <button class="result-cta-btn" onclick="openModal()">Book a free call</button>
+      <button class="result-cta-btn" onclick="openModal()">Talk through my offer</button>
     </div>
   </div>
 
@@ -413,7 +430,7 @@ footer{background:#1a2332;padding:2.5rem 2rem 1.5rem}
       <div class="step-how-num">02</div>
       <div>
         <div class="step-how-title">Offer date and competition</div>
-        <div class="step-how-text">Held offers versus open offers change everything. If there is an offer date, you get one shot. The tool tells you how aggressive to be and whether to expect a bidding war.</div>
+        <div class="step-how-text">Held offers versus open offers change everything. If there is an offer date, your opening offer needs to be strong. The tool tells you how aggressive to be and whether to expect a bidding war.</div>
       </div>
     </div>
     <div class="step-how">
@@ -551,10 +568,10 @@ function buildResult(){
   if(hot&&held&&firm){
     eyebrow='Bidding war territory';
     headline='Go in strong - above value';
-    why=fresh?'There is an offer date and this home just hit the market. You will be competing with multiple buyers. You get one shot - no negotiation, no second chance.':stale?'There is an offer date but this home has been sitting 21+ days in a hot market - that is unusual. Others may have passed for a reason. Ask Laleh to pull the listing history before you go strong.':'There is an offer date set. Similar homes are selling fast and over asking. You will likely face other buyers and get one chance to submit your best offer.';
+    why=fresh?'There is an offer date and this home just hit the market. You will be competing with multiple buyers. Go in with your strongest offer. The seller may sign back, but do not count on it - make your first offer one you would be happy to close on.':stale?'There is an offer date but this home has been sitting 21+ days in a hot market - that is unusual. Others may have passed for a reason. Ask Laleh to pull the listing history before you go strong.':'There is an offer date set. Similar homes are selling fast and over asking. You will likely face other buyers and get one chance to submit your best offer.';
     openAdv='Go above estimated value. Make your best offer on the first submission. You will not get another opportunity to improve it.';
     condAdv='A conditional offer will almost always lose to a firm one here. Only go firm if your mortgage is fully confirmed by your lender on this specific property - not just pre-approved. Pre-approval means you qualify in principle. Confirmed means the lender has reviewed this property and approved the deal.';
-    expectAdv=stale?'No counter is typical in a held offer situation. If the home has been sitting despite a hot market, ask Laleh to pull the listing history - price reductions or failed conditions can explain it.':'No counter, no sign-back. You win or you do not. Have a backup property ready before you submit.';
+    expectAdv=stale?'Sellers in a held offer situation sometimes sign back rather than accept outright. Go in strong but know your ceiling. If the home has been sitting despite a hot market, ask Laleh to pull the listing history - price reductions or failed conditions can explain it.':'The seller may accept, sign back, or go with another offer. Make your first submission strong enough that you would be comfortable closing on it as-is. Have a backup property in mind before you submit.';
     eyebrowColor='#3C3489';headColor='#26215C';
 
   } else if(hot&&held&&!firm){
