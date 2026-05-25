@@ -25,7 +25,8 @@
           <div class="f-error" id="err-contact"></div>
         </div>
         <p class="f-consent">By submitting, you agree to be contacted by HomeCashbacks. View our <a href="/privacy.html" target="_blank">Privacy Policy</a>.</p>
-        <button type="button" class="f-submit" onclick="handleFormSubmit('contact')">Claim My Free Showing</button>
+        <input type="hidden" id="f-source" name="source" value="buyer"/>
+        <button type="button" id="f-submit" class="f-submit" onclick="handleFormSubmit('contact')">Claim My Free Showing</button>
       </form>
     </div>
     <div class="f-success" id="form-success">

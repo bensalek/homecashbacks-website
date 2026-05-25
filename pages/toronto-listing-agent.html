@@ -625,8 +625,10 @@ function overrideSharedComponents(){
   if(modalTitle){ modalTitle.textContent = 'Tell us about your home'; }
   var modalSub = document.querySelector('.modal-sub');
   if(modalSub){ modalSub.textContent = 'We will walk through your home, review the market, and give you an honest price estimate. No commitment required.'; }
-  var modalSubmit = document.getElementById('f-submit');
-  if(modalSubmit){ modalSubmit.textContent = 'Request Home Value'; }
+  var submitBtn = document.getElementById('f-submit');
+  if(submitBtn){ submitBtn.textContent = 'Request My Home Value'; }
+  var sourceField = document.getElementById('f-source');
+  if(sourceField){ sourceField.value = 'seller'; }
 }
 if(document.readyState === 'loading'){
   document.addEventListener('DOMContentLoaded', overrideSharedComponents);

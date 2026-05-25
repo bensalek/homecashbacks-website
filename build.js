@@ -131,7 +131,9 @@ pages.forEach(function(filename) {
       .replace(/(<span class="foot-cta-sub">)[^<]*/,         '$1No upfront fees. Due at closing only.')
       .replace(/(<div class="modal-tag" id="modal-tag">)[^<]*/, '$1Get My Home Value')
       .replace(/(<div class="modal-title" id="modal-title">)[^<]*/, '$1Tell us about your home')
-      .replace(/(<div class="modal-sub">)[^<]*/, '$1We will walk through your home, review the market, and give you an honest price estimate. No commitment required.');
+      .replace(/(<div class="modal-sub">)[^<]*/, '$1We will walk through your home, review the market, and give you an honest price estimate. No commitment required.')
+      .replace(/>Claim My Free Showing<\/button>/, '>Request My Home Value</button>')
+      .replace(/(<input type="hidden" id="f-source"[^>]*value=")[^"]*"/, '$1seller"');
   }
 
   fs.writeFileSync(path.join(DIST_DIR, filename), assembled, 'utf8');
