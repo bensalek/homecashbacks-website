@@ -54,14 +54,6 @@
 </script>
 
 <style>
-:root{
-  --ink:#1a2332;--ink2:#2d3d52;--muted:#5a6a82;--taupe:#8a9ab2;
-  --amber:#e8a020;--amber-dark:#c4861a;
-  --bg:#f0f4f8;--bg2:#e2eaf2;--bg3:#ccd8e8;
-  --white:#fff;--border:rgba(26,35,50,.1);
-}
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;padding-top:118px}
 
 /* HERO */
 .s-hero{background:var(--ink);padding:4.5rem 2rem 3.5rem;text-align:center;position:relative;overflow:hidden}
@@ -157,6 +149,111 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--ink);line-
 .s-cta-note{font-size:11px;color:rgba(232,237,245,.2);margin-top:.85rem}
 
 /* MOBILE */
+/* CALCULATOR */
+.sl-calc-section{background:#0f1a27;padding:3rem 2rem}
+.sl-calc-inner{max-width:680px;margin:0 auto;display:grid;grid-template-columns:180px 1fr;gap:1.5rem;align-items:start}
+.sl-calc-banner{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:1.5rem 1.1rem;text-align:center}
+.sl-calc-banner-label{font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:rgba(232,237,245,.35);margin-bottom:.4rem;line-height:1.4}
+.sl-calc-banner-amt{font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:600;color:#e8a020;line-height:1;letter-spacing:-.5px}
+.sl-calc-banner-sub{font-size:11px;color:rgba(232,237,245,.3);margin-top:.35rem;line-height:1.4}
+.sl-calc-card{background:#fff;border-radius:8px;padding:1.5rem}
+.sl-calc-eyebrow{font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:#8a9ab2;margin-bottom:.2rem}
+.sl-calc-title{font-size:16px;font-weight:600;color:#1a2332;margin-bottom:1.1rem}
+.sl-inputs-row{display:flex;align-items:flex-end;gap:.65rem;margin-bottom:1.1rem;flex-wrap:wrap}
+.sl-input-group{display:flex;flex-direction:column;gap:.3rem}
+.sl-input-label{font-size:11px;font-weight:500;color:#5a6a82}
+.sl-price-wrap,.sl-pct-wrap{display:flex;align-items:center;border:1.5px solid #ccd8e8;border-radius:5px;overflow:hidden}
+.sl-price-sym,.sl-pct-sym{padding:8px 9px;font-size:13px;color:#5a6a82;background:#f0f4f8}
+.sl-price-input,.sl-pct-input{border:none;outline:none;font-size:14px;font-weight:500;font-family:'Outfit',sans-serif;color:#1a2332;padding:8px 9px;width:100%}
+.sl-slider-wrap{margin-bottom:1rem}
+.sl-slider{width:100%;accent-color:#e8a020;margin-bottom:.35rem}
+.sl-ticks{display:flex;justify-content:space-between;font-size:10px;color:#8a9ab2}
+.sl-result{margin-bottom:.75rem}
+.sl-result-label{font-size:11px;color:#5a6a82;margin-bottom:.1rem}
+.sl-result-amt{font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:600;color:#1a2332;line-height:1;letter-spacing:-.5px}
+.sl-compare{display:flex;flex-direction:column;gap:.3rem;padding:.75rem .9rem;background:#f0f4f8;border-radius:5px;margin-bottom:.65rem}
+.sl-compare-row{display:flex;justify-content:space-between;align-items:center;font-size:13px}
+.sl-compare-label{color:#5a6a82}
+.sl-compare-val{font-weight:600;color:#1a2332}
+.sl-compare-val.crossed{text-decoration:line-through;color:#8a9ab2;font-weight:400;font-size:12px}
+.sl-compare-val.gold{color:#e8a020}
+.sl-calc-note{font-size:11px;color:#5a6a82;line-height:1.6}
+
+/* SERVICES & COMPARISON TABLE */
+.services-section{background:#fff;padding:3rem 2rem;border-top:1px solid rgba(26,35,50,.1)}
+.s-inner{max-width:860px;margin:0 auto}
+.s-eye{font-size:11px;font-weight:500;letter-spacing:1.2px;text-transform:uppercase;color:#8a9ab2;margin-bottom:.4rem}
+.s-h2{font-family:'Cormorant Garamond',serif;font-size:clamp(24px,3.2vw,36px);font-weight:600;color:#1a2332;line-height:1.1;margin-bottom:1.5rem}
+.comp-table-wrap{margin-top:1.5rem;overflow-x:auto;border-radius:8px;border:1px solid rgba(26,35,50,.1)}
+.comp-table{width:100%;border-collapse:collapse;font-size:13px}
+.comp-th{padding:.75rem 1rem;text-align:center;font-size:10px;font-weight:600;letter-spacing:.8px;text-transform:uppercase;color:#5a6a82;border-bottom:1px solid rgba(26,35,50,.1);background:#f0f4f8}
+.comp-th-feature{text-align:left;width:35%}
+.comp-th-us{color:#e8a020;background:rgba(232,160,32,.06)}
+.comp-th-flat{color:#5a6a82}
+.comp-feature{padding:.8rem 1rem;font-size:13px;color:#1a2332;font-weight:500;border-bottom:1px solid rgba(26,35,50,.1)}
+.comp-cell{padding:.8rem 1rem;text-align:center;border-bottom:1px solid rgba(26,35,50,.1);vertical-align:middle}
+.comp-cell-us{background:rgba(232,160,32,.04)}
+.comp-check{color:#0F6E56;font-size:12px;font-weight:600}
+.comp-check-sometimes{color:#5a6a82;font-weight:400;font-size:12px}
+.comp-x{color:#8a9ab2;font-size:12px}
+.comp-row-price .comp-feature,.comp-row-price .comp-cell{border-bottom:none;padding-top:1rem}
+.comp-feature-price{font-size:11px;font-weight:600;letter-spacing:.5px;text-transform:uppercase;color:#8a9ab2}
+.comp-price-bad{color:#5a6a82;font-size:12px}
+.comp-price-mid{color:#5a6a82;font-size:12px}
+.comp-price-us{font-size:14px;font-weight:700;color:#e8a020}
+
+/* OBJECTION */
+.obj-section{background:#f0f4f8;padding:2.5rem 2rem;border-top:1px solid rgba(26,35,50,.1)}
+.obj-inner{max-width:860px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:center}
+.obj-q{font-family:'Cormorant Garamond',serif;font-size:clamp(20px,2.8vw,28px);font-weight:600;font-style:italic;color:#1a2332;line-height:1.3}
+.obj-a{font-size:14px;color:#5a6a82;line-height:1.75}
+
+/* PRICING */
+.pricing-section{background:#fff;padding:3rem 2rem;border-top:1px solid rgba(26,35,50,.1)}
+.pricing-inner{max-width:680px;margin:0 auto}
+.pricing-card{border:2px solid #e8a020;border-radius:10px;padding:2rem;margin-top:1.25rem;display:grid;grid-template-columns:auto 1fr;gap:2rem;align-items:start}
+.pricing-left{text-align:center}
+.pricing-amt{font-family:'Cormorant Garamond',serif;font-size:56px;font-weight:600;color:#1a2332;line-height:1;letter-spacing:-1px}
+.pricing-term{font-size:11px;color:#5a6a82;margin-top:.25rem}
+.pricing-list{list-style:none;display:flex;flex-direction:column;gap:.4rem}
+.pricing-list li{font-size:13px;color:#5a6a82;padding-left:1.1rem;position:relative;line-height:1.5}
+.pricing-list li::before{content:'';position:absolute;left:0;top:.55em;width:4px;height:4px;border-radius:50%;background:#e8a020}
+.pricing-note{font-size:11px;color:#5a6a82;line-height:1.6;background:#f0f4f8;border-radius:5px;padding:.7rem .9rem;margin-top:1rem;grid-column:1/-1}
+.trust-row{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.25rem}
+.trust-pill{font-size:11px;color:#5a6a82;border:1px solid rgba(26,35,50,.1);border-radius:20px;padding:.3rem .85rem;background:#f0f4f8}
+
+/* FAQ */
+.faq-section{background:#e2eaf2;padding:2.5rem 2rem;border-top:1px solid rgba(26,35,50,.1)}
+.faq-inner{max-width:680px;margin:0 auto}
+.faq-list{display:flex;flex-direction:column;gap:.5rem;margin-top:1.25rem}
+.faq-item{background:#fff;border:1px solid rgba(26,35,50,.1);border-radius:6px;overflow:hidden}
+.faq-q{display:flex;align-items:center;justify-content:space-between;padding:.9rem 1.1rem;cursor:pointer;gap:1rem}
+.faq-q-text{font-size:13px;font-weight:500;color:#1a2332;line-height:1.4}
+.faq-icon{flex-shrink:0;width:18px;height:18px;color:#5a6a82;transition:transform .2s}
+.faq-item.open .faq-icon{transform:rotate(45deg)}
+.faq-a{display:none;padding:.5rem 1.1rem .8rem;font-size:13px;color:#5a6a82;line-height:1.7;border-top:1px solid rgba(26,35,50,.1)}
+.faq-item.open .faq-a{display:block}
+
+/* CTA */
+.s-cta{background:#1a2332;padding:4rem 2rem;text-align:center}
+.s-cta h2{font-family:'Cormorant Garamond',serif;font-size:clamp(26px,4vw,42px);font-weight:600;color:#fff;line-height:1.1;margin-bottom:.65rem}
+.s-cta-sub{font-size:14px;color:rgba(232,237,245,.4);margin-bottom:2rem;line-height:1.7}
+.s-cta-note{font-size:11px;color:rgba(232,237,245,.2);margin-top:.85rem}
+.s-eye{font-size:11px;font-weight:500;letter-spacing:1.2px;text-transform:uppercase;color:#8a9ab2;margin-bottom:.4rem}
+.s-btn{background:#e8a020;color:#1a2332;padding:14px 32px;border-radius:4px;font-size:15px;font-weight:700;border:none;cursor:pointer;font-family:'Outfit',sans-serif;transition:opacity .2s}
+.s-btn:hover{opacity:.85}
+
+/* HERO */
+.s-hero{background:#1a2332;padding:4.5rem 2rem 3.5rem;text-align:center;position:relative;overflow:hidden}
+.s-hero::before,.s-hero::after{content:'';position:absolute;border-radius:50%;border:1px solid rgba(232,160,32,.1);pointer-events:none}
+.s-hero::before{width:400px;height:400px;top:-120px;right:-100px}
+.s-hero::after{width:300px;height:300px;bottom:-100px;left:-80px}
+.s-hero-eye{font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:#e8a020;margin-bottom:1rem}
+.s-hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(32px,5.5vw,58px);font-weight:600;color:#fff;line-height:1.05;margin-bottom:1rem;letter-spacing:-.5px}
+.s-hero h1 em{font-style:italic;color:#e8a020}
+.s-hero-sub{font-size:15px;color:rgba(232,237,245,.5);max-width:460px;margin:0 auto 2rem;line-height:1.7}
+.s-hero-note{font-size:11px;color:rgba(232,237,245,.25);margin-top:.85rem}
+
 @media(max-width:680px){
   .sl-calc-inner{grid-template-columns:1fr}
   .sl-calc-banner{text-align:left}
@@ -221,10 +318,6 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--ink);line-
         <div class="sl-ticks">
           <span>$400K</span><span>$900K</span><span>$1.4M</span><span>$2M</span><span>$3M</span>
         </div>
-      </div>
-      <div class="sl-result">
-        <div class="sl-result-label">Extra in your pocket at closing</div>
-        <div class="sl-result-amt" id="sl-saving-amt">$17,501</div>
       </div>
       <div class="sl-compare">
         <div class="sl-compare-row">
@@ -432,7 +525,6 @@ function updateCalc(){
   var tradFee = price * (pct/100);
   var saving = tradFee - 4999;
   document.getElementById('sl-price-text').value = Math.round(price).toLocaleString('en-CA');
-  document.getElementById('sl-saving-amt').textContent = fmtFull(Math.max(0,saving));
   document.getElementById('sl-banner-amt').textContent = fmtFull(Math.max(0,saving));
   document.getElementById('sl-banner-sub').textContent = 'saving on a '+fmtFull(price)+' home';
   document.getElementById('sl-trad-fee').textContent = fmtFull(tradFee);
