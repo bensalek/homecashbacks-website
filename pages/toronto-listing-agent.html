@@ -193,13 +193,13 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--ink);line-
 <section class="sl-calc-section" id="calculator">
   <div class="sl-calc-inner">
     <div class="sl-calc-banner">
-      <div class="sl-calc-banner-label">You save vs traditional agent</div>
+      <div class="sl-calc-banner-label">You save on listing fees</div>
       <div class="sl-calc-banner-amt" id="sl-banner-amt">$17,501</div>
-      <div class="sl-calc-banner-sub" id="sl-banner-sub">on a $900,000 home</div>
+      <div class="sl-calc-banner-sub" id="sl-banner-sub">keeping $4,999 vs full commission</div>
     </div>
     <div class="sl-calc-card">
-      <div class="sl-calc-eyebrow">Savings calculator</div>
-      <div class="sl-calc-title">See exactly what you keep</div>
+      <div class="sl-calc-eyebrow">Listing fee calculator</div>
+      <div class="sl-calc-title">How much more you walk away with</div>
       <div class="sl-inputs-row">
         <div class="sl-input-group" style="width:190px">
           <label class="sl-input-label" for="sl-price-text">Home price</label>
@@ -223,16 +223,16 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--ink);line-
         </div>
       </div>
       <div class="sl-result">
-        <div class="sl-result-label">Your estimated saving</div>
+        <div class="sl-result-label">Extra in your pocket at closing</div>
         <div class="sl-result-amt" id="sl-saving-amt">$17,501</div>
       </div>
       <div class="sl-compare">
         <div class="sl-compare-row">
-          <span class="sl-compare-label">Traditional agent fee</span>
+          <span class="sl-compare-label">Traditional listing fee</span>
           <span class="sl-compare-val crossed" id="sl-trad-fee">$22,500</span>
         </div>
         <div class="sl-compare-row">
-          <span class="sl-compare-label">HomeCashbacks flat fee</span>
+          <span class="sl-compare-label">HomeCashbacks listing fee</span>
           <span class="sl-compare-val gold">$4,999</span>
         </div>
       </div>
@@ -434,7 +434,7 @@ function updateCalc(){
   document.getElementById('sl-price-text').value = Math.round(price).toLocaleString('en-CA');
   document.getElementById('sl-saving-amt').textContent = fmtFull(Math.max(0,saving));
   document.getElementById('sl-banner-amt').textContent = fmtFull(Math.max(0,saving));
-  document.getElementById('sl-banner-sub').textContent = 'on a '+fmtFull(price)+' home';
+  document.getElementById('sl-banner-sub').textContent = 'saving on a '+fmtFull(price)+' home';
   document.getElementById('sl-trad-fee').textContent = fmtFull(tradFee);
 }
 
@@ -462,5 +462,27 @@ function updateCalc(){
 })();
 </script>
 
+
+<script>
+function overrideSharedComponents(){
+  var footBtn = document.querySelector('.foot-cta-btn');
+  if(footBtn){ footBtn.textContent = 'Get My Home Value'; }
+  var footSub = document.querySelector('.foot-cta-sub');
+  if(footSub){ footSub.textContent = 'No upfront fees. Due at closing only.'; }
+  var modalTag = document.getElementById('modal-tag');
+  if(modalTag){ modalTag.textContent = 'Get My Home Value'; }
+  var modalTitle = document.getElementById('modal-title');
+  if(modalTitle){ modalTitle.textContent = 'Tell us about your home'; }
+  var modalSub = document.querySelector('.modal-sub');
+  if(modalSub){ modalSub.textContent = 'We will walk through your home, review the market, and give you an honest price estimate. No commitment required.'; }
+  var modalSubmit = document.getElementById('f-submit');
+  if(modalSubmit){ modalSubmit.textContent = 'Request Home Value'; }
+}
+if(document.readyState === 'loading'){
+  document.addEventListener('DOMContentLoaded', overrideSharedComponents);
+} else {
+  overrideSharedComponents();
+}
+</script>
 </body>
 </html>
