@@ -142,3 +142,33 @@
 <link rel="preload" href="/assets/fonts/cormorant-garamond-v21-latin-600.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/fonts.css">
   <link rel="stylesheet" href="/assets/styles.css">
+
+<style>
+/* WhatsApp top bar pill -- global */
+.top-btn-wa{display:inline-flex;align-items:center;gap:6px;padding:7px 14px;border-radius:4px;font-size:13px;font-weight:700;cursor:pointer;font-family:'Outfit',sans-serif;white-space:nowrap;transition:all .2s;background:rgba(37,211,102,.15);color:#25d166;border:1px solid rgba(37,211,102,.35);text-decoration:none;flex-shrink:0}
+.top-btn-wa:hover{background:rgba(37,211,102,.25);border-color:#25d166}
+.top-btn-wa svg{flex-shrink:0}
+.top-btn-wa-label{display:inline}
+/* Smaller top bar globally */
+.top-bar{height:50px!important;padding:0 1rem!important;gap:8px!important}
+.top-btn{padding:7px 16px!important;font-size:13px!important}
+/* Fix nav position to match new top bar */
+nav{top:50px!important}
+/* On very small screens hide WA label, show icon only */
+@media(max-width:400px){
+  .top-btn-wa{padding:7px 10px}
+  .top-btn-wa-label{display:none}
+}
+/* Miss hero WA button -- never full width */
+.miss-hero-wa{white-space:nowrap;flex-shrink:0}
+/* Fix jump nav sticky position to match new top bar height */
+.miss-jump{top:110px!important}
+/* Fix WhatsApp icon color in top bar */
+.top-btn-wa svg{fill:#25d166!important}
+/* On mobile shrink hero CTAs */
+@media(max-width:480px){
+  .miss-hero-cta{padding:10px 18px;font-size:13px}
+  .miss-hero-wa{padding:9px 14px;font-size:12px}
+  .miss-hero-note{display:none}
+}
+</style>
