@@ -57,7 +57,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--ink);line-
 *,*::before,*::after{box-sizing:border-box}
 
 /* TOP BAR */
-.top-bar{position:fixed;top:0;left:0;right:0;z-index:600;background:#1a2332;height:50px;padding:0 1rem;display:flex;align-items:center;justify-content:center;gap:8px}
+.top-bar{position:fixed;top:0;left:0;right:0;z-index:600;background:#1a2332;height:58px;padding:0 1.5rem;display:flex;align-items:center;justify-content:center;gap:12px}
 .top-bar-text{font-size:13px;color:rgba(255,255,255,.45);white-space:nowrap;margin-right:4px}
 .top-btn{display:inline-flex;align-items:center;gap:6px;padding:8px 18px;border-radius:4px;font-size:13px;font-weight:700;border:none;cursor:pointer;font-family:'Outfit',sans-serif;white-space:nowrap;transition:opacity .2s}
 .top-btn:hover{opacity:.85}
@@ -505,9 +505,9 @@ footer a{color:#e8a020;text-decoration:none}
 /* RESPONSIVE */
 
 @media(max-width:680px){
-  body{padding-top:98px;font-size:16px;padding-bottom:72px}
-  nav{position:fixed;top:0}
-  .nav-links{display:none;position:fixed;top:98px;left:0;right:0;background:#f0f4f8;border-bottom:1px solid var(--border);flex-direction:column;gap:0;padding:0;z-index:569;overflow:hidden}
+  body{padding-top:118px;font-size:16px}
+  nav{position:fixed;top:58px;padding:0 1rem}
+  .nav-links{display:none;position:fixed;top:118px;left:0;right:0;background:#f0f4f8;border-bottom:1px solid var(--border);flex-direction:column;gap:0;padding:0;z-index:569;overflow:hidden}
   .nav-links.open{display:flex}
   .nav-links li{width:100%}
   .nav-links a{display:block;padding:.85rem 1.5rem;font-size:16px;color:var(--ink);border-bottom:1px solid var(--border);background:none}
@@ -517,8 +517,6 @@ footer a{color:#e8a020;text-decoration:none}
   .dropdown a{padding:.7rem 2rem;font-size:15px;border-bottom:1px solid var(--border);background:#f8fafc}
   .dropdown-sub{display:none}
   .nav-pill{background:#e8a020!important;color:#1a2332!important;margin:.5rem 1rem;border-radius:4px;text-align:center;font-weight:700!important;display:block!important;padding:.85rem 1.5rem!important}
-      .mob-bottom-wa svg{fill:#25d166;flex-shrink:0}
-    body{padding-bottom:72px}
   .hamburger{display:flex}
   .nav-cred{display:block;font-size:10px;margin-left:.6rem}
   .nav-cred-line2{display:block}
