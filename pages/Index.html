@@ -67,7 +67,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--ink);line-
 .top-bar-phone:hover{color:#fff}
 
 /* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:570;background:#f0f4f8;border-bottom:1px solid var(--border);height:60px;padding:0 2rem;display:flex;align-items:center;justify-content:space-between}
+nav{position:fixed;top:0;left:0;right:0;z-index:570;background:#f0f4f8;border-bottom:1px solid var(--border);display:flex;flex-direction:column}
 .logo{text-decoration:none;display:flex;align-items:center}
 .nav-cred{font-size:11px;color:var(--muted);letter-spacing:.2px;font-family:'Outfit',sans-serif;white-space:nowrap;margin-left:.75rem}
 .nav-cred-line2{font-size:10px;color:var(--muted);letter-spacing:.2px;font-family:'Outfit',sans-serif;white-space:nowrap;margin-left:.75rem}
@@ -87,7 +87,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:570;background:#f0f4f8;border-bo
 .nav-link-btn:hover{color:var(--ink);background:rgba(26,35,50,.05)}
 .nav-link-btn svg{width:10px;height:10px;transition:transform .2s}
 .nav-item:hover .nav-link-btn svg{transform:rotate(180deg)}
-.nav-pill{background:#e8a020!important;color:#1a2332!important;padding:7px 18px;border-radius:4px;font-weight:700!important}
+.nav-pill{background:#e8a020!important;color:#1a2332!important;padding:8px 18px!important;border-radius:4px;font-weight:700!important;display:inline-flex!important;align-items:center}
 .dropdown{position:absolute;top:calc(100% + 8px);left:0;background:var(--white);border:1px solid var(--border);border-radius:6px;box-shadow:0 8px 24px rgba(26,35,50,.1);min-width:210px;padding:.4rem 0;opacity:0;visibility:hidden;transform:translateY(-4px);transition:all .15s;z-index:100}
 .nav-item:hover .dropdown{opacity:1;visibility:visible;transform:translateY(0)}
 .dropdown a{display:block;padding:.65rem 1rem;font-size:13px;color:var(--ink2);text-decoration:none;transition:background .1s;border-radius:0}
@@ -505,9 +505,9 @@ footer a{color:#e8a020;text-decoration:none}
 /* RESPONSIVE */
 
 @media(max-width:680px){
-  body{padding-top:60px;font-size:16px}
-  nav{padding:0 1rem;position:fixed;top:0}
-  .nav-links{display:none;position:fixed;top:60px;left:0;right:0;background:#f0f4f8;border-bottom:1px solid var(--border);flex-direction:column;gap:0;padding:0;z-index:569;overflow:hidden}
+  body{padding-top:98px;font-size:16px;padding-bottom:72px}
+  nav{position:fixed;top:0}
+  .nav-links{display:none;position:fixed;top:98px;left:0;right:0;background:#f0f4f8;border-bottom:1px solid var(--border);flex-direction:column;gap:0;padding:0;z-index:569;overflow:hidden}
   .nav-links.open{display:flex}
   .nav-links li{width:100%}
   .nav-links a{display:block;padding:.85rem 1.5rem;font-size:16px;color:var(--ink);border-bottom:1px solid var(--border);background:none}
@@ -516,7 +516,9 @@ footer a{color:#e8a020;text-decoration:none}
   .nav-item.open .dropdown{visibility:visible;max-height:300px}
   .dropdown a{padding:.7rem 2rem;font-size:15px;border-bottom:1px solid var(--border);background:#f8fafc}
   .dropdown-sub{display:none}
-  .nav-pill{background:#e8a020!important;color:#1a2332!important;margin:.5rem 1rem;border-radius:4px;text-align:center;font-weight:700!important;display:block;padding:.85rem 1.5rem!important}
+  .nav-pill{background:#e8a020!important;color:#1a2332!important;margin:.5rem 1rem;border-radius:4px;text-align:center;font-weight:700!important;display:block!important;padding:.85rem 1.5rem!important}
+      .mob-bottom-wa svg{fill:#25d166;flex-shrink:0}
+    body{padding-bottom:72px}
   .hamburger{display:flex}
   .nav-cred{display:block;font-size:10px;margin-left:.6rem}
   .nav-cred-line2{display:block}
@@ -838,31 +840,10 @@ footer a{color:#e8a020;text-decoration:none}
   .cmp-them,.cmp-us{font-size:12px;padding:.6rem .6rem}
 }
 
-.hero-wa{display:inline-flex;align-items:center;gap:.5rem;padding:11px 20px;border-radius:4px;background:rgba(37,211,102,.15);border:1px solid rgba(37,211,102,.35);color:#25d166;font-size:13px;font-weight:600;text-decoration:none;font-family:'Outfit',sans-serif;transition:all .2s;white-space:nowrap;flex-shrink:0}
-.hero-wa:hover{background:rgba(37,211,102,.25);border-color:rgba(37,211,102,.6)}
 
-/* WhatsApp top bar pill */
-.top-btn-wa{display:inline-flex;align-items:center;gap:6px;padding:8px 16px;border-radius:4px;font-size:13px;font-weight:700;cursor:pointer;font-family:'Outfit',sans-serif;white-space:nowrap;transition:all .2s;background:rgba(37,211,102,.15);color:#25d166;border:1px solid rgba(37,211,102,.35);text-decoration:none}
-.top-btn-wa:hover{background:rgba(37,211,102,.25);border-color:#25d166}
-.top-btn-wa svg{flex-shrink:0}
 .top-btn-wa-label{display:inline}
 @media(max-width:400px){.top-btn-wa{padding:8px 10px}.top-btn-wa-label{display:none}}
 
-/* Mobile fixes */
-@media(max-width:600px){
-  /* Top bar -- smaller buttons, fixed height */
-  .top-bar{height:48px;padding:0 1rem;gap:8px}
-  .top-btn{padding:7px 14px;font-size:13px}
-  .top-btn-wa{padding:7px 12px;font-size:12px}
-  /* Hero -- prevent full-width stretch, keep buttons inline */
-  .hero-btns{flex-wrap:nowrap;gap:8px;justify-content:center}
-  .hero-wa{padding:10px 16px;font-size:12px;flex-shrink:0}
-  .btn-primary{font-size:13px;padding:12px 18px}
-  /* Free guides strip -- keep label inline with pills */
-  .hero-btns .btn-primary,.hero-btns .hero-wa{width:auto;min-width:0}
-  .guides-strip{padding:.9rem 1rem!important}
-  body{padding-top:108px}
-}
 </style>
 
 <script type="application/ld+json">
@@ -1048,6 +1029,7 @@ footer a{color:#e8a020;text-decoration:none}
       <span class="nav-cred nav-cred-line2">Toronto Real Estate Realty Plus Inc.</span>
     </div>
   </div>
+  </div>
   <ul class="nav-links" id="nav-links">
     <li class="nav-item"><a href="how-cashback-works.html" onclick="closeMobMenu()">How It Works</a></li>
     <li class="nav-item"><a href="our-story.html" onclick="closeMobMenu()">Our Story</a></li>
@@ -1072,12 +1054,14 @@ footer a{color:#e8a020;text-decoration:none}
         </a>
       </div>
     <li class="nav-item"><a href="#faq" onclick="closeMobMenu()">FAQ</a></li>
+    <li class="nav-item" style="display:flex;align-items:center"><a href="tel:4374437556" style="font-size:13px;color:var(--muted);text-decoration:none;padding:6px 8px;white-space:nowrap" onclick="closeMobMenu()">(437) 443-7556</a></li>
     <li class="nav-item"><a href="#" class="nav-pill" onclick="openModal();closeMobMenu();return false">Free Showing</a></li>
   </ul>
   <button class="hamburger" id="hamburger" onclick="toggleMobMenu()" aria-label="Menu">
     <span></span><span></span><span></span>
   </button>
 </nav>
+
 
 
 <!-- HERO -->

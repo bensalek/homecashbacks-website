@@ -142,25 +142,3 @@
 <link rel="preload" href="/assets/fonts/cormorant-garamond-v21-latin-600.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/fonts.css">
   <link rel="stylesheet" href="/assets/styles.css">
-
-<style>
-/* WhatsApp nav pill -- desktop only */
-.nav-wa-pill{display:inline-flex;align-items:center;gap:5px;padding:7px 14px;border-radius:4px;background:rgba(37,211,102,.12);border:1px solid rgba(37,211,102,.3);color:#1a9e4a;font-size:13px;font-weight:600;text-decoration:none;font-family:'Outfit',sans-serif;transition:all .2s;white-space:nowrap}
-.nav-wa-pill:hover{background:rgba(37,211,102,.22);border-color:#25d166;color:#1a9e4a}
-.nav-wa-pill svg{fill:#1a9e4a;flex-shrink:0}
-
-/* Mobile bottom bar -- hidden on desktop */
-.mob-bottom-bar{display:none}
-
-@media(max-width:768px){
-  /* Hide WhatsApp from nav on mobile -- bottom bar handles it */
-  .nav-wa-pill{display:none}
-  /* Show mobile bottom bar */
-  .mob-bottom-bar{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:600;background:#1a2332;border-top:1px solid rgba(255,255,255,.1);padding:.75rem 1rem;gap:.75rem;align-items:center}
-  .mob-bottom-wa{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:11px 0;border-radius:4px;background:rgba(37,211,102,.15);border:1px solid rgba(37,211,102,.35);color:#25d166;font-size:14px;font-weight:600;text-decoration:none;font-family:'Outfit',sans-serif}
-  .mob-bottom-wa svg{fill:#25d166;flex-shrink:0}
-  .mob-bottom-cta{flex:1;padding:11px 0;border-radius:4px;background:#e8a020;color:#1a2332;font-size:14px;font-weight:700;border:none;cursor:pointer;font-family:'Outfit',sans-serif}
-  /* Add bottom padding to page so content isn't hidden behind bar */
-  body{padding-bottom:72px}
-}
-</style>
