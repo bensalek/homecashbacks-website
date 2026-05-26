@@ -847,6 +847,22 @@ footer a{color:#e8a020;text-decoration:none}
 .top-btn-wa svg{flex-shrink:0}
 .top-btn-wa-label{display:inline}
 @media(max-width:400px){.top-btn-wa{padding:8px 10px}.top-btn-wa-label{display:none}}
+
+/* Mobile fixes */
+@media(max-width:600px){
+  /* Top bar -- smaller buttons, fixed height */
+  .top-bar{height:48px;padding:0 1rem;gap:8px}
+  .top-btn{padding:7px 14px;font-size:13px}
+  .top-btn-wa{padding:7px 12px;font-size:12px}
+  /* Hero -- prevent full-width stretch, keep buttons inline */
+  .hero-btns{flex-wrap:nowrap;gap:8px;justify-content:center}
+  .hero-wa{padding:10px 16px;font-size:12px;flex-shrink:0}
+  .btn-primary{font-size:13px;padding:12px 18px}
+  /* Free guides strip -- keep label inline with pills */
+  .hero-btns .btn-primary,.hero-btns .hero-wa{width:auto;min-width:0}
+  .guides-strip{padding:.9rem 1rem!important}
+  body{padding-top:108px}
+}
 </style>
 
 <script type="application/ld+json">
@@ -1497,16 +1513,16 @@ footer a{color:#e8a020;text-decoration:none}
 </script>
 
 <!-- RESOURCES -->
-<section style="background:var(--white);border-top:1px solid rgba(26,35,50,.1);padding:1.25rem 2rem">
+<section class="guides-strip" style="background:var(--white);border-top:1px solid rgba(26,35,50,.1);padding:1.25rem 2rem">
   <div class="sec-inner">
-    <div style="display:flex;align-items:center;flex-wrap:wrap;gap:.6rem">
-      <span style="font-size:11px;font-weight:500;letter-spacing:.8px;text-transform:uppercase;color:var(--taupe);margin-right:.25rem;white-space:nowrap">Free guides</span>
-      <a href="/first-time-buyer-guide.html" style="font-size:12px;color:var(--muted);text-decoration:none;padding:4px 11px;border:1px solid var(--border);border-radius:3px;transition:all .15s;white-space:nowrap" onmouseover="this.style.borderColor='var(--amber)';this.style.color='var(--ink)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)'">First-Time Buyer Guide</a>
-      <a href="/condo-buying-guide.html" style="font-size:12px;color:var(--muted);text-decoration:none;padding:4px 11px;border:1px solid var(--border);border-radius:3px;transition:all .15s;white-space:nowrap" onmouseover="this.style.borderColor='var(--amber)';this.style.color='var(--ink)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)'">Condo Buying Guide</a>
+    <div style="display:flex;align-items:center;flex-wrap:wrap;gap:.5rem">
+      <span style="font-size:11px;font-weight:500;letter-spacing:.8px;text-transform:uppercase;color:var(--taupe);margin-right:.25rem;white-space:nowrap">Guides</span>
+      <a href="/first-time-buyer-guide.html" style="font-size:12px;color:var(--muted);text-decoration:none;padding:4px 11px;border:1px solid var(--border);border-radius:3px;transition:all .15s;white-space:nowrap" onmouseover="this.style.borderColor='var(--amber)';this.style.color='var(--ink)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)'">First-Time Buyer</a>
+      <a href="/condo-buying-guide.html" style="font-size:12px;color:var(--muted);text-decoration:none;padding:4px 11px;border:1px solid var(--border);border-radius:3px;transition:all .15s;white-space:nowrap" onmouseover="this.style.borderColor='var(--amber)';this.style.color='var(--ink)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)'">Condo Buying</a>
       <a href="/checklist.html" style="font-size:12px;color:var(--muted);text-decoration:none;padding:4px 11px;border:1px solid var(--border);border-radius:3px;transition:all .15s;white-space:nowrap" onmouseover="this.style.borderColor='var(--amber)';this.style.color='var(--ink)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)'">Buyer Checklist</a>
-      <a href="/calculators.html" style="font-size:12px;color:var(--muted);text-decoration:none;padding:4px 11px;border:1px solid var(--border);border-radius:3px;transition:all .15s;white-space:nowrap" onmouseover="this.style.borderColor='var(--amber)';this.style.color='var(--ink)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)'">Closing Cost Calculator</a>
+      <a href="/calculators.html" style="font-size:12px;color:var(--muted);text-decoration:none;padding:4px 11px;border:1px solid var(--border);border-radius:3px;transition:all .15s;white-space:nowrap" onmouseover="this.style.borderColor='var(--amber)';this.style.color='var(--ink)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)'">Closing Costs</a>
       <a href="/offer-strategy.html" style="font-size:12px;color:var(--muted);text-decoration:none;padding:4px 11px;border:1px solid var(--border);border-radius:3px;transition:all .15s;white-space:nowrap" onmouseover="this.style.borderColor='var(--amber)';this.style.color='var(--ink)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)'">Offer Strategy</a>
-      <a href="/how-cashback-works.html" style="font-size:12px;color:var(--muted);text-decoration:none;padding:4px 11px;border:1px solid var(--border);border-radius:3px;transition:all .15s;white-space:nowrap" onmouseover="this.style.borderColor='var(--amber)';this.style.color='var(--ink)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)'">How Cashback Works</a>
+      <a href="/how-cashback-works.html" style="font-size:12px;color:var(--muted);text-decoration:none;padding:4px 11px;border:1px solid var(--border);border-radius:3px;transition:all .15s;white-space:nowrap" onmouseover="this.style.borderColor='var(--amber)';this.style.color='var(--ink)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)'">How It Works</a>
     </div>
   </div>
 </section>
