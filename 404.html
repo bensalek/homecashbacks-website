@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Page Not Found | HomeCashbacks</title>
+<meta name="description" content="This page doesn't exist. Find a cash back realtor in Toronto, North York, Etobicoke, Scarborough, or Mississauga."/>
+<meta name="robots" content="noindex, follow"/>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#1a2332;
+  --amber:#e8a020;
+  --white:#ffffff;
+  --muted:#5a6a82;
+  --border:#e2eaf2;
+  --bg:#f0f4f8;
+}
+body{font-family:'Outfit',sans-serif;background:var(--ink);min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:2rem;text-align:center;position:relative;overflow:hidden}
+
+/* Background rings */
+body::before{content:'';position:absolute;top:-100px;right:-100px;width:500px;height:500px;border-radius:50%;border:80px solid rgba(232,160,32,.04);pointer-events:none}
+body::after{content:'';position:absolute;bottom:-120px;left:-80px;width:380px;height:380px;border-radius:50%;border:60px solid rgba(232,160,32,.03);pointer-events:none}
+
+.wrap{max-width:560px;position:relative;z-index:1}
+
+.code{font-size:clamp(80px,18vw,140px);font-weight:700;color:var(--amber);line-height:1;letter-spacing:-6px;opacity:.15;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none;white-space:nowrap;z-index:0}
+
+.eyebrow{font-size:11px;font-weight:500;letter-spacing:1.4px;text-transform:uppercase;color:var(--amber);margin-bottom:1rem}
+
+.heading{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,5vw,44px);font-weight:600;color:var(--white);line-height:1.1;margin-bottom:1rem;position:relative;z-index:1}
+.heading em{font-style:italic;color:var(--amber)}
+
+.sub{font-size:15px;color:rgba(232,237,245,.45);line-height:1.75;margin-bottom:2.5rem;max-width:420px;margin-left:auto;margin-right:auto}
+
+/* City links */
+.city-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:.5rem;margin-bottom:2rem}
+.city-pill{padding:7px 16px;border-radius:4px;border:1px solid rgba(255,255,255,.12);font-size:13px;color:rgba(255,255,255,.55);text-decoration:none;transition:all .2s;font-family:'Outfit',sans-serif;font-weight:500}
+.city-pill:hover{border-color:var(--amber);color:var(--white);background:rgba(232,160,32,.08)}
+
+.divider{width:40px;height:1px;background:rgba(255,255,255,.1);margin:0 auto 2rem}
+
+/* CTA */
+.cta-btn{background:var(--amber);color:var(--ink);padding:13px 28px;border-radius:4px;font-size:14px;font-weight:700;border:none;cursor:pointer;font-family:'Outfit',sans-serif;text-decoration:none;display:inline-block;transition:opacity .2s;margin-bottom:.75rem}
+.cta-btn:hover{opacity:.85}
+.cta-note{font-size:12px;color:rgba(255,255,255,.25);display:block}
+
+/* Home link */
+.home-link{display:inline-flex;align-items:center;gap:.4rem;font-size:13px;color:rgba(255,255,255,.35);text-decoration:none;margin-top:1.5rem;transition:color .2s}
+.home-link:hover{color:var(--white)}
+.home-link svg{width:14px;height:14px}
+
+@media(max-width:480px){
+  .city-grid{gap:.4rem}
+  .city-pill{font-size:12px;padding:6px 12px}
+}
+</style>
+<link rel="preload" href="/assets/fonts/outfit-v15-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/cormorant-garamond-v21-latin-600.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/fonts.css">
+<link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+</head>
+<body>
+
+<div class="wrap">
+  <div class="eyebrow">404 · Page not found</div>
+
+  <h1 class="heading">This page doesn't exist.<br><em>Your cashback does.</em></h1>
+
+  <p class="sub">The page you were looking for isn't here. Pick a city below or book a free showing and we will take it from there.</p>
+
+  <div class="city-grid">
+    <a href="/toronto-cashback-realtor.html" class="city-pill">Toronto</a>
+    <a href="/north-york-cashback-realtor.html" class="city-pill">North York</a>
+    <a href="/etobicoke-cashback-realtor.html" class="city-pill">Etobicoke</a>
+    <a href="/scarborough-cashback-realtor.html" class="city-pill">Scarborough</a>
+    <a href="/mississauga-cashback-realtor.html" class="city-pill">Mississauga</a>
+  </div>
+
+  <div class="divider"></div>
+
+  <a href="/" class="cta-btn">Book a Free Showing</a>
+  <span class="cta-note">Flat $4,999 fee · Licensed with RECO · First showing free</span>
+
+  <a href="/" class="home-link">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+    Back to homepage
+  </a>
+</div>
+
+</body>
+</html>
