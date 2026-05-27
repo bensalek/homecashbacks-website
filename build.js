@@ -16,7 +16,7 @@ const footer   = fs.readFileSync(path.join(COMPONENTS_DIR, 'footer.html'), 'utf8
 const sharedJs = fs.readFileSync(path.join(ASSETS_DIR,     'shared.js'),   'utf8');
 
 // Netlify form detection — off-screen, never visible
-const NETLIFY_FORM = '<div aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden"><form name="contact" data-netlify="true" netlify-honeypot="bot-field"><input type="text" name="name"/><input type="text" name="email"/><input type="tel" name="phone"/><input type="hidden" name="source"/></form></div>';
+const NETLIFY_FORM = '<div aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden"><form name="contact" data-netlify="true" netlify-honeypot="bot-field"><input type="text" name="name" tabindex="-1"/><input type="text" name="email" tabindex="-1"/><input type="tel" name="phone" tabindex="-1"/><input type="hidden" name="source" tabindex="-1"/></form></div>';
 
 // Prepare /dist
 if (fs.existsSync(DIST_DIR)) fs.rmSync(DIST_DIR, { recursive: true });
