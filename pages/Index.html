@@ -178,20 +178,10 @@ nav{position:fixed;top:58px;left:0;right:0;z-index:570;background:#f0f4f8;border
 /* CASHBACK CALCULATOR */
 .calc-section{background:var(--white);padding:3rem 2rem;border-top:1px solid var(--border)}
 .calc-section-inner{max-width:680px;margin:0 auto}
-.trust-section{background:#1a2332;padding:3rem 2rem;border-top:1px solid rgba(255,255,255,.06)}
-.trust-inner{max-width:680px;margin:0 auto}
+.trust-section{background:#1a2332;padding:3rem 2rem;border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06)}
 .trust-eyebrow{font-size:11px;font-weight:500;letter-spacing:1.2px;text-transform:uppercase;color:var(--amber);margin-bottom:.5rem}
 .trust-title{font-family:'Cormorant Garamond',serif;font-size:clamp(22px,3vw,32px);font-weight:600;color:var(--white);line-height:1.15;margin-bottom:2rem}
-.trust-item{padding:1.25rem 0;border-bottom:1px solid rgba(255,255,255,.08);cursor:pointer}
-.trust-item-last{border-bottom:none}
-.trust-q-row{display:flex;justify-content:space-between;align-items:center;gap:1rem}
-.trust-q{font-size:15px;font-weight:600;color:var(--white);margin:0;line-height:1.4}
-.trust-icon{font-size:20px;color:var(--amber);flex-shrink:0;transition:transform .25s;line-height:1}
-.trust-item.open .trust-icon{transform:rotate(45deg)}
-.trust-a{font-size:14px;color:rgba(232,237,245,.65);line-height:1.85;margin:0;max-height:0;overflow:hidden;transition:max-height .3s ease,margin .3s ease}
-.trust-item.open .trust-a{max-height:400px;margin-top:.75rem}
-.trust-a a{color:var(--amber);text-decoration:none}
-.trust-a a:hover{text-decoration:underline}
+
 .calc-banner{text-align:center;background:rgba(255,255,255,.05);border:1px solid rgba(232,160,32,.15);border-radius:6px;padding:1.75rem 2rem;margin-bottom:1.75rem}
 .calc-banner-label{font-size:13px;color:rgba(255,255,255,.5);margin-bottom:.35rem}
 .calc-banner-amt{font-size:54px;font-weight:700;color:#e8a020;line-height:1;letter-spacing:-2px}
@@ -621,8 +611,8 @@ footer a{color:#e8a020;text-decoration:none}
 
 .how-section{background:#1a2332;padding:3rem 2rem;border-top:1px solid rgba(255,255,255,.06)}
 .how-eyebrow{font-size:10px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:var(--taupe);margin-bottom:.5rem}
-.how-title{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,4vw,38px);font-weight:600;color:var(--ink);line-height:1.1;margin-bottom:1rem}
-.how-intro{font-size:15px;color:var(--muted);line-height:1.8;max-width:620px;margin-bottom:2.5rem}
+.how-title{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,4vw,38px);font-weight:600;color:var(--white);line-height:1.1;margin-bottom:1rem}
+.how-intro{font-size:15px;color:rgba(232,237,245,.6);line-height:1.8;max-width:620px;margin-bottom:2.5rem}
 .who-section{background:var(--bg);border-top:1px solid var(--border)}
 .who-card-desc-short{display:none;font-size:12px;color:var(--muted);line-height:1.5}
 
@@ -711,16 +701,16 @@ footer a{color:#e8a020;text-decoration:none}
 
 /* DESKTOP: Option 1 — alternating spine */
 .how-steps-desktop{display:none;position:relative;max-width:780px;margin:0 auto}
-.how-spine{position:absolute;left:50%;top:0;bottom:0;width:1px;background:var(--border);transform:translateX(-50%)}
-.how-step{display:grid;grid-template-columns:1fr 40px 1fr;align-items:center;gap:0;margin-bottom:0;min-height:88px}
-.how-step-left{text-align:right;padding:1.25rem 2rem 1.25rem 0}
-.how-step-right{text-align:left;padding:1.25rem 0 1.25rem 2rem}
-.how-step-empty{text-align:right;padding:1.25rem 2rem 1.25rem 0;opacity:0;pointer-events:none}
+.how-spine{position:absolute;left:50%;top:0;bottom:0;width:1px;background:rgba(255,255,255,.1);transform:translateX(-50%)}
+.how-step{display:grid;grid-template-columns:1fr 40px 1fr;align-items:center;gap:0;margin-bottom:0;min-height:60px}
+.how-step-left{text-align:right;padding:.85rem 2rem .85rem 0}
+.how-step-right{text-align:left;padding:.85rem 0 .85rem 2rem}
+.how-step-empty{text-align:right;padding:.85rem 2rem .85rem 0;opacity:0;pointer-events:none}
 .how-step-center{display:flex;align-items:center;justify-content:center;flex-shrink:0;position:relative;z-index:2}
-.how-step-num{width:36px;height:36px;border-radius:50%;background:#1a2332;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600;color:#fff;font-family:'Outfit',sans-serif;flex-shrink:0}
+.how-step-num{width:36px;height:36px;border-radius:50%;background:#2d3d52;border:1px solid rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600;color:#fff;font-family:'Outfit',sans-serif;flex-shrink:0}
 .how-step-num--highlight{background:#e8a020;color:#1a2332}
-.how-step-name{font-size:13px;font-weight:600;color:var(--ink);margin-bottom:.2rem;line-height:1.3}
-.how-step-desc{font-size:12px;color:var(--muted);line-height:1.6}
+.how-step-name{font-size:13px;font-weight:600;color:var(--white);margin-bottom:.2rem;line-height:1.3}
+.how-step-desc{font-size:12px;color:rgba(232,237,245,.6);line-height:1.6}
 .how-step-name--highlight{color:#e8a020}
 .how-step-desc--highlight{color:rgba(232,237,245,.65)}
 .how-step--dark .how-step-left,.how-step--dark .how-step-right{background:#1a2332;border-radius:6px;padding:1.25rem 1.5rem}
@@ -864,6 +854,17 @@ footer a{color:#e8a020;text-decoration:none}
 .top-btn-wa-label{display:inline}
 @media(max-width:400px){.top-btn-wa{padding:8px 10px}.top-btn-wa-label{display:none}}
 
+
+.trust-inner{max-width:1100px;margin:0 auto}
+.trust-cards{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1.25rem;margin-top:1.5rem}
+.trust-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:6px;padding:2rem}
+.trust-card-q{font-size:18px;font-weight:600;color:var(--white);margin:0 0 1rem;line-height:1.4;letter-spacing:-.2px}
+.trust-card-a{font-size:14px;color:rgba(232,237,245,.8);line-height:1.8;margin:0}
+.trust-guide-link{margin-top:1.5rem;font-size:13px;color:rgba(232,237,245,.45)}
+@media(max-width:768px){
+  .trust-cards{grid-template-columns:1fr}
+  .trust-card{padding:1.25rem}
+}
 </style>
 
 <script type="application/ld+json">
@@ -1178,33 +1179,26 @@ footer a{color:#e8a020;text-decoration:none}
   <div class="trust-inner">
     <div class="trust-eyebrow">We get it</div>
     <h2 class="trust-title">This sounds too good to be true.</h2>
-    <div class="trust-item" onclick="this.classList.toggle('open')">
-      <div class="trust-q-row">
-        <p class="trust-q">This seems too good to be true. Why don't other realtors do this?</p>
-        <span class="trust-icon">+</span>
+    <div class="trust-cards">
+      <div class="trust-card">
+        <p class="trust-card-q">This seems too good to be true. Why don't other realtors do this?</p>
+        <p class="trust-card-a">Most don't because they don't have to. The traditional commission on a $1M Toronto home is $25,000 -- that money covers brokerage splits, referral fees, office costs, and yes, the expensive cars you see on real estate Instagram. We run lean. No middlemen, no overhead. We charge for the actual work and return the rest. The commission was always your money.</p>
       </div>
-      <p class="trust-a">Most don't because they don't have to. The traditional commission on a $1M Toronto home is $25,000 -- that money covers brokerage splits, referral fees, office costs, and yes, the expensive cars you see on real estate Instagram. We run lean. No middlemen, no overhead. We charge for the actual work and return the rest. The commission was always your money.</p>
-    </div>
-    <div class="trust-item" onclick="this.classList.toggle('open')">
-      <div class="trust-q-row">
-        <p class="trust-q">If you charge less, will I get worse service?</p>
-        <span class="trust-icon">+</span>
+      <div class="trust-card">
+        <p class="trust-card-q">If you charge less, will I get worse service?</p>
+        <p class="trust-card-a">No. We personally attend every showing, write every offer, and are your single point of contact from first showing to closing. You are not passed to a coordinator or a rotating team. The fee is lower because we run lean -- not because anything is cut.</p>
       </div>
-      <p class="trust-a">No. We personally attend every showing, write every offer, and are your single point of contact from first showing to closing. You are not passed to a coordinator or a rotating team. The fee is lower because we run lean -- not because anything is cut.</p>
-    </div>
-    <div class="trust-item trust-item-last" onclick="this.classList.toggle('open')">
-      <div class="trust-q-row">
-        <p class="trust-q">How do I know I can trust this?</p>
-        <span class="trust-icon">+</span>
-      </div>
-      <div class="trust-a">
-        <p style="margin:0 0 .6rem"><strong style="color:rgba(232,237,245,.9)">First</strong> -- RECO-registered and verifiable at <a href="https://registrantsearch.reco.on.ca/" target="_blank" rel="noopener" style="color:var(--amber)">registrantsearch.reco.on.ca</a></p>
-        <p style="margin:0 0 .6rem"><strong style="color:rgba(232,237,245,.9)">Second</strong> -- your cashback is written into the buyer representation agreement before any offers. A legal commitment, not a promise.</p>
-        <p style="margin:0"><strong style="color:rgba(232,237,245,.9)">Third</strong> -- real clients. Real reviews. 5 stars on Google.</p>
+      <div class="trust-card">
+        <p class="trust-card-q">How do I know I can trust this?</p>
+        <div class="trust-card-a">
+          <p style="margin:0 0 .6rem"><strong style="color:#fff">First</strong> -- RECO-registered and verifiable at <a href="https://registrantsearch.reco.on.ca/" target="_blank" rel="noopener" style="color:var(--amber)">registrantsearch.reco.on.ca</a></p>
+          <p style="margin:0 0 .6rem"><strong style="color:#fff">Second</strong> -- your cashback is written into the buyer representation agreement before any offers. A legal commitment, not a promise.</p>
+          <p style="margin:0"><strong style="color:#fff">Third</strong> -- real clients. Real reviews. 5 stars on Google.</p>
+        </div>
       </div>
     </div>
+    <p class="trust-guide-link">Still evaluating? <a href="/choose-cashback-realtor-toronto.html" style="color:var(--amber);text-decoration:none;font-weight:500">How to choose the best cashback realtor in Toronto →</a></p>
   </div>
-  <p style="margin-top:1.5rem;font-size:13px;color:rgba(232,237,245,.45)">Still evaluating? <a href="/choose-cashback-realtor-toronto.html" style="color:var(--amber);text-decoration:none;font-weight:500">How to choose the best cashback realtor in Toronto →</a></p>
 </section>
 <section class="testi-section section">
   <div class="sec-inner">
