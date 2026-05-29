@@ -24,6 +24,7 @@
 {
   "@context": "https://schema.org",
   "@type": "RealEstateAgent",
+  "dateModified": "2026-05-27",
   "name": "HomeCashbacks",
   "description": "Licensed GTA realtor offering flat fee home buying with cashback to buyers.",
   "url": "https://homecashbacks.ca",
@@ -133,6 +134,10 @@ nav{position:fixed;top:58px;left:0;right:0;z-index:570;background:#f0f4f8;border
 .hero{background:#1a2332;padding:3.5rem 2rem;text-align:center;position:relative;overflow:hidden;isolation:isolate}
 .hero::before{content:'';position:absolute;top:-60px;right:-60px;width:300px;height:300px;border-radius:50%;border:50px solid rgba(37,99,235,.15)}
 .hero::after{content:'';position:absolute;bottom:-80px;left:-40px;width:220px;height:220px;border-radius:50%;border:36px solid rgba(37,99,235,.1)}
+.hero-stats{display:flex;justify-content:center;gap:44px;flex-wrap:wrap;position:relative;z-index:1;border-top:1px solid rgba(255,255,255,.1);padding-top:2rem;margin-top:2rem}
+.hero-stat{text-align:center}
+.hero-stat-val{font-family:'Cormorant Garamond',serif;font-size:clamp(24px,3.5vw,36px);font-weight:600;color:var(--white);line-height:1}
+.hero-stat-label{font-size:11px;color:rgba(232,237,245,.45);margin-top:.35rem}
 .hero-tag{display:inline-flex;align-items:center;gap:6px;background:rgba(232,160,32,.15);color:#e8a020;font-size:11px;font-weight:500;letter-spacing:1.2px;text-transform:uppercase;padding:5px 13px;border-radius:3px;margin-bottom:1.25rem}
 .hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,5.5vw,58px);font-weight:600;color:#fff;line-height:1.07;margin-bottom:.9rem;position:relative;z-index:1}
 .hero h1 em{font-style:italic;color:#e8edf5}
@@ -171,8 +176,22 @@ nav{position:fixed;top:58px;left:0;right:0;z-index:570;background:#f0f4f8;border
 
 
 /* CASHBACK CALCULATOR */
-.calc-section{background:#1a2332;padding:3rem 2rem}
+.calc-section{background:var(--white);padding:3rem 2rem;border-top:1px solid var(--border)}
 .calc-section-inner{max-width:680px;margin:0 auto}
+.trust-section{background:#1a2332;padding:3rem 2rem;border-top:1px solid rgba(255,255,255,.06)}
+.trust-inner{max-width:680px;margin:0 auto}
+.trust-eyebrow{font-size:11px;font-weight:500;letter-spacing:1.2px;text-transform:uppercase;color:var(--amber);margin-bottom:.5rem}
+.trust-title{font-family:'Cormorant Garamond',serif;font-size:clamp(22px,3vw,32px);font-weight:600;color:var(--white);line-height:1.15;margin-bottom:2rem}
+.trust-item{padding:1.25rem 0;border-bottom:1px solid rgba(255,255,255,.08);cursor:pointer}
+.trust-item-last{border-bottom:none}
+.trust-q-row{display:flex;justify-content:space-between;align-items:center;gap:1rem}
+.trust-q{font-size:15px;font-weight:600;color:var(--white);margin:0;line-height:1.4}
+.trust-icon{font-size:20px;color:var(--amber);flex-shrink:0;transition:transform .25s;line-height:1}
+.trust-item.open .trust-icon{transform:rotate(45deg)}
+.trust-a{font-size:14px;color:rgba(232,237,245,.65);line-height:1.85;margin:0;max-height:0;overflow:hidden;transition:max-height .3s ease,margin .3s ease}
+.trust-item.open .trust-a{max-height:400px;margin-top:.75rem}
+.trust-a a{color:var(--amber);text-decoration:none}
+.trust-a a:hover{text-decoration:underline}
 .calc-banner{text-align:center;background:rgba(255,255,255,.05);border:1px solid rgba(232,160,32,.15);border-radius:6px;padding:1.75rem 2rem;margin-bottom:1.75rem}
 .calc-banner-label{font-size:13px;color:rgba(255,255,255,.5);margin-bottom:.35rem}
 .calc-banner-amt{font-size:54px;font-weight:700;color:#e8a020;line-height:1;letter-spacing:-2px}
@@ -577,7 +596,10 @@ footer a{color:#e8a020;text-decoration:none}
   .res-link-desc{display:none}
   .res-link{padding:.85rem}
   .faq-section{padding:1.75rem 1.25rem}
+  .hero-stats{gap:24px;padding-top:1.5rem;margin-top:1.5rem}
+  .hero-stat-val{font-size:22px}
   .calc-section{padding:1.75rem 1.25rem}
+  .trust-section{padding:1.75rem 1.25rem}
   .why-exist{padding:1.75rem 1.25rem}
   .hero{padding:2rem 1.25rem}
 
@@ -597,15 +619,15 @@ footer a{color:#e8a020;text-decoration:none}
   .who-areas{margin-top:0;padding-top:0;border-top:none}
 }
 
-.how-section{background:var(--bg);padding:3rem 2rem;border-top:1px solid var(--border)}
+.how-section{background:#1a2332;padding:3rem 2rem;border-top:1px solid rgba(255,255,255,.06)}
 .how-eyebrow{font-size:10px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:var(--taupe);margin-bottom:.5rem}
 .how-title{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,4vw,38px);font-weight:600;color:var(--ink);line-height:1.1;margin-bottom:1rem}
 .how-intro{font-size:15px;color:var(--muted);line-height:1.8;max-width:620px;margin-bottom:2.5rem}
-.who-section{background:var(--white);border-top:1px solid var(--border)}
+.who-section{background:var(--bg);border-top:1px solid var(--border)}
 .who-card-desc-short{display:none;font-size:12px;color:var(--muted);line-height:1.5}
 
 /* TESTIMONIALS */
-.testi-section{background:var(--bg);border-top:1px solid var(--border)}
+.testi-section{background:var(--white);border-top:1px solid var(--border)}
 .testi-top{display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;margin-bottom:1.75rem;flex-wrap:wrap}
 .testi-google-badge{display:inline-flex;align-items:center;gap:.6rem;background:var(--white);border:1px solid var(--border);border-radius:6px;padding:.6rem 1rem;text-decoration:none;transition:border-color .2s;flex-shrink:0;align-self:flex-end}
 .testi-google-badge:hover{border-color:var(--amber)}
@@ -750,7 +772,7 @@ footer a{color:#e8a020;text-decoration:none}
 .cmp-col--them .cmp-item-val{color:var(--ink2)}
 .cmp-col--us .cmp-item-val{color:rgba(232,237,245,.8)}
 @media(max-width:680px){.cmp-cards{grid-template-columns:1fr}}
-.hero-million{font-family:'Outfit',sans-serif;font-size:clamp(24px,5vw,44px);font-weight:400;color:rgba(232,237,245,.85);line-height:1.15;margin:0 auto 2rem;max-width:600px}
+.hero-million{font-family:'Outfit',sans-serif;font-size:clamp(28px,5.5vw,52px);font-weight:500;color:rgba(232,237,245,.9);line-height:1.15;margin:0 auto 2rem;max-width:600px}
 .hero-million em{color:#e8a020;font-style:normal;font-family:'Outfit',sans-serif}
 
 .cl-toggle-btn{padding:9px 20px;border:1.5px solid var(--border);border-radius:4px;font-size:13px;font-weight:500;font-family:'Outfit',sans-serif;color:var(--ink);background:var(--white);cursor:pointer;transition:all .2s;white-space:nowrap}
@@ -1083,10 +1105,168 @@ footer a{color:#e8a020;text-decoration:none}
 
 <!-- HERO -->
 <section class="hero">
+  <div class="hero-tag">Toronto's Best Cashback Realtor</div>
   <h1>Full Service Toronto Realtor.<br><em>Cashback on Every Purchase.</em></h1>
   <p class="hero-million">On a $1M home<br>you earn <em>$20,000 back.</em></p>
   <div class="hero-btns">
     <button class="btn-primary" onclick="openModal()">Get My Cashback Estimate</button>
+  </div>
+  <div class="hero-stats">
+    <div class="hero-stat">
+      <div class="hero-stat-val">Free</div>
+      <div class="hero-stat-label">First showing</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-val">Free</div>
+      <div class="hero-stat-label">All offers</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-val">$30</div>
+      <div class="hero-stat-label">Per additional showing</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-val">$4,999</div>
+      <div class="hero-stat-label">Flat fee, total</div>
+    </div>
+  </div>
+</section>
+
+<!-- CASHBACK CALCULATOR -->
+<section class="calc-section" id="calculator">
+  <div class="calc-section-inner">
+    <div class="calc-card">
+      <div class="calc-card-eyebrow">Cashback calculator</div>
+      <div class="calc-card-title">What does your number look like?</div>
+      <div class="calc-inputs-row" style="display:flex;align-items:flex-end;gap:.75rem;margin-bottom:1.25rem">
+        <div style="display:flex;flex-direction:column;gap:.35rem;width:190px">
+          <label class="calc-input-label" for="price-text">Home price</label>
+          <div class="calc-price-wrap">
+            <span class="calc-price-sym">$</span>
+            <input class="calc-price-input" type="text" id="price-text" aria-label="Home price" value="900,000" inputmode="numeric" autocomplete="off"/>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:.35rem;width:120px">
+          <label class="calc-input-label" for="commission-pct">Buyer commission</label>
+          <div class="calc-pct-wrap">
+            <input class="calc-pct-input" type="number" id="commission-pct" aria-label="Buyer commission percentage" value="2.5" min="1" max="5" step="0.25"/>
+            <span class="calc-pct-sym">%</span>
+          </div>
+        </div>
+      </div>
+      <div class="calc-slider-wrap">
+        <input type="range" id="price-slider" aria-label="Home price slider" class="calc-slider" min="300000" max="3000000" step="10000" value="900000"/>
+        <div class="calc-ticks">
+          <span>$300K</span><span>$750K</span><span>$1.2M</span><span>$1.65M</span><span>$2.1M</span><span>$3M</span>
+        </div>
+      </div>
+      <div class="calc-result">
+        <div class="calc-result-label">Your estimated cashback</div>
+        <div class="calc-result-amt" id="calc-cashback">$17,501</div>
+      </div>
+      <div class="calc-stat">
+        <div class="calc-stat-label">Use your cashback to</div>
+        <div class="calc-stat-val" id="cv-mortgage">cover 3 months of mortgage</div>
+        <div class="calc-stat-sub">Move in. Breathe.</div>
+      </div>
+      <div class="calc-note">Estimates only. Amount depends on the seller's commission offer.</div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST QUESTIONS -->
+<section class="trust-section">
+  <div class="trust-inner">
+    <div class="trust-eyebrow">We get it</div>
+    <h2 class="trust-title">This sounds too good to be true.</h2>
+    <div class="trust-item" onclick="this.classList.toggle('open')">
+      <div class="trust-q-row">
+        <p class="trust-q">This seems too good to be true. Why don't other realtors do this?</p>
+        <span class="trust-icon">+</span>
+      </div>
+      <p class="trust-a">Most don't because they don't have to. The traditional commission on a $1M Toronto home is $25,000 -- that money covers brokerage splits, referral fees, office costs, and yes, the expensive cars you see on real estate Instagram. We run lean. No middlemen, no overhead. We charge for the actual work and return the rest. The commission was always your money.</p>
+    </div>
+    <div class="trust-item" onclick="this.classList.toggle('open')">
+      <div class="trust-q-row">
+        <p class="trust-q">If you charge less, will I get worse service?</p>
+        <span class="trust-icon">+</span>
+      </div>
+      <p class="trust-a">No. We personally attend every showing, write every offer, and are your single point of contact from first showing to closing. You are not passed to a coordinator or a rotating team. The fee is lower because we run lean -- not because anything is cut.</p>
+    </div>
+    <div class="trust-item trust-item-last" onclick="this.classList.toggle('open')">
+      <div class="trust-q-row">
+        <p class="trust-q">How do I know I can trust this?</p>
+        <span class="trust-icon">+</span>
+      </div>
+      <div class="trust-a">
+        <p style="margin:0 0 .6rem"><strong style="color:rgba(232,237,245,.9)">First</strong> -- RECO-registered and verifiable at <a href="https://registrantsearch.reco.on.ca/" target="_blank" rel="noopener" style="color:var(--amber)">registrantsearch.reco.on.ca</a></p>
+        <p style="margin:0 0 .6rem"><strong style="color:rgba(232,237,245,.9)">Second</strong> -- your cashback is written into the buyer representation agreement before any offers. A legal commitment, not a promise.</p>
+        <p style="margin:0"><strong style="color:rgba(232,237,245,.9)">Third</strong> -- real clients. Real reviews. 5 stars on Google.</p>
+      </div>
+    </div>
+  </div>
+  <p style="margin-top:1.5rem;font-size:13px;color:rgba(232,237,245,.45)">Still evaluating? <a href="/choose-cashback-realtor-toronto.html" style="color:var(--amber);text-decoration:none;font-weight:500">How to choose the best cashback realtor in Toronto →</a></p>
+</section>
+<section class="testi-section section">
+  <div class="sec-inner">
+
+    <div class="testi-top">
+      <div>
+        <div class="eyebrow">What clients say</div>
+        <h2 class="sec-title">Trusted by GTA buyers</h2>
+      </div>
+      <a href="https://g.co/kgs/homecashbacks" target="_blank" rel="noopener" class="testi-google-badge">
+        <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+        <div class="testi-google-text">
+          <span class="testi-google-stars">★★★★★</span>
+          <span class="testi-google-label">5.0 on Google</span>
+        </div>
+      </a>
+    </div>
+
+    <div class="testi-grid">
+
+      <div class="testi-card testi-card--featured">
+        <div class="testi-stars">★★★★★</div>
+        <div class="testi-quote-mark">"</div>
+        <p class="testi-quote">Laleh has a real gift with people. During our condo search she spoke directly with residents in the building to get the inside story. things you'd never find online. And when it came to negotiating, she was sharp and confident. We felt genuinely looked after.</p>
+        <div class="testi-author">
+          <div class="testi-avatar" style="background:var(--gold-light);color:var(--amber-dark)">NG</div>
+          <div>
+            <div class="testi-detail">First-time condo buyer · Toronto</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <div class="testi-quote-mark">"</div>
+        <p class="testi-quote">What I appreciated most was that Laleh never pushed us toward buying. She explained the cashback model clearly, it felt completely fair, and there was zero pressure. It made a stressful process feel honest for once.</p>
+        <div class="testi-author">
+          <div class="testi-avatar" style="background:var(--bg2);color:var(--ink2)">AH</div>
+          <div>
+            <div class="testi-detail">First-time buyer · Etobicoke</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <div class="testi-quote-mark">"</div>
+        <p class="testi-quote">Responsive, organized, and professional throughout the entire process. Every question got a fast and clear answer. When you're making the biggest purchase of your life, that kind of communication matters more than people realize.</p>
+        <div class="testi-author">
+          <div class="testi-avatar" style="background:var(--bg2);color:var(--ink2)">MA</div>
+          <div>
+            <div class="testi-detail">Home buyer · Richmond Hill</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="testi-dots" id="testi-dots" style="display:none">
+      <button class="testi-dot active" onclick="testiGoTo(0)"></button>
+      <button class="testi-dot" onclick="testiGoTo(1)"></button>
+      <button class="testi-dot" onclick="testiGoTo(2)"></button>
+    </div>
   </div>
 </section>
 
@@ -1185,55 +1365,6 @@ footer a{color:#e8a020;text-decoration:none}
 
   </div>
 </section>
-
-<!-- CASHBACK CALCULATOR -->
-<section class="calc-section" id="calculator">
-  <div class="calc-section-inner">
-    <div class="calc-banner">
-      <div class="calc-banner-label">Home Cashbacks clients save</div>
-      <div class="calc-banner-amt">$20,000</div>
-      <div class="calc-banner-sub">on average</div>
-    </div>
-    <div class="calc-card">
-      <div class="calc-card-eyebrow">Cashback calculator</div>
-      <div class="calc-card-title">What does your number look like?</div>
-      <div class="calc-inputs-row" style="display:flex;align-items:flex-end;gap:.75rem;margin-bottom:1.25rem">
-        <div style="display:flex;flex-direction:column;gap:.35rem;width:190px">
-          <label class="calc-input-label" for="price-text">Home price</label>
-          <div class="calc-price-wrap">
-            <span class="calc-price-sym">$</span>
-            <input class="calc-price-input" type="text" id="price-text" aria-label="Home price" value="900,000" inputmode="numeric" autocomplete="off"/>
-          </div>
-        </div>
-        <div style="display:flex;flex-direction:column;gap:.35rem;width:120px">
-          <label class="calc-input-label" for="commission-pct">Buyer commission</label>
-          <div class="calc-pct-wrap">
-            <input class="calc-pct-input" type="number" id="commission-pct" aria-label="Buyer commission percentage" value="2.5" min="1" max="5" step="0.25"/>
-            <span class="calc-pct-sym">%</span>
-          </div>
-        </div>
-      </div>
-      <div class="calc-slider-wrap">
-        <input type="range" id="price-slider" aria-label="Home price slider" class="calc-slider" min="300000" max="3000000" step="10000" value="900000"/>
-        <div class="calc-ticks">
-          <span>$300K</span><span>$750K</span><span>$1.2M</span><span>$1.65M</span><span>$2.1M</span><span>$3M</span>
-        </div>
-      </div>
-      <div class="calc-result">
-        <div class="calc-result-label">Your estimated cashback</div>
-        <div class="calc-result-amt" id="calc-cashback">$17,501</div>
-      </div>
-      <div class="calc-stat">
-        <div class="calc-stat-label">Use your cashback to</div>
-        <div class="calc-stat-val" id="cv-mortgage">cover 3 months of mortgage</div>
-        <div class="calc-stat-sub">Move in. Breathe.</div>
-      </div>
-      <div class="calc-note">Estimates only. Amount depends on the seller's commission offer.</div>
-    </div>
-  </div>
-</section>
-
-
 
 <!-- WHY WE EXIST + COMPARISON -->
 <div class="why-exist">
@@ -1402,70 +1533,6 @@ footer a{color:#e8a020;text-decoration:none}
   </div>
 </section>
 
-<!-- TESTIMONIALS -->
-<section class="testi-section section">
-  <div class="sec-inner">
-
-    <div class="testi-top">
-      <div>
-        <div class="eyebrow">What clients say</div>
-        <h2 class="sec-title">Trusted by GTA buyers</h2>
-      </div>
-      <a href="https://share.google/pJvjug2tBqJqO2zcy" target="_blank" rel="noopener" class="testi-google-badge">
-        <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
-        <div class="testi-google-text">
-          <span class="testi-google-stars">★★★★★</span>
-          <span class="testi-google-label">5.0 on Google</span>
-        </div>
-      </a>
-    </div>
-
-    <div class="testi-grid">
-
-      <div class="testi-card testi-card--featured">
-        <div class="testi-stars">★★★★★</div>
-        <div class="testi-quote-mark">"</div>
-        <p class="testi-quote">Laleh has a real gift with people. During our condo search she spoke directly with residents in the building to get the inside story. things you'd never find online. And when it came to negotiating, she was sharp and confident. We felt genuinely looked after.</p>
-        <div class="testi-author">
-          <div class="testi-avatar" style="background:var(--gold-light);color:var(--amber-dark)">NG</div>
-          <div>
-            <div class="testi-detail">First-time condo buyer · Toronto</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="testi-card">
-        <div class="testi-stars">★★★★★</div>
-        <div class="testi-quote-mark">"</div>
-        <p class="testi-quote">What I appreciated most was that Laleh never pushed us toward buying. She explained the cashback model clearly, it felt completely fair, and there was zero pressure. It made a stressful process feel honest for once.</p>
-        <div class="testi-author">
-          <div class="testi-avatar" style="background:var(--bg2);color:var(--ink2)">AH</div>
-          <div>
-            <div class="testi-detail">First-time buyer · Etobicoke</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="testi-card">
-        <div class="testi-stars">★★★★★</div>
-        <div class="testi-quote-mark">"</div>
-        <p class="testi-quote">Responsive, organized, and professional throughout the entire process. Every question got a fast and clear answer. When you're making the biggest purchase of your life, that kind of communication matters more than people realize.</p>
-        <div class="testi-author">
-          <div class="testi-avatar" style="background:var(--bg2);color:var(--ink2)">MA</div>
-          <div>
-            <div class="testi-detail">Home buyer · Richmond Hill</div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-    <div class="testi-dots" id="testi-dots" style="display:none">
-      <button class="testi-dot active" onclick="testiGoTo(0)"></button>
-      <button class="testi-dot" onclick="testiGoTo(1)"></button>
-      <button class="testi-dot" onclick="testiGoTo(2)"></button>
-    </div>
-  </div>
-</section>
 <script>
 (function(){
   var grid = document.querySelector('.testi-grid');
@@ -1511,6 +1578,7 @@ footer a{color:#e8a020;text-decoration:none}
       <a href="/calculators.html" style="font-size:12px;color:var(--muted);text-decoration:none;padding:4px 11px;border:1px solid var(--border);border-radius:3px;transition:all .15s;white-space:nowrap" onmouseover="this.style.borderColor='var(--amber)';this.style.color='var(--ink)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)'">Closing Costs</a>
       <a href="/offer-strategy.html" style="font-size:12px;color:var(--muted);text-decoration:none;padding:4px 11px;border:1px solid var(--border);border-radius:3px;transition:all .15s;white-space:nowrap" onmouseover="this.style.borderColor='var(--amber)';this.style.color='var(--ink)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)'">Offer Strategy</a>
       <a href="/how-cashback-works.html" style="font-size:12px;color:var(--muted);text-decoration:none;padding:4px 11px;border:1px solid var(--border);border-radius:3px;transition:all .15s;white-space:nowrap" onmouseover="this.style.borderColor='var(--amber)';this.style.color='var(--ink)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)'">How It Works</a>
+      <a href="/choose-cashback-realtor-toronto.html" style="font-size:12px;color:var(--muted);text-decoration:none;padding:4px 11px;border:1px solid var(--border);border-radius:3px;transition:all .15s;white-space:nowrap" onmouseover="this.style.borderColor='var(--amber)';this.style.color='var(--ink)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)'">How to Choose</a>
     </div>
   </div>
 </section>
