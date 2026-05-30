@@ -540,5 +540,17 @@ window.addEventListener('scroll', function(){
   jBtns.forEach(function(b){ b.classList.toggle('active', b.getAttribute('href')==='#'+cur); });
 },{passive:true});
 </script>
+<script>
+(function(){
+  var s=document.getElementById('f-source');
+  if(s)s.value='buyer-mississauga';
+  var _open=window.openModal;
+  window.openModal=function(){
+    var s=document.getElementById('f-source');
+    if(s)s.value='buyer-mississauga';
+    _open();
+  };
+})();
+</script>
 </body>
 </html>

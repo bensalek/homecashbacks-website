@@ -254,14 +254,6 @@ footer a{color:#e8a020;text-decoration:none}
   .hcw-result-amt{font-size:30px}
 }
 </style>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-068EB5V10X"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag("js", new Date());
-  gtag("config", "G-068EB5V10X");
-</script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -839,6 +831,18 @@ function handleFormSubmit(){
     .then(()=>{document.getElementById('modal-form-wrap').style.display='none';document.getElementById('form-success').style.display='block';formEl.reset();})
     .catch(()=>{document.getElementById('modal-form-wrap').style.display='none';document.getElementById('form-success').style.display='block';});
 }
+</script>
+<script>
+(function(){
+  var s=document.getElementById('f-source');
+  if(s)s.value='buyer-how-it-works';
+  var _open=window.openModal;
+  window.openModal=function(){
+    var s=document.getElementById('f-source');
+    if(s)s.value='buyer-how-it-works';
+    _open();
+  };
+})();
 </script>
 </body>
 </html>

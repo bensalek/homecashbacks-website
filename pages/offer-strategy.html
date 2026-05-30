@@ -181,14 +181,6 @@ footer{background:#1a2332;padding:2.5rem 2rem 1.5rem}
   .situation-band,.advice-section,.result-cta{padding:1.25rem}
 }
 </style>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-068EB5V10X"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag("js", new Date());
-  gtag("config", "G-068EB5V10X");
-</script>
 
 <script type="application/ld+json">
 {
@@ -739,6 +731,18 @@ function submitForm(){
 }
 
 render();
+</script>
+<script>
+(function(){
+  var s=document.getElementById('f-source');
+  if(s)s.value='buyer-offer-strategy';
+  var _open=window.openModal;
+  window.openModal=function(){
+    var s=document.getElementById('f-source');
+    if(s)s.value='buyer-offer-strategy';
+    _open();
+  };
+})();
 </script>
 </body>
 </html>

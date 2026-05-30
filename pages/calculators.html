@@ -215,14 +215,6 @@ footer{background:#1a2332;padding:2.5rem 2rem 1.5rem}
   .nav-cred-wrap{flex-direction:row;align-items:center;gap:.5rem}
 }
 </style>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-068EB5V10X"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag("js", new Date());
-  gtag("config", "G-068EB5V10X");
-</script>
 
 <script type="application/ld+json">
 {
@@ -653,6 +645,18 @@ function renderFAQ(){
   });
 }
 renderFAQ();
+</script>
+<script>
+(function(){
+  var s=document.getElementById('f-source');
+  if(s)s.value='buyer-calculators';
+  var _open=window.openModal;
+  window.openModal=function(){
+    var s=document.getElementById('f-source');
+    if(s)s.value='buyer-calculators';
+    _open();
+  };
+})();
 </script>
 </body>
 </html>

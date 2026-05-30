@@ -72,14 +72,6 @@
 }
 </script>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-068EB5V10X"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag("js", new Date());
-  gtag("config", "G-068EB5V10X");
-</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
@@ -750,6 +742,18 @@ function renderFAQ(){
   });
 }
 renderFAQ();
+</script>
+<script>
+(function(){
+  var s=document.getElementById('f-source');
+  if(s)s.value='buyer-first-time-guide';
+  var _open=window.openModal;
+  window.openModal=function(){
+    var s=document.getElementById('f-source');
+    if(s)s.value='buyer-first-time-guide';
+    _open();
+  };
+})();
 </script>
 </body>
 </html>
