@@ -44,7 +44,7 @@ if (fs.existsSync(fontsDir)) {
 }
 
 // Copy root-level files to /dist
-['favicon.ico','favicon.svg','favicon-32.png','apple-touch-icon.png','sitemap.xml','_redirects'].forEach(function(file) {
+['favicon.ico','favicon.svg','favicon-32.png','apple-touch-icon.png','sitemap.xml','_redirects','robots.txt','llms.txt'].forEach(function(file) {
   if (fs.existsSync(file)) {
     fs.copyFileSync(file, path.join(DIST_DIR, file));
     console.log('  copied: ' + file);
