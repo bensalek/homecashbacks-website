@@ -74,20 +74,20 @@
 
 <style>
 .miss-hero{background:var(--ink);padding:3.5rem 2rem 4rem;position:relative;overflow:hidden}
-.miss-hero::before{content:'';position:absolute;top:-60px;right:-60px;width:280px;height:280px;border-radius:50%;border:50px solid rgba(232,160,32,.06)}
-.miss-hero::after{content:'';position:absolute;bottom:-80px;left:-40px;width:200px;height:200px;border-radius:50%;border:36px solid rgba(232,160,32,.04)}
+.miss-hero::before{content:'';position:absolute;top:-60px;right:-60px;width:280px;height:280px;border-radius:50%;border:50px solid rgba(28,134,78,.06)}
+.miss-hero::after{content:'';position:absolute;bottom:-80px;left:-40px;width:200px;height:200px;border-radius:50%;border:36px solid rgba(28,134,78,.04)}
 .miss-hero-inner{max-width:860px;margin:0 auto;position:relative;z-index:1}
 .miss-h1{font-family:'Cormorant Garamond',serif;font-size:clamp(30px,5vw,52px);font-weight:600;color:var(--white);line-height:1.05;margin-bottom:.85rem;letter-spacing:-.5px}
-.miss-h1 em{font-style:italic;color:var(--amber)}
+.miss-h1 em{font-style:italic;color:var(--cta)}
 .miss-hero-sub{font-size:15px;color:rgba(232,237,245,.55);max-width:580px;line-height:1.75;margin-bottom:1.5rem}
 .miss-hero-actions{display:flex;align-items:center;gap:1rem;flex-wrap:wrap}
-.miss-hero-cta{background:var(--amber);color:var(--ink);padding:13px 28px;border-radius:4px;font-size:14px;font-weight:700;border:none;cursor:pointer;font-family:'Outfit',sans-serif;transition:opacity .2s}.miss-hero-cta:hover{opacity:.85}
+.miss-hero-cta{background:var(--cta);color:var(--ink);padding:13px 28px;border-radius:4px;font-size:14px;font-weight:700;border:none;cursor:pointer;font-family:'Rubik',sans-serif;transition:opacity .2s}.miss-hero-cta:hover{opacity:.85}
 .miss-hero-note{font-size:12px;color:rgba(232,237,245,.3)}
 .miss-jump{background:var(--white);border-bottom:1px solid var(--border);padding:.75rem 2rem;position:sticky;top:118px;z-index:300;overflow-x:auto;scrollbar-width:none}
 .miss-jump::-webkit-scrollbar{display:none}
 .miss-jump-inner{max-width:860px;margin:0 auto;display:flex;align-items:center;gap:.5rem;white-space:nowrap}
 .miss-jump-label{font-size:11px;font-weight:500;letter-spacing:.8px;text-transform:uppercase;color:var(--muted);margin-right:.5rem;flex-shrink:0}
-.miss-jbtn{padding:5px 13px;border-radius:4px;border:1px solid var(--border);background:transparent;font-family:'Outfit',sans-serif;font-size:12px;color:var(--muted);cursor:pointer;transition:all .15s;text-decoration:none;display:inline-block}
+.miss-jbtn{padding:5px 13px;border-radius:4px;border:1px solid var(--border);background:transparent;font-family:'Rubik',sans-serif;font-size:12px;color:var(--muted);cursor:pointer;transition:all .15s;text-decoration:none;display:inline-block}
 .miss-jbtn:hover,.miss-jbtn.active{background:var(--ink);color:var(--white);border-color:var(--ink)}
 .miss-section{padding:3rem 2rem}
 .miss-inner{max-width:860px;margin:0 auto}
@@ -95,27 +95,27 @@
 .miss-h2{font-family:'Cormorant Garamond',serif;font-size:clamp(26px,3.2vw,38px);font-weight:600;color:var(--ink);line-height:1.1;margin-bottom:.75rem}
 .miss-body{font-size:15px;color:var(--muted);line-height:1.75;margin-bottom:1rem}
 .miss-body strong{color:var(--ink);font-weight:600}
-.link{color:var(--amber);text-decoration:none;font-weight:500}.link:hover{text-decoration:underline}
+.link{color:var(--cta);text-decoration:none;font-weight:500}.link:hover{text-decoration:underline}
 .stat-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border-radius:6px;overflow:hidden;margin:1.5rem 0}
 .stat-box{background:var(--white);padding:1.25rem 1rem;text-align:center}
 .stat-box-val{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:600;color:var(--ink);line-height:1;margin-bottom:.25rem}
 .stat-box-label{font-size:11px;color:var(--muted);line-height:1.4}
-.stat-box.highlight .stat-box-val{color:var(--amber)}
+.stat-box.highlight .stat-box-val{color:var(--cta)}
 .hood-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem;margin:1.5rem 0}
 .hood-card{background:var(--white);border:1px solid var(--border);border-radius:4px;padding:1.1rem 1.25rem;position:relative;overflow:hidden}
-.hood-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--amber);opacity:.4}
+.hood-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--cta);opacity:.4}
 .hood-card.featured::before{opacity:1}
 .hood-name{font-size:14px;font-weight:600;color:var(--ink);margin-bottom:.25rem}
-.hood-type{font-size:11px;font-weight:500;letter-spacing:.5px;text-transform:uppercase;color:var(--amber);margin-bottom:.35rem}
+.hood-type{font-size:11px;font-weight:500;letter-spacing:.5px;text-transform:uppercase;color:var(--cta);margin-bottom:.35rem}
 .hood-desc{font-size:12px;color:var(--muted);line-height:1.5}
 .hood-price{font-size:12px;font-weight:600;color:var(--ink);margin-top:.4rem}
 .laleh-section{background:var(--ink);padding:2.75rem 2rem}
 .laleh-inner{max-width:860px;margin:0 auto;display:grid;grid-template-columns:auto 1fr;gap:2rem;align-items:center}
-.laleh-hs{width:80px;height:80px;border-radius:50%;border:2.5px solid var(--amber);overflow:hidden;flex-shrink:0}
+.laleh-hs{width:80px;height:80px;border-radius:50%;border:2.5px solid var(--cta);overflow:hidden;flex-shrink:0}
 .laleh-hs img{width:100%;height:100%;object-fit:cover;object-position:center top}
 .laleh-quote{font-family:'Cormorant Garamond',serif;font-size:clamp(18px,2.5vw,24px);font-weight:400;font-style:italic;color:var(--white);line-height:1.55;margin-bottom:.75rem}
 .laleh-attr{font-size:12px;color:rgba(255,255,255,.4)}
-.laleh-attr strong{color:var(--amber)}
+.laleh-attr strong{color:var(--cta)}
 .miss-faq-list{display:flex;flex-direction:column;gap:7px;margin-top:1.5rem}
 .miss-faq-item{background:var(--white);border:1px solid var(--border);border-radius:4px;overflow:hidden}
 .miss-faq-q{display:flex;justify-content:space-between;align-items:flex-start;padding:.85rem 1rem;cursor:pointer;gap:10px}
@@ -124,44 +124,60 @@
 .miss-faq-item.open .miss-faq-icon{transform:rotate(45deg)}
 .miss-faq-a{display:none;padding:.55rem 1rem .85rem;font-size:14px;color:var(--muted);line-height:1.7;border-top:1px solid var(--border)}
 .miss-faq-item.open .miss-faq-a{display:block}
-.miss-cta{background:var(--ink);padding:3.5rem 2rem;text-align:center}
+.miss-cta{background:var(--white);padding:3.5rem 2rem;text-align:center;border-top:1px solid var(--border)}
 .miss-cta-inner{max-width:480px;margin:0 auto}
-.miss-cta-eyebrow{font-size:11px;font-weight:500;letter-spacing:1.2px;text-transform:uppercase;color:var(--amber);margin-bottom:.75rem}
-.miss-cta-title{font-family:'Cormorant Garamond',serif;font-size:clamp(24px,4vw,36px);font-weight:600;color:var(--white);line-height:1.15;margin-bottom:.75rem}
-.miss-cta-sub{font-size:15px;color:rgba(232,237,245,.55);margin-bottom:1.75rem;line-height:1.75}
-.miss-cta-btn{background:var(--amber);color:var(--ink);padding:13px 28px;border-radius:4px;font-size:14px;font-weight:700;border:none;cursor:pointer;font-family:'Outfit',sans-serif;transition:opacity .2s}.miss-cta-btn:hover{opacity:.85}
-.miss-cta-note{font-size:12px;color:rgba(232,237,245,.35);margin-top:.75rem}
-.calc-section{background:#1a2332;padding:3rem 2rem}
+.miss-cta-eyebrow{font-size:11px;font-weight:500;letter-spacing:1.2px;text-transform:uppercase;color:var(--cta);margin-bottom:.75rem}
+.miss-cta-title{font-family:'Cormorant Garamond',serif;font-size:clamp(24px,4vw,36px);font-weight:600;color:var(--ink);line-height:1.15;margin-bottom:.75rem}
+.miss-cta-sub{font-size:15px;color:var(--muted);margin-bottom:1.75rem;line-height:1.75}
+.miss-cta-btn{background:var(--cta);color:var(--cta-text);padding:13px 28px;border-radius:4px;font-size:14px;font-weight:700;border:none;cursor:pointer;font-family:'Rubik',sans-serif;transition:opacity .2s}.miss-cta-btn:hover{opacity:.85}
+.miss-cta-note{font-size:12px;color:var(--taupe);margin-top:.75rem}
+.calc-section{background:var(--white);padding:3rem 2rem;border-top:1px solid var(--border)}
 .calc-section-inner{max-width:680px;margin:0 auto}
-.calc-banner{text-align:center;background:rgba(255,255,255,.05);border:1px solid rgba(232,160,32,.15);border-radius:6px;padding:1.75rem 2rem;margin-bottom:1.75rem}
-.calc-banner-label{font-size:13px;color:rgba(255,255,255,.5);margin-bottom:.35rem}
-.calc-banner-amt{font-size:54px;font-weight:700;color:#e8a020;line-height:1;letter-spacing:-2px}
-.calc-banner-sub{font-size:14px;color:rgba(255,255,255,.4);margin-top:.35rem}
+.calc-banner{text-align:center;background:var(--white);border:1px solid var(--border);border-radius:6px;padding:1.75rem 2rem;margin-bottom:1.75rem}
+.calc-banner-label{font-size:13px;color:var(--muted);margin-bottom:.35rem}
+.calc-banner-amt{font-size:54px;font-weight:700;color:var(--cta);line-height:1;letter-spacing:-2px}
+.calc-banner-sub{font-size:14px;color:var(--muted);margin-top:.35rem}
 .calc-card{background:#fff;border-radius:6px;padding:1.75rem 2rem}
 .calc-card-eyebrow{font-size:10px;font-weight:500;letter-spacing:1.2px;text-transform:uppercase;color:#5a6a82;margin-bottom:.25rem}
-.calc-card-title{font-size:18px;font-weight:600;color:#1a2332;margin-bottom:1.25rem}
+.calc-card-title{font-size:18px;font-weight:600;color:var(--ink);margin-bottom:1.25rem}
 .calc-input-label{font-size:11px;color:#5a6a82;font-weight:500}
 .calc-price-wrap{position:relative;display:flex;align-items:center}
 .calc-price-sym{position:absolute;left:10px;font-size:14px;color:#5a6a82;pointer-events:none}
-.calc-price-input{padding:9px 10px 9px 22px;width:100%;border:1.5px solid #ccd8e8;border-radius:4px;font-size:15px;font-weight:600;color:#1a2332;background:#f0f4f8;font-family:'Outfit',sans-serif;outline:none}
-.calc-price-input:focus{border-color:#1a2332;background:#fff}
+.calc-price-input{padding:9px 10px 9px 22px;width:100%;border:1.5px solid var(--bg3);border-radius:4px;font-size:15px;font-weight:600;color:var(--ink);background:var(--bg);font-family:'Rubik',sans-serif;outline:none}
+.calc-price-input:focus{border-color:var(--ink);background:#fff}
 .calc-pct-wrap{position:relative}
-.calc-pct-input{padding:9px 28px 9px 10px;width:100%;border:1.5px solid #ccd8e8;border-radius:4px;font-size:15px;font-weight:600;color:#1a2332;background:#f0f4f8;font-family:'Outfit',sans-serif;outline:none}
+.calc-pct-input{padding:9px 28px 9px 10px;width:100%;border:1.5px solid var(--bg3);border-radius:4px;font-size:15px;font-weight:600;color:var(--ink);background:var(--bg);font-family:'Rubik',sans-serif;outline:none}
 .calc-pct-sym{position:absolute;right:10px;top:50%;transform:translateY(-50%);font-size:13px;color:#5a6a82;pointer-events:none}
 .calc-slider-wrap{margin-bottom:1.5rem}
-.calc-slider{width:100%;accent-color:#e8a020;margin-bottom:.5rem}
+.calc-slider{width:100%;accent-color:var(--cta);margin-bottom:.5rem}
 .calc-ticks{display:flex;justify-content:space-between;font-size:10px;color:#9aabbc}
-.calc-result{background:#f0f4f8;border-radius:4px;padding:1.25rem 1.5rem;margin-bottom:.75rem}
-.calc-result-label{font-size:11px;font-weight:500;letter-spacing:.5px;text-transform:uppercase;color:#5a6a82;margin-bottom:.2rem}
-.calc-result-amt{font-size:38px;font-weight:700;color:#1a2332;line-height:1}
+.calc-result{background:var(--dark);border-radius:4px;padding:1.25rem 1.5rem;margin-bottom:.75rem}
+.calc-result-label{font-size:11px;font-weight:500;letter-spacing:.5px;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:.2rem}
+.calc-result-amt{font-size:38px;font-weight:700;color:var(--cta);line-height:1}
 .calc-result-sub{font-size:13px;color:#5a6a82;margin-top:.3rem}
-.calc-stat{background:#fff;border:1.5px solid #e2eaf2;border-radius:4px;padding:1rem 1.25rem;margin-bottom:.75rem}
+.calc-stat{background:#fff;border:1.5px solid var(--bg2);border-radius:4px;padding:1rem 1.25rem;margin-bottom:.75rem}
 .calc-stat-label{font-size:11px;font-weight:500;letter-spacing:.5px;text-transform:uppercase;color:#5a6a82;margin-bottom:.15rem}
-.calc-stat-val{font-size:22px;font-weight:700;color:#1a2332;margin-bottom:.15rem}
+.calc-stat-val{font-size:22px;font-weight:700;color:var(--ink);margin-bottom:.15rem}
 .calc-stat-sub{font-size:12px;color:#5a6a82}
 .calc-note{font-size:11px;color:#9aabbc;line-height:1.6}
 @media(max-width:600px){.calc-banner{padding:1.25rem}.calc-banner-amt{font-size:42px}.calc-card{padding:1.25rem}}
 @media(max-width:680px){.stat-strip{grid-template-columns:1fr 1fr}.hood-grid{grid-template-columns:1fr 1fr}.laleh-inner{grid-template-columns:1fr;gap:1.25rem}}
+
+  .miss-inner{max-width:980px;margin:0 auto}
+  .miss-section{padding:2.5rem 2rem}
+  .miss-body{font-size:13px;color:var(--muted);line-height:1.7}
+  .miss-hero-actions{display:flex;align-items:center;gap:.75rem;flex-wrap:nowrap}
+  .link{color:var(--cta);text-decoration:none;font-weight:500;transition:color .15s}
+  .link:hover{color:var(--cta-dark)}
+  .miss-jump{background:var(--white);border-bottom:1px solid var(--border);padding:.6rem 2rem;position:sticky;top:110px;z-index:100;display:flex;gap:.5rem;overflow-x:auto}
+  .miss-resources-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1rem}
+  .miss-resource-card{display:flex;gap:1rem;background:var(--bg);border:1px solid var(--border);border-radius:6px;padding:1rem;text-decoration:none;transition:border-color .2s}
+  .miss-resource-card:hover{border-color:var(--cta)}
+  .miss-resource-icon{flex-shrink:0;width:36px;height:36px;background:var(--ink);border-radius:6px;display:flex;align-items:center;justify-content:center}
+  .miss-resource-body{display:flex;flex-direction:column;gap:.3rem}
+  .miss-resource-title{font-size:14px;font-weight:600;color:var(--ink);line-height:1.3}
+  .miss-resource-desc{font-size:12px;color:var(--muted);line-height:1.6}
+  .miss-resource-cta{font-size:12px;font-weight:600;color:var(--cta);margin-top:.3rem}
 </style>
 </head>
 <body>
@@ -195,44 +211,45 @@
 <section class="calc-section" id="calculator">
   <div class="calc-section-inner">
     <div class="calc-banner">
-      <div class="calc-banner-label">HomeCashbacks clients in Richmond Hill save</div>
-      <div class="calc-banner-amt">$19,000</div>
-      <div class="calc-banner-sub">on average</div>
-    </div>
-    <div class="calc-card">
+          <div class="calc-banner-label">HomeCashbacks clients in Richmond Hill save</div>
+          <div class="calc-banner-amt">$19,000</div>
+          <div class="calc-banner-sub">on average</div>
+        </div>
+        <div class="calc-card">
       <div class="calc-card-eyebrow">Cashback calculator</div>
       <div class="calc-card-title">What does your number look like?</div>
-      <div style="display:flex;align-items:flex-end;gap:.75rem;margin-bottom:1.25rem">
+      <div class="calc-inputs-row" style="display:flex;align-items:flex-end;gap:.75rem;margin-bottom:1.25rem">
         <div style="display:flex;flex-direction:column;gap:.35rem;width:190px">
-          <label class="calc-input-label" for="rh-price-text">Home price</label>
+          <label class="calc-input-label" for="price-text">Home price</label>
           <div class="calc-price-wrap">
             <span class="calc-price-sym">$</span>
-            <input class="calc-price-input" type="text" id="rh-price-text" value="1,000,000" inputmode="numeric" autocomplete="off"/>
+            <input class="calc-price-input" type="text" id="price-text" aria-label="Home price" value="900,000" inputmode="numeric" autocomplete="off"/>
           </div>
         </div>
         <div style="display:flex;flex-direction:column;gap:.35rem;width:120px">
-          <label class="calc-input-label" for="rh-commission">Buyer commission</label>
+          <label class="calc-input-label" for="commission-pct">Buyer commission</label>
           <div class="calc-pct-wrap">
-            <input class="calc-pct-input" type="number" id="rh-commission" value="2.5" min="1" max="5" step="0.25"/>
+            <input class="calc-pct-input" type="number" id="commission-pct" aria-label="Buyer commission percentage" value="2.5" min="1" max="5" step="0.25"/>
             <span class="calc-pct-sym">%</span>
           </div>
         </div>
       </div>
       <div class="calc-slider-wrap">
-        <input type="range" id="rh-slider" class="calc-slider" min="400000" max="3000000" step="10000" value="1000000"/>
-        <div class="calc-ticks"><span>$400K</span><span>$900K</span><span>$1.4M</span><span>$2M</span><span>$3M</span></div>
+        <input type="range" id="price-slider" aria-label="Home price slider" class="calc-slider" min="300000" max="3000000" step="10000" value="900000"/>
+        <div class="calc-ticks">
+          <span>$300K</span><span>$750K</span><span>$1.2M</span><span>$1.65M</span><span>$2.1M</span><span>$3M</span>
+        </div>
       </div>
       <div class="calc-result">
         <div class="calc-result-label">Your estimated cashback</div>
-        <div class="calc-result-amt" id="rh-cashback">$20,001</div>
-        <div class="calc-result-sub" id="rh-sub">Commission of $25,000 minus our flat $4,999 fee</div>
+        <div class="calc-result-amt" id="calc-cashback">$17,501</div>
       </div>
       <div class="calc-stat">
         <div class="calc-stat-label">Use your cashback to</div>
-        <div class="calc-stat-val" id="rh-months">cover 3 months of mortgage</div>
+        <div class="calc-stat-val" id="cv-mortgage">cover 3 months of mortgage</div>
         <div class="calc-stat-sub">Move in. Breathe.</div>
       </div>
-      <div class="calc-note">Cashback arrives 6 to 8 weeks after closing. Amount depends on the commission the seller has offered. Estimates only.</div>
+      <div class="calc-note">Estimates only. Amount depends on the seller's commission offer.</div>
     </div>
   </div>
 </section>
@@ -267,7 +284,7 @@
 </section>
 
 <!-- NEIGHBOURHOODS -->
-<section class="miss-section" style="background:#f0f4f8" id="neighbourhoods">
+<section class="miss-section" style="background:var(--bg)" id="neighbourhoods">
   <div class="miss-inner">
     <div class="miss-eyebrow-sm">Where buyers are looking</div>
     <h2 class="miss-h2">Richmond Hill Neighbourhoods</h2>
@@ -319,11 +336,11 @@
   <div class="miss-inner">
     <div style="display:flex;align-items:center;flex-wrap:wrap;gap:.6rem">
       <span style="font-size:11px;font-weight:500;letter-spacing:.8px;text-transform:uppercase;color:var(--taupe);margin-right:.25rem;white-space:nowrap">Guides</span>
-      <a href="/first-time-buyer-guide.html" style="font-size:12px;color:var(--muted);text-decoration:none;padding:4px 11px;border:1px solid var(--border);border-radius:3px;transition:all .15s;white-space:nowrap" onmouseover="this.style.borderColor='var(--amber)';this.style.color='var(--ink)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)'">First-Time Buyer Guide</a>
-      <a href="/condo-buying-guide.html" style="font-size:12px;color:var(--muted);text-decoration:none;padding:4px 11px;border:1px solid var(--border);border-radius:3px;transition:all .15s;white-space:nowrap" onmouseover="this.style.borderColor='var(--amber)';this.style.color='var(--ink)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)'">Condo Buying Guide</a>
-      <a href="/checklist.html" style="font-size:12px;color:var(--muted);text-decoration:none;padding:4px 11px;border:1px solid var(--border);border-radius:3px;transition:all .15s;white-space:nowrap" onmouseover="this.style.borderColor='var(--amber)';this.style.color='var(--ink)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)'">Buyer Checklist</a>
-      <a href="/calculators.html" style="font-size:12px;color:var(--muted);text-decoration:none;padding:4px 11px;border:1px solid var(--border);border-radius:3px;transition:all .15s;white-space:nowrap" onmouseover="this.style.borderColor='var(--amber)';this.style.color='var(--ink)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)'">Closing Cost Calculator</a>
-      <a href="/offer-strategy.html" style="font-size:12px;color:var(--muted);text-decoration:none;padding:4px 11px;border:1px solid var(--border);border-radius:3px;transition:all .15s;white-space:nowrap" onmouseover="this.style.borderColor='var(--amber)';this.style.color='var(--ink)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)'">How Cashback Works</a>
+      <a href="/first-time-buyer-guide.html" style="font-size:12px;color:var(--muted);text-decoration:none;padding:4px 11px;border:1px solid var(--border);border-radius:3px;transition:all .15s;white-space:nowrap" onmouseover="this.style.borderColor='var(--cta)';this.style.color='var(--ink)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)'">First-Time Buyer Guide</a>
+      <a href="/condo-buying-guide.html" style="font-size:12px;color:var(--muted);text-decoration:none;padding:4px 11px;border:1px solid var(--border);border-radius:3px;transition:all .15s;white-space:nowrap" onmouseover="this.style.borderColor='var(--cta)';this.style.color='var(--ink)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)'">Condo Buying Guide</a>
+      <a href="/checklist.html" style="font-size:12px;color:var(--muted);text-decoration:none;padding:4px 11px;border:1px solid var(--border);border-radius:3px;transition:all .15s;white-space:nowrap" onmouseover="this.style.borderColor='var(--cta)';this.style.color='var(--ink)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)'">Buyer Checklist</a>
+      <a href="/calculators.html" style="font-size:12px;color:var(--muted);text-decoration:none;padding:4px 11px;border:1px solid var(--border);border-radius:3px;transition:all .15s;white-space:nowrap" onmouseover="this.style.borderColor='var(--cta)';this.style.color='var(--ink)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)'">Closing Cost Calculator</a>
+      <a href="/offer-strategy.html" style="font-size:12px;color:var(--muted);text-decoration:none;padding:4px 11px;border:1px solid var(--border);border-radius:3px;transition:all .15s;white-space:nowrap" onmouseover="this.style.borderColor='var(--cta)';this.style.color='var(--ink)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)'">How Cashback Works</a>
     </div>
   </div>
 </section>
@@ -353,15 +370,15 @@
   <div class="miss-inner">
     <div style="display:flex;align-items:center;flex-wrap:wrap;gap:.6rem">
       <span style="font-size:11px;font-weight:500;letter-spacing:.8px;text-transform:uppercase;color:var(--taupe);margin-right:.25rem;white-space:nowrap">Also serving</span>
-      <a href="/toronto-cashback-realtor.html" style="font-size:12px;color:var(--muted);text-decoration:none;padding:4px 11px;border:1px solid var(--border);border-radius:3px;transition:all .15s;white-space:nowrap" onmouseover="this.style.borderColor='var(--amber)';this.style.color='var(--ink)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)'">Toronto</a>
-      <a href="/north-york-cashback-realtor.html" style="font-size:12px;color:var(--muted);text-decoration:none;padding:4px 11px;border:1px solid var(--border);border-radius:3px;transition:all .15s;white-space:nowrap" onmouseover="this.style.borderColor='var(--amber)';this.style.color='var(--ink)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)'">North York</a>
-      <a href="/etobicoke-cashback-realtor.html" style="font-size:12px;color:var(--muted);text-decoration:none;padding:4px 11px;border:1px solid var(--border);border-radius:3px;transition:all .15s;white-space:nowrap" onmouseover="this.style.borderColor='var(--amber)';this.style.color='var(--ink)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)'">Etobicoke</a>
-      <a href="/scarborough-cashback-realtor.html" style="font-size:12px;color:var(--muted);text-decoration:none;padding:4px 11px;border:1px solid var(--border);border-radius:3px;transition:all .15s;white-space:nowrap" onmouseover="this.style.borderColor='var(--amber)';this.style.color='var(--ink)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)'">Scarborough</a>
-      <a href="/mississauga-cashback-realtor.html" style="font-size:12px;color:var(--muted);text-decoration:none;padding:4px 11px;border:1px solid var(--border);border-radius:3px;transition:all .15s;white-space:nowrap" onmouseover="this.style.borderColor='var(--amber)';this.style.color='var(--ink)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)'">Mississauga</a>
-      <a href="/vaughan-cashback-realtor.html" style="font-size:12px;color:var(--muted);text-decoration:none;padding:4px 11px;border:1px solid var(--border);border-radius:3px;transition:all .15s;white-space:nowrap" onmouseover="this.style.borderColor='var(--amber)';this.style.color='var(--ink)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)'">Vaughan</a>
-      <a href="/markham-cashback-realtor.html" style="font-size:12px;color:var(--muted);text-decoration:none;padding:4px 11px;border:1px solid var(--border);border-radius:3px;transition:all .15s;white-space:nowrap" onmouseover="this.style.borderColor='var(--amber)';this.style.color='var(--ink)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)'">Markham</a>
-      <a href="/oakville-cashback-realtor.html" style="font-size:12px;color:var(--muted);text-decoration:none;padding:4px 11px;border:1px solid var(--border);border-radius:3px;transition:all .15s;white-space:nowrap" onmouseover="this.style.borderColor='var(--amber)';this.style.color='var(--ink)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)'">Oakville</a>
-      <a href="/brampton-cashback-realtor.html" style="font-size:12px;color:var(--muted);text-decoration:none;padding:4px 11px;border:1px solid var(--border);border-radius:3px;transition:all .15s;white-space:nowrap" onmouseover="this.style.borderColor='var(--amber)';this.style.color='var(--ink)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)'">Brampton</a>
+      <a href="/toronto-cashback-realtor.html" style="font-size:12px;color:var(--muted);text-decoration:none;padding:4px 11px;border:1px solid var(--border);border-radius:3px;transition:all .15s;white-space:nowrap" onmouseover="this.style.borderColor='var(--cta)';this.style.color='var(--ink)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)'">Toronto</a>
+      <a href="/north-york-cashback-realtor.html" style="font-size:12px;color:var(--muted);text-decoration:none;padding:4px 11px;border:1px solid var(--border);border-radius:3px;transition:all .15s;white-space:nowrap" onmouseover="this.style.borderColor='var(--cta)';this.style.color='var(--ink)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)'">North York</a>
+      <a href="/etobicoke-cashback-realtor.html" style="font-size:12px;color:var(--muted);text-decoration:none;padding:4px 11px;border:1px solid var(--border);border-radius:3px;transition:all .15s;white-space:nowrap" onmouseover="this.style.borderColor='var(--cta)';this.style.color='var(--ink)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)'">Etobicoke</a>
+      <a href="/scarborough-cashback-realtor.html" style="font-size:12px;color:var(--muted);text-decoration:none;padding:4px 11px;border:1px solid var(--border);border-radius:3px;transition:all .15s;white-space:nowrap" onmouseover="this.style.borderColor='var(--cta)';this.style.color='var(--ink)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)'">Scarborough</a>
+      <a href="/mississauga-cashback-realtor.html" style="font-size:12px;color:var(--muted);text-decoration:none;padding:4px 11px;border:1px solid var(--border);border-radius:3px;transition:all .15s;white-space:nowrap" onmouseover="this.style.borderColor='var(--cta)';this.style.color='var(--ink)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)'">Mississauga</a>
+      <a href="/vaughan-cashback-realtor.html" style="font-size:12px;color:var(--muted);text-decoration:none;padding:4px 11px;border:1px solid var(--border);border-radius:3px;transition:all .15s;white-space:nowrap" onmouseover="this.style.borderColor='var(--cta)';this.style.color='var(--ink)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)'">Vaughan</a>
+      <a href="/markham-cashback-realtor.html" style="font-size:12px;color:var(--muted);text-decoration:none;padding:4px 11px;border:1px solid var(--border);border-radius:3px;transition:all .15s;white-space:nowrap" onmouseover="this.style.borderColor='var(--cta)';this.style.color='var(--ink)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)'">Markham</a>
+      <a href="/oakville-cashback-realtor.html" style="font-size:12px;color:var(--muted);text-decoration:none;padding:4px 11px;border:1px solid var(--border);border-radius:3px;transition:all .15s;white-space:nowrap" onmouseover="this.style.borderColor='var(--cta)';this.style.color='var(--ink)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)'">Oakville</a>
+      <a href="/brampton-cashback-realtor.html" style="font-size:12px;color:var(--muted);text-decoration:none;padding:4px 11px;border:1px solid var(--border);border-radius:3px;transition:all .15s;white-space:nowrap" onmouseover="this.style.borderColor='var(--cta)';this.style.color='var(--ink)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)'">Brampton</a>
     </div>
   </div>
 </section>

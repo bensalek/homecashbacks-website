@@ -64,106 +64,6 @@
   ]
 }
 </script>
-<style>
-.legal-hero{background:#1a2332;padding:3.5rem 2rem 4rem;position:relative;overflow:hidden}
-.legal-hero::before{content:'';position:absolute;top:-60px;right:-60px;width:280px;height:280px;border-radius:50%;border:50px solid rgba(232,160,32,.06)}
-.legal-hero::after{content:'';position:absolute;bottom:-80px;left:-40px;width:200px;height:200px;border-radius:50%;border:36px solid rgba(232,160,32,.04)}
-.legal-hero-inner{max-width:760px;margin:0 auto;position:relative;z-index:1}
-.legal-eyebrow{display:inline-flex;background:rgba(232,160,32,.12);color:#e8a020;font-size:11px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;padding:5px 14px;border-radius:2px;margin-bottom:1.25rem;border:1px solid rgba(232,160,32,.2)}
-.legal-h1{font-family:'Cormorant Garamond',serif;font-size:clamp(30px,5vw,52px);font-weight:600;color:#fff;line-height:1.05;margin-bottom:1rem;letter-spacing:-.5px}
-.legal-verdict{display:inline-flex;align-items:center;gap:.65rem;background:rgba(22,163,74,.15);border:1px solid rgba(22,163,74,.3);border-radius:4px;padding:.85rem 1.25rem;margin-bottom:1rem}
-.legal-verdict-icon{width:28px;height:28px;background:#16a34a;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.legal-verdict-text{font-size:15px;color:#fff;font-weight:500}
-.legal-verdict-text span{color:#4ade80}
-.legal-hero-sub{font-size:14px;color:rgba(232,237,245,.4);line-height:1.7;max-width:520px}
-
-.legal-jump{background:#fff;border-bottom:1px solid rgba(26,35,50,.1);padding:.75rem 2rem;position:sticky;top:118px;z-index:300;overflow-x:auto;scrollbar-width:none}
-.legal-jump::-webkit-scrollbar{display:none}
-.legal-jump-inner{max-width:760px;margin:0 auto;display:flex;align-items:center;gap:.5rem;white-space:nowrap}
-.legal-jump-label{font-size:11px;font-weight:500;letter-spacing:.8px;text-transform:uppercase;color:#5a6a82;margin-right:.5rem;flex-shrink:0}
-.legal-jbtn{padding:5px 13px;border-radius:3px;border:1px solid rgba(26,35,50,.1);background:transparent;font-family:'Outfit',sans-serif;font-size:12px;color:#5a6a82;cursor:pointer;transition:all .15s;text-decoration:none;display:inline-block}
-.legal-jbtn:hover,.legal-jbtn.active{background:#1a2332;color:#fff;border-color:#1a2332}
-
-.legal-section{padding:3rem 2rem}
-.legal-inner{max-width:760px;margin:0 auto}
-.legal-eyebrow-sm{font-size:11px;font-weight:500;letter-spacing:1.2px;text-transform:uppercase;color:#e8a020;margin-bottom:.5rem}
-.legal-h2{font-family:'Cormorant Garamond',serif;font-size:clamp(24px,3.5vw,36px);font-weight:600;color:#1a2332;line-height:1.1;margin-bottom:.75rem}
-.legal-body{font-size:15px;color:#5a6a82;line-height:1.8;margin-bottom:1rem}
-.legal-body strong{color:#1a2332;font-weight:600}
-.link{color:#e8a020;text-decoration:none;font-weight:500}
-.link:hover{text-decoration:underline}
-
-/* Money flow */
-.flow{display:grid;grid-template-columns:1fr auto 1fr auto 1fr auto 1fr;align-items:center;gap:.5rem;margin:1.75rem 0;background:#f0f4f8;border-radius:6px;padding:1.5rem}
-.flow-node{text-align:center}
-.flow-node-label{font-size:10px;font-weight:500;letter-spacing:.8px;text-transform:uppercase;color:#5a6a82;margin-bottom:.35rem}
-.flow-node-val{font-size:13px;font-weight:600;color:#1a2332;line-height:1.3}
-.flow-arrow{color:#ccd8e8;font-size:20px;font-weight:300;flex-shrink:0}
-.flow-node.highlight .flow-node-val{color:#16a34a;font-size:15px}
-.flow-node.highlight .flow-node-label{color:#16a34a}
-
-/* RECO callout */
-.reco-box{background:#fef3dc;border:1px solid rgba(232,160,32,.25);border-radius:6px;padding:1.25rem 1.5rem;margin:1.5rem 0}
-.reco-box-label{font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:#c4861a;margin-bottom:.5rem}
-.reco-box-text{font-size:14px;color:#1a2332;line-height:1.7;font-style:italic}
-.reco-box-source{font-size:11px;color:#5a6a82;margin-top:.5rem}
-
-/* Why agents dont */
-.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.5rem 0}
-.why-card{background:#fff;border:1px solid rgba(26,35,50,.1);border-radius:4px;padding:1.25rem}
-.why-card-label{font-size:10px;font-weight:600;letter-spacing:.8px;text-transform:uppercase;margin-bottom:.5rem}
-.why-card-label.red{color:#b83232}
-.why-card-label.green{color:#16a34a}
-.why-card-body{font-size:13px;color:#5a6a82;line-height:1.65}
-
-/* Watch out */
-.watch-list{display:flex;flex-direction:column;gap:.6rem;margin:1.5rem 0}
-.watch-item{display:flex;align-items:flex-start;gap:.85rem;padding:1rem 1.25rem;border-radius:4px;border:1px solid rgba(184,50,50,.15);background:#fef2f2}
-.watch-icon{width:22px;height:22px;background:#b83232;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
-.watch-label{font-size:14px;font-weight:600;color:#1a2332;margin-bottom:.2rem}
-.watch-desc{font-size:12px;color:#5a6a82;line-height:1.5}
-
-/* Laleh section */
-.laleh-section{background:#1a2332;padding:2.75rem 2rem}
-.laleh-inner{max-width:760px;margin:0 auto;display:grid;grid-template-columns:auto 1fr;gap:2rem;align-items:center}
-.laleh-hs{width:80px;height:80px;border-radius:50%;border:2.5px solid #e8a020;overflow:hidden;flex-shrink:0}
-.laleh-hs img{width:100%;height:100%;object-fit:cover;object-position:center top}
-.laleh-quote{font-family:'Cormorant Garamond',serif;font-size:clamp(18px,2.5vw,24px);font-weight:400;font-style:italic;color:#fff;line-height:1.5;margin-bottom:.75rem}
-.laleh-attr{font-size:12px;color:rgba(255,255,255,.4)}
-.laleh-attr strong{color:#e8a020;font-style:normal}
-
-/* Mini calculator */
-.mini-calc{background:#f0f4f8;border-radius:6px;padding:1.5rem;margin:1.75rem 0}
-.mini-calc-label{font-size:11px;font-weight:600;letter-spacing:.8px;text-transform:uppercase;color:#5a6a82;margin-bottom:1rem}
-.mini-calc-row{display:flex;align-items:center;gap:1rem;flex-wrap:wrap;margin-bottom:1rem}
-.mini-calc-input-wrap{display:flex;flex-direction:column;gap:.3rem}
-.mini-calc-input-label{font-size:11px;color:#5a6a82}
-.mini-price-wrap{position:relative;display:flex;align-items:center}
-.mini-price-sym{position:absolute;left:10px;font-size:14px;color:#5a6a82;pointer-events:none}
-.mini-price-input{padding:8px 10px 8px 22px;width:160px;border:1.5px solid #ccd8e8;border-radius:4px;font-size:14px;font-weight:600;color:#1a2332;background:#fff;font-family:'Outfit',sans-serif;outline:none}
-.mini-price-input:focus{border-color:#1a2332}
-.mini-result{display:flex;align-items:baseline;gap:.5rem}
-.mini-result-amt{font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:600;color:#1a2332}
-.mini-result-label{font-size:13px;color:#5a6a82}
-.mini-result-sub{font-size:12px;color:#5a6a82;margin-top:.25rem}
-
-/* CTA */
-.legal-cta{background:#f0f4f8;border-top:1px solid rgba(26,35,50,.1);padding:3rem 2rem;text-align:center}
-.legal-cta-inner{max-width:480px;margin:0 auto}
-.legal-cta-title{font-family:'Cormorant Garamond',serif;font-size:clamp(22px,3.5vw,32px);font-weight:600;color:#1a2332;margin-bottom:.65rem}
-.legal-cta-sub{font-size:14px;color:#5a6a82;margin-bottom:1.5rem;line-height:1.7}
-.legal-cta-btn{background:#e8a020;color:#1a2332;padding:13px 30px;border-radius:4px;font-size:14px;font-weight:700;border:none;cursor:pointer;font-family:'Outfit',sans-serif;transition:opacity .2s}
-.legal-cta-btn:hover{opacity:.88}
-.legal-cta-note{font-size:12px;color:#5a6a82;margin-top:.65rem;opacity:.7}
-
-@media(max-width:680px){
-  .flow{grid-template-columns:1fr;gap:.35rem}
-  .flow-arrow{transform:rotate(90deg);text-align:center}
-  .why-grid{grid-template-columns:1fr}
-  .laleh-inner{grid-template-columns:1fr;gap:1.25rem}
-  .mini-calc-row{flex-direction:column;align-items:flex-start}
-}
-</style>
 
 <script type="application/ld+json">
 {
@@ -185,6 +85,8 @@
   ]
 }
 </script>
+
+<link rel="stylesheet" href="/assets/cashback-legal.css"/>
 </head>
 <body>
 

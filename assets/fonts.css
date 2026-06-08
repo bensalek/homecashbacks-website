@@ -1,59 +1,32 @@
-/* Outfit */
-@font-face {
-  font-family: 'Outfit';
-  font-style: normal;
-  font-weight: 300;
-  font-display: swap;
-  src: url('/assets/fonts/outfit-v15-latin-300.woff2') format('woff2');
-}
-@font-face {
-  font-family: 'Outfit';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url('/assets/fonts/outfit-v15-latin-regular.woff2') format('woff2');
-}
-@font-face {
-  font-family: 'Outfit';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url('/assets/fonts/outfit-v15-latin-500.woff2') format('woff2');
-}
-@font-face {
-  font-family: 'Outfit';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url('/assets/fonts/outfit-v15-latin-700.woff2') format('woff2');
-}
+/* Rubik — body font */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap');
 
-/* Cormorant Garamond */
+/* Cormorant Garamond — headings (self-hosted) */
 @font-face {
   font-family: 'Cormorant Garamond';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
   src: url('/assets/fonts/cormorant-garamond-v21-latin-regular.woff2') format('woff2');
-}
-@font-face {
-  font-family: 'Cormorant Garamond';
-  font-style: italic;
   font-weight: 400;
-  font-display: swap;
-  src: url('/assets/fonts/cormorant-garamond-v21-latin-italic.woff2') format('woff2');
-}
-@font-face {
-  font-family: 'Cormorant Garamond';
   font-style: normal;
-  font-weight: 600;
   font-display: swap;
-  src: url('/assets/fonts/cormorant-garamond-v21-latin-600.woff2') format('woff2');
 }
 @font-face {
   font-family: 'Cormorant Garamond';
+  src: url('/assets/fonts/cormorant-garamond-v21-latin-italic.woff2') format('woff2');
+  font-weight: 400;
   font-style: italic;
-  font-weight: 600;
   font-display: swap;
+}
+@font-face {
+  font-family: 'Cormorant Garamond';
+  src: url('/assets/fonts/cormorant-garamond-v21-latin-600.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Cormorant Garamond';
   src: url('/assets/fonts/cormorant-garamond-v21-latin-600italic.woff2') format('woff2');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
 }

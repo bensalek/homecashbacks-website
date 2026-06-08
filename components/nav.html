@@ -13,10 +13,10 @@
   <a class="logo" href="/" aria-label="Home Cashbacks - Home">
     <svg width="155" height="28" viewBox="0 0 190 36" fill="none" xmlns="http://www.w3.org/2000/svg">
       <rect width="32" height="32" rx="6" fill="#1a2332" y="2"/>
-      <path d="M9 22 L16 12 L23 22" stroke="#e8a020" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-      <path d="M16 12 L23 12" stroke="#e8a020" stroke-width="2" stroke-linecap="round"/>
-      <path d="M23 12 L23 19" stroke="#e8a020" stroke-width="2" stroke-linecap="round"/>
-      <text x="42" y="22" font-size="17" font-weight="500" fill="#1a2332" font-family="Outfit,sans-serif" letter-spacing="-0.5">Home<tspan fill="#e8a020" font-weight="700">Cashbacks</tspan></text>
+      <path d="M9 22 L16 12 L23 22" stroke="var(--cta)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <path d="M16 12 L23 12" stroke="var(--cta)" stroke-width="2" stroke-linecap="round"/>
+      <path d="M23 12 L23 19" stroke="var(--cta)" stroke-width="2" stroke-linecap="round"/>
+      <text x="42" y="22" font-size="17" font-weight="500" fill="#1a2332" font-family="Rubik,sans-serif" letter-spacing="-0.5">Home<tspan fill="var(--cta)" font-weight="700">Cashbacks</tspan></text>
     </svg>
   </a>
   <div class="nav-cred-wrap">
@@ -33,40 +33,29 @@
     <li class="nav-item">
       <button class="nav-link-btn" aria-expanded="false" aria-haspopup="true" onclick="this.setAttribute('aria-expanded', this.parentElement.classList.toggle('open'))">Resources<svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false"><path d="M1 1l4 4 4-4"/></svg></button>
       <div class="dropdown">
+        <a href="/cashback-legal-ontario.html" onclick="closeMobMenu()">
+          <div class="dropdown-label">Is Cashback Legal in Ontario?</div>
+          <div class="dropdown-sub">RECO rules explained simply</div>
+        </a>
         <a href="/first-time-buyer-guide.html" onclick="closeMobMenu()">
           <div class="dropdown-label">First-Time Buyer Guide</div>
           <div class="dropdown-sub">Incentives, rebates, and what to expect</div>
         </a>
-        <a href="/condo-buying-guide.html" onclick="closeMobMenu()">
-          <div class="dropdown-label">Condo Buying Guide</div>
-          <div class="dropdown-sub">Status cert, fees, offer conditions</div>
-        </a>
-        <a href="/checklist.html" onclick="closeMobMenu()">
-          <div class="dropdown-label">Home Buyer Checklist</div>
-          <div class="dropdown-sub">5 phases from pre-approval to closing</div>
-        </a>
-        <a href="/offer-strategy.html" onclick="closeMobMenu()">
-          <div class="dropdown-label">Offer Strategy Tool</div>
-          <div class="dropdown-sub">Know your number before you offer</div>
-        </a>
         <a href="/calculators.html" onclick="closeMobMenu()">
-          <div class="dropdown-label">Closing Cost Calculator</div>
-          <div class="dropdown-sub">Land transfer tax and closing costs</div>
-        </a>
-        <a href="/choose-cashback-realtor-toronto.html" onclick="closeMobMenu()">
-          <div class="dropdown-label">How to Choose a Cashback Realtor</div>
-          <div class="dropdown-sub">Questions to ask, red flags, what to check</div>
+          <div class="dropdown-label">Calculators</div>
+          <div class="dropdown-sub">Cashback, land transfer tax, closing costs</div>
         </a>
         <div class="dropdown-divider"></div>
-        <a href="/cashback-legal-ontario.html" onclick="closeMobMenu()">
-          <div class="dropdown-label">Is Cashback Legal in Ontario?</div>
-          <div class="dropdown-sub">RECO rules explained simply</div>
+        <a href="/guides.html" onclick="closeMobMenu()">
+          <div class="dropdown-label" style="color:var(--cta)">All Guides →</div>
+          <div class="dropdown-sub">Buying process, costs, legal &amp; tools</div>
         </a>
       </div>
     </li>
     <li class="nav-item"><a href="/#faq" onclick="closeMobMenu()">FAQ</a></li>
     <li class="nav-item"><a href="#" class="nav-pill" onclick="openModal();closeMobMenu();return false">Free Showing</a></li>
-  </ul>
+  
+        </ul>
   <button class="hamburger" id="hamburger" onclick="toggleMobMenu()" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
     <span></span><span></span><span></span>
   </button>

@@ -66,6 +66,9 @@ pages.forEach(function(filename) {
   // Page-specific styles (keep as-is)
   var pageStyles = (fullHead.match(/<style[^>]*>[\s\S]*?<\/style>/gi) || []).join('\n');
 
+  // Page-specific CSS links (e.g. index.css, listing.css etc — NOT styles.css which comes from head.html)
+  var pageCssLinks = (fullHead.match(/<link rel="stylesheet" href="\/assets\/(?!styles)[^"]*\.css"[^>]*>/gi) || []).join('\n');
+
   // Page meta: title, description, canonical, og tags only
   var pageMeta = fullHead
     .replace(/<style[^>]*>[\s\S]*?<\/style>/gi, '')
@@ -78,6 +81,7 @@ pages.forEach(function(filename) {
     .replace(/<script async src="https:\/\/www\.googletagmanager[^>]*><\/script>/gi, '')
     .replace(/<script>[\s\S]*?gtag[\s\S]*?<\/script>/gi, '')
     .replace(/<link rel="stylesheet" href="\/assets\/styles[^>]*>/gi, '')
+    .replace(/<link rel="stylesheet" href="\/assets\/(?!styles)[^"]*\.css"[^>]*>/gi, '')
     .replace(/<!-- Google tag[^>]*-->/gi, '')
     .trim();
 
@@ -111,6 +115,7 @@ pages.forEach(function(filename) {
     '<meta name="viewport" content="width=device-width,initial-scale=1.0"/>\n' +
     pageMeta  + '\n' +
     head      + '\n' +
+    pageCssLinks + '\n' +
     pageStyles+ '\n' +
     '</head>\n' +
     '<body>\n' +
