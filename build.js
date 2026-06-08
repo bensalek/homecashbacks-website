@@ -56,6 +56,11 @@ var pages = fs.readdirSync(PAGES_DIR).filter(function(f) {
   return f.endsWith('.html') && !f.startsWith('_');
 });
 
+// Copy _headers and _redirects to dist
+['_headers','_redirects'].forEach(function(f){
+  if (fs.existsSync(f)) fs.copyFileSync(f, path.join(DIST_DIR, f));
+});
+
 pages.forEach(function(filename) {
   var page = fs.readFileSync(path.join(PAGES_DIR, filename), 'utf8');
 
