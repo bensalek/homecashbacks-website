@@ -72,9 +72,19 @@
 .art-related-card-label{font-size:10px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;color:var(--cta)}
 .art-related-card-title{font-size:14px;font-weight:600;color:var(--ink);line-height:1.3}
 
+/* ── STICKY NAV ─────────────────────────────────────────── */
+.art-sticky-nav{position:fixed;top:118px;left:0;right:0;z-index:400;background:var(--white);border-bottom:1px solid var(--border);display:flex;gap:0;overflow-x:auto;scrollbar-width:none;padding:0 1.5rem;transform:translateY(-100%);transition:transform .25s ease;pointer-events:none;-webkit-overflow-scrolling:touch}
+.art-sticky-nav::-webkit-scrollbar{display:none}
+.art-sticky-nav--visible{transform:translateY(0);pointer-events:auto}
+.art-sticky-nav a{font-size:13px;font-weight:500;color:var(--muted);text-decoration:none;padding:.65rem .85rem;white-space:nowrap;border-bottom:2px solid transparent;transition:color .15s,border-color .15s;flex-shrink:0}
+.art-sticky-nav a:hover{color:var(--ink)}
+.art-sticky-nav a.active{color:var(--cta);border-bottom-color:var(--cta);font-weight:600}
+
 /* ── MOBILE ─────────────────────────────────────────────── */
 @media(max-width:680px){
   .art-wrap{padding:1.5rem 1.25rem}
+  .art-sticky-nav{top:118px;padding:0 .75rem}
+  .art-sticky-nav a{font-size:12px;padding:.55rem .65rem}
   .art-table{font-size:12px}
   .art-table th,.art-table td{padding:.5rem .75rem}
   .art-cta{flex-direction:column;align-items:flex-start}

@@ -3,202 +3,28 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png"/>
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
-<title>Privacy Policy — HomeCashbacks | homecashbacks.ca</title>
-<meta name="robots" content="noindex, nofollow"/>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png"/>
+<title>Privacy Policy | Home Cashbacks</title>
+<meta name="description" content="Privacy Policy for Home Cashbacks — how we collect, use, and protect your personal information under PIPEDA and Ontario privacy law."/>
+<meta name="robots" content="noindex, follow"/>
+<link rel="canonical" href="https://homecashbacks.ca/privacy.html"/>
 <style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--bg:#f0f4f8;--bg2:#e2eaf2;--bg3:#ccd8e8;--ink:#1a2332;--ink2:#2d3d52;--muted:#5a6a82;--border:rgba(26,35,50,.1);--white:#fff;--amber:#e8a020}
-html{scroll-behavior:smooth}
-body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--ink);line-height:1.7;padding-top:118px}
-
-/* TOP BAR */
-.top-bar{position:fixed;top:0;left:0;right:0;z-index:600;background:#1a2332;height:58px;padding:0 1.5rem;display:flex;align-items:center;justify-content:center;gap:12px}
-.top-bar-text{font-size:13px;color:rgba(255,255,255,.45);white-space:nowrap;margin-right:4px}
-.top-bar-phone{display:inline-flex;align-items:center;gap:5px;font-size:13px;color:rgba(255,255,255,.8);text-decoration:none}
-.top-bar-phone:hover{color:#fff}
-.top-btn{display:inline-flex;align-items:center;gap:6px;padding:10px 24px;border-radius:4px;font-size:14px;font-weight:700;border:none;cursor:pointer;font-family:'Outfit',sans-serif;white-space:nowrap;transition:opacity .2s}
-.top-btn:hover{opacity:.85}
-.top-btn.light{background:#e8a020;color:#1a2332;font-weight:700}
-
-/* NAV */
-nav{position:fixed;top:58px;left:0;right:0;z-index:570;background:#f0f4f8;border-bottom:1px solid var(--border);height:60px;padding:0 2rem;display:flex;align-items:center;justify-content:space-between}
-.logo{text-decoration:none;display:flex;align-items:center}
-.nav-cred-wrap{display:flex;flex-direction:row;align-items:center;gap:.6rem}
-.nav-headshot{width:32px;height:32px;border-radius:50%;object-fit:cover;object-position:center top;border:2px solid #e8a020;flex-shrink:0}
-.nav-cred-wrap > div{display:flex;flex-direction:column;gap:1px}
-.nav-cred{font-size:11px;color:var(--muted);white-space:nowrap}
-.nav-cred-line2{font-size:10px;color:var(--muted);white-space:nowrap}
-.nav-links{display:flex;align-items:center;gap:4px;list-style:none}
-.nav-links a{font-size:13px;color:var(--muted);text-decoration:none;transition:color .2s;padding:6px 10px;border-radius:4px}
-.nav-links a:hover{color:var(--ink);background:rgba(26,35,50,.05)}
-.nav-item{position:relative}
-.nav-link-btn{font-size:13px;color:var(--muted);background:none;border:none;cursor:pointer;font-family:'Outfit',sans-serif;display:flex;align-items:center;gap:4px;padding:6px 10px;border-radius:4px;transition:all .15s}
-.nav-link-btn:hover{color:var(--ink);background:rgba(26,35,50,.05)}
-.nav-link-btn svg{width:10px;height:10px;transition:transform .2s}
-.nav-item:hover .nav-link-btn svg{transform:rotate(180deg)}
-.nav-pill{background:#e8a020!important;color:#1a2332!important;padding:7px 18px;border-radius:4px;font-weight:700!important}
-.dropdown{position:absolute;top:calc(100% + 8px);left:0;background:var(--white);border:1px solid var(--border);border-radius:6px;box-shadow:0 8px 24px rgba(26,35,50,.1);min-width:210px;padding:.4rem 0;opacity:0;visibility:hidden;transform:translateY(-4px);transition:all .15s;z-index:100}
-.nav-item:hover .dropdown{opacity:1;visibility:visible;transform:translateY(0)}
-.dropdown a{display:block;padding:.65rem 1rem;font-size:13px;color:var(--ink2);text-decoration:none;transition:background .1s}
-.dropdown a:hover{background:var(--bg);color:var(--ink)}
-.dropdown-label{font-weight:500;font-size:13px;color:var(--ink)}
-.dropdown-sub{font-size:11px;color:var(--muted);margin-top:1px}
-.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
-.hamburger span{display:block;width:22px;height:2px;background:var(--ink);border-radius:2px;transition:all .25s}
-.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
-.hamburger.open span:nth-child(2){opacity:0}
-.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-
-/* CONTENT */
-.wrap{max-width:720px;margin:0 auto;padding:3rem 2rem 5rem}
-.pp-eyebrow{font-size:11px;font-weight:500;letter-spacing:1.2px;text-transform:uppercase;color:#6b7fa0;margin-bottom:.5rem}
-h1{font-family:'Cormorant Garamond',serif;font-size:38px;font-weight:600;color:#1a2332;margin-bottom:.5rem;line-height:1.1}
-.pp-date{font-size:13px;color:#6b7fa0;margin-bottom:2.5rem;padding-bottom:1.5rem;border-bottom:1px solid rgba(26,35,50,.1)}
-h2{font-size:15px;font-weight:600;color:#1a2332;margin:2rem 0 .6rem}
-p{font-size:14px;color:#2d3d52;line-height:1.75;margin-bottom:1rem}
-ul{font-size:14px;color:#2d3d52;line-height:1.75;margin-bottom:1rem;padding-left:1.25rem}
-ul li{margin-bottom:.3rem}
-a{color:#2563eb;text-decoration:underline}
-.pp-contact-box{background:#fff;border:1px solid rgba(26,35,50,.1);border-radius:5px;padding:1.25rem 1.5rem;margin-top:2rem}
-.pp-contact-box p{margin:0;font-size:13px}
-
-.foot-disclaimer{font-size:10px;color:rgba(255,255,255,.2)!important;line-height:1.6!important;max-width:700px;margin:.9rem auto 0!important;border-top:1px solid rgba(255,255,255,.08);padding-top:.9rem}
-/* FOOTER */
-footer{background:#1a2332;padding:2.5rem 2rem 1.5rem}
-.foot-inner{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:2rem;padding-bottom:1.75rem;border-bottom:1px solid rgba(255,255,255,.08);max-width:980px;margin:0 auto}
-.foot-agent{display:flex;align-items:center;gap:1rem}
-.foot-headshot{width:84px;height:84px;border-radius:50%;object-fit:cover;object-position:center 15%;border:2.5px solid #e8a020;flex-shrink:0}
-.foot-agent-name{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:600;color:#fff;margin-bottom:.2rem}
-.foot-agent-title{font-size:11px;color:rgba(255,255,255,.35);line-height:1.6}
-.foot-agent-badge{display:inline-block;background:rgba(232,160,32,.15);color:#e8a020;font-size:10px;font-weight:600;padding:2px 8px;border-radius:3px;margin-top:.3rem}
-.foot-links{display:flex;flex-direction:column;gap:.35rem;padding-left:2rem;border-left:1px solid rgba(255,255,255,.08)}
-.foot-links a{font-size:12px;color:rgba(255,255,255,.35);text-decoration:none;transition:color .2s}
-.foot-links a:hover{color:#e8a020}
-.foot-cta{display:flex;flex-direction:column;align-items:flex-end;gap:.4rem}
-.foot-cta-btn{background:#e8a020;color:#1a2332;font-size:13px;font-weight:700;padding:10px 22px;border-radius:4px;border:none;cursor:pointer;font-family:'Outfit',sans-serif;transition:opacity .2s;white-space:nowrap}
-.foot-cta-btn:hover{opacity:.85}
-.foot-cta-sub{font-size:11px;color:rgba(255,255,255,.25)}
-.foot-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:1.25rem;max-width:980px;margin:0 auto;font-size:11px;color:rgba(255,255,255,.2)}
-.foot-social-link{color:rgba(255,255,255,.35);display:inline-flex;align-items:center;gap:4px;font-size:12px;text-decoration:none;transition:color .2s}
-.foot-social-link:hover{color:#e8a020}
-
-/* MODAL */
-.modal-overlay{display:none;position:fixed;inset:0;background:rgba(28,25,22,.6);z-index:900;align-items:center;justify-content:center;padding:1.5rem}
-.modal-overlay.open{display:flex}
-.modal{background:#fff;border-radius:6px;padding:2.25rem;max-width:420px;width:100%;position:relative;animation:mIn .22s ease}
-@keyframes mIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
-.modal-close{position:absolute;top:1rem;right:1rem;width:30px;height:30px;border-radius:50%;background:#e2eaf2;border:none;cursor:pointer;font-size:15px;color:#5a6a82;display:flex;align-items:center;justify-content:center}
-.modal-tag{font-size:10px;font-weight:500;letter-spacing:1px;text-transform:uppercase;color:#5a6a82;margin-bottom:.4rem}
-.modal-title{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:600;color:#1a2332;margin-bottom:.25rem}
-.modal-sub{font-size:13px;color:#5a6a82;margin-bottom:1.5rem;line-height:1.5}
-.f-field{display:flex;flex-direction:column;gap:.3rem;margin-bottom:1rem}
-.f-label{font-size:13px;font-weight:500;color:#1a2332}
-.f-input{border:1.5px solid #ccd8e8;border-radius:4px;padding:0 12px;height:42px;font-size:14px;font-family:'Outfit',sans-serif;color:#1a2332;outline:none;transition:border-color .2s;background:#f0f4f8}
-.f-input:focus{border-color:#1a2332;background:#fff}
-.f-note{font-size:11px;color:#5a6a82}
-.f-error{font-size:12px;color:#b83232;display:none}
-.f-error.show{display:block}
-.f-consent{font-size:11px;color:#5a6a82;line-height:1.6;margin-bottom:1rem}
-.f-consent a{color:#2563eb}
-.f-submit{width:100%;padding:13px;border-radius:4px;background:#e8a020;color:#1a2332;font-size:15px;font-weight:700;border:none;cursor:pointer;font-family:'Outfit',sans-serif;transition:opacity .2s}
-.f-submit:hover{opacity:.88}
-.f-success{display:none;text-align:center;padding:1rem 0}
-.f-success-icon{font-size:32px;color:#16a34a;margin-bottom:.75rem}
-
-@media(max-width:680px){
-  body{padding-top:118px}
-  nav{padding:0 1rem}
-  .nav-links{display:none;position:fixed;top:118px;left:0;right:0;background:#f0f4f8;border-bottom:1px solid var(--border);flex-direction:column;gap:0;padding:0;z-index:569;overflow:hidden}
-  .nav-links.open{display:flex}
-  .nav-links li{width:100%}
-  .nav-links a{display:block;padding:.85rem 1.5rem;font-size:16px;color:var(--ink);border-bottom:1px solid var(--border)}
-  .nav-link-btn{width:100%;text-align:left;padding:.85rem 1.5rem;font-size:16px;color:var(--ink);border-bottom:1px solid var(--border);border-radius:0}
-  .dropdown{position:static;opacity:1;visibility:hidden;transform:none;box-shadow:none;border:none;border-radius:0;max-height:0;overflow:hidden;transition:max-height .25s,visibility .25s;padding:0}
-  .nav-item.open .dropdown{visibility:visible;max-height:300px}
-  .dropdown a{padding:.7rem 2rem;font-size:15px;border-bottom:1px solid var(--border);background:#f8fafc}
-  .dropdown-sub{display:none}
-  .nav-pill{background:#e8a020!important;color:#1a2332!important;margin:.5rem 1rem;border-radius:4px;text-align:center;font-weight:700!important;display:block;padding:.85rem 1.5rem!important}
-  .hamburger{display:flex}
-  .nav-cred-line2{display:none}
-  .logo svg{width:110px;height:22px}
-  .foot-inner{grid-template-columns:1fr;gap:1.5rem}
-  .foot-links{padding-left:0;border-left:none;border-top:1px solid rgba(255,255,255,.08);padding-top:1.25rem;flex-direction:row;flex-wrap:wrap;gap:.5rem 1.25rem}
-  .foot-cta{align-items:flex-start}
-  .foot-bottom{flex-direction:column;gap:.75rem;align-items:flex-start}
-}
+.pp-wrap{max-width:680px;margin:0 auto;padding:3rem 2rem}
+.pp-eyebrow{font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--cta);margin-bottom:.5rem}
+.pp-wrap h1{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,4vw,38px);font-weight:600;color:var(--ink);margin-bottom:.5rem;line-height:1.1}
+.pp-date{font-size:13px;color:var(--muted);margin-bottom:2.5rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+.pp-wrap h2{font-size:15px;font-weight:600;color:var(--ink);margin:2rem 0 .6rem}
+.pp-wrap p{font-size:14px;color:var(--ink2);line-height:1.75;margin-bottom:1rem}
+.pp-wrap ul{font-size:14px;color:var(--ink2);line-height:1.75;margin-bottom:1rem;padding-left:1.25rem}
+.pp-wrap a{color:var(--cta);text-decoration:underline}
+.pp-contact-box{background:var(--white);border:1px solid var(--border);border-radius:6px;padding:1.25rem 1.5rem;margin-top:1.5rem}
+@media(max-width:680px){.pp-wrap{padding:2rem 1.25rem}}
 </style>
 </head>
 <body>
-
-<!-- TOP BAR -->
-<div class="top-bar">
-  <a href="tel:4374437556" class="top-bar-phone">
-    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1.25h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.84a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16.92z"/></svg>
-    (437) 443-7556
-  </a>
-  <div class="top-bar-sep"></div>
-  <button class="top-btn light" onclick="openModal()">Book Free Showing</button>
-</div>
-
-<!-- NAV -->
-<nav>
-  <a class="logo" href="/">
-    <svg width="155" height="28" viewBox="0 0 190 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect width="32" height="32" rx="6" fill="#1a2332" y="2"/>
-      <path d="M9 22 L16 12 L23 22" stroke="#e8a020" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-      <path d="M16 12 L23 12" stroke="#e8a020" stroke-width="2" stroke-linecap="round"/>
-      <path d="M23 12 L23 19" stroke="#e8a020" stroke-width="2" stroke-linecap="round"/>
-      <text x="42" y="22" font-size="17" font-weight="500" fill="#1a2332" font-family="Outfit,sans-serif" letter-spacing="-0.5">Home<tspan fill="#e8a020" font-weight="700">Cashbacks</tspan></text>
-    </svg>
-  </a>
-  <div class="nav-cred-wrap">
-    <img src="headshot.webp" alt="Laleh Mousavi" class="nav-headshot"/>
-    <div>
-      <span class="nav-cred">Laleh Mousavi, Realtor</span>
-      <span class="nav-cred nav-cred-line2">Toronto Real Estate Realty Plus Inc.</span>
-      <span class="nav-cred-line2">Toronto Real Estate Realty Plus Inc.</span>
-    </div>
-  </div>
-  <ul class="nav-links" id="nav-links">
-    <li class="nav-item"><a href="how-cashback-works.html" onclick="closeMobMenu()">How It Works</a></li>
-    <li class="nav-item"><a href="our-story.html" onclick="closeMobMenu()">Our Story</a></li>
-    <li class="nav-item">
-      <button class="nav-link-btn" onclick="this.parentElement.classList.toggle('open')">Resources<svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 1l4 4 4-4"/></svg></button>
-      <div class="dropdown">
-        <a href="checklist.html" onclick="closeMobMenu()">
-          <div class="dropdown-label">Home Buyer Checklist</div>
-          <div class="dropdown-sub">5 phase guide to buying</div>
-        </a>
-        <a href="calculators.html" onclick="closeMobMenu()">
-          <div class="dropdown-label">Calculators</div>
-          <div class="dropdown-sub">Closing costs and monthly ownership</div>
-        </a>
-        <a href="offer-strategy.html" onclick="closeMobMenu()">
-          <div class="dropdown-label">Offer Strategy Tool</div>
-          <div class="dropdown-sub">Build your offer strategy</div>
-        </a>
-        <a href="first-time-buyer-guide.html" onclick="closeMobMenu()">
-          <div class="dropdown-label">First-Time Buyer Guide</div>
-          <div class="dropdown-sub">Everything you need to get started</div>
-        </a>
-      </div>
-    </li>
-    <li class="nav-item"><a href="/#faq" onclick="closeMobMenu()">FAQ</a></li>
-    <li class="nav-item"><a href="#" class="nav-pill" onclick="openModal();closeMobMenu();return false">Free Showing</a></li>
-  </ul>
-  <button class="hamburger" id="hamburger" onclick="toggleMobMenu()" aria-label="Menu">
-    <span></span><span></span><span></span>
-  </button>
-</nav>
-
-<div class="wrap">
+<div class="pp-wrap">
   <div class="pp-eyebrow">Legal</div>
   <h1>Privacy Policy</h1>
   <p class="pp-date">Last updated: April 2026 &nbsp;|&nbsp; Laleh Mousavi, Realtor, Toronto Real Estate Realty Plus Inc. operating as HomeCashbacks</p>
@@ -248,7 +74,7 @@ footer{background:#1a2332;padding:2.5rem 2rem 1.5rem}
   <p>Our website does not currently use cookies, analytics tracking, or third-party advertising scripts. If this changes, this policy will be updated accordingly.</p>
 
   <h2>9. Changes to this policy</h2>
-  <p>We may update this Privacy Policy from time to time. The "Last updated" date at the top of this page will reflect any changes. For material changes that affect how we collect, use, or share your personal information, we will make reasonable efforts to notify you directly — for example by email if we have your contact information. Continued use of our website does not constitute consent to material changes. If you do not agree with any changes, you may request deletion of your information by contacting us at the address in Section 10.</p>
+  <p>We may update this Privacy Policy from time to time. The "Last updated" date at the top of this page will reflect any changes. For material changes, we will make reasonable efforts to notify you directly. Continued use of our website does not constitute consent to material changes.</p>
 
   <h2>10. Contact us</h2>
   <p>For privacy-related inquiries, access requests, or deletion requests:</p>
@@ -260,94 +86,6 @@ footer{background:#1a2332;padding:2.5rem 2rem 1.5rem}
 
   <h2>11. Regulatory oversight</h2>
   <p>Our real estate services are regulated by the Real Estate Council of Ontario (RECO) under the <em>Trust in Real Estate Services Act, 2002</em> (TRESA). For concerns about our real estate conduct, you may contact RECO at <a href="https://www.reco.on.ca" target="_blank">reco.on.ca</a>. For privacy complaints, you may contact the Office of the Privacy Commissioner of Canada at <a href="https://www.priv.gc.ca" target="_blank">priv.gc.ca</a>.</p>
-
 </div>
-
-<footer>
-  <div class="foot-inner">
-    <div class="foot-agent">
-      <img src="headshot.webp" alt="Laleh Mousavi" class="foot-headshot"/>
-      <div>
-        <div class="foot-agent-name">Laleh Mousavi</div>
-        <div class="foot-agent-title">Realtor · Toronto Real Estate Realty Plus Inc.<br>Registered with RECO · Serving Toronto &amp; GTA</div>
-        <div class="foot-agent-badge">Licensed in Ontario</div>
-      </div>
-    </div>
-    <div class="foot-links">
-      <a href="how-cashback-works.html">How It Works</a>
-      <a href="our-story.html">Our Story</a>
-      <a href="first-time-buyer-guide.html">First-Time Buyer Guide</a>
-      <a href="checklist.html">Home Buyer Checklist</a>
-      <a href="calculators.html">Calculators</a>
-      <a href="tel:4374437556">(437) 443-7556</a>
-      <a href="mailto:Laleh@homecashbacks.ca">Laleh@homecashbacks.ca</a>
-    </div>
-    <div class="foot-cta">
-      <button class="foot-cta-btn" onclick="openModal()">Book a Free Showing</button>
-      <span class="foot-cta-sub">No commitment · First showing free</span>
-    </div>
-  </div>
-  <div class="foot-bottom">
-    <span>&copy; 2026 HomeCashbacks. All rights reserved.</span>
-    <div style="display:flex;align-items:center;gap:.75rem">
-      <a href="https://www.linkedin.com/company/homecashbacks/about/" target="_blank" rel="noopener" class="foot-social-link">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>LinkedIn
-      </a>
-      <a href="https://www.instagram.com/homecashbacks/" target="_blank" rel="noopener" class="foot-social-link">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>Instagram
-      </a>
-      <a href="/privacy.html" class="foot-social-link">Privacy Policy</a>
-    </div>
-  </div>
-  <p class="foot-disclaimer">The information on this website is provided for general guidance purposes only and does not constitute legal, financial, real estate, or mortgage advice. HomeCashbacks makes no representations or warranties regarding the accuracy, completeness, or timeliness of any information on this site. All calculations, estimates, and figures are approximations and should not be relied upon as professional advice. Real estate transactions involve significant financial risk. Always consult a licensed real estate lawyer, mortgage professional, and financial advisor before making any decisions. HomeCashbacks is not liable for any losses, damages, or decisions made based on information contained on this website.</p>
-</footer>
-
-<!-- MODAL -->
-<div class="modal-overlay" id="modal" onclick="if(event.target===this)closeModal()">
-  <div class="modal">
-    <button class="modal-close" onclick="closeModal()">✕</button>
-    <div id="modal-form-wrap">
-      <div class="modal-tag">Book a Free Showing</div>
-      <div class="modal-title">Let's get started</div>
-      <div class="modal-sub">Your first showing is free. We'll follow up within a few hours.</div>
-      <form id="form-showing" name="contact" data-netlify="true" netlify-honeypot="bot-field" novalidate>
-        <input type="hidden" name="form-name" value="contact"/>
-        <p style="display:none"><input name="bot-field"/></p>
-        <div class="f-field">
-          <label class="f-label" for="f-name">Full name <span style="color:#5a6a82;font-size:11px;font-weight:400">(required)</span></label>
-          <input class="f-input" type="text" id="f-name" name="name"/>
-          <div class="f-error" id="err-name"></div>
-        </div>
-        <div class="f-field">
-          <label class="f-label" for="f-email">Email address <span style="color:#5a6a82;font-size:11px;font-weight:400">(or phone)</span></label>
-          <input class="f-input" type="text" id="f-email" name="email" inputmode="email"/>
-        </div>
-        <div class="f-field">
-          <label class="f-label" for="f-phone">Phone number <span style="color:#5a6a82;font-size:11px;font-weight:400">(or email)</span></label>
-          <input class="f-input" type="tel" id="f-phone" name="phone"/>
-          <div class="f-note">At least one of email or phone is required.</div>
-          <div class="f-error" id="err-contact"></div>
-        </div>
-        <p class="f-consent">By submitting, you agree to be contacted by HomeCashbacks. View our <a href="/privacy.html" target="_blank">Privacy Policy</a>.</p>
-        <button type="button" class="f-submit" onclick="handleFormSubmit()">Claim My Free Showing</button>
-      </form>
-    </div>
-    <div class="f-success" id="form-success" style="display:none">
-      <div class="f-success-icon">✓</div>
-      <h3>We'll be in touch!</h3>
-      <p>Expect a call or email from us within a few hours.</p>
-    </div>
-  </div>
-</div>
-
-<script>
-function openModal(){document.getElementById('modal').classList.add('open');document.getElementById('form-success').style.display='none';document.getElementById('modal-form-wrap').style.display='block';}
-
-document.addEventListener('keydown',function(e){if(e.key==='Escape'){const overlay=document.querySelector('.modal-overlay');if(overlay&&overlay.classList.contains('open'))closeModal();}});
-function closeModal(){document.getElementById('modal').classList.remove('open');}
-
-function toggleMobMenu(){document.getElementById('nav-links').classList.toggle('open');document.getElementById('hamburger').classList.toggle('open');}
-function closeMobMenu(){document.getElementById('nav-links').classList.remove('open');document.getElementById('hamburger').classList.remove('open');}
-</script>
 </body>
 </html>

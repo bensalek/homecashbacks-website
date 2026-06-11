@@ -1,0 +1,1154 @@
+{
+  "dataDate": "June 2026",
+  "cities": [
+    {
+      "slug": "toronto",
+      "name": "Toronto",
+      "cashback": "$20,000",
+      "heroSub": "We are a licensed Toronto buyer agent. We charge a flat $4,999 fee and return the rest of the buyer agent commission to you after closing. On a typical Toronto home, that is over $20,000 cash back.",
+      "calcDefault": 900000,
+      "marketDate": "May 2026",
+      "marketTitle": "The Toronto Market Right Now",
+      "marketText": "Toronto is sitting at an inflection point. Inventory is elevated, interest rates have come down from their peak, and the condo segment in particular has more supply than it has seen since before the pandemic. For buyers who have been waiting, the window of leverage is open right now.",
+      "marketNote": "First-time buyers in Toronto also qualify for both the provincial and municipal land transfer tax rebates, which can add up to <strong>$8,475</strong> in savings on top of your cashback. That combination is unique to Toronto buyers.",
+      "stats": [
+        {
+          "val": "$1.07M",
+          "label": "Average home price",
+          "highlight": true
+        },
+        {
+          "val": "$680K",
+          "label": "Average condo price"
+        },
+        {
+          "val": "$1.8M",
+          "label": "Average detached"
+        },
+        {
+          "val": "38 days",
+          "label": "Avg days on market"
+        }
+      ],
+      "hoods": [
+        {
+          "type": "Most in demand",
+          "name": "The Annex",
+          "desc": "University of Toronto adjacent, walkable, transit-rich. A perennial favourite for buyers who want character and convenience without sacrificing access.",
+          "price": "Condos from ~$750K",
+          "link": "/annex-toronto.html",
+          "featured": true
+        },
+        {
+          "type": "Condo value",
+          "name": "St. Lawrence Market",
+          "desc": "Downtown east, walkable, and one of the best value condo pockets close to the financial district. Strong transit access and a genuine neighbourhood feel in the heart of the city.",
+          "price": "Condos from ~$650K",
+          "featured": true,
+          "link": "/st-lawrence-market-toronto.html"
+        },
+        {
+          "type": "Rising interest",
+          "name": "Leslieville",
+          "desc": "East end character, independent restaurants, and a tight-knit community feel. Semis and row houses here have held value consistently through market cycles.",
+          "price": "Semis from ~$1.1M",
+          "featured": true,
+          "link": "/leslieville-toronto.html"
+        },
+        {
+          "type": "First-time buyers",
+          "name": "The Junction",
+          "desc": "West end, walkable, and one of the best value pockets for buyers who want a freehold within the city. Prices have room to move here relative to comparable east end streets.",
+          "price": "Semis from ~$1.0M",
+          "link": "/the-junction-toronto.html",
+          "featured": true
+        },
+        {
+          "type": "Family freehold",
+          "name": "Leaside",
+          "desc": "Top schools, quiet streets, and solid freehold stock. Popular with move-up buyers who want to stay in Toronto. Prices reflect the demand.",
+          "price": "Detached from ~$1.7M",
+          "link": "/leaside-toronto.html",
+          "featured": true
+        },
+        {
+          "type": "Waterfront",
+          "name": "Harbourfront",
+          "desc": "Lake views, PATH access, and the most walkable scores in the city. High-rise condo living at its most urban. Good value in the current condo market.",
+          "price": "Condos from ~$650K",
+          "link": "/harbourfront-toronto.html",
+          "featured": true
+        }
+      ],
+      "laleh": "\"Toronto buyers often feel like they have no leverage. But the market right now is more balanced than the headlines suggest. Inventory is up, sellers are negotiating, and first-time buyers in Toronto have a double land transfer tax rebate that most agents never even mention. Your cashback combined with that rebate can genuinely change what your first year looks like after closing.\"",
+      "faqCity": [
+        {
+          "q": "Is there a cashback realtor in Toronto?",
+          "a": "Yes. Home Cashbacks is a RECO-registered buyer agent serving Toronto and the GTA. We charge a flat $4,999 fee and return the rest of the buyer agent commission to you after closing."
+        },
+        {
+          "q": "How much cashback can I get on a Toronto home?",
+          "a": "On a $1,000,000 Toronto home with a 2.5% buyer agent commission, the total commission is $25,000. We take our flat $4,999 and you receive approximately $20,001 back after closing."
+        },
+        {
+          "q": "Do you serve condos in Toronto?",
+          "a": "Yes. We serve all Toronto property types including condos, semi-detached, detached, and townhouses across all Toronto neighbourhoods."
+        },
+        {
+          "q": "Is the Toronto market good for buyers right now?",
+          "a": "Toronto is currently a balanced to buyers market with elevated inventory and prices stabilized from their 2022 peak. Buyers have more negotiating room than they have had in years, particularly in the condo segment."
+        }
+      ],
+      "alsoServing": [
+        {
+          "name": "North York",
+          "slug": "north-york"
+        },
+        {
+          "name": "Etobicoke",
+          "slug": "etobicoke"
+        },
+        {
+          "name": "Scarborough",
+          "slug": "scarborough"
+        },
+        {
+          "name": "Mississauga",
+          "slug": "mississauga"
+        }
+      ],
+      "geo": {
+        "lat": 43.6532,
+        "lng": -79.3832
+      },
+      "sourceSlug": "buyer-toronto",
+      "metaDesc": "Cashback realtor in Toronto. Flat $4,999 fee \u2014 on a typical Toronto home you keep $20,000. Full service, no upfront commitment."
+    },
+    {
+      "slug": "mississauga",
+      "name": "Mississauga",
+      "cashback": "$19,000",
+      "heroSub": "We are a licensed Mississauga buyer agent. We charge a flat $4,999 fee and return the rest of the buyer agent commission to you after closing. On a typical Mississauga home, that is over $19,000 back.",
+      "calcDefault": 960000,
+      "marketDate": "May 2026",
+      "marketTitle": "The Mississauga Market Right Now",
+      "marketText": "Mississauga is a buyers market. Inventory is above the five-year average and prices are down year over year, which means buyers have more negotiating room than they have had in a long time. If you have been waiting, 2026 is worth a serious look.",
+      "marketNote": null,
+      "stats": [
+        {
+          "val": "$960K",
+          "label": "Average home price",
+          "highlight": true
+        },
+        {
+          "val": "$515K",
+          "label": "Average condo price"
+        },
+        {
+          "val": "$1.46M",
+          "label": "Average detached"
+        },
+        {
+          "val": "48 days",
+          "label": "Avg days on market"
+        }
+      ],
+      "hoods": [
+        {
+          "type": "Most in demand",
+          "name": "Port Credit",
+          "desc": "Waterfront village feel, walkable, and the Lakeshore corridor LRT stop. Condo prices here rival east-end Toronto but the feel is entirely different.",
+          "price": "Condos from ~$650K",
+          "featured": true
+        },
+        {
+          "type": "Condo hub",
+          "name": "Square One / City Centre",
+          "desc": "High-rise dense, transit-forward, and the most inventory of any Mississauga area. Good value per square foot for buyers focused on price per room.",
+          "price": "Condos from ~$480K",
+          "featured": true
+        },
+        {
+          "type": "Rising interest",
+          "name": "Cooksville",
+          "desc": "Central location, quick access to major routes, and one of the most anticipated neighbourhood plays along the Hurontario LRT corridor.",
+          "price": "Mixed from ~$700K",
+          "featured": true
+        },
+        {
+          "type": "Family freehold",
+          "name": "Erin Mills",
+          "desc": "Established, quiet, good schools, and one of the better value detached options in Mississauga. Popular with families moving up from condos.",
+          "price": "Detached from ~$1.1M"
+        },
+        {
+          "type": "Village character",
+          "name": "Streetsville",
+          "desc": "Smaller, charming, independent feel. Buyers who want Mississauga prices without the high-rise density. Heritage main street, walkable core.",
+          "price": "Mixed from ~$800K"
+        },
+        {
+          "type": "Lakeshore luxury",
+          "name": "Lorne Park",
+          "desc": "One of Mississauga's most prestigious addresses. Large lots, mature trees, top schools. This is the move-up market at its peak.",
+          "price": "Detached from ~$2M"
+        }
+      ],
+      "laleh": "\"Mississauga buyers often get treated like an afterthought in the Toronto conversation. But this is a genuinely different market. More value per square foot, more inventory to choose from, and the Hurontario LRT is going to change what walkability means here. Port Credit is already there. The rest of the city is catching up.\"",
+      "faqCity": [
+        {
+          "q": "Is there a cashback realtor in Mississauga?",
+          "a": "Yes. Home Cashbacks is a RECO-registered buyer agent serving Mississauga and the GTA. We charge a flat $4,999 fee and return the rest of the buyer agent commission to you after closing."
+        },
+        {
+          "q": "How much cashback can I get on a Mississauga home?",
+          "a": "On a $960,000 Mississauga home with a 2.5% buyer agent commission, the total commission is $24,000. We take our flat $4,999 and you receive approximately $19,001 back after closing."
+        },
+        {
+          "q": "Is Mississauga a good place to buy right now?",
+          "a": "Mississauga is currently a buyers market with elevated inventory. Buyers have more negotiating room than they have had in years, particularly for condos and townhomes near the Hurontario LRT corridor."
+        },
+        {
+          "q": "Do you serve all Mississauga neighbourhoods?",
+          "a": "Yes. We serve all Mississauga communities including Port Credit, Square One, Erin Mills, Streetsville, Cooksville, Lorne Park, and all surrounding areas."
+        }
+      ],
+      "alsoServing": [
+        {
+          "name": "Toronto",
+          "slug": "toronto"
+        },
+        {
+          "name": "North York",
+          "slug": "north-york"
+        },
+        {
+          "name": "Etobicoke",
+          "slug": "etobicoke"
+        },
+        {
+          "name": "Brampton",
+          "slug": "brampton"
+        }
+      ],
+      "geo": {
+        "lat": 43.589,
+        "lng": -79.6441
+      },
+      "sourceSlug": "buyer-mississauga",
+      "metaDesc": "Cashback realtor in Mississauga. Flat $4,999 fee \u2014 on a typical Mississauga home you keep $19,000. Full service, no upfront commitment."
+    },
+    {
+      "slug": "etobicoke",
+      "name": "Etobicoke",
+      "cashback": "$18,000",
+      "heroSub": "We are a licensed Etobicoke buyer agent. We charge a flat $4,999 fee and return the rest of the buyer agent commission to you as cash back after closing. On a typical Etobicoke home, that is over $18,000 back.",
+      "calcDefault": 950000,
+      "marketDate": "May 2026",
+      "marketTitle": "The Etobicoke Market Right Now",
+      "marketText": "Etobicoke is one of Toronto's most underrated markets. It offers lakeshore access, established freehold neighbourhoods, and consistent transit links at prices that remain below comparable central Toronto areas. Inventory has risen in 2026 and buyer competition has softened, making this a strong window for serious buyers.",
+      "marketNote": null,
+      "stats": [
+        {
+          "val": "$950K",
+          "label": "Average home price",
+          "highlight": true
+        },
+        {
+          "val": "$580K",
+          "label": "Average condo price"
+        },
+        {
+          "val": "$1.35M",
+          "label": "Average detached"
+        },
+        {
+          "val": "37 days",
+          "label": "Avg days on market"
+        }
+      ],
+      "hoods": [
+        {
+          "type": "Most prestigious",
+          "name": "The Kingsway",
+          "desc": "One of Toronto's most established addresses. Large lots, mature trees, and proximity to both Bloor West and the Humber River.",
+          "price": "Detached from ~$2M",
+          "featured": true
+        },
+        {
+          "type": "Lakeshore value",
+          "name": "Mimico",
+          "desc": "Waterfront condos and renovated semis at prices well below comparable east-end properties. Strong GO access to Union.",
+          "price": "Condos from ~$550K",
+          "featured": true
+        },
+        {
+          "type": "Family freehold",
+          "name": "Islington Village",
+          "desc": "Subway access, good schools, and a mix of detached and semi-detached homes. One of Etobicoke's best value family areas.",
+          "price": "Semis from ~$900K",
+          "featured": true
+        },
+        {
+          "type": "Walkable west end",
+          "name": "Bloor West Village",
+          "desc": "On the Etobicoke border with strong independent retail, established schools, and freehold homes in high demand.",
+          "price": "Detached from ~$1.5M"
+        },
+        {
+          "type": "Lakeshore gem",
+          "name": "Long Branch",
+          "desc": "At the western edge of Toronto, Long Branch offers bungalows and semis at some of the most accessible lakeshore prices in the city.",
+          "price": "Mixed from ~$800K"
+        },
+        {
+          "type": "Rising interest",
+          "name": "Stonegate-Queensway",
+          "desc": "Central Etobicoke, close to Gardiner access and the lake. Detached and semi inventory at prices that make sense for move-up buyers.",
+          "price": "Detached from ~$1.1M"
+        }
+      ],
+      "laleh": "\"Etobicoke buyers often tell me they feel like they are settling for being outside the core. I push back on that every time. Mimico has better lake access than most of the east end. The Kingsway has more character than half of midtown. And the cashback on an Etobicoke purchase combined with the Toronto land transfer tax rebate for first-time buyers can genuinely change how your first year after closing feels financially.\"",
+      "faqCity": [
+        {
+          "q": "Is there a cashback realtor in Etobicoke?",
+          "a": "Yes. Home Cashbacks is a RECO-registered buyer agent serving Etobicoke and the GTA. We charge a flat $4,999 fee and return the rest of the buyer agent commission to you after closing."
+        },
+        {
+          "q": "How much cashback can I get in Etobicoke?",
+          "a": "On a $950,000 Etobicoke home with a 2.5% buyer agent commission, the total commission is $23,750. We take our flat $4,999 and you receive approximately $18,751 back after closing."
+        },
+        {
+          "q": "Do Etobicoke buyers pay Toronto land transfer tax?",
+          "a": "Yes. Etobicoke is within the City of Toronto boundaries, so buyers pay both provincial and municipal land transfer tax. First-time buyers qualify for rebates of up to $8,475 combined."
+        },
+        {
+          "q": "What neighbourhoods in Etobicoke are best for first-time buyers?",
+          "a": "Mimico, Long Branch, and Islington Village offer the best entry-level options in Etobicoke. Condos in Mimico start around $550K and detached homes in Islington Village and Long Branch can be found under $1M."
+        }
+      ],
+      "alsoServing": [
+        {
+          "name": "Toronto",
+          "slug": "toronto"
+        },
+        {
+          "name": "North York",
+          "slug": "north-york"
+        },
+        {
+          "name": "Scarborough",
+          "slug": "scarborough"
+        },
+        {
+          "name": "Mississauga",
+          "slug": "mississauga"
+        }
+      ],
+      "geo": {
+        "lat": 43.6205,
+        "lng": -79.5132
+      },
+      "sourceSlug": "buyer-etobicoke",
+      "metaDesc": "Cashback realtor in Etobicoke. Flat $4,999 fee \u2014 on a typical Etobicoke home you keep $18,000. Full service, no upfront commitment."
+    },
+    {
+      "slug": "scarborough",
+      "name": "Scarborough",
+      "cashback": "$14,000",
+      "heroSub": "We are a licensed Scarborough buyer agent. We charge a flat $4,999 fee and return the rest of the buyer agent commission to you as cash back after closing. Scarborough offers some of the best freehold value in Toronto, and your cashback makes it even better.",
+      "calcDefault": 760000,
+      "marketDate": "May 2026",
+      "marketTitle": "The Scarborough Market Right Now",
+      "marketText": "Scarborough is Toronto's most accessible freehold market. Detached homes remain available at prices that first-time buyers can actually reach, and inventory has grown in 2026 giving buyers more time and more options. The Scarborough RT replacement and Eglinton East LRT extension are long-term infrastructure plays that are beginning to factor into buyer interest.",
+      "marketNote": null,
+      "stats": [
+        {
+          "val": "$760K",
+          "label": "Average home price",
+          "highlight": true
+        },
+        {
+          "val": "$480K",
+          "label": "Average condo price"
+        },
+        {
+          "val": "$980K",
+          "label": "Average detached"
+        },
+        {
+          "val": "42 days",
+          "label": "Avg days on market"
+        }
+      ],
+      "hoods": [
+        {
+          "type": "Best overall value",
+          "name": "Clairlea",
+          "desc": "Semi-detached and detached homes at some of the most accessible prices in Toronto. Strong community, improving transit access.",
+          "price": "Semis from ~$750K",
+          "featured": true
+        },
+        {
+          "type": "Lakefront character",
+          "name": "Scarborough Village",
+          "desc": "Established neighbourhood with access to the Bluffs trails and waterfront parks. Detached homes here command a premium over Clairlea.",
+          "price": "Detached from ~$850K",
+          "featured": true
+        },
+        {
+          "type": "Bluffs access",
+          "name": "Guildwood",
+          "desc": "One of Scarborough's most desirable addresses. Ravine lots, Bluffs walking trails, and a strong GO station for commuters.",
+          "price": "Detached from ~$1.1M",
+          "featured": true
+        },
+        {
+          "type": "Transit connected",
+          "name": "Agincourt",
+          "desc": "Sheppard East corridor with access to TTC and GO. Diverse housing mix and one of Scarborough's more established communities.",
+          "price": "Detached from ~$900K"
+        },
+        {
+          "type": "Bluffs gem",
+          "name": "Birchcliff",
+          "desc": "On the western edge of Scarborough, Birchcliff has been discovered. Bungalows and post-war homes renovated by families who love the ravine access.",
+          "price": "Mixed from ~$850K"
+        },
+        {
+          "type": "Most accessible",
+          "name": "Malvern",
+          "desc": "For buyers with a budget under $800K who want a detached house in Toronto, Malvern is one of the few places it remains possible.",
+          "price": "Detached from ~$700K"
+        }
+      ],
+      "laleh": "\"Scarborough is where first-time buyers can still get a detached home in Toronto without spending $1.5M. That matters. The Bluffs are genuinely beautiful, Guildwood has a GO station, and Clairlea is one of the best-kept secrets left in the city. Your cashback on a Scarborough purchase, combined with both land transfer tax rebates for first-time buyers, can add up to $20,000 or more back in your pocket after closing.\"",
+      "faqCity": [
+        {
+          "q": "Is there a cashback realtor in Scarborough?",
+          "a": "Yes. Home Cashbacks is a RECO-registered buyer agent serving Scarborough and all of Toronto. We charge a flat $4,999 fee and return the rest of the buyer agent commission after closing."
+        },
+        {
+          "q": "How much cashback can I get in Scarborough?",
+          "a": "On a $760,000 Scarborough home with a 2.5% buyer agent commission, the total commission is $19,000. We take our flat $4,999 and you receive approximately $14,001 back after closing."
+        },
+        {
+          "q": "Do Scarborough buyers pay Toronto land transfer tax?",
+          "a": "Yes. Scarborough is within the City of Toronto so buyers pay both provincial and municipal land transfer tax. First-time buyers qualify for rebates up to $8,475 combined."
+        },
+        {
+          "q": "Is Scarborough a good place to buy for first-time buyers?",
+          "a": "Yes. Scarborough offers the most accessible freehold prices remaining in Toronto proper. Detached homes are still available under $1M in several pockets, and the cashback plus land transfer tax rebates give first-time buyers a meaningful financial head start."
+        }
+      ],
+      "alsoServing": [
+        {
+          "name": "Toronto",
+          "slug": "toronto"
+        },
+        {
+          "name": "North York",
+          "slug": "north-york"
+        },
+        {
+          "name": "Etobicoke",
+          "slug": "etobicoke"
+        },
+        {
+          "name": "Mississauga",
+          "slug": "mississauga"
+        }
+      ],
+      "geo": {
+        "lat": 43.7731,
+        "lng": -79.2576
+      },
+      "sourceSlug": "buyer-scarborough",
+      "metaDesc": "Cashback realtor in Scarborough. Flat $4,999 fee \u2014 on a typical Scarborough home you keep $14,000. Full service, no upfront commitment."
+    },
+    {
+      "slug": "north-york",
+      "name": "North York",
+      "cashback": "$17,500",
+      "heroSub": "We are a licensed North York buyer agent. We charge a flat $4,999 fee and return the rest of the buyer agent commission to you as cash back after closing. On a typical North York home, that is over $17,500 back.",
+      "calcDefault": 900000,
+      "marketDate": "May 2026",
+      "marketTitle": "The North York Market Right Now",
+      "marketText": "North York is one of the GTA's most diverse and transit-connected housing markets. The Yonge-Sheppard corridor anchors condo demand while areas like Willowdale and Bayview Village draw freehold buyers priced out of central Toronto. Inventory has risen in 2026, giving buyers more negotiating room than they have seen in years.",
+      "marketNote": null,
+      "stats": [
+        {
+          "val": "$900K",
+          "label": "Average home price",
+          "highlight": true
+        },
+        {
+          "val": "$600K",
+          "label": "Average condo price"
+        },
+        {
+          "val": "$1.4M",
+          "label": "Average detached"
+        },
+        {
+          "val": "35 days",
+          "label": "Avg days on market"
+        }
+      ],
+      "hoods": [
+        {
+          "type": "Most in demand",
+          "name": "Willowdale",
+          "desc": "The Yonge-Sheppard hub. Dense condo inventory, strong transit, and walkable retail. Popular with first-time condo buyers and investors.",
+          "price": "Condos from ~$600K",
+          "featured": true
+        },
+        {
+          "type": "Prestige freehold",
+          "name": "Bayview Village",
+          "desc": "Quiet, tree-lined streets, top schools, and some of North York's most sought-after freehold stock. Move-up buyer territory.",
+          "price": "Detached from ~$2M",
+          "featured": true
+        },
+        {
+          "type": "Family value",
+          "name": "Don Mills",
+          "desc": "One of Toronto's original planned communities. Good schools, ravine access, and freehold prices well below Bayview Village.",
+          "price": "Detached from ~$1.2M",
+          "featured": true
+        },
+        {
+          "type": "Rising interest",
+          "name": "Lawrence Manor",
+          "desc": "West of Bathurst, Lawrence Manor offers semi-detached and detached homes at prices below the North York average.",
+          "price": "Semis from ~$900K"
+        },
+        {
+          "type": "Transit forward",
+          "name": "Newtonbrook",
+          "desc": "At the top of the Yonge corridor, Newtonbrook offers freehold and condo options with easy TTC access for commuters.",
+          "price": "Mixed from ~$850K"
+        },
+        {
+          "type": "Eglinton corridor",
+          "name": "Leaside / Midtown",
+          "desc": "Along the Crosstown LRT route, these pockets are drawing buyers who want midtown access without downtown prices.",
+          "price": "Condos from ~$650K"
+        }
+      ],
+      "laleh": "\"North York gets overlooked in the Toronto conversation, but it should not. You get subway access, established neighbourhoods, and real freehold inventory at prices that still make sense. Willowdale in particular is worth serious attention right now -- strong transit, walkable, and more condo supply than buyers realize. Your cashback on a North York purchase can cover several months of carrying costs while you settle in.\"",
+      "faqCity": [
+        {
+          "q": "Is there a cashback realtor in North York?",
+          "a": "Yes. Home Cashbacks is a RECO-registered buyer agent serving North York and the GTA. We charge a flat $4,999 fee and return the rest of the buyer agent commission after closing."
+        },
+        {
+          "q": "How much cashback can I get in North York?",
+          "a": "On a $900,000 North York home with a 2.5% buyer agent commission, the total commission is $22,500. We take our flat $4,999 and you receive approximately $17,501 back after closing."
+        },
+        {
+          "q": "Do North York buyers pay Toronto land transfer tax?",
+          "a": "Yes. North York is within the City of Toronto so buyers pay both provincial and municipal land transfer tax. First-time buyers qualify for rebates up to $8,475 combined."
+        },
+        {
+          "q": "What is the best area in North York for first-time buyers?",
+          "a": "Willowdale and Lawrence Manor offer the best entry points. Condos in Willowdale start around $600K and semis in Lawrence Manor can be found under $1M with more negotiating room than in central Toronto."
+        }
+      ],
+      "alsoServing": [
+        {
+          "name": "Toronto",
+          "slug": "toronto"
+        },
+        {
+          "name": "Etobicoke",
+          "slug": "etobicoke"
+        },
+        {
+          "name": "Scarborough",
+          "slug": "scarborough"
+        },
+        {
+          "name": "Mississauga",
+          "slug": "mississauga"
+        }
+      ],
+      "geo": {
+        "lat": 43.7615,
+        "lng": -79.4111
+      },
+      "sourceSlug": "buyer-north-york",
+      "metaDesc": "Cashback realtor in North York. Flat $4,999 fee \u2014 on a typical North York home you keep $17,500. Full service, no upfront commitment."
+    },
+    {
+      "slug": "vaughan",
+      "name": "Vaughan",
+      "cashback": "$18,000",
+      "heroSub": "We are a licensed Vaughan buyer agent. We charge a flat $4,999 fee and return the rest of the buyer agent commission to you as cash back after closing. On a typical Vaughan home, that is over $18,500 back.",
+      "calcDefault": 980000,
+      "marketDate": "May 2026",
+      "marketTitle": "The Vaughan Market Right Now",
+      "marketText": "Vaughan is one of the GTA's fastest-growing cities and a top destination for buyers seeking newer construction, larger lots, and strong highways and transit access. The Vaughan Metropolitan Centre subway station has firmly established the area as a serious option for commuters. Inventory has risen in 2026, giving buyers considerably more negotiating room than in recent years.",
+      "marketNote": null,
+      "stats": [
+        {
+          "val": "$980K",
+          "label": "Average home price",
+          "highlight": true
+        },
+        {
+          "val": "$620K",
+          "label": "Average condo price"
+        },
+        {
+          "val": "$1.5M",
+          "label": "Average detached"
+        },
+        {
+          "val": "38 days",
+          "label": "Avg days on market"
+        }
+      ],
+      "hoods": [
+        {
+          "type": "Most connected",
+          "name": "Vaughan Metropolitan Centre",
+          "desc": "The subway terminus and the city's fastest-growing condo node. Newer buildings, strong rental demand, and improving walkability.",
+          "price": "Condos from ~$620K",
+          "featured": true
+        },
+        {
+          "type": "Family freehold",
+          "name": "Woodbridge",
+          "desc": "Established community with freehold homes on generous lots. Strong schools, good highway access, and a real neighbourhood feel.",
+          "price": "Detached from ~$1.2M",
+          "featured": true
+        },
+        {
+          "type": "Prestige estate",
+          "name": "Kleinburg",
+          "desc": "Heritage village feel with estate lots, conservation land, and some of the GTA's most impressive properties.",
+          "price": "Detached from ~$2M",
+          "featured": true
+        },
+        {
+          "type": "Value freehold",
+          "name": "Maple",
+          "desc": "Semi-detached and detached homes at prices below the Vaughan average. Good GO and TTC access via the VMC extension.",
+          "price": "Semis from ~$900K"
+        },
+        {
+          "type": "New builds",
+          "name": "Concord",
+          "desc": "Newer construction and pre-construction condos near the VMC. Appeals to investors and first-time buyers who want modern finishes.",
+          "price": "Condos from ~$580K"
+        },
+        {
+          "type": "Quiet established",
+          "name": "Thornhill",
+          "desc": "Straddling Vaughan and Markham, Thornhill offers mature trees, larger lots, and established communities with strong school options.",
+          "price": "Detached from ~$1.3M"
+        }
+      ],
+      "laleh": "\"Vaughan gets dismissed as just a suburb but that misses the point entirely. The VMC subway station changed the equation. Buyers who were priced out of North York are finding real value here -- newer builds, bigger spaces, and a growing downtown core. Your cashback on a Vaughan purchase covers months of carrying costs while you get settled in a brand new home.\"",
+      "faqCity": [
+        {
+          "q": "Is there a cashback realtor in Vaughan?",
+          "a": "Yes. Home Cashbacks is a RECO-registered buyer agent serving Vaughan and the GTA. We charge a flat $4,999 fee and return the rest of the buyer agent commission after closing."
+        },
+        {
+          "q": "How much cashback can I get in Vaughan?",
+          "a": "On a $980,000 Vaughan home with a 2.5% buyer agent commission, the total commission is $24,500. We take our flat $4,999 and you receive approximately $19,501 back after closing."
+        },
+        {
+          "q": "Is Vaughan connected to Toronto by transit?",
+          "a": "Yes. The Vaughan Metropolitan Centre is the northern terminus of the Toronto-York Spadina subway extension on Line 1. It provides direct subway access to downtown Toronto in approximately 45 minutes."
+        },
+        {
+          "q": "What are the best neighbourhoods in Vaughan for families?",
+          "a": "Woodbridge, Maple, and Thornhill are consistently the top picks for families. All three offer established schools, freehold inventory, and good highway access for commuters who drive."
+        }
+      ],
+      "alsoServing": [
+        {
+          "name": "Toronto",
+          "slug": "toronto"
+        },
+        {
+          "name": "North York",
+          "slug": "north-york"
+        },
+        {
+          "name": "Richmond Hill",
+          "slug": "richmond-hill"
+        },
+        {
+          "name": "Markham",
+          "slug": "markham"
+        }
+      ],
+      "geo": {
+        "lat": 43.8563,
+        "lng": -79.5085
+      },
+      "sourceSlug": "buyer-vaughan",
+      "metaDesc": "Cashback realtor in Vaughan. Flat $4,999 fee \u2014 on a typical Vaughan home you keep $18,000. Full service, no upfront commitment."
+    },
+    {
+      "slug": "oakville",
+      "name": "Oakville",
+      "cashback": "$22,000",
+      "heroSub": "We are a licensed Oakville buyer agent. We charge a flat $4,999 fee and return the rest of the buyer agent commission to you as cash back after closing. On a typical Oakville home, that is over $22,000 back.",
+      "calcDefault": 1100000,
+      "marketDate": "May 2026",
+      "marketTitle": "The Oakville Market Right Now",
+      "marketText": "Oakville is consistently ranked among the best places to live in Canada and its real estate market reflects that reputation. Lakefront access, top schools, strong GO Transit service, and a genuine town centre make it one of the most complete communities in the GTA. Prices are among the highest outside Toronto proper, but 2026 has seen inventory rise and buyer competition ease.",
+      "marketNote": null,
+      "stats": [
+        {
+          "val": "$1.1M",
+          "label": "Average home price",
+          "highlight": true
+        },
+        {
+          "val": "$700K",
+          "label": "Average condo/townhouse"
+        },
+        {
+          "val": "$1.8M",
+          "label": "Average detached"
+        },
+        {
+          "val": "40 days",
+          "label": "Avg days on market"
+        }
+      ],
+      "hoods": [
+        {
+          "type": "Lakefront prestige",
+          "name": "Old Oakville",
+          "desc": "Heritage homes, tree-lined streets, a walkable downtown, and direct lake access. One of the most complete communities in the GTA.",
+          "price": "Detached from ~$2.5M",
+          "featured": true
+        },
+        {
+          "type": "GO Transit access",
+          "name": "Kerr Village",
+          "desc": "Walkable, artsy, and undervalued relative to Old Oakville. Close to the GO station and the lake. Semis and towns at accessible prices.",
+          "price": "Mixed from ~$900K",
+          "featured": true
+        },
+        {
+          "type": "Top schools",
+          "name": "River Oaks",
+          "desc": "Established family neighbourhood with some of Oakville's best public schools. Large lots, mature trees, and strong resale value.",
+          "price": "Detached from ~$1.5M",
+          "featured": true
+        },
+        {
+          "type": "New builds",
+          "name": "North Oakville",
+          "desc": "Master-planned communities with newer construction, parks, and good highway access. More affordable entry into the Oakville market.",
+          "price": "Detached from ~$1.1M"
+        },
+        {
+          "type": "Lakeshore charm",
+          "name": "Bronte",
+          "desc": "West Oakville's harbour community. Renovated homes near the marina with a genuine village feel. Getting harder to find under $1M.",
+          "price": "Mixed from ~$950K"
+        },
+        {
+          "type": "Executive homes",
+          "name": "Glen Abbey",
+          "desc": "Home to one of Canada's most famous golf courses. Executive detached homes with generous lots and strong school catchments.",
+          "price": "Detached from ~$1.6M"
+        }
+      ],
+      "laleh": "\"Oakville buyers are often surprised by how much their cashback actually means in real terms. On a $1.1M home that is over $22,000 back -- which covers months of carrying costs, moving expenses, or goes straight to your mortgage. Old Oakville is exceptional but buyers willing to look at Kerr Village or Bronte are finding real character at much more accessible prices.\"",
+      "faqCity": [
+        {
+          "q": "Is there a cashback realtor in Oakville?",
+          "a": "Yes. Home Cashbacks is a RECO-registered buyer agent serving Oakville and the GTA. We charge a flat $4,999 fee and return the rest of the buyer agent commission after closing."
+        },
+        {
+          "q": "How much cashback can I get in Oakville?",
+          "a": "On a $1,100,000 Oakville home with a 2.5% buyer agent commission, the total commission is $27,500. We take our flat $4,999 and you receive approximately $22,501 back after closing."
+        },
+        {
+          "q": "What is the best neighbourhood in Oakville for families?",
+          "a": "River Oaks and Glen Abbey are consistently top picks for families due to their strong school catchments. Old Oakville is the most prestigious. For value, Kerr Village and North Oakville offer the most accessible entry points."
+        },
+        {
+          "q": "Is Oakville commutable to Toronto?",
+          "a": "Yes. Oakville has two GO stations (Oakville and Bronte) with regular service to Union Station. The commute takes approximately 30 to 40 minutes depending on the service."
+        }
+      ],
+      "alsoServing": [
+        {
+          "name": "Mississauga",
+          "slug": "mississauga"
+        },
+        {
+          "name": "Etobicoke",
+          "slug": "etobicoke"
+        },
+        {
+          "name": "Brampton",
+          "slug": "brampton"
+        },
+        {
+          "name": "Toronto",
+          "slug": "toronto"
+        }
+      ],
+      "geo": {
+        "lat": 43.4675,
+        "lng": -79.6877
+      },
+      "sourceSlug": "buyer-oakville",
+      "metaDesc": "Cashback realtor in Oakville. Flat $4,999 fee \u2014 on a typical Oakville home you keep $22,000. Full service, no upfront commitment."
+    },
+    {
+      "slug": "markham",
+      "name": "Markham",
+      "cashback": "$18,000",
+      "heroSub": "We are a licensed Markham buyer agent. We charge a flat $4,999 fee and return the rest of the buyer agent commission to you as cash back after closing. On a typical Markham home, that is over $18,000 back.",
+      "calcDefault": 960000,
+      "marketDate": "May 2026",
+      "marketTitle": "The Markham Market Right Now",
+      "marketText": "Markham is the GTA's technology hub and one of York Region's most diverse and dynamic housing markets. Strong employment anchors, top schools, and Highway 407 access make it a consistent destination for buyers moving up from Scarborough and North York. Inventory has increased in 2026, giving buyers better selection and negotiating position.",
+      "marketNote": null,
+      "stats": [
+        {
+          "val": "$960K",
+          "label": "Average home price",
+          "highlight": true
+        },
+        {
+          "val": "$600K",
+          "label": "Average condo/townhouse"
+        },
+        {
+          "val": "$1.5M",
+          "label": "Average detached"
+        },
+        {
+          "val": "35 days",
+          "label": "Avg days on market"
+        }
+      ],
+      "hoods": [
+        {
+          "type": "Heritage village",
+          "name": "Unionville",
+          "desc": "One of the most charming and consistently in-demand addresses in the GTA. Heritage main street, excellent schools, and strong resale.",
+          "price": "Detached from ~$1.8M",
+          "featured": true
+        },
+        {
+          "type": "Tech hub",
+          "name": "Downtown Markham",
+          "desc": "Emerging mixed-use core with newer condos, office towers, and improving walkability. Appeals to tech workers and young professionals.",
+          "price": "Condos from ~$600K",
+          "featured": true
+        },
+        {
+          "type": "Family planned",
+          "name": "Cornell",
+          "desc": "Master-planned community in north Markham with newer homes, parks, and top school options. Consistently strong demand.",
+          "price": "Detached from ~$1.2M",
+          "featured": true
+        },
+        {
+          "type": "Upscale suburban",
+          "name": "Berczy Village",
+          "desc": "Newer builds on generous lots with a strong community feel. Popular with families who want modern construction without new-build prices.",
+          "price": "Detached from ~$1.3M"
+        },
+        {
+          "type": "Value townhomes",
+          "name": "Milliken Mills",
+          "desc": "Townhouses and semis with good Highway 407 access. One of Markham's more accessible entry points for first-time buyers.",
+          "price": "Towns from ~$700K"
+        },
+        {
+          "type": "Heritage charm",
+          "name": "Cathedraltown",
+          "desc": "Architecturally distinctive newer community with European-inspired design. Detached homes on quiet streets with a unique aesthetic.",
+          "price": "Detached from ~$1.1M"
+        }
+      ],
+      "laleh": "\"Markham does not get the credit it deserves. Unionville is one of the most livable communities in the entire GTA and buyers from Scarborough and North York consistently discover that their budget goes much further here. The tech employment base keeps demand stable even when broader markets soften. And your cashback makes the move even more worthwhile.\"",
+      "faqCity": [
+        {
+          "q": "Is there a cashback realtor in Markham?",
+          "a": "Yes. Home Cashbacks is a RECO-registered buyer agent serving Markham and the GTA. We charge a flat $4,999 fee and return the rest of the buyer agent commission after closing."
+        },
+        {
+          "q": "How much cashback can I get in Markham?",
+          "a": "On a $960,000 Markham home with a 2.5% buyer agent commission, the total commission is $24,000. We take our flat $4,999 and you receive approximately $19,001 back after closing."
+        },
+        {
+          "q": "Is Markham good for tech workers?",
+          "a": "Yes. Markham is home to a significant tech employment cluster including offices from IBM, AMD, Huawei, and many others. The combination of tech employment, top schools, and strong highway access makes it a top pick for professional families."
+        },
+        {
+          "q": "What is the best neighbourhood in Markham for families?",
+          "a": "Unionville and Cornell are consistently the top picks for families. Unionville has the heritage character and school reputation, Cornell offers newer construction at more accessible prices. Both have strong community infrastructure."
+        }
+      ],
+      "alsoServing": [
+        {
+          "name": "Toronto",
+          "slug": "toronto"
+        },
+        {
+          "name": "Scarborough",
+          "slug": "scarborough"
+        },
+        {
+          "name": "Richmond Hill",
+          "slug": "richmond-hill"
+        },
+        {
+          "name": "Vaughan",
+          "slug": "vaughan"
+        }
+      ],
+      "geo": {
+        "lat": 43.8561,
+        "lng": -79.337
+      },
+      "sourceSlug": "buyer-markham",
+      "metaDesc": "Cashback realtor in Markham. Flat $4,999 fee \u2014 on a typical Markham home you keep $18,000. Full service, no upfront commitment."
+    },
+    {
+      "slug": "richmond-hill",
+      "name": "Richmond Hill",
+      "cashback": "$19,000",
+      "heroSub": "We are a licensed Richmond Hill buyer agent. We charge a flat $4,999 fee and return the rest of the buyer agent commission to you as cash back after closing. On a typical Richmond Hill home, that is over $19,000 back.",
+      "calcDefault": 1000000,
+      "marketDate": "May 2026",
+      "marketTitle": "The Richmond Hill Market Right Now",
+      "marketText": "Richmond Hill is one of York Region's most in-demand addresses. Strong schools, established freehold neighbourhoods, and easy access to both Highway 404 and the Yonge corridor make it a consistent top pick for families moving up from Toronto. Inventory has grown in 2026, giving buyers more options and more leverage than they have had in years.",
+      "marketNote": null,
+      "stats": [
+        {
+          "val": "$1.0M",
+          "label": "Average home price",
+          "highlight": true
+        },
+        {
+          "val": "$650K",
+          "label": "Average condo/townhouse"
+        },
+        {
+          "val": "$1.6M",
+          "label": "Average detached"
+        },
+        {
+          "val": "36 days",
+          "label": "Avg days on market"
+        }
+      ],
+      "hoods": [
+        {
+          "type": "Top schools",
+          "name": "Bayview Hill",
+          "desc": "One of Richmond Hill's most sought-after addresses for families. Top-ranked schools, estate-style lots, and strong resale values.",
+          "price": "Detached from ~$2M",
+          "featured": true
+        },
+        {
+          "type": "Yonge corridor",
+          "name": "Langstaff",
+          "desc": "At the southern edge near the future Langstaff GO station. Attracting buyers who want transit access with York Region pricing.",
+          "price": "Mixed from ~$900K",
+          "featured": true
+        },
+        {
+          "type": "Established family",
+          "name": "Doncrest",
+          "desc": "Well-established neighbourhood with large lots, mature trees, and strong school options. Popular with move-up buyers from North York.",
+          "price": "Detached from ~$1.5M",
+          "featured": true
+        },
+        {
+          "type": "Heritage charm",
+          "name": "Mill Pond",
+          "desc": "One of Richmond Hill's oldest and most characterful neighbourhoods. Heritage homes, a picturesque pond, and a genuine community feel.",
+          "price": "Detached from ~$1.2M"
+        },
+        {
+          "type": "Value townhomes",
+          "name": "Observatory",
+          "desc": "Townhouses and semis at accessible prices with good highway and transit links. Popular with first-time buyers in York Region.",
+          "price": "Towns from ~$750K"
+        },
+        {
+          "type": "New builds",
+          "name": "Jefferson",
+          "desc": "Newer construction in the north end of Richmond Hill. Larger lots, modern finishes, and a growing community with strong school catchments.",
+          "price": "Detached from ~$1.4M"
+        }
+      ],
+      "laleh": "\"Richmond Hill consistently comes up when buyers want the best of both worlds, close enough to Toronto to commute, far enough to get a proper backyard. The school options here are genuinely exceptional and that drives consistent demand. Your cashback on a Richmond Hill purchase is real money, on a $1M home that is over $20,000 back in your pocket after closing.\"",
+      "faqCity": [
+        {
+          "q": "Is there a cashback realtor in Richmond Hill?",
+          "a": "Yes. Home Cashbacks is a RECO-registered buyer agent serving Richmond Hill and York Region. We charge a flat $4,999 fee and return the rest of the buyer agent commission after closing."
+        },
+        {
+          "q": "How much cashback can I get in Richmond Hill?",
+          "a": "On a $1,000,000 Richmond Hill home with a 2.5% buyer agent commission, the total commission is $25,000. We take our flat $4,999 and you receive approximately $20,001 back after closing."
+        },
+        {
+          "q": "What are the best schools in Richmond Hill?",
+          "a": "Richmond Hill has several top-ranked YRDSB schools. Bayview Hill area is particularly known for its school catchment. The area also has strong Catholic school options through the York Catholic District School Board."
+        },
+        {
+          "q": "How is the commute from Richmond Hill to Toronto?",
+          "a": "Richmond Hill is serviced by GO Transit with trains to Union Station taking approximately 40 to 50 minutes. The Yonge TTC bus also connects to the subway at Finch station. Highway 404 and the 407 ETR provide driving options for commuters."
+        }
+      ],
+      "alsoServing": [
+        {
+          "name": "Toronto",
+          "slug": "toronto"
+        },
+        {
+          "name": "Vaughan",
+          "slug": "vaughan"
+        },
+        {
+          "name": "Markham",
+          "slug": "markham"
+        },
+        {
+          "name": "North York",
+          "slug": "north-york"
+        }
+      ],
+      "geo": {
+        "lat": 43.8828,
+        "lng": -79.4403
+      },
+      "sourceSlug": "buyer-richmond-hill",
+      "metaDesc": "Cashback realtor in Richmond Hill. Flat $4,999 fee \u2014 on a typical Richmond Hill home you keep $19,000. Full service, no upfront commitment."
+    },
+    {
+      "slug": "brampton",
+      "name": "Brampton",
+      "cashback": "$14,000",
+      "heroSub": "We are a licensed Brampton buyer agent. We charge a flat $4,999 fee and return the rest of the buyer agent commission to you as cash back after closing. Brampton offers some of the best freehold value in the GTA and your cashback makes it even more accessible.",
+      "calcDefault": 780000,
+      "marketDate": "May 2026",
+      "marketTitle": "The Brampton Market Right Now",
+      "marketText": "Brampton is the GTA's most accessible large-city freehold market. Detached homes remain within reach for first-time buyers at prices well below Mississauga and Toronto. The city has grown significantly in the past decade and 2026 is firmly a buyer's market -- inventory is high and days on market have stretched, giving buyers real negotiating power.",
+      "marketNote": null,
+      "stats": [
+        {
+          "val": "$780K",
+          "label": "Average home price",
+          "highlight": true
+        },
+        {
+          "val": "$500K",
+          "label": "Average condo/townhouse"
+        },
+        {
+          "val": "$1.0M",
+          "label": "Average detached"
+        },
+        {
+          "val": "44 days",
+          "label": "Avg days on market"
+        }
+      ],
+      "hoods": [
+        {
+          "type": "Best freehold value",
+          "name": "Springdale",
+          "desc": "One of Brampton's most popular family destinations. Detached homes with double garages at prices well below the Toronto and Mississauga average.",
+          "price": "Detached from ~$900K",
+          "featured": true
+        },
+        {
+          "type": "GO Transit access",
+          "name": "Mount Pleasant",
+          "desc": "Built around the Mount Pleasant GO station. Newer townhomes and semis within walking distance of rapid transit to downtown Toronto.",
+          "price": "Towns from ~$700K",
+          "featured": true
+        },
+        {
+          "type": "Established community",
+          "name": "Heart Lake",
+          "desc": "Mature neighbourhood with ravine lots, a conservation area, and established freehold stock. Larger lots than typical Brampton.",
+          "price": "Detached from ~$850K",
+          "featured": true
+        },
+        {
+          "type": "Downtown",
+          "name": "Downtown Brampton",
+          "desc": "Heritage architecture, Rose Theatre, and improving walkability. Condo and townhome options at some of the lowest prices in the GTA.",
+          "price": "Condos from ~$480K"
+        },
+        {
+          "type": "Highway access",
+          "name": "Bramalea",
+          "desc": "Central Brampton with Bramalea GO station access. A diverse mix of housing types and price points. Popular with first-time buyers.",
+          "price": "Mixed from ~$750K"
+        },
+        {
+          "type": "New builds",
+          "name": "Sandringham-Wellington",
+          "desc": "Newer construction in northwest Brampton. Larger homes on bigger lots at prices that remain accessible for move-up buyers.",
+          "price": "Detached from ~$950K"
+        }
+      ],
+      "laleh": "\"Brampton is where first-time buyers in the GTA can still get a detached home with a real backyard without spending $1.2M. That matters enormously. The GO network is underrated -- Mount Pleasant station gets you downtown Toronto in under an hour. And your cashback on a Brampton purchase combined with the provincial land transfer tax rebate is a genuine financial head start after closing.\"",
+      "faqCity": [
+        {
+          "q": "Is there a cashback realtor in Brampton?",
+          "a": "Yes. Home Cashbacks is a RECO-registered buyer agent serving Brampton and the GTA. We charge a flat $4,999 fee and return the rest of the buyer agent commission after closing."
+        },
+        {
+          "q": "How much cashback can I get in Brampton?",
+          "a": "On a $780,000 Brampton home with a 2.5% buyer agent commission, the total commission is $19,500. We take our flat $4,999 and you receive approximately $14,501 back after closing."
+        },
+        {
+          "q": "Is Brampton a good place to buy for first-time buyers?",
+          "a": "Yes. Brampton offers the most accessible detached freehold prices in the GTA outside of Oshawa and Hamilton. First-time buyers can still find detached homes under $900K in several Brampton communities, and the cashback plus provincial land transfer tax rebate provide a meaningful financial advantage."
+        },
+        {
+          "q": "How is the GO Transit service from Brampton to Toronto?",
+          "a": "Brampton has multiple GO stations including Bramalea, Brampton, and Mount Pleasant. Service to Union Station typically takes 45 to 65 minutes depending on the line and time of day. The Kitchener GO line is one of the busiest corridors in the GO network."
+        }
+      ],
+      "alsoServing": [
+        {
+          "name": "Mississauga",
+          "slug": "mississauga"
+        },
+        {
+          "name": "Etobicoke",
+          "slug": "etobicoke"
+        },
+        {
+          "name": "Toronto",
+          "slug": "toronto"
+        },
+        {
+          "name": "Oakville",
+          "slug": "oakville"
+        }
+      ],
+      "geo": {
+        "lat": 43.7315,
+        "lng": -79.7624
+      },
+      "sourceSlug": "buyer-brampton",
+      "metaDesc": "Cashback realtor in Brampton. Flat $4,999 fee \u2014 on a typical Brampton home you keep $14,000. Full service, no upfront commitment."
+    }
+  ]
+}

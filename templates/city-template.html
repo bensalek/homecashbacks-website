@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Cashback Realtor {{NAME}} | Flat $4,999 Fee | Home Cashbacks</title>
+<meta name="description" content="{{META_DESC}}"/>
+<meta property="og:title" content="Cashback Realtor {{NAME}} | Home Cashbacks"/>
+<meta property="og:description" content="Flat $4,999 fee. Everything above that comes back to you. Serving {{NAME}} and the GTA."/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://homecashbacks.ca/{{SLUG}}-cashback-realtor.html"/>
+<meta property="og:image" content="https://homecashbacks.ca/og-image.png"/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://homecashbacks.ca/{{SLUG}}-cashback-realtor.html"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Cashback Realtor {{NAME}} — Flat Fee Buyer Agent",
+  "description": "Home Cashbacks is a licensed {{NAME}} cashback realtor charging a flat $4,999 fee and returning the rest of the buyer agent commission to you after closing.",
+  "author": {"@type": "Person", "name": "Laleh Mousavi", "jobTitle": "Realtor"},
+  "publisher": {"@type": "Organization", "name": "Home Cashbacks", "url": "https://homecashbacks.ca"},
+  "url": "https://homecashbacks.ca/{{SLUG}}-cashback-realtor.html",
+  "dateModified": "{{DATA_DATE_ISO}}"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": {{FAQ_SCHEMA}}
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["RealEstateAgent", "LocalBusiness"],
+      "@id": "https://homecashbacks.ca/{{SLUG}}-cashback-realtor.html#business",
+      "name": "Home Cashbacks — {{NAME}} Cashback Realtor",
+      "url": "https://homecashbacks.ca/{{SLUG}}-cashback-realtor.html",
+      "telephone": "+14374437556",
+      "priceRange": "$4,999 flat fee",
+      "address": {"@type": "PostalAddress", "addressLocality": "{{NAME}}", "addressRegion": "ON", "addressCountry": "CA"},
+      "geo": {"@type": "GeoCoordinates", "latitude": {{GEO_LAT}}, "longitude": {{GEO_LNG}}},
+      "areaServed": {"@type": "City", "name": "{{NAME}}"},
+      "parentOrganization": {"@id": "https://homecashbacks.ca/#business"}
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://homecashbacks.ca"},
+        {"@type": "ListItem", "position": 2, "name": "Cashback Realtor {{NAME}}", "item": "https://homecashbacks.ca/{{SLUG}}-cashback-realtor.html"}
+      ]
+    }
+  ]
+}
+</script>
+<style>
+.miss-hero{background:var(--ink);padding:3.5rem 2rem 4rem;position:relative;overflow:hidden}
+.miss-hero::before{content:'';position:absolute;top:-60px;right:-60px;width:280px;height:280px;border-radius:50%;border:50px solid rgba(28,134,78,.06)}
+.miss-hero::after{content:'';position:absolute;bottom:-80px;left:-40px;width:200px;height:200px;border-radius:50%;border:36px solid rgba(28,134,78,.04)}
+.miss-hero-inner{max-width:860px;margin:0 auto;position:relative;z-index:1}
+.miss-h1{font-family:'Cormorant Garamond',serif;font-size:clamp(30px,5vw,52px);font-weight:600;color:var(--white);line-height:1.05;margin-bottom:.85rem;letter-spacing:-.5px}
+.miss-h1 em{font-style:italic;color:var(--cta)}
+.miss-hero-sub{font-size:15px;color:rgba(232,237,245,.55);max-width:580px;line-height:1.75;margin-bottom:1.5rem}
+.miss-hero-actions{display:flex;align-items:center;gap:1rem;flex-wrap:wrap}
+.miss-hero-cta{background:var(--cta);color:var(--white);padding:13px 28px;border-radius:4px;font-size:14px;font-weight:700;border:none;cursor:pointer;font-family:'Rubik',sans-serif;transition:opacity .2s}
+.miss-hero-cta:hover{opacity:.85}
+.miss-hero-note{font-size:12px;color:rgba(232,237,245,.3)}
+.miss-jump{background:var(--white);border-bottom:1px solid var(--border);padding:.75rem 2rem;position:sticky;top:118px;z-index:300;overflow-x:auto;scrollbar-width:none}
+.miss-jump::-webkit-scrollbar{display:none}
+.miss-jump-inner{max-width:860px;margin:0 auto;display:flex;align-items:center;gap:.5rem;white-space:nowrap}
+.miss-jump-label{font-size:11px;font-weight:500;letter-spacing:.8px;text-transform:uppercase;color:var(--muted);margin-right:.5rem;flex-shrink:0}
+.miss-jbtn{padding:5px 13px;border-radius:4px;border:1px solid var(--border);background:transparent;font-family:'Rubik',sans-serif;font-size:12px;color:var(--muted);cursor:pointer;transition:all .15s;text-decoration:none;display:inline-block}
+.miss-jbtn:hover,.miss-jbtn.active{background:var(--ink);color:var(--white);border-color:var(--ink)}
+.miss-section{padding:3rem 2rem}
+.miss-inner{max-width:860px;margin:0 auto}
+.miss-eyebrow-sm{font-size:11px;font-weight:500;letter-spacing:1.2px;text-transform:uppercase;color:var(--taupe);margin-bottom:.5rem}
+.miss-h2{font-family:'Cormorant Garamond',serif;font-size:clamp(26px,3.2vw,38px);font-weight:600;color:var(--ink);line-height:1.1;margin-bottom:.75rem}
+.miss-body{font-size:15px;color:var(--muted);line-height:1.75;margin-bottom:1rem}
+.miss-body strong{color:var(--ink);font-weight:600}
+.link{color:var(--cta);text-decoration:none;font-weight:500;transition:color .15s}.link:hover{text-decoration:underline}
+.stat-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border-radius:6px;overflow:hidden;margin:1.5rem 0}
+.stat-box{background:var(--white);padding:1.25rem 1rem;text-align:center}
+.stat-box-val{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:600;color:var(--ink);line-height:1;margin-bottom:.25rem}
+.stat-box-label{font-size:11px;color:var(--muted);line-height:1.4}
+.stat-box.highlight .stat-box-val{color:var(--cta)}
+.stat-source{font-size:12px;color:var(--muted);margin-top:.35rem}
+.hood-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem;margin:1.5rem 0}
+.hood-card{background:var(--white);border:1px solid var(--border);border-radius:4px;padding:1.1rem 1.25rem;position:relative;overflow:hidden}
+.hood-card--linked{display:block;text-decoration:none;transition:border-color .2s,box-shadow .2s}
+.hood-card--linked:hover{border-color:var(--cta);box-shadow:0 2px 12px rgba(28,134,78,.1)}
+.hood-link-cue{font-size:11px;font-weight:600;color:var(--cta);margin-top:.5rem}
+.hood-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--cta);opacity:.4}
+.hood-card.featured::before{opacity:1}
+.hood-name{font-size:14px;font-weight:600;color:var(--ink);margin-bottom:.25rem}
+.hood-type{font-size:11px;font-weight:500;letter-spacing:.5px;text-transform:uppercase;color:var(--cta);margin-bottom:.35rem}
+.hood-desc{font-size:12px;color:var(--muted);line-height:1.5}
+.hood-price{font-size:12px;font-weight:600;color:var(--ink);margin-top:.4rem}
+.laleh-section{background:var(--ink);padding:2.75rem 2rem}
+.laleh-inner{max-width:860px;margin:0 auto;display:grid;grid-template-columns:auto 1fr;gap:2rem;align-items:center}
+.laleh-hs{width:80px;height:80px;border-radius:50%;border:2.5px solid var(--cta);overflow:hidden;flex-shrink:0}
+.laleh-hs img{width:100%;height:100%;object-fit:cover;object-position:center top}
+.laleh-quote{font-family:'Cormorant Garamond',serif;font-size:clamp(18px,2.5vw,24px);font-weight:400;font-style:italic;color:var(--white);line-height:1.55;margin-bottom:.75rem}
+.laleh-attr{font-size:12px;color:rgba(255,255,255,.4)}
+.laleh-attr strong{color:var(--cta)}
+.miss-faq-list{display:flex;flex-direction:column;gap:7px;margin-top:1.5rem}
+.miss-faq-item{background:var(--white);border:1px solid var(--border);border-radius:4px;overflow:hidden}
+.miss-faq-q{display:flex;justify-content:space-between;align-items:flex-start;padding:.85rem 1rem;cursor:pointer;gap:10px}
+.miss-faq-q-text{font-size:15px;font-weight:500;color:var(--ink);line-height:1.4}
+.miss-faq-icon{font-size:15px;color:var(--muted);flex-shrink:0;transition:transform .25s}
+.miss-faq-item.open .miss-faq-icon{transform:rotate(45deg)}
+.miss-faq-a{display:none;padding:.55rem 1rem .85rem;font-size:14px;color:var(--muted);line-height:1.7;border-top:1px solid var(--border)}
+.miss-faq-item.open .miss-faq-a{display:block}
+.miss-cta{background:var(--white);padding:3.5rem 2rem;text-align:center;border-top:1px solid var(--border)}
+.miss-cta-inner{max-width:480px;margin:0 auto}
+.miss-cta-eyebrow{font-size:11px;font-weight:500;letter-spacing:1.2px;text-transform:uppercase;color:var(--cta);margin-bottom:.75rem}
+.miss-cta-title{font-family:'Cormorant Garamond',serif;font-size:clamp(24px,4vw,36px);font-weight:600;color:var(--ink);line-height:1.15;margin-bottom:.75rem}
+.miss-cta-sub{font-size:15px;color:var(--muted);margin-bottom:1.75rem;line-height:1.75}
+.miss-cta-btn{background:var(--cta);color:var(--white);padding:13px 28px;border-radius:4px;font-size:14px;font-weight:700;border:none;cursor:pointer;font-family:'Rubik',sans-serif;transition:opacity .2s}
+.miss-cta-btn:hover{opacity:.85}
+.miss-cta-note{font-size:12px;color:var(--taupe);margin-top:.75rem}
+.chip-strip{display:flex;align-items:center;flex-wrap:wrap;gap:.6rem}
+.chip-label{font-size:11px;font-weight:500;letter-spacing:.8px;text-transform:uppercase;color:var(--taupe);margin-right:.25rem;white-space:nowrap}
+.chip{font-size:12px;color:var(--muted);text-decoration:none;padding:4px 11px;border:1px solid var(--border);border-radius:3px;transition:all .15s;white-space:nowrap}
+.chip:hover{border-color:var(--cta);color:var(--ink)}
+.calc-section{background:var(--white);padding:3rem 2rem;border-top:1px solid var(--border)}
+.calc-section-inner{max-width:680px;margin:0 auto}
+.calc-banner{text-align:center;background:var(--dark);border:none;border-radius:6px;padding:1.75rem 2rem;margin-bottom:1.75rem}
+.calc-banner-label{font-size:13px;color:rgba(255,255,255,.4);margin-bottom:.35rem}
+.calc-banner-amt{font-size:54px;font-weight:700;color:var(--cta);line-height:1;letter-spacing:-2px}
+.calc-banner-sub{font-size:14px;color:rgba(255,255,255,.5);margin-top:.35rem}
+.calc-card{background:var(--white);border-radius:6px;padding:1.75rem 2rem}
+.calc-card-eyebrow{font-size:10px;font-weight:500;letter-spacing:1.2px;text-transform:uppercase;color:var(--muted);margin-bottom:.25rem}
+.calc-card-title{font-size:18px;font-weight:600;color:var(--ink);margin-bottom:1.25rem}
+.calc-input-label{font-size:11px;color:var(--muted);font-weight:500;letter-spacing:.2px}
+.calc-price-wrap{position:relative;display:flex;align-items:center}
+.calc-price-sym{position:absolute;left:10px;font-size:14px;color:var(--muted);pointer-events:none}
+.calc-price-input{padding:9px 10px 9px 22px;width:100%;border:1.5px solid var(--bg3);border-radius:4px;font-size:15px;font-weight:600;color:var(--ink);background:var(--bg);font-family:'Rubik',sans-serif;outline:none}
+.calc-price-input:focus{border-color:var(--ink);background:var(--white)}
+.calc-pct-wrap{position:relative}
+.calc-pct-input{padding:9px 28px 9px 10px;width:100%;border:1.5px solid var(--bg3);border-radius:4px;font-size:15px;font-weight:600;color:var(--ink);background:var(--bg);font-family:'Rubik',sans-serif;outline:none}
+.calc-pct-input:focus{border-color:var(--ink);background:var(--white)}
+.calc-pct-sym{position:absolute;right:10px;top:50%;transform:translateY(-50%);font-size:13px;color:var(--muted);pointer-events:none}
+.calc-slider-wrap{margin-bottom:1.5rem}
+.calc-slider{width:100%;accent-color:var(--cta);margin-bottom:.5rem}
+.calc-ticks{display:flex;justify-content:space-between;font-size:10px;color:var(--taupe)}
+.calc-result{background:var(--bg);border-radius:6px;padding:1.25rem 1.5rem;margin-bottom:.75rem;border:1px solid var(--bg2)}
+.calc-result-label{font-size:11px;font-weight:500;letter-spacing:.5px;text-transform:uppercase;color:var(--muted);margin-bottom:.2rem}
+.calc-result-amt{font-size:38px;font-weight:700;color:var(--cta);line-height:1}
+.calc-result-sub{font-size:13px;color:var(--muted);margin-top:.3rem}
+.calc-stat{background:var(--white);border:1.5px solid var(--bg2);border-radius:4px;padding:1rem 1.25rem;margin-bottom:.75rem}
+.calc-stat-label{font-size:11px;font-weight:500;letter-spacing:.5px;text-transform:uppercase;color:var(--muted);margin-bottom:.15rem}
+.calc-stat-val{font-size:22px;font-weight:700;color:var(--ink);margin-bottom:.15rem}
+.calc-stat-sub{font-size:12px;color:var(--muted)}
+.calc-note{font-size:11px;color:var(--taupe);line-height:1.6}
+@media(max-width:680px){
+  .stat-strip{grid-template-columns:1fr 1fr}
+  .hood-grid{grid-template-columns:1fr 1fr}
+  .laleh-inner{grid-template-columns:1fr;gap:1.25rem}
+  .miss-section{padding:2rem 1.25rem}
+  .hood-desc{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+}
+@media(max-width:600px){
+  .calc-banner{padding:1.25rem}
+  .calc-banner-amt{font-size:42px}
+  .calc-card{padding:1.25rem}
+}
+</style>
+</head>
+<body>
+
+<div class="miss-hero">
+  <div class="miss-hero-inner">
+    <div class="page-hero-eyebrow">Cashback Realtor · {{NAME}}</div>
+    <h1 class="miss-h1">Buy in {{NAME}}.<br><em>Keep the commission.</em></h1>
+    <p class="miss-hero-sub">{{HERO_SUB}}</p>
+    <div class="miss-hero-actions">
+      <button class="miss-hero-cta" onclick="openModal()">Book a Free Showing</button>
+      <span class="miss-hero-note">No commitment · Licensed with RECO · Serving {{NAME}} and the GTA</span>
+    </div>
+  </div>
+</div>
+
+<div class="miss-jump">
+  <div class="miss-jump-inner">
+    <span class="miss-jump-label">Jump to</span>
+    <a href="#calculator" class="miss-jbtn">Your cashback</a>
+    <a href="#market" class="miss-jbtn">{{NAME}} market</a>
+    <a href="#neighbourhoods" class="miss-jbtn">Neighbourhoods</a>
+    <a href="#laleh" class="miss-jbtn">Laleh's take</a>
+    <a href="#faq" class="miss-jbtn">FAQ</a>
+  </div>
+</div>
+
+<section class="calc-section" id="calculator">
+  <div class="calc-section-inner">
+    <div class="calc-banner">
+      <div class="calc-banner-label">Home Cashbacks clients in {{NAME}} save</div>
+      <div class="calc-banner-amt">{{CASHBACK}}</div>
+      <div class="calc-banner-sub">on average</div>
+    </div>
+    <div class="calc-card">
+      <div class="calc-card-eyebrow">Cashback calculator</div>
+      <div class="calc-card-title">What does your number look like?</div>
+      <div style="display:flex;align-items:flex-end;gap:.75rem;margin-bottom:1.25rem;flex-wrap:wrap">
+        <div style="display:flex;flex-direction:column;gap:.35rem;width:190px">
+          <label class="calc-input-label" for="price-text">Home price</label>
+          <div class="calc-price-wrap">
+            <span class="calc-price-sym">$</span>
+            <input class="calc-price-input" type="text" id="price-text" value="{{CALC_DEFAULT_FMT}}" inputmode="numeric" autocomplete="off"/>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:.35rem;width:120px">
+          <label class="calc-input-label" for="commission-pct">Buyer commission</label>
+          <div class="calc-pct-wrap">
+            <input class="calc-pct-input" type="number" id="commission-pct" value="2.5" min="1" max="5" step="0.25"/>
+            <span class="calc-pct-sym">%</span>
+          </div>
+        </div>
+      </div>
+      <div class="calc-slider-wrap">
+        <input type="range" id="price-slider" class="calc-slider" min="300000" max="3000000" step="10000" value="{{CALC_DEFAULT}}"/>
+        <div class="calc-ticks"><span>$300K</span><span>$750K</span><span>$1.2M</span><span>$1.65M</span><span>$2.1M</span><span>$3M</span></div>
+      </div>
+      <div class="calc-result">
+        <div class="calc-result-label">Your estimated cashback</div>
+        <div class="calc-result-amt" id="calc-cashback">—</div>
+      </div>
+      <div class="calc-stat">
+        <div class="calc-stat-label">Use your cashback to</div>
+        <div class="calc-stat-val" id="cv-mortgage">—</div>
+        <div class="calc-stat-sub">Move in. Breathe.</div>
+      </div>
+      <div class="calc-note">Estimates only. Amount depends on the seller's commission offer.</div>
+    </div>
+  </div>
+</section>
+
+<section class="miss-section" style="background:var(--white);border-top:1px solid var(--border)" id="market">
+  <div class="miss-inner">
+    <div class="miss-eyebrow-sm">{{NAME}} Market · {{MARKET_DATE}}</div>
+    <h2 class="miss-h2">{{MARKET_TITLE}}</h2>
+    <p class="miss-body">{{MARKET_TEXT}}</p>
+    <div class="stat-strip">{{STAT_BOXES}}</div>
+    {{MARKET_NOTE}}
+    <p class="stat-source">Source: TRREB, CREA. {{MARKET_DATE}}. Numbers are approximate and change monthly.</p>
+  </div>
+</section>
+
+<section class="miss-section" style="background:var(--bg)" id="neighbourhoods">
+  <div class="miss-inner">
+    <div class="miss-eyebrow-sm">Where buyers are looking</div>
+    <h2 class="miss-h2">{{NAME}} Neighbourhoods</h2>
+    <div class="hood-grid">{{HOOD_CARDS}}</div>
+    <p class="miss-body" style="margin-top:.5rem">We serve all {{NAME}} neighbourhoods and the broader GTA. <a href="#calculator" class="link">Calculate your cashback</a> at any price point.</p>
+  </div>
+</section>
+
+<section style="background:var(--white);border-top:1px solid var(--border);padding:1.25rem 2rem">
+  <div class="miss-inner">
+    <div class="chip-strip">
+      <span class="chip-label">Guides</span>
+      <a href="/first-time-buyer-guide.html" class="chip">First-Time Buyer Guide</a>
+      <a href="/condo-buying-guide.html" class="chip">Condo Buying Guide</a>
+      <a href="/checklist.html" class="chip">Buyer Checklist</a>
+      <a href="/calculators.html" class="chip">Closing Cost Calculator</a>
+      <a href="/offer-strategy.html" class="chip">Offer Strategy</a>
+      <a href="/how-cashback-works.html" class="chip">How Cashback Works</a>
+    </div>
+  </div>
+</section>
+
+<section class="laleh-section" id="laleh">
+  <div class="laleh-inner">
+    <div class="laleh-hs">
+      <img src="/assets/headshot.webp" alt="Laleh Mousavi"/>
+    </div>
+    <div>
+      <div class="laleh-quote">{{LALEH_QUOTE}}</div>
+      <div class="laleh-attr"><strong>Laleh Mousavi</strong> &nbsp; Realtor, Toronto Real Estate Realty Plus Inc. · Registered with RECO · Serving {{NAME}} and GTA</div>
+    </div>
+  </div>
+</section>
+
+<section class="miss-section" style="background:var(--white);border-top:1px solid var(--border)" id="faq">
+  <div class="miss-inner">
+    <div class="miss-eyebrow-sm">Common questions</div>
+    <h2 class="miss-h2">{{NAME}} Buyer FAQ</h2>
+    <div class="miss-faq-list">{{FAQ_ITEMS}}</div>
+  </div>
+</section>
+
+<section style="background:var(--bg2);border-top:1px solid var(--border);padding:1.25rem 2rem">
+  <div class="miss-inner">
+    <div class="chip-strip">
+      <span class="chip-label">Also serving</span>
+      {{ALSO_SERVING_CHIPS}}
+    </div>
+  </div>
+</section>
+
+<section class="miss-cta">
+  <div class="miss-cta-inner">
+    <div class="miss-cta-eyebrow">Serving all of {{NAME}}</div>
+    <h2 class="miss-cta-title">Ready to buy in {{NAME}}?</h2>
+    <p class="miss-cta-sub">Book a free showing. No commitment, no exclusive agreement. We will walk you through the market and show you exactly what your cashback looks like.</p>
+    <button class="miss-cta-btn" onclick="openModal()">Book a Free Showing</button>
+    <p class="miss-cta-note">First showing free · Licensed with RECO · Flat $4,999 fee</p>
+  </div>
+</section>
+
+<script>
+function updateCalc(){
+  var raw=document.getElementById('price-text').value.replace(/,/g,'').replace(/[^0-9]/g,'');
+  var price=parseInt(raw)||{{CALC_DEFAULT}};
+  var pct=parseFloat(document.getElementById('commission-pct').value)||2.5;
+  var commission=price*(pct/100);
+  var cashback=Math.max(0,commission-4999);
+  var fmt=function(n){return '$'+Math.round(n).toLocaleString('en-CA');};
+  document.getElementById('calc-cashback').textContent=fmt(cashback);
+  var loan=price*0.75;
+  var r=3.89/100/12;
+  var n=25*12;
+  var monthly=loan*(r*Math.pow(1+r,n))/(Math.pow(1+r,n)-1);
+  var months=cashback>0?Math.round(cashback/monthly):0;
+  document.getElementById('cv-mortgage').textContent=months>0?'cover '+months+(months===1?' month':' months')+' of mortgage':'--';
+}
+(function(){
+  var slider=document.getElementById('price-slider');
+  var priceText=document.getElementById('price-text');
+  var commInput=document.getElementById('commission-pct');
+  slider.addEventListener('input',function(){
+    priceText.value=Math.round(parseInt(this.value)).toLocaleString('en-CA');
+    updateCalc();
+  });
+  priceText.addEventListener('input',function(){
+    var raw=parseInt(this.value.replace(/,/g,'').replace(/[^0-9]/g,''))||0;
+    slider.value=Math.min(3000000,Math.max(300000,raw));
+    updateCalc();
+  });
+  priceText.addEventListener('blur',function(){
+    var raw=parseInt(this.value.replace(/,/g,'').replace(/[^0-9]/g,''))||{{CALC_DEFAULT}};
+    var clamped=Math.min(3000000,Math.max(300000,raw));
+    this.value=Math.round(clamped).toLocaleString('en-CA');
+    slider.value=clamped;
+    updateCalc();
+  });
+  commInput.addEventListener('input',updateCalc);
+  commInput.addEventListener('change',updateCalc);
+  updateCalc();
+})();
+document.querySelectorAll('.miss-faq-q').forEach(function(q){
+  q.addEventListener('click',function(){this.closest('.miss-faq-item').classList.toggle('open');});
+});
+(function(){
+  var s=document.getElementById('f-source');
+  if(s)s.value='{{SOURCE_SLUG}}';
+})();
+</script>
+</body>
+</html>

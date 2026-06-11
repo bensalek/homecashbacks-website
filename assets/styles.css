@@ -42,6 +42,19 @@
   --amber:     var(--cta);   /* legacy alias — do not use in new code */
   --amber-dark:var(--cta-dark); /* legacy alias — do not use in new code */
   --charcoal:  var(--dark);
+  /* Additional tokens */
+  --star:          #fbbc05;   /* Google/review star gold */
+  --wa-green:      #25d147;   /* WhatsApp button */
+  --wa-green-hover:#1fb83a;   /* WhatsApp hover */
+  --error-bg:      #fef2f2;   /* error message bg */
+  --red-border:    #e05a40;   /* warning border */
+  --red-text:      #dc2626;   /* error/bad text */
+  --red-light-bg:  #fff9f9;   /* bad result bg */
+  --blue-highlight:#1d4ed8;   /* comparison table highlight */
+  --blue-light-bg: #dce8ff;   /* comparison row bg */
+  --dark-green-tint:#1a3028;  /* mortgage card bg */
+  --green-light:   #5ec490;   /* cashback result green */
+
   --green:     #16a34a;
   --green2:    #16a34a;
 }
@@ -217,16 +230,16 @@ footer a{color:var(--cta);text-decoration:none}
   .foot-laleh{grid-column:1/-1;flex-direction:row;align-items:center;gap:1rem;padding-bottom:1.25rem;border-bottom:1px solid var(--border-on-dark)}
   .foot-headshot{width:48px;height:48px}
   .foot-name{font-size:17px}
-  .foot-cta-col{grid-column:1/-1;border-top:1px solid var(--border-on-dark);padding-top:1.25rem;display:grid;grid-template-columns:1fr 1fr;gap:1rem;align-items:start}
-  .foot-col-label:first-child{grid-column:1/-1}
-  .foot-cta-btn{grid-column:1/-1;text-align:center}
-  .foot-cta-note{grid-column:1/-1}
+  .foot-cta-col{grid-column:1/-1;border-top:1px solid var(--border-on-dark);padding-top:.85rem;padding-bottom:.25rem;display:flex;flex-direction:column;gap:.6rem}
+  .foot-cta-col .foot-col-label{display:none}
+  .foot-cta-note{display:none}
+  .foot-cta-btn{text-align:center}
   .foot-social-wrap{grid-column:1/-1}
   .foot-social{flex-direction:row;gap:.5rem}
   .foot-social-btn{flex:1}
-  .foot-bottom{flex-direction:row;flex-wrap:wrap;gap:.35rem;align-items:center;justify-content:space-between}
-  .foot-copy{font-size:10px}
-  .foot-privacy{font-size:10px}
+  .foot-bottom{flex-direction:row;flex-wrap:nowrap;gap:.25rem;align-items:center;justify-content:space-between;padding-top:.4rem;border-top:1px solid rgba(255,255,255,.06);margin-top:.25rem}
+  .foot-copy{font-size:9px;color:rgba(255,255,255,.18);line-height:1.3}
+  .foot-privacy{font-size:9px}
 }
 @media(max-width:480px){
   .foot-grid{grid-template-columns:1fr 1fr;gap:1.25rem}

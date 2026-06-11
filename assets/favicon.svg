@@ -1,6 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 36">
-  <rect width="32" height="32" rx="6" fill="#1a2332" y="2"/>
-  <path d="M9 22 L16 12 L23 22" stroke="#1c864e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-  <path d="M16 12 L23 12" stroke="#1c864e" stroke-width="2" stroke-linecap="round"/>
-  <path d="M23 12 L23 19" stroke="#1c864e" stroke-width="2" stroke-linecap="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <defs>
+    <style>
+      .bg { fill: #1a2332 }
+      .icon { stroke: #1c864e }
+      @media (prefers-color-scheme: dark) {
+        .bg { fill: #1c864e }
+        .icon { stroke: #ffffff }
+      }
+    </style>
+  </defs>
+  <rect class="bg" width="32" height="32" rx="6"/>
+  <path class="icon" d="M8 22 L15 11 L22 22" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path class="icon" d="M15 11 L22 11" stroke-width="2.5" stroke-linecap="round"/>
+  <path class="icon" d="M22 11 L22 18" stroke-width="2.5" stroke-linecap="round"/>
 </svg>

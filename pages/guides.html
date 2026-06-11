@@ -6,27 +6,41 @@
 <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png"/>
-<title>Buyer Guides — Toronto Real Estate | HomeCashbacks</title>
-<meta name="description" content="Guides, calculators, and answers for GTA home buyers — written by a licensed Toronto realtor. Cashback, closing costs, buyer agreements, offer strategy and more."/>
+<title>Buyer Guides — Toronto Real Estate | Home Cashbacks</title>
+<meta name="description" content="Guides, calculators, and answers for GTA home buyers — written by a licensed Toronto realtor. Cashback, closing costs, buyer agreements and more."/>
 <meta name="robots" content="index, follow"/>
 <link rel="canonical" href="https://homecashbacks.ca/guides.html"/>
-<meta property="og:title" content="Buyer Guides — Toronto Real Estate | HomeCashbacks"/>
+<meta property="og:title" content="Buyer Guides — Toronto Real Estate | Home Cashbacks"/>
 <meta property="og:description" content="Every guide a GTA buyer needs — cashback, closing costs, buyer agreements, offer strategy and more."/>
 <meta property="og:url" content="https://homecashbacks.ca/guides.html"/>
 <meta property="og:type" content="website"/>
 <style>
+/* ── HERO ── */
 .hub-hero{background:var(--dark);padding:3rem 2rem 2.5rem}
 .hub-hero-inner{max-width:860px;margin:0 auto}
 .hub-title{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,4vw,42px);font-weight:600;color:#fff;line-height:1.1;margin-bottom:.6rem}
 .hub-sub{font-size:15px;color:rgba(255,255,255,.4);line-height:1.6;max-width:480px}
 
+/* ── STICKY TABS ── */
+.hub-tabs{position:sticky;top:118px;z-index:400;background:var(--white);border-bottom:1px solid var(--border);overflow-x:auto;scrollbar-width:none;padding:0}
+.hub-tabs::-webkit-scrollbar{display:none}
+.hub-tabs-inner{max-width:860px;margin:0 auto;display:flex;padding:0 2rem}
+.hub-tab{font-size:13px;font-weight:500;color:var(--muted);text-decoration:none;padding:.65rem .9rem;white-space:nowrap;border-bottom:2px solid transparent;transition:color .15s,border-color .15s;flex-shrink:0}
+.hub-tab:hover{color:var(--ink)}
+.hub-tab.active{color:var(--cta);border-bottom-color:var(--cta);font-weight:600}
+
+/* ── BODY ── */
 .hub-body{max-width:860px;margin:0 auto;padding:2.5rem 2rem;display:flex;flex-direction:column;gap:2.5rem}
 
-.cat-head{display:flex;align-items:center;gap:.85rem;margin-bottom:1rem}
+/* ── CATEGORY HEADER ── */
+.cat-head{display:flex;align-items:center;gap:.85rem;margin-bottom:1rem;scroll-margin-top:170px}
 .cat-title{font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--taupe);white-space:nowrap}
 .cat-line{flex:1;height:1px;background:var(--border)}
 
+/* ── GUIDE GRID ── */
 .guide-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem}
+
+/* ── GUIDE CARD ── */
 .guide-card{background:var(--white);border:1px solid var(--border);border-radius:6px;padding:1rem 1.1rem;text-decoration:none;display:flex;flex-direction:column;gap:.25rem;transition:all .2s}
 .guide-card:hover{border-color:var(--cta);box-shadow:0 4px 12px rgba(28,134,78,.1);transform:translateY(-1px)}
 .guide-card-tag{font-size:9px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;color:var(--cta)}
@@ -34,29 +48,42 @@
 .guide-card-desc{font-size:12px;color:var(--muted);line-height:1.5;margin-top:.1rem}
 .guide-card-arrow{font-size:12px;color:var(--cta);margin-top:.4rem;font-weight:600}
 
+/* ── TOOL CARD ── */
 .tool-card{background:var(--dark);border-color:transparent}
 .tool-card .guide-card-tag{color:rgba(255,255,255,.3)}
 .tool-card .guide-card-title{color:#fff}
 .tool-card .guide-card-desc{color:rgba(255,255,255,.35)}
 .tool-card:hover{border-color:transparent;box-shadow:0 4px 16px rgba(26,35,50,.3);transform:translateY(-1px)}
 
+/* ── MOBILE ── */
 @media(max-width:680px){
-  .guide-grid{grid-template-columns:1fr 1fr}
-  .hub-body{padding:1.5rem 1.25rem}
   .hub-hero{padding:2rem 1.25rem 1.75rem}
-}
-@media(max-width:420px){
-  .guide-grid{grid-template-columns:1fr}
+  .hub-tabs{top:118px;padding:0}
+  .hub-tabs-inner{padding:0 1rem}
+  .hub-tab{font-size:12px;padding:.55rem .65rem}
+  .hub-body{padding:1.5rem 1rem;gap:2rem}
+  .guide-grid{grid-template-columns:1fr 1fr;gap:.5rem}
+  .guide-card-tag{display:none}
+
+  /* Hide desc and arrow on mobile — card is fully tappable */
+  .guide-card-desc{display:none}
+  .guide-card-arrow{display:none}
+  .guide-card{padding:.75rem .85rem;gap:.2rem;border-radius:5px}
+  .guide-card-title{font-size:13px;line-height:1.3}
+  .guide-card-tag{font-size:9px}
+
+  /* Active tap state */
+  .guide-card:active{opacity:.8;transform:none}
 }
 </style>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "CollectionPage",
-  "name": "Buyer Guides — HomeCashbacks",
+  "name": "Buyer Guides — Home Cashbacks",
   "description": "Guides, calculators, and answers for GTA home buyers written by a licensed Toronto realtor.",
   "url": "https://homecashbacks.ca/guides.html",
-  "publisher": {"@type": "Organization", "name": "HomeCashbacks"}
+  "publisher": {"@type": "Organization", "name": "Home Cashbacks"}
 }
 </script>
 </head>
@@ -70,11 +97,20 @@
   </div>
 </section>
 
+<!-- Sticky tabs -->
+<nav class="hub-tabs" id="hub-tabs" aria-label="Guide categories">
+  <div class="hub-tabs-inner">
+    <a href="#buying-process" class="hub-tab active">Buying Process</a>
+    <a href="#costs-legal" class="hub-tab">Costs &amp; Legal</a>
+    <a href="#tools" class="hub-tab">Tools</a>
+  </div>
+</nav>
+
 <div class="hub-body">
 
   <!-- Buying process -->
   <div>
-    <div class="cat-head">
+    <div class="cat-head" id="buying-process">
       <span class="cat-title">Buying process</span>
       <div class="cat-line"></div>
     </div>
@@ -126,7 +162,7 @@
 
   <!-- Costs & legal -->
   <div>
-    <div class="cat-head">
+    <div class="cat-head" id="costs-legal">
       <span class="cat-title">Costs &amp; legal</span>
       <div class="cat-line"></div>
     </div>
@@ -143,7 +179,7 @@
         <span class="guide-card-desc">What it says, what to watch for, and how cashback is written in.</span>
         <span class="guide-card-arrow">Read →</span>
       </a>
-      <a href="/closing-costs-ontario-2026.html" class="guide-card">
+      <a href="/closing-costs-ontario.html" class="guide-card">
         <span class="guide-card-tag">Guide · 2026</span>
         <span class="guide-card-title">Closing costs in Ontario</span>
         <span class="guide-card-desc">Every cost itemized with land transfer tax rates and first-time buyer rebates.</span>
@@ -160,7 +196,7 @@
 
   <!-- Tools -->
   <div>
-    <div class="cat-head">
+    <div class="cat-head" id="tools">
       <span class="cat-title">Tools</span>
       <div class="cat-line"></div>
     </div>
@@ -169,18 +205,53 @@
         <span class="guide-card-tag">Calculator</span>
         <span class="guide-card-title">Cashback calculator</span>
         <span class="guide-card-desc">Enter your home price and commission to see your exact cashback amount.</span>
-        <span class="guide-card-arrow" style="color:#1c864e">Open →</span>
+        <span class="guide-card-arrow" style="color:var(--cta)">Open →</span>
       </a>
       <a href="/calculators.html" class="guide-card tool-card">
         <span class="guide-card-tag">Calculator</span>
         <span class="guide-card-title">Home buying calculator</span>
         <span class="guide-card-desc">Land transfer tax, legal fees, and first-time buyer rebates for Ontario.</span>
-        <span class="guide-card-arrow" style="color:#1c864e">Open →</span>
+        <span class="guide-card-arrow" style="color:var(--cta)">Open →</span>
       </a>
     </div>
   </div>
 
 </div>
 
+<script>
+// Sticky tabs — highlight active section on scroll
+(function(){
+  var tabs = document.getElementById('hub-tabs');
+  var links = tabs ? tabs.querySelectorAll('a') : [];
+  var sections = Array.from(links).map(function(a){
+    return document.querySelector(a.getAttribute('href'));
+  }).filter(Boolean);
+
+  function onScroll(){
+    var y = window.scrollY + 200;
+    var active = sections[0];
+    sections.forEach(function(s){ if(s.offsetTop <= y) active = s; });
+    links.forEach(function(a){
+      a.classList.toggle('active', active && a.getAttribute('href') === '#' + active.id);
+    });
+  }
+
+  // Smooth scroll on tab click
+  links.forEach(function(a){
+    a.addEventListener('click', function(e){
+      e.preventDefault();
+      var target = document.querySelector(this.getAttribute('href'));
+      if(target){
+        var offset = tabs.getBoundingClientRect().height + 118;
+        var top = target.getBoundingClientRect().top + window.scrollY - offset - 12;
+        window.scrollTo({top: top, behavior: 'smooth'});
+      }
+    });
+  });
+
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+})();
+</script>
 </body>
 </html>

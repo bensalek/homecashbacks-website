@@ -8,7 +8,7 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <title>Cashback Realtor Toronto | Home Cashbacks</title>
-<meta name="description" content="Looking for a cash back realtor near you in Toronto or the GTA? We charge a flat $4,999 and return the rest of the buyer agent commission to you. Licensed with RECO. Avg. $20,000 back."/>
+<meta name="description" content="Flat $4,999 fee. On a $1M Toronto home you get $20,000 cashback. Full service from showings to closing. No upfront commitment."/>
 <meta name="author" content="Laleh Mousavi, HomeCashbacks"/>
 <meta property="og:title" content="HomeCashbacks | Flat Fee Realtor. Get Cashback When You Buy a Home."/>
 <meta property="og:description" content="Flat $4,999 fee. Avg. $20,446 cashback on a GTA home. First showing free. Licensed realtor serving Toronto and GTA."/>
@@ -36,10 +36,22 @@
   "employee": {"@type":"Person","name":"Laleh Mousavi","jobTitle":"Realtor"}
 }
 </script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="/assets/index.css"/>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Rubik:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="preload" href="/assets/hero-home.webp" as="image" fetchpriority="high">
+<link rel="preload" href="/assets/index.css" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
+<noscript><link rel="stylesheet" href="/assets/index.css"/></noscript>
+<style>
+/* Critical above-fold CSS — prevents FOUC while index.css loads async */
+body{font-family:'Rubik',sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;padding-top:118px}
+.hero--fullbleed{min-height:480px;background-size:cover;background-position:center;background-repeat:no-repeat;position:relative;display:flex;align-items:stretch}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to right,rgba(26,35,50,.92) 0%,rgba(26,35,50,.75) 45%,rgba(26,35,50,.45) 70%,rgba(26,35,50,.3) 100%);z-index:0}
+.hero-text-col{padding:3rem 2.5rem;display:flex;flex-direction:column;justify-content:center;gap:.75rem;position:relative;z-index:2;text-align:left}
+@media(max-width:680px){
+  body{padding-top:118px}
+  .hero--fullbleed{min-height:420px}
+  .hero-overlay{background:rgba(26,35,50,.82)}
+  .hero-text-col{padding:2rem 1.25rem;gap:.6rem}
+}
+</style>
 
 <script type="application/ld+json">
 {
@@ -279,7 +291,7 @@
 
 
 <!-- HERO -->
-<section class="hero hero--fullbleed" style="background-image:url('/assets/hero-home.png')">
+<section class="hero hero--fullbleed" style="background-image:url('/assets/hero-home.webp')">
   <div class="hero-overlay"></div>
   <div class="hero-text-col">
     <h1>Full Service Toronto Realtor.<br><em>Cashback on Every Purchase.</em></h1>
@@ -557,45 +569,43 @@
     </div>
 
     <div class="flow-cols">
-      <!-- Traditional -->
-      <div class="flow-trad">
-        <div class="flow-node them">
-          <div class="flow-step">Commitment</div>
-          <div class="flow-title">Buyer agreement required</div>
-          <div class="flow-desc">Locked in before you see a single home.</div>
-        </div>
-        <div class="flow-connector them"><svg width="14" height="26" viewBox="0 0 14 26" fill="none"><path d="M7 0 L7 20 M2 14 L7 21 L12 14" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-        <div class="flow-node them">
-          <div class="flow-step">Commission</div>
-          <div class="flow-title">Agent keeps all $25,000</div>
-          <div class="flow-desc">You never see a cent of it.</div>
-        </div>
-        <div class="flow-connector them"><svg width="14" height="26" viewBox="0 0 14 26" fill="none"><path d="M7 0 L7 20 M2 14 L7 21 L12 14" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-        <div class="flow-node them result-bad">
-          <div class="flow-step bad">You receive</div>
-          <div class="flow-title">$0 back</div>
-        </div>
+      <!-- Row 1: Commitment -->
+      <div class="flow-node them">
+        <div class="flow-step">Commitment</div>
+        <div class="flow-title">Buyer agreement required</div>
+        <div class="flow-desc">Locked in before you see a single home.</div>
       </div>
-
-      <!-- HomeCashbacks -->
-      <div class="flow-us">
-        <div class="flow-node us">
-          <div class="flow-step us">Commitment</div>
-          <div class="flow-title us">No agreement required</div>
-          <div class="flow-desc us">Walk away any time. No upfront commitment.</div>
-        </div>
-        <div class="flow-connector us"><svg width="14" height="26" viewBox="0 0 14 26" fill="none"><path d="M7 0 L7 20 M2 14 L7 21 L12 14" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-        <div class="flow-node us">
-          <div class="flow-step us">Our fee</div>
-          <div class="flow-title us">Flat $4,999</div>
-          <div class="flow-desc us">Full service. Showings, offers, negotiation, closing coordination.</div>
-        </div>
-        <div class="flow-connector us"><svg width="14" height="26" viewBox="0 0 14 26" fill="none"><path d="M7 0 L7 20 M2 14 L7 21 L12 14" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-        <div class="flow-node us result-good">
-          <div class="flow-step good">You receive</div>
-          <div class="flow-title us">$20,001 cashback</div>
-          <div class="flow-desc good">Paid after closing. Written into your buyer representation agreement.</div>
-        </div>
+      <div class="flow-node us">
+        <div class="flow-step us">Commitment</div>
+        <div class="flow-title us">No agreement required</div>
+        <div class="flow-desc us">Walk away any time.</div>
+      </div>
+      <!-- Row 2: Connectors -->
+      <div class="flow-connector them"><svg width="12" height="22" viewBox="0 0 12 22" fill="none"><path d="M6 1 L6 17 M2 12 L6 18 L10 12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="flow-connector us"><svg width="12" height="22" viewBox="0 0 12 22" fill="none"><path d="M6 1 L6 17 M2 12 L6 18 L10 12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <!-- Row 3: Commission -->
+      <div class="flow-node them">
+        <div class="flow-step">Commission</div>
+        <div class="flow-title">Agent keeps all $25,000</div>
+        <div class="flow-desc">You never see a cent of it.</div>
+      </div>
+      <div class="flow-node us">
+        <div class="flow-step us">Our fee</div>
+        <div class="flow-title us">Flat $4,999</div>
+        <div class="flow-desc us">Full service included.</div>
+      </div>
+      <!-- Row 4: Connectors -->
+      <div class="flow-connector them"><svg width="12" height="22" viewBox="0 0 12 22" fill="none"><path d="M6 1 L6 17 M2 12 L6 18 L10 12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="flow-connector us"><svg width="12" height="22" viewBox="0 0 12 22" fill="none"><path d="M6 1 L6 17 M2 12 L6 18 L10 12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <!-- Row 5: Result -->
+      <div class="flow-node them result-bad">
+        <div class="flow-step bad">You receive</div>
+        <div class="flow-amt bad">$0 back</div>
+      </div>
+      <div class="flow-node us result-good">
+        <div class="flow-step good">You receive</div>
+        <div class="flow-amt good">$20,001 cashback</div>
+        <div class="flow-desc good">Paid after closing. In writing.</div>
       </div>
     </div>
 
