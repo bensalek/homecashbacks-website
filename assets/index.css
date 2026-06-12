@@ -902,12 +902,12 @@ footer a{color:var(--cta);text-decoration:none}
 
 /* Two columns */
 /* Flow cols: direct children alternate left/right — rows auto-match height */
-.flow-cols{display:grid;grid-template-columns:1fr 1fr;gap:.4rem;align-items:stretch;max-width:600px;margin:0 auto}
+.flow-cols{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto 28px auto 28px auto;column-gap:1rem;row-gap:0;align-items:stretch;max-width:600px;margin:0 auto}
 .flow-trad{display:contents}
 .flow-us{display:contents}
 
 /* Nodes */
-.flow-node{border-radius:8px;padding:.75rem .9rem;display:flex;flex-direction:column;gap:.2rem}
+.flow-node{border-radius:8px;padding:.85rem .9rem;display:flex;flex-direction:column;gap:.2rem}
 .flow-node.them{background:var(--white);border:1.5px solid var(--bg3)}
 .flow-node.us{background:var(--dark)}
 .flow-node.result-bad{background:var(--red-light-bg);border:1.5px solid rgba(220,38,38,.2)}
@@ -949,7 +949,7 @@ footer a{color:var(--cta);text-decoration:none}
   .flow-connector{height:20px}
   .flow-amt.bad{font-size:16px}
   .flow-amt.good{font-size:18px}
-  .flow-cols{gap:.3rem}
+  .flow-cols{gap:.3rem;grid-template-rows:auto 22px auto 22px auto}
   .why-cta-btn{width:100%;text-align:center}
   .flow-cta{margin-top:1.25rem}
 }
