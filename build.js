@@ -2,7 +2,6 @@
 // node build.js — Netlify runs this on every push
 const fs   = require('fs');
 const path = require('path');
-const CleanCSS = require('clean-css');
 
 const COMPONENTS_DIR = './components';
 const PAGES_DIR      = './pages';
@@ -23,24 +22,14 @@ const NETLIFY_FORM = '<div aria-hidden="true" style="position:absolute;left:-999
 if (fs.existsSync(DIST_DIR)) fs.rmSync(DIST_DIR, { recursive: true });
 fs.mkdirSync(DIST_DIR, { recursive: true });
 
-// Copy assets to /dist/assets/ — minify CSS files
+// Copy assets to /dist/assets/
 var distAssets = path.join(DIST_DIR, 'assets');
 fs.mkdirSync(distAssets, { recursive: true });
-var cssMinifier = new CleanCSS({ level: 2 });
 fs.readdirSync(ASSETS_DIR).forEach(function(file) {
   var srcPath = path.join(ASSETS_DIR, file);
   if (fs.statSync(srcPath).isDirectory()) return;
-  var destPath = path.join(distAssets, file);
-  if (file.endsWith('.css')) {
-    var original = fs.readFileSync(srcPath, 'utf8');
-    var minified = cssMinifier.minify(original).styles;
-    fs.writeFileSync(destPath, minified, 'utf8');
-    var saving = Math.round((1 - minified.length / original.length) * 100);
-    console.log('  minified: assets/' + file + ' (-' + saving + '%)');
-  } else {
-    fs.copyFileSync(srcPath, destPath);
-    console.log('  copied: assets/' + file);
-  }
+  fs.copyFileSync(srcPath, path.join(distAssets, file));
+  console.log('  copied: assets/' + file);
 });
 
 // Copy fonts subfolder to /dist/assets/fonts/
