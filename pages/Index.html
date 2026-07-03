@@ -7,11 +7,11 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png"/>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Cashback Realtor Toronto | Home Cashbacks</title>
+<title>Cashback Realtor Toronto | Cash Back Realtor | Home Cashbacks</title>
 <meta name="description" content="Flat $4,999 fee. On a $1M Toronto home you get $20,000 cashback. Full service from showings to closing. No upfront commitment."/>
 <meta name="author" content="Laleh Mousavi, HomeCashbacks"/>
-<meta property="og:title" content="HomeCashbacks | Flat Fee Realtor. Get Cashback When You Buy a Home."/>
-<meta property="og:description" content="Flat $4,999 fee. Avg. $20,446 cashback on a GTA home. First showing free. Licensed realtor serving Toronto and GTA."/>
+<meta property="og:title" content="Cashback Realtor Toronto | Cash Back Realtor | Home Cashbacks"/>
+<meta property="og:description" content="Flat $4,999 fee. On a $1M Toronto home you get $20,000 cash back. Full service from showings to closing. No upfront commitment."/>
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="https://homecashbacks.ca"/>
 <meta property="og:image" content="https://homecashbacks.ca/og-image.png"/>
@@ -24,13 +24,13 @@
 {
   "@context": "https://schema.org",
   "@type": "RealEstateAgent",
-  "dateModified": "2026-05-27",
+  "dateModified": "2026-06-18",
   "name": "HomeCashbacks",
   "description": "Licensed GTA realtor offering flat fee home buying with cashback to buyers.",
   "url": "https://homecashbacks.ca",
   "telephone": "(437) 443-7556",
   "email": "Laleh@homecashbacks.ca",
-  "address": {"@type":"PostalAddress","addressLocality":"Toronto","addressRegion":"Ontario","addressCountry":"CA"},
+  "address": {"@type":"PostalAddress","streetAddress":"1 Edgewater Drive","addressLocality":"Toronto","addressRegion":"Ontario","postalCode":"M5A 0L1","addressCountry":"CA"},
   "areaServed": ["Toronto","Mississauga","Brampton","Oakville","Vaughan","Markham","Richmond Hill","GTA"],
   "priceRange": "$4,999 flat fee",
   "employee": {"@type":"Person","name":"Laleh Mousavi","jobTitle":"Realtor"}
@@ -68,10 +68,10 @@ body{font-family:'Rubik',sans-serif;background:var(--bg);color:var(--ink);line-h
     },
     {
       "@type": "Question",
-      "name": "Is a flat fee realtor better than a percentage cashback competitor?",
+      "name": "Is a flat fee better than a percentage cashback model?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Mathematically yes. Most cashback competitors give you 50% of the commission back. On a $1M GTA home with a 2.5% buyer commission that means $12,500 to you. We charge $4,999 flat and give you $20,001. Same professional representation, $7,500 more in your pocket."
+        "text": "On most GTA home prices, yes. A percentage model, such as returning 50% of the commission, gives you $12,500 on a $1M home at 2.5% commission. A flat $4,999 fee returns $20,000 on the same home. Same professional representation, more cashback at typical Toronto and GTA price points."
       }
     },
     {
@@ -154,148 +154,15 @@ body{font-family:'Rubik',sans-serif;background:var(--bg);color:var(--ink);line-h
 
 <!-- Hidden Netlify form for detection -->
 <!-- MODAL -->
-<div class="modal-overlay" id="modal">
-  <div class="modal">
-    <button class="modal-close" onclick="closeModal()" aria-label="Close modal">✕</button>
-    <div id="modal-form-wrap">
-      <div class="modal-tag" id="modal-tag">Book a Showing</div>
-      <div class="modal-title" id="modal-title">Let's get started</div>
-      <div class="modal-sub" id="modal-sub">We'll follow up within a few hours. No commitment required.</div>
-
-      <!-- SHOWING FORM -->
-      <form id="form-showing" name="contact" data-netlify="true" netlify-honeypot="bot-field" style="display:block" novalidate onsubmit="return false">
-        <input type="hidden" name="form-name" value="contact"/>
-        <p style="display:none"><input name="bot-field"/></p>
-        <div class="f-field">
-          <label class="f-label" for="f-name">Full name <span style="color:var(--muted);font-size:11px">(required)</span></label>
-          <input class="f-input" type="text" id="f-name" name="name" autocomplete="name"/>
-          <div class="f-error" id="err-name"></div>
-        </div>
-        <div class="f-field">
-          <label class="f-label" for="f-email">Email address <span style="color:var(--muted);font-size:11px;font-weight:400">(or phone)</span></label>
-          <input class="f-input" type="text" id="f-email" name="email" inputmode="email" autocomplete="email"/>
-        </div>
-        <div class="f-field">
-          <label class="f-label" for="f-phone">Phone number <span style="color:var(--muted);font-size:11px;font-weight:400">(or email)</span></label>
-          <input class="f-input" type="tel" id="f-phone" name="phone" inputmode="tel" autocomplete="tel"/>
-          <div class="f-note">At least one of email or phone is required.</div>
-          <div class="f-error" id="err-contact"></div>
-        </div>
-        <p class="f-consent">By submitting, you agree to be contacted by HomeCashbacks. View our <a href="/privacy.html" target="_blank">Privacy Policy</a>.</p>
-        <button type="button" class="f-submit" onclick="handleFormSubmit('contact')">Claim My Free Showing</button>
-      </form>
-
-      <!-- MORTGAGE FORM -->
-      <form id="form-mortgage" name="mortgage" data-netlify="true" netlify-honeypot="bot-field" style="display:none" novalidate onsubmit="return false">
-        <input type="hidden" name="form-name" value="mortgage"/>
-        <p style="display:none"><input name="bot-field"/></p>
-        <div class="f-field">
-          <label class="f-label" for="m-name">Full name <span style="color:var(--muted);font-size:11px;font-weight:400">(required)</span></label>
-          <input class="f-input" type="text" id="m-name" name="name" autocomplete="name"/>
-          <div class="f-error" id="err-m-name"></div>
-        </div>
-        <div class="f-field">
-          <label class="f-label" for="m-email">Email address <span style="color:var(--muted);font-size:11px;font-weight:400">(or phone)</span></label>
-          <input class="f-input" type="text" id="m-email" name="email" inputmode="email" autocomplete="email"/>
-        </div>
-        <div class="f-field">
-          <label class="f-label" for="m-phone">Phone number <span style="color:var(--muted);font-size:11px;font-weight:400">(or email)</span></label>
-          <input class="f-input" type="tel" id="m-phone" name="phone" inputmode="tel" autocomplete="tel"/>
-          <div class="f-note">At least one of email or phone is required.</div>
-          <div class="f-error" id="err-m-contact"></div>
-        </div>
-        <p class="f-consent">By submitting, you agree to be contacted by HomeCashbacks. View our <a href="/privacy.html" target="_blank">Privacy Policy</a>.</p>
-        <button type="button" class="f-submit" onclick="handleFormSubmit('mortgage')">Get Pre-Approved</button>
-      </form>
-
-    </div>
-    <div class="f-success" id="form-success">
-      <div class="f-success-icon">✓</div>
-      <h3>We'll be in touch!</h3>
-      <p>Expect a call or email from us within a few hours.</p>
-    </div>
-  </div>
-</div>
-
 <!-- TOP BAR -->
 <!-- TOP BAR -->
-<div class="top-bar">
-  <a href="tel:4374437556" class="top-bar-phone">
-    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1.25h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.84a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16.92z"/></svg>
-    (437) 443-7556
-  </a>
-  <div class="top-bar-sep"></div>
-  <button class="top-btn light" onclick="openModal()">Book Free Showing</button>
-</div>
-
-<!-- NAV -->
-<nav>
-  <a class="logo" href="/" aria-label="Home Cashbacks - Home">
-    <svg width="155" height="28" viewBox="0 0 190 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect width="32" height="32" rx="6" fill="var(--ink)" y="2"/>
-      <path d="M9 22 L16 12 L23 22" stroke="var(--cta)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-      <path d="M16 12 L23 12" stroke="var(--cta)" stroke-width="2" stroke-linecap="round"/>
-      <path d="M23 12 L23 19" stroke="var(--cta)" stroke-width="2" stroke-linecap="round"/>
-      <text x="42" y="22" font-size="17" font-weight="500" fill="var(--ink)" font-family="Rubik,sans-serif" letter-spacing="-0.5">Home<tspan fill="var(--cta)" font-weight="700">Cashbacks</tspan></text>
-    </svg>
-  </a>
-  <div class="nav-cred-wrap">
-    <img src="/assets/headshot.webp" alt="Laleh Mousavi" class="nav-headshot" width="40" height="40" loading="lazy" decoding="async"/>
-    <div>
-      <span class="nav-cred">Laleh Mousavi, Realtor</span>
-      <span class="nav-cred nav-cred-line2">Toronto Real Estate Realty Plus Inc.</span>
-    </div>
-  </div>
-  <ul class="nav-links" id="nav-links">
-    <li class="nav-item"><a href="/how-cashback-works.html" onclick="closeMobMenu()">How It Works</a></li>
-    <li class="nav-item"><a href="/toronto-listing-agent.html" onclick="closeMobMenu()">Sell Your Home</a></li>
-    <li class="nav-item"><a href="/our-story.html" onclick="closeMobMenu()">Our Story</a></li>
-    <li class="nav-item">
-      <button class="nav-link-btn" onclick="this.parentElement.classList.toggle('open')">Resources<svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 1l4 4 4-4"/></svg></button>
-      <div class="dropdown">
-        <a href="/first-time-buyer-guide.html" onclick="closeMobMenu()">
-          <div class="dropdown-label">First-Time Buyer Guide</div>
-          <div class="dropdown-sub">Incentives, rebates, and what to expect</div>
-        </a>
-        <a href="/condo-buying-guide.html" onclick="closeMobMenu()">
-          <div class="dropdown-label">Condo Buying Guide</div>
-          <div class="dropdown-sub">Status cert, fees, offer conditions</div>
-        </a>
-        <a href="/checklist.html" onclick="closeMobMenu()">
-          <div class="dropdown-label">Home Buyer Checklist</div>
-          <div class="dropdown-sub">5 phases from pre-approval to closing</div>
-        </a>
-        <a href="/offer-strategy.html" onclick="closeMobMenu()">
-          <div class="dropdown-label">Offer Strategy Tool</div>
-          <div class="dropdown-sub">Know your number before you offer</div>
-        </a>
-        <a href="/calculators.html" onclick="closeMobMenu()">
-          <div class="dropdown-label">Closing Cost Calculator</div>
-          <div class="dropdown-sub">Land transfer tax and closing costs</div>
-        </a>
-        <div class="dropdown-divider"></div>
-        <a href="/cashback-legal-ontario.html" onclick="closeMobMenu()">
-          <div class="dropdown-label">Is Cashback Legal in Ontario?</div>
-          <div class="dropdown-sub">RECO rules explained simply</div>
-        </a>
-      </div>
-    </li>
-    <li class="nav-item"><a href="/#faq" onclick="closeMobMenu()">FAQ</a></li>
-    <li class="nav-item"><a href="#" class="nav-pill" onclick="openModal();closeMobMenu();return false">Free Showing</a></li>
-  </ul>
-  <button class="hamburger" id="hamburger" onclick="toggleMobMenu()" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
-    <span></span><span></span><span></span>
-  </button>
-</nav>
-
-
-
 <!-- HERO -->
 <section class="hero hero--fullbleed" style="background-image:url('/assets/hero-home.webp')">
   <div class="hero-overlay"></div>
   <div class="hero-text-col">
     <h1>Full Service Toronto Realtor.<br><em>Cashback on Every Purchase.</em></h1>
     <p class="hero-million">On a $1M home<br>you earn <em>$20,000 back.</em></p>
+    <p class="hero-sub-sm">Toronto's cash back realtor — flat $4,999 fee, full service.</p>
     <div class="hero-btns">
       <button class="btn-primary" onclick="openModal()">Get My Cashback Estimate</button>
     </div>
@@ -350,7 +217,7 @@ body{font-family:'Rubik',sans-serif;background:var(--bg);color:var(--ink);line-h
       </div>
       <div class="calc-result">
         <div class="calc-result-label">Your estimated cashback</div>
-        <div class="calc-result-amt" id="calc-cashback">$17,501</div>
+        <div class="calc-result-amt" id="calc-cashback">$17,500</div>
       </div>
       <div class="calc-stat">
         <div class="calc-stat-label">Use your cashback to</div>
@@ -604,7 +471,7 @@ body{font-family:'Rubik',sans-serif;background:var(--bg);color:var(--ink);line-h
       </div>
       <div class="flow-node us result-good">
         <div class="flow-step good">You receive</div>
-        <div class="flow-amt good">$20,001 cashback</div>
+        <div class="flow-amt good">$20,000 cashback</div>
         <div class="flow-desc good">Paid after closing. In writing.</div>
       </div>
     </div>
@@ -620,12 +487,12 @@ body{font-family:'Rubik',sans-serif;background:var(--bg);color:var(--ink);line-h
 <section class="meet-section">
   <div class="meet-inner">
     <div class="meet-photo">
-      <img src="headshot.webp" alt="Laleh Mousavi, Realtor at HomeCashbacks"/>
+      <img src="/assets/headshot.webp" alt="Laleh Mousavi, Realtor at HomeCashbacks" width="220" height="275" loading="lazy" decoding="async"/>
     </div>
     <div class="meet-content">
       <!-- Mobile: Option B dark card -->
       <div class="meet-mobile-row" style="display:none">
-        <img src="headshot.webp" alt="Laleh Mousavi" class="meet-mobile-photo"/>
+        <img src="/assets/headshot.webp" alt="Laleh Mousavi" class="meet-mobile-photo" width="80" height="100" loading="lazy" decoding="async"/>
         <div class="meet-mobile-text">
           <div class="meet-eyebrow" style="margin-bottom:.15rem">Behind HomeCashbacks</div>
           <div class="meet-name">Laleh Mousavi</div>
@@ -749,45 +616,6 @@ body{font-family:'Rubik',sans-serif;background:var(--bg);color:var(--ink);line-h
   </div>
 </section>
 
-<footer>
-  <div class="foot-inner">
-    <div class="foot-agent">
-      <img src="headshot.webp" alt="Laleh Mousavi" class="foot-headshot"/>
-      <div>
-        <div class="foot-agent-name">Laleh Mousavi</div>
-        <div class="foot-agent-title">Realtor · Toronto Real Estate Realty Plus Inc.<br>Registered with RECO · Serving Toronto &amp; GTA</div>
-        <div class="foot-agent-badge">Licensed in Ontario</div>
-      </div>
-    </div>
-    <div class="foot-links">
-      <a href="how-cashback-works.html">How It Works</a>
-      <a href="our-story.html">Our Story</a>
-      <a href="first-time-buyer-guide.html">First-Time Buyer Guide</a>
-      <a href="checklist.html">Home Buyer Checklist</a>
-      <a href="calculators.html">Calculators</a>
-      <a href="tel:4374437556">(437) 443-7556</a>
-      <a href="mailto:Laleh@homecashbacks.ca">Laleh@homecashbacks.ca</a>
-    </div>
-    <div class="foot-cta">
-      <button class="foot-cta-btn" onclick="openModal()">Claim Your Cashback</button>
-      <span class="foot-cta-sub">No commitment · First showing free</span>
-    </div>
-  </div>
-  <div class="foot-bottom">
-    <span>&copy; 2026 HomeCashbacks. All rights reserved.</span>
-    <div style="display:flex;align-items:center;gap:.75rem">
-      <a href="https://www.linkedin.com/company/homecashbacks/about/" target="_blank" rel="noopener" class="foot-social-link">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>LinkedIn
-      </a>
-      <a href="https://www.instagram.com/homecashbacks/" target="_blank" rel="noopener" class="foot-social-link">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>Instagram
-      </a>
-      <a href="/privacy.html" class="foot-social-link">Privacy Policy</a>
-    </div>
-  </div>
-  <p class="foot-disclaimer">For general guidance only. Not legal, financial, or real estate advice. Always consult a licensed professional before making any decisions.</p>
-</footer>
-
 <script>
 // CASHBACK CALCULATOR
 function updateCalc(){
@@ -836,7 +664,7 @@ function updateCalc(){
 <script>
 const FAQ_SERVICE=[
   {q:'What is the catch?',a:'There is not one. But we understand why you are asking. Traditional agents earn $20,000 to $25,000 on a $1M home. Giving most of that back requires a different business model, not a different level of service. Ours runs leaner. We use technology where it makes sense, we work with buyers who know what they want, and we do not price in hours we do not spend. What you get is the same thing: a licensed realtor, full brokerage legal protections, showings, offer strategy, negotiation, and closing coordination. What you keep is the commission that was always yours to begin with.'},
-  {q:'Is a flat fee realtor better than a percentage cashback competitor?',a:'Mathematically yes, by thousands of dollars. Most cashback competitors give you 50% of the commission back. On a $1M GTA home with a 2.5% buyer commission, that means $12,500 to you and $12,500 kept by the brokerage. We charge $4,999 flat and give you $20,001. Same professional representation, same legal protections, $7,500 more in your pocket. Actual amounts depend on the commission the seller has offered.'},
+  {q:'Is a flat fee realtor better than a percentage cashback competitor?',a:'Mathematically yes, by thousands of dollars. Most cashback competitors give you 50% of the commission back. On a $1M GTA home with a 2.5% buyer commission, that means $12,500 to you and $12,500 kept by the brokerage. We charge $4,999 flat and give you $20,000. Same professional representation, same legal protections, $7,500 more in your pocket. Actual amounts depend on the commission the seller has offered.'},
   {q:'Do I really get cashback? How does it work?',a:'Yes. When a home sells, the seller\'s agreement includes a buyer agent commission, typically 2 to 2.5% of the sale price. That money flows to your agent. We take a flat $4,999 from that commission and send you everything above that 6 to 8 weeks after closing. On the average GTA home ($1,018,000), you would receive approximately $20,446 back.'},
   {q:'Is cashback from a realtor legal in Ontario?',a:'Yes, completely legal. Rebating a portion of the buyer agent commission back to the buyer is permitted under RECO regulations in Ontario. The cashback is written into your contract before you sign anything.'},
   {q:'Do I pay income tax on my cashback?',a:'If you are buying as your primary residence, the CRA generally treats a commission rebate as a reduction in your purchase price, not taxable income. If you are buying as an investment property or through a corporation, the rules may differ. We recommend speaking with your accountant for your specific situation.'},

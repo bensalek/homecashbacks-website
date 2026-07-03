@@ -190,7 +190,6 @@ footer{background:var(--ink);padding:2.5rem 2rem 1.5rem}
   .hamburger{display:flex}
   .nav-links{display:none;position:absolute;top:60px;left:0;right:0;background:var(--white);border-bottom:1px solid var(--border);padding:1rem;flex-direction:column;gap:4px;box-shadow:0 4px 12px var(--border)}
   .nav-links.open{display:flex}
-  .nav-cred-wrap{display:none}
   .nav-item .dropdown{position:static;opacity:1;visibility:visible;transform:none;box-shadow:none;border:none;padding:0 0 0 1rem;background:transparent;min-width:auto}
   .nav-item.open .dropdown{display:block}
   .nav-item .dropdown{display:none}

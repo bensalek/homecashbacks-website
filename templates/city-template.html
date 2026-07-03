@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Cashback Realtor {{NAME}} | Flat $4,999 Fee | Home Cashbacks</title>
+<title>{{PAGE_TITLE}}</title>
 <meta name="description" content="{{META_DESC}}"/>
 <meta property="og:title" content="Cashback Realtor {{NAME}} | Home Cashbacks"/>
 <meta property="og:description" content="Flat $4,999 fee. Everything above that comes back to you. Serving {{NAME}} and the GTA."/>
@@ -87,16 +87,23 @@
 .stat-box.highlight .stat-box-val{color:var(--cta)}
 .stat-source{font-size:12px;color:var(--muted);margin-top:.35rem}
 .hood-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem;margin:1.5rem 0}
-.hood-card{background:var(--white);border:1px solid var(--border);border-radius:4px;padding:1.1rem 1.25rem;position:relative;overflow:hidden}
-.hood-card--linked{display:block;text-decoration:none;transition:border-color .2s,box-shadow .2s}
-.hood-card--linked:hover{border-color:var(--cta);box-shadow:0 2px 12px rgba(28,134,78,.1)}
-.hood-link-cue{font-size:11px;font-weight:600;color:var(--cta);margin-top:.5rem}
-.hood-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--cta);opacity:.4}
-.hood-card.featured::before{opacity:1}
-.hood-name{font-size:14px;font-weight:600;color:var(--ink);margin-bottom:.25rem}
-.hood-type{font-size:11px;font-weight:500;letter-spacing:.5px;text-transform:uppercase;color:var(--cta);margin-bottom:.35rem}
-.hood-desc{font-size:12px;color:var(--muted);line-height:1.5}
-.hood-price{font-size:12px;font-weight:600;color:var(--ink);margin-top:.4rem}
+.hood-grid--hidden{display:none!important}
+.hood-grid--hidden.revealed{display:grid!important}
+.hood-card{background:var(--white);border:1px solid var(--border);border-left:3px solid var(--border);border-radius:6px;padding:1rem 1.1rem;position:relative}
+.hood-card--linked{display:block;text-decoration:none;border-left-color:var(--cta);transition:border-color .15s,box-shadow .15s}
+.hood-card--linked:hover{border-color:var(--cta);box-shadow:0 2px 12px rgba(28,134,78,.12)}
+.hood-card--unlinked{opacity:.82}
+.hood-link-cue{font-size:11px;font-weight:600;color:var(--cta);margin-top:.45rem}
+.hood-name{font-size:15px;font-weight:700;color:var(--ink);margin-bottom:.25rem;line-height:1.2}
+.hood-type{font-size:10px;font-weight:700;letter-spacing:.7px;text-transform:uppercase;color:var(--muted);margin-bottom:.3rem}
+.hood-desc{font-size:12px;color:var(--muted);line-height:1.5;margin-bottom:.4rem}
+.hood-price{font-size:12px;font-weight:600;color:var(--ink2)}
+.hood-show-more-wrap{text-align:center;margin-top:.75rem}
+.hood-show-more-btn{background:none;border:1.5px solid var(--border);border-radius:5px;padding:.6rem 1.5rem;font-size:13px;font-weight:600;color:var(--muted);cursor:pointer;transition:border-color .15s,color .15s;font-family:'Rubik',sans-serif;display:inline-flex;align-items:center;gap:.5rem}
+.hood-show-more-btn:hover{border-color:var(--cta);color:var(--cta)}
+.hood-show-more-count{background:var(--bg);border-radius:3px;padding:1px 6px;font-size:11px}
+.hood-arrow{transition:transform .2s;display:inline-block}
+.hood-show-more-btn.open .hood-arrow{transform:rotate(180deg)}
 .laleh-section{background:var(--ink);padding:2.75rem 2rem}
 .laleh-inner{max-width:860px;margin:0 auto;display:grid;grid-template-columns:auto 1fr;gap:2rem;align-items:center}
 .laleh-hs{width:80px;height:80px;border-radius:50%;border:2.5px solid var(--cta);overflow:hidden;flex-shrink:0}
@@ -156,7 +163,8 @@
 .calc-note{font-size:11px;color:var(--taupe);line-height:1.6}
 @media(max-width:680px){
   .stat-strip{grid-template-columns:1fr 1fr}
-  .hood-grid{grid-template-columns:1fr 1fr}
+  .hood-grid:not(.hood-grid--hidden){grid-template-columns:1fr 1fr}
+  .hood-grid--hidden.revealed{grid-template-columns:1fr 1fr!important}
   .laleh-inner{grid-template-columns:1fr;gap:1.25rem}
   .miss-section{padding:2rem 1.25rem}
   .hood-desc{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
@@ -252,8 +260,8 @@
   <div class="miss-inner">
     <div class="miss-eyebrow-sm">Where buyers are looking</div>
     <h2 class="miss-h2">{{NAME}} Neighbourhoods</h2>
-    <div class="hood-grid">{{HOOD_CARDS}}</div>
-    <p class="miss-body" style="margin-top:.5rem">We serve all {{NAME}} neighbourhoods and the broader GTA. <a href="#calculator" class="link">Calculate your cashback</a> at any price point.</p>
+    {{HOOD_CARDS}}
+    <p class="miss-body" style="margin-top:1rem">We cover all of {{NAME}} and the broader GTA. <a href="#calculator" class="link">Calculate your cashback</a> at any price point.</p>
   </div>
 </section>
 
@@ -353,6 +361,21 @@ function updateCalc(){
 document.querySelectorAll('.miss-faq-q').forEach(function(q){
   q.addEventListener('click',function(){this.closest('.miss-faq-item').classList.toggle('open');});
 });
+function toggleHoods(btn){
+  var hidden=document.getElementById('hoods-hidden');
+  var isOpen=hidden&&hidden.classList.contains('revealed');
+  if(!hidden)return;
+  if(isOpen){
+    hidden.classList.remove('revealed');
+    btn.classList.remove('open');
+    var count=hidden.querySelectorAll('.hood-card').length;
+    btn.innerHTML='Show more neighbourhoods <span class="hood-arrow">↓</span>';
+  } else {
+    hidden.classList.add('revealed');
+    btn.classList.add('open');
+    btn.innerHTML='Show fewer <span class="hood-arrow">↑</span>';
+  }
+}
 (function(){
   var s=document.getElementById('f-source');
   if(s)s.value='{{SOURCE_SLUG}}';

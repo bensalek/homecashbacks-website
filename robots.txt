@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
 
+Disallow: /closing-costs-ontario-2026.html
+
 Sitemap: https://homecashbacks.ca/sitemap.xml

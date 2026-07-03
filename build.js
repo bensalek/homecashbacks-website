@@ -2,6 +2,7 @@
 // node build.js — Netlify runs this on every push
 const fs   = require('fs');
 const path = require('path');
+const CleanCSS = require('clean-css');
 
 const COMPONENTS_DIR = './components';
 const PAGES_DIR      = './pages';
@@ -22,14 +23,24 @@ const NETLIFY_FORM = '<div aria-hidden="true" style="position:absolute;left:-999
 if (fs.existsSync(DIST_DIR)) fs.rmSync(DIST_DIR, { recursive: true });
 fs.mkdirSync(DIST_DIR, { recursive: true });
 
-// Copy assets to /dist/assets/
+// Copy assets to /dist/assets/ — minify CSS files
 var distAssets = path.join(DIST_DIR, 'assets');
 fs.mkdirSync(distAssets, { recursive: true });
+var cssMinifier = new CleanCSS({ level: 2 });
 fs.readdirSync(ASSETS_DIR).forEach(function(file) {
   var srcPath = path.join(ASSETS_DIR, file);
   if (fs.statSync(srcPath).isDirectory()) return;
-  fs.copyFileSync(srcPath, path.join(distAssets, file));
-  console.log('  copied: assets/' + file);
+  var destPath = path.join(distAssets, file);
+  if (file.endsWith('.css')) {
+    var original = fs.readFileSync(srcPath, 'utf8');
+    var minified = cssMinifier.minify(original).styles;
+    fs.writeFileSync(destPath, minified, 'utf8');
+    var saving = Math.round((1 - minified.length / original.length) * 100);
+    console.log('  minified: assets/' + file + ' (-' + saving + '%)');
+  } else {
+    fs.copyFileSync(srcPath, destPath);
+    console.log('  copied: assets/' + file);
+  }
 });
 
 // Copy fonts subfolder to /dist/assets/fonts/
@@ -187,6 +198,8 @@ console.log('\n✓ Build complete — ' + pages.length + ' pages assembled into 
     var html = template;
 
     // Basic tokens
+    html = html.replace(/{{PAGE_TITLE}}/g,
+      city.pageTitle || ('Cashback Realtor ' + city.name + ' | Flat $4,999 Fee | Home Cashbacks'));
     html = html.replace(/{{META_DESC}}/g,   city.metaDesc);
     html = html.replace(/{{NAME}}/g,        city.name);
     html = html.replace(/{{SLUG}}/g,        city.slug);
@@ -221,16 +234,16 @@ console.log('\n✓ Build complete — ' + pages.length + ' pages assembled into 
     }).join('\n');
     html = html.replace('{{STAT_BOXES}}', statBoxes);
 
-    // Hood cards
-    var hoodCards = city.hoods.map(function(h) {
-      var classes = 'hood-card' + (h.featured ? ' featured' : '') + (h.link ? ' hood-card--linked' : '');
-      var tag = h.link ? 'a' : 'div';
-      var tagOpen = h.link
+    // Hood cards — first 6 visible, rest hidden with show-more
+    function renderHoodCard(h) {
+      var linked = !!h.link;
+      var classes = 'hood-card' + (linked ? ' hood-card--linked' : ' hood-card--unlinked');
+      var tagOpen = linked
         ? '<a href="' + h.link + '" class="' + classes + '">'
         : '<div class="' + classes + '">';
-      var tagClose = h.link ? '</a>' : '</div>';
-      var linkCue = h.link
-        ? '<div class="hood-link-cue">Schools, commute &amp; cashback →</div>'
+      var tagClose = linked ? '</a>' : '</div>';
+      var linkCue = linked
+        ? '<div class="hood-link-cue">Schools, commute &amp; cashback \u2192</div>'
         : '';
       return tagOpen +
         '<div class="hood-type">' + h.type + '</div>' +
@@ -239,8 +252,26 @@ console.log('\n✓ Build complete — ' + pages.length + ' pages assembled into 
         '<div class="hood-price">' + h.price + '</div>' +
         linkCue +
         tagClose;
-    }).join('\n');
-    html = html.replace('{{HOOD_CARDS}}', hoodCards);
+    }
+    var visibleHoods = city.hoods.slice(0, 6);
+    var hiddenHoods  = city.hoods.slice(6);
+    var visibleCards = visibleHoods.map(renderHoodCard).join('\n');
+    var hiddenCount  = hiddenHoods.length;
+    var hiddenCards  = hiddenHoods.map(renderHoodCard).join('\n');
+    var showMoreBtn  = hiddenCount > 0
+      ? '<div class="hood-show-more-wrap">' +
+          '<button class="hood-show-more-btn" onclick="toggleHoods(this)">' +
+            'Show more neighbourhoods <span class="hood-arrow">↓</span>' +
+          '</button>' +
+        '</div>'
+      : '';
+    var hoodHtml =
+      '<div class="hood-grid" id="hoods-visible">' + visibleCards + '</div>' +
+      (hiddenCount > 0
+        ? '<div class="hood-grid hood-grid--hidden" id="hoods-hidden">' + hiddenCards + '</div>'
+        : '') +
+      showMoreBtn;
+    html = html.replace('{{HOOD_CARDS}}', hoodHtml);
 
     // FAQ items
     var faqItems = city.faqCity.filter(Boolean).map(function(f) {

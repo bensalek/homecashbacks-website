@@ -2,11 +2,10 @@
 <html lang="en">
 <head>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Toronto Listing Agent | Flat $4,999 | HomeCashbacks</title>
-<meta name="description" content="Full-service listing agent in Toronto and the GTA. Flat $4,999 listing fee. High quality photography and video, floor plan, Facebook and Instagram ads, agent outreach before and after launch, offer strategy and closing support."/>
+<title>Toronto Listing Agent | Flat Fee Listing Agent Toronto | Home Cashbacks</title>
+<meta name="description" content="Flat $4,999 listing fee in Toronto. Full service — photography, MLS listing, negotiations, and closing. No percentage commission."/>
 <meta name="author" content="Laleh Mousavi, HomeCashbacks"/>
-<meta name="keywords" content="Toronto listing agent, flat fee listing agent Toronto, sell home Toronto, listing agent GTA, low commission realtor Toronto"/>
-<meta property="og:title" content="Toronto Listing Agent | Flat $4,999 | HomeCashbacks"/>
+<meta property="og:title" content="Toronto Listing Agent | Flat Fee Listing Agent Toronto | Home Cashbacks"/>
 <meta property="og:description" content="Full-service listing in Toronto and the GTA. Flat $4,999. Nothing upfront. Photography, floor plan, Facebook and Instagram ads, agent outreach, offer strategy and closing support."/>
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="https://homecashbacks.ca/toronto-listing-agent.html"/>
@@ -72,11 +71,20 @@
 </script>
 
 <link rel="stylesheet" href="/assets/listing.css"/>
+<style>
+.sl-sticky{position:sticky;top:118px;z-index:400;background:var(--white);border-bottom:1px solid var(--border);overflow-x:auto;scrollbar-width:none;padding:0}
+.sl-sticky::-webkit-scrollbar{display:none}
+.sl-sticky-inner{max-width:860px;margin:0 auto;display:flex;padding:0 2rem}
+.sl-sticky a{font-size:13px;font-weight:500;color:var(--muted);text-decoration:none;padding:.65rem .85rem;white-space:nowrap;border-bottom:2px solid transparent;transition:color .15s,border-color .15s;flex-shrink:0}
+.sl-sticky a:hover{color:var(--ink)}
+.sl-sticky a.active{color:var(--cta);border-bottom-color:var(--cta);font-weight:600}
+@media(max-width:680px){.sl-sticky-inner{padding:0 1rem}.sl-sticky a{font-size:12px;padding:.55rem .65rem}}
+</style>
 </head>
 <body>
 
 <!-- HERO -->
-<section class="s-hero s-hero--fullbleed" style="background-image:url('/assets/hero-selling.png')">
+<section class="s-hero s-hero--fullbleed" style="background-image:url('/assets/hero-selling.webp')">
   <div class="s-hero-overlay"></div>
   <div class="s-hero-text">
     <div class="s-hero-eye">Toronto Listing Agent</div>
@@ -88,8 +96,18 @@
 </section>
 
 
+<!-- STICKY NAV -->
+<nav class="sl-sticky" id="sl-sticky" aria-label="Page sections">
+  <div class="sl-sticky-inner">
+    <a href="#calculator">Your savings</a>
+    <a href="#services">What's included</a>
+    <a href="#marketing">How we market</a>
+    <a href="#faq">Questions</a>
+  </div>
+</nav>
+
 <!-- CALCULATOR -->
-<section class="sl-calc-section" id="calculator">
+<section class="sl-calc-section" id="calculator" style="scroll-margin-top:160px">
   <div class="sl-calc-inner">
     <div class="sl-calc-card">
       <div class="sl-calc-eyebrow">Listing fee calculator</div>
@@ -147,7 +165,7 @@
 </section>
 
 <!-- SERVICES -->
-<section class="services-section">
+<section class="services-section" id="services" style="scroll-margin-top:160px">
   <div class="s-inner">
     <div class="s-eye">How we compare</div>
     <h2 class="s-h2">Full service. Not full commission.</h2>
@@ -209,7 +227,7 @@
 </section>
 
 <!-- MARKETING -->
-<section class="mkt-section">
+<section class="mkt-section" id="marketing" style="scroll-margin-top:160px">
   <div class="s-inner">
     <div class="s-eye">How we market your home</div>
     <h2 class="s-h2">Your home gets an active campaign from day one.</h2>
@@ -280,7 +298,7 @@
 
 
 <!-- FAQ -->
-<section class="faq-section">
+<section class="faq-section" id="faq" style="scroll-margin-top:160px">
   <div class="faq-inner">
     <div class="s-eye">Common questions</div>
     <h2 class="s-h2">What sellers ask most</h2>
@@ -413,6 +431,21 @@ if(document.readyState === 'loading'){
 } else {
   overrideSharedComponents();
 }
+</script>
+<script>
+(function(){
+  var sticky = document.getElementById('sl-sticky');
+  var links = sticky ? sticky.querySelectorAll('a') : [];
+  var sections = Array.from(links).map(function(a){ return document.querySelector(a.getAttribute('href')); }).filter(Boolean);
+  function onScroll(){
+    var y = window.scrollY + 180;
+    var active = sections[0];
+    sections.forEach(function(s){ if(s && s.offsetTop <= y) active = s; });
+    links.forEach(function(a){ a.classList.toggle('active', active && a.getAttribute('href') === '#' + active.id); });
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+})();
 </script>
 </body>
 </html>
