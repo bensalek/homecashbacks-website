@@ -123,7 +123,8 @@
           "type": "Midtown hub",
           "desc": "Transit-rich midtown. Condo and rental demand consistently high.",
           "price": "Condos from ~$700K",
-          "featured": false
+          "featured": true,
+          "link": "/yonge-eglinton-toronto.html"
         },
         {
           "name": "Liberty Village",
@@ -139,7 +140,8 @@
           "type": "East end value",
           "desc": "Lively main strip, solid semis, one of the best value east-end pockets.",
           "price": "Semis from ~$1.0M",
-          "featured": false
+          "featured": true,
+          "link": "/danforth-toronto.html"
         },
         {
           "name": "High Park",
@@ -155,7 +157,8 @@
           "type": "Mid-west value",
           "desc": "Italian village feel, St. Clair strip, strong freehold value west of downtown.",
           "price": "Semis from ~$950K",
-          "featured": false
+          "featured": true,
+          "link": "/corso-italia-toronto.html"
         }
       ],
       "laleh": "\"Toronto buyers often feel like they have no leverage. But the market right now is more balanced than the headlines suggest. Inventory is up, sellers are negotiating, and first-time buyers in Toronto have a double land transfer tax rebate that most agents never even mention. Your cashback combined with that rebate can genuinely change what your first year looks like after closing.\"",

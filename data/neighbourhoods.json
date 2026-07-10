@@ -876,6 +876,444 @@
         }
       ],
       "metaDesc": "Harbourfront Toronto: lake view condos, commute times, and prices. Steps from Union Station. See how much cashback you'd get on a typical purchase."
+    },
+    {
+      "slug": "yonge-eglinton-toronto",
+      "name": "Yonge & Eglinton",
+      "city": "toronto",
+      "cityName": "Toronto",
+      "citySlug": "toronto-cashback-realtor",
+      "heroSub": "Midtown's transit hub. Dense, walkable, and one of Toronto's most active condo markets.",
+      "overview": "Yonge & Eglinton sits at the intersection of two of Toronto's busiest streets, roughly midway between downtown and the northern suburbs. The area is anchored by Eglinton station \u2014 a major crosstown LRT hub \u2014 and offers a dense mix of high-rise condos, mid-rise apartments, and the occasional renovated detached home on side streets. It has a strong restaurant and retail strip, excellent transit connections, and consistent rental demand that makes it attractive to both owner-occupiers and investors.",
+      "walkScore": 97,
+      "transitScore": 93,
+      "commuteTime": "~18 min",
+      "condosFrom": "$580K+",
+      "calcDefault": 750000,
+      "marketDate": "July 2026",
+      "prices": [
+        {
+          "type": "Condos",
+          "val": "$580K \u2013 $950K",
+          "note": "High-rise towers dominate. Studios from $580K, 2-beds from $750K"
+        },
+        {
+          "type": "Mid-rise & boutique",
+          "val": "$700K \u2013 $1.1M",
+          "note": "Newer boutique buildings on side streets command a premium"
+        },
+        {
+          "type": "Detached & semis",
+          "val": "$1.6M \u2013 $2.5M",
+          "note": "Rare on main streets, more available on residential side streets"
+        },
+        {
+          "type": "Days on market",
+          "val": "~35 \u2013 45 days",
+          "note": "Condo market has more inventory; well-priced units move in 2\u20133 weeks"
+        }
+      ],
+      "schools": [
+        {
+          "name": "Davisville Junior Public School",
+          "meta": "JK\u2013Grade 6 \u00b7 TDSB \u00b7 Popular catchment north of Eglinton",
+          "type": "Public"
+        },
+        {
+          "name": "Maurice Cody Junior Public School",
+          "meta": "JK\u2013Grade 6 \u00b7 TDSB \u00b7 Strong reputation, active parent community",
+          "type": "Public"
+        },
+        {
+          "name": "North Toronto Collegiate Institute",
+          "meta": "Grades 9\u201312 \u00b7 TDSB \u00b7 One of Toronto's most academically competitive public high schools",
+          "type": "Public Secondary"
+        },
+        {
+          "name": "York School",
+          "meta": "JK\u2013Grade 12 \u00b7 Independent \u00b7 IB curriculum, strong university placement",
+          "type": "Private"
+        },
+        {
+          "name": "Our Lady of Perpetual Help Catholic School",
+          "meta": "JK\u2013Grade 8 \u00b7 TCDSB \u00b7 Serves Catholic families in the Yonge & Eglinton catchment",
+          "type": "Catholic"
+        }
+      ],
+      "commutes": [
+        {
+          "route": "Eglinton Station \u2192 Union Station",
+          "mode": "Subway Line 1",
+          "time": "~18 min"
+        },
+        {
+          "route": "Eglinton Crosstown LRT (East\u2013West)",
+          "mode": "Line 5 Crosstown",
+          "time": "~10 min to Scarborough"
+        },
+        {
+          "route": "Cycling to Financial District",
+          "mode": "Yonge St bike lane",
+          "time": "~25 min"
+        },
+        {
+          "route": "Bus to downtown",
+          "mode": "97 Yonge bus",
+          "time": "~30 min"
+        }
+      ],
+      "whoFor": [
+        {
+          "label": "Young professionals",
+          "text": "Excellent transit, walkable amenities, and a dense social scene. Many buyers here are upgrading from a rental in the same neighbourhood or relocating from outside Toronto for work."
+        },
+        {
+          "label": "Investors",
+          "text": "Consistent rental demand from students, professionals, and young couples. The Crosstown LRT has added long-term capital upside. Vacancy rates near Yonge & Eg remain among the lowest in the city."
+        },
+        {
+          "label": "Downsizers",
+          "text": "Empty nesters from North Toronto who want walkability without leaving the city. A 2-bedroom condo here offers everything within walking distance that a large house in the suburbs does not."
+        },
+        {
+          "label": "Not ideal for",
+          "text": "Families seeking freehold with a yard and strong public school access at an entry-level price. Detached homes are rare and expensive; the catchment schools are good but competition is real."
+        }
+      ],
+      "laleh": "\"Yonge and Eglinton is one of the best-connected midtown locations in Toronto. The Crosstown LRT has changed the calculus here \u2014 you can now get across the city east\u2013west without going downtown first, which is a genuine shift. For buyers who want walkability and fast transit without the premium of downtown glass towers, this neighbourhood consistently delivers. On a typical 2-bedroom condo purchase around $800K, you're looking at roughly $15,000 back in cashback after closing.\"",
+      "faqs": [
+        {
+          "q": "Is Yonge & Eglinton good for first-time buyers?",
+          "a": "Yes, if condos fit your lifestyle. Entry-level studios start around $580K and 1-bedrooms from $650K. The transit access is excellent and the neighbourhood is walkable. If you need a house with a yard, this isn't the right area \u2014 but for condo buyers it's one of the strongest midtown options."
+        },
+        {
+          "q": "How has the Eglinton Crosstown LRT affected prices?",
+          "a": "The LRT has reinforced Yonge & Eglinton's position as a transit hub and added east\u2013west connectivity that wasn't there before. Long-term, this supports values in the corridor. In the short term, the extended construction period suppressed condo prices slightly \u2014 those buyers are now seeing that reversed."
+        },
+        {
+          "q": "Is parking important to have at Yonge & Eglinton?",
+          "a": "Less so than most Toronto neighbourhoods. Transit is excellent, grocery stores, restaurants, and services are all walkable. Many buyers here don't own cars. If you do drive, parking spots sell separately and add $50K\u2013$80K to a purchase price."
+        },
+        {
+          "q": "How much cashback would I get on a Yonge & Eglinton condo?",
+          "a": "On an $800K condo at 2.5% buyer agent commission, you'd receive $15,000 back after closing with Home Cashbacks. On a $950K unit, that's $18,750 back. Use the calculator above for your specific price."
+        }
+      ],
+      "related": [
+        {
+          "label": "City page",
+          "title": "Toronto cashback realtor \u2014 all neighbourhoods",
+          "href": "/toronto-cashback-realtor.html"
+        },
+        {
+          "label": "Guide",
+          "title": "How much cashback can you get in Toronto?",
+          "href": "/how-much-cashback-toronto.html"
+        },
+        {
+          "label": "Tool",
+          "title": "Cashback calculator",
+          "href": "/calculators.html"
+        },
+        {
+          "label": "Guide",
+          "title": "Closing costs in Ontario",
+          "href": "/closing-costs-ontario.html"
+        }
+      ],
+      "metaDesc": "Yonge & Eglinton Toronto: schools, commute times, and condo prices. Studios from $580K. See your cashback estimate on a typical Midtown purchase."
+    },
+    {
+      "slug": "corso-italia-toronto",
+      "name": "Corso Italia",
+      "city": "toronto",
+      "cityName": "Toronto",
+      "citySlug": "toronto-cashback-realtor",
+      "heroSub": "West end freehold value with a tight-knit Italian village feel. One of Toronto's best-kept entry points.",
+      "overview": "Corso Italia runs along St. Clair Avenue West between Dufferin and Lansdowne. It has the feel of a genuine neighbourhood strip \u2014 independent cafes, Italian bakeries, butcher shops, and a strong local identity that's resisted the homogenization seen in trendier west-end pockets. The housing stock is predominantly post-war semis and detached homes on narrow lots, with a growing number of renovated properties. Prices remain below comparable east-end streets, making it one of the better value propositions for freehold buyers in the city.",
+      "walkScore": 87,
+      "transitScore": 79,
+      "commuteTime": "~28 min",
+      "condosFrom": "$520K+",
+      "calcDefault": 950000,
+      "marketDate": "July 2026",
+      "prices": [
+        {
+          "type": "Semis",
+          "val": "$900K \u2013 $1.3M",
+          "note": "Post-war brick semis, many with rear additions and updated interiors"
+        },
+        {
+          "type": "Detached",
+          "val": "$1.1M \u2013 $1.6M",
+          "note": "Narrower lots than east-end equivalents but consistent demand"
+        },
+        {
+          "type": "Condos & stacked towns",
+          "val": "$520K \u2013 $750K",
+          "note": "Newer mid-rise buildings along St. Clair W corridor"
+        },
+        {
+          "type": "Days on market",
+          "val": "~30 \u2013 50 days",
+          "note": "Well-priced freeholds move in 2\u20133 weeks; overpriced stock sits"
+        }
+      ],
+      "schools": [
+        {
+          "name": "Regal Road Junior Public School",
+          "meta": "JK\u2013Grade 6 \u00b7 TDSB \u00b7 Established public school in the heart of Corso Italia",
+          "type": "Public"
+        },
+        {
+          "name": "Fairbank Middle School",
+          "meta": "Grades 6\u20138 \u00b7 TDSB \u00b7 Serves middle school students in the catchment",
+          "type": "Public"
+        },
+        {
+          "name": "Humberside Collegiate Institute",
+          "meta": "Grades 9\u201312 \u00b7 TDSB \u00b7 Strong secondary with arts and academic streams",
+          "type": "Public Secondary"
+        },
+        {
+          "name": "St. Clare Catholic School",
+          "meta": "JK\u2013Grade 8 \u00b7 TCDSB \u00b7 Popular Catholic option in the neighbourhood",
+          "type": "Catholic"
+        },
+        {
+          "name": "St. Gaspar College",
+          "meta": "Grades 9\u201312 \u00b7 TCDSB \u00b7 Catholic secondary serving west-end families",
+          "type": "Catholic Secondary"
+        }
+      ],
+      "commutes": [
+        {
+          "route": "St. Clair West Station \u2192 Union Station",
+          "mode": "Subway Line 1",
+          "time": "~22 min"
+        },
+        {
+          "route": "St. Clair streetcar \u2192 Yonge",
+          "mode": "512 St. Clair streetcar",
+          "time": "~30 min"
+        },
+        {
+          "route": "Cycling to Bloor/Dufferin",
+          "mode": "St. Clair bike lane",
+          "time": "~18 min"
+        },
+        {
+          "route": "Bus to downtown",
+          "mode": "Dufferin 29 bus",
+          "time": "~35 min"
+        }
+      ],
+      "whoFor": [
+        {
+          "label": "First-time freehold buyers",
+          "text": "One of the last pockets in the west end where a family can buy a semi under $1.1M and get a real neighbourhood feel. Prices remain below Roncesvalles and Bloor West Village for comparable square footage."
+        },
+        {
+          "label": "Families",
+          "text": "Solid public schools, quiet residential streets off St. Clair, and a genuine community identity. The neighbourhood has strong social infrastructure \u2014 parks, community centres, and local businesses that have been here for decades."
+        },
+        {
+          "label": "Value-conscious move-up buyers",
+          "text": "Buyers who've outgrown their condo and want freehold without crossing the $1.5M mark. Corso Italia consistently offers more house per dollar than equivalent properties east of Yonge."
+        },
+        {
+          "label": "Not ideal for",
+          "text": "Buyers who need a short subway commute to downtown. St. Clair West station is walkable but the commute is longer than Annex or Midtown options. The neighbourhood rewards buyers who value community over convenience."
+        }
+      ],
+      "laleh": "\"Corso Italia is genuinely undervalued relative to what it offers. The housing stock is solid, the community is established, and you're not paying a trendiness premium the way you would in Roncesvalles or Little Portugal. For first-time freehold buyers, this is one of the areas I actively recommend exploring. On a typical semi purchase around $1M, you're looking at $20,000 back in cashback after closing \u2014 which meaningfully offsets closing costs.\"",
+      "faqs": [
+        {
+          "q": "Is Corso Italia a good area to buy in Toronto?",
+          "a": "Yes, particularly for freehold buyers who want value. It offers solid housing stock at prices below comparable west-end neighbourhoods, a genuine community feel, and decent transit access. It's not the trendiest pocket in the city, which is exactly why the prices remain accessible."
+        },
+        {
+          "q": "Corso Italia vs Roncesvalles \u2014 which is better value?",
+          "a": "Corso Italia currently offers slightly better value per dollar for freehold homes. Roncesvalles has more cachet and stronger demand, which is reflected in higher prices. If your priority is space and value, Corso Italia wins. If you want the most active neighbourhood strip and slightly better school options, Roncesvalles is worth the premium."
+        },
+        {
+          "q": "Is the commute from Corso Italia to downtown manageable?",
+          "a": "Yes, but it's not the fastest in the city. St. Clair West subway station is within walking distance of most of the neighbourhood, and from there it's about 22 minutes to Union Station. The 512 streetcar and cycling on St. Clair are also viable options."
+        },
+        {
+          "q": "How much cashback would I get buying in Corso Italia?",
+          "a": "On a $1M semi at 2.5% buyer agent commission, you'd receive $20,000 back after closing with Home Cashbacks. On a $1.2M detached, that's $25,000 back. Use the calculator above for your specific price."
+        }
+      ],
+      "related": [
+        {
+          "label": "City page",
+          "title": "Toronto cashback realtor \u2014 all neighbourhoods",
+          "href": "/toronto-cashback-realtor.html"
+        },
+        {
+          "label": "Guide",
+          "title": "How much cashback can you get in Toronto?",
+          "href": "/how-much-cashback-toronto.html"
+        },
+        {
+          "label": "Tool",
+          "title": "Cashback calculator",
+          "href": "/calculators.html"
+        },
+        {
+          "label": "Neighbourhood",
+          "title": "The Junction \u2014 west end freehold guide",
+          "href": "/the-junction-toronto.html"
+        }
+      ],
+      "metaDesc": "Corso Italia Toronto: schools, commute times, and real estate prices. Semis from $900K. See how much cashback you'd get on a typical west end purchase."
+    },
+    {
+      "slug": "danforth-toronto",
+      "name": "Danforth / Greektown",
+      "city": "toronto",
+      "cityName": "Toronto",
+      "citySlug": "toronto-cashback-realtor",
+      "heroSub": "East end character with a lively main strip, solid semis, and one of the best value pockets for freehold buyers.",
+      "overview": "The Danforth runs east from the Don Valley through Greektown and beyond, one of Toronto's most vibrant and consistent east-end communities. The housing stock is predominantly brick semis and detached homes on quiet residential streets north and south of Danforth Avenue, with good lot sizes and a strong sense of permanence. The area benefits from excellent subway access on Line 2, a walkable main strip of restaurants and cafes, and prices that remain meaningfully below comparable west-end streets. Greektown specifically sits between Broadview and Jones Avenue and retains strong community identity and genuine local commerce.",
+      "walkScore": 91,
+      "transitScore": 89,
+      "commuteTime": "~20 min",
+      "condosFrom": "$550K+",
+      "calcDefault": 1050000,
+      "marketDate": "July 2026",
+      "prices": [
+        {
+          "type": "Semis",
+          "val": "$950K \u2013 $1.3M",
+          "note": "Brick semis with good lot sizes. Strong demand from families upgrading from condos"
+        },
+        {
+          "type": "Detached",
+          "val": "$1.3M \u2013 $2M",
+          "note": "Larger homes north of Danforth command premium; quieter residential streets"
+        },
+        {
+          "type": "Condos",
+          "val": "$550K \u2013 $800K",
+          "note": "Newer mid-rise buildings along Danforth corridor"
+        },
+        {
+          "type": "Days on market",
+          "val": "~28 \u2013 42 days",
+          "note": "Well-priced semis move quickly; this area sees strong spring competition"
+        }
+      ],
+      "schools": [
+        {
+          "name": "Jackman Avenue Junior Public School",
+          "meta": "JK\u2013Grade 6 \u00b7 TDSB \u00b7 Highly sought-after catchment, strong parent community",
+          "type": "Public"
+        },
+        {
+          "name": "Earl Grey Senior Public School",
+          "meta": "Grades 7\u20138 \u00b7 TDSB \u00b7 Serves middle school students in the Greektown catchment",
+          "type": "Public"
+        },
+        {
+          "name": "Riverdale Collegiate Institute",
+          "meta": "Grades 9\u201312 \u00b7 TDSB \u00b7 Strong arts and academic program, established community school",
+          "type": "Public Secondary"
+        },
+        {
+          "name": "St. Brigid Catholic School",
+          "meta": "JK\u2013Grade 8 \u00b7 TCDSB \u00b7 Serves Catholic families in the Danforth catchment",
+          "type": "Catholic"
+        },
+        {
+          "name": "Runnymede Public School",
+          "meta": "JK\u2013Grade 6 \u00b7 TDSB \u00b7 Alternative school option for families in the east end",
+          "type": "Public Alternative"
+        }
+      ],
+      "commutes": [
+        {
+          "route": "Broadview Station \u2192 Union Station",
+          "mode": "Subway Line 2 + Line 1",
+          "time": "~20 min"
+        },
+        {
+          "route": "Chester Station \u2192 Bloor/Yonge",
+          "mode": "Subway Line 2",
+          "time": "~12 min"
+        },
+        {
+          "route": "Cycling to downtown",
+          "mode": "Danforth Ave \u2192 Eastern Ave",
+          "time": "~25 min"
+        },
+        {
+          "route": "Streetcar to downtown",
+          "mode": "504 King streetcar via Broadview",
+          "time": "~28 min"
+        }
+      ],
+      "whoFor": [
+        {
+          "label": "Families",
+          "text": "Strong TDSB catchment schools, generous lot sizes for east-end semis, and a walkable main strip with everything you need day-to-day. Jackman Avenue JPS is one of the most sought-after catchments in the east end. Competition for the right homes is real, particularly in spring."
+        },
+        {
+          "label": "First-time freehold buyers",
+          "text": "The Danforth offers some of the best value for first-time freehold buyers in Toronto proper. Entry-level semis start under $1M, which is rare this close to downtown with subway access. Buyers who are patient and move fast when the right property appears do well here."
+        },
+        {
+          "label": "East-enders upgrading from condos",
+          "text": "Many buyers in this neighbourhood are already renting or owning condos nearby and want to stay in the east end. The lifestyle \u2014 lively main street, good restaurants, cycling distance to downtown \u2014 is genuinely different from the west end and attracts buyers who are committed to the area."
+        },
+        {
+          "label": "Not ideal for",
+          "text": "Buyers who need quiet and maximum privacy. Danforth Avenue itself is busy and the neighbourhood has genuine urban density. The residential streets off Danforth are calmer, but this is an active urban neighbourhood at its core."
+        }
+      ],
+      "laleh": "\"The Danforth is one of the east end's most consistent performers. The subway access is excellent, the main strip has real life to it, and you're getting better value per square foot than comparable west-end streets. Families in particular do very well here \u2014 the school catchments are strong and the semis have enough space to grow into. On a typical semi purchase around $1.1M, you're looking at $22,500 back in cashback after closing.\"",
+      "faqs": [
+        {
+          "q": "Is the Danforth a good place to buy in Toronto?",
+          "a": "Yes, consistently. It offers strong transit, walkable amenities, solid school catchments, and freehold prices below the west end. It's one of the east end's most established neighbourhoods and has held value well through market cycles."
+        },
+        {
+          "q": "Danforth vs Leslieville \u2014 which is better?",
+          "a": "The Danforth has better transit (subway vs streetcar), larger lot sizes on average, and slightly more established school catchments. Leslieville has a trendier feel and stronger restaurant scene. Both offer good value for east-end freehold. Your choice usually comes down to lifestyle preference."
+        },
+        {
+          "q": "Is Greektown the same as the Danforth?",
+          "a": "Greektown is the stretch of Danforth between Broadview and Jones Avenue \u2014 the most active commercial section with the highest concentration of Greek restaurants and businesses. The broader Danforth neighbourhood extends further east. Greektown specifically commands a slight premium due to its location and energy."
+        },
+        {
+          "q": "How much cashback would I get buying on the Danforth?",
+          "a": "On a $1.1M semi at 2.5% buyer agent commission, you'd receive $22,500 back after closing with Home Cashbacks. On a $1.5M detached, that's $32,500 back. Use the calculator above for your exact number."
+        }
+      ],
+      "related": [
+        {
+          "label": "City page",
+          "title": "Toronto cashback realtor \u2014 all neighbourhoods",
+          "href": "/toronto-cashback-realtor.html"
+        },
+        {
+          "label": "Neighbourhood",
+          "title": "Leslieville \u2014 east end character guide",
+          "href": "/leslieville-toronto.html"
+        },
+        {
+          "label": "Guide",
+          "title": "How much cashback can you get in Toronto?",
+          "href": "/how-much-cashback-toronto.html"
+        },
+        {
+          "label": "Tool",
+          "title": "Cashback calculator",
+          "href": "/calculators.html"
+        }
+      ],
+      "metaDesc": "Danforth / Greektown Toronto: schools, commute times, and real estate prices. Semis from $950K. See your cashback estimate on a typical east end purchase."
     }
   ]
 }
