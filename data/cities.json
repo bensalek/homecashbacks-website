@@ -203,8 +203,8 @@
         "lng": -79.3832
       },
       "sourceSlug": "buyer-toronto",
-      "metaDesc": "Low commission real estate agent in Toronto. Flat $4,999 fee \u2014 keep $20,000 cash back rebate on a $1M home. Full buyer representation, no upfront commitment.",
-      "pageTitle": "Cashback Realtor Toronto | Cash Back Realtor | Home Cashbacks"
+      "metaDesc": "Low commission real estate agent in Toronto. Flat $4,999 fee — keep $20,000 cash back rebate on a $1M home. Full buyer representation, no upfront commitment.",
+      "pageTitle": "Toronto Cashback Realtor | $20,000+ Back on a $1M Home | Home Cashbacks"
     },
     {
       "slug": "mississauga",
@@ -318,7 +318,7 @@
         "lng": -79.6441
       },
       "sourceSlug": "buyer-mississauga",
-      "metaDesc": "Cashback realtor in Mississauga. Flat $4,999 fee \u2014 on a typical Mississauga home you keep $19,000. Full service, no upfront commitment."
+      "metaDesc": "Cashback realtor in Mississauga. Flat $4,999 fee — on a typical Mississauga home you keep $19,000. Full service, no upfront commitment."
     },
     {
       "slug": "etobicoke",
@@ -432,7 +432,7 @@
         "lng": -79.5132
       },
       "sourceSlug": "buyer-etobicoke",
-      "metaDesc": "Cashback realtor in Etobicoke. Flat $4,999 fee \u2014 on a typical Etobicoke home you keep $18,000. Full service, no upfront commitment."
+      "metaDesc": "Cashback realtor in Etobicoke. Flat $4,999 fee — on a typical Etobicoke home you keep $18,000. Full service, no upfront commitment."
     },
     {
       "slug": "scarborough",
@@ -546,7 +546,7 @@
         "lng": -79.2576
       },
       "sourceSlug": "buyer-scarborough",
-      "metaDesc": "Cashback realtor in Scarborough. Flat $4,999 fee \u2014 on a typical Scarborough home you keep $14,000. Full service, no upfront commitment."
+      "metaDesc": "Cashback realtor in Scarborough. Flat $4,999 fee — on a typical Scarborough home you keep $14,000. Full service, no upfront commitment."
     },
     {
       "slug": "north-york",
@@ -660,7 +660,7 @@
         "lng": -79.4111
       },
       "sourceSlug": "buyer-north-york",
-      "metaDesc": "Cashback realtor in North York. Flat $4,999 fee \u2014 on a typical North York home you keep $17,500. Full service, no upfront commitment."
+      "metaDesc": "Cashback realtor in North York. Flat $4,999 fee — on a typical North York home you keep $17,500. Full service, no upfront commitment."
     },
     {
       "slug": "vaughan",
@@ -774,7 +774,7 @@
         "lng": -79.5085
       },
       "sourceSlug": "buyer-vaughan",
-      "metaDesc": "Cashback realtor in Vaughan. Flat $4,999 fee \u2014 on a typical Vaughan home you keep $18,000. Full service, no upfront commitment."
+      "metaDesc": "Cashback realtor in Vaughan. Flat $4,999 fee — on a typical Vaughan home you keep $18,000. Full service, no upfront commitment."
     },
     {
       "slug": "oakville",
@@ -888,7 +888,7 @@
         "lng": -79.6877
       },
       "sourceSlug": "buyer-oakville",
-      "metaDesc": "Cashback realtor in Oakville. Flat $4,999 fee \u2014 on a typical Oakville home you keep $22,000. Full service, no upfront commitment."
+      "metaDesc": "Cashback realtor in Oakville. Flat $4,999 fee — on a typical Oakville home you keep $22,000. Full service, no upfront commitment."
     },
     {
       "slug": "markham",
@@ -1002,7 +1002,7 @@
         "lng": -79.337
       },
       "sourceSlug": "buyer-markham",
-      "metaDesc": "Cashback realtor in Markham. Flat $4,999 fee \u2014 on a typical Markham home you keep $18,000. Full service, no upfront commitment."
+      "metaDesc": "Cashback realtor in Markham. Flat $4,999 fee — on a typical Markham home you keep $18,000. Full service, no upfront commitment."
     },
     {
       "slug": "richmond-hill",
@@ -1116,7 +1116,7 @@
         "lng": -79.4403
       },
       "sourceSlug": "buyer-richmond-hill",
-      "metaDesc": "Cashback realtor in Richmond Hill. Flat $4,999 fee \u2014 on a typical Richmond Hill home you keep $19,000. Full service, no upfront commitment."
+      "metaDesc": "Cashback realtor in Richmond Hill. Flat $4,999 fee — on a typical Richmond Hill home you keep $19,000. Full service, no upfront commitment."
     },
     {
       "slug": "brampton",
@@ -1230,7 +1230,316 @@
         "lng": -79.7624
       },
       "sourceSlug": "buyer-brampton",
-      "metaDesc": "Cashback realtor in Brampton. Flat $4,999 fee \u2014 on a typical Brampton home you keep $14,000. Full service, no upfront commitment."
+      "metaDesc": "Cashback realtor in Brampton. Flat $4,999 fee — on a typical Brampton home you keep $14,000. Full service, no upfront commitment."
+    },
+    {
+      "slug": "aurora",
+      "name": "Aurora",
+      "cashback": "$26,000",
+      "heroSub": "We are a licensed Aurora buyer agent. We charge a flat $4,999 fee and return the rest of the buyer agent commission to you as cash back after closing. On a typical Aurora home, that is over $26,000 back.",
+      "calcDefault": 1250000,
+      "marketDate": "June 2026",
+      "marketTitle": "The Aurora Market Right Now",
+      "marketText": "Aurora sits between Newmarket and Richmond Hill and remains one of the most desirable towns in York Region, known for top-ranked schools, GO Transit access, and small-town character. Prices have softened from the 2021-2022 peak, giving buyers more room to negotiate than in recent years, while premium school-catchment neighbourhoods continue to command a real premium over the rest of town.",
+      "marketNote": null,
+      "stats": [
+        {
+          "val": "$1.25M",
+          "label": "Average home price",
+          "highlight": true
+        },
+        {
+          "val": "$650K",
+          "label": "Average condo price"
+        },
+        {
+          "val": "$1.43M",
+          "label": "Average detached"
+        },
+        {
+          "val": "20 days",
+          "label": "Avg days on market"
+        }
+      ],
+      "hoods": [
+        {
+          "type": "Top schools",
+          "name": "Aurora Highlands",
+          "desc": "One of Aurora's most sought-after school catchments, with detached homes on quiet, mature streets. Buyers pay a real premium here for the top-ranked schools.",
+          "price": "Detached from ~$1.4M",
+          "featured": true
+        },
+        {
+          "type": "Family favourite",
+          "name": "Bayview Northeast",
+          "desc": "A consistently competitive pocket of Aurora with fast-moving sales and strong resale value. Close to parks, schools, and the Bayview corridor.",
+          "price": "Detached from ~$1.35M",
+          "featured": true
+        },
+        {
+          "type": "Heritage & walkable",
+          "name": "Downtown Aurora",
+          "desc": "Victorian-era Main Street, walkable shops and restaurants, and the Aurora GO station within reach. A different feel from the newer subdivisions surrounding it.",
+          "price": "Mixed from ~$1.1M",
+          "featured": true
+        },
+        {
+          "type": "Executive homes",
+          "name": "Hills of St. Andrew",
+          "desc": "Aurora's most prestigious enclave, built around the Beacon Hall and St. Andrew's golf clubs. Large executive homes on generous lots.",
+          "price": "Detached from ~$1.8M"
+        }
+      ],
+      "laleh": "\"Aurora buyers are usually there for the schools, and the school-catchment premium is real, sometimes well over $150,000 between a top-ranked zone and a home two streets over. On a $1.25M home your cashback is over $26,000, which is real leverage when you are weighing whether that premium is worth it for your family.\"",
+      "faqCity": [
+        {
+          "q": "Is there a cashback realtor in Aurora?",
+          "a": "Yes. Home Cashbacks is a RECO-registered buyer agent serving Aurora and York Region. We charge a flat $4,999 fee and return the rest of the buyer agent commission after closing."
+        },
+        {
+          "q": "How much cashback can I get in Aurora?",
+          "a": "On a $1,250,000 Aurora home with a 2.5% buyer agent commission, the total commission is $31,250. We take our flat $4,999 and you receive approximately $26,251 back after closing."
+        },
+        {
+          "q": "What is the best neighbourhood in Aurora for families?",
+          "a": "Aurora Highlands and Bayview Northeast are consistently top picks for their school catchments. Hills of St. Andrew is the most prestigious. Downtown Aurora offers a more walkable, established feel closer to the GO station."
+        },
+        {
+          "q": "Is Aurora commutable to Toronto?",
+          "a": "Yes. Aurora GO station offers regular service to Union Station on the Barrie line, with a commute of roughly 55 to 70 minutes depending on the train. Highway 404 also connects directly into the city."
+        }
+      ],
+      "alsoServing": [
+        {
+          "name": "Richmond Hill",
+          "slug": "richmond-hill"
+        },
+        {
+          "name": "Newmarket",
+          "slug": "newmarket"
+        },
+        {
+          "name": "Vaughan",
+          "slug": "vaughan"
+        },
+        {
+          "name": "Markham",
+          "slug": "markham"
+        }
+      ],
+      "geo": {
+        "lat": 43.9686,
+        "lng": -79.4504
+      },
+      "sourceSlug": "buyer-aurora",
+      "metaDesc": "Cashback realtor in Aurora. Flat $4,999 fee, on a typical Aurora home you keep $26,000. Full service, no upfront commitment.",
+      "pageTitle": "Aurora Cashback Realtor | Home Cashbacks"
+    },
+    {
+      "slug": "newmarket",
+      "name": "Newmarket",
+      "cashback": "$20,000",
+      "heroSub": "We are a licensed Newmarket buyer agent. We charge a flat $4,999 fee and return the rest of the buyer agent commission to you as cash back after closing. On a typical Newmarket home, that is over $20,000 back.",
+      "calcDefault": 1000000,
+      "marketDate": "June 2026",
+      "marketTitle": "The Newmarket Market Right Now",
+      "marketText": "Newmarket sits in the middle of the York Region price range, above Bradford and East Gwillimbury and below Aurora, which makes it one of the more accessible entry points into the corridor. It also has the highest sales volume in the area, giving it the most liquid and predictable market of the nearby York Region towns for both buyers and sellers.",
+      "marketNote": null,
+      "stats": [
+        {
+          "val": "$1.03M",
+          "label": "Average home price",
+          "highlight": true
+        },
+        {
+          "val": "$580K",
+          "label": "Average condo price"
+        },
+        {
+          "val": "$1.15M",
+          "label": "Average detached"
+        },
+        {
+          "val": "23 days",
+          "label": "Avg days on market"
+        }
+      ],
+      "hoods": [
+        {
+          "type": "Executive homes",
+          "name": "Stonehaven-Wyndham",
+          "desc": "Newmarket's priciest neighbourhood, with larger executive detached homes and mature landscaping. A step up in size and finish from the rest of town.",
+          "price": "Detached from ~$1.4M",
+          "featured": true
+        },
+        {
+          "type": "Newer construction",
+          "name": "Woodland Hill",
+          "desc": "One of Newmarket's newer master-planned communities, with modern detached homes and townhomes and good access to parks and schools.",
+          "price": "Detached from ~$1.15M",
+          "featured": true
+        },
+        {
+          "type": "Heritage & walkable",
+          "name": "Central Newmarket",
+          "desc": "Newmarket's historic core, walkable to Main Street shops and restaurants with direct GO access. The most affordable way into the town.",
+          "price": "Mixed from ~$900K",
+          "featured": true
+        },
+        {
+          "type": "Balanced value",
+          "name": "Armitage",
+          "desc": "A quieter, well-established pocket with low inventory and quick absorption when homes do come up. Detached and semi-detached mixed in.",
+          "price": "Detached from ~$1.1M"
+        }
+      ],
+      "laleh": "\"Newmarket is the value play in York Region right now. A comparable detached home runs about $195,000 less than in Aurora, and you still get GO Transit access and a genuine downtown. On a $1M home your cashback is over $20,000, which goes a long way toward closing costs or the first year of carrying costs in a new town.\"",
+      "faqCity": [
+        {
+          "q": "Is there a cashback realtor in Newmarket?",
+          "a": "Yes. Home Cashbacks is a RECO-registered buyer agent serving Newmarket and York Region. We charge a flat $4,999 fee and return the rest of the buyer agent commission after closing."
+        },
+        {
+          "q": "How much cashback can I get in Newmarket?",
+          "a": "On a $1,000,000 Newmarket home with a 2.5% buyer agent commission, the total commission is $25,000. We take our flat $4,999 and you receive approximately $20,001 back after closing."
+        },
+        {
+          "q": "What is the best neighbourhood in Newmarket for families?",
+          "a": "Woodland Hill and Stonehaven-Wyndham are popular with families for newer construction and larger lots. Central Newmarket is the most walkable and affordable, close to Main Street and the GO station."
+        },
+        {
+          "q": "Is Newmarket commutable to Toronto?",
+          "a": "Yes. Newmarket GO station connects to Union Station on the Barrie line, with a commute of roughly 70 to 80 minutes. Highway 404 runs along the town's eastern edge for drivers."
+        }
+      ],
+      "alsoServing": [
+        {
+          "name": "Aurora",
+          "slug": "aurora"
+        },
+        {
+          "name": "Richmond Hill",
+          "slug": "richmond-hill"
+        },
+        {
+          "name": "Vaughan",
+          "slug": "vaughan"
+        },
+        {
+          "name": "Markham",
+          "slug": "markham"
+        }
+      ],
+      "geo": {
+        "lat": 44.0592,
+        "lng": -79.4613
+      },
+      "sourceSlug": "buyer-newmarket",
+      "metaDesc": "Cashback realtor in Newmarket. Flat $4,999 fee, on a typical Newmarket home you keep $20,000. Full service, no upfront commitment.",
+      "pageTitle": "Newmarket Cashback Realtor | Home Cashbacks"
+    },
+    {
+      "slug": "stouffville",
+      "name": "Stouffville",
+      "cashback": "$24,000",
+      "heroSub": "We are a licensed Stouffville buyer agent. We charge a flat $4,999 fee and return the rest of the buyer agent commission to you as cash back after closing. On a typical Stouffville home, that is over $24,000 back.",
+      "calcDefault": 1150000,
+      "marketDate": "June 2026",
+      "marketTitle": "The Stouffville Market Right Now",
+      "marketText": "Whitchurch-Stouffville is one of the fastest-growing towns in York Region, with population roughly doubling since the Big Pipe water infrastructure connection unlocked new development. Detached homes are currently in a buyer's market with real negotiating room, while row townhouses have stayed competitive and often sell at or above asking.",
+      "marketNote": null,
+      "stats": [
+        {
+          "val": "$1.15M",
+          "label": "Average home price",
+          "highlight": true
+        },
+        {
+          "val": "$650K",
+          "label": "Average condo price"
+        },
+        {
+          "val": "$1.35M",
+          "label": "Average detached"
+        },
+        {
+          "val": "28 days",
+          "label": "Avg days on market"
+        }
+      ],
+      "hoods": [
+        {
+          "type": "Heritage & walkable",
+          "name": "Downtown Stouffville",
+          "desc": "Victorian-era Main Street heritage buildings, walkable shops, and a GO station with direct service to Union. The historic heart of the town.",
+          "price": "Mixed from ~$950K",
+          "featured": true
+        },
+        {
+          "type": "Established community",
+          "name": "Wheeler's Mill",
+          "desc": "One of the first subdivisions built after the Big Pipe connection, now a mature, established community south of Main Street.",
+          "price": "Detached from ~$1.2M",
+          "featured": true
+        },
+        {
+          "type": "Newer construction",
+          "name": "Cardinal Point",
+          "desc": "A newer community near Highway 48, with townhomes and detached homes on ravine lots. Good value relative to the older parts of town.",
+          "price": "Mixed from ~$1.0M",
+          "featured": true
+        },
+        {
+          "type": "Premium & golf",
+          "name": "Ballantrae",
+          "desc": "An estate and golf course community just north of Stouffville proper. Larger lots and a quieter, more rural feel.",
+          "price": "Detached from ~$1.8M"
+        }
+      ],
+      "laleh": "\"Stouffville is a town in transition, still small-town in feel but growing fast, and that shows up in the market. Detached homes have real negotiating room right now, but row townhomes are moving quickly and sometimes above asking. On a $1.15M home your cashback is over $24,000, and I always walk buyers through which segment they are actually shopping in before we set a strategy.\"",
+      "faqCity": [
+        {
+          "q": "Is there a cashback realtor in Stouffville?",
+          "a": "Yes. Home Cashbacks is a RECO-registered buyer agent serving Stouffville and York Region. We charge a flat $4,999 fee and return the rest of the buyer agent commission after closing."
+        },
+        {
+          "q": "How much cashback can I get in Stouffville?",
+          "a": "On a $1,150,000 Stouffville home with a 2.5% buyer agent commission, the total commission is $28,750. We take our flat $4,999 and you receive approximately $23,751 back after closing."
+        },
+        {
+          "q": "What is the best neighbourhood in Stouffville for families?",
+          "a": "Wheeler's Mill and Cardinal Point are popular with families for established streets and newer construction respectively. Downtown Stouffville is the most walkable, and Ballantrae suits buyers wanting a larger, more rural estate lot."
+        },
+        {
+          "q": "Is Stouffville commutable to Toronto?",
+          "a": "Yes. Stouffville has GO train service with a direct line into Union Station, plus access to Highway 48 and the 407 for drivers. Commute times run longer than closer-in York Region towns, so it suits buyers prioritizing space and value over commute time."
+        }
+      ],
+      "alsoServing": [
+        {
+          "name": "Markham",
+          "slug": "markham"
+        },
+        {
+          "name": "Richmond Hill",
+          "slug": "richmond-hill"
+        },
+        {
+          "name": "Aurora",
+          "slug": "aurora"
+        },
+        {
+          "name": "Newmarket",
+          "slug": "newmarket"
+        }
+      ],
+      "geo": {
+        "lat": 43.9709,
+        "lng": -79.2429
+      },
+      "sourceSlug": "buyer-stouffville",
+      "metaDesc": "Cashback realtor in Stouffville. Flat $4,999 fee, on a typical Stouffville home you keep $24,000. Full service, no upfront commitment.",
+      "pageTitle": "Stouffville Cashback Realtor | Home Cashbacks"
     }
   ]
 }

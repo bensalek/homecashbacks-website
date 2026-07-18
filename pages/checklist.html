@@ -234,7 +234,7 @@ function render(){
       const h=ph.hook;
       html+=`<div class="hook-card realtor"><div style="flex:1"><div class="hook-label">${h.label}</div><div class="hook-title">${h.title}</div>
       <div class="hook-desc">${h.desc}</div>
-      <button class="hook-cta" onclick="openModal()">Book a Free Showing</button></div></div>`;
+      <button class="hook-cta" onclick="openModal()">Book a Free Consultation</button></div></div>`;
     }
     const prev=pi>0?`<button class="pnav" onclick="switchPhase(${pi-1})">← ${PHASES[pi-1].label}</button>`:`<span class="pnav hidden"></span>`;
     const next=pi<PHASES.length-1?`<button class="pnav fwd" onclick="switchPhase(${pi+1})">${PHASES[pi+1].label} →</button>`:`<span class="pnav hidden"></span>`;

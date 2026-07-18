@@ -1,0 +1,48 @@
+# 301 redirect every extensionless URL to its canonical .html version.
+# Fixes Google indexing both /page and /page.html as separate URLs
+# (Netlify "Pretty URLs" serves both by default with a 200).
+# The ! forces this rule to win over Netlify's automatic pretty-url behavior.
+
+/annex-toronto  /annex-toronto.html  301!
+/brampton-cashback-realtor  /brampton-cashback-realtor.html  301!
+/buyer-agent-cost-ontario  /buyer-agent-cost-ontario.html  301!
+/buyer-rep-agreement-ontario  /buyer-rep-agreement-ontario.html  301!
+/calculators  /calculators.html  301!
+/cashback-legal-ontario  /cashback-legal-ontario.html  301!
+/cashback-realtor-vs-traditional  /cashback-realtor-vs-traditional.html  301!
+/checklist  /checklist.html  301!
+/choose-cashback-realtor-toronto  /choose-cashback-realtor-toronto.html  301!
+/closing-costs-ontario-2026  /closing-costs-ontario.html  301!
+/closing-costs-ontario  /closing-costs-ontario.html  301!
+/condo-buying-guide  /condo-buying-guide.html  301!
+/corso-italia-toronto  /corso-italia-toronto.html  301!
+/danforth-toronto  /danforth-toronto.html  301!
+/etobicoke-cashback-realtor  /etobicoke-cashback-realtor.html  301!
+/first-time-buyer-guide  /first-time-buyer-guide.html  301!
+/flat-fee-vs-percentage-cashback  /flat-fee-vs-percentage-cashback.html  301!
+/guides  /guides.html  301!
+/harbourfront-toronto  /harbourfront-toronto.html  301!
+/how-cashback-works-ontario  /how-cashback-works-ontario.html  301!
+/how-cashback-works  /how-cashback-works.html  301!
+/how-much-cashback-toronto  /how-much-cashback-toronto.html  301!
+/leaside-toronto  /leaside-toronto.html  301!
+/leslieville-toronto  /leslieville-toronto.html  301!
+/markham-cashback-realtor  /markham-cashback-realtor.html  301!
+/mississauga-cashback-realtor  /mississauga-cashback-realtor.html  301!
+/north-york-cashback-realtor  /north-york-cashback-realtor.html  301!
+/oakville-cashback-realtor  /oakville-cashback-realtor.html  301!
+/offer-strategy  /offer-strategy.html  301!
+/our-story  /our-story.html  301!
+/privacy  /privacy.html  301!
+/richmond-hill-cashback-realtor  /richmond-hill-cashback-realtor.html  301!
+/scarborough-cashback-realtor  /scarborough-cashback-realtor.html  301!
+/st-lawrence-market-toronto  /st-lawrence-market-toronto.html  301!
+/the-junction-toronto  /the-junction-toronto.html  301!
+/toronto-cashback-realtor  /toronto-cashback-realtor.html  301!
+/toronto-listing-agent  /toronto-listing-agent.html  301!
+/vaughan-cashback-realtor  /vaughan-cashback-realtor.html  301!
+/whats-the-catch-cashback-realtors  /whats-the-catch-cashback-realtors.html  301!
+/yonge-eglinton-toronto  /yonge-eglinton-toronto.html  301!
+/aurora-cashback-realtor  /aurora-cashback-realtor.html  301!
+/newmarket-cashback-realtor  /newmarket-cashback-realtor.html  301!
+/stouffville-cashback-realtor  /stouffville-cashback-realtor.html  301!

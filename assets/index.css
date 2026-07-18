@@ -520,9 +520,9 @@ footer a{color:var(--cta);text-decoration:none}
   .faq-section{padding:1.75rem 1.25rem}
   .hero-btns .btn-primary{width:100%;justify-content:center}
   .hero-stats{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;padding-top:1.25rem;margin-top:1rem;border-top:1px solid rgba(255,255,255,.1)}
-  .hero-stat{background:rgba(26,35,50,.65);border:1px solid rgba(255,255,255,.12);border-radius:4px;padding:.6rem .75rem;text-align:left;backdrop-filter:blur(4px)}
-  .hero-stat-val{font-size:20px;color:var(--white)!important}
-  .hero-stat-label{color:rgba(255,255,255,.65)!important}
+  .hero-stat{text-align:left}
+  .hero-stat-val{font-size:20px;color:var(--white)!important;text-shadow:0 1px 4px rgba(0,0,0,.5)}
+  .hero-stat-label{color:rgba(255,255,255,.75)!important;text-shadow:0 1px 3px rgba(0,0,0,.5)}
   .calc-section{padding:1.75rem 1.25rem}
   .trust-section{padding:1.75rem 1.25rem}
   .why-exist{padding:1.75rem 1.25rem}
@@ -982,7 +982,7 @@ footer a{color:var(--cta);text-decoration:none}
   .hero-stat-val{font-size:18px;text-shadow:0 1px 4px rgba(0,0,0,.4)}
   .hero-stat-label{color:rgba(232,237,245,.5)}
   .hero--fullbleed .hero-text-col{padding:1.75rem 1.25rem}
-  .hero--fullbleed .hero-stats{background:rgba(0,0,0,.25);border-radius:6px;padding:1rem;margin-top:.25rem}
-  .hero-sub-sm{color:#ffffff!important;background:rgba(0,0,0,.6)!important;font-size:14px!important}
+  .hero--fullbleed .hero-stats{margin-top:.25rem}
+  .hero-sub-sm{color:#ffffff!important;background:none!important;padding:0!important;font-size:14px!important;text-shadow:0 1px 4px rgba(0,0,0,.7),0 0 8px rgba(0,0,0,.5)}
 }
 .hero-text-col{padding:3.5rem 3rem;display:flex;flex-direction:column;justify-content:center;gap:.85rem;position:relative;z-index:2;max-width:620px}
