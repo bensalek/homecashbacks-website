@@ -10,7 +10,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Wait for Netlify to finish deploying
       - name: Wait for deployment
         run: sleep 60
 
@@ -21,7 +20,8 @@ jobs:
       - name: Extract URLs
         run: |
           grep -oP '(?<=<loc>).*?(?=</loc>)' sitemap.xml > urls.txt
-          echo "Found $(wc -l < urls.txt) URLs"
+          COUNT=$(wc -l < urls.txt)
+          echo "Found $COUNT URLs in sitemap."
           cat urls.txt
 
       - name: Submit to IndexNow
@@ -45,9 +45,14 @@ jobs:
 
           status=$(echo "$response" | grep HTTP_STATUS | cut -d: -f2)
 
-          if [ "$status" != "200" ]; then
-            echo "IndexNow submission failed."
-            exit 1
-          fi
-
-          echo "✅ IndexNow submission successful."
+          case "$status" in
+            200|202)
+              COUNT=$(wc -l < urls.txt)
+              echo "✅ IndexNow accepted $COUNT URLs (HTTP $status)"
+              ;;
+            *)
+              echo "❌ IndexNow submission failed (HTTP $status)"
+              echo "$response"
+              exit 1
+              ;;
+          esac
