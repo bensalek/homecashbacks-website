@@ -1,0 +1,53 @@
+name: Submit Sitemap URLs to IndexNow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  submit:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Wait for Netlify to finish deploying
+      - name: Wait for deployment
+        run: sleep 60
+
+      - name: Download sitemap
+        run: |
+          curl -s https://homecashbacks.ca/sitemap.xml -o sitemap.xml
+
+      - name: Extract URLs
+        run: |
+          grep -oP '(?<=<loc>).*?(?=</loc>)' sitemap.xml > urls.txt
+          echo "Found $(wc -l < urls.txt) URLs"
+          cat urls.txt
+
+      - name: Submit to IndexNow
+        run: |
+          jq -Rs '
+            split("\n")[:-1] |
+            {
+              host:"homecashbacks.ca",
+              key:"'"${{ secrets.INDEXNOW_KEY }}"'",
+              keyLocation:"https://homecashbacks.ca/'"${{ secrets.INDEXNOW_KEY }}"'.txt",
+              urlList: .
+            }
+          ' urls.txt > payload.json
+
+          response=$(curl -s -w "\nHTTP_STATUS:%{http_code}" \
+            -X POST https://api.indexnow.org/IndexNow \
+            -H "Content-Type: application/json; charset=utf-8" \
+            --data @payload.json)
+
+          echo "$response"
+
+          status=$(echo "$response" | grep HTTP_STATUS | cut -d: -f2)
+
+          if [ "$status" != "200" ]; then
+            echo "IndexNow submission failed."
+            exit 1
+          fi
+
+          echo "✅ IndexNow submission successful."
