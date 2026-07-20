@@ -1,0 +1,24 @@
+name: Submit URLs to IndexNow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  submit:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Submit URLs to IndexNow
+        run: |
+          curl -X POST "https://api.indexnow.org/IndexNow" \
+            -H "Content-Type: application/json; charset=utf-8" \
+            -d '{
+              "host":"homecashbacks.ca",
+              "key":"${{ secrets.INDEXNOW_KEY }}",
+              "keyLocation":"https://homecashbacks.ca/${{ secrets.INDEXNOW_KEY }}.txt",
+              "urlList":[
+                "https://homecashbacks.ca/"
+              ]
+            }'
