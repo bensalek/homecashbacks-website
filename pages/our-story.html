@@ -50,7 +50,7 @@
     <div class="story-byline-avatar"><img src="headshot.webp" alt="Laleh Mousavi"/></div>
     <div class="story-byline-text">
       <div class="story-byline-name">Laleh Mousavi</div>
-      <div class="story-byline-title">Realtor, Toronto Real Estate Realty Plus Inc.</div>
+      <div class="story-byline-title">Realtor, Toronto Real Estate Realty Plus Inc., a licensed real estate brokerage in Ontario</div>
     </div>
   </div>
 
@@ -129,12 +129,12 @@ function handleFormSubmit(){
     ok=false;
   }
 
-  if(!emailVal&&!phoneVal){
+  if(!emailVal||!phoneVal){
     const el=document.getElementById('err-contact');
-    el.textContent='Please enter an email address or phone number.';
+    el.textContent='Please enter both your email and phone number.';
     el.classList.add('show');
-    document.getElementById('f-email').style.borderColor='#b83232';
-    document.getElementById('f-phone').style.borderColor='#b83232';
+    if(!emailVal)document.getElementById('f-email').style.borderColor='#b83232';
+    if(!phoneVal)document.getElementById('f-phone').style.borderColor='#b83232';
     ok=false;
   } else if(emailVal&&!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailVal)){
     const el=document.getElementById('err-contact');

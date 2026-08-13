@@ -1,5 +1,5 @@
 {
-  "dataDate": "June 2026",
+  "dataDate": "July 2026",
   "neighbourhoods": [
     {
       "slug": "annex-toronto",
@@ -14,80 +14,80 @@
       "commuteTime": "~12 min",
       "condosFrom": "$750K+",
       "calcDefault": 1200000,
-      "marketDate": "June 2026",
+      "marketDate": "July 2026",
       "prices": [
         {
           "type": "Condos",
-          "val": "$750K \u2013 $1.2M",
+          "val": "$750K – $1.2M",
           "note": "Mostly high-rise on Bloor and Avenue Rd corridor"
         },
         {
           "type": "Semis & Row Houses",
-          "val": "$1.4M \u2013 $2.2M",
+          "val": "$1.4M – $2.2M",
           "note": "Victorian and Edwardian stock, many updated"
         },
         {
           "type": "Detached",
-          "val": "$2M \u2013 $4M+",
-          "note": "Classic Annex-style homes \u2014 demand consistently outpaces supply"
+          "val": "$2M – $4M+",
+          "note": "Classic Annex-style homes — demand consistently outpaces supply"
         },
         {
           "type": "Days on market",
-          "val": "~30 \u2013 45 days",
+          "val": "~30 – 45 days",
           "note": "Well-priced homes move faster. Overpriced ones sit."
         }
       ],
       "schools": [
         {
           "name": "Huron Street Junior Public School",
-          "meta": "JK\u2013Grade 6 \u00b7 TDSB \u00b7 High-demand catchment, walkable from most of the neighbourhood",
+          "meta": "JK–Grade 6 · TDSB · High-demand catchment, walkable from most of the neighbourhood",
           "type": "Public"
         },
         {
           "name": "Orde Street Junior Public School",
-          "meta": "JK\u2013Grade 6 \u00b7 TDSB \u00b7 South Annex catchment near Bay St corridor",
+          "meta": "JK–Grade 6 · TDSB · South Annex catchment near Bay St corridor",
           "type": "Public"
         },
         {
           "name": "Oakwood Collegiate Institute",
-          "meta": "Grades 9\u201312 \u00b7 TDSB \u00b7 Specialty arts program, strong extracurriculars",
+          "meta": "Grades 9–12 · TDSB · Specialty arts program, strong extracurriculars",
           "type": "Public Secondary"
         },
         {
           "name": "Royal St. George's College",
-          "meta": "Grades 3\u201312 \u00b7 Independent boys school \u00b7 In the heart of the Annex",
+          "meta": "Grades 3–12 · Independent boys school · In the heart of the Annex",
           "type": "Private"
         },
         {
           "name": "Waldorf Academy",
-          "meta": "JK\u2013Grade 8 \u00b7 Independent \u00b7 Alternative pedagogy, established 1987",
+          "meta": "JK–Grade 8 · Independent · Alternative pedagogy, established 1987",
           "type": "Private"
         },
         {
           "name": "Our Lady of Lourdes Catholic School",
-          "meta": "JK\u2013Grade 8 \u00b7 TCDSB \u00b7 Serves Catholic families in the Annex catchment",
+          "meta": "JK–Grade 8 · TCDSB · Serves Catholic families in the Annex catchment",
           "type": "Catholic"
         }
       ],
       "commutes": [
         {
-          "route": "Spadina Station \u2192 Union Station",
+          "route": "Spadina Station → Union Station",
           "mode": "Subway Line 1",
           "time": "~12 min"
         },
         {
-          "route": "Bay Station \u2192 Bloor/Yonge \u2192 Union",
+          "route": "Bay Station → Bloor/Yonge → Union",
           "mode": "Subway Lines 2 + 1",
           "time": "~14 min"
         },
         {
-          "route": "Bloor St W \u2192 King St (streetcar)",
+          "route": "Bloor St W → King St (streetcar)",
           "mode": "506 Carlton streetcar",
           "time": "~22 min"
         },
         {
           "route": "Cycling to Financial District",
-          "mode": "Bloor bike lane \u2192 Spadina Ave",
+          "mode": "Bloor bike lane → Spadina Ave",
           "time": "~20 min"
         },
         {
@@ -107,26 +107,26 @@
         },
         {
           "label": "Move-up buyers",
-          "text": "Buyers coming from condos elsewhere in Toronto who want a house with outdoor space and neighbourhood permanence. Often patient \u2014 they wait for the right property."
+          "text": "Buyers coming from condos elsewhere in Toronto who want a house with outdoor space and neighbourhood permanence. Often patient — they wait for the right property."
         },
         {
           "label": "Not ideal for",
           "text": "First-time buyers on a tight budget. Entry-level detached is rare under $2M. Condos are more accessible but competition is real and the neighbourhood commands a premium."
         }
       ],
-      "laleh": "\"The Annex rewards buyers who are patient. It does not have a lot of turnover, which means when the right property comes up, you need to be ready to move. The buyers who do best here have their financing locked, understand the market, and are not trying to lowball a neighbourhood that hasn't needed to discount itself in decades. The cashback on a typical Annex purchase is meaningful \u2014 on a $1.2M semi, you're looking at over $25,000 back in your pocket after closing.\"",
+      "laleh": "\"The Annex rewards buyers who are patient. It does not have a lot of turnover, which means when the right property comes up, you need to be ready to move. The buyers who do best here have their financing locked, understand the market, and are not trying to lowball a neighbourhood that hasn't needed to discount itself in decades. The cashback on a typical Annex purchase is meaningful — on a $1.2M semi, you're looking at over $25,000 back in your pocket after closing.\"",
       "faqs": [
         {
           "q": "Is The Annex good for families?",
           "a": "Yes. Strong TDSB public schools, walkable streets, parks, and community infrastructure. Huron St Junior PS is one of the most in-demand catchments in Toronto. Families who buy here tend to stay."
         },
         {
-          "q": "The Annex vs Roncesvalles \u2014 which is better value?",
+          "q": "The Annex vs Roncesvalles — which is better value?",
           "a": "Roncesvalles tends to offer slightly more space per dollar on freehold homes, with a similar walkable village feel. The Annex has better subway access and stronger school reputation. If transit is your priority, The Annex wins. If value per square foot matters more, look at Roncesvalles."
         },
         {
           "q": "Is parking an issue in The Annex?",
-          "a": "Most detached and semi-detached homes have one parking space via a rear laneway. Condos vary \u2014 many do not include parking or charge extra for it. Street parking is permit-based. Most residents rely on transit and do not need a car day-to-day."
+          "a": "Most detached and semi-detached homes have one parking space via a rear laneway. Condos vary — many do not include parking or charge extra for it. Street parking is permit-based. Most residents rely on transit and do not need a car day-to-day."
         },
         {
           "q": "How much cashback would I get on a typical Annex purchase?",
@@ -136,7 +136,7 @@
       "related": [
         {
           "label": "City page",
-          "title": "Toronto cashback realtor \u2014 all neighbourhoods",
+          "title": "Toronto cashback realtor — all neighbourhoods",
           "href": "/toronto-cashback-realtor.html"
         },
         {
@@ -159,59 +159,59 @@
       "cityName": "Toronto",
       "citySlug": "toronto-cashback-realtor",
       "heroSub": "Downtown east, one of Toronto's oldest neighbourhoods, and home to one of the world's great food markets. Condos, lofts, and heritage buildings steps from Union Station.",
-      "overview": "St. Lawrence Market sits between Yonge and Parliament, Queen to the Gardiner. It is one of Toronto's original neighbourhoods \u2014 the Town of York occupied these blocks in the early 1800s. Today it is a dense mix of condos, converted lofts, and heritage brick buildings, with a Walk Score of 99 and Union Station a 10-minute walk west. Financial District workers who want to live close enough to walk or cycle make up most of the buyer pool.",
+      "overview": "St. Lawrence Market sits between Yonge and Parliament, Queen to the Gardiner. It is one of Toronto's original neighbourhoods — the Town of York occupied these blocks in the early 1800s. Today it is a dense mix of condos, converted lofts, and heritage brick buildings, with a Walk Score of 99 and Union Station a 10-minute walk west. Financial District workers who want to live close enough to walk or cycle make up most of the buyer pool.",
       "walkScore": 99,
       "transitScore": 100,
       "commuteTime": "~10 min",
       "condosFrom": "$650K+",
       "calcDefault": 750000,
-      "marketDate": "June 2026",
+      "marketDate": "July 2026",
       "prices": [
         {
           "type": "Condos",
-          "val": "$650K \u2013 $1.1M",
+          "val": "$650K – $1.1M",
           "note": "High-rise and converted loft buildings along Front, King, and The Esplanade"
         },
         {
           "type": "Loft conversions",
-          "val": "$800K \u2013 $1.5M",
-          "note": "Heritage industrial buildings with exposed brick and high ceilings \u2014 limited supply"
+          "val": "$800K – $1.5M",
+          "note": "Heritage industrial buildings with exposed brick and high ceilings — limited supply"
         },
         {
           "type": "Townhouses",
-          "val": "$1.2M \u2013 $2M",
-          "note": "Rare \u2014 mostly along smaller streets east of Jarvis"
+          "val": "$1.2M – $2M",
+          "note": "Rare — mostly along smaller streets east of Jarvis"
         },
         {
           "type": "Days on market",
-          "val": "~35 \u2013 45 days",
+          "val": "~35 – 45 days",
           "note": "Well-priced condos move quickly; lofts command a patience premium"
         }
       ],
       "schools": [
         {
           "name": "Market Lane Junior and Senior Public School",
-          "meta": "JK\u2013Grade 8 \u00b7 TDSB \u00b7 Primary catchment school for the neighbourhood",
+          "meta": "JK–Grade 8 · TDSB · Primary catchment school for the neighbourhood",
           "type": "Public"
         },
         {
           "name": "Downtown Alternative School",
-          "meta": "JK\u2013Grade 8 \u00b7 TDSB \u00b7 Alternative program with project-based learning",
+          "meta": "JK–Grade 8 · TDSB · Alternative program with project-based learning",
           "type": "Public"
         },
         {
           "name": "Nelson Mandela Park Public School",
-          "meta": "JK\u2013Grade 8 \u00b7 TDSB \u00b7 Nearby in Regent Park, serving east downtown families",
+          "meta": "JK–Grade 8 · TDSB · Nearby in Regent Park, serving east downtown families",
           "type": "Public"
         },
         {
           "name": "St. John the Evangelist Catholic School",
-          "meta": "JK\u2013Grade 8 \u00b7 TCDSB \u00b7 Serves Catholic families in the downtown east catchment",
+          "meta": "JK–Grade 8 · TCDSB · Serves Catholic families in the downtown east catchment",
           "type": "Catholic"
         },
         {
           "name": "George Brown College",
-          "meta": "Post-secondary \u00b7 Multiple campuses in the neighbourhood \u2014 culinary arts, design, business",
+          "meta": "Post-secondary · Multiple campuses in the neighbourhood — culinary arts, design, business",
           "type": "College"
         }
       ],
@@ -227,7 +227,7 @@
           "time": "~10 min"
         },
         {
-          "route": "King St \u2192 Queen's Park subway",
+          "route": "King St → Queen's Park subway",
           "mode": "504 King streetcar",
           "time": "~18 min"
         },
@@ -253,14 +253,14 @@
         },
         {
           "label": "Loft seekers",
-          "text": "One of the few Toronto neighbourhoods with genuine converted heritage lofts \u2014 exposed brick, timber beams, high ceilings. Supply is limited and they trade at a premium."
+          "text": "One of the few Toronto neighbourhoods with genuine converted heritage lofts — exposed brick, timber beams, high ceilings. Supply is limited and they trade at a premium."
         },
         {
           "label": "Not ideal for",
           "text": "Families needing space. This is a condo-dominant neighbourhood with limited school options on-site. Buyers needing 3+ bedrooms at reasonable prices will look elsewhere."
         }
       ],
-      "laleh": "\"St. Lawrence Market is one of those neighbourhoods where the lifestyle sells itself. Buyers who come for a showing almost always want to make an offer \u2014 the energy of the area is that strong. The financial math also works well here: on a $750K condo at 2.5% buyer commission, your cashback covers the first year of condo fees. That is a meaningful real-world difference after closing.\"",
+      "laleh": "\"St. Lawrence Market is one of those neighbourhoods where the lifestyle sells itself. Buyers who come for a showing almost always want to make an offer — the energy of the area is that strong. The financial math also works well here: on a $750K condo at 2.5% buyer commission, your cashback covers the first year of condo fees. That is a meaningful real-world difference after closing.\"",
       "faqs": [
         {
           "q": "Is St. Lawrence Market good for families?",
@@ -268,7 +268,7 @@
         },
         {
           "q": "What is the difference between St. Lawrence Market condos and lofts?",
-          "a": "Standard condos are in newer high-rise or mid-rise buildings with modern finishes. Loft conversions are in heritage industrial buildings \u2014 exposed brick, timber beams, high ceilings, often unique floor plans. Lofts trade at a premium and have limited supply. Both are walkable to Union Station."
+          "a": "Standard condos are in newer high-rise or mid-rise buildings with modern finishes. Loft conversions are in heritage industrial buildings — exposed brick, timber beams, high ceilings, often unique floor plans. Lofts trade at a premium and have limited supply. Both are walkable to Union Station."
         },
         {
           "q": "How close is St. Lawrence Market to the waterfront?",
@@ -282,12 +282,12 @@
       "related": [
         {
           "label": "City page",
-          "title": "Toronto cashback realtor \u2014 all neighbourhoods",
+          "title": "Toronto cashback realtor — all neighbourhoods",
           "href": "/toronto-cashback-realtor.html"
         },
         {
           "label": "Neighbourhood",
-          "title": "The Annex Toronto \u2014 schools, commute & cashback",
+          "title": "The Annex Toronto — schools, commute & cashback",
           "href": "/annex-toronto.html"
         },
         {
@@ -305,70 +305,70 @@
       "cityName": "Toronto",
       "citySlug": "toronto-cashback-realtor",
       "heroSub": "East end character, independent restaurants, and one of Toronto's most consistent freehold markets. Semis and row houses that hold value through any cycle.",
-      "overview": "Leslieville runs along Queen Street East from Carlaw to Coxwell, with residential streets extending north toward Gerrard and south toward the rail corridor. It is a neighbourhood built around community \u2014 the kind where people stay for decades. Independent coffee shops, galleries, and restaurants line Queen East. Buyers here are typically trading up from condos, drawn by freehold ownership and the neighbourhood's genuine east-end feel.",
+      "overview": "Leslieville runs along Queen Street East from Carlaw to Coxwell, with residential streets extending north toward Gerrard and south toward the rail corridor. It is a neighbourhood built around community — the kind where people stay for decades. Independent coffee shops, galleries, and restaurants line Queen East. Buyers here are typically trading up from condos, drawn by freehold ownership and the neighbourhood's genuine east-end feel.",
       "walkScore": 93,
       "transitScore": 88,
       "commuteTime": "~20 min",
       "condosFrom": "$600K+",
       "calcDefault": 1100000,
-      "marketDate": "June 2026",
+      "marketDate": "July 2026",
       "prices": [
         {
           "type": "Semis & Row Houses",
-          "val": "$1.0M \u2013 $1.5M",
-          "note": "Core Leslieville freehold \u2014 strong demand, consistent resale"
+          "val": "$1.0M – $1.5M",
+          "note": "Core Leslieville freehold — strong demand, consistent resale"
         },
         {
           "type": "Detached",
-          "val": "$1.4M \u2013 $2.2M",
+          "val": "$1.4M – $2.2M",
           "note": "Larger homes on wider lots command significant premiums"
         },
         {
           "type": "Condos",
-          "val": "$600K \u2013 $950K",
+          "val": "$600K – $950K",
           "note": "Newer mid-rise buildings along Queen East corridor"
         },
         {
           "type": "Days on market",
-          "val": "~28 \u2013 40 days",
+          "val": "~28 – 40 days",
           "note": "Well-priced freeholds move in weeks; overpriced ones sit"
         }
       ],
       "schools": [
         {
           "name": "Leslieville Junior Public School",
-          "meta": "JK\u2013Grade 6 \u00b7 TDSB \u00b7 Core neighbourhood catchment school",
+          "meta": "JK–Grade 6 · TDSB · Core neighbourhood catchment school",
           "type": "Public"
         },
         {
           "name": "Greenwood Secondary School",
-          "meta": "Grades 7\u201312 \u00b7 TDSB \u00b7 Serves east end students with a community focus",
+          "meta": "Grades 7–12 · TDSB · Serves east end students with a community focus",
           "type": "Public"
         },
         {
           "name": "Earl Grey Senior Public School",
-          "meta": "Grades 7\u20138 \u00b7 TDSB \u00b7 Well-regarded east end intermediate school",
+          "meta": "Grades 7–8 · TDSB · Well-regarded east end intermediate school",
           "type": "Public"
         },
         {
           "name": "St. Joseph Catholic School",
-          "meta": "JK\u2013Grade 8 \u00b7 TCDSB \u00b7 Serves Catholic families in the Leslieville catchment",
+          "meta": "JK–Grade 8 · TCDSB · Serves Catholic families in the Leslieville catchment",
           "type": "Catholic"
         },
         {
           "name": "Duke of Connaught Junior and Senior Public School",
-          "meta": "JK\u2013Grade 8 \u00b7 TDSB \u00b7 Nearby in Riverdale, option for east-side families",
+          "meta": "JK–Grade 8 · TDSB · Nearby in Riverdale, option for east-side families",
           "type": "Public"
         }
       ],
       "commutes": [
         {
-          "route": "Queen St E \u2192 Union Station area",
+          "route": "Queen St E → Union Station area",
           "mode": "501 Queen streetcar",
           "time": "~20 min"
         },
         {
-          "route": "Queen St E \u2192 Yonge/King",
+          "route": "Queen St E → Yonge/King",
           "mode": "501 Queen streetcar",
           "time": "~15 min"
         },
@@ -403,17 +403,17 @@
         },
         {
           "label": "First-time buyers",
-          "text": "Possible at the lower end \u2014 some semis and condos are accessible \u2014 but competition is real and budget stretching is required. The Junction may offer more room at lower price points."
+          "text": "Possible at the lower end — some semis and condos are accessible — but competition is real and budget stretching is required. The Junction may offer more room at lower price points."
         }
       ],
-      "laleh": "\"Leslieville buyers tend to fall in love with the neighbourhood before they fall in love with any specific house. The Queen Street strip, the community feel, the fact that people actually know their neighbours \u2014 that is what sells it. The freehold market here is genuinely consistent. On a $1.1M semi at 2.5% commission, you are looking at over $22,000 back after closing. That is real money toward the renovations most of these homes need.\"",
+      "laleh": "\"Leslieville buyers tend to fall in love with the neighbourhood before they fall in love with any specific house. The Queen Street strip, the community feel, the fact that people actually know their neighbours — that is what sells it. The freehold market here is genuinely consistent. On a $1.1M semi at 2.5% commission, you are looking at over $22,000 back after closing. That is real money toward the renovations most of these homes need.\"",
       "faqs": [
         {
           "q": "Is Leslieville good for families?",
           "a": "Yes. Solid public elementary schools, walkable streets, parks, and a community feel that keeps families in the neighbourhood long-term. The freehold stock gives families the space they need without going to the suburbs."
         },
         {
-          "q": "Leslieville vs The Junction \u2014 which is better value?",
+          "q": "Leslieville vs The Junction — which is better value?",
           "a": "They are comparable in price but different in feel. Leslieville is more established, more community-oriented, and closer to the downtown core via the Queen streetcar. The Junction has more of an emerging neighbourhood feel with slightly more room to negotiate on price. Both are strong options for move-up buyers."
         },
         {
@@ -428,12 +428,12 @@
       "related": [
         {
           "label": "City page",
-          "title": "Toronto cashback realtor \u2014 all neighbourhoods",
+          "title": "Toronto cashback realtor — all neighbourhoods",
           "href": "/toronto-cashback-realtor.html"
         },
         {
           "label": "Neighbourhood",
-          "title": "The Annex Toronto \u2014 schools, commute & cashback",
+          "title": "The Annex Toronto — schools, commute & cashback",
           "href": "/annex-toronto.html"
         },
         {
@@ -451,75 +451,75 @@
       "cityName": "Toronto",
       "citySlug": "toronto-cashback-realtor",
       "heroSub": "West end freehold value, walkable retail strip, and one of the best remaining entry points for buyers who want to own within the city.",
-      "overview": "The Junction sits at Dundas West and Keele, running along Dundas Street West between Runnymede and Keele. Once a working-class industrial neighbourhood, it has evolved into one of Toronto's most interesting west-end communities \u2014 independent shops, breweries, restaurants, and a genuine mix of buyers and renters. Freehold prices remain below comparable east-end streets, making it a consistent draw for first-time buyers and young families.",
+      "overview": "The Junction sits at Dundas West and Keele, running along Dundas Street West between Runnymede and Keele. Once a working-class industrial neighbourhood, it has evolved into one of Toronto's most interesting west-end communities — independent shops, breweries, restaurants, and a genuine mix of buyers and renters. Freehold prices remain below comparable east-end streets, making it a consistent draw for first-time buyers and young families.",
       "walkScore": 90,
       "transitScore": 82,
       "commuteTime": "~22 min",
       "condosFrom": "$550K+",
       "calcDefault": 1000000,
-      "marketDate": "June 2026",
+      "marketDate": "July 2026",
       "prices": [
         {
           "type": "Semis & Row Houses",
-          "val": "$950K \u2013 $1.4M",
-          "note": "Core Junction freehold \u2014 best value per square foot in the west end"
+          "val": "$950K – $1.4M",
+          "note": "Core Junction freehold — best value per square foot in the west end"
         },
         {
           "type": "Detached",
-          "val": "$1.3M \u2013 $2M",
+          "val": "$1.3M – $2M",
           "note": "Larger homes on the quieter residential streets north of Dundas"
         },
         {
           "type": "Condos",
-          "val": "$550K \u2013 $850K",
+          "val": "$550K – $850K",
           "note": "Newer mid-rise buildings along Dundas West and Keele corridor"
         },
         {
           "type": "Days on market",
-          "val": "~30 \u2013 45 days",
+          "val": "~30 – 45 days",
           "note": "Buyers have more negotiating room here than in comparable east-end pockets"
         }
       ],
       "schools": [
         {
           "name": "Humberside Collegiate Institute",
-          "meta": "Grades 9\u201312 \u00b7 TDSB \u00b7 One of Toronto's strongest secondary schools \u2014 high demand catchment",
+          "meta": "Grades 9–12 · TDSB · One of Toronto's strongest secondary schools — high demand catchment",
           "type": "Public Secondary"
         },
         {
           "name": "Annette Street Junior and Senior Public School",
-          "meta": "JK\u2013Grade 8 \u00b7 TDSB \u00b7 Core Junction catchment school",
+          "meta": "JK–Grade 8 · TDSB · Core Junction catchment school",
           "type": "Public"
         },
         {
           "name": "Runnymede Junior and Senior Public School",
-          "meta": "JK\u2013Grade 8 \u00b7 TDSB \u00b7 Established west end school with strong community ties",
+          "meta": "JK–Grade 8 · TDSB · Established west end school with strong community ties",
           "type": "Public"
         },
         {
           "name": "St. Cecilia Catholic School",
-          "meta": "JK\u2013Grade 8 \u00b7 TCDSB \u00b7 Serves Catholic families in the Junction catchment",
+          "meta": "JK–Grade 8 · TCDSB · Serves Catholic families in the Junction catchment",
           "type": "Catholic"
         },
         {
           "name": "Keele Street Junior Public School",
-          "meta": "JK\u2013Grade 6 \u00b7 TDSB \u00b7 Smaller neighbourhood school near Keele subway station",
+          "meta": "JK–Grade 6 · TDSB · Smaller neighbourhood school near Keele subway station",
           "type": "Public"
         }
       ],
       "commutes": [
         {
-          "route": "Keele Station \u2192 Bloor/Yonge",
+          "route": "Keele Station → Bloor/Yonge",
           "mode": "Subway Line 2",
           "time": "~12 min"
         },
         {
-          "route": "Keele Station \u2192 Union Station",
+          "route": "Keele Station → Union Station",
           "mode": "Subway + Line 1",
           "time": "~22 min"
         },
         {
-          "route": "Dundas West \u2192 downtown via streetcar",
+          "route": "Dundas West → downtown via streetcar",
           "mode": "505 Dundas streetcar",
           "time": "~28 min"
         },
@@ -559,7 +559,7 @@
           "a": "Yes, particularly for families with secondary school-age children. The Humberside Collegiate catchment is one of the most sought-after in the city. Elementary options are solid and the neighbourhood has good parks and infrastructure for families."
         },
         {
-          "q": "The Junction vs Roncesvalles \u2014 which is better value?",
+          "q": "The Junction vs Roncesvalles — which is better value?",
           "a": "The Junction offers better value per dollar on freehold homes. Roncesvalles has a slightly more established neighbourhood feel and stronger retail strip, but prices reflect that premium. Buyers who are price-sensitive get more space in the Junction."
         },
         {
@@ -574,12 +574,12 @@
       "related": [
         {
           "label": "City page",
-          "title": "Toronto cashback realtor \u2014 all neighbourhoods",
+          "title": "Toronto cashback realtor — all neighbourhoods",
           "href": "/toronto-cashback-realtor.html"
         },
         {
           "label": "Neighbourhood",
-          "title": "The Annex Toronto \u2014 schools, commute & cashback",
+          "title": "The Annex Toronto — schools, commute & cashback",
           "href": "/annex-toronto.html"
         },
         {
@@ -597,59 +597,59 @@
       "cityName": "Toronto",
       "citySlug": "toronto-cashback-realtor",
       "heroSub": "Top schools, quiet tree-lined streets, and some of the most consistently in-demand freehold stock in Toronto. Move-up buyer territory.",
-      "overview": "Leaside sits north of the rail corridor between Bayview Avenue and the Don Valley, roughly from Eglinton to Millwood. It is a planned community from the 1910s \u2014 wider streets, larger lots, and a layout designed for single-family living. The school catchment, the Eglinton Crosstown LRT, and the neighbourhood's stability make it the destination of choice for buyers moving up from condos or smaller Toronto homes.",
+      "overview": "Leaside sits north of the rail corridor between Bayview Avenue and the Don Valley, roughly from Eglinton to Millwood. It is a planned community from the 1910s — wider streets, larger lots, and a layout designed for single-family living. The school catchment, the Eglinton Crosstown LRT, and the neighbourhood's stability make it the destination of choice for buyers moving up from condos or smaller Toronto homes.",
       "walkScore": 78,
       "transitScore": 72,
       "commuteTime": "~28 min",
       "condosFrom": "$700K+",
       "calcDefault": 1900000,
-      "marketDate": "June 2026",
+      "marketDate": "July 2026",
       "prices": [
         {
           "type": "Detached",
-          "val": "$1.7M \u2013 $3.5M",
-          "note": "Core Leaside stock \u2014 wide lots, solid bones, consistently high demand"
+          "val": "$1.7M – $3.5M",
+          "note": "Core Leaside stock — wide lots, solid bones, consistently high demand"
         },
         {
           "type": "Semis",
-          "val": "$1.3M \u2013 $1.8M",
-          "note": "Less common than detached \u2014 move fast when priced right"
+          "val": "$1.3M – $1.8M",
+          "note": "Less common than detached — move fast when priced right"
         },
         {
           "type": "Condos/Townhouses",
-          "val": "$700K \u2013 $1.1M",
+          "val": "$700K – $1.1M",
           "note": "Newer builds along Bayview and Eglinton corridor"
         },
         {
           "type": "Days on market",
-          "val": "~20 \u2013 35 days",
-          "note": "Leaside moves faster than most Toronto neighbourhoods \u2014 supply is tight"
+          "val": "~20 – 35 days",
+          "note": "Leaside moves faster than most Toronto neighbourhoods — supply is tight"
         }
       ],
       "schools": [
         {
           "name": "Leaside High School",
-          "meta": "Grades 9\u201312 \u00b7 TDSB \u00b7 One of Toronto's most in-demand secondary school catchments",
+          "meta": "Grades 9–12 · TDSB · One of Toronto's most in-demand secondary school catchments",
           "type": "Public Secondary"
         },
         {
           "name": "Bessborough Drive Elementary and Middle School",
-          "meta": "JK\u2013Grade 8 \u00b7 TDSB \u00b7 Core Leaside catchment school",
+          "meta": "JK–Grade 8 · TDSB · Core Leaside catchment school",
           "type": "Public"
         },
         {
           "name": "Rolph Road Elementary School",
-          "meta": "JK\u2013Grade 8 \u00b7 TDSB \u00b7 Highly regarded, strong community involvement",
+          "meta": "JK–Grade 8 · TDSB · Highly regarded, strong community involvement",
           "type": "Public"
         },
         {
           "name": "St. Anselm Catholic School",
-          "meta": "JK\u2013Grade 8 \u00b7 TCDSB \u00b7 Serves Catholic families in the Leaside catchment",
+          "meta": "JK–Grade 8 · TCDSB · Serves Catholic families in the Leaside catchment",
           "type": "Catholic"
         },
         {
           "name": "Northlea Elementary and Middle School",
-          "meta": "JK\u2013Grade 8 \u00b7 TDSB \u00b7 North Leaside catchment near Bayview/Eglinton",
+          "meta": "JK–Grade 8 · TDSB · North Leaside catchment near Bayview/Eglinton",
           "type": "Public"
         }
       ],
@@ -660,12 +660,12 @@
           "time": "~8 min walk"
         },
         {
-          "route": "Eglinton Crosstown \u2192 Yonge/Eglinton station",
+          "route": "Eglinton Crosstown → Yonge/Eglinton station",
           "mode": "Crosstown LRT",
           "time": "~12 min"
         },
         {
-          "route": "Bayview Ave bus \u2192 subway",
+          "route": "Bayview Ave bus → subway",
           "mode": "Bus to Davisville or Sheppard",
           "time": "~20 min"
         },
@@ -687,7 +687,7 @@
         },
         {
           "label": "Move-up buyers",
-          "text": "Couples and families graduating from downtown condos or midtown semis. Leaside is the upgrade destination \u2014 more space, a yard, quieter streets, and a neighbourhood that functions beautifully as a family community."
+          "text": "Couples and families graduating from downtown condos or midtown semis. Leaside is the upgrade destination — more space, a yard, quieter streets, and a neighbourhood that functions beautifully as a family community."
         },
         {
           "label": "Long-term owners",
@@ -698,7 +698,7 @@
           "text": "Effectively out of reach. The freehold market starts at $1.7M and condos in the area are a different lifestyle proposition. First-time buyers will get more for their money in North York or Leslieville."
         }
       ],
-      "laleh": "\"Leaside is not a neighbourhood you stumble into \u2014 buyers come here intentionally, usually because of the schools or because they have rented nearby and know exactly what the community is like. The cashback on a Leaside purchase is the largest I work with day-to-day. On a $2M home at 2.5%, you are getting over $45,000 back. That is a meaningful number that changes what your first years in the house look like.\"",
+      "laleh": "\"Leaside is not a neighbourhood you stumble into — buyers come here intentionally, usually because of the schools or because they have rented nearby and know exactly what the community is like. The cashback on a Leaside purchase is the largest I work with day-to-day. On a $2M home at 2.5%, you are getting over $45,000 back. That is a meaningful number that changes what your first years in the house look like.\"",
       "faqs": [
         {
           "q": "Is Leaside worth the premium over comparable neighbourhoods?",
@@ -710,7 +710,7 @@
         },
         {
           "q": "Is Leaside a good investment?",
-          "a": "Leaside has shown consistent long-term appreciation. Low turnover, strong school catchment, and limited new supply create structural support for prices. It is not a speculative play \u2014 it is a stability play for buyers who can afford the entry point."
+          "a": "Leaside has shown consistent long-term appreciation. Low turnover, strong school catchment, and limited new supply create structural support for prices. It is not a speculative play — it is a stability play for buyers who can afford the entry point."
         },
         {
           "q": "How much cashback would I get in Leaside?",
@@ -720,12 +720,12 @@
       "related": [
         {
           "label": "City page",
-          "title": "Toronto cashback realtor \u2014 all neighbourhoods",
+          "title": "Toronto cashback realtor — all neighbourhoods",
           "href": "/toronto-cashback-realtor.html"
         },
         {
           "label": "Neighbourhood",
-          "title": "The Annex Toronto \u2014 schools, commute & cashback",
+          "title": "The Annex Toronto — schools, commute & cashback",
           "href": "/annex-toronto.html"
         },
         {
@@ -742,55 +742,55 @@
       "city": "toronto",
       "cityName": "Toronto",
       "citySlug": "toronto-cashback-realtor",
-      "heroSub": "Lake views, PATH access, and the most walkable location in the city. High-rise condo living at its most urban \u2014 and good value in the current market.",
-      "overview": "Harbourfront spans the waterfront from Bathurst to Jarvis, south of the Gardiner. It is Toronto's most urban neighbourhood \u2014 condo towers, the Harbourfront Centre, Queens Quay, Sugar Beach, and direct lake access. The condo market here has softened in 2026 as supply has increased, giving buyers more negotiating leverage than they have had in years. For buyers who want lake views and genuine waterfront proximity, this is the clearest play in the city.",
+      "heroSub": "Lake views, PATH access, and the most walkable location in the city. High-rise condo living at its most urban — and good value in the current market.",
+      "overview": "Harbourfront spans the waterfront from Bathurst to Jarvis, south of the Gardiner. It is Toronto's most urban neighbourhood — condo towers, the Harbourfront Centre, Queens Quay, Sugar Beach, and direct lake access. The condo market here has softened in 2026 as supply has increased, giving buyers more negotiating leverage than they have had in years. For buyers who want lake views and genuine waterfront proximity, this is the clearest play in the city.",
       "walkScore": 97,
       "transitScore": 100,
       "commuteTime": "~12 min",
       "condosFrom": "$550K+",
       "calcDefault": 750000,
-      "marketDate": "June 2026",
+      "marketDate": "July 2026",
       "prices": [
         {
           "type": "Condos (studio/1BR)",
-          "val": "$550K \u2013 $750K",
-          "note": "Entry-level waterfront \u2014 strong rental demand, consistent resale"
+          "val": "$550K – $750K",
+          "note": "Entry-level waterfront — strong rental demand, consistent resale"
         },
         {
           "type": "Condos (2BR)",
-          "val": "$800K \u2013 $1.2M",
+          "val": "$800K – $1.2M",
           "note": "Lake-facing units command significant premiums over city-view"
         },
         {
           "type": "Condos (3BR/penthouse)",
-          "val": "$1.3M \u2013 $3M+",
-          "note": "Limited supply \u2014 top floors with direct lake views"
+          "val": "$1.3M – $3M+",
+          "note": "Limited supply — top floors with direct lake views"
         },
         {
           "type": "Days on market",
-          "val": "~45 \u2013 60 days",
-          "note": "Buyer's market conditions in 2026 \u2014 more room to negotiate than recent years"
+          "val": "~45 – 60 days",
+          "note": "Buyer's market conditions in 2026 — more room to negotiate than recent years"
         }
       ],
       "schools": [
         {
           "name": "Harbourfront School",
-          "meta": "JK\u2013Grade 8 \u00b7 TDSB \u00b7 Only public elementary school in the immediate area",
+          "meta": "JK–Grade 8 · TDSB · Only public elementary school in the immediate area",
           "type": "Public"
         },
         {
           "name": "Waterfront Neighbourhood School",
-          "meta": "JK\u2013Grade 8 \u00b7 TDSB \u00b7 Alternative program option for downtown waterfront families",
+          "meta": "JK–Grade 8 · TDSB · Alternative program option for downtown waterfront families",
           "type": "Public"
         },
         {
           "name": "St. Michael Catholic School",
-          "meta": "JK\u2013Grade 8 \u00b7 TCDSB \u00b7 Nearest Catholic option for Harbourfront families",
+          "meta": "JK–Grade 8 · TCDSB · Nearest Catholic option for Harbourfront families",
           "type": "Catholic"
         },
         {
-          "name": "George Brown College \u2014 Waterfront Campus",
-          "meta": "Post-secondary \u00b7 Culinary arts and hospitality programs on Queens Quay",
+          "name": "George Brown College — Waterfront Campus",
+          "meta": "Post-secondary · Culinary arts and hospitality programs on Queens Quay",
           "type": "College"
         }
       ],
@@ -801,12 +801,12 @@
           "time": "~12 min"
         },
         {
-          "route": "Queens Quay streetcar \u2192 King/Spadina",
+          "route": "Queens Quay streetcar → King/Spadina",
           "mode": "509/510 streetcar",
           "time": "~10 min"
         },
         {
-          "route": "Bay St \u2192 Financial District",
+          "route": "Bay St → Financial District",
           "mode": "Walk or cycle",
           "time": "~15 min"
         },
@@ -839,11 +839,11 @@
           "text": "Possible but uncommon. School options are limited and 2-3 bedroom condos are expensive. Sugar Beach and Harbourfront Centre parks are great for young children, but families needing space typically look further afield."
         }
       ],
-      "laleh": "\"Harbourfront is one of the few parts of Toronto where the 2026 market has created genuine buying opportunities. Condo supply is up, days on market have stretched, and sellers are negotiating. Buyers who have wanted a lake-view unit but have been priced out in previous years should be looking here now. On a $750K condo at 2.5% commission, you get over $13,000 back \u2014 which covers a year of condo fees in most buildings.\"",
+      "laleh": "\"Harbourfront is one of the few parts of Toronto where the 2026 market has created genuine buying opportunities. Condo supply is up, days on market have stretched, and sellers are negotiating. Buyers who have wanted a lake-view unit but have been priced out in previous years should be looking here now. On a $750K condo at 2.5% commission, you get over $13,000 back — which covers a year of condo fees in most buildings.\"",
       "faqs": [
         {
           "q": "Are Harbourfront condos good investments?",
-          "a": "They have shown consistent long-term appreciation and strong rental demand, particularly for lake-facing units. The 2026 supply increase has created a short-term buyer's window. Long-term, the waterfront location creates structural scarcity \u2014 you cannot build more lake."
+          "a": "They have shown consistent long-term appreciation and strong rental demand, particularly for lake-facing units. The 2026 supply increase has created a short-term buyer's window. Long-term, the waterfront location creates structural scarcity — you cannot build more lake."
         },
         {
           "q": "What are condo fees like in Harbourfront buildings?",
@@ -861,12 +861,12 @@
       "related": [
         {
           "label": "City page",
-          "title": "Toronto cashback realtor \u2014 all neighbourhoods",
+          "title": "Toronto cashback realtor — all neighbourhoods",
           "href": "/toronto-cashback-realtor.html"
         },
         {
           "label": "Neighbourhood",
-          "title": "St. Lawrence Market \u2014 schools, commute & cashback",
+          "title": "St. Lawrence Market — schools, commute & cashback",
           "href": "/st-lawrence-market-toronto.html"
         },
         {
@@ -884,7 +884,7 @@
       "cityName": "Toronto",
       "citySlug": "toronto-cashback-realtor",
       "heroSub": "Midtown's transit hub. Dense, walkable, and one of Toronto's most active condo markets.",
-      "overview": "Yonge & Eglinton sits at the intersection of two of Toronto's busiest streets, roughly midway between downtown and the northern suburbs. The area is anchored by Eglinton station \u2014 a major crosstown LRT hub \u2014 and offers a dense mix of high-rise condos, mid-rise apartments, and the occasional renovated detached home on side streets. It has a strong restaurant and retail strip, excellent transit connections, and consistent rental demand that makes it attractive to both owner-occupiers and investors.",
+      "overview": "Yonge & Eglinton sits at the intersection of two of Toronto's busiest streets, roughly midway between downtown and the northern suburbs. The area is anchored by Eglinton station — a major crosstown LRT hub — and offers a dense mix of high-rise condos, mid-rise apartments, and the occasional renovated detached home on side streets. It has a strong restaurant and retail strip, excellent transit connections, and consistent rental demand that makes it attractive to both owner-occupiers and investors.",
       "walkScore": 97,
       "transitScore": 93,
       "commuteTime": "~18 min",
@@ -894,60 +894,60 @@
       "prices": [
         {
           "type": "Condos",
-          "val": "$580K \u2013 $950K",
+          "val": "$580K – $950K",
           "note": "High-rise towers dominate. Studios from $580K, 2-beds from $750K"
         },
         {
           "type": "Mid-rise & boutique",
-          "val": "$700K \u2013 $1.1M",
+          "val": "$700K – $1.1M",
           "note": "Newer boutique buildings on side streets command a premium"
         },
         {
           "type": "Detached & semis",
-          "val": "$1.6M \u2013 $2.5M",
+          "val": "$1.6M – $2.5M",
           "note": "Rare on main streets, more available on residential side streets"
         },
         {
           "type": "Days on market",
-          "val": "~35 \u2013 45 days",
-          "note": "Condo market has more inventory; well-priced units move in 2\u20133 weeks"
+          "val": "~35 – 45 days",
+          "note": "Condo market has more inventory; well-priced units move in 2–3 weeks"
         }
       ],
       "schools": [
         {
           "name": "Davisville Junior Public School",
-          "meta": "JK\u2013Grade 6 \u00b7 TDSB \u00b7 Popular catchment north of Eglinton",
+          "meta": "JK–Grade 6 · TDSB · Popular catchment north of Eglinton",
           "type": "Public"
         },
         {
           "name": "Maurice Cody Junior Public School",
-          "meta": "JK\u2013Grade 6 \u00b7 TDSB \u00b7 Strong reputation, active parent community",
+          "meta": "JK–Grade 6 · TDSB · Strong reputation, active parent community",
           "type": "Public"
         },
         {
           "name": "North Toronto Collegiate Institute",
-          "meta": "Grades 9\u201312 \u00b7 TDSB \u00b7 One of Toronto's most academically competitive public high schools",
+          "meta": "Grades 9–12 · TDSB · One of Toronto's most academically competitive public high schools",
           "type": "Public Secondary"
         },
         {
           "name": "York School",
-          "meta": "JK\u2013Grade 12 \u00b7 Independent \u00b7 IB curriculum, strong university placement",
+          "meta": "JK–Grade 12 · Independent · IB curriculum, strong university placement",
           "type": "Private"
         },
         {
           "name": "Our Lady of Perpetual Help Catholic School",
-          "meta": "JK\u2013Grade 8 \u00b7 TCDSB \u00b7 Serves Catholic families in the Yonge & Eglinton catchment",
+          "meta": "JK–Grade 8 · TCDSB · Serves Catholic families in the Yonge & Eglinton catchment",
           "type": "Catholic"
         }
       ],
       "commutes": [
         {
-          "route": "Eglinton Station \u2192 Union Station",
+          "route": "Eglinton Station → Union Station",
           "mode": "Subway Line 1",
           "time": "~18 min"
         },
         {
-          "route": "Eglinton Crosstown LRT (East\u2013West)",
+          "route": "Eglinton Crosstown LRT (East–West)",
           "mode": "Line 5 Crosstown",
           "time": "~10 min to Scarborough"
         },
@@ -980,19 +980,19 @@
           "text": "Families seeking freehold with a yard and strong public school access at an entry-level price. Detached homes are rare and expensive; the catchment schools are good but competition is real."
         }
       ],
-      "laleh": "\"Yonge and Eglinton is one of the best-connected midtown locations in Toronto. The Crosstown LRT has changed the calculus here \u2014 you can now get across the city east\u2013west without going downtown first, which is a genuine shift. For buyers who want walkability and fast transit without the premium of downtown glass towers, this neighbourhood consistently delivers. On a typical 2-bedroom condo purchase around $800K, you're looking at roughly $15,000 back in cashback after closing.\"",
+      "laleh": "\"Yonge and Eglinton is one of the best-connected midtown locations in Toronto. The Crosstown LRT has changed the calculus here — you can now get across the city east–west without going downtown first, which is a genuine shift. For buyers who want walkability and fast transit without the premium of downtown glass towers, this neighbourhood consistently delivers. On a typical 2-bedroom condo purchase around $800K, you're looking at roughly $15,000 back in cashback after closing.\"",
       "faqs": [
         {
           "q": "Is Yonge & Eglinton good for first-time buyers?",
-          "a": "Yes, if condos fit your lifestyle. Entry-level studios start around $580K and 1-bedrooms from $650K. The transit access is excellent and the neighbourhood is walkable. If you need a house with a yard, this isn't the right area \u2014 but for condo buyers it's one of the strongest midtown options."
+          "a": "Yes, if condos fit your lifestyle. Entry-level studios start around $580K and 1-bedrooms from $650K. The transit access is excellent and the neighbourhood is walkable. If you need a house with a yard, this isn't the right area — but for condo buyers it's one of the strongest midtown options."
         },
         {
           "q": "How has the Eglinton Crosstown LRT affected prices?",
-          "a": "The LRT has reinforced Yonge & Eglinton's position as a transit hub and added east\u2013west connectivity that wasn't there before. Long-term, this supports values in the corridor. In the short term, the extended construction period suppressed condo prices slightly \u2014 those buyers are now seeing that reversed."
+          "a": "The LRT has reinforced Yonge & Eglinton's position as a transit hub and added east–west connectivity that wasn't there before. Long-term, this supports values in the corridor. In the short term, the extended construction period suppressed condo prices slightly — those buyers are now seeing that reversed."
         },
         {
           "q": "Is parking important to have at Yonge & Eglinton?",
-          "a": "Less so than most Toronto neighbourhoods. Transit is excellent, grocery stores, restaurants, and services are all walkable. Many buyers here don't own cars. If you do drive, parking spots sell separately and add $50K\u2013$80K to a purchase price."
+          "a": "Less so than most Toronto neighbourhoods. Transit is excellent, grocery stores, restaurants, and services are all walkable. Many buyers here don't own cars. If you do drive, parking spots sell separately and add $50K–$80K to a purchase price."
         },
         {
           "q": "How much cashback would I get on a Yonge & Eglinton condo?",
@@ -1002,7 +1002,7 @@
       "related": [
         {
           "label": "City page",
-          "title": "Toronto cashback realtor \u2014 all neighbourhoods",
+          "title": "Toronto cashback realtor — all neighbourhoods",
           "href": "/toronto-cashback-realtor.html"
         },
         {
@@ -1030,7 +1030,7 @@
       "cityName": "Toronto",
       "citySlug": "toronto-cashback-realtor",
       "heroSub": "West end freehold value with a tight-knit Italian village feel. One of Toronto's best-kept entry points.",
-      "overview": "Corso Italia runs along St. Clair Avenue West between Dufferin and Lansdowne. It has the feel of a genuine neighbourhood strip \u2014 independent cafes, Italian bakeries, butcher shops, and a strong local identity that's resisted the homogenization seen in trendier west-end pockets. The housing stock is predominantly post-war semis and detached homes on narrow lots, with a growing number of renovated properties. Prices remain below comparable east-end streets, making it one of the better value propositions for freehold buyers in the city.",
+      "overview": "Corso Italia runs along St. Clair Avenue West between Dufferin and Lansdowne. It has the feel of a genuine neighbourhood strip — independent cafes, Italian bakeries, butcher shops, and a strong local identity that's resisted the homogenization seen in trendier west-end pockets. The housing stock is predominantly post-war semis and detached homes on narrow lots, with a growing number of renovated properties. Prices remain below comparable east-end streets, making it one of the better value propositions for freehold buyers in the city.",
       "walkScore": 87,
       "transitScore": 79,
       "commuteTime": "~28 min",
@@ -1040,60 +1040,60 @@
       "prices": [
         {
           "type": "Semis",
-          "val": "$900K \u2013 $1.3M",
+          "val": "$900K – $1.3M",
           "note": "Post-war brick semis, many with rear additions and updated interiors"
         },
         {
           "type": "Detached",
-          "val": "$1.1M \u2013 $1.6M",
+          "val": "$1.1M – $1.6M",
           "note": "Narrower lots than east-end equivalents but consistent demand"
         },
         {
           "type": "Condos & stacked towns",
-          "val": "$520K \u2013 $750K",
+          "val": "$520K – $750K",
           "note": "Newer mid-rise buildings along St. Clair W corridor"
         },
         {
           "type": "Days on market",
-          "val": "~30 \u2013 50 days",
-          "note": "Well-priced freeholds move in 2\u20133 weeks; overpriced stock sits"
+          "val": "~30 – 50 days",
+          "note": "Well-priced freeholds move in 2–3 weeks; overpriced stock sits"
         }
       ],
       "schools": [
         {
           "name": "Regal Road Junior Public School",
-          "meta": "JK\u2013Grade 6 \u00b7 TDSB \u00b7 Established public school in the heart of Corso Italia",
+          "meta": "JK–Grade 6 · TDSB · Established public school in the heart of Corso Italia",
           "type": "Public"
         },
         {
           "name": "Fairbank Middle School",
-          "meta": "Grades 6\u20138 \u00b7 TDSB \u00b7 Serves middle school students in the catchment",
+          "meta": "Grades 6–8 · TDSB · Serves middle school students in the catchment",
           "type": "Public"
         },
         {
           "name": "Humberside Collegiate Institute",
-          "meta": "Grades 9\u201312 \u00b7 TDSB \u00b7 Strong secondary with arts and academic streams",
+          "meta": "Grades 9–12 · TDSB · Strong secondary with arts and academic streams",
           "type": "Public Secondary"
         },
         {
           "name": "St. Clare Catholic School",
-          "meta": "JK\u2013Grade 8 \u00b7 TCDSB \u00b7 Popular Catholic option in the neighbourhood",
+          "meta": "JK–Grade 8 · TCDSB · Popular Catholic option in the neighbourhood",
           "type": "Catholic"
         },
         {
           "name": "St. Gaspar College",
-          "meta": "Grades 9\u201312 \u00b7 TCDSB \u00b7 Catholic secondary serving west-end families",
+          "meta": "Grades 9–12 · TCDSB · Catholic secondary serving west-end families",
           "type": "Catholic Secondary"
         }
       ],
       "commutes": [
         {
-          "route": "St. Clair West Station \u2192 Union Station",
+          "route": "St. Clair West Station → Union Station",
           "mode": "Subway Line 1",
           "time": "~22 min"
         },
         {
-          "route": "St. Clair streetcar \u2192 Yonge",
+          "route": "St. Clair streetcar → Yonge",
           "mode": "512 St. Clair streetcar",
           "time": "~30 min"
         },
@@ -1115,7 +1115,7 @@
         },
         {
           "label": "Families",
-          "text": "Solid public schools, quiet residential streets off St. Clair, and a genuine community identity. The neighbourhood has strong social infrastructure \u2014 parks, community centres, and local businesses that have been here for decades."
+          "text": "Solid public schools, quiet residential streets off St. Clair, and a genuine community identity. The neighbourhood has strong social infrastructure — parks, community centres, and local businesses that have been here for decades."
         },
         {
           "label": "Value-conscious move-up buyers",
@@ -1126,14 +1126,14 @@
           "text": "Buyers who need a short subway commute to downtown. St. Clair West station is walkable but the commute is longer than Annex or Midtown options. The neighbourhood rewards buyers who value community over convenience."
         }
       ],
-      "laleh": "\"Corso Italia is genuinely undervalued relative to what it offers. The housing stock is solid, the community is established, and you're not paying a trendiness premium the way you would in Roncesvalles or Little Portugal. For first-time freehold buyers, this is one of the areas I actively recommend exploring. On a typical semi purchase around $1M, you're looking at $20,000 back in cashback after closing \u2014 which meaningfully offsets closing costs.\"",
+      "laleh": "\"Corso Italia is genuinely undervalued relative to what it offers. The housing stock is solid, the community is established, and you're not paying a trendiness premium the way you would in Roncesvalles or Little Portugal. For first-time freehold buyers, this is one of the areas I actively recommend exploring. On a typical semi purchase around $1M, you're looking at $20,000 back in cashback after closing — which meaningfully offsets closing costs.\"",
       "faqs": [
         {
           "q": "Is Corso Italia a good area to buy in Toronto?",
           "a": "Yes, particularly for freehold buyers who want value. It offers solid housing stock at prices below comparable west-end neighbourhoods, a genuine community feel, and decent transit access. It's not the trendiest pocket in the city, which is exactly why the prices remain accessible."
         },
         {
-          "q": "Corso Italia vs Roncesvalles \u2014 which is better value?",
+          "q": "Corso Italia vs Roncesvalles — which is better value?",
           "a": "Corso Italia currently offers slightly better value per dollar for freehold homes. Roncesvalles has more cachet and stronger demand, which is reflected in higher prices. If your priority is space and value, Corso Italia wins. If you want the most active neighbourhood strip and slightly better school options, Roncesvalles is worth the premium."
         },
         {
@@ -1148,7 +1148,7 @@
       "related": [
         {
           "label": "City page",
-          "title": "Toronto cashback realtor \u2014 all neighbourhoods",
+          "title": "Toronto cashback realtor — all neighbourhoods",
           "href": "/toronto-cashback-realtor.html"
         },
         {
@@ -1163,7 +1163,7 @@
         },
         {
           "label": "Neighbourhood",
-          "title": "The Junction \u2014 west end freehold guide",
+          "title": "The Junction — west end freehold guide",
           "href": "/the-junction-toronto.html"
         }
       ],
@@ -1186,66 +1186,66 @@
       "prices": [
         {
           "type": "Semis",
-          "val": "$950K \u2013 $1.3M",
+          "val": "$950K – $1.3M",
           "note": "Brick semis with good lot sizes. Strong demand from families upgrading from condos"
         },
         {
           "type": "Detached",
-          "val": "$1.3M \u2013 $2M",
+          "val": "$1.3M – $2M",
           "note": "Larger homes north of Danforth command premium; quieter residential streets"
         },
         {
           "type": "Condos",
-          "val": "$550K \u2013 $800K",
+          "val": "$550K – $800K",
           "note": "Newer mid-rise buildings along Danforth corridor"
         },
         {
           "type": "Days on market",
-          "val": "~28 \u2013 42 days",
+          "val": "~28 – 42 days",
           "note": "Well-priced semis move quickly; this area sees strong spring competition"
         }
       ],
       "schools": [
         {
           "name": "Jackman Avenue Junior Public School",
-          "meta": "JK\u2013Grade 6 \u00b7 TDSB \u00b7 Highly sought-after catchment, strong parent community",
+          "meta": "JK–Grade 6 · TDSB · Highly sought-after catchment, strong parent community",
           "type": "Public"
         },
         {
           "name": "Earl Grey Senior Public School",
-          "meta": "Grades 7\u20138 \u00b7 TDSB \u00b7 Serves middle school students in the Greektown catchment",
+          "meta": "Grades 7–8 · TDSB · Serves middle school students in the Greektown catchment",
           "type": "Public"
         },
         {
           "name": "Riverdale Collegiate Institute",
-          "meta": "Grades 9\u201312 \u00b7 TDSB \u00b7 Strong arts and academic program, established community school",
+          "meta": "Grades 9–12 · TDSB · Strong arts and academic program, established community school",
           "type": "Public Secondary"
         },
         {
           "name": "St. Brigid Catholic School",
-          "meta": "JK\u2013Grade 8 \u00b7 TCDSB \u00b7 Serves Catholic families in the Danforth catchment",
+          "meta": "JK–Grade 8 · TCDSB · Serves Catholic families in the Danforth catchment",
           "type": "Catholic"
         },
         {
           "name": "Runnymede Public School",
-          "meta": "JK\u2013Grade 6 \u00b7 TDSB \u00b7 Alternative school option for families in the east end",
+          "meta": "JK–Grade 6 · TDSB · Alternative school option for families in the east end",
           "type": "Public Alternative"
         }
       ],
       "commutes": [
         {
-          "route": "Broadview Station \u2192 Union Station",
+          "route": "Broadview Station → Union Station",
           "mode": "Subway Line 2 + Line 1",
           "time": "~20 min"
         },
         {
-          "route": "Chester Station \u2192 Bloor/Yonge",
+          "route": "Chester Station → Bloor/Yonge",
           "mode": "Subway Line 2",
           "time": "~12 min"
         },
         {
           "route": "Cycling to downtown",
-          "mode": "Danforth Ave \u2192 Eastern Ave",
+          "mode": "Danforth Ave → Eastern Ave",
           "time": "~25 min"
         },
         {
@@ -1265,26 +1265,26 @@
         },
         {
           "label": "East-enders upgrading from condos",
-          "text": "Many buyers in this neighbourhood are already renting or owning condos nearby and want to stay in the east end. The lifestyle \u2014 lively main street, good restaurants, cycling distance to downtown \u2014 is genuinely different from the west end and attracts buyers who are committed to the area."
+          "text": "Many buyers in this neighbourhood are already renting or owning condos nearby and want to stay in the east end. The lifestyle — lively main street, good restaurants, cycling distance to downtown — is genuinely different from the west end and attracts buyers who are committed to the area."
         },
         {
           "label": "Not ideal for",
           "text": "Buyers who need quiet and maximum privacy. Danforth Avenue itself is busy and the neighbourhood has genuine urban density. The residential streets off Danforth are calmer, but this is an active urban neighbourhood at its core."
         }
       ],
-      "laleh": "\"The Danforth is one of the east end's most consistent performers. The subway access is excellent, the main strip has real life to it, and you're getting better value per square foot than comparable west-end streets. Families in particular do very well here \u2014 the school catchments are strong and the semis have enough space to grow into. On a typical semi purchase around $1.1M, you're looking at $22,500 back in cashback after closing.\"",
+      "laleh": "\"The Danforth is one of the east end's most consistent performers. The subway access is excellent, the main strip has real life to it, and you're getting better value per square foot than comparable west-end streets. Families in particular do very well here — the school catchments are strong and the semis have enough space to grow into. On a typical semi purchase around $1.1M, you're looking at $22,500 back in cashback after closing.\"",
       "faqs": [
         {
           "q": "Is the Danforth a good place to buy in Toronto?",
           "a": "Yes, consistently. It offers strong transit, walkable amenities, solid school catchments, and freehold prices below the west end. It's one of the east end's most established neighbourhoods and has held value well through market cycles."
         },
         {
-          "q": "Danforth vs Leslieville \u2014 which is better?",
+          "q": "Danforth vs Leslieville — which is better?",
           "a": "The Danforth has better transit (subway vs streetcar), larger lot sizes on average, and slightly more established school catchments. Leslieville has a trendier feel and stronger restaurant scene. Both offer good value for east-end freehold. Your choice usually comes down to lifestyle preference."
         },
         {
           "q": "Is Greektown the same as the Danforth?",
-          "a": "Greektown is the stretch of Danforth between Broadview and Jones Avenue \u2014 the most active commercial section with the highest concentration of Greek restaurants and businesses. The broader Danforth neighbourhood extends further east. Greektown specifically commands a slight premium due to its location and energy."
+          "a": "Greektown is the stretch of Danforth between Broadview and Jones Avenue — the most active commercial section with the highest concentration of Greek restaurants and businesses. The broader Danforth neighbourhood extends further east. Greektown specifically commands a slight premium due to its location and energy."
         },
         {
           "q": "How much cashback would I get buying on the Danforth?",
@@ -1294,12 +1294,12 @@
       "related": [
         {
           "label": "City page",
-          "title": "Toronto cashback realtor \u2014 all neighbourhoods",
+          "title": "Toronto cashback realtor — all neighbourhoods",
           "href": "/toronto-cashback-realtor.html"
         },
         {
           "label": "Neighbourhood",
-          "title": "Leslieville \u2014 east end character guide",
+          "title": "Leslieville — east end character guide",
           "href": "/leslieville-toronto.html"
         },
         {
@@ -1314,6 +1314,409 @@
         }
       ],
       "metaDesc": "Danforth / Greektown Toronto: schools, commute times, and real estate prices. Semis from $950K. See your cashback estimate on a typical east end purchase."
+    },
+    {
+      "slug": "liberty-village-toronto",
+      "name": "Liberty Village",
+      "city": "toronto",
+      "cityName": "Toronto",
+      "citySlug": "toronto-cashback-realtor",
+      "heroSub": "A converted industrial neighbourhood turned condo hub for young professionals, packed with tech offices, patios, and one of the most walkable pockets in the city.",
+      "overview": "Liberty Village sits between King Street West, Dufferin, the GO rail corridor, and Strachan Avenue, on the site of Toronto's former industrial and prison lands. It is almost entirely condo and loft development, home to a young professional population working in tech, media, and creative industries. There is very little freehold housing here. What you are buying into is a lifestyle: restaurants, gyms, dog parks, and a fast commute downtown, not a traditional house-and-yard neighbourhood.",
+      "walkScore": 88,
+      "transitScore": 96,
+      "commuteTime": "~10 min",
+      "condosFrom": "$550K+",
+      "calcDefault": 650000,
+      "marketDate": "July 2026",
+      "prices": [
+        {
+          "type": "Condos",
+          "val": "$550K – $900K",
+          "note": "The vast majority of Liberty Village inventory. Studios to two-bedroom units in mid and high-rise buildings."
+        },
+        {
+          "type": "Lofts & townhomes",
+          "val": "$800K – $1.3M",
+          "note": "Converted industrial loft units and newer stacked townhomes, limited supply"
+        },
+        {
+          "type": "Freehold houses",
+          "val": "Essentially none",
+          "note": "Liberty Village has almost no traditional detached or semi-detached stock"
+        },
+        {
+          "type": "Days on market",
+          "val": "~55 – 65 days",
+          "note": "Slower than freehold neighbourhoods. Condo resale competes with new-build supply nearby."
+        }
+      ],
+      "schools": [
+        {
+          "name": "King Street Junior Public School",
+          "meta": "JK–Grade 6 · TDSB · Built for the growing downtown west condo population",
+          "type": "Public"
+        },
+        {
+          "name": "Niagara Street Junior Public School",
+          "meta": "JK–Grade 6 · TDSB · Serves the wider King West and Liberty Village catchment",
+          "type": "Public"
+        },
+        {
+          "name": "Parkdale Collegiate Institute",
+          "meta": "Grades 9–12 · TDSB · Nearest secondary option for the area",
+          "type": "Public Secondary"
+        }
+      ],
+      "commutes": [
+        {
+          "route": "King St W → Financial District",
+          "mode": "504 King streetcar",
+          "time": "~15 min"
+        },
+        {
+          "route": "Exhibition GO → Union Station",
+          "mode": "GO Transit / UP Express",
+          "time": "~8 min"
+        },
+        {
+          "route": "Liberty Village → Downtown core",
+          "mode": "Cycling, Martin Goodman Trail",
+          "time": "~15 min"
+        },
+        {
+          "route": "Walking to King West offices",
+          "mode": "On foot",
+          "time": "~10 min"
+        }
+      ],
+      "whoFor": [
+        {
+          "label": "Young professionals",
+          "text": "The defining buyer here. Tech, media, and creative industry workers who want a fast downtown commute, walkable restaurants, and a building with a gym. Many work at or near the companies headquartered in the neighbourhood itself."
+        },
+        {
+          "label": "Investors",
+          "text": "Strong rental demand from the same young professional population, though condo resale has softened over the past year. Cash flow and building fees matter more here than in most neighbourhoods."
+        },
+        {
+          "label": "First-time buyers",
+          "text": "One of the more accessible entry points into Toronto condo ownership, especially compared to downtown core pricing. Good option for buyers prioritizing lifestyle and commute over space."
+        },
+        {
+          "label": "Not ideal for",
+          "text": "Families needing more than one bedroom of real space, or anyone wanting a yard, a house, or a quiet street. This is a dense, young, condo-first neighbourhood."
+        }
+      ],
+      "laleh": "\"Liberty Village buyers are almost always trading space for lifestyle and commute. It is one of the only neighbourhoods in Toronto where you can walk to work, the gym, and dinner without a car, and that is exactly what the buyers here are paying for. The resale market has softened over the past year, which actually gives buyers more room to negotiate than they had in 2021 and 2022. On a $650K condo, your cashback is still meaningful, over $11,000 back after closing.\"",
+      "faqs": [
+        {
+          "q": "Is Liberty Village good for families?",
+          "a": "Not typically. It is almost entirely condo housing with very limited family-sized units, though King Street Junior Public School was built to serve the growing family population in the area. Most family buyers looking for more space consider nearby Parkdale or Roncesvalles instead."
+        },
+        {
+          "q": "Liberty Village vs King West — what's the difference?",
+          "a": "They border each other and overlap in lifestyle. Liberty Village is the specific condo cluster around the old industrial lands, while King West extends further east toward Spadina with a mix of older buildings and nightlife. Liberty Village is quieter and more residential; King West has more bars and restaurants."
+        },
+        {
+          "q": "Is parking included in Liberty Village condos?",
+          "a": "It varies by building and unit. Many newer buildings sell parking separately, and some units do not include it at all. Given the strong transit and walk score, many residents do not own a car. Confirm parking inclusion before making an offer if you need it."
+        },
+        {
+          "q": "How much cashback would I get on a typical Liberty Village purchase?",
+          "a": "On a $650K condo at 2.5% buyer agent commission, you'd receive approximately $11,250 back after closing with Home Cashbacks. Use the calculator above to run your own numbers based on the specific unit you're considering."
+        }
+      ],
+      "related": [
+        {
+          "label": "City page",
+          "title": "Toronto cashback realtor — all neighbourhoods",
+          "href": "/toronto-cashback-realtor.html"
+        },
+        {
+          "label": "Tool",
+          "title": "Cashback calculator",
+          "href": "/calculators.html"
+        },
+        {
+          "label": "Guide",
+          "title": "Condo buying guide",
+          "href": "/condo-buying-guide.html"
+        }
+      ],
+      "metaDesc": "Liberty Village Toronto: condo prices, schools, commute times, and walk score. Condos from $550K. See how much cashback you'd get on a typical purchase."
+    },
+    {
+      "slug": "the-beaches-toronto",
+      "name": "The Beaches",
+      "city": "toronto",
+      "cityName": "Toronto",
+      "citySlug": "toronto-cashback-realtor",
+      "heroSub": "A lakefront village inside the city, known for Victorian and Edwardian character homes, a boardwalk, and some of the lowest turnover of any Toronto neighbourhood.",
+      "overview": "The Beaches sits along Lake Ontario in Toronto's east end, stretching roughly from Woodbine to Victoria Park, with Queen Street East as its main commercial spine. It has a small-town, cottage-like feel despite being minutes from downtown, built around a genuine sandy waterfront, the boardwalk, and Kew Gardens. Detached and semi-detached houses make up most of the housing stock, with very low turnover. Buyers who move here tend to stay for decades.",
+      "walkScore": 81,
+      "transitScore": 72,
+      "commuteTime": "~30 min",
+      "condosFrom": "$798K+",
+      "calcDefault": 1500000,
+      "marketDate": "July 2026",
+      "prices": [
+        {
+          "type": "Condos",
+          "val": "$798K – $1.1M",
+          "note": "Limited supply, mostly smaller low-rise buildings near Queen St E"
+        },
+        {
+          "type": "Semis & townhomes",
+          "val": "$1.3M – $2M",
+          "note": "Victorian and Edwardian stock on the neighbourhood's tree-lined side streets"
+        },
+        {
+          "type": "Detached",
+          "val": "$2M – $4.5M+",
+          "note": "Lakefront and near-lake addresses on streets like Neville Park Blvd command a real premium"
+        },
+        {
+          "type": "Days on market",
+          "val": "~13 – 20 days",
+          "note": "One of Toronto's fastest-moving markets. Well-priced homes often sell over asking."
+        }
+      ],
+      "schools": [
+        {
+          "name": "Williamson Road Junior Public School",
+          "meta": "JK–Grade 6 · TDSB · Core Beaches catchment, walkable from most of the neighbourhood",
+          "type": "Public"
+        },
+        {
+          "name": "Kew Beach Junior Public School",
+          "meta": "JK–Grade 6 · TDSB · Near Kew Gardens and the boardwalk",
+          "type": "Public"
+        },
+        {
+          "name": "Glen Ames Senior Public School",
+          "meta": "Grades 7–8 · TDSB · Main intermediate school serving Beaches families",
+          "type": "Public"
+        },
+        {
+          "name": "Malvern Collegiate Institute",
+          "meta": "Grades 9–12 · TDSB · The Beaches' historic, well-regarded secondary school",
+          "type": "Public Secondary"
+        }
+      ],
+      "commutes": [
+        {
+          "route": "Queen St E → Downtown core",
+          "mode": "501/301 Queen streetcar",
+          "time": "~30 min"
+        },
+        {
+          "route": "Main Street Station → Union Station",
+          "mode": "Subway Line 2 + Line 1",
+          "time": "~28 min"
+        },
+        {
+          "route": "Kingston Rd → Coxwell Station",
+          "mode": "22 Coxwell bus",
+          "time": "~12 min"
+        },
+        {
+          "route": "Boardwalk → Downtown core",
+          "mode": "Cycling, Martin Goodman Trail",
+          "time": "~35 min"
+        }
+      ],
+      "whoFor": [
+        {
+          "label": "Families",
+          "text": "One of Toronto's most popular family neighbourhoods. Strong schools, a genuine sense of community, parks, and the lake itself. Families who buy here tend to stay for the long term, which keeps turnover low."
+        },
+        {
+          "label": "Lifestyle buyers",
+          "text": "Anyone who wants a slower, coastal pace of life without leaving the city. Boardwalk walks, patios on Queen St E, and a summer atmosphere that lasts most of the year."
+        },
+        {
+          "label": "Move-up buyers",
+          "text": "Buyers trading a condo or smaller house elsewhere in the east end for more space and a yard. The Beaches rewards patience since good properties do not sit long."
+        },
+        {
+          "label": "Not ideal for",
+          "text": "Buyers needing a fast downtown subway commute. There is no subway directly in The Beaches, and the streetcar/bus commute downtown runs longer than more central neighbourhoods."
+        }
+      ],
+      "laleh": "\"The Beaches is not a speculation market, it is a neighbourhood people buy into for the long term. Homes here sell fast, often in under three weeks, and well-presented properties frequently go over asking. Buyers need to have financing sorted before they start looking seriously, because hesitation costs you the property. On a $1.5M home, the cashback is over $32,000, which matters a lot in a market where you are competing against other serious, prepared buyers.\"",
+      "faqs": [
+        {
+          "q": "Is The Beaches good for families?",
+          "a": "Yes, it is one of the most popular family neighbourhoods in Toronto. Strong TDSB schools including Malvern Collegiate Institute, low crime, parks, and the lakefront itself. Low turnover means families who buy here tend to stay for decades."
+        },
+        {
+          "q": "Does The Beaches have subway access?",
+          "a": "Not directly. The nearest subway stations are Main Street and Woodbine on Line 2, reached by streetcar or bus from most of the neighbourhood. Commute times downtown run around 28 to 30 minutes depending on your starting point."
+        },
+        {
+          "q": "Why do homes sell so fast in The Beaches?",
+          "a": "Low turnover and consistent demand. Many residents stay for decades, so when a well-presented home does come up, buyers move quickly. Homes here average 13 to 20 days on market, among the fastest in Toronto, with many selling over asking."
+        },
+        {
+          "q": "How much cashback would I get on a typical Beaches purchase?",
+          "a": "On a $1.5M home at 2.5% buyer agent commission, you'd receive approximately $32,500 back after closing with Home Cashbacks. On a $2.45M detached at 2.5%, that's over $56,000 back. Use the calculator above to run your own numbers."
+        }
+      ],
+      "related": [
+        {
+          "label": "City page",
+          "title": "Toronto cashback realtor — all neighbourhoods",
+          "href": "/toronto-cashback-realtor.html"
+        },
+        {
+          "label": "Tool",
+          "title": "Cashback calculator",
+          "href": "/calculators.html"
+        },
+        {
+          "label": "Guide",
+          "title": "First-time buyer guide",
+          "href": "/first-time-buyer-guide.html"
+        }
+      ],
+      "metaDesc": "The Beaches Toronto: schools, commute times, and real estate prices. Detached homes from $2M. See how much cashback you'd get on a typical purchase."
+    },
+    {
+      "slug": "roncesvalles-toronto",
+      "name": "Roncesvalles",
+      "city": "toronto",
+      "cityName": "Toronto",
+      "citySlug": "toronto-cashback-realtor",
+      "heroSub": "A walkable west-end village built around Roncesvalles Avenue, known for Polish heritage, cafes, and quick access to High Park and the subway.",
+      "overview": "Roncesvalles runs along Roncesvalles Avenue between Queen Street West and Bloor Street West, bordering High Park to the west and Parkdale to the south. It has a genuine main-street feel, with independent cafes, bakeries, and shops lining the strip, alongside a historically Polish community that still shapes the neighbourhood's character. Housing is a mix of semis, detached homes, and some condos and low-rise apartments, mostly on tight, walkable side streets close to the avenue itself.",
+      "walkScore": 85,
+      "transitScore": 88,
+      "commuteTime": "~18 min",
+      "condosFrom": "$650K+",
+      "calcDefault": 1300000,
+      "marketDate": "July 2026",
+      "prices": [
+        {
+          "type": "Condos",
+          "val": "$650K – $850K",
+          "note": "Smaller low-rise buildings, limited new supply"
+        },
+        {
+          "type": "Semis & row houses",
+          "val": "$1.3M – $1.9M",
+          "note": "The most common housing type, typically 16 to 30 feet wide"
+        },
+        {
+          "type": "Detached",
+          "val": "$1.8M – $2.5M+",
+          "note": "Larger character homes, particularly closer to High Park"
+        },
+        {
+          "type": "Days on market",
+          "val": "~13 – 15 days",
+          "note": "One of Toronto's faster-moving markets, well over half of homes sell in under 10 days"
+        }
+      ],
+      "schools": [
+        {
+          "name": "Fern Avenue Junior and Senior Public School",
+          "meta": "JK–Grade 8 · TDSB · The neighbourhood's most recognized local school",
+          "type": "Public"
+        },
+        {
+          "name": "Garden Avenue Junior Public School",
+          "meta": "JK–Grade 6 · TDSB · Serves the eastern part of the catchment near Parkdale",
+          "type": "Public"
+        },
+        {
+          "name": "Parkdale Collegiate Institute",
+          "meta": "Grades 9–12 · TDSB · Main secondary school for the area",
+          "type": "Public Secondary"
+        },
+        {
+          "name": "St. Vincent de Paul Catholic School",
+          "meta": "JK–Grade 8 · TCDSB · Serves Catholic families in the Roncesvalles catchment",
+          "type": "Catholic"
+        }
+      ],
+      "commutes": [
+        {
+          "route": "Dundas West Station → Union Station",
+          "mode": "Subway Line 2 + UP Express",
+          "time": "~18 min"
+        },
+        {
+          "route": "Roncesvalles Ave → Downtown core",
+          "mode": "504 King streetcar",
+          "time": "~25 min"
+        },
+        {
+          "route": "Queen St W → Downtown core",
+          "mode": "501 Queen streetcar",
+          "time": "~28 min"
+        },
+        {
+          "route": "Walking to High Park",
+          "mode": "On foot",
+          "time": "~5 min"
+        }
+      ],
+      "whoFor": [
+        {
+          "label": "Families",
+          "text": "A genuine village-within-the-city feel, walkable errands, High Park on the doorstep, and solid TDSB schools. Families who want a house rather than a condo, without leaving the west end, look here first."
+        },
+        {
+          "label": "Professionals",
+          "text": "Fast subway access via Dundas West plus the UP Express make this a strong option for downtown or airport commuters who still want character housing over glass condos."
+        },
+        {
+          "label": "Move-up buyers",
+          "text": "Buyers coming from Parkdale or west-end condos who want a semi or house with a real street and yard, while staying close to the same amenities and commute they are used to."
+        },
+        {
+          "label": "Not ideal for",
+          "text": "Buyers on a tight entry-level budget. Semis regularly clear $1.3M, and detached homes push toward $2M and above. Condos are the more accessible entry point but supply is limited."
+        }
+      ],
+      "laleh": "\"Roncesvalles buyers are usually choosing it over the Annex or Leslieville for one reason: High Park. You get the same walkable main-street energy, the same subway access, but with a real park on your doorstep. It moves fast, homes here sell in under two weeks on average, so buyers need financing locked before they start touring. On a $1.3M semi, the cashback is over $27,000, which is real money to have in hand when you are competing in a market this quick.\"",
+      "faqs": [
+        {
+          "q": "Is Roncesvalles good for families?",
+          "a": "Yes. Fern Avenue Junior and Senior Public School is well regarded locally, High Park is on the doorstep, and the neighbourhood has a genuine walkable, community feel. Families looking for a house rather than a condo in the west end consider Roncesvalles a top pick."
+        },
+        {
+          "q": "Roncesvalles vs The Annex — which is better value?",
+          "a": "Roncesvalles tends to offer slightly more space per dollar on semis and detached homes, with the added benefit of High Park nearby. The Annex has a stronger subway network and closer proximity to U of T and downtown. If a park and slightly more space matter most, Roncesvalles wins."
+        },
+        {
+          "q": "Does Roncesvalles have subway access?",
+          "a": "Yes. Dundas West Station on Line 2 sits at the top of Roncesvalles Avenue, with direct downtown access plus the UP Express to Union Station in about 10 minutes. The 504 King and 501 Queen streetcars also run through the area."
+        },
+        {
+          "q": "How much cashback would I get on a typical Roncesvalles purchase?",
+          "a": "On a $1.3M semi at 2.5% buyer agent commission, you'd receive approximately $27,500 back after closing with Home Cashbacks. On a $1.8M detached at 2.5%, that's $40,000 back. Use the calculator above to run your own numbers."
+        }
+      ],
+      "related": [
+        {
+          "label": "City page",
+          "title": "Toronto cashback realtor — all neighbourhoods",
+          "href": "/toronto-cashback-realtor.html"
+        },
+        {
+          "label": "Tool",
+          "title": "Cashback calculator",
+          "href": "/calculators.html"
+        },
+        {
+          "label": "Guide",
+          "title": "Closing costs in Ontario",
+          "href": "/closing-costs-ontario.html"
+        }
+      ],
+      "metaDesc": "Roncesvalles Toronto: schools, commute times, and real estate prices. Semis from $1.3M. See how much cashback you'd get on a typical purchase."
     }
   ]
 }

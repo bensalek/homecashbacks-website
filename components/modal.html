@@ -3,7 +3,7 @@
   <div class="modal">
     <button class="modal-close" onclick="closeModal()">✕</button>
     <div id="modal-form-wrap">
-      <div class="modal-tag" id="modal-tag">Claim Your Free Consultation</div>
+      <div class="modal-tag" id="modal-tag"></div>
       <div class="modal-title" id="modal-title">Let's get started</div>
       <div class="modal-sub" id="modal-sub">We'll follow up within a few hours. No commitment required.</div>
       <form id="form-showing" name="contact" data-netlify="true" netlify-honeypot="bot-field" style="display:block" novalidate onsubmit="return false">
@@ -15,13 +15,12 @@
           <div class="f-error" id="err-name"></div>
         </div>
         <div class="f-field">
-          <label class="f-label" for="f-email">Email address</label>
+          <label class="f-label" for="f-email">Email address <span style="color:var(--muted);font-size:11px">(required)</span></label>
           <input class="f-input" type="text" id="f-email" name="email" inputmode="email" autocomplete="email"/>
         </div>
         <div class="f-field">
-          <label class="f-label" for="f-phone">Phone number</label>
+          <label class="f-label" for="f-phone">Phone number <span style="color:var(--muted);font-size:11px">(required)</span></label>
           <input class="f-input" type="tel" id="f-phone" name="phone" inputmode="tel" autocomplete="tel"/>
-          <div class="f-note">Please provide at least one contact method.</div>
           <div class="f-error" id="err-contact"></div>
         </div>
         <p class="f-consent">By submitting, you agree to be contacted by HomeCashbacks. View our <a href="/privacy.html" target="_blank">Privacy Policy</a>.</p>

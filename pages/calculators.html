@@ -7,10 +7,10 @@
   <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png"/>
   <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
-<title>Home Buying Calculators | HomeCashbacks</title>
-<meta name="description" content="Free calculators for GTA home buyers. Estimate closing costs and true monthly ownership cost before you buy."/>
-<meta property="og:title" content="Home Buying Calculators | HomeCashbacks"/>
-<meta property="og:description" content="Free calculators for GTA home buyers. Estimate closing costs and true monthly ownership cost before you buy."/>
+<title>Closing Cost Calculator Toronto | Home Cashbacks</title>
+<meta name="description" content="Free closing cost, cashback, mortgage payment, and monthly ownership cost calculators for GTA home buyers and sellers."/>
+<meta property="og:title" content="Closing Cost Calculator Toronto | Home Cashbacks"/>
+<meta property="og:description" content="Free closing cost, cashback, mortgage payment, and monthly ownership cost calculators for GTA home buyers and sellers."/>
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="https://homecashbacks.ca/calculators.html"/>
 <meta property="og:image" content="https://homecashbacks.ca/og-image.png"/>
@@ -26,7 +26,7 @@
   --bg:#f0f4f8;--bg2:#e2eaf2;--bg3:#ccd8e8;
   --ink:#1a2332;--ink2:#2d3d52;
   --muted:#5a6a82;--border:rgba(26,35,50,.1);
-  --white:#fff;--amber:var(--cta);--amber-dark:var(--cta-dark);--blue:#2563eb;
+  --white:#fff;--cta:#1c864e;--cta-text:#fff;--cta-dark:#156b3d;--amber:var(--cta);--amber-dark:var(--cta-dark);--blue:#2563eb;
   --green:#16a34a;--green2:#16a34a;--red:#b83232;
   --charcoal:#1a2332;--taupe:#6b7fa0;--gold-light:#fef3dc;
 }
@@ -240,6 +240,20 @@ footer{background:#1a2332;padding:2.5rem 2rem 1.5rem}
   ]
 }
 </script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "What are closing costs when buying a home in Ontario?", "acceptedAnswer": {"@type": "Answer", "text": "Closing costs are what you pay on top of your down payment to complete the purchase. The biggest item is land transfer tax, calculated on a sliding scale from 0.5% to 2.5% of the purchase price. Toronto buyers pay this twice, provincial and municipal. You also pay legal fees, title insurance, and a home inspection. Budget 2% to 4% of the purchase price in total."}},
+    {"@type": "Question", "name": "How does Toronto's land transfer tax work?", "acceptedAnswer": {"@type": "Answer", "text": "Ontario's provincial LTT starts at 0.5% on the first $55,000 and goes up to 2.5% on amounts above $2,000,000. Toronto adds a municipal LTT on top for any property within city limits, roughly doubling the total land transfer tax compared to elsewhere in Ontario."}},
+    {"@type": "Question", "name": "What is included in the true monthly cost of owning a home?", "acceptedAnswer": {"@type": "Answer", "text": "Beyond the mortgage payment: property tax, utilities, home insurance, and condo fees if applicable. The monthly ownership calculator adds all of these together for a realistic monthly budget."}},
+    {"@type": "Question", "name": "How does the cashback calculator work?", "acceptedAnswer": {"@type": "Answer", "text": "Enter your home price and the buyer agent commission rate, typically 2.5% in the GTA. That commission is already set aside by the seller in every deal. Home Cashbacks takes a flat $4,999 fee and returns the rest after closing."}},
+    {"@type": "Question", "name": "What does the mortgage payment calculator include?", "acceptedAnswer": {"@type": "Answer", "text": "Just the principal and interest portion of your monthly payment, based on purchase price, down payment, interest rate, and amortization. It does not include property tax, utilities, or insurance."}}
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -247,7 +261,7 @@ footer{background:#1a2332;padding:2.5rem 2rem 1.5rem}
 <!-- PAGE HERO -->
 <div class="page-hero">
   <div class="page-hero-eyebrow">Tools</div>
-  <h1>Home buying calculators</h1>
+  <h1>Toronto real estate calculators</h1>
   <p class="page-hero-sub">Run the numbers before you make any decisions. Free, no sign-up.</p>
 </div>
 
@@ -257,6 +271,8 @@ footer{background:#1a2332;padding:2.5rem 2rem 1.5rem}
   <div class="calc-tabs-outer">
     <button class="calc-tab-outer active" onclick="switchTab(0)">Closing costs</button>
     <button class="calc-tab-outer" onclick="switchTab(1)">Monthly ownership cost</button>
+    <button class="calc-tab-outer" onclick="switchTab(2)">Cashback</button>
+    <button class="calc-tab-outer" onclick="switchTab(3)">Mortgage payment</button>
   </div>
 
   <!-- CLOSING COSTS -->
@@ -342,16 +358,21 @@ footer{background:#1a2332;padding:2.5rem 2rem 1.5rem}
               <p class="calc-field-note">Enter your estimated annual amount</p>
             </div>
             <div class="calc-field">
-              <label class="calc-label">Monthly utilities</label>
-              <div class="calc-input-wrap"><span class="calc-prefix">$</span><input class="calc-input" type="number" id="tm-util-input" value="400" min="0" step="25" oninput="calcMonthly()" onchange="calcMonthly()"/></div>
-              <p class="calc-field-note">GTA avg. ~$400/mo for a detached home</p>
-            </div>
-            <div class="calc-field">
               <label class="calc-label">Property type</label>
-              <select class="calc-select" id="tm-type" onchange="calcMonthly()">
+              <select class="calc-select" id="tm-type" onchange="tmTypeChanged()">
                 <option value="freehold" selected>Freehold</option>
                 <option value="condo">Condo</option>
               </select>
+            </div>
+            <div class="calc-field">
+              <label class="calc-label">Monthly utilities</label>
+              <div class="calc-input-wrap"><span class="calc-prefix">$</span><input class="calc-input" type="number" id="tm-util-input" value="400" min="0" step="25" oninput="calcMonthly()" onchange="calcMonthly()"/></div>
+              <p class="calc-field-note" id="tm-util-note">GTA avg. ~$400/mo for a house</p>
+            </div>
+            <div class="calc-field">
+              <label class="calc-label">Monthly home insurance</label>
+              <div class="calc-input-wrap"><span class="calc-prefix">$</span><input class="calc-input" type="number" id="tm-insurance-input" value="150" min="0" step="10" oninput="calcMonthly()" onchange="calcMonthly()"/></div>
+              <p class="calc-field-note" id="tm-insurance-note">GTA avg. ~$150 to $200/mo for a house</p>
             </div>
             <div class="calc-field" id="tm-condo-field" style="display:none">
               <label class="calc-label">Monthly condo fee</label>
@@ -366,7 +387,89 @@ footer{background:#1a2332;padding:2.5rem 2rem 1.5rem}
             <div class="calc-line"><span class="calc-line-label">Home insurance (est.)</span><span class="calc-line-val" id="tm-insurance">—</span></div>
             <div class="calc-line" id="tm-condo-line" style="display:none"><span class="calc-line-label">Condo fee</span><span class="calc-line-val" id="tm-condo-val">—</span></div>
             <div class="calc-line-total"><span>Total monthly</span><span id="tm-total">—</span></div>
-            <p class="calc-disclaimer">Insurance ~$150/mo est. All figures are estimates.</p>
+            <p class="calc-disclaimer">All figures are estimates.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CASHBACK -->
+  <div class="calc-panel-outer" id="panel-2">
+    <div class="calc-card">
+      <div class="calc-card-header">
+        <div class="calc-card-title">Cashback calculator</div>
+        <div class="calc-card-sub">See your cashback if you're buying, or your savings vs. standard commission if you're selling.</div>
+      </div>
+      <div class="calc-body-inner">
+        <div class="calc-grid">
+          <div class="calc-inputs">
+            <div class="calc-field" style="margin-bottom:1rem">
+              <label class="calc-label">I'm...</label>
+              <div style="display:flex;gap:.5rem">
+                <button type="button" id="cb-buy-btn" class="calc-tab-outer active" style="border:1px solid var(--border);border-radius:6px;flex:1" onclick="cbSetMode('buy')">Buying</button>
+                <button type="button" id="cb-sell-btn" class="calc-tab-outer" style="border:1px solid var(--border);border-radius:6px;flex:1" onclick="cbSetMode('sell')">Selling</button>
+              </div>
+            </div>
+            <div class="calc-field">
+              <label class="calc-label">Home price</label>
+              <div class="calc-input-wrap"><span class="calc-prefix">$</span><input class="calc-input" type="number" id="cb-price" value="900000" min="100000" max="5000000" step="10000" oninput="calcCashback()" onchange="calcCashback()"/></div>
+            </div>
+            <div class="calc-field">
+              <label class="calc-label" id="cb-comm-label">Buyer agent commission</label>
+              <div class="calc-input-wrap"><input class="calc-input" type="number" id="cb-comm" value="2.5" min="1" max="5" step="0.1" oninput="calcCashback()" onchange="calcCashback()"/><span class="calc-suffix">%</span></div>
+              <p class="calc-field-note" id="cb-comm-note">Set by the seller in every deal. 2.5% is typical in the GTA.</p>
+            </div>
+          </div>
+          <div class="calc-results">
+            <div class="calc-results-title" id="cb-results-title">Your cashback</div>
+            <div class="calc-line"><span class="calc-line-label" id="cb-total-label">Total buyer agent commission</span><span class="calc-line-val" id="cb-total">—</span></div>
+            <div class="calc-line"><span class="calc-line-label">HomeCashbacks flat fee</span><span class="calc-line-val" id="cb-fee">−$4,999</span></div>
+            <div class="calc-line-total"><span id="cb-result-label">You receive</span><span id="cb-result">—</span></div>
+            <p class="calc-disclaimer" id="cb-disclaimer">Cashback arrives 6 to 8 weeks after closing. Estimate only, actual commission is set by the seller.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MORTGAGE PAYMENT -->
+  <div class="calc-panel-outer" id="panel-3">
+    <div class="calc-card">
+      <div class="calc-card-header">
+        <div class="calc-card-title">Mortgage payment calculator</div>
+        <div class="calc-card-sub">Just the payment, principal and interest, no property tax or utilities included.</div>
+      </div>
+      <div class="calc-body-inner">
+        <div class="calc-grid">
+          <div class="calc-inputs">
+            <div class="calc-field">
+              <label class="calc-label">Purchase price</label>
+              <div class="calc-input-wrap"><span class="calc-prefix">$</span><input class="calc-input" type="number" id="mp-price" value="900000" min="100000" max="5000000" step="10000" oninput="mpPriceChanged()" onchange="mpPriceChanged()"/></div>
+            </div>
+            <div class="calc-field">
+              <label class="calc-label">Down payment</label>
+              <div class="calc-input-wrap"><span class="calc-prefix">$</span><input class="calc-input" type="number" id="mp-down" value="180000" min="0" step="5000" oninput="calcMortgagePayment()" onchange="calcMortgagePayment()"/></div>
+              <p class="calc-field-note" id="mp-down-pct">20% of purchase price</p>
+            </div>
+            <div class="calc-field">
+              <label class="calc-label">Interest rate</label>
+              <div class="calc-input-wrap"><input class="calc-input" type="number" id="mp-rate" value="3.89" min="1" max="12" step="0.05" oninput="calcMortgagePayment()" onchange="calcMortgagePayment()"/><span class="calc-suffix">%</span></div>
+            </div>
+            <div class="calc-field">
+              <label class="calc-label">Amortization</label>
+              <select class="calc-select" id="mp-amort" onchange="calcMortgagePayment()">
+                <option value="20">20 years</option>
+                <option value="25" selected>25 years</option>
+                <option value="30">30 years</option>
+              </select>
+            </div>
+          </div>
+          <div class="calc-results">
+            <div class="calc-results-title">Your payment</div>
+            <div class="calc-line"><span class="calc-line-label">Mortgage amount</span><span class="calc-line-val" id="mp-principal">—</span></div>
+            <div class="calc-line-total"><span>Monthly payment</span><span id="mp-payment">—</span></div>
+            <p class="calc-disclaimer">Principal and interest only. Property tax, utilities, and insurance not included, see the Monthly Ownership Cost tab for the full picture.</p>
           </div>
         </div>
       </div>
@@ -396,6 +499,14 @@ footer{background:#1a2332;padding:2.5rem 2rem 1.5rem}
         <div class="faq-col-title">Monthly ownership</div>
         <div class="faq-list" id="faq-monthly"></div>
       </div>
+      <div>
+        <div class="faq-col-title">Cashback</div>
+        <div class="faq-list" id="faq-cashback"></div>
+      </div>
+      <div>
+        <div class="faq-col-title">Mortgage payment</div>
+        <div class="faq-list" id="faq-mortgage"></div>
+      </div>
     </div>
   </div>
 </section>
@@ -418,14 +529,14 @@ function calcClosing(){
   const pR=ftb?Math.min(prov,4000):0,mR=(ftb&&tor)?Math.min(munic,4475):0;
   const legal=1300;
   const title=p<500000?350:p<750000?550:p<1000000?750:950;
-  document.getElementById('cc-pltt').textContent=fmtC(prov-pR);
+  document.getElementById('cc-pltt').textContent=fmtC(prov);
   document.getElementById('cc-mltt-row').style.display=tor?'flex':'none';
-  document.getElementById('cc-mltt').textContent=fmtC(munic-mR);
+  document.getElementById('cc-mltt').textContent=fmtC(munic);
   document.getElementById('cc-ftb-row').style.display=ftb?'flex':'none';
   document.getElementById('cc-rebate').textContent='−'+fmtC(pR+mR);
   document.getElementById('cc-legal').textContent=fmtC(legal)+' (est.)';
   document.getElementById('cc-title').textContent=fmtC(title);
-  document.getElementById('cc-total').textContent=fmtC(Math.max(0,(prov-pR)+(tor?(munic-mR):0)+legal+title+500));
+  document.getElementById('cc-total').textContent=fmtC(Math.max(0,prov+(tor?munic:0)-pR-mR+legal+title+500));
 }
 
 function tmPriceChanged(){
@@ -449,7 +560,7 @@ function calcMonthly(){
   let prin=p-down;if(p>0&&pct<20){const r=pct>=15?.028:pct>=10?.031:.04;prin+=prin*r;}
   const semi=rate/100/2,em=Math.pow(1+semi,1/6)-1,n=yrs*12;
   const mo=prin>0&&em>0?prin*(em*Math.pow(1+em,n))/(Math.pow(1+em,n)-1):0;
-  const tax=taxAnnual/12,ins=150;
+  const tax=taxAnnual/12,ins=parseFloat(document.getElementById('tm-insurance-input').value)||0;
   const tot=mo+tax+util+ins+cf;
   document.getElementById('tm-mortgage').textContent=fmtC(mo);
   document.getElementById('tm-tax').textContent=fmtC(tax);
@@ -458,7 +569,75 @@ function calcMonthly(){
   if(condo)document.getElementById('tm-condo-val').textContent=fmtC(cf);
   document.getElementById('tm-total').textContent=fmtC(tot);
 }
-document.getElementById('tm-type').addEventListener('change',calcMonthly);
+function tmTypeChanged(){
+  const condo=document.getElementById('tm-type').value==='condo';
+  const utilEl=document.getElementById('tm-util-input');
+  const insEl=document.getElementById('tm-insurance-input');
+  if(!utilEl.dataset.touched)utilEl.value=condo?150:400;
+  if(!insEl.dataset.touched)insEl.value=condo?45:150;
+  document.getElementById('tm-util-note').textContent=condo?'GTA avg. ~$110 to $220/mo for a condo, heat/water often included in fees':'GTA avg. ~$400/mo for a house';
+  document.getElementById('tm-insurance-note').textContent=condo?'GTA avg. ~$30 to $60/mo for a condo, building insurance is covered by condo fees':'GTA avg. ~$150 to $200/mo for a house';
+  calcMonthly();
+}
+document.getElementById('tm-util-input').addEventListener('input',function(){this.dataset.touched='1';});
+document.getElementById('tm-insurance-input').addEventListener('input',function(){this.dataset.touched='1';});
+
+let cbMode='buy';
+function cbSetMode(mode){
+  cbMode=mode;
+  document.getElementById('cb-buy-btn').classList.toggle('active',mode==='buy');
+  document.getElementById('cb-sell-btn').classList.toggle('active',mode==='sell');
+  calcCashback();
+}
+function calcCashback(){
+  const p=parseFloat(document.getElementById('cb-price').value)||0;
+  const rate=parseFloat(document.getElementById('cb-comm').value)||0;
+  const commission=p*(rate/100);
+  const fee=4999;
+  const net=Math.max(0,commission-fee);
+  document.getElementById('cb-fee').textContent='−'+fmtC(fee);
+  if(cbMode==='buy'){
+    document.getElementById('cb-comm-label').textContent='Buyer agent commission';
+    document.getElementById('cb-comm-note').textContent='Set by the seller in every deal. 2.5% is typical in the GTA.';
+    document.getElementById('cb-results-title').textContent='Your cashback';
+    document.getElementById('cb-total-label').textContent='Total buyer agent commission';
+    document.getElementById('cb-total').textContent=fmtC(commission);
+    document.getElementById('cb-result-label').textContent='You receive';
+    document.getElementById('cb-result').textContent=fmtC(net);
+    document.getElementById('cb-disclaimer').textContent='Cashback arrives 6 to 8 weeks after closing. Estimate only, actual commission is set by the seller.';
+  }else{
+    document.getElementById('cb-comm-label').textContent='Listing commission rate';
+    document.getElementById('cb-comm-note').textContent='Standard rate charged by a traditional listing agent. 2.5% is typical in the GTA.';
+    document.getElementById('cb-results-title').textContent='Your savings';
+    document.getElementById('cb-total-label').textContent='Standard listing commission';
+    document.getElementById('cb-total').textContent=fmtC(commission);
+    document.getElementById('cb-result-label').textContent='You save';
+    document.getElementById('cb-result').textContent=fmtC(net);
+    document.getElementById('cb-disclaimer').textContent='Estimate only. Your actual savings depend on the commission rate a traditional agent would have charged.';
+  }
+}
+calcCashback();
+
+function mpPriceChanged(){
+  const price=parseFloat(document.getElementById('mp-price').value)||0;
+  document.getElementById('mp-down').value=Math.round(price*0.2);
+  calcMortgagePayment();
+}
+function calcMortgagePayment(){
+  const p=parseFloat(document.getElementById('mp-price').value)||0;
+  const down=parseFloat(document.getElementById('mp-down').value)||0;
+  const rate=parseFloat(document.getElementById('mp-rate').value)||0;
+  const yrs=parseInt(document.getElementById('mp-amort').value)||25;
+  const pct=p>0?Math.round(down/p*1000)/10:0;
+  document.getElementById('mp-down-pct').textContent=pct+'% of purchase price';
+  let prin=p-down;
+  if(p>0&&pct<20){const r=pct>=15?.028:pct>=10?.031:.04;prin+=prin*r;}
+  const semi=rate/100/2,em=Math.pow(1+semi,1/6)-1,n=yrs*12;
+  const mo=prin>0&&em>0?prin*(em*Math.pow(1+em,n))/(Math.pow(1+em,n)-1):0;
+  document.getElementById('mp-principal').textContent=fmtC(prin);
+  document.getElementById('mp-payment').textContent=fmtC(mo);
+}
+calcMortgagePayment();
 
 calcClosing();calcMonthly();
 
@@ -482,14 +661,26 @@ const FAQ_CLOSING=[
 ];
 
 const FAQ_MONTHLY=[
-  {q:'What is included in the true monthly cost of owning a home?',a:'Most buyers only think about the mortgage payment, but monthly ownership costs more than that. Property tax in the GTA typically runs $400 to $800 per month depending on location and assessed value. Utilities (hydro, gas, water) average $300 to $500 for a detached home. Home insurance is roughly $150 to $200 per month. If you are buying a condo, monthly fees in Toronto often run $500 to $1,200 or more. The calculator above adds all of these together so you can budget for the real number. Ready to start the process? Use our <a href="/checklist.html" style="color:var(--cta);text-decoration:none;font-weight:500">home buyer checklist</a>.'},
+  {q:'What is included in the true monthly cost of owning a home?',a:'Most buyers only think about the mortgage payment, but monthly ownership costs more than that. Property tax in the GTA typically runs $400 to $800 per month depending on location and assessed value. Utilities (hydro, gas, water) average $110 to $220 per month for a condo, since heat and water are often bundled into condo fees, versus $400 or more for a house. Home insurance runs $30 to $60 per month for a condo, since the building itself is covered by condo fees, versus $150 to $200 per month for a house. If you are buying a condo, monthly fees in Toronto often run $500 to $1,200 or more on top of that. The calculator above adjusts its defaults automatically based on the property type you select. Ready to start the process? Use our <a href="/checklist.html" style="color:var(--cta);text-decoration:none;font-weight:500">home buyer checklist</a>.'},
   {q:'How is my monthly mortgage payment calculated?',a:'Your payment depends on four things: purchase price, down payment, interest rate, and amortization period. A longer amortization lowers your monthly payment but you pay more interest over time. A shorter amortization means a higher payment but you build equity faster and pay less interest overall. The calculator shows the principal and interest portion of your payment, which is the same number your lender will give you once your rate is confirmed.'},
   {q:'How does amortization length affect my monthly costs?',a:'A 25-year amortization is the standard for insured mortgages in Canada. Going to 30 years reduces your monthly payment but costs more in interest over the life of the loan and slows equity growth. Dropping to 20 years raises your monthly payment but saves a lot in interest. Use the calculator to compare all three side by side.'},
   {q:'How does HomeCashbacks reduce the cost of buying?',a:'The seller pays a buyer agent commission of roughly 2.5% of the purchase price. HomeCashbacks takes a flat $4,999 from that and sends you everything above it after closing. On a $900,000 home you would get back roughly $17,500. You still get full service: showings, offer writing, negotiation, and closing support. Cashback arrives 6 to 8 weeks after your closing date.'},
 ];
 
+const FAQ_CASHBACK=[
+  {q:'How does the cashback calculator work?',a:'Enter your home price and the buyer agent commission rate, typically 2.5% in the GTA. That commission is already set aside by the seller in every deal. We take a flat $4,999 fee and send you the rest after closing. If you\'re selling, switch to "Selling" to see your savings vs. a standard percentage commission instead.'},
+  {q:'Is the commission rate always 2.5%?',a:'It varies by listing, typically 2% to 2.5% for the buyer agent portion in the GTA, set by the seller and disclosed on the MLS listing. Use the exact rate shown on a specific listing for the most accurate estimate.'},
+  {q:'How much cashback would I get on a $1,000,000 home?',a:'At a 2.5% buyer agent commission, the total commission is $25,000. After our flat $4,999 fee, you\'d receive approximately $20,001 back after closing.'},
+  {q:'How much would I save selling a $1,000,000 home?',a:'A standard 2.5% listing commission on a $1,000,000 home is $25,000. Our flat $4,999 fee saves you approximately $20,001 compared to that standard commission.'},
+];
+const FAQ_MORTGAGE=[
+  {q:'What does this mortgage calculator include?',a:'Just the principal and interest portion of your monthly payment, calculated using your purchase price, down payment, interest rate, and amortization. It does not include property tax, utilities, home insurance, or condo fees. Use the Monthly Ownership Cost tab for the complete picture.'},
+  {q:'Why is my mortgage amount higher than price minus down payment?',a:'If your down payment is below 20%, CMHC mortgage insurance is added to your loan amount, which raises your total mortgage principal. This calculator adds that premium automatically based on your down payment percentage.'},
+  {q:'Should I choose a 25 or 30 year amortization?',a:'25 years is standard for insured mortgages in Canada. A 30-year amortization lowers your monthly payment but costs more in interest over time and slows equity growth. Compare both using the calculator to see the actual dollar difference for your numbers.'},
+];
+
 function renderFAQ(){
-  [['faq-closing',FAQ_CLOSING],['faq-monthly',FAQ_MONTHLY]].forEach(([id,data])=>{
+  [['faq-closing',FAQ_CLOSING],['faq-monthly',FAQ_MONTHLY],['faq-cashback',FAQ_CASHBACK],['faq-mortgage',FAQ_MORTGAGE]].forEach(([id,data])=>{
     const el=document.getElementById(id);
     if(!el)return;
     data.forEach((f,i)=>{

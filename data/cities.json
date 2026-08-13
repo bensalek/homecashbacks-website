@@ -1,5 +1,5 @@
 {
-  "dataDate": "June 2026",
+  "dataDate": "July 2026",
   "cities": [
     {
       "slug": "toronto",
@@ -7,13 +7,13 @@
       "cashback": "$20,000",
       "heroSub": "We are a licensed Toronto buyer agent. We charge a flat $4,999 fee and return the rest of the buyer agent commission to you after closing. On a typical Toronto home, that is over $20,000 cash back.",
       "calcDefault": 900000,
-      "marketDate": "June 2026",
+      "marketDate": "July 2026",
       "marketTitle": "The Toronto Market Right Now",
-      "marketText": "The Toronto market tightened in May, TRREB's most recent report. Sales rose 6.3% year-over-year while new listings fell nearly 19%, and the benchmark price was still down 5.4% from last year. That combination still favours buyers on price, even as competition for well-priced homes has started to pick up in some neighbourhoods.",
+      "marketText": "The Toronto market continued to cool in July, TRREB's most recent report. Sales held roughly steady year-over-year while new listings fell sharply, and the benchmark price was down 4.6% from last year to $934,600. The average sale price came in at $1,010,836, with condo apartments down 7.35% year-over-year specifically. That combination still favours buyers on price, even as tighter supply has started to support the market in some segments.",
       "marketNote": "First-time buyers in Toronto also qualify for both the provincial and municipal land transfer tax rebates, which can add up to <strong>$8,475</strong> in savings on top of your cashback. That combination is unique to Toronto buyers.",
       "stats": [
         {
-          "val": "$1.07M",
+          "val": "$1.01M",
           "label": "Average home price",
           "highlight": true
         },
@@ -91,7 +91,8 @@
           "type": "Victorian character",
           "desc": "Polish village strip, tight community, excellent schools and transit.",
           "price": "Semis from ~$1.2M",
-          "featured": false
+          "featured": false,
+          "link": "/roncesvalles-toronto.html"
         },
         {
           "name": "Riverdale",
@@ -132,7 +133,8 @@
           "type": "Condo district",
           "desc": "Former industrial, now dense condo market. Strong rental demand.",
           "price": "Condos from ~$600K",
-          "featured": false
+          "featured": false,
+          "link": "/liberty-village-toronto.html"
         },
         {
           "name": "Danforth / Greektown",
@@ -159,6 +161,15 @@
           "price": "Semis from ~$950K",
           "featured": true,
           "link": "/corso-italia-toronto.html"
+        },
+        {
+          "name": "The Beaches",
+          "area": "east",
+          "type": "Lakefront village",
+          "desc": "Victorian character homes, boardwalk, and some of the lowest turnover in the city.",
+          "price": "Detached from ~$2M",
+          "link": "/the-beaches-toronto.html",
+          "featured": false
         }
       ],
       "laleh": "\"Toronto buyers often feel like they have no leverage. But the market right now is more balanced than the headlines suggest. Inventory is up, sellers are negotiating, and first-time buyers in Toronto have a double land transfer tax rebate that most agents never even mention. Your cashback combined with that rebate can genuinely change what your first year looks like after closing.\"",
@@ -212,13 +223,13 @@
       "cashback": "$19,000",
       "heroSub": "We are a licensed Mississauga buyer agent. We charge a flat $4,999 fee and return the rest of the buyer agent commission to you after closing. On a typical Mississauga home, that is over $19,000 back.",
       "calcDefault": 960000,
-      "marketDate": "June 2026",
+      "marketDate": "July 2026",
       "marketTitle": "The Mississauga Market Right Now",
       "marketText": "Mississauga is a buyers market. Inventory is above the five-year average and prices are down year over year, which means buyers have more negotiating room than they have had in a long time. If you have been waiting, 2026 is worth a serious look.",
       "marketNote": null,
       "stats": [
         {
-          "val": "$960K",
+          "val": "$1.01M",
           "label": "Average home price",
           "highlight": true
         },
@@ -326,13 +337,13 @@
       "cashback": "$18,000",
       "heroSub": "We are a licensed Etobicoke buyer agent. We charge a flat $4,999 fee and return the rest of the buyer agent commission to you as cash back after closing. On a typical Etobicoke home, that is over $18,000 back.",
       "calcDefault": 950000,
-      "marketDate": "June 2026",
+      "marketDate": "July 2026",
       "marketTitle": "The Etobicoke Market Right Now",
       "marketText": "Etobicoke is one of Toronto's most underrated markets. It offers lakeshore access, established freehold neighbourhoods, and consistent transit links at prices that remain below comparable central Toronto areas. Inventory has risen in 2026 and buyer competition has softened, making this a strong window for serious buyers.",
       "marketNote": null,
       "stats": [
         {
-          "val": "$950K",
+          "val": "$901K",
           "label": "Average home price",
           "highlight": true
         },
@@ -440,13 +451,13 @@
       "cashback": "$14,000",
       "heroSub": "We are a licensed Scarborough buyer agent. We charge a flat $4,999 fee and return the rest of the buyer agent commission to you as cash back after closing. Scarborough offers some of the best freehold value in Toronto, and your cashback makes it even better.",
       "calcDefault": 760000,
-      "marketDate": "June 2026",
+      "marketDate": "July 2026",
       "marketTitle": "The Scarborough Market Right Now",
       "marketText": "Scarborough is Toronto's most accessible freehold market. Detached homes remain available at prices that first-time buyers can actually reach, and inventory has grown in 2026 giving buyers more time and more options. The Scarborough RT replacement and Eglinton East LRT extension are long-term infrastructure plays that are beginning to factor into buyer interest.",
       "marketNote": null,
       "stats": [
         {
-          "val": "$760K",
+          "val": "$721K",
           "label": "Average home price",
           "highlight": true
         },
@@ -554,13 +565,13 @@
       "cashback": "$17,500",
       "heroSub": "We are a licensed North York buyer agent. We charge a flat $4,999 fee and return the rest of the buyer agent commission to you as cash back after closing. On a typical North York home, that is over $17,500 back.",
       "calcDefault": 900000,
-      "marketDate": "June 2026",
+      "marketDate": "July 2026",
       "marketTitle": "The North York Market Right Now",
       "marketText": "North York is one of the GTA's most diverse and transit-connected housing markets. The Yonge-Sheppard corridor anchors condo demand while areas like Willowdale and Bayview Village draw freehold buyers priced out of central Toronto. Inventory has risen in 2026, giving buyers more negotiating room than they have seen in years.",
       "marketNote": null,
       "stats": [
         {
-          "val": "$900K",
+          "val": "$853K",
           "label": "Average home price",
           "highlight": true
         },
@@ -668,13 +679,13 @@
       "cashback": "$18,000",
       "heroSub": "We are a licensed Vaughan buyer agent. We charge a flat $4,999 fee and return the rest of the buyer agent commission to you as cash back after closing. On a typical Vaughan home, that is over $18,500 back.",
       "calcDefault": 980000,
-      "marketDate": "June 2026",
+      "marketDate": "July 2026",
       "marketTitle": "The Vaughan Market Right Now",
       "marketText": "Vaughan is one of the GTA's fastest-growing cities and a top destination for buyers seeking newer construction, larger lots, and strong highways and transit access. The Vaughan Metropolitan Centre subway station has firmly established the area as a serious option for commuters. Inventory has risen in 2026, giving buyers considerably more negotiating room than in recent years.",
       "marketNote": null,
       "stats": [
         {
-          "val": "$980K",
+          "val": "$1.19M",
           "label": "Average home price",
           "highlight": true
         },
@@ -782,13 +793,13 @@
       "cashback": "$22,000",
       "heroSub": "We are a licensed Oakville buyer agent. We charge a flat $4,999 fee and return the rest of the buyer agent commission to you as cash back after closing. On a typical Oakville home, that is over $22,000 back.",
       "calcDefault": 1100000,
-      "marketDate": "June 2026",
+      "marketDate": "July 2026",
       "marketTitle": "The Oakville Market Right Now",
       "marketText": "Oakville is consistently ranked among the best places to live in Canada and its real estate market reflects that reputation. Lakefront access, top schools, strong GO Transit service, and a genuine town centre make it one of the most complete communities in the GTA. Prices are among the highest outside Toronto proper, but 2026 has seen inventory rise and buyer competition ease.",
       "marketNote": null,
       "stats": [
         {
-          "val": "$1.1M",
+          "val": "$1.44M",
           "label": "Average home price",
           "highlight": true
         },
@@ -896,13 +907,13 @@
       "cashback": "$18,000",
       "heroSub": "We are a licensed Markham buyer agent. We charge a flat $4,999 fee and return the rest of the buyer agent commission to you as cash back after closing. On a typical Markham home, that is over $18,000 back.",
       "calcDefault": 960000,
-      "marketDate": "June 2026",
+      "marketDate": "July 2026",
       "marketTitle": "The Markham Market Right Now",
       "marketText": "Markham is the GTA's technology hub and one of York Region's most diverse and dynamic housing markets. Strong employment anchors, top schools, and Highway 407 access make it a consistent destination for buyers moving up from Scarborough and North York. Inventory has increased in 2026, giving buyers better selection and negotiating position.",
       "marketNote": null,
       "stats": [
         {
-          "val": "$960K",
+          "val": "$1.14M",
           "label": "Average home price",
           "highlight": true
         },
@@ -1010,13 +1021,13 @@
       "cashback": "$19,000",
       "heroSub": "We are a licensed Richmond Hill buyer agent. We charge a flat $4,999 fee and return the rest of the buyer agent commission to you as cash back after closing. On a typical Richmond Hill home, that is over $19,000 back.",
       "calcDefault": 1000000,
-      "marketDate": "June 2026",
+      "marketDate": "July 2026",
       "marketTitle": "The Richmond Hill Market Right Now",
       "marketText": "Richmond Hill is one of York Region's most in-demand addresses. Strong schools, established freehold neighbourhoods, and easy access to both Highway 404 and the Yonge corridor make it a consistent top pick for families moving up from Toronto. Inventory has grown in 2026, giving buyers more options and more leverage than they have had in years.",
       "marketNote": null,
       "stats": [
         {
-          "val": "$1.0M",
+          "val": "$948K",
           "label": "Average home price",
           "highlight": true
         },
@@ -1124,13 +1135,13 @@
       "cashback": "$14,000",
       "heroSub": "We are a licensed Brampton buyer agent. We charge a flat $4,999 fee and return the rest of the buyer agent commission to you as cash back after closing. Brampton offers some of the best freehold value in the GTA and your cashback makes it even more accessible.",
       "calcDefault": 780000,
-      "marketDate": "June 2026",
+      "marketDate": "July 2026",
       "marketTitle": "The Brampton Market Right Now",
       "marketText": "Brampton is the GTA's most accessible large-city freehold market. Detached homes remain within reach for first-time buyers at prices well below Mississauga and Toronto. The city has grown significantly in the past decade and 2026 is firmly a buyer's market -- inventory is high and days on market have stretched, giving buyers real negotiating power.",
       "marketNote": null,
       "stats": [
         {
-          "val": "$780K",
+          "val": "$894K",
           "label": "Average home price",
           "highlight": true
         },
@@ -1238,13 +1249,13 @@
       "cashback": "$26,000",
       "heroSub": "We are a licensed Aurora buyer agent. We charge a flat $4,999 fee and return the rest of the buyer agent commission to you as cash back after closing. On a typical Aurora home, that is over $26,000 back.",
       "calcDefault": 1250000,
-      "marketDate": "June 2026",
+      "marketDate": "July 2026",
       "marketTitle": "The Aurora Market Right Now",
       "marketText": "Aurora sits between Newmarket and Richmond Hill and remains one of the most desirable towns in York Region, known for top-ranked schools, GO Transit access, and small-town character. Prices have softened from the 2021-2022 peak, giving buyers more room to negotiate than in recent years, while premium school-catchment neighbourhoods continue to command a real premium over the rest of town.",
       "marketNote": null,
       "stats": [
         {
-          "val": "$1.25M",
+          "val": "$1.3M",
           "label": "Average home price",
           "highlight": true
         },
@@ -1341,13 +1352,13 @@
       "cashback": "$20,000",
       "heroSub": "We are a licensed Newmarket buyer agent. We charge a flat $4,999 fee and return the rest of the buyer agent commission to you as cash back after closing. On a typical Newmarket home, that is over $20,000 back.",
       "calcDefault": 1000000,
-      "marketDate": "June 2026",
+      "marketDate": "July 2026",
       "marketTitle": "The Newmarket Market Right Now",
       "marketText": "Newmarket sits in the middle of the York Region price range, above Bradford and East Gwillimbury and below Aurora, which makes it one of the more accessible entry points into the corridor. It also has the highest sales volume in the area, giving it the most liquid and predictable market of the nearby York Region towns for both buyers and sellers.",
       "marketNote": null,
       "stats": [
         {
-          "val": "$1.03M",
+          "val": "$994K",
           "label": "Average home price",
           "highlight": true
         },
@@ -1444,13 +1455,13 @@
       "cashback": "$24,000",
       "heroSub": "We are a licensed Stouffville buyer agent. We charge a flat $4,999 fee and return the rest of the buyer agent commission to you as cash back after closing. On a typical Stouffville home, that is over $24,000 back.",
       "calcDefault": 1150000,
-      "marketDate": "June 2026",
+      "marketDate": "July 2026",
       "marketTitle": "The Stouffville Market Right Now",
       "marketText": "Whitchurch-Stouffville is one of the fastest-growing towns in York Region, with population roughly doubling since the Big Pipe water infrastructure connection unlocked new development. Detached homes are currently in a buyer's market with real negotiating room, while row townhouses have stayed competitive and often sell at or above asking.",
       "marketNote": null,
       "stats": [
         {
-          "val": "$1.15M",
+          "val": "$1.03M",
           "label": "Average home price",
           "highlight": true
         },

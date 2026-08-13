@@ -417,57 +417,6 @@ function openModal(){document.getElementById('modal').classList.add('open')}
 
 document.addEventListener('keydown',function(e){if(e.key==='Escape'){const overlay=document.querySelector('.modal-overlay');if(overlay&&overlay.classList.contains('open'))closeModal();}});
 function closeModal(){document.getElementById('modal').classList.remove('open')}
-function submitForm(){
-  const nameVal=document.getElementById('f-name').value.trim();
-  const emailVal=document.getElementById('f-email').value.trim();
-  const phoneVal=document.getElementById('f-phone').value.trim();
-  // Reset styles
-  ['f-name','f-email','f-phone'].forEach(id=>{
-    document.getElementById(id).style.borderColor='';
-  });
-  const err=document.getElementById('f-err');
-  err.style.display='none';err.textContent='';
-
-  // 1. Name required
-  if(!nameVal){
-    err.textContent='Please enter your full name.';
-    err.style.display='block';
-    document.getElementById('f-name').style.borderColor='#b83232';
-    document.getElementById('f-name').focus();
-    return;
-  }
-
-  // 2. Email or phone required
-  if(!emailVal&&!phoneVal){
-    err.textContent='Please provide an email address or phone number.';
-    err.style.display='block';
-    document.getElementById('f-email').style.borderColor='#b83232';
-    document.getElementById('f-phone').style.borderColor='#b83232';
-    return;
-  }
-
-  // 3. Validate email format if provided
-  if(emailVal&&!validateEmail(emailVal)){
-    err.textContent='Please enter a valid email address (e.g. name@email.com).';
-    err.style.display='block';
-    document.getElementById('f-email').style.borderColor='#b83232';
-    document.getElementById('f-email').focus();
-    return;
-  }
-
-  // 4. Validate phone format if provided
-  if(phoneVal&&!validatePhone(phoneVal)){
-    err.textContent='Phone number must be at least 10 digits.';
-    err.style.display='block';
-    document.getElementById('f-phone').style.borderColor='#b83232';
-    document.getElementById('f-phone').focus();
-    return;
-  }
-
-  // All good
-  document.getElementById('modal-form-wrap').style.display='none';
-  document.getElementById('form-success').style.display='block';
-}
 
 render();
 </script>

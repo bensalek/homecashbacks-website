@@ -92,8 +92,10 @@ function handleFormSubmit(formName) {
     if (nameEl) nameEl.classList.add('err');
     ok = false;
   }
-  if (!email && !phone) {
-    if (errContactEl) { errContactEl.textContent = 'Please enter your email or phone number.'; errContactEl.classList.add('show'); }
+  if (!email || !phone) {
+    if (errContactEl) { errContactEl.textContent = 'Please enter both your email and phone number.'; errContactEl.classList.add('show'); }
+    if (emailEl && !email) emailEl.classList.add('err');
+    if (phoneEl && !phone) phoneEl.classList.add('err');
     ok = false;
   }
   if (email && !isValidEmail(email)) {
