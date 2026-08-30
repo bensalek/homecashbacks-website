@@ -54,6 +54,17 @@ if (fs.existsSync(fontsDir)) {
   });
 }
 
+// Copy logos subfolder to /dist/assets/logos/
+var distLogos = path.join(distAssets, 'logos');
+fs.mkdirSync(distLogos, { recursive: true });
+var logosDir = path.join(ASSETS_DIR, 'logos');
+if (fs.existsSync(logosDir)) {
+  fs.readdirSync(logosDir).forEach(function(file) {
+    fs.copyFileSync(path.join(logosDir, file), path.join(distLogos, file));
+    console.log('  copied: assets/logos/' + file);
+  });
+}
+
 // Copy root-level files to /dist
 ['favicon.ico','favicon.svg','favicon-32.png','apple-touch-icon.png','sitemap.xml','_redirects','robots.txt','llms.txt','083dafa7dee34db2a1e46a7adce57fe5.txt'].forEach(function(file) {
   if (fs.existsSync(file)) {

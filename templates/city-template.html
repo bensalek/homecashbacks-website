@@ -105,8 +105,19 @@
 .hood-arrow{transition:transform .2s;display:inline-block}
 .hood-show-more-btn.open .hood-arrow{transform:rotate(180deg)}
 .laleh-section{background:var(--ink);padding:2.75rem 2rem}
-.laleh-inner{max-width:860px;margin:0 auto;display:grid;grid-template-columns:auto 1fr;gap:2rem;align-items:center}
+.laleh-inner{max-width:860px;margin:0 auto;display:grid;grid-template-columns:auto 1fr auto;gap:2rem;align-items:center}
 .laleh-hs{width:80px;height:80px;border-radius:50%;border:2.5px solid var(--cta);overflow:hidden;flex-shrink:0}
+.laleh-google-badge{display:inline-flex;align-items:center;gap:.6rem;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:6px;padding:.6rem 1rem;flex-shrink:0}
+.laleh-google-text{display:flex;flex-direction:column;gap:1px}
+.laleh-google-stars{font-size:13px;color:var(--star);letter-spacing:1px;line-height:1}
+.laleh-google-label{font-size:11px;font-weight:600;color:var(--white);line-height:1}
+.miss-testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem;margin-top:1.5rem}
+.miss-testi-card{background:var(--white);border:1px solid var(--border);border-radius:6px;padding:1.1rem}
+.miss-testi-stars{color:var(--star);font-size:13px;letter-spacing:1px;margin-bottom:.5rem}
+.miss-testi-quote{font-size:13px;color:var(--muted);line-height:1.6;margin-bottom:.65rem}
+.miss-testi-quote strong{color:var(--ink);font-weight:600}
+.miss-testi-author{font-size:11px;font-weight:600;color:var(--ink)}
+.miss-testi-detail{font-size:11px;color:var(--taupe)}
 .laleh-hs img{width:100%;height:100%;object-fit:cover;object-position:center top}
 .laleh-quote{font-family:'Cormorant Garamond',serif;font-size:clamp(18px,2.5vw,24px);font-weight:400;font-style:italic;color:var(--white);line-height:1.55;margin-bottom:.75rem}
 .laleh-attr{font-size:12px;color:rgba(255,255,255,.4)}
@@ -165,7 +176,30 @@
   .stat-strip{grid-template-columns:1fr 1fr}
   .hood-grid:not(.hood-grid--hidden){grid-template-columns:1fr 1fr}
   .hood-grid--hidden.revealed{grid-template-columns:1fr 1fr!important}
-  .laleh-inner{grid-template-columns:1fr;gap:1.25rem}
+  .laleh-inner{grid-template-columns:1fr;gap:1.25rem;text-align:center}
+  .laleh-google-badge{margin:0 auto}
+  .miss-testi-grid{
+    display:flex;
+    overflow-x:auto;
+    scroll-snap-type:x mandatory;
+    -webkit-overflow-scrolling:touch;
+    gap:.85rem;
+    scrollbar-width:none;
+    padding-bottom:.5rem;
+    margin:0 -1.25rem;
+    padding-left:1.25rem;
+    padding-right:1.25rem;
+  }
+  .miss-testi-grid::-webkit-scrollbar{display:none}
+  .miss-testi-card{
+    min-width:82vw;
+    max-width:82vw;
+    scroll-snap-align:start;
+    flex-shrink:0;
+  }
+  .miss-testi-dots{display:flex;justify-content:center;gap:6px;margin-top:1rem}
+  .miss-testi-dot{width:6px;height:6px;border-radius:50%;background:var(--bg3);border:none;padding:0;cursor:pointer;transition:background .2s}
+  .miss-testi-dot.active{background:var(--cta);width:18px;border-radius:3px}
   .miss-section{padding:2rem 1.25rem}
   .hood-desc{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
 }
@@ -288,6 +322,45 @@
       <div class="laleh-quote">{{LALEH_QUOTE}}</div>
       <div class="laleh-attr"><strong>Laleh Mousavi</strong> &nbsp; Realtor, Toronto Real Estate Realty Plus Inc. · Registered with RECO · Serving {{NAME}} and GTA</div>
     </div>
+    <a href="https://share.google/fu2wgAYhOFcjSZTxX" target="_blank" rel="noopener" class="laleh-google-badge">
+      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+      <div class="laleh-google-text">
+        <span class="laleh-google-stars">★★★★★</span>
+        <span class="laleh-google-label">5.0 on Google</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+<section class="miss-section" style="background:var(--bg2);border-top:1px solid var(--border)" id="reviews">
+  <div class="miss-inner">
+    <div class="miss-eyebrow-sm">What buyers say</div>
+    <h2 class="miss-h2">Trusted across the GTA</h2>
+    <div class="miss-testi-grid">
+      <div class="miss-testi-card">
+        <div class="miss-testi-stars">★★★★★</div>
+        <p class="miss-testi-quote">We were skeptical about the cashback at first, it felt like there had to be a catch. Laleh <strong>attended every showing, handled our offer, and negotiated on our behalf</strong>, and we received cashback after closing exactly as promised.</p>
+        <div class="miss-testi-author">N.G.</div>
+        <div class="miss-testi-detail">First-time condo buyer · Toronto</div>
+      </div>
+      <div class="miss-testi-card">
+        <div class="miss-testi-stars">★★★★★</div>
+        <p class="miss-testi-quote">I'll admit I wondered what the catch was when a realtor offers money back. There wasn't one. Laleh <strong>explained exactly how the model worked and never once pushed us toward buying</strong>, we received cashback after closing, just like she said we would.</p>
+        <div class="miss-testi-author">A.H.</div>
+        <div class="miss-testi-detail">First-time buyer · Etobicoke</div>
+      </div>
+      <div class="miss-testi-card">
+        <div class="miss-testi-stars">★★★★★</div>
+        <p class="miss-testi-quote">Working with a flat-fee agent made us nervous at first, would we still get full attention? Laleh was <strong>responsive at every step and just as organized as any traditional agent</strong>. We received cashback after closing, no surprises.</p>
+        <div class="miss-testi-author">M.A.</div>
+        <div class="miss-testi-detail">Home buyer · Richmond Hill</div>
+      </div>
+    </div>
+    <div class="miss-testi-dots" id="miss-testi-dots" style="display:none">
+      <button class="miss-testi-dot active" onclick="missTestiGoTo(0)"></button>
+      <button class="miss-testi-dot" onclick="missTestiGoTo(1)"></button>
+      <button class="miss-testi-dot" onclick="missTestiGoTo(2)"></button>
+    </div>
   </div>
 </section>
 
@@ -379,6 +452,37 @@ function toggleHoods(btn){
 (function(){
   var s=document.getElementById('f-source');
   if(s)s.value='{{SOURCE_SLUG}}';
+})();
+(function(){
+  var grid = document.querySelector('.miss-testi-grid');
+  var dots = document.getElementById('miss-testi-dots');
+  var dotBtns = dots ? dots.querySelectorAll('.miss-testi-dot') : [];
+  function checkMobile(){
+    if(window.innerWidth <= 768){
+      dots && (dots.style.display='flex');
+    } else {
+      dots && (dots.style.display='none');
+    }
+  }
+  checkMobile();
+  window.addEventListener('resize', checkMobile);
+  window.missTestiGoTo = function(i){
+    var cards = grid.querySelectorAll('.miss-testi-card');
+    if(cards[i]) grid.scrollTo({left: cards[i].offsetLeft - 20, behavior:'smooth'});
+  };
+  if(grid){
+    grid.addEventListener('scroll', function(){
+      var cards = grid.querySelectorAll('.miss-testi-card');
+      var center = grid.scrollLeft + grid.offsetWidth / 2;
+      var closest = 0;
+      var minDist = Infinity;
+      cards.forEach(function(c,i){
+        var dist = Math.abs(c.offsetLeft + c.offsetWidth/2 - center);
+        if(dist < minDist){ minDist=dist; closest=i; }
+      });
+      dotBtns.forEach(function(d,i){ d.classList.toggle('active', i===closest); });
+    });
+  }
 })();
 </script>
 </body>

@@ -135,3 +135,50 @@ function handleFormSubmit(formName) {
       });
     });
 }
+
+// ── Visible breadcrumb trail, built from each page's own BreadcrumbList schema ──
+(function () {
+  function renderBreadcrumb() {
+    var scripts = document.querySelectorAll('script[type="application/ld+json"]');
+    var crumbs = null;
+    for (var i = 0; i < scripts.length; i++) {
+      try {
+        var data = JSON.parse(scripts[i].textContent);
+        var candidates = Array.isArray(data['@graph']) ? data['@graph'] : [data];
+        for (var j = 0; j < candidates.length; j++) {
+          var node = candidates[j];
+          if (node && node['@type'] === 'BreadcrumbList' && Array.isArray(node.itemListElement)) {
+            crumbs = node.itemListElement.slice().sort(function (a, b) { return a.position - b.position; });
+            break;
+          }
+        }
+        if (crumbs) break;
+      } catch (e) { /* skip malformed blocks */ }
+    }
+    if (!crumbs || crumbs.length < 2) return;
+
+    var topBar = document.querySelector('.top-bar');
+    if (!topBar) return;
+
+    var html = '<nav class="bc-trail" aria-label="Breadcrumb"><div class="bc-trail-inner">';
+    crumbs.forEach(function (c, idx) {
+      var isLast = idx === crumbs.length - 1;
+      var path = '';
+      try { path = new URL(c.item).pathname; } catch (e) { path = c.item; }
+      if (isLast) {
+        html += '<span class="bc-current" aria-current="page">' + c.name + '</span>';
+      } else {
+        html += '<a href="' + path + '">' + c.name + '</a><span class="bc-sep">/</span>';
+      }
+    });
+    html += '</div></nav>';
+
+    topBar.insertAdjacentHTML('afterend', html);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', renderBreadcrumb);
+  } else {
+    renderBreadcrumb();
+  }
+})();

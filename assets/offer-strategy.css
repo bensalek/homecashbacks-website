@@ -1,8 +1,3 @@
-/* ============================================================
-   HomeCashbacks — offer-strategy page styles
-   Page-specific CSS only. Colors via CSS variables from styles.css.
-   ============================================================ */
-
 body{font-family:'Rubik',sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;padding-top:118px}
 .top-bar{position:fixed;top:0;left:0;right:0;z-index:600;background:var(--ink);height:58px;padding:0 1.5rem;display:flex;align-items:center;justify-content:center;gap:12px}
 .top-bar-sep{width:1px;height:20px;background:rgba(255,255,255,.2)}
@@ -14,11 +9,15 @@ body{font-family:'Rubik',sans-serif;background:var(--bg);color:var(--ink);line-h
 .top-bar-phone:hover{color:#fff}
 nav{position:fixed;top:58px;left:0;right:0;z-index:570;background:var(--bg);border-bottom:1px solid var(--border);height:60px;padding:0 2rem;display:flex;align-items:center;justify-content:space-between}
 .logo{text-decoration:none;display:flex;align-items:center}
-.nav-cred-wrap{display:flex;flex-direction:row;align-items:center;gap:.6rem}
+.logo-wrap{display:flex;flex-direction:column;flex-shrink:0}
+.logo-brokerage-mob{display:none}
+.nav-cred-wrap{display:flex;flex-direction:row;align-items:center;gap:.6rem;min-width:0;flex-shrink:1}
 .nav-headshot{width:32px;height:32px;border-radius:50%;object-fit:cover;object-position:center top;border:2px solid var(--cta);flex-shrink:0}
-.nav-cred-wrap > div{display:flex;flex-direction:column;gap:1px}
-.nav-cred{font-size:11px;color:var(--muted);white-space:nowrap}
-.nav-cred-line2{font-size:10px;color:var(--muted);white-space:nowrap}
+.nav-cred-wrap > div{display:flex;flex-direction:column;gap:1px;min-width:0;overflow:hidden}
+.nav-cred{font-size:11px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block;max-width:100%}
+.nav-cred-name{white-space:nowrap}
+.nav-cred-title::before{content:", "}
+.nav-cred-line2{font-size:10px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .nav-links{display:flex;align-items:center;gap:4px;list-style:none}
 .nav-links a{font-size:13px;color:var(--muted);text-decoration:none;transition:color .2s;padding:6px 10px;border-radius:4px}
 .nav-links a:hover{color:var(--ink);background:rgba(26,35,50,.05)}
@@ -34,7 +33,7 @@ nav{position:fixed;top:58px;left:0;right:0;z-index:570;background:var(--bg);bord
 .dropdown a:hover{background:var(--bg);color:var(--ink)}
 .dropdown-label{font-weight:500;font-size:13px;color:var(--ink)}
 .dropdown-sub{font-size:11px;color:var(--muted);margin-top:1px}
-.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
+.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px;flex-shrink:0}
 .hamburger span{display:block;width:22px;height:2px;background:var(--ink);border-radius:2px;transition:all .25s}
 .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
 .hamburger.open span:nth-child(2){opacity:0}
@@ -51,8 +50,6 @@ nav{position:fixed;top:58px;left:0;right:0;z-index:570;background:var(--bg);bord
 .step-how-title{font-size:14px;font-weight:500;color:var(--ink);margin-bottom:.2rem}
 .step-how-text{font-size:13px;color:var(--muted);line-height:1.6}
 .tool-wrap{max-width:580px;margin:0 auto;padding:1.5rem 2rem 4rem}
-
-/* QUESTION CARD */
 .q-card{background:var(--white);border:1px solid var(--border);border-radius:8px;overflow:hidden}
 .q-progress{height:3px;background:var(--bg3)}
 .q-progress-fill{height:100%;background:var(--ink);transition:width .35s ease}
@@ -66,10 +63,6 @@ nav{position:fixed;top:58px;left:0;right:0;z-index:570;background:var(--bg);bord
 .opt-btn.sel::after{content:'✓';position:absolute;right:15px;top:50%;transform:translateY(-50%);font-size:13px;color:rgba(255,255,255,.5)}
 .back-link{font-size:12px;color:var(--muted);cursor:pointer;padding:.9rem 1.75rem;display:inline-block;text-decoration:underline}
 .back-link:hover{color:var(--ink)}
-
-/* CEILING CARD */
-
-/* RESULT */
 .result-card{background:var(--white);border:1px solid var(--border);border-radius:8px;overflow:hidden;display:none}
 .situation-band{padding:1.75rem}
 .sit-eyebrow{font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:.4rem}
@@ -141,18 +134,29 @@ footer{background:var(--ink);padding:2.5rem 2rem 1.5rem}
 .intro-h2{font-family:'Cormorant Garamond',serif;font-size:clamp(20px,3vw,26px);font-weight:600;color:var(--ink);line-height:1.2;margin-bottom:.65rem}
 .sit-why{font-size:13px;color:var(--ink2);line-height:1.7;margin-top:.5rem;opacity:.85}
 @media(max-width:680px){
-  nav{padding:0 1rem}
-  .nav-links{display:none;position:fixed;top:118px;left:0;right:0;background:var(--bg);border-bottom:1px solid var(--border);flex-direction:column;gap:0;padding:0;z-index:569;overflow:hidden}
+  body{padding-top:146px}
+  .top-bar{height:66px}
+  nav{padding:0 1rem 0 0;justify-content:flex-start;top:66px;height:80px}
+  .nav-links{display:none;position:fixed;top:146px;left:0;right:0;background:var(--bg);border-bottom:1px solid var(--border);flex-direction:column;gap:0;padding:0;z-index:569;overflow:hidden}
   .nav-links.open{display:flex}
   .nav-links li{width:100%}
   .nav-links a{display:block;padding:.75rem 1.5rem;border-radius:0;border-bottom:1px solid var(--border)}
   .nav-link-btn{width:100%;padding:.75rem 1.5rem;border-radius:0;border-bottom:1px solid var(--border)}
-  .dropdown{position:static;opacity:1;visibility:visible;transform:none;box-shadow:none;border:none;border-radius:0;padding:0;display:none}
+  .dropdown{position:static;opacity:1;visibility:visible;transform:none;box-shadow:none;border:none;border-radius:0;padding:0;display:none;min-width:0;width:100%;margin:0;top:auto;left:auto}
   .nav-item.open .dropdown{display:block}
   .dropdown a{padding:.6rem 2rem;border-bottom:1px solid var(--border)}
   .dropdown-sub{display:none}
   .nav-pill{background:var(--cta)!important;color:var(--ink)!important;margin:.5rem 1rem;border-radius:4px;text-align:center;font-weight:700!important;display:block;padding:.85rem 1.5rem!important}
-  .hamburger{display:flex}
+  .hamburger{display:flex;margin-left:auto}
+  .nav-cred-wrap{margin-left:.6rem}
+  .nav-cred{white-space:normal;overflow:visible;text-overflow:clip}
+  .nav-cred-name{display:block;font-size:13px;font-weight:600;line-height:1.25}
+  .nav-cred-title{display:block;font-size:10px;font-weight:500;line-height:1.3;color:var(--muted)}
+  .nav-cred-title::before{content:""}
+  .nav-cred-line2{display:none}
+  .nav-headshot{width:44px;height:44px}
+  .logo svg{width:120px;height:22px}
+  .logo-brokerage-mob{display:block;font-size:10px;color:var(--muted);letter-spacing:.2px;margin-top:2px;white-space:nowrap}
   .result-cta{flex-direction:column;text-align:center}
   .situation-band,.advice-section,.result-cta{padding:1.25rem}
 }

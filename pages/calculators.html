@@ -47,6 +47,8 @@ body{font-family:'Rubik',sans-serif;background:var(--bg);color:var(--ink);line-h
 /* NAV */
 nav{position:fixed;top:58px;left:0;right:0;z-index:570;background:#f0f4f8;border-bottom:1px solid var(--border);height:60px;padding:0 2rem;display:flex;align-items:center;justify-content:space-between}
 .logo{text-decoration:none;display:flex;align-items:center}
+.logo-wrap{display:flex;flex-direction:column}
+.logo-brokerage-mob{display:none}
 .nav-cred-wrap{display:flex;flex-direction:row;align-items:center;gap:.6rem}
 .nav-headshot{width:32px;height:32px;border-radius:50%;object-fit:cover;object-position:center top;border:2px solid var(--cta);flex-shrink:0}
 .nav-cred-wrap > div{display:flex;flex-direction:column;gap:1px}
@@ -195,9 +197,10 @@ footer{background:#1a2332;padding:2.5rem 2rem 1.5rem}
 
 /* MOBILE */
 @media(max-width:680px){
-  body{padding-top:118px}
-  nav{padding:0 1rem}
-  .nav-links{display:none;position:fixed;top:118px;left:0;right:0;background:#f0f4f8;border-bottom:1px solid var(--border);flex-direction:column;gap:0;padding:0;z-index:569;overflow:hidden}
+  body{padding-top:146px}
+  .top-bar{height:66px}
+  nav{padding:0 1rem;top:66px;height:80px}
+  .nav-links{display:none;position:fixed;top:146px;left:0;right:0;background:#f0f4f8;border-bottom:1px solid var(--border);flex-direction:column;gap:0;padding:0;z-index:569;overflow:hidden}
   .nav-links.open{display:flex}
   .nav-links li{width:100%}
   .nav-links a{display:block;padding:.85rem 1.5rem;font-size:16px;color:var(--ink);border-bottom:1px solid var(--border)}
@@ -208,8 +211,11 @@ footer{background:#1a2332;padding:2.5rem 2rem 1.5rem}
   .dropdown-sub{display:none}
   .nav-pill{background:var(--cta)!important;color:#1a2332!important;margin:.5rem 1rem;border-radius:4px;text-align:center;font-weight:700!important;display:block;padding:.85rem 1.5rem!important}
   .hamburger{display:flex}
+  .nav-cred{font-size:14px;font-weight:600}
   .nav-cred-line2{display:none}
-  .logo svg{width:110px;height:22px}
+  .nav-headshot{width:44px;height:44px}
+  .logo svg{width:150px;height:28px}
+  .logo-brokerage-mob{display:block;font-size:10px;color:var(--muted);letter-spacing:.2px;margin-top:2px;white-space:nowrap}
   .calc-wrap{padding:0 1.25rem 3rem;margin-top:1.5rem}
   .calc-grid{grid-template-columns:1fr}
   .calc-tabs-outer{overflow-x:auto;flex-wrap:nowrap;gap:.25rem}

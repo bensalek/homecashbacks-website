@@ -58,7 +58,7 @@
 /* ── MOBILE ── */
 @media(max-width:680px){
   .hub-hero{padding:2rem 1.25rem 1.75rem}
-  .hub-tabs{top:118px;padding:0}
+  .hub-tabs{top:146px;padding:0}
   .hub-tabs-inner{padding:0 1rem}
   .hub-tab{font-size:12px;padding:.55rem .65rem}
   .hub-body{padding:1.5rem 1rem;gap:2rem}
@@ -86,6 +86,9 @@
   "publisher": {"@type": "Organization", "name": "Home Cashbacks"}
 }
 </script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://homecashbacks.ca"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://homecashbacks.ca/guides.html"}]}
+</script>
 </head>
 <body>
 
@@ -100,13 +103,59 @@
 <!-- Sticky tabs -->
 <nav class="hub-tabs" id="hub-tabs" aria-label="Guide categories">
   <div class="hub-tabs-inner">
-    <a href="#buying-process" class="hub-tab active">Buying Process</a>
-    <a href="#costs-legal" class="hub-tab">Costs &amp; Legal</a>
+    <a href="#cashback-explained" class="hub-tab active">Cashback Explained</a>
+    <a href="#buying-process" class="hub-tab">Buying Process</a>
+    <a href="#condo-buying" class="hub-tab">Condo Buying</a>
+    <a href="#precon-investing" class="hub-tab">Pre-Construction &amp; Investing</a>
+    <a href="#costs-legal" class="hub-tab">Costs, Legal &amp; Protections</a>
     <a href="#tools" class="hub-tab">Tools</a>
   </div>
 </nav>
 
 <div class="hub-body">
+
+  <!-- Cashback explained -->
+  <div>
+    <div class="cat-head" id="cashback-explained">
+      <span class="cat-title">Cashback explained</span>
+      <div class="cat-line"></div>
+    </div>
+    <div class="guide-grid">
+      <a href="/how-much-cashback-toronto.html" class="guide-card">
+        <span class="guide-card-tag">Guide · Calculator</span>
+        <span class="guide-card-title">How much cashback can you get in Toronto?</span>
+        <span class="guide-card-desc">Exact cashback amounts at every price point with a live calculator.</span>
+      </a>
+      <a href="/whats-the-catch-cashback-realtors.html" class="guide-card">
+        <span class="guide-card-title">What's the catch with cashback realtors?</span>
+        <span class="guide-card-desc">Every objection answered honestly — service, hidden fees, negotiation, and red flags.</span>
+      </a>
+      <a href="/cashback-realtor-vs-traditional.html" class="guide-card">
+        <span class="guide-card-title">Cashback realtor vs traditional realtor</span>
+        <span class="guide-card-desc">Side-by-side comparison of cost, service, and what Toronto buyers actually get.</span>
+      </a>
+      <a href="/flat-fee-vs-percentage-cashback.html" class="guide-card">
+        <span class="guide-card-title">Flat fee vs percentage cashback realtor</span>
+        <span class="guide-card-desc">Which model returns more — see the exact math at every price point.</span>
+      </a>
+      <a href="/low-commission-realtor-toronto.html" class="guide-card">
+        <span class="guide-card-title">Low commission realtor Toronto</span>
+        <span class="guide-card-desc">What "low commission" actually means, the real savings, and what to check first.</span>
+      </a>
+      <a href="/how-cashback-works-ontario.html" class="guide-card">
+        <span class="guide-card-title">How cashback works in Ontario</span>
+        <span class="guide-card-desc">How the buyer agent commission flows and why cashback is possible.</span>
+      </a>
+      <a href="/how-cashback-works.html" class="guide-card">
+        <span class="guide-card-title">How cashback realtors work</span>
+        <span class="guide-card-desc">The mechanics behind flat-fee buyer agents and how you get the commission back.</span>
+      </a>
+      <a href="/choose-cashback-realtor-toronto.html" class="guide-card">
+        <span class="guide-card-title">How to choose a cashback realtor</span>
+        <span class="guide-card-desc">What to look for, what to avoid, and the right questions to ask.</span>
+      </a>
+    </div>
+  </div>
 
   <!-- Buying process -->
   <div>
@@ -115,85 +164,110 @@
       <div class="cat-line"></div>
     </div>
     <div class="guide-grid">
-      <a href="/how-much-cashback-toronto.html" class="guide-card">
-        <span class="guide-card-tag">Guide · Calculator</span>
-        <span class="guide-card-title">How much cashback can you get in Toronto?</span>
-        <span class="guide-card-desc">Exact cashback amounts at every price point with a live calculator.</span>
-        <span class="guide-card-arrow">Read →</span>
-      </a>
-      <a href="/whats-the-catch-cashback-realtors.html" class="guide-card">
-        <span class="guide-card-tag">Guide</span>
-        <span class="guide-card-title">What's the catch with cashback realtors?</span>
-        <span class="guide-card-desc">Every objection answered honestly — service, hidden fees, negotiation, and red flags.</span>
-        <span class="guide-card-arrow">Read →</span>
-      </a>
-      <a href="/cashback-realtor-vs-traditional.html" class="guide-card">
-        <span class="guide-card-tag">Guide</span>
-        <span class="guide-card-title">Cashback realtor vs traditional realtor</span>
-        <span class="guide-card-desc">Side-by-side comparison of cost, service, and what Toronto buyers actually get.</span>
-        <span class="guide-card-arrow">Read →</span>
-      </a>
-      <a href="/flat-fee-vs-percentage-cashback.html" class="guide-card">
-        <span class="guide-card-tag">Guide</span>
-        <span class="guide-card-title">Flat fee vs percentage cashback realtor</span>
-        <span class="guide-card-desc">Which model returns more — see the exact math at every price point.</span>
-        <span class="guide-card-arrow">Read →</span>
-      </a>
-      <a href="/low-commission-realtor-toronto.html" class="guide-card">
-        <span class="guide-card-tag">Guide</span>
-        <span class="guide-card-title">Low commission realtor Toronto</span>
-        <span class="guide-card-desc">What "low commission" actually means, the real savings, and what to check first.</span>
-        <span class="guide-card-arrow">Read →</span>
-      </a>
-      <a href="/how-cashback-works-ontario.html" class="guide-card">
-        <span class="guide-card-tag">Guide</span>
-        <span class="guide-card-title">How cashback works in Ontario</span>
-        <span class="guide-card-desc">How the buyer agent commission flows and why cashback is possible.</span>
-        <span class="guide-card-arrow">Read →</span>
-      </a>
-      <a href="/how-cashback-works.html" class="guide-card">
-        <span class="guide-card-tag">Guide</span>
-        <span class="guide-card-title">How cashback realtors work</span>
-        <span class="guide-card-desc">The mechanics behind flat-fee buyer agents and how you get the commission back.</span>
-        <span class="guide-card-arrow">Read →</span>
-      </a>
       <a href="/first-time-buyer-guide.html" class="guide-card">
-        <span class="guide-card-tag">Guide</span>
         <span class="guide-card-title">First-time buyer guide</span>
         <span class="guide-card-desc">Step by step from mortgage pre-approval to keys in hand.</span>
-        <span class="guide-card-arrow">Read →</span>
+      </a>
+      <a href="/mortgage-pre-approval-guide.html" class="guide-card">
+        <span class="guide-card-title">Mortgage pre-approval guide</span>
+        <span class="guide-card-desc">What it actually gets you, how long a rate hold lasts, and documents to have ready.</span>
       </a>
       <a href="/offer-strategy.html" class="guide-card">
-        <span class="guide-card-tag">Guide</span>
         <span class="guide-card-title">Offer strategy</span>
         <span class="guide-card-desc">How to write competitive offers without overpaying in the GTA.</span>
-        <span class="guide-card-arrow">Read →</span>
+      </a>
+      <a href="/offer-conditions-explained-ontario.html" class="guide-card">
+        <span class="guide-card-title">Offer conditions explained</span>
+        <span class="guide-card-desc">Financing, inspection, and status certificate conditions, with real timeframes.</span>
+      </a>
+      <a href="/home-inspection-toronto.html" class="guide-card">
+        <span class="guide-card-title">Home inspection Toronto</span>
+        <span class="guide-card-desc">What it costs, what it covers, and when waiving it is a reasonable risk.</span>
       </a>
       <a href="/checklist.html" class="guide-card">
         <span class="guide-card-tag">Checklist</span>
         <span class="guide-card-title">Home buyer checklist</span>
         <span class="guide-card-desc">Every step in order so nothing slips through the cracks.</span>
-        <span class="guide-card-arrow">Read →</span>
-      </a>
-      <a href="/condo-buying-guide.html" class="guide-card">
-        <span class="guide-card-tag">Guide</span>
-        <span class="guide-card-title">Condo buying guide</span>
-        <span class="guide-card-desc">Status certificates, reserve funds, and what to check before you offer.</span>
-        <span class="guide-card-arrow">Read →</span>
-      </a>
-      <a href="/choose-cashback-realtor-toronto.html" class="guide-card">
-        <span class="guide-card-tag">Guide</span>
-        <span class="guide-card-title">How to choose a cashback realtor</span>
-        <span class="guide-card-desc">What to look for, what to avoid, and the right questions to ask.</span>
-        <span class="guide-card-arrow">Read →</span>
       </a>
     </div>
   </div>
 
-  <!-- Costs & legal -->
+  <!-- Condo buying -->
+  <div>
+    <div class="cat-head" id="condo-buying">
+      <span class="cat-title">Condo buying</span>
+      <div class="cat-line"></div>
+    </div>
+    <div class="guide-grid">
+      <a href="/condo-buying-guide.html" class="guide-card">
+        <span class="guide-card-title">Condo buying guide</span>
+        <span class="guide-card-desc">Status certificates, reserve funds, and what to check before you offer.</span>
+      </a>
+      <a href="/first-time-condo-buyer-toronto.html" class="guide-card">
+        <span class="guide-card-title">First-time condo buyer</span>
+        <span class="guide-card-desc">The incentives don't change, the due diligence does. What's different buying a condo first.</span>
+      </a>
+      <a href="/how-to-spot-a-bad-condo-toronto.html" class="guide-card">
+        <span class="guide-card-title">How to spot a bad condo</span>
+        <span class="guide-card-desc">Real special assessment numbers and a legal protection most buyers don't know about.</span>
+      </a>
+      <a href="/condo-vs-freehold-toronto.html" class="guide-card">
+        <span class="guide-card-title">Condo vs. freehold</span>
+        <span class="guide-card-desc">Which one actually fits your budget, maintenance tolerance, and lifestyle.</span>
+      </a>
+      <a href="/condo-fees-explained-toronto.html" class="guide-card">
+        <span class="guide-card-title">Condo fees explained</span>
+        <span class="guide-card-desc">What that monthly number covers, and real benchmarks by building age.</span>
+      </a>
+      <a href="/condo-parking-lockers-toronto.html" class="guide-card">
+        <span class="guide-card-title">Condo parking &amp; lockers</span>
+        <span class="guide-card-desc">Included or sold separately, and how EV charging affects resale value.</span>
+      </a>
+      <a href="/interim-occupancy-explained-toronto.html" class="guide-card">
+        <span class="guide-card-title">Interim occupancy explained</span>
+        <span class="guide-card-desc">Why the fee you pay before closing doesn't build any equity.</span>
+      </a>
+      <a href="/downsizing-to-a-condo-toronto.html" class="guide-card">
+        <span class="guide-card-title">Downsizing to a condo</span>
+        <span class="guide-card-desc">Selling a house and buying a condo together, sequenced without a housing gap.</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Pre-construction & investing -->
+  <div>
+    <div class="cat-head" id="precon-investing">
+      <span class="cat-title">Pre-construction &amp; investing</span>
+      <div class="cat-line"></div>
+    </div>
+    <div class="guide-grid">
+      <a href="/pre-construction-condo-cashback-toronto.html" class="guide-card">
+        <span class="guide-card-title">Pre-construction condo guide</span>
+        <span class="guide-card-desc">The current HST rebate window, and how cashback applies to a new build.</span>
+      </a>
+      <a href="/assignment-sale-toronto.html" class="guide-card">
+        <span class="guide-card-title">Assignment sale Toronto</span>
+        <span class="guide-card-desc">How it works, the HST rules, and what to check before you buy or sell one.</span>
+      </a>
+      <a href="/gst-hst-rebate-new-construction-canada.html" class="guide-card">
+        <span class="guide-card-title">GST/HST rebate on new construction</span>
+        <span class="guide-card-desc">How builders actually pay it, and what lenders do and don't count toward financing.</span>
+      </a>
+      <a href="/first-time-home-buyer-rebates-canada.html" class="guide-card">
+        <span class="guide-card-title">First-time home buyer rebates in Canada</span>
+        <span class="guide-card-desc">Every federal and Ontario program in one place, and what stacks with cashback.</span>
+      </a>
+      <a href="/real-estate-investors-toronto.html" class="guide-card">
+        <span class="guide-card-title">Guide for investors</span>
+        <span class="guide-card-desc">Which rebates actually apply, and the short-term rental reality in Toronto.</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Costs, legal & protections -->
   <div>
     <div class="cat-head" id="costs-legal">
-      <span class="cat-title">Costs &amp; legal</span>
+      <span class="cat-title">Costs, legal &amp; protections</span>
       <div class="cat-line"></div>
     </div>
     <div class="guide-grid">
@@ -201,25 +275,45 @@
         <span class="guide-card-tag">Guide · 2026</span>
         <span class="guide-card-title">How much does a buyer's agent cost in Ontario?</span>
         <span class="guide-card-desc">Commission rates, who pays, and how to keep most of it.</span>
-        <span class="guide-card-arrow">Read →</span>
       </a>
       <a href="/buyer-rep-agreement-ontario.html" class="guide-card">
-        <span class="guide-card-tag">Guide</span>
         <span class="guide-card-title">Buyer representation agreement in Ontario</span>
         <span class="guide-card-desc">What it says, what to watch for, and how cashback is written in.</span>
-        <span class="guide-card-arrow">Read →</span>
       </a>
       <a href="/closing-costs-ontario.html" class="guide-card">
         <span class="guide-card-tag">Guide · 2026</span>
         <span class="guide-card-title">Closing costs in Ontario</span>
         <span class="guide-card-desc">Every cost itemized with land transfer tax rates and first-time buyer rebates.</span>
-        <span class="guide-card-arrow">Read →</span>
       </a>
       <a href="/cashback-legal-ontario.html" class="guide-card">
-        <span class="guide-card-tag">Guide</span>
         <span class="guide-card-title">Is cashback from a realtor legal in Ontario?</span>
         <span class="guide-card-desc">RECO rules, disclosure requirements, and what must be in your contract.</span>
-        <span class="guide-card-arrow">Read →</span>
+      </a>
+      <a href="/multiple-representation-ontario.html" class="guide-card">
+        <span class="guide-card-title">Multiple representation in Ontario</span>
+        <span class="guide-card-desc">Why an agent can't advise on price in this situation, and how to avoid it.</span>
+      </a>
+      <a href="/is-my-deposit-protected-ontario.html" class="guide-card">
+        <span class="guide-card-title">Is my deposit protected?</span>
+        <span class="guide-card-desc">A real Ontario brokerage case, and the two legal layers protecting your deposit.</span>
+      </a>
+      <a href="/older-home-red-flags-toronto.html" class="guide-card">
+        <span class="guide-card-title">Older home red flags</span>
+        <span class="guide-card-desc">Aluminum wiring, knob and tube, UFFI, and asbestos, by era and by insurer risk.</span>
+      </a>
+      <a href="/stigmatized-property-ontario.html" class="guide-card">
+        <span class="guide-card-title">Stigmatized property disclosure</span>
+        <span class="guide-card-desc">Does a seller have to disclose a death in a home? The real legal answer.</span>
+      </a>
+      <a href="/toronto-market-trends.html" class="guide-card">
+        <span class="guide-card-tag">Reference · Updated monthly</span>
+        <span class="guide-card-title">Toronto market trends</span>
+        <span class="guide-card-desc">Current TRREB data for Toronto and the GTA, and what it means right now.</span>
+      </a>
+      <a href="/real-estate-glossary-toronto.html" class="guide-card">
+        <span class="guide-card-tag">Reference</span>
+        <span class="guide-card-title">Real estate glossary</span>
+        <span class="guide-card-desc">Plain-English definitions for every term you'll run into as a buyer or seller.</span>
       </a>
     </div>
   </div>
@@ -235,13 +329,11 @@
         <span class="guide-card-tag">Calculator</span>
         <span class="guide-card-title">Cashback calculator</span>
         <span class="guide-card-desc">Enter your home price and commission to see your exact cashback amount.</span>
-        <span class="guide-card-arrow" style="color:var(--cta)">Open →</span>
       </a>
       <a href="/calculators.html" class="guide-card tool-card">
         <span class="guide-card-tag">Calculator</span>
         <span class="guide-card-title">Home buying calculator</span>
         <span class="guide-card-desc">Land transfer tax, legal fees, and first-time buyer rebates for Ontario.</span>
-        <span class="guide-card-arrow" style="color:var(--cta)">Open →</span>
       </a>
     </div>
   </div>

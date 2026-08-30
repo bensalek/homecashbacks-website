@@ -96,6 +96,7 @@
 .legal-cta-note{font-size:12px;color:var(--muted);margin-top:.65rem;opacity:.7}
 
 @media(max-width:680px){
+  .legal-jump{top:146px}
   .flow{grid-template-columns:1fr;gap:.35rem}
   .flow-arrow{transform:rotate(90deg);text-align:center}
   .why-grid{grid-template-columns:1fr}

@@ -1551,6 +1551,1030 @@
       "sourceSlug": "buyer-stouffville",
       "metaDesc": "Cashback realtor in Stouffville. Flat $4,999 fee, on a typical Stouffville home you keep $24,000. Full service, no upfront commitment.",
       "pageTitle": "Stouffville Cashback Realtor | Home Cashbacks"
+    },
+    {
+      "slug": "thornhill",
+      "name": "Thornhill",
+      "cashback": "$24,000",
+      "heroSub": "We are a licensed Thornhill buyer agent. We charge a flat $4,999 fee and return the rest of the buyer agent commission to you as cash back after closing. On a typical Thornhill home, that is over $24,000 back.",
+      "calcDefault": 1150000,
+      "marketDate": "July 2026",
+      "marketTitle": "The Thornhill Market Right Now",
+      "marketText": "Thornhill sits along the Yonge Street corridor, straddling the Vaughan and Markham border, and has stayed one of the most stable markets in York Region despite higher borrowing costs. Tight supply, mature tree-lined streets, and consistently strong schools keep it attracting move-up buyers and established families. Detached homes remain the dominant and most expensive segment, with well-priced homes still moving quickly.",
+      "marketNote": null,
+      "stats": [
+        {
+          "val": "$1.15M",
+          "label": "Average home price",
+          "highlight": true
+        },
+        {
+          "val": "$650K",
+          "label": "Average condo/townhouse"
+        },
+        {
+          "val": "$1.6M",
+          "label": "Average detached"
+        },
+        {
+          "val": "25 days",
+          "label": "Avg days on market"
+        }
+      ],
+      "hoods": [
+        {
+          "type": "Premium & heritage",
+          "name": "Old Thornhill",
+          "desc": "Larger lots, often 60 feet or wider, near Yonge and Centre Street. Mature trees and proximity to Thornhill Golf Club command a real premium, with a narrower buyer pool.",
+          "price": "Detached from ~$1.6M",
+          "featured": true
+        },
+        {
+          "type": "Family favourite",
+          "name": "Thornhill Woods",
+          "desc": "Newer construction on the Vaughan side, popular with families for its schools and parks. More consistent inventory than Old Thornhill.",
+          "price": "Detached from ~$1.3M",
+          "featured": true
+        },
+        {
+          "type": "Established, Markham side",
+          "name": "German Mills",
+          "desc": "A quieter, established pocket on the Markham side of Thornhill, close to ravines and trails, with a mix of original and renovated homes.",
+          "price": "Detached from ~$1.2M",
+          "featured": true
+        },
+        {
+          "type": "Balanced value",
+          "name": "Uplands",
+          "desc": "One of Thornhill's older, more accessible pockets, with a mix of bungalows and two-storey homes on generous lots.",
+          "price": "Detached from ~$1.1M"
+        }
+      ],
+      "laleh": "\"Thornhill is a straddle market, part Vaughan, part Markham, and buyers often don't realize that until they're comparing school boards or property tax rates. It has stayed remarkably steady through the rate cycle because supply never really loosens up here. On a $1.15M home your cashback is over $24,000, which matters in a market where well-priced homes still move in under two weeks.\"",
+      "faqCity": [
+        {
+          "q": "Is there a cashback realtor in Thornhill?",
+          "a": "Yes. Home Cashbacks is a RECO-registered buyer agent serving Thornhill, which spans both Vaughan and Markham. We charge a flat $4,999 fee and return the rest of the buyer agent commission after closing."
+        },
+        {
+          "q": "How much cashback can I get in Thornhill?",
+          "a": "On a $1,150,000 Thornhill home with a 2.5% buyer agent commission, the total commission is $28,750. We take our flat $4,999 and you receive approximately $23,751 back after closing."
+        },
+        {
+          "q": "Is Thornhill in Vaughan or Markham?",
+          "a": "Both. Thornhill straddles the border between the two cities, roughly split along Bayview Avenue, with Vaughan to the west and Markham to the east. School board and some municipal services can differ depending on which side a home sits on."
+        },
+        {
+          "q": "What is the best neighbourhood in Thornhill for families?",
+          "a": "Old Thornhill and Thornhill Woods are consistently top picks for their schools and established streets. German Mills on the Markham side offers a quieter, more affordable alternative with good access to ravines and trails."
+        }
+      ],
+      "alsoServing": [
+        {
+          "name": "Vaughan",
+          "slug": "vaughan"
+        },
+        {
+          "name": "Markham",
+          "slug": "markham"
+        },
+        {
+          "name": "Richmond Hill",
+          "slug": "richmond-hill"
+        },
+        {
+          "name": "Toronto",
+          "slug": "toronto"
+        }
+      ],
+      "geo": {
+        "lat": 43.8161,
+        "lng": -79.4287
+      },
+      "sourceSlug": "buyer-thornhill",
+      "pageTitle": "Thornhill Cashback Realtor | Home Cashbacks",
+      "metaDesc": "Cashback realtor in Thornhill. Flat $4,999 fee, on a typical Thornhill home you keep $24,000. Full service, no upfront commitment."
+    },
+    {
+      "slug": "burlington",
+      "name": "Burlington",
+      "cashback": "$22,000",
+      "heroSub": "We are a licensed Burlington buyer agent. We charge a flat $4,999 fee and return the rest of the buyer agent commission to you as cash back after closing. On a typical Burlington home, that is over $22,000 back.",
+      "calcDefault": 1100000,
+      "marketDate": "July 2026",
+      "marketTitle": "The Burlington Market Right Now",
+      "marketText": "Burlington sits at the western edge of the GTA directly on Lake Ontario, and it has held up better through this cycle than most of Halton Region expected. The average price of $1.09M reflects genuine, steady demand rather than a seasonal bump, driven by waterfront access and a downtown core people can actually walk to. Aldershot remains the more accessible entry point for buyers who want the city without the Old Oakville-adjacent price tag.",
+      "marketNote": null,
+      "stats": [
+        {
+          "val": "$1.09M",
+          "label": "Average home price",
+          "highlight": true
+        },
+        {
+          "val": "$620K",
+          "label": "Average condo/townhouse"
+        },
+        {
+          "val": "$1.4M",
+          "label": "Average detached"
+        },
+        {
+          "val": "22 days",
+          "label": "Avg days on market"
+        }
+      ],
+      "hoods": [
+        {
+          "type": "Lakefront prestige",
+          "name": "Roseland",
+          "desc": "One of Burlington's most established, prestigious neighbourhoods, with large lots close to the lake and downtown. Consistently commands a premium.",
+          "price": "Detached from ~$1.7M",
+          "featured": true
+        },
+        {
+          "type": "Walkable & waterfront",
+          "name": "Downtown Burlington",
+          "desc": "Waterfront trails, Spencer Smith Park, and a genuine walkable core with shops and restaurants. A mix of condos and older character homes.",
+          "price": "Mixed from ~$700K",
+          "featured": true
+        },
+        {
+          "type": "GO Transit access",
+          "name": "Aldershot",
+          "desc": "Burlington's west end, bordering Hamilton, with strong GO train access and some of the more accessible pricing in the city.",
+          "price": "Detached from ~$1.0M",
+          "featured": true
+        },
+        {
+          "type": "Family favourite",
+          "name": "Headon Forest",
+          "desc": "An established, family-oriented neighbourhood with good schools, parks, and consistent resale demand.",
+          "price": "Detached from ~$1.1M"
+        }
+      ],
+      "laleh": "\"What surprises buyers about Burlington is how steady it's stayed, a lot of people assume all of Halton moved the same direction and it just isn't true here. The lake and the walkable downtown are doing real work. Cashback on a typical home runs over $22,000, which goes a long way whether you're upsizing from a condo or coming out from Toronto entirely.\"",
+      "faqCity": [
+        {
+          "q": "Is there a cashback realtor in Burlington?",
+          "a": "Yes. Home Cashbacks is a RECO-registered buyer agent serving Burlington and the wider Halton Region. We charge a flat $4,999 fee and return the rest of the buyer agent commission after closing."
+        },
+        {
+          "q": "How much cashback can I get in Burlington?",
+          "a": "On a $1,090,000 Burlington home with a 2.5% buyer agent commission, the total commission is $27,250. We take our flat $4,999 and you receive approximately $22,251 back after closing."
+        },
+        {
+          "q": "What is the best neighbourhood in Burlington for families?",
+          "a": "Headon Forest and Roseland are consistently popular for families and schools. Downtown Burlington suits buyers who want walkability and waterfront access over a larger lot, and Aldershot offers more accessible pricing with strong GO Transit access."
+        },
+        {
+          "q": "Is Burlington commutable to Toronto?",
+          "a": "Yes, via GO Transit from Burlington or Aldershot GO stations, though it is one of the longer commutes in this guide, generally over an hour to Union Station. The QEW also connects directly into the city for drivers."
+        }
+      ],
+      "alsoServing": [
+        {
+          "name": "Oakville",
+          "slug": "oakville"
+        },
+        {
+          "name": "Milton",
+          "slug": "milton"
+        },
+        {
+          "name": "Halton Hills",
+          "slug": "halton-hills"
+        },
+        {
+          "name": "Mississauga",
+          "slug": "mississauga"
+        }
+      ],
+      "geo": {
+        "lat": 43.3255,
+        "lng": -79.799
+      },
+      "sourceSlug": "buyer-burlington",
+      "pageTitle": "Burlington Cashback Realtor | Home Cashbacks",
+      "metaDesc": "Cashback realtor in Burlington. Flat $4,999 fee, on a typical Burlington home you keep $22,000. Full service, no upfront commitment."
+    },
+    {
+      "slug": "milton",
+      "name": "Milton",
+      "cashback": "$20,000",
+      "heroSub": "We are a licensed Milton buyer agent. We charge a flat $4,999 fee and return the rest of the buyer agent commission to you as cash back after closing. On a typical Milton home, that is over $20,000 back.",
+      "calcDefault": 1000000,
+      "marketDate": "July 2026",
+      "marketTitle": "The Milton Market Right Now",
+      "marketText": "New listings have outpaced sales in Milton for months running, which has firmly tilted 2026 in favour of buyers, a real shift from the market conditions of recent years. At $1.0M average, it remains one of the more accessible entry points into Halton Region, especially set against Oakville and Burlington next door. Willmott and the Ford/Beaty corridor have absorbed most of the newer family-oriented construction.",
+      "marketNote": null,
+      "stats": [
+        {
+          "val": "$1.0M",
+          "label": "Average home price",
+          "highlight": true
+        },
+        {
+          "val": "$580K",
+          "label": "Average condo/townhouse"
+        },
+        {
+          "val": "$1.25M",
+          "label": "Average detached"
+        },
+        {
+          "val": "30 days",
+          "label": "Avg days on market"
+        }
+      ],
+      "hoods": [
+        {
+          "type": "Heritage & walkable",
+          "name": "Old Milton",
+          "desc": "Milton's historic core, with heritage homes, a walkable downtown, and the GO station within reach. A different feel from the newer subdivisions surrounding it.",
+          "price": "Mixed from ~$900K",
+          "featured": true
+        },
+        {
+          "type": "New builds",
+          "name": "Ford / Beaty",
+          "desc": "Newer master-planned neighbourhoods in Milton's growth corridor, with modern detached homes and townhomes and good access to schools.",
+          "price": "Detached from ~$1.05M",
+          "featured": true
+        },
+        {
+          "type": "Family favourite",
+          "name": "Willmott",
+          "desc": "One of Milton's established newer communities, popular with young families for its parks, schools, and consistent resale demand.",
+          "price": "Detached from ~$1.1M",
+          "featured": true
+        },
+        {
+          "type": "Balanced value",
+          "name": "Scott",
+          "desc": "A quieter, more established Milton neighbourhood with a mix of home ages and generally accessible pricing relative to the newer subdivisions.",
+          "price": "Detached from ~$950K"
+        }
+      ],
+      "laleh": "\"Milton is the clearest buyer's market in Halton right now, plain and simple, more homes coming on than selling for months straight. That's real leverage buyers haven't had here in years. On a $1M home the cashback is over $20,000, which covers a meaningful chunk of closing costs in a city that's still genuinely growing.\"",
+      "faqCity": [
+        {
+          "q": "Is there a cashback realtor in Milton?",
+          "a": "Yes. Home Cashbacks is a RECO-registered buyer agent serving Milton and the wider Halton Region. We charge a flat $4,999 fee and return the rest of the buyer agent commission after closing."
+        },
+        {
+          "q": "How much cashback can I get in Milton?",
+          "a": "On a $1,000,000 Milton home with a 2.5% buyer agent commission, the total commission is $25,000. We take our flat $4,999 and you receive approximately $20,001 back after closing."
+        },
+        {
+          "q": "Is Milton a buyer's market right now?",
+          "a": "Yes, currently. New listings have consistently outpaced sales through 2026, giving buyers more negotiating room than in recent years. This can change with the seasons, so current conditions are worth confirming before you make an offer."
+        },
+        {
+          "q": "What is the best neighbourhood in Milton for families?",
+          "a": "Willmott and the Ford/Beaty corridor are popular with families for newer construction and schools. Old Milton offers a more walkable, established alternative closer to the GO station."
+        }
+      ],
+      "alsoServing": [
+        {
+          "name": "Oakville",
+          "slug": "oakville"
+        },
+        {
+          "name": "Burlington",
+          "slug": "burlington"
+        },
+        {
+          "name": "Halton Hills",
+          "slug": "halton-hills"
+        },
+        {
+          "name": "Mississauga",
+          "slug": "mississauga"
+        }
+      ],
+      "geo": {
+        "lat": 43.5183,
+        "lng": -79.8774
+      },
+      "sourceSlug": "buyer-milton",
+      "pageTitle": "Milton Cashback Realtor | Home Cashbacks",
+      "metaDesc": "Cashback realtor in Milton. Flat $4,999 fee, on a typical Milton home you keep $20,000. Full service, no upfront commitment."
+    },
+    {
+      "slug": "halton-hills",
+      "name": "Halton Hills",
+      "cashback": "$19,000",
+      "heroSub": "We are a licensed Halton Hills buyer agent. We charge a flat $4,999 fee and return the rest of the buyer agent commission to you as cash back after closing. On a typical Halton Hills home, that is over $19,000 back.",
+      "calcDefault": 960000,
+      "marketDate": "July 2026",
+      "marketTitle": "The Halton Hills Market Right Now",
+      "marketText": "Halton Hills, built around Georgetown and Acton, is the small-town alternative inside Halton Region, with larger lots and a slower pace than Oakville, Burlington, or Milton offer. The average price of $958K has softened alongside the rest of the region in 2026, opening up more room to negotiate than buyers have seen recently. Glen Williams sits apart from the rest as a genuine heritage premium pocket within the township.",
+      "marketNote": null,
+      "stats": [
+        {
+          "val": "$958K",
+          "label": "Average home price",
+          "highlight": true
+        },
+        {
+          "val": "$550K",
+          "label": "Average condo/townhouse"
+        },
+        {
+          "val": "$1.15M",
+          "label": "Average detached"
+        },
+        {
+          "val": "22 days",
+          "label": "Avg days on market"
+        }
+      ],
+      "hoods": [
+        {
+          "type": "Main town",
+          "name": "Georgetown",
+          "desc": "Halton Hills' largest community, with a heritage downtown core, Georgetown Railway Station, and a genuine small-town feel with easy highway access.",
+          "price": "Detached from ~$1.1M",
+          "featured": true
+        },
+        {
+          "type": "Affordable entry",
+          "name": "Acton",
+          "desc": "A smaller, more affordable community than Georgetown, with a quieter pace and a real small-town character.",
+          "price": "Detached from ~$950K",
+          "featured": true
+        },
+        {
+          "type": "Premium & heritage",
+          "name": "Glen Williams",
+          "desc": "A picturesque heritage hamlet within Halton Hills, known for its character homes and river valley setting. Commands a real premium.",
+          "price": "Detached from ~$1.8M",
+          "featured": true
+        },
+        {
+          "type": "Estate lots",
+          "name": "Rural Halton Hills",
+          "desc": "Large acreage properties and estate homes outside the main towns, for buyers prioritizing space and privacy over walkability.",
+          "price": "Detached from ~$2M+"
+        }
+      ],
+      "laleh": "\"Halton Hills is who I recommend when a buyer tells me they want space and quiet more than they want to be close to everything. Georgetown gives you a real downtown and GO access, Acton is even more affordable, and Glen Williams is its own thing entirely. Cashback here is over $19,000, meaningful in a town where people are trading commute time for actual land.\"",
+      "faqCity": [
+        {
+          "q": "Is there a cashback realtor in Halton Hills?",
+          "a": "Yes. Home Cashbacks is a RECO-registered buyer agent serving Halton Hills, including Georgetown and Acton. We charge a flat $4,999 fee and return the rest of the buyer agent commission after closing."
+        },
+        {
+          "q": "How much cashback can I get in Halton Hills?",
+          "a": "On a $958,000 Halton Hills home with a 2.5% buyer agent commission, the total commission is $23,950. We take our flat $4,999 and you receive approximately $18,951 back after closing."
+        },
+        {
+          "q": "What is the difference between Georgetown and Acton?",
+          "a": "Georgetown is the larger of the two, with a bigger downtown core and more amenities. Acton is smaller and generally more affordable, with an even quieter, more rural feel."
+        },
+        {
+          "q": "Is Halton Hills commutable to Toronto?",
+          "a": "Yes, via GO Transit from Georgetown station on the Kitchener line, though it is one of the longer commutes covered in this guide. Highway 401 access is also available for drivers, particularly from the Georgetown side."
+        }
+      ],
+      "alsoServing": [
+        {
+          "name": "Milton",
+          "slug": "milton"
+        },
+        {
+          "name": "Burlington",
+          "slug": "burlington"
+        },
+        {
+          "name": "Oakville",
+          "slug": "oakville"
+        },
+        {
+          "name": "Brampton",
+          "slug": "brampton"
+        }
+      ],
+      "geo": {
+        "lat": 43.6435,
+        "lng": -79.9169
+      },
+      "sourceSlug": "buyer-halton-hills",
+      "pageTitle": "Halton Hills Cashback Realtor | Home Cashbacks",
+      "metaDesc": "Cashback realtor in Halton Hills. Flat $4,999 fee, on a typical Halton Hills home you keep $19,000. Full service, no upfront commitment."
+    },
+    {
+      "slug": "ajax",
+      "name": "Ajax",
+      "cashback": "$17,000",
+      "heroSub": "We are a licensed Ajax buyer agent. We charge a flat $4,999 fee and return the rest of the buyer agent commission to you as cash back after closing. On a typical Ajax home, that is over $17,000 back.",
+      "calcDefault": 888000,
+      "marketDate": "July 2026",
+      "marketTitle": "The Ajax Market Right Now",
+      "marketText": "Ajax is where a lot of buyers land once Toronto and even nearby Whitby price them out, a lakeshore community that still delivers real value for the money. The average home price of $888K sits comfortably below the GTA average, and the Lakeshore East GO line keeps a Union Station commute realistic. Northeast Ajax has been the strongest draw for families moving from condos into their first detached home.",
+      "marketNote": null,
+      "stats": [
+        {
+          "val": "$888K",
+          "label": "Average home price",
+          "highlight": true
+        },
+        {
+          "val": "$540K",
+          "label": "Average condo/townhouse"
+        },
+        {
+          "val": "$1.05M",
+          "label": "Average detached"
+        },
+        {
+          "val": "25 days",
+          "label": "Avg days on market"
+        }
+      ],
+      "hoods": [
+        {
+          "type": "Newer & family",
+          "name": "Northeast Ajax",
+          "desc": "Ajax's newer growth corridor, with modern detached homes, parks, and schools. Popular with young families moving from Toronto.",
+          "price": "Detached from ~$950K",
+          "featured": true
+        },
+        {
+          "type": "Heritage core",
+          "name": "Pickering Village",
+          "desc": "A historic, walkable pocket in west Ajax with older character homes and a genuine small-town main street feel.",
+          "price": "Mixed from ~$800K",
+          "featured": true
+        },
+        {
+          "type": "Lakefront",
+          "name": "South Ajax",
+          "desc": "Closer to the waterfront trail and Lake Ontario, with a mix of established homes and some newer infill.",
+          "price": "Detached from ~$900K",
+          "featured": true
+        },
+        {
+          "type": "Balanced value",
+          "name": "Central Ajax",
+          "desc": "Ajax's established middle, with good access to the GO station and a wide mix of home ages and prices.",
+          "price": "Detached from ~$850K"
+        }
+      ],
+      "laleh": "\"I send a lot of first-time buyers to Ajax specifically because the math still works here. $17,000 in cashback on top of an already-affordable purchase price covers real moving costs, not just a nice-to-have. Northeast Ajax is where I'd start looking if schools and a newer build matter to you.\"",
+      "faqCity": [
+        {
+          "q": "Is there a cashback realtor in Ajax?",
+          "a": "Yes. Home Cashbacks is a RECO-registered buyer agent serving Ajax and Durham Region. We charge a flat $4,999 fee and return the rest of the buyer agent commission after closing."
+        },
+        {
+          "q": "How much cashback can I get in Ajax?",
+          "a": "On an $888,000 Ajax home with a 2.5% buyer agent commission, the total commission is $22,200. We take our flat $4,999 and you receive approximately $17,201 back after closing."
+        },
+        {
+          "q": "Is Ajax commutable to Toronto?",
+          "a": "Yes, via GO Transit's Lakeshore East line from Ajax GO, with service into Union Station. Highway 401 also runs directly through Ajax for drivers."
+        },
+        {
+          "q": "What is the best neighbourhood in Ajax for families?",
+          "a": "Northeast Ajax is the most popular with young families for its newer construction and schools. Pickering Village offers a more walkable, established alternative with real small-town character."
+        }
+      ],
+      "alsoServing": [
+        {
+          "name": "Pickering",
+          "slug": "pickering"
+        },
+        {
+          "name": "Whitby",
+          "slug": "whitby"
+        },
+        {
+          "name": "Oshawa",
+          "slug": "oshawa"
+        },
+        {
+          "name": "Toronto",
+          "slug": "toronto"
+        }
+      ],
+      "geo": {
+        "lat": 43.8509,
+        "lng": -79.0204
+      },
+      "sourceSlug": "buyer-ajax",
+      "metaDesc": "Cashback realtor in Ajax. Flat $4,999 fee, on a typical Ajax home you keep $17,000. Full service, no upfront commitment."
+    },
+    {
+      "slug": "pickering",
+      "name": "Pickering",
+      "cashback": "$17,900",
+      "heroSub": "We are a licensed Pickering buyer agent. We charge a flat $4,999 fee and return the rest of the buyer agent commission to you as cash back after closing. On a typical Pickering home, that is over $17,900 back.",
+      "calcDefault": 917000,
+      "marketDate": "July 2026",
+      "marketTitle": "The Pickering Market Right Now",
+      "marketText": "Seaton is the story in Pickering right now, one of the largest master-planned communities in the GTA, still actively under development. That's part of why Pickering typically runs a touch ahead of the rest of Durham on price, alongside its direct GO Transit line into Union Station. West Shore and Bay Ridges remain the more established, lower-cost alternative for buyers who want proximity to the lake without new-construction pricing.",
+      "marketNote": null,
+      "stats": [
+        {
+          "val": "$917K",
+          "label": "Average home price",
+          "highlight": true
+        },
+        {
+          "val": "$560K",
+          "label": "Average condo/townhouse"
+        },
+        {
+          "val": "$1.1M",
+          "label": "Average detached"
+        },
+        {
+          "val": "24 days",
+          "label": "Avg days on market"
+        }
+      ],
+      "hoods": [
+        {
+          "type": "New master-planned",
+          "name": "Seaton",
+          "desc": "One of the largest master-planned communities in the GTA, with new construction, parks, and schools built into the plan from the start.",
+          "price": "Detached from ~$1.05M",
+          "featured": true
+        },
+        {
+          "type": "Transit hub",
+          "name": "Pickering City Centre",
+          "desc": "The area around Pickering GO, seeing ongoing intensification with condos and townhomes aimed at commuters.",
+          "price": "Mixed from ~$650K",
+          "featured": true
+        },
+        {
+          "type": "Heritage lakefront",
+          "name": "Bay Ridges",
+          "desc": "An older shoreline community close to the waterfront trail and marina, with a mix of original and renovated homes.",
+          "price": "Detached from ~$950K",
+          "featured": true
+        },
+        {
+          "type": "Balanced value",
+          "name": "West Shore",
+          "desc": "An established Pickering neighbourhood close to the lake, offering more accessible pricing than the newer Seaton development.",
+          "price": "Detached from ~$900K"
+        }
+      ],
+      "laleh": "\"People underestimate how much Seaton has changed Pickering. It's genuinely one of the biggest planned communities in the GTA, and the direct Union line makes it a real option even for downtown commuters. Cashback here runs close to $18,000, which stacks up well whether you're going new-build or resale near the water.\"",
+      "faqCity": [
+        {
+          "q": "Is there a cashback realtor in Pickering?",
+          "a": "Yes. Home Cashbacks is a RECO-registered buyer agent serving Pickering and Durham Region. We charge a flat $4,999 fee and return the rest of the buyer agent commission after closing."
+        },
+        {
+          "q": "How much cashback can I get in Pickering?",
+          "a": "On a $917,000 Pickering home with a 2.5% buyer agent commission, the total commission is $22,925. We take our flat $4,999 and you receive approximately $17,926 back after closing."
+        },
+        {
+          "q": "What is Seaton in Pickering?",
+          "a": "Seaton is one of the largest master-planned communities in the GTA, still under active development, with new detached homes, townhomes, parks, and schools built into the overall plan."
+        },
+        {
+          "q": "Is Pickering commutable to Toronto?",
+          "a": "Yes, Pickering GO offers direct service to Union Station on the Lakeshore East line, one of the more convenient commutes in Durham Region."
+        }
+      ],
+      "alsoServing": [
+        {
+          "name": "Ajax",
+          "slug": "ajax"
+        },
+        {
+          "name": "Whitby",
+          "slug": "whitby"
+        },
+        {
+          "name": "Scarborough",
+          "slug": "scarborough"
+        },
+        {
+          "name": "Toronto",
+          "slug": "toronto"
+        }
+      ],
+      "geo": {
+        "lat": 43.8384,
+        "lng": -79.0868
+      },
+      "sourceSlug": "buyer-pickering",
+      "metaDesc": "Cashback realtor in Pickering. Flat $4,999 fee, on a typical Pickering home you keep $17,900. Full service, no upfront commitment."
+    },
+    {
+      "slug": "whitby",
+      "name": "Whitby",
+      "cashback": "$17,600",
+      "heroSub": "We are a licensed Whitby buyer agent. We charge a flat $4,999 fee and return the rest of the buyer agent commission to you as cash back after closing. On a typical Whitby home, that is over $17,600 back.",
+      "calcDefault": 904000,
+      "marketDate": "July 2026",
+      "marketTitle": "The Whitby Market Right Now",
+      "marketText": "Whitby doesn't get the same attention as Ajax or Pickering, but Brooklin specifically is one of the most consistently in-demand family pockets in Durham Region. A walkable heritage downtown, direct GO access, and strong schools have kept Whitby's $904K average price stable even as some neighbouring markets softened more. It's a market that rewards buyers who do their research rather than just following the headlines.",
+      "marketNote": null,
+      "stats": [
+        {
+          "val": "$904K",
+          "label": "Average home price",
+          "highlight": true
+        },
+        {
+          "val": "$550K",
+          "label": "Average condo/townhouse"
+        },
+        {
+          "val": "$1.08M",
+          "label": "Average detached"
+        },
+        {
+          "val": "23 days",
+          "label": "Avg days on market"
+        }
+      ],
+      "hoods": [
+        {
+          "type": "Family favourite",
+          "name": "Brooklin",
+          "desc": "A well-established, highly sought-after Whitby neighbourhood with strong schools, a village-style main street, and newer subdivisions on its edges.",
+          "price": "Detached from ~$1.0M",
+          "featured": true
+        },
+        {
+          "type": "Heritage & walkable",
+          "name": "Downtown Whitby",
+          "desc": "Whitby's historic core, walkable to shops, restaurants, and the GO station, with a mix of character homes.",
+          "price": "Mixed from ~$800K",
+          "featured": true
+        },
+        {
+          "type": "Lakefront",
+          "name": "Port Whitby",
+          "desc": "Close to the marina and waterfront trail, with a mix of established and newer homes near the lake.",
+          "price": "Detached from ~$900K",
+          "featured": true
+        },
+        {
+          "type": "Newer builds",
+          "name": "Williamsburg",
+          "desc": "A newer, family-oriented Whitby neighbourhood with modern construction and good access to schools and parks.",
+          "price": "Detached from ~$950K"
+        }
+      ],
+      "laleh": "\"Whitby gets overlooked next to its neighbours, and I think that's a mistake. Brooklin in particular is one of the most in-demand family pockets in all of Durham, it just doesn't make headlines the way Ajax does. Cashback on a typical purchase here is over $17,600, and I'd rather clients know about Brooklin before they default to somewhere flashier.\"",
+      "faqCity": [
+        {
+          "q": "Is there a cashback realtor in Whitby?",
+          "a": "Yes. Home Cashbacks is a RECO-registered buyer agent serving Whitby and Durham Region. We charge a flat $4,999 fee and return the rest of the buyer agent commission after closing."
+        },
+        {
+          "q": "How much cashback can I get in Whitby?",
+          "a": "On a $904,000 Whitby home with a 2.5% buyer agent commission, the total commission is $22,600. We take our flat $4,999 and you receive approximately $17,601 back after closing."
+        },
+        {
+          "q": "What is the best neighbourhood in Whitby for families?",
+          "a": "Brooklin is consistently the top pick for its schools and village feel. Williamsburg offers a newer alternative with modern construction, and Downtown Whitby suits buyers who want walkability over a larger lot."
+        },
+        {
+          "q": "Is Whitby commutable to Toronto?",
+          "a": "Yes, via GO Transit's Lakeshore East line from Whitby GO, with direct service to Union Station."
+        }
+      ],
+      "alsoServing": [
+        {
+          "name": "Ajax",
+          "slug": "ajax"
+        },
+        {
+          "name": "Pickering",
+          "slug": "pickering"
+        },
+        {
+          "name": "Oshawa",
+          "slug": "oshawa"
+        },
+        {
+          "name": "Toronto",
+          "slug": "toronto"
+        }
+      ],
+      "geo": {
+        "lat": 43.8975,
+        "lng": -78.9429
+      },
+      "sourceSlug": "buyer-whitby",
+      "metaDesc": "Cashback realtor in Whitby. Flat $4,999 fee, on a typical Whitby home you keep $17,600. Full service, no upfront commitment."
+    },
+    {
+      "slug": "oshawa",
+      "name": "Oshawa",
+      "cashback": "$13,000",
+      "heroSub": "We are a licensed Oshawa buyer agent. We charge a flat $4,999 fee and return the rest of the buyer agent commission to you as cash back after closing. On a typical Oshawa home, that is over $13,000 back.",
+      "calcDefault": 722000,
+      "marketDate": "July 2026",
+      "marketTitle": "The Oshawa Market Right Now",
+      "marketText": "At $722K average, Oshawa remains the most affordable municipality in Durham Region and one of the most affordable anywhere in the GTA. Downtown revitalization has been genuinely underway for several years now, not just a talking point, and GO Transit still connects Oshawa buyers into Union Station. This is where a lot of first-time buyers land when every market closer to Toronto has stopped making financial sense.",
+      "marketNote": null,
+      "stats": [
+        {
+          "val": "$722K",
+          "label": "Average home price",
+          "highlight": true
+        },
+        {
+          "val": "$460K",
+          "label": "Average condo/townhouse"
+        },
+        {
+          "val": "$850K",
+          "label": "Average detached"
+        },
+        {
+          "val": "28 days",
+          "label": "Avg days on market"
+        }
+      ],
+      "hoods": [
+        {
+          "type": "Heritage & revitalizing",
+          "name": "Downtown Oshawa",
+          "desc": "Oshawa's historic core, undergoing ongoing revitalization, with older character homes and a mix of condos and rentals at accessible prices.",
+          "price": "Mixed from ~$550K",
+          "featured": true
+        },
+        {
+          "type": "Family favourite",
+          "name": "Northglen",
+          "desc": "A newer, established Oshawa neighbourhood popular with families, with good schools and a mix of detached homes and townhomes.",
+          "price": "Detached from ~$800K",
+          "featured": true
+        },
+        {
+          "type": "Balanced value",
+          "name": "Eastdale",
+          "desc": "An established, affordable Oshawa neighbourhood with a mix of home ages, popular with first-time buyers.",
+          "price": "Detached from ~$700K",
+          "featured": true
+        },
+        {
+          "type": "Near university",
+          "name": "Samac",
+          "desc": "Close to Ontario Tech University and Durham College, with a mix of family homes and student-oriented rental demand.",
+          "price": "Detached from ~$750K"
+        }
+      ],
+      "laleh": "\"For a lot of first-time buyers, Oshawa is where the numbers finally work, and that's not a knock on the city, it's genuinely one of the last affordable entry points left in the GTA. The $13,000 cashback here can be the difference between qualifying comfortably and stretching every month to make it work.\"",
+      "faqCity": [
+        {
+          "q": "Is there a cashback realtor in Oshawa?",
+          "a": "Yes. Home Cashbacks is a RECO-registered buyer agent serving Oshawa and Durham Region. We charge a flat $4,999 fee and return the rest of the buyer agent commission after closing."
+        },
+        {
+          "q": "How much cashback can I get in Oshawa?",
+          "a": "On a $722,000 Oshawa home with a 2.5% buyer agent commission, the total commission is $18,050. We take our flat $4,999 and you receive approximately $13,051 back after closing."
+        },
+        {
+          "q": "Is Oshawa the most affordable city in the GTA?",
+          "a": "It is generally the most affordable municipality within Durham Region and one of the more affordable options in the wider GTA, though prices still vary significantly by neighbourhood."
+        },
+        {
+          "q": "Is Oshawa commutable to Toronto?",
+          "a": "Yes, via GO Transit's Lakeshore East line from Oshawa GO, though it is one of the longer commutes covered in this guide, generally over an hour to Union Station."
+        }
+      ],
+      "alsoServing": [
+        {
+          "name": "Whitby",
+          "slug": "whitby"
+        },
+        {
+          "name": "Ajax",
+          "slug": "ajax"
+        },
+        {
+          "name": "Pickering",
+          "slug": "pickering"
+        },
+        {
+          "name": "Toronto",
+          "slug": "toronto"
+        }
+      ],
+      "geo": {
+        "lat": 43.8971,
+        "lng": -78.8658
+      },
+      "sourceSlug": "buyer-oshawa",
+      "metaDesc": "Cashback realtor in Oshawa. Flat $4,999 fee, on a typical Oshawa home you keep $13,000. Full service, no upfront commitment."
+    },
+    {
+      "slug": "king-city",
+      "name": "King City",
+      "cashback": "$42,500",
+      "heroSub": "We are a licensed King City buyer agent. We charge a flat $4,999 fee and return the rest of the buyer agent commission to you as cash back after closing. On a typical King City home, that is over $42,500 back.",
+      "calcDefault": 1900000,
+      "marketDate": "July 2026",
+      "marketTitle": "The King City Market Right Now",
+      "marketText": "King City and the surrounding Township of King are among the most exclusive markets in the GTA, known for large estate lots, equestrian properties, and executive homes well outside typical suburban density. Prices run significantly above the York Region average, reflecting the scarcity of large-lot inventory this close to Toronto.",
+      "marketNote": null,
+      "stats": [
+        {
+          "val": "$1.9M",
+          "label": "Average home price",
+          "highlight": true
+        },
+        {
+          "val": "$600K",
+          "label": "Average condo/townhouse"
+        },
+        {
+          "val": "$2.3M",
+          "label": "Average detached"
+        },
+        {
+          "val": "27 days",
+          "label": "Avg days on market"
+        }
+      ],
+      "hoods": [
+        {
+          "type": "Village core",
+          "name": "King City",
+          "desc": "The Township's main village, with a genuine small-town centre surrounded by executive homes on large lots.",
+          "price": "Detached from ~$1.8M",
+          "featured": true
+        },
+        {
+          "type": "Estate homes",
+          "name": "Nobleton",
+          "desc": "A community of executive and estate homes just west of King City, popular for privacy and larger acreage.",
+          "price": "Detached from ~$1.7M",
+          "featured": true
+        },
+        {
+          "type": "More accessible",
+          "name": "Schomberg",
+          "desc": "The most accessible entry point within the Township of King, with a village feel and pricing well below King City proper.",
+          "price": "Detached from ~$1.0M",
+          "featured": true
+        },
+        {
+          "type": "Rural estates",
+          "name": "Rural King",
+          "desc": "Large acreage properties and estate homes for buyers prioritizing privacy, land, and equestrian use over proximity to a village core.",
+          "price": "Detached from ~$2.5M+"
+        }
+      ],
+      "laleh": "\"King City is a different kind of market entirely, buyers here are usually trading proximity for land, privacy, and often an equestrian setup you can't get closer to Toronto. Schomberg is genuinely the value entry point into the township if King City proper is out of reach. On a $1.9M home your cashback is over $42,500, which is significant even relative to the price point.\"",
+      "faqCity": [
+        {
+          "q": "Is there a cashback realtor in King City?",
+          "a": "Yes. Home Cashbacks is a RECO-registered buyer agent serving King City and the wider Township of King. We charge a flat $4,999 fee and return the rest of the buyer agent commission after closing."
+        },
+        {
+          "q": "How much cashback can I get in King City?",
+          "a": "On a $1,900,000 King City home with a 2.5% buyer agent commission, the total commission is $47,500. We take our flat $4,999 and you receive approximately $42,501 back after closing."
+        },
+        {
+          "q": "Why are homes in King City so much more expensive?",
+          "a": "King City and the surrounding township are known for large estate lots and equestrian properties, a fundamentally different housing stock than the suburban subdivisions found in most of the GTA. That scarcity of large-lot land drives prices well above the York Region average."
+        },
+        {
+          "q": "Is there a more affordable option within the Township of King?",
+          "a": "Yes. Schomberg offers a genuine village feel at prices well below King City proper, making it the most accessible entry point into the township."
+        }
+      ],
+      "alsoServing": [
+        {
+          "name": "Aurora",
+          "slug": "aurora"
+        },
+        {
+          "name": "Richmond Hill",
+          "slug": "richmond-hill"
+        },
+        {
+          "name": "Vaughan",
+          "slug": "vaughan"
+        },
+        {
+          "name": "Newmarket",
+          "slug": "newmarket"
+        }
+      ],
+      "geo": {
+        "lat": 43.9308,
+        "lng": -79.5261
+      },
+      "sourceSlug": "buyer-king-city",
+      "metaDesc": "Cashback realtor in King City. Flat $4,999 fee, on a typical King City home you keep $42,500. Full service, no upfront commitment."
+    },
+    {
+      "slug": "east-gwillimbury",
+      "name": "East Gwillimbury",
+      "cashback": "$22,500",
+      "heroSub": "We are a licensed East Gwillimbury buyer agent. We charge a flat $4,999 fee and return the rest of the buyer agent commission to you as cash back after closing. On a typical East Gwillimbury home, that is over $22,500 back.",
+      "calcDefault": 1100000,
+      "marketDate": "July 2026",
+      "marketTitle": "The East Gwillimbury Market Right Now",
+      "marketText": "East Gwillimbury is one of York Region's fastest-growing municipalities, anchored by GO Transit's northern terminus at East Gwillimbury Station. Newer master-planned communities in Queensville sit alongside older, more rural hamlets like Holland Landing and Mount Albert, giving buyers a wider range of lot sizes and price points than most of York Region.",
+      "marketNote": null,
+      "stats": [
+        {
+          "val": "$1.1M",
+          "label": "Average home price",
+          "highlight": true
+        },
+        {
+          "val": "$620K",
+          "label": "Average condo/townhouse"
+        },
+        {
+          "val": "$1.35M",
+          "label": "Average detached"
+        },
+        {
+          "val": "26 days",
+          "label": "Avg days on market"
+        }
+      ],
+      "hoods": [
+        {
+          "type": "New master-planned",
+          "name": "Queensville",
+          "desc": "A growing master-planned community with newer detached homes and townhomes, popular with families moving north from Newmarket.",
+          "price": "Detached from ~$1.1M",
+          "featured": true
+        },
+        {
+          "type": "GO Transit hub",
+          "name": "Holland Landing",
+          "desc": "Close to the East Gwillimbury GO station, the northern terminus of the line, with a mix of established and newer homes.",
+          "price": "Detached from ~$1.0M",
+          "featured": true
+        },
+        {
+          "type": "Rural village",
+          "name": "Mount Albert",
+          "desc": "A smaller, more rural hamlet within East Gwillimbury, offering larger lots and a genuine small-town feel.",
+          "price": "Detached from ~$1.15M",
+          "featured": true
+        },
+        {
+          "type": "Established",
+          "name": "Sharon",
+          "desc": "One of East Gwillimbury's older, established communities, known for its heritage Sharon Temple and quieter residential streets.",
+          "price": "Detached from ~$1.1M"
+        }
+      ],
+      "laleh": "\"East Gwillimbury is genuinely one of the fastest-growing parts of York Region right now, and East Gwillimbury GO being the northern end of the line matters more than people realize, it means guaranteed seating on the way into the city. Queensville is where most of the new construction is happening, while Mount Albert and Sharon keep more of a rural, small-town character. On a $1.1M home your cashback is over $22,500, real money whether you're buying new in Queensville or an older home in one of the hamlets.\"",
+      "faqCity": [
+        {
+          "q": "Is there a cashback realtor in East Gwillimbury?",
+          "a": "Yes. Home Cashbacks is a RECO-registered buyer agent serving East Gwillimbury and York Region. We charge a flat $4,999 fee and return the rest of the buyer agent commission after closing."
+        },
+        {
+          "q": "How much cashback can I get in East Gwillimbury?",
+          "a": "On a $1,100,000 East Gwillimbury home with a 2.5% buyer agent commission, the total commission is $27,500. We take our flat $4,999 and you receive approximately $22,501 back after closing."
+        },
+        {
+          "q": "Is East Gwillimbury commutable to Toronto?",
+          "a": "Yes, East Gwillimbury GO is the northern terminus of the line, offering direct service to Union Station and effectively guaranteed seating for the full ride."
+        },
+        {
+          "q": "What is the best neighbourhood in East Gwillimbury for new construction?",
+          "a": "Queensville has the bulk of the newer master-planned development. Holland Landing and Mount Albert offer more established, rural alternatives with larger lots."
+        }
+      ],
+      "alsoServing": [
+        {
+          "name": "Newmarket",
+          "slug": "newmarket"
+        },
+        {
+          "name": "Aurora",
+          "slug": "aurora"
+        },
+        {
+          "name": "Stouffville",
+          "slug": "stouffville"
+        },
+        {
+          "name": "Richmond Hill",
+          "slug": "richmond-hill"
+        }
+      ],
+      "geo": {
+        "lat": 44.1042,
+        "lng": -79.4468
+      },
+      "sourceSlug": "buyer-east-gwillimbury",
+      "metaDesc": "Cashback realtor in East Gwillimbury. Flat $4,999 fee, on a typical East Gwillimbury home you keep $22,500. Full service, no upfront commitment."
     }
   ]
 }

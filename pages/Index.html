@@ -37,8 +37,8 @@
 }
 </script>
 <link rel="preload" href="/assets/hero-home.webp" as="image" fetchpriority="high">
-<link rel="preload" href="/assets/index.css" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
-<noscript><link rel="stylesheet" href="/assets/index.css"/></noscript>
+<link rel="preload" href="/assets/index.css?v=10" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
+<noscript><link rel="stylesheet" href="/assets/index.css?v=10"/></noscript>
 <style>
 /* Critical above-fold CSS — prevents FOUC while index.css loads async */
 body{font-family:'Rubik',sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;padding-top:118px}
@@ -143,7 +143,7 @@ body{font-family:'Rubik',sans-serif;background:var(--bg);color:var(--ink);line-h
       "name": "What areas in the GTA do you serve?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "We work with buyers across the Greater Toronto Area including Toronto, Etobicoke, Scarborough, North York, Richmond Hill, Vaughan, Markham, Mississauga, Brampton, Oakville, Burlington, Aurora, Newmarket, and Stouffville."
+        "text": "We work with buyers across the Greater Toronto Area including Toronto, Etobicoke, Scarborough, North York, Richmond Hill, Vaughan, Markham, Thornhill, Mississauga, Brampton, Oakville, Burlington, Milton, Halton Hills, Aurora, Newmarket, Stouffville, King City, East Gwillimbury, Ajax, Pickering, Whitby, and Oshawa."
       }
     },
     {
@@ -176,33 +176,204 @@ body{font-family:'Rubik',sans-serif;background:var(--bg);color:var(--ink);line-h
 <section class="hero hero--fullbleed" style="background-image:url('/assets/hero-home.webp')">
   <div class="hero-overlay"></div>
   <div class="hero-text-col">
-    <h1>Full Service Toronto Realtor.<br><em>Cashback on Every Purchase.</em></h1>
-    <p class="hero-million">On a $1M home<br>you earn <em>$20,000 back.</em></p>
+    <h1>Full-Service Toronto Realtor.<br><em>$4,999 Flat Fee.</em></h1>
+    <p class="hero-million">Buying a $1M home?<br>You could receive approximately <em>$20,000 back.</em></p>
     <div class="hero-btns">
       <button class="btn-primary" onclick="openModal()">Contact Us</button>
     </div>
-    <div class="hero-stats">
-      <div class="hero-stat">
-        <div class="hero-stat-val">Free</div>
-        <div class="hero-stat-label">First showing</div>
+    <ul class="hero-checklist">
+      <li>No upfront contract</li>
+      <li>Cashback terms in writing</li>
+      <li>Offer strategy and negotiation</li>
+    </ul>
+  </div>
+</section>
+
+<!-- MEET LALEH. split panel -->
+<section class="meet-section">
+  <div class="meet-inner">
+    <div class="meet-photo">
+      <img src="/assets/headshot.webp" alt="Laleh Mousavi, Realtor at HomeCashbacks" width="220" height="275" loading="lazy" decoding="async"/>
+    </div>
+    <div class="meet-content">
+      <!-- Mobile: Option B dark card -->
+      <div class="meet-mobile-row" style="display:none">
+        <img src="/assets/headshot.webp" alt="Laleh Mousavi" class="meet-mobile-photo" width="140" height="172" loading="lazy" decoding="async"/>
+        <div class="meet-mobile-text">
+          <div class="meet-eyebrow" style="margin-bottom:.15rem">Behind HomeCashbacks</div>
+          <div class="meet-name">Laleh Mousavi</div>
+          <div class="meet-title">Licensed Realtor · Ontario</div>
+          <a href="https://share.google/fu2wgAYhOFcjSZTxX" target="_blank" rel="noopener" class="testi-google-badge" style="margin-top:.5rem;padding:.4rem .7rem;gap:.4rem">
+            <svg width="15" height="15" viewBox="0 0 24 24" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+            <div class="testi-google-text">
+              <span class="testi-google-stars" style="font-size:11px">★★★★★</span>
+              <span class="testi-google-label" style="font-size:10px">5.0 on Google</span>
+            </div>
+          </a>
+        </div>
       </div>
-      <div class="hero-stat">
-        <div class="hero-stat-val">Free</div>
-        <div class="hero-stat-label">All offers</div>
+      <div class="meet-divider" style="display:none"></div>
+      <!-- Desktop: normal layout -->
+      <div class="meet-eyebrow meet-desktop-only">Behind HomeCashbacks</div>
+      <div class="meet-name-row meet-desktop-only" style="display:flex;align-items:center;justify-content:space-between;gap:1rem">
+        <div class="meet-name" style="margin:0">Laleh Mousavi</div>
+        <a href="https://share.google/fu2wgAYhOFcjSZTxX" target="_blank" rel="noopener" class="testi-google-badge" style="margin:0;align-self:center">
+          <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+          <div class="testi-google-text">
+            <span class="testi-google-stars">★★★★★</span>
+            <span class="testi-google-label">5.0 on Google</span>
+          </div>
+        </a>
       </div>
-      <div class="hero-stat">
-        <div class="hero-stat-val">$30</div>
-        <div class="hero-stat-label">Per additional showing</div>
+      <div class="meet-title meet-desktop-only">Licensed Realtor · Ontario</div>
+      <p class="meet-body">Hi, I'm Laleh. I believe Toronto home buyers pay too much for real estate representation. Buyers do most of the work themselves today, browsing listings, researching neighbourhoods, tracking prices online. Technology made that possible, but the traditional commission model never adjusted. So I built HomeCashbacks on one simple idea: charge transparently for the work I actually do, and give you back the rest.</p>
+      <a href="our-story.html" class="meet-link">Read our story →</a>
+    </div>
+  </div>
+</section>
+
+<!-- CREDENTIALS STRIP -->
+<section class="creds-strip">
+  <div class="creds-strip-inner">
+    <span class="creds-strip-label">Licensed &amp; recognized by</span>
+    <div class="creds-strip-logos">
+      <div class="creds-badge">
+        <img src="/assets/logos/trreb-logo.svg" alt="TRREB" class="creds-badge-img" width="120" height="32" loading="lazy"/>
+        <span class="creds-badge-note">Member</span>
       </div>
-      <div class="hero-stat">
-        <div class="hero-stat-val">$4,999</div>
-        <div class="hero-stat-label">Flat fee, total</div>
+      <div class="creds-badge">
+        <img src="/assets/logos/orea-logo.svg" alt="OREA" class="creds-badge-img" width="91" height="29" loading="lazy"/>
+        <span class="creds-badge-note">Member</span>
+      </div>
+      <div class="creds-badge">
+        <img src="/assets/logos/crea-logo.png" alt="CREA REALTOR" class="creds-badge-img creds-badge-img--tall" width="35" height="40" loading="lazy"/>
+        <span class="creds-badge-note">REALTOR&reg; Member</span>
+      </div>
+      <div class="creds-badge">
+        <div class="creds-badge-mark">RECO</div>
+        <span class="creds-badge-note">Licensed &amp; Registered</span>
       </div>
     </div>
   </div>
 </section>
 
+<script>
+(function(){
+  var grid = document.querySelector('.testi-grid');
+  var dots = document.getElementById('testi-dots');
+  var dotBtns = dots ? dots.querySelectorAll('.testi-dot') : [];
+  function checkMobile(){
+    if(window.innerWidth <= 768){
+      dots && (dots.style.display='flex');
+    } else {
+      dots && (dots.style.display='none');
+    }
+  }
+  checkMobile();
+  window.addEventListener('resize', checkMobile);
+  window.testiGoTo = function(i){
+    var cards = grid.querySelectorAll('.testi-card');
+    if(cards[i]) grid.scrollTo({left: cards[i].offsetLeft - 16, behavior:'smooth'});
+  };
+  if(grid){
+    grid.addEventListener('scroll', function(){
+      var cards = grid.querySelectorAll('.testi-card');
+      var center = grid.scrollLeft + grid.offsetWidth / 2;
+      var closest = 0;
+      var minDist = Infinity;
+      cards.forEach(function(c,i){
+        var dist = Math.abs(c.offsetLeft + c.offsetWidth/2 - center);
+        if(dist < minDist){ minDist=dist; closest=i; }
+      });
+      dotBtns.forEach(function(d,i){ d.classList.toggle('active', i===closest); });
+    });
+  }
+})();
+</script>
+
 <!-- CASHBACK CALCULATOR -->
+<section class="testi-section section">
+  <div class="sec-inner">
+
+    <div class="testi-top">
+      <div>
+        <div class="eyebrow">What clients say</div>
+        <h2 class="sec-title">Trusted by GTA buyers</h2>
+      </div>
+    </div>
+
+    <div class="testi-grid">
+
+      <div class="testi-card testi-card--featured">
+        <div class="testi-author">
+          <div class="testi-avatar" style="background:var(--gold-light);color:var(--amber-dark)">NG</div>
+          <div>
+            <div class="testi-detail">First-time condo buyer · Toronto</div>
+          </div>
+        </div>
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-quote">We were skeptical about the cashback at first, it felt like there had to be a catch. Laleh <strong>attended every showing, handled our offer, and negotiated on our behalf</strong>, and we received cashback after closing exactly as promised.</p>
+      </div>
+
+      <div class="testi-card">
+        <div class="testi-author">
+          <div class="testi-avatar" style="background:var(--bg2);color:var(--ink2)">AH</div>
+          <div>
+            <div class="testi-detail">First-time buyer · Etobicoke</div>
+          </div>
+        </div>
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-quote">I'll admit I wondered what the catch was when a realtor offers money back. There wasn't one. Laleh <strong>explained exactly how the model worked and never once pushed us toward buying</strong>, we received cashback after closing, just like she said we would.</p>
+      </div>
+
+      <div class="testi-card">
+        <div class="testi-author">
+          <div class="testi-avatar" style="background:var(--bg2);color:var(--ink2)">MA</div>
+          <div>
+            <div class="testi-detail">Home buyer · Richmond Hill</div>
+          </div>
+        </div>
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-quote">Working with a flat-fee agent made us nervous at first, would we still get full attention? Laleh was <strong>responsive at every step and just as organized as any traditional agent</strong>. We received cashback after closing, no surprises.</p>
+      </div>
+
+    </div>
+    <div class="testi-dots" id="testi-dots" style="display:none">
+      <button class="testi-dot active" onclick="testiGoTo(0)"></button>
+      <button class="testi-dot" onclick="testiGoTo(1)"></button>
+      <button class="testi-dot" onclick="testiGoTo(2)"></button>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST QUESTIONS -->
+<section class="trust-section">
+  <div class="trust-inner">
+    <div class="trust-eyebrow">We get it</div>
+    <h2 class="trust-title">This sounds too good to be true.</h2>
+    <div class="trust-cards">
+      <div class="trust-card">
+        <p class="trust-card-q">This seems too good to be true. Why don't other realtors do this?</p>
+        <p class="trust-card-a">Most don't because they don't have to. A $25,000 commission on a $1M Toronto home comes from a model built for when buyers needed an agent just to find listings. Today, you can browse listings yourself. What you pay should reflect the service you receive, not the price of the home. We run lean, no middlemen, and return the rest. The commission was always your money.</p>
+      </div>
+      <div class="trust-card">
+        <p class="trust-card-q">If you charge less, will I get worse service?</p>
+        <div class="trust-card-a">
+          <p style="margin:0">No. We personally attend every showing, write every offer, negotiate, and coordinate your closing, no coordinator, no rotating team. The fee is lower because we run lean, not because anything is cut. It doesn't increase if you spend more either, so we're never rewarded for pushing you toward a pricier home. You shouldn't have to wonder whose side your realtor is on.</p>
+        </div>
+      </div>
+      <div class="trust-card">
+        <p class="trust-card-q">How do I know I can trust this?</p>
+        <div class="trust-card-a">
+          <p style="margin:0 0 .6rem"><strong style="color:#fff">First,</strong> RECO-registered and verifiable at <a href="https://registrantsearch.reco.on.ca/" target="_blank" rel="noopener" style="color:var(--amber)">registrantsearch.reco.on.ca</a></p>
+          <p style="margin:0 0 .6rem"><strong style="color:#fff">Second,</strong> your cashback is written into the buyer representation agreement before any offers, a legal commitment, not a promise. Cashback realtors are fully legal in Ontario under RECO's disclosure rules; see the <a href="/cashback-legal-ontario.html" style="color:var(--amber)">full legal breakdown</a>.</p>
+          <p style="margin:0"><strong style="color:#fff">Third,</strong> your cashback is paid 6 to 8 weeks after closing, sent directly once your file is finalized.</p>
+        </div>
+      </div>
+    </div>
+    <p class="trust-guide-link">Still evaluating? <a href="/choose-cashback-realtor-toronto.html" style="color:var(--amber);text-decoration:none;font-weight:500">How to choose the best cashback realtor in Toronto →</a></p>
+  </div>
+</section>
 <section class="calc-section" id="calculator">
   <div class="calc-section-inner">
     <div class="calc-card">
@@ -240,96 +411,6 @@ body{font-family:'Rubik',sans-serif;background:var(--bg);color:var(--ink);line-h
         <div class="calc-stat-sub">Move in. Breathe.</div>
       </div>
       <div class="calc-note">Estimates only. Amount depends on the seller's commission offer.</div>
-    </div>
-  </div>
-</section>
-
-<!-- TRUST QUESTIONS -->
-<section class="trust-section">
-  <div class="trust-inner">
-    <div class="trust-eyebrow">We get it</div>
-    <h2 class="trust-title">This sounds too good to be true.</h2>
-    <div class="trust-cards">
-      <div class="trust-card">
-        <p class="trust-card-q">This seems too good to be true. Why don't other realtors do this?</p>
-        <p class="trust-card-a">Most don't because they don't have to. The traditional commission on a $1M Toronto home is $25,000 -- that money covers brokerage splits, referral fees, office costs, and yes, the expensive cars you see on real estate Instagram. We run lean. No middlemen, no overhead. We charge for the actual work and return the rest. The commission was always your money.</p>
-      </div>
-      <div class="trust-card">
-        <p class="trust-card-q">If you charge less, will I get worse service?</p>
-        <p class="trust-card-a">No. We personally attend every showing, write every offer, and are your single point of contact from first showing to closing. You are not passed to a coordinator or a rotating team. The fee is lower because we run lean -- not because anything is cut.</p>
-      </div>
-      <div class="trust-card">
-        <p class="trust-card-q">How do I know I can trust this?</p>
-        <div class="trust-card-a">
-          <p style="margin:0 0 .6rem"><strong style="color:#fff">First</strong> -- RECO-registered and verifiable at <a href="https://registrantsearch.reco.on.ca/" target="_blank" rel="noopener" style="color:var(--amber)">registrantsearch.reco.on.ca</a></p>
-          <p style="margin:0 0 .6rem"><strong style="color:#fff">Second</strong> -- your cashback is written into the buyer representation agreement before any offers. A legal commitment, not a promise.</p>
-          <p style="margin:0"><strong style="color:#fff">Third</strong> -- real clients. Real reviews. 5 stars on Google.</p>
-        </div>
-      </div>
-    </div>
-    <p class="trust-guide-link">Still evaluating? <a href="/choose-cashback-realtor-toronto.html" style="color:var(--amber);text-decoration:none;font-weight:500">How to choose the best cashback realtor in Toronto →</a></p>
-  </div>
-</section>
-<section class="testi-section section">
-  <div class="sec-inner">
-
-    <div class="testi-top">
-      <div>
-        <div class="eyebrow">What clients say</div>
-        <h2 class="sec-title">Trusted by GTA buyers</h2>
-      </div>
-      <a href="https://share.google/fu2wgAYhOFcjSZTxX" target="_blank" rel="noopener" class="testi-google-badge">
-        <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
-        <div class="testi-google-text">
-          <span class="testi-google-stars">★★★★★</span>
-          <span class="testi-google-label">5.0 on Google</span>
-        </div>
-      </a>
-    </div>
-
-    <div class="testi-grid">
-
-      <div class="testi-card testi-card--featured">
-        <div class="testi-stars">★★★★★</div>
-        <div class="testi-quote-mark">"</div>
-        <p class="testi-quote">Laleh has a real gift with people. During our condo search she spoke directly with residents in the building to get the inside story. things you'd never find online. And when it came to negotiating, she was sharp and confident. We felt genuinely looked after.</p>
-        <div class="testi-author">
-          <div class="testi-avatar" style="background:var(--gold-light);color:var(--amber-dark)">NG</div>
-          <div>
-            <div class="testi-detail">First-time condo buyer · Toronto</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="testi-card">
-        <div class="testi-stars">★★★★★</div>
-        <div class="testi-quote-mark">"</div>
-        <p class="testi-quote">What I appreciated most was that Laleh never pushed us toward buying. She explained the cashback model clearly, it felt completely fair, and there was zero pressure. It made a stressful process feel honest for once.</p>
-        <div class="testi-author">
-          <div class="testi-avatar" style="background:var(--bg2);color:var(--ink2)">AH</div>
-          <div>
-            <div class="testi-detail">First-time buyer · Etobicoke</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="testi-card">
-        <div class="testi-stars">★★★★★</div>
-        <div class="testi-quote-mark">"</div>
-        <p class="testi-quote">Responsive, organized, and professional throughout the entire process. Every question got a fast and clear answer. When you're making the biggest purchase of your life, that kind of communication matters more than people realize.</p>
-        <div class="testi-author">
-          <div class="testi-avatar" style="background:var(--bg2);color:var(--ink2)">MA</div>
-          <div>
-            <div class="testi-detail">Home buyer · Richmond Hill</div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-    <div class="testi-dots" id="testi-dots" style="display:none">
-      <button class="testi-dot active" onclick="testiGoTo(0)"></button>
-      <button class="testi-dot" onclick="testiGoTo(1)"></button>
-      <button class="testi-dot" onclick="testiGoTo(2)"></button>
     </div>
   </div>
 </section>
@@ -441,7 +522,7 @@ body{font-family:'Rubik',sans-serif;background:var(--bg);color:var(--ink);line-h
     <div class="flow-start">
       <div class="flow-start-label">On a $1M home — the seller offers</div>
       <div class="flow-start-val">$25,000 buyer agent commission</div>
-      <div class="flow-start-desc">Specified upfront in the MLS listing. This money exists regardless of which agent you choose.</div>
+      <div class="flow-start-desc">This money exists regardless of which agent you choose.</div>
     </div>
     <div class="flow-arrow"><svg width="22" height="36" viewBox="0 0 22 36" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 0 L11 28 M3 20 L11 30 L19 20" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
 
@@ -460,7 +541,7 @@ body{font-family:'Rubik',sans-serif;background:var(--bg);color:var(--ink);line-h
       <div class="flow-node us">
         <div class="flow-step us">Commitment</div>
         <div class="flow-title us">No agreement required</div>
-        <div class="flow-desc us">Walk away any time before you sign anything.</div>
+        <div class="flow-desc us">Walk away any time.</div>
       </div>
       <!-- Row 2: Connectors -->
       <div class="flow-connector them"><svg width="12" height="22" viewBox="0 0 12 22" fill="none"><path d="M6 1 L6 17 M2 12 L6 18 L10 12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
@@ -498,86 +579,6 @@ body{font-family:'Rubik',sans-serif;background:var(--bg);color:var(--ink);line-h
 
   </div>
 </section>
-
-<!-- MEET LALEH. split panel -->
-<section class="meet-section">
-  <div class="meet-inner">
-    <div class="meet-photo">
-      <img src="/assets/headshot.webp" alt="Laleh Mousavi, Realtor at HomeCashbacks" width="220" height="275" loading="lazy" decoding="async"/>
-    </div>
-    <div class="meet-content">
-      <!-- Mobile: Option B dark card -->
-      <div class="meet-mobile-row" style="display:none">
-        <img src="/assets/headshot.webp" alt="Laleh Mousavi" class="meet-mobile-photo" width="80" height="100" loading="lazy" decoding="async"/>
-        <div class="meet-mobile-text">
-          <div class="meet-eyebrow" style="margin-bottom:.15rem">Behind HomeCashbacks</div>
-          <div class="meet-name">Laleh Mousavi</div>
-          <div class="meet-title">Licensed Realtor · Ontario</div>
-        </div>
-      </div>
-      <div class="meet-divider" style="display:none"></div>
-      <!-- Desktop: normal layout -->
-      <div class="meet-eyebrow meet-desktop-only">Behind HomeCashbacks</div>
-      <div class="meet-name meet-desktop-only">Laleh Mousavi</div>
-      <div class="meet-title meet-desktop-only">Licensed Realtor · Ontario</div>
-      <p class="meet-body">I built this because the commission model never made sense to me.</p>
-      <a href="our-story.html" class="meet-link">Read our story →</a>
-    </div>
-  </div>
-</section>
-
-<!-- SELLER STRIP -->
-<div class="seller-strip">
-  <div class="seller-strip-inner">
-    <h3 class="seller-strip-title">Selling your home? Flat $4,999.</h3>
-    <div class="seller-strip-row">
-      <div class="seller-strip-items">
-        <span class="seller-strip-item"><span class="seller-check">✓</span> Professional photography</span>
-        <span class="seller-strip-item"><span class="seller-check">✓</span> Floor plan</span>
-        <span class="seller-strip-item"><span class="seller-check">✓</span> Facebook and Instagram ads</span>
-        <span class="seller-strip-item"><span class="seller-check">✓</span> Agent outreach before launch</span>
-        <span class="seller-strip-item"><span class="seller-check">✓</span> Paid at closing</span>
-      </div>
-      <a href="/toronto-listing-agent.html" class="seller-strip-btn">See how it works →</a>
-    </div>
-  </div>
-</div>
-
-
-
-<script>
-(function(){
-  var grid = document.querySelector('.testi-grid');
-  var dots = document.getElementById('testi-dots');
-  var dotBtns = dots ? dots.querySelectorAll('.testi-dot') : [];
-  function checkMobile(){
-    if(window.innerWidth <= 768){
-      dots && (dots.style.display='flex');
-    } else {
-      dots && (dots.style.display='none');
-    }
-  }
-  checkMobile();
-  window.addEventListener('resize', checkMobile);
-  window.testiGoTo = function(i){
-    var cards = grid.querySelectorAll('.testi-card');
-    if(cards[i]) grid.scrollTo({left: cards[i].offsetLeft - 16, behavior:'smooth'});
-  };
-  if(grid){
-    grid.addEventListener('scroll', function(){
-      var cards = grid.querySelectorAll('.testi-card');
-      var center = grid.scrollLeft + grid.offsetWidth / 2;
-      var closest = 0;
-      var minDist = Infinity;
-      cards.forEach(function(c,i){
-        var dist = Math.abs(c.offsetLeft + c.offsetWidth/2 - center);
-        if(dist < minDist){ minDist=dist; closest=i; }
-      });
-      dotBtns.forEach(function(d,i){ d.classList.toggle('active', i===closest); });
-    });
-  }
-})();
-</script>
 
 <!-- AREAS + GUIDES — Option B -->
 <div class="links-cities">
@@ -704,7 +705,7 @@ const FAQ_BUYING=[
   {q:'Should I buy or keep renting?',a:'Buying is not always the right move and renting is not throwing money away. Renting gives you flexibility and zero maintenance headaches. Buying builds equity but comes with real costs: property tax, insurance, repairs, and carrying costs that add up fast. If your finances are solid, you are staying put, and you have done the math on total monthly ownership cost, buying often makes sense. If any of those three are not true, there is no shame in renting longer.'},
   {q:'Should I go with a fixed or variable rate mortgage?',a:'Fixed rate means your payment stays the same for the term: predictable, lower stress, easier to budget. Variable rate moves with prime, historically lower over time, but your payment can rise. If you would lose sleep over a rate increase, go fixed. If you have financial flexibility and believe rates will fall, variable can save money. Talk to a licensed mortgage broker who can model both scenarios with your actual numbers.'},
   {q:'Can first-time buyers use a cashback realtor in Ontario?',a:'Yes, and it is one of the best moves a first-time buyer can make. The cashback you receive after closing can go toward moving expenses, renovations, or simply rebuilding your savings. First-time buyers in Ontario may also qualify for <a href="/calculators.html" style="color:var(--cta);text-decoration:none;font-weight:500">land transfer tax rebates</a> on top of their cashback, which can add up to over $8,000 in additional savings.'},
-  {q:'What areas in the GTA do you serve?',a:'We work with buyers across the Greater Toronto Area including Toronto, Etobicoke, Scarborough, North York, Richmond Hill, Vaughan, Markham, Mississauga, Brampton, Oakville, Burlington, Aurora, Newmarket, and Stouffville. If you are buying in the GTA and have questions about a specific neighbourhood, reach out and we can talk through what to expect in that market.'},
+  {q:'What areas in the GTA do you serve?',a:'We work with buyers across the Greater Toronto Area including Toronto, Etobicoke, Scarborough, North York, Richmond Hill, Vaughan, Markham, Thornhill, Mississauga, Brampton, Oakville, Burlington, Milton, Halton Hills, Aurora, Newmarket, Stouffville, King City, East Gwillimbury, Ajax, Pickering, Whitby, and Oshawa. If you are buying in the GTA and have questions about a specific neighbourhood, reach out and we can talk through what to expect in that market.'},
   {q:'What closing costs should I budget for in Ontario?',a:'Plan for 1.5% to 4% of the purchase price in closing costs. The largest item is land transfer tax. Toronto buyers pay both provincial and municipal LTT. Other costs include legal fees ($1,200 to $1,400), title insurance ($350 to $950 depending on purchase price), and a home inspection ($400 to $600). First-time buyers may qualify for LTT rebates. Use our <a href="/calculators.html" style="color:var(--cta);text-decoration:none;font-weight:500">closing cost calculator</a> to see your exact figures.'},
   {q:'How much down payment do I need in Ontario?',a:'As of December 2024, the rules changed. For homes up to $500,000 the minimum is 5%. For homes between $500,000 and $1,499,999 it is 5% on the first $500,000 and 10% on the remainder. For homes $1,500,000 and above the minimum is 20%. Anything below 20% requires CMHC mortgage insurance.'},
 ];
@@ -825,7 +826,7 @@ renderFAQ();
 </script>
 <a href="https://wa.me/14374437556?text=Hi%20Laleh%2C%20I%20am%20interested%20in%20buying%20a%20home%20and%20would%20like%20to%20learn%20more%20about%20your%20cashback%20service." class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
   <svg width="26" height="26" viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.852L.057 23.25a.75.75 0 0 0 .916.919l5.562-1.457A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.708 9.708 0 0 1-4.953-1.355l-.355-.212-3.655.958.975-3.563-.231-.368A9.712 9.712 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
-  <span class="wa-tooltip">Chat on WhatsApp</span>
+  <span class="wa-label">Chat with us</span>
 </a>
 <script>
 (function(){
