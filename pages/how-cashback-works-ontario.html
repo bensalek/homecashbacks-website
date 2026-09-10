@@ -149,13 +149,39 @@
     <p>Since 2024, agents must disclose their full compensation in writing before any showing. This actually helps cashback buyers — the amount is now a legal obligation, not a goodwill gesture. One new risk: if the seller's commission is less than your agent's minimum fee, you may owe the difference. A good cashback agent flags this before you proceed.</p>
   </div>
 
-  <!-- CTA -->
-  <div class="art-cta">
-    <div class="art-cta-text">
-      <strong>See your cashback estimate</strong>
-      Enter your price and commission rate to calculate what you'd get back.
+  <!-- Embedded calculator -->
+  <div class="calc-embed">
+    <div class="calc-card">
+      <div class="calc-card-eyebrow">Cashback calculator</div>
+      <div class="calc-card-title">See your cashback estimate</div>
+      <div class="calc-inputs-row" style="display:flex;align-items:flex-end;gap:.75rem;margin-bottom:1.25rem">
+        <div style="display:flex;flex-direction:column;gap:.35rem;width:190px">
+          <label class="calc-input-label" for="hcw-price-text">Home price</label>
+          <div class="calc-price-wrap">
+            <span class="calc-price-sym">$</span>
+            <input class="calc-price-input" type="text" id="hcw-price-text" aria-label="Home price" value="900,000" inputmode="numeric" autocomplete="off"/>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:.35rem;width:120px">
+          <label class="calc-input-label" for="hcw-commission-pct">Buyer commission</label>
+          <div class="calc-pct-wrap">
+            <input class="calc-pct-input" type="number" id="hcw-commission-pct" aria-label="Buyer commission percentage" value="2.5" min="1" max="5" step="0.25"/>
+            <span class="calc-pct-sym">%</span>
+          </div>
+        </div>
+      </div>
+      <div class="calc-slider-wrap">
+        <input type="range" id="hcw-price-slider" aria-label="Home price slider" class="calc-slider" min="300000" max="3000000" step="10000" value="900000"/>
+        <div class="calc-ticks">
+          <span>$300K</span><span>$750K</span><span>$1.2M</span><span>$1.65M</span><span>$2.1M</span><span>$3M</span>
+        </div>
+      </div>
+      <div class="calc-result">
+        <div class="calc-result-label">Your estimated cashback</div>
+        <div class="calc-result-amt" id="hcw-calc-cashback">$17,500</div>
+      </div>
+      <div class="calc-note">Estimates only. Amount depends on the seller's commission offer. For land transfer tax and closing cost estimates too, see our <a href="/calculators.html" style="color:var(--cta);text-decoration:none;font-weight:500">full calculator suite →</a></div>
     </div>
-    <a href="/calculators.html" class="art-cta-btn">Open Calculator →</a>
   </div>
 
   <!-- Section 4 -->
@@ -243,6 +269,43 @@
 </div>
 
 <script>
+// Embedded cashback calculator
+(function(){
+  function fmt(n){ return '$'+Math.round(n).toLocaleString('en-CA'); }
+  function updateCalc(){
+    var raw = document.getElementById('hcw-price-text').value.replace(/,/g,'').replace(/[^0-9]/g,'');
+    var price = parseInt(raw) || 900000;
+    var pct = parseFloat(document.getElementById('hcw-commission-pct').value) || 2.5;
+    var commission = price * (pct/100);
+    var cashback = Math.max(0, commission - 4999);
+    document.getElementById('hcw-calc-cashback').textContent = fmt(cashback);
+  }
+  var slider = document.getElementById('hcw-price-slider');
+  var priceText = document.getElementById('hcw-price-text');
+  var commInput = document.getElementById('hcw-commission-pct');
+  if(!slider || !priceText || !commInput) return;
+  slider.addEventListener('input', function(){
+    priceText.value = Math.round(parseInt(this.value)).toLocaleString('en-CA');
+    updateCalc();
+  });
+  priceText.addEventListener('input', function(){
+    var raw = parseInt(this.value.replace(/,/g,'').replace(/[^0-9]/g,'')) || 0;
+    var clamped = Math.min(3000000, Math.max(300000, raw));
+    slider.value = clamped;
+    updateCalc();
+  });
+  priceText.addEventListener('blur', function(){
+    var raw = parseInt(this.value.replace(/,/g,'').replace(/[^0-9]/g,'')) || 900000;
+    var clamped = Math.min(3000000, Math.max(300000, raw));
+    this.value = Math.round(clamped).toLocaleString('en-CA');
+    slider.value = clamped;
+    updateCalc();
+  });
+  commInput.addEventListener('input', updateCalc);
+  commInput.addEventListener('change', updateCalc);
+  updateCalc();
+})();
+
 document.querySelectorAll('.faq-q').forEach(function(q){
   q.addEventListener('click',function(){
     this.parentElement.classList.toggle('open');

@@ -23,13 +23,6 @@ function closeModal() {
   document.body.style.overflow = '';
 }
 document.addEventListener('DOMContentLoaded', function () {
-  var overlay = document.getElementById('modal');
-  if (overlay) {
-    overlay.addEventListener('click', function (e) {
-      if (e.target === this) closeModal();
-    });
-  }
-
   // ── Phone click tracking (all tel: links) ────────────────────────────────
   document.querySelectorAll('a[href^="tel:"]').forEach(function (el) {
     el.addEventListener('click', function () {
@@ -181,4 +174,57 @@ function handleFormSubmit(formName) {
   } else {
     renderBreadcrumb();
   }
+})();
+
+// ── Dynamic city placeholder for the note field on city pages ─────────────
+(function () {
+  function setCityPlaceholder() {
+    var noteField = document.getElementById('f-note');
+    if (!noteField) return;
+    var slug = window.location.pathname.split('/').pop().replace('.html', '');
+    var match = slug.match(/^(.+)-cashback-realtor$/);
+    if (!match) return;
+    var cityName = match[1].split('-').map(function (w) {
+      return w.charAt(0).toUpperCase() + w.slice(1);
+    }).join(' ');
+    noteField.placeholder = "I'm looking for a $1M house in " + cityName;
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', setCityPlaceholder);
+  } else {
+    setCityPlaceholder();
+  }
+})();
+
+// ── FAQ expansion tracking (site-wide, works on any page with .faq-q) ─────
+// Uses event delegation so it doesn't require editing individual pages,
+// and doesn't interfere with each page's own existing toggle-open logic.
+document.addEventListener('click', function (e) {
+  var q = e.target.closest('.faq-q');
+  if (!q) return;
+  var textEl = q.querySelector('.faq-q-text');
+  var text = textEl ? textEl.textContent.trim() : (q.textContent || '').trim().slice(0, 80);
+  fireEvent('faq_expand', {
+    event_category: 'engagement',
+    faq_question: text,
+    page_path: window.location.pathname
+  });
+});
+
+// ── Calculator engagement tracking (any slider on any calculator variant) ─
+// Fires once per page load on first interaction, not on every slider tick,
+// so it signals genuine engagement rather than flooding GA4 with noise.
+(function () {
+  var calcTracked = false;
+  document.addEventListener('input', function (e) {
+    if (calcTracked) return;
+    var el = e.target;
+    if (el.tagName === 'INPUT' && el.type === 'range') {
+      calcTracked = true;
+      fireEvent('calculator_interact', {
+        event_category: 'engagement',
+        page_path: window.location.pathname
+      });
+    }
+  });
 })();

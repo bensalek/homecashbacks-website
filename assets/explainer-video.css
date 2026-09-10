@@ -1,0 +1,23 @@
+/* Explainer video card — homepage and how-cashback-works page */
+.explainer-section{padding:1rem 2rem 0}
+.explainer-card{max-width:480px;margin:0 auto;text-align:center}
+.explainer-video{position:relative;border-radius:8px;overflow:hidden;background:#000;cursor:pointer;margin-top:.75rem}
+.explainer-video video{width:100%;display:block;border-radius:8px}
+.explainer-video-play{position:absolute;top:0;left:0;right:0;bottom:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.15);transition:opacity .2s}
+.explainer-video-play-btn{width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,.9);display:flex;align-items:center;justify-content:center}
+.explainer-video-play-btn::after{content:'';border-top:8px solid transparent;border-bottom:8px solid transparent;border-left:13px solid #1a2332;margin-left:3px}
+.explainer-video.playing .explainer-video-play{display:none}
+.explainer-text{font-size:13px;color:var(--muted);margin-top:.6rem}
+
+.hiw-video-wrap{margin-bottom:2.75rem}
+.hiw-video{position:relative;border-radius:8px;overflow:hidden;background:#000;cursor:pointer}
+.hiw-video video{width:100%;display:block;border-radius:8px}
+.hiw-video-play{position:absolute;top:0;left:0;right:0;bottom:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.15);transition:opacity .2s}
+.hiw-video-play-btn{width:56px;height:56px;border-radius:50%;background:rgba(255,255,255,.9);display:flex;align-items:center;justify-content:center}
+.hiw-video-play-btn::after{content:'';border-top:10px solid transparent;border-bottom:10px solid transparent;border-left:16px solid #1a2332;margin-left:4px}
+.hiw-video-badge{position:absolute;bottom:10px;right:12px;font-size:11px;color:#fff;background:rgba(0,0,0,.5);padding:3px 8px;border-radius:3px}
+.hiw-video.playing .hiw-video-play{display:none}
+
+@media(max-width:680px){
+  .explainer-card{max-width:100%;padding:0 .5rem}
+}

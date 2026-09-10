@@ -296,7 +296,7 @@
       <div class="mkt-card">
         <div class="mkt-card-head">
           <div class="mkt-step">5</div>
-          <div class="mkt-card-title">Dedicated listing page on our website</div>
+          <div class="mkt-card-title">Dedicated online listing page</div>
           <span class="mkt-badge mkt-badge-live">Live</span>
         </div>
         <div class="mkt-card-body">A dedicated property page that works 24/7, capturing buyer inquiries and directing serious leads directly to us.</div>
@@ -437,6 +437,8 @@ function overrideSharedComponents(){
   if(submitBtn){ submitBtn.textContent = 'Request My Home Value'; }
   var sourceField = document.getElementById('f-source');
   if(sourceField){ sourceField.value = 'seller'; }
+  var noteField = document.getElementById('f-note');
+  if(noteField){ noteField.placeholder = "Selling our 3-bedroom in Leslieville, hoping to list by early spring"; }
 }
 if(document.readyState === 'loading'){
   document.addEventListener('DOMContentLoaded', overrideSharedComponents);

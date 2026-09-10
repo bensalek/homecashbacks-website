@@ -17,7 +17,7 @@
 <meta property="og:image" content="https://homecashbacks.ca/og-image.png"/>
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:title" content="HomeCashbacks | Flat Fee Realtor. Get Cashback When You Buy."/>
-<meta name="twitter:description" content="Flat $4,999 fee. Avg. $20,446 cashback on a GTA home. First showing free."/>
+<meta name="twitter:description" content="Flat $4,999 fee. Avg. $19,836 cashback on a GTA home. First showing free."/>
 <meta name="robots" content="index, follow"/>
 <link rel="canonical" href="https://homecashbacks.ca"/>
 <script type="application/ld+json">
@@ -38,6 +38,7 @@
 </script>
 <link rel="preload" href="/assets/hero-home.webp" as="image" fetchpriority="high">
 <link rel="preload" href="/assets/index.css?v=10" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
+<link rel="stylesheet" href="/assets/explainer-video.css"/>
 <noscript><link rel="stylesheet" href="/assets/index.css?v=10"/></noscript>
 <style>
 /* Critical above-fold CSS — prevents FOUC while index.css loads async */
@@ -79,7 +80,7 @@ body{font-family:'Rubik',sans-serif;background:var(--bg);color:var(--ink);line-h
       "name": "Do I really get cashback? How does it work?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. The seller pays a buyer agent commission, typically 2 to 2.5% of the sale price. We take a flat $4,999 from that commission and send you everything above that 6 to 8 weeks after closing. On the average GTA home ($1,018,000) you receive approximately $20,446 back."
+        "text": "Yes. The seller pays a buyer agent commission, typically 2 to 2.5% of the sale price. We take a flat $4,999 from that commission and send you everything above that 6 to 8 weeks after closing. On the average GTA home ($993,410) you receive approximately $19,836 back."
       }
     },
     {
@@ -127,7 +128,7 @@ body{font-family:'Rubik',sans-serif;background:var(--bg);color:var(--ink);line-h
       "name": "Are you a licensed realtor?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. Laleh Mousavi is a registered Realtor in Ontario with Toronto Real Estate Realty Plus Inc., registered with RECO. You get MLS access, showings, offer writing, negotiation, and full closing coordination."
+        "text": "Yes. Laleh Mousavi is a registered Realtor in Ontario with Smart Brokerages, registered with RECO. You get MLS access, showings, offer writing, negotiation, and full closing coordination."
       }
     },
     {
@@ -308,10 +309,10 @@ body{font-family:'Rubik',sans-serif;background:var(--bg);color:var(--ink);line-h
         <div class="testi-author">
           <div class="testi-avatar" style="background:var(--gold-light);color:var(--amber-dark)">NG</div>
           <div>
-            <div class="testi-detail">First-time condo buyer · Toronto</div>
+            <div class="testi-detail">First-time condo buyer &middot; Toronto</div>
           </div>
         </div>
-        <div class="testi-stars">★★★★★</div>
+        <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
         <p class="testi-quote">We were skeptical about the cashback at first, it felt like there had to be a catch. Laleh <strong>attended every showing, handled our offer, and negotiated on our behalf</strong>, and we received cashback after closing exactly as promised.</p>
       </div>
 
@@ -319,10 +320,10 @@ body{font-family:'Rubik',sans-serif;background:var(--bg);color:var(--ink);line-h
         <div class="testi-author">
           <div class="testi-avatar" style="background:var(--bg2);color:var(--ink2)">AH</div>
           <div>
-            <div class="testi-detail">First-time buyer · Etobicoke</div>
+            <div class="testi-detail">First-time buyer &middot; Etobicoke</div>
           </div>
         </div>
-        <div class="testi-stars">★★★★★</div>
+        <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
         <p class="testi-quote">I'll admit I wondered what the catch was when a realtor offers money back. There wasn't one. Laleh <strong>explained exactly how the model worked and never once pushed us toward buying</strong>, we received cashback after closing, just like she said we would.</p>
       </div>
 
@@ -330,10 +331,10 @@ body{font-family:'Rubik',sans-serif;background:var(--bg);color:var(--ink);line-h
         <div class="testi-author">
           <div class="testi-avatar" style="background:var(--bg2);color:var(--ink2)">MA</div>
           <div>
-            <div class="testi-detail">Home buyer · Richmond Hill</div>
+            <div class="testi-detail">Home buyer &middot; Richmond Hill</div>
           </div>
         </div>
-        <div class="testi-stars">★★★★★</div>
+        <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
         <p class="testi-quote">Working with a flat-fee agent made us nervous at first, would we still get full attention? Laleh was <strong>responsive at every step and just as organized as any traditional agent</strong>. We received cashback after closing, no surprises.</p>
       </div>
 
@@ -342,6 +343,25 @@ body{font-family:'Rubik',sans-serif;background:var(--bg);color:var(--ink);line-h
       <button class="testi-dot active" onclick="testiGoTo(0)"></button>
       <button class="testi-dot" onclick="testiGoTo(1)"></button>
       <button class="testi-dot" onclick="testiGoTo(2)"></button>
+    </div>
+  </div>
+</section>
+
+<!-- RECENT DEALS -->
+<!-- EXPLAINER VIDEO -->
+<section class="explainer-section section">
+  <div class="sec-inner">
+    <div class="explainer-card">
+      <div class="eyebrow">See it explained</div>
+      <h2 class="sec-title" style="font-size:clamp(26px,4vw,36px);margin-bottom:1.25rem">The whole model in under 30 seconds</h2>
+      <div class="explainer-video" id="home-video" onclick="playHomeVideo()">
+        <video id="home-video-el" playsinline preload="none" poster="/assets/homecashbacks-explainer-poster.jpg">
+          <source src="/assets/homecashbacks-explainer.mp4" type="video/mp4">
+        </video>
+        <div class="explainer-video-play">
+          <div class="explainer-video-play-btn" aria-label="Play video"></div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -371,9 +391,82 @@ body{font-family:'Rubik',sans-serif;background:var(--bg);color:var(--ink);line-h
         </div>
       </div>
     </div>
-    <p class="trust-guide-link">Still evaluating? <a href="/choose-cashback-realtor-toronto.html" style="color:var(--amber);text-decoration:none;font-weight:500">How to choose the best cashback realtor in Toronto →</a></p>
+    <p class="trust-guide-link">Still evaluating? <a href="/choose-cashback-realtor-toronto.html" style="color:var(--amber);text-decoration:none;font-weight:500">How to choose the best cashback realtor in Toronto &rarr;</a></p>
   </div>
 </section>
+
+<section class="deals-section section">
+  <div class="sec-inner">
+    <div class="eyebrow">Recent Deals</div>
+    <h2 class="sec-title">A few recent wins</h2>
+    <div class="deals-grid">
+      <div class="deal-card">
+        <img src="/assets/deals/nettles-court-thumb.jpg" alt="West Lynde, Whitby neighbourhood" class="deal-thumb" width="110" height="110" loading="lazy"/>
+        <div class="deal-info">
+          <span class="deal-tag">Buyer</span>
+          <div class="deal-location">West Lynde, Whitby</div>
+          <div class="deal-outcome">$22,500 cashback returned</div>
+        </div>
+      </div>
+      <div class="deal-card">
+        <img src="/assets/deals/waterworks-thumb.jpg" alt="Waterworks, Toronto" class="deal-thumb" width="110" height="110" loading="lazy"/>
+        <div class="deal-info">
+          <span class="deal-tag">Seller</span>
+          <div class="deal-location">Waterworks, Toronto</div>
+          <div class="deal-outcome">$17,000 saved vs. traditional commission</div>
+        </div>
+      </div>
+      <div class="deal-card">
+        <img src="/assets/deals/oak-point-thumb.jpg" alt="Oak Point pre-construction, Great Gulf" class="deal-thumb" width="110" height="110" loading="lazy"/>
+        <div class="deal-info">
+          <span class="deal-tag">Pre-Construction</span>
+          <div class="deal-location">Oak Point, Oakville</div>
+          <div class="deal-outcome">$25,000 cashback</div>
+        </div>
+      </div>
+    </div>
+    <div class="deals-dots" id="deals-dots" style="display:none">
+      <button class="deals-dot active" onclick="dealsGoTo(0)"></button>
+      <button class="deals-dot" onclick="dealsGoTo(1)"></button>
+      <button class="deals-dot" onclick="dealsGoTo(2)"></button>
+    </div>
+  </div>
+</section>
+
+<script>
+(function(){
+  var grid = document.querySelector('.deals-grid');
+  var dots = document.getElementById('deals-dots');
+  var dotBtns = dots ? dots.querySelectorAll('.deals-dot') : [];
+  function checkMobile(){
+    if(window.innerWidth <= 768){
+      dots && (dots.style.display='flex');
+    } else {
+      dots && (dots.style.display='none');
+    }
+  }
+  checkMobile();
+  window.addEventListener('resize', checkMobile);
+  window.dealsGoTo = function(i){
+    var cards = grid.querySelectorAll('.deal-card');
+    if(cards[i]) grid.scrollTo({left: cards[i].offsetLeft - 20, behavior:'smooth'});
+  };
+  if(grid){
+    grid.addEventListener('scroll', function(){
+      var cards = grid.querySelectorAll('.deal-card');
+      var center = grid.scrollLeft + grid.offsetWidth / 2;
+      var closest = 0;
+      var minDist = Infinity;
+      cards.forEach(function(c,i){
+        var dist = Math.abs(c.offsetLeft + c.offsetWidth/2 - center);
+        if(dist < minDist){ minDist=dist; closest=i; }
+      });
+      dotBtns.forEach(function(d,i){ d.classList.toggle('active', i===closest); });
+    });
+  }
+})();
+</script>
+
 <section class="calc-section" id="calculator">
   <div class="calc-section-inner">
     <div class="calc-card">
@@ -411,6 +504,7 @@ body{font-family:'Rubik',sans-serif;background:var(--bg);color:var(--ink);line-h
         <div class="calc-stat-sub">Move in. Breathe.</div>
       </div>
       <div class="calc-note">Estimates only. Amount depends on the seller's commission offer.</div>
+      <button type="button" class="btn-primary" style="width:100%;justify-content:center;margin-top:.85rem" onclick="emailMyCashback()">Email me this exact number →</button>
     </div>
   </div>
 </section>
@@ -600,6 +694,9 @@ body{font-family:'Rubik',sans-serif;background:var(--bg);color:var(--ink);line-h
     <a href="/aurora-cashback-realtor.html" class="city-pill">Aurora</a>
     <a href="/newmarket-cashback-realtor.html" class="city-pill">Newmarket</a>
     <a href="/stouffville-cashback-realtor.html" class="city-pill">Stouffville</a>
+    <a href="/thornhill-cashback-realtor.html" class="city-pill">Thornhill</a>
+    <a href="/king-city-cashback-realtor.html" class="city-pill">King City</a>
+    <a href="/east-gwillimbury-cashback-realtor.html" class="city-pill">East Gwillimbury</a>
   </div>
 </div>
 <div class="links-guides">
@@ -654,6 +751,18 @@ function updateCalc(){
   var mText=months>0?months+(months===1?' month':' months'):'--';
   document.getElementById('cv-mortgage').textContent='cover '+mText+' of mortgage';
 }
+function emailMyCashback(){
+  var priceText = document.getElementById('price-text').value;
+  var pct = document.getElementById('commission-pct').value;
+  var cashback = document.getElementById('calc-cashback').textContent;
+  openModal('calculator');
+  var note = document.getElementById('f-note');
+  if(note){
+    note.value = "I calculated " + cashback + " cashback on a $" + priceText + " home at " + pct + "% commission. I'd like to confirm this number.";
+  }
+  var source = document.getElementById('f-source');
+  if(source){ source.value = 'calculator-lead-homepage'; }
+}
 (function(){
   var slider=document.getElementById('price-slider');
   var priceText=document.getElementById('price-text');
@@ -682,14 +791,28 @@ function updateCalc(){
 })();
 </script>
 <script>
+function playHomeVideo(){
+  var wrap = document.getElementById('home-video');
+  var vid = document.getElementById('home-video-el');
+  wrap.classList.add('playing');
+  vid.setAttribute('controls', 'controls');
+  vid.play();
+  if (typeof fireEvent === 'function') {
+    fireEvent('video_play', {
+      event_category: 'engagement',
+      video_name: 'homepage_explainer',
+      page_path: window.location.pathname
+    });
+  }
+}
 const FAQ_SERVICE=[
   {q:'What is the catch?',a:'There is not one. But we understand why you are asking. Traditional agents earn $20,000 to $25,000 on a $1M home. Giving most of that back requires a different business model, not a different level of service. Ours runs leaner. We use technology where it makes sense, we work with buyers who know what they want, and we do not price in hours we do not spend. What you get is the same thing: a licensed realtor, full brokerage legal protections, showings, offer strategy, negotiation, and closing coordination. What you keep is the commission that was always yours to begin with.'},
   {q:'Is a flat fee realtor better than a percentage cashback competitor?',a:'Mathematically yes, by thousands of dollars. Most cashback competitors give you 50% of the commission back. On a $1M GTA home with a 2.5% buyer commission, that means $12,500 to you and $12,500 kept by the brokerage. We charge $4,999 flat and give you $20,000. Same professional representation, same legal protections, $7,500 more in your pocket. Actual amounts depend on the commission the seller has offered.'},
-  {q:'Do I really get cashback? How does it work?',a:'Yes. When a home sells, the seller\'s agreement includes a buyer agent commission, typically 2 to 2.5% of the sale price. That money flows to your agent. We take a flat $4,999 from that commission and send you everything above that 6 to 8 weeks after closing. On the average GTA home ($1,018,000), you would receive approximately $20,446 back.'},
+  {q:'Do I really get cashback? How does it work?',a:'Yes. When a home sells, the seller\'s agreement includes a buyer agent commission, typically 2 to 2.5% of the sale price. That money flows to your agent. We take a flat $4,999 from that commission and send you everything above that 6 to 8 weeks after closing. On the average GTA home ($993,410), you would receive approximately $19,836 back.'},
   {q:'Is cashback from a realtor legal in Ontario?',a:'Yes, completely legal. Rebating a portion of the buyer agent commission back to the buyer is permitted under RECO regulations in Ontario. The cashback is written into your contract before you sign anything.'},
   {q:'Do I pay income tax on my cashback?',a:'If you are buying as your primary residence, the CRA generally treats a commission rebate as a reduction in your purchase price, not taxable income. If you are buying as an investment property or through a corporation, the rules may differ. We recommend speaking with your accountant for your specific situation.'},
   {q:'Are there any hidden fees or commitments?',a:'No hidden fees. No commitment. No exclusive agreement. You pay nothing unless you buy, and even then the only fee is our flat $4,999 which comes out of the commission the seller already agreed to pay.'},
-  {q:'Are you a licensed realtor?',a:'Yes. I am Laleh Mousavi, a registered Realtor in Ontario with Toronto Real Estate Realty Plus Inc., registered with RECO. You get everything a traditional agent provides: MLS access, showings, offer writing, negotiation, and full closing coordination, for a flat fee instead of a percentage commission.'},
+  {q:'Are you a licensed realtor?',a:'Yes. I am Laleh Mousavi, a registered Realtor in Ontario with Smart Brokerages, registered with RECO. You get everything a traditional agent provides: MLS access, showings, offer writing, negotiation, and full closing coordination, for a flat fee instead of a percentage commission.'},
   {q:'Do you charge for writing offers?',a:'No. Drafting, reviewing, and submitting offers is always free. Unlimited offers, no cap.'},
   {q:'How much cashback can I get on a Toronto condo?',a:'It depends on the purchase price and the buyer agent commission offered by the seller. On a $650,000 Toronto condo with a 2.5% buyer agent commission, the total commission would be $16,250. We take our flat $4,999 and you receive approximately $11,251 back. On a $900,000 condo, that number rises to around $17,500.'},
   {q:'What if I don\'t receive my cashback after closing?',a:'Your cashback amount is written into our contract before you sign. The commission flows from the seller\'s lawyer to our brokerage at closing, we take our flat $4,999, and the remainder comes to you within 6 to 8 weeks. If you have not received it by then, reach out directly and we will show you exactly where things stand.'},
@@ -713,21 +836,24 @@ const FAQ_BUYING=[
 // MODAL
 function openModal(type){
   const isMortgage=type==='mortgage';
+  const isCalculator=type==='calculator';
   document.getElementById('modal').classList.add('open');
   document.getElementById('form-success').style.display='none';
   document.getElementById('modal-form-wrap').style.display='block';
-  document.getElementById('form-showing').style.display=isMortgage?'none':'block';
-  document.getElementById('form-mortgage').style.display=isMortgage?'block':'none';
-  document.getElementById('modal-tag').textContent=isMortgage?'Mortgage pre-approval':'Book a Free Consultation';
-  document.getElementById('modal-title').textContent=isMortgage?"Get pre-approved":"Let's get started";
-  document.getElementById('modal-sub').textContent=isMortgage?"We'll connect you with a trusted mortgage broker within one business day.":"Your first showing is still free. We'll follow up within a few hours.";
+  var showingForm=document.getElementById('form-showing');
+  if(showingForm){ showingForm.style.display=isMortgage?'none':'block'; }
+  var mortgageForm=document.getElementById('form-mortgage');
+  if(mortgageForm){ mortgageForm.style.display=isMortgage?'block':'none'; }
+  document.getElementById('modal-tag').textContent=isMortgage?'Mortgage pre-approval':(isCalculator?'Your cashback estimate':'Book a Free Consultation');
+  document.getElementById('modal-title').textContent=isMortgage?"Get pre-approved":(isCalculator?"Let's confirm your number":"Let's get started");
+  document.getElementById('modal-sub').textContent=isMortgage?"We'll connect you with a trusted mortgage broker within one business day.":(isCalculator?"We'll email you your exact cashback estimate and confirm it's accurate for your situation.":"Your first showing is still free. We'll follow up within a few hours.");
   ['err-name','err-contact','err-m-name','err-m-contact'].forEach(id=>{
     const el=document.getElementById(id);
-    if(el){el.textContent='';el.classList.remove('show');}
+    if(el){el.textContent='',el.classList.remove('show');}
   });
   ['f-name','f-email','f-phone','m-name','m-email','m-phone'].forEach(id=>{
     const el=document.getElementById(id);
-    if(el){el.style.borderColor='';el.value='';}
+    if(el){el.style.borderColor='',el.value='';}
   });
 }
 function closeModal(){document.getElementById('modal').classList.remove('open');}
@@ -747,7 +873,7 @@ function handleFormSubmit(formType){
   const phoneVal=document.getElementById(phoneId).value.trim();
   [errNameId,errContactId].forEach(id=>{
     const el=document.getElementById(id);
-    if(el){el.textContent='';el.classList.remove('show');}
+    if(el){el.textContent='',el.classList.remove('show');}
   });
   [nameId,emailId,phoneId].forEach(id=>{
     const el=document.getElementById(id);
@@ -756,23 +882,23 @@ function handleFormSubmit(formType){
   let ok=true;
   if(!nameVal){
     const el=document.getElementById(errNameId);
-    el.textContent='Please enter your full name.';el.classList.add('show');
+    el.textContent='Please enter your full name.',el.classList.add('show');
     document.getElementById(nameId).style.borderColor='var(--red)';
     document.getElementById(nameId).focus();ok=false;
   }
   if(!emailVal&&!phoneVal){
     const el=document.getElementById(errContactId);
-    el.textContent='Please enter an email address or phone number.';el.classList.add('show');
+    el.textContent='Please enter an email address or phone number.',el.classList.add('show');
     document.getElementById(emailId).style.borderColor='var(--red)';
     document.getElementById(phoneId).style.borderColor='var(--red)';ok=false;
   } else if(emailVal&&!validateEmail(emailVal)){
     const el=document.getElementById(errContactId);
-    el.textContent='Please enter a valid email address.';el.classList.add('show');
+    el.textContent='Please enter a valid email address.',el.classList.add('show');
     document.getElementById(emailId).style.borderColor='var(--red)';
     document.getElementById(emailId).focus();ok=false;
   } else if(phoneVal&&!validatePhone(phoneVal)){
     const el=document.getElementById(errContactId);
-    el.textContent='Phone number must be at least 10 digits.';el.classList.add('show');
+    el.textContent='Phone number must be at least 10 digits.',el.classList.add('show');
     document.getElementById(phoneId).style.borderColor='var(--red)';
     document.getElementById(phoneId).focus();ok=false;
   }
@@ -833,10 +959,10 @@ renderFAQ();
   var s=document.getElementById('f-source');
   if(s)s.value='buyer-homepage';
   var _open=window.openModal;
-  window.openModal=function(){
+  window.openModal=function(type){
     var s=document.getElementById('f-source');
-    if(s)s.value='buyer-homepage';
-    _open();
+    if(s && type!=='calculator')s.value='buyer-homepage';
+    _open(type);
   };
 })();
 </script>

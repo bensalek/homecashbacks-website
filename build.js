@@ -65,6 +65,17 @@ if (fs.existsSync(logosDir)) {
   });
 }
 
+// Copy deals subfolder to /dist/assets/deals/
+var distDeals = path.join(distAssets, 'deals');
+fs.mkdirSync(distDeals, { recursive: true });
+var dealsDir = path.join(ASSETS_DIR, 'deals');
+if (fs.existsSync(dealsDir)) {
+  fs.readdirSync(dealsDir).forEach(function(file) {
+    fs.copyFileSync(path.join(dealsDir, file), path.join(distDeals, file));
+    console.log('  copied: assets/deals/' + file);
+  });
+}
+
 // Copy root-level files to /dist
 ['favicon.ico','favicon.svg','favicon-32.png','apple-touch-icon.png','sitemap.xml','_redirects','robots.txt','llms.txt','083dafa7dee34db2a1e46a7adce57fe5.txt'].forEach(function(file) {
   if (fs.existsSync(file)) {

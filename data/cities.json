@@ -1,33 +1,33 @@
 {
-  "dataDate": "July 2026",
+  "dataDate": "August 2026",
   "cities": [
     {
       "slug": "toronto",
       "name": "Toronto",
-      "cashback": "$20,000",
+      "cashback": "$19,493",
       "heroSub": "We are a licensed Toronto buyer agent. We charge a flat $4,999 fee and return the rest of the buyer agent commission to you after closing. On a typical Toronto home, that is over $20,000 cash back.",
       "calcDefault": 900000,
-      "marketDate": "July 2026",
+      "marketDate": "August 2026",
       "marketTitle": "The Toronto Market Right Now",
-      "marketText": "The Toronto market continued to cool in July, TRREB's most recent report. Sales held roughly steady year-over-year while new listings fell sharply, and the benchmark price was down 4.6% from last year to $934,600. The average sale price came in at $1,010,836, with condo apartments down 7.35% year-over-year specifically. That combination still favours buyers on price, even as tighter supply has started to support the market in some segments.",
+      "marketText": "As of TRREB's August 2026 Market Watch, the average sale price in Toronto was $979,684. Detached homes averaged $1,525,749. Across the GTA overall, the average selling price was down 2.7% year-over-year and the MLS\u00ae HPI Composite benchmark was down 4.5%, with new listings falling faster than sales, a combination that continues to favour buyers with more room to negotiate than in recent years.",
       "marketNote": "First-time buyers in Toronto also qualify for both the provincial and municipal land transfer tax rebates, which can add up to <strong>$8,475</strong> in savings on top of your cashback. That combination is unique to Toronto buyers.",
       "stats": [
         {
-          "val": "$1.01M",
+          "val": "$980K",
           "label": "Average home price",
           "highlight": true
         },
         {
-          "val": "$680K",
-          "label": "Average condo price"
-        },
-        {
-          "val": "$1.8M",
+          "val": "$1.53M",
           "label": "Average detached"
         },
         {
-          "val": "38 days",
-          "label": "Avg days on market"
+          "val": "-2.7%",
+          "label": "GTA avg price, YoY"
+        },
+        {
+          "val": "35 days",
+          "label": "GTA avg days on market"
         }
       ],
       "hoods": [
@@ -214,36 +214,36 @@
         "lng": -79.3832
       },
       "sourceSlug": "buyer-toronto",
-      "metaDesc": "Low commission real estate agent in Toronto. Flat $4,999 fee — keep $20,000 cash back rebate on a $1M home. Full buyer representation, no upfront commitment.",
+      "metaDesc": "Low commission real estate agent in Toronto. Flat $4,999 fee \u2014 keep $20,000 cash back rebate on a $1M home. Full buyer representation, no upfront commitment.",
       "pageTitle": "Toronto Cashback Realtor | $20,000+ Back on a $1M Home | Home Cashbacks"
     },
     {
       "slug": "mississauga",
       "name": "Mississauga",
-      "cashback": "$19,000",
+      "cashback": "$17,464",
       "heroSub": "We are a licensed Mississauga buyer agent. We charge a flat $4,999 fee and return the rest of the buyer agent commission to you after closing. On a typical Mississauga home, that is over $19,000 back.",
       "calcDefault": 960000,
-      "marketDate": "July 2026",
+      "marketDate": "August 2026",
       "marketTitle": "The Mississauga Market Right Now",
-      "marketText": "Mississauga is a buyers market. Inventory is above the five-year average and prices are down year over year, which means buyers have more negotiating room than they have had in a long time. If you have been waiting, 2026 is worth a serious look.",
+      "marketText": "As of TRREB's August 2026 Market Watch, the average sale price in Mississauga was $898,510. Detached homes averaged $1,275,221. Across the GTA overall, the average selling price was down 2.7% year-over-year and the MLS\u00ae HPI Composite benchmark was down 4.5%, with new listings falling faster than sales, a combination that continues to favour buyers with more room to negotiate than in recent years.",
       "marketNote": null,
       "stats": [
         {
-          "val": "$1.01M",
+          "val": "$899K",
           "label": "Average home price",
           "highlight": true
         },
         {
-          "val": "$515K",
-          "label": "Average condo price"
-        },
-        {
-          "val": "$1.46M",
+          "val": "$1.28M",
           "label": "Average detached"
         },
         {
-          "val": "48 days",
-          "label": "Avg days on market"
+          "val": "-2.7%",
+          "label": "GTA avg price, YoY"
+        },
+        {
+          "val": "35 days",
+          "label": "GTA avg days on market"
         }
       ],
       "hoods": [
@@ -329,35 +329,31 @@
         "lng": -79.6441
       },
       "sourceSlug": "buyer-mississauga",
-      "metaDesc": "Cashback realtor in Mississauga. Flat $4,999 fee — on a typical Mississauga home you keep $19,000. Full service, no upfront commitment."
+      "metaDesc": "Cashback realtor in Mississauga. Flat $4,999 fee \u2014 on a typical Mississauga home you keep $19,000. Full service, no upfront commitment."
     },
     {
       "slug": "etobicoke",
       "name": "Etobicoke",
-      "cashback": "$18,000",
+      "cashback": "$18,896",
       "heroSub": "We are a licensed Etobicoke buyer agent. We charge a flat $4,999 fee and return the rest of the buyer agent commission to you as cash back after closing. On a typical Etobicoke home, that is over $18,000 back.",
       "calcDefault": 950000,
-      "marketDate": "July 2026",
+      "marketDate": "August 2026",
       "marketTitle": "The Etobicoke Market Right Now",
-      "marketText": "Etobicoke is one of Toronto's most underrated markets. It offers lakeshore access, established freehold neighbourhoods, and consistent transit links at prices that remain below comparable central Toronto areas. Inventory has risen in 2026 and buyer competition has softened, making this a strong window for serious buyers.",
+      "marketText": "TRREB does not report Etobicoke as its own separate area \u2014 it falls within TRREB's \"Toronto West\" district, so we use that district's figures as the closest available estimate. As of August 2026, the average sale price across Toronto West was $955,789. Across the GTA overall, the average selling price was down 2.7% year-over-year and the MLS\u00ae HPI Composite benchmark was down 4.5%, with new listings falling faster than sales, a combination that continues to favour buyers with more room to negotiate than in recent years.",
       "marketNote": null,
       "stats": [
         {
-          "val": "$901K",
-          "label": "Average home price",
+          "val": "$956K",
+          "label": "Avg. price, Toronto West",
           "highlight": true
         },
         {
-          "val": "$580K",
-          "label": "Average condo price"
+          "val": "-2.7%",
+          "label": "GTA avg price, YoY"
         },
         {
-          "val": "$1.35M",
-          "label": "Average detached"
-        },
-        {
-          "val": "37 days",
-          "label": "Avg days on market"
+          "val": "35 days",
+          "label": "GTA avg days on market"
         }
       ],
       "hoods": [
@@ -443,35 +439,31 @@
         "lng": -79.5132
       },
       "sourceSlug": "buyer-etobicoke",
-      "metaDesc": "Cashback realtor in Etobicoke. Flat $4,999 fee — on a typical Etobicoke home you keep $18,000. Full service, no upfront commitment."
+      "metaDesc": "Cashback realtor in Etobicoke. Flat $4,999 fee \u2014 on a typical Etobicoke home you keep $18,000. Full service, no upfront commitment."
     },
     {
       "slug": "scarborough",
       "name": "Scarborough",
-      "cashback": "$14,000",
+      "cashback": "$16,430",
       "heroSub": "We are a licensed Scarborough buyer agent. We charge a flat $4,999 fee and return the rest of the buyer agent commission to you as cash back after closing. Scarborough offers some of the best freehold value in Toronto, and your cashback makes it even better.",
       "calcDefault": 760000,
-      "marketDate": "July 2026",
+      "marketDate": "August 2026",
       "marketTitle": "The Scarborough Market Right Now",
-      "marketText": "Scarborough is Toronto's most accessible freehold market. Detached homes remain available at prices that first-time buyers can actually reach, and inventory has grown in 2026 giving buyers more time and more options. The Scarborough RT replacement and Eglinton East LRT extension are long-term infrastructure plays that are beginning to factor into buyer interest.",
+      "marketText": "TRREB does not report Scarborough as its own separate area \u2014 it falls within TRREB's \"Toronto East\" district, so we use that district's figures as the closest available estimate. As of August 2026, the average sale price across Toronto East was $857,162. Across the GTA overall, the average selling price was down 2.7% year-over-year and the MLS\u00ae HPI Composite benchmark was down 4.5%, with new listings falling faster than sales, a combination that continues to favour buyers with more room to negotiate than in recent years.",
       "marketNote": null,
       "stats": [
         {
-          "val": "$721K",
-          "label": "Average home price",
+          "val": "$857K",
+          "label": "Avg. price, Toronto East",
           "highlight": true
         },
         {
-          "val": "$480K",
-          "label": "Average condo price"
+          "val": "-2.7%",
+          "label": "GTA avg price, YoY"
         },
         {
-          "val": "$980K",
-          "label": "Average detached"
-        },
-        {
-          "val": "42 days",
-          "label": "Avg days on market"
+          "val": "35 days",
+          "label": "GTA avg days on market"
         }
       ],
       "hoods": [
@@ -557,35 +549,31 @@
         "lng": -79.2576
       },
       "sourceSlug": "buyer-scarborough",
-      "metaDesc": "Cashback realtor in Scarborough. Flat $4,999 fee — on a typical Scarborough home you keep $14,000. Full service, no upfront commitment."
+      "metaDesc": "Cashback realtor in Scarborough. Flat $4,999 fee \u2014 on a typical Scarborough home you keep $14,000. Full service, no upfront commitment."
     },
     {
       "slug": "north-york",
       "name": "North York",
-      "cashback": "$17,500",
+      "cashback": "$21,281",
       "heroSub": "We are a licensed North York buyer agent. We charge a flat $4,999 fee and return the rest of the buyer agent commission to you as cash back after closing. On a typical North York home, that is over $17,500 back.",
       "calcDefault": 900000,
-      "marketDate": "July 2026",
+      "marketDate": "August 2026",
       "marketTitle": "The North York Market Right Now",
-      "marketText": "North York is one of the GTA's most diverse and transit-connected housing markets. The Yonge-Sheppard corridor anchors condo demand while areas like Willowdale and Bayview Village draw freehold buyers priced out of central Toronto. Inventory has risen in 2026, giving buyers more negotiating room than they have seen in years.",
+      "marketText": "TRREB does not report North York as its own separate area \u2014 it splits the city into Toronto West, Central, and East districts. North York's core areas (Bayview Village, Willowdale, Newtonbrook) fall within TRREB's \"Toronto Central\" district, so we use that district's figures as the closest available estimate. As of August 2026, the average sale price across Toronto Central was $1,051,186. Across the GTA overall, the average selling price was down 2.7% year-over-year and the MLS\u00ae HPI Composite benchmark was down 4.5%, with new listings falling faster than sales, a combination that continues to favour buyers with more room to negotiate than in recent years.",
       "marketNote": null,
       "stats": [
         {
-          "val": "$853K",
-          "label": "Average home price",
+          "val": "$1.05M",
+          "label": "Avg. price, Toronto Central",
           "highlight": true
         },
         {
-          "val": "$600K",
-          "label": "Average condo price"
-        },
-        {
-          "val": "$1.4M",
-          "label": "Average detached"
+          "val": "-2.7%",
+          "label": "GTA avg price, YoY"
         },
         {
           "val": "35 days",
-          "label": "Avg days on market"
+          "label": "GTA avg days on market"
         }
       ],
       "hoods": [
@@ -671,35 +659,35 @@
         "lng": -79.4111
       },
       "sourceSlug": "buyer-north-york",
-      "metaDesc": "Cashback realtor in North York. Flat $4,999 fee — on a typical North York home you keep $17,500. Full service, no upfront commitment."
+      "metaDesc": "Cashback realtor in North York. Flat $4,999 fee \u2014 on a typical North York home you keep $17,500. Full service, no upfront commitment."
     },
     {
       "slug": "vaughan",
       "name": "Vaughan",
-      "cashback": "$18,000",
+      "cashback": "$25,870",
       "heroSub": "We are a licensed Vaughan buyer agent. We charge a flat $4,999 fee and return the rest of the buyer agent commission to you as cash back after closing. On a typical Vaughan home, that is over $18,500 back.",
       "calcDefault": 980000,
-      "marketDate": "July 2026",
+      "marketDate": "August 2026",
       "marketTitle": "The Vaughan Market Right Now",
-      "marketText": "Vaughan is one of the GTA's fastest-growing cities and a top destination for buyers seeking newer construction, larger lots, and strong highways and transit access. The Vaughan Metropolitan Centre subway station has firmly established the area as a serious option for commuters. Inventory has risen in 2026, giving buyers considerably more negotiating room than in recent years.",
+      "marketText": "As of TRREB's August 2026 Market Watch, the average sale price in Vaughan was $1,234,758. Detached homes averaged $1,671,824. Across the GTA overall, the average selling price was down 2.7% year-over-year and the MLS\u00ae HPI Composite benchmark was down 4.5%, with new listings falling faster than sales, a combination that continues to favour buyers with more room to negotiate than in recent years.",
       "marketNote": null,
       "stats": [
         {
-          "val": "$1.19M",
+          "val": "$1.23M",
           "label": "Average home price",
           "highlight": true
         },
         {
-          "val": "$620K",
-          "label": "Average condo price"
-        },
-        {
-          "val": "$1.5M",
+          "val": "$1.67M",
           "label": "Average detached"
         },
         {
-          "val": "38 days",
-          "label": "Avg days on market"
+          "val": "-2.7%",
+          "label": "GTA avg price, YoY"
+        },
+        {
+          "val": "35 days",
+          "label": "GTA avg days on market"
         }
       ],
       "hoods": [
@@ -785,35 +773,35 @@
         "lng": -79.5085
       },
       "sourceSlug": "buyer-vaughan",
-      "metaDesc": "Cashback realtor in Vaughan. Flat $4,999 fee — on a typical Vaughan home you keep $18,000. Full service, no upfront commitment."
+      "metaDesc": "Cashback realtor in Vaughan. Flat $4,999 fee \u2014 on a typical Vaughan home you keep $18,000. Full service, no upfront commitment."
     },
     {
       "slug": "oakville",
       "name": "Oakville",
-      "cashback": "$22,000",
+      "cashback": "$28,113",
       "heroSub": "We are a licensed Oakville buyer agent. We charge a flat $4,999 fee and return the rest of the buyer agent commission to you as cash back after closing. On a typical Oakville home, that is over $22,000 back.",
       "calcDefault": 1100000,
-      "marketDate": "July 2026",
+      "marketDate": "August 2026",
       "marketTitle": "The Oakville Market Right Now",
-      "marketText": "Oakville is consistently ranked among the best places to live in Canada and its real estate market reflects that reputation. Lakefront access, top schools, strong GO Transit service, and a genuine town centre make it one of the most complete communities in the GTA. Prices are among the highest outside Toronto proper, but 2026 has seen inventory rise and buyer competition ease.",
+      "marketText": "As of TRREB's August 2026 Market Watch, the average sale price in Oakville was $1,324,472. Detached homes averaged $1,787,896. Across the GTA overall, the average selling price was down 2.7% year-over-year and the MLS\u00ae HPI Composite benchmark was down 4.5%, with new listings falling faster than sales, a combination that continues to favour buyers with more room to negotiate than in recent years.",
       "marketNote": null,
       "stats": [
         {
-          "val": "$1.44M",
+          "val": "$1.32M",
           "label": "Average home price",
           "highlight": true
         },
         {
-          "val": "$700K",
-          "label": "Average condo/townhouse"
-        },
-        {
-          "val": "$1.8M",
+          "val": "$1.79M",
           "label": "Average detached"
         },
         {
-          "val": "40 days",
-          "label": "Avg days on market"
+          "val": "-2.7%",
+          "label": "GTA avg price, YoY"
+        },
+        {
+          "val": "35 days",
+          "label": "GTA avg days on market"
         }
       ],
       "hoods": [
@@ -899,35 +887,35 @@
         "lng": -79.6877
       },
       "sourceSlug": "buyer-oakville",
-      "metaDesc": "Cashback realtor in Oakville. Flat $4,999 fee — on a typical Oakville home you keep $22,000. Full service, no upfront commitment."
+      "metaDesc": "Cashback realtor in Oakville. Flat $4,999 fee \u2014 on a typical Oakville home you keep $22,000. Full service, no upfront commitment."
     },
     {
       "slug": "markham",
       "name": "Markham",
-      "cashback": "$18,000",
+      "cashback": "$25,218",
       "heroSub": "We are a licensed Markham buyer agent. We charge a flat $4,999 fee and return the rest of the buyer agent commission to you as cash back after closing. On a typical Markham home, that is over $18,000 back.",
       "calcDefault": 960000,
-      "marketDate": "July 2026",
+      "marketDate": "August 2026",
       "marketTitle": "The Markham Market Right Now",
-      "marketText": "Markham is the GTA's technology hub and one of York Region's most diverse and dynamic housing markets. Strong employment anchors, top schools, and Highway 407 access make it a consistent destination for buyers moving up from Scarborough and North York. Inventory has increased in 2026, giving buyers better selection and negotiating position.",
+      "marketText": "As of TRREB's August 2026 Market Watch, the average sale price in Markham was $1,208,692. Detached homes averaged $1,611,773. Across the GTA overall, the average selling price was down 2.7% year-over-year and the MLS\u00ae HPI Composite benchmark was down 4.5%, with new listings falling faster than sales, a combination that continues to favour buyers with more room to negotiate than in recent years.",
       "marketNote": null,
       "stats": [
         {
-          "val": "$1.14M",
+          "val": "$1.21M",
           "label": "Average home price",
           "highlight": true
         },
         {
-          "val": "$600K",
-          "label": "Average condo/townhouse"
-        },
-        {
-          "val": "$1.5M",
+          "val": "$1.61M",
           "label": "Average detached"
         },
         {
+          "val": "-2.7%",
+          "label": "GTA avg price, YoY"
+        },
+        {
           "val": "35 days",
-          "label": "Avg days on market"
+          "label": "GTA avg days on market"
         }
       ],
       "hoods": [
@@ -1013,35 +1001,35 @@
         "lng": -79.337
       },
       "sourceSlug": "buyer-markham",
-      "metaDesc": "Cashback realtor in Markham. Flat $4,999 fee — on a typical Markham home you keep $18,000. Full service, no upfront commitment."
+      "metaDesc": "Cashback realtor in Markham. Flat $4,999 fee \u2014 on a typical Markham home you keep $18,000. Full service, no upfront commitment."
     },
     {
       "slug": "richmond-hill",
       "name": "Richmond Hill",
-      "cashback": "$19,000",
+      "cashback": "$25,145",
       "heroSub": "We are a licensed Richmond Hill buyer agent. We charge a flat $4,999 fee and return the rest of the buyer agent commission to you as cash back after closing. On a typical Richmond Hill home, that is over $19,000 back.",
       "calcDefault": 1000000,
-      "marketDate": "July 2026",
+      "marketDate": "August 2026",
       "marketTitle": "The Richmond Hill Market Right Now",
-      "marketText": "Richmond Hill is one of York Region's most in-demand addresses. Strong schools, established freehold neighbourhoods, and easy access to both Highway 404 and the Yonge corridor make it a consistent top pick for families moving up from Toronto. Inventory has grown in 2026, giving buyers more options and more leverage than they have had in years.",
+      "marketText": "As of TRREB's August 2026 Market Watch, the average sale price in Richmond Hill was $1,205,777. Detached homes averaged $1,667,913. Across the GTA overall, the average selling price was down 2.7% year-over-year and the MLS\u00ae HPI Composite benchmark was down 4.5%, with new listings falling faster than sales, a combination that continues to favour buyers with more room to negotiate than in recent years.",
       "marketNote": null,
       "stats": [
         {
-          "val": "$948K",
+          "val": "$1.21M",
           "label": "Average home price",
           "highlight": true
         },
         {
-          "val": "$650K",
-          "label": "Average condo/townhouse"
-        },
-        {
-          "val": "$1.6M",
+          "val": "$1.67M",
           "label": "Average detached"
         },
         {
-          "val": "36 days",
-          "label": "Avg days on market"
+          "val": "-2.7%",
+          "label": "GTA avg price, YoY"
+        },
+        {
+          "val": "35 days",
+          "label": "GTA avg days on market"
         }
       ],
       "hoods": [
@@ -1127,35 +1115,35 @@
         "lng": -79.4403
       },
       "sourceSlug": "buyer-richmond-hill",
-      "metaDesc": "Cashback realtor in Richmond Hill. Flat $4,999 fee — on a typical Richmond Hill home you keep $19,000. Full service, no upfront commitment."
+      "metaDesc": "Cashback realtor in Richmond Hill. Flat $4,999 fee \u2014 on a typical Richmond Hill home you keep $19,000. Full service, no upfront commitment."
     },
     {
       "slug": "brampton",
       "name": "Brampton",
-      "cashback": "$14,000",
+      "cashback": "$17,173",
       "heroSub": "We are a licensed Brampton buyer agent. We charge a flat $4,999 fee and return the rest of the buyer agent commission to you as cash back after closing. Brampton offers some of the best freehold value in the GTA and your cashback makes it even more accessible.",
       "calcDefault": 780000,
-      "marketDate": "July 2026",
+      "marketDate": "August 2026",
       "marketTitle": "The Brampton Market Right Now",
-      "marketText": "Brampton is the GTA's most accessible large-city freehold market. Detached homes remain within reach for first-time buyers at prices well below Mississauga and Toronto. The city has grown significantly in the past decade and 2026 is firmly a buyer's market -- inventory is high and days on market have stretched, giving buyers real negotiating power.",
+      "marketText": "As of TRREB's August 2026 Market Watch, the average sale price in Brampton was $886,865. Detached homes averaged $1,020,556. Across the GTA overall, the average selling price was down 2.7% year-over-year and the MLS\u00ae HPI Composite benchmark was down 4.5%, with new listings falling faster than sales, a combination that continues to favour buyers with more room to negotiate than in recent years.",
       "marketNote": null,
       "stats": [
         {
-          "val": "$894K",
+          "val": "$887K",
           "label": "Average home price",
           "highlight": true
         },
         {
-          "val": "$500K",
-          "label": "Average condo/townhouse"
-        },
-        {
-          "val": "$1.0M",
+          "val": "$1.02M",
           "label": "Average detached"
         },
         {
-          "val": "44 days",
-          "label": "Avg days on market"
+          "val": "-2.7%",
+          "label": "GTA avg price, YoY"
+        },
+        {
+          "val": "35 days",
+          "label": "GTA avg days on market"
         }
       ],
       "hoods": [
@@ -1241,35 +1229,35 @@
         "lng": -79.7624
       },
       "sourceSlug": "buyer-brampton",
-      "metaDesc": "Cashback realtor in Brampton. Flat $4,999 fee — on a typical Brampton home you keep $14,000. Full service, no upfront commitment."
+      "metaDesc": "Cashback realtor in Brampton. Flat $4,999 fee \u2014 on a typical Brampton home you keep $14,000. Full service, no upfront commitment."
     },
     {
       "slug": "aurora",
       "name": "Aurora",
-      "cashback": "$26,000",
+      "cashback": "$22,626",
       "heroSub": "We are a licensed Aurora buyer agent. We charge a flat $4,999 fee and return the rest of the buyer agent commission to you as cash back after closing. On a typical Aurora home, that is over $26,000 back.",
       "calcDefault": 1250000,
-      "marketDate": "July 2026",
+      "marketDate": "August 2026",
       "marketTitle": "The Aurora Market Right Now",
-      "marketText": "Aurora sits between Newmarket and Richmond Hill and remains one of the most desirable towns in York Region, known for top-ranked schools, GO Transit access, and small-town character. Prices have softened from the 2021-2022 peak, giving buyers more room to negotiate than in recent years, while premium school-catchment neighbourhoods continue to command a real premium over the rest of town.",
+      "marketText": "As of TRREB's August 2026 Market Watch, the average sale price in Aurora was $1,105,004. Detached homes averaged $1,467,448. Across the GTA overall, the average selling price was down 2.7% year-over-year and the MLS\u00ae HPI Composite benchmark was down 4.5%, with new listings falling faster than sales, a combination that continues to favour buyers with more room to negotiate than in recent years.",
       "marketNote": null,
       "stats": [
         {
-          "val": "$1.3M",
+          "val": "$1.11M",
           "label": "Average home price",
           "highlight": true
         },
         {
-          "val": "$650K",
-          "label": "Average condo price"
-        },
-        {
-          "val": "$1.43M",
+          "val": "$1.47M",
           "label": "Average detached"
         },
         {
-          "val": "20 days",
-          "label": "Avg days on market"
+          "val": "-2.7%",
+          "label": "GTA avg price, YoY"
+        },
+        {
+          "val": "35 days",
+          "label": "GTA avg days on market"
         }
       ],
       "hoods": [
@@ -1349,30 +1337,30 @@
     {
       "slug": "newmarket",
       "name": "Newmarket",
-      "cashback": "$20,000",
+      "cashback": "$21,209",
       "heroSub": "We are a licensed Newmarket buyer agent. We charge a flat $4,999 fee and return the rest of the buyer agent commission to you as cash back after closing. On a typical Newmarket home, that is over $20,000 back.",
       "calcDefault": 1000000,
-      "marketDate": "July 2026",
+      "marketDate": "August 2026",
       "marketTitle": "The Newmarket Market Right Now",
-      "marketText": "Newmarket sits in the middle of the York Region price range, above Bradford and East Gwillimbury and below Aurora, which makes it one of the more accessible entry points into the corridor. It also has the highest sales volume in the area, giving it the most liquid and predictable market of the nearby York Region towns for both buyers and sellers.",
+      "marketText": "As of TRREB's August 2026 Market Watch, the average sale price in Newmarket was $1,048,321. Detached homes averaged $1,146,053. Across the GTA overall, the average selling price was down 2.7% year-over-year and the MLS\u00ae HPI Composite benchmark was down 4.5%, with new listings falling faster than sales, a combination that continues to favour buyers with more room to negotiate than in recent years.",
       "marketNote": null,
       "stats": [
         {
-          "val": "$994K",
+          "val": "$1.05M",
           "label": "Average home price",
           "highlight": true
-        },
-        {
-          "val": "$580K",
-          "label": "Average condo price"
         },
         {
           "val": "$1.15M",
           "label": "Average detached"
         },
         {
-          "val": "23 days",
-          "label": "Avg days on market"
+          "val": "-2.7%",
+          "label": "GTA avg price, YoY"
+        },
+        {
+          "val": "35 days",
+          "label": "GTA avg days on market"
         }
       ],
       "hoods": [
@@ -1452,30 +1440,30 @@
     {
       "slug": "stouffville",
       "name": "Stouffville",
-      "cashback": "$24,000",
+      "cashback": "$23,964",
       "heroSub": "We are a licensed Stouffville buyer agent. We charge a flat $4,999 fee and return the rest of the buyer agent commission to you as cash back after closing. On a typical Stouffville home, that is over $24,000 back.",
       "calcDefault": 1150000,
-      "marketDate": "July 2026",
+      "marketDate": "August 2026",
       "marketTitle": "The Stouffville Market Right Now",
-      "marketText": "Whitchurch-Stouffville is one of the fastest-growing towns in York Region, with population roughly doubling since the Big Pipe water infrastructure connection unlocked new development. Detached homes are currently in a buyer's market with real negotiating room, while row townhouses have stayed competitive and often sell at or above asking.",
+      "marketText": "As of TRREB's August 2026 Market Watch, the average sale price in Stouffville was $1,158,512. Detached homes averaged $1,334,618. Across the GTA overall, the average selling price was down 2.7% year-over-year and the MLS\u00ae HPI Composite benchmark was down 4.5%, with new listings falling faster than sales, a combination that continues to favour buyers with more room to negotiate than in recent years.",
       "marketNote": null,
       "stats": [
         {
-          "val": "$1.03M",
+          "val": "$1.16M",
           "label": "Average home price",
           "highlight": true
         },
         {
-          "val": "$650K",
-          "label": "Average condo price"
-        },
-        {
-          "val": "$1.35M",
+          "val": "$1.33M",
           "label": "Average detached"
         },
         {
-          "val": "28 days",
-          "label": "Avg days on market"
+          "val": "-2.7%",
+          "label": "GTA avg price, YoY"
+        },
+        {
+          "val": "35 days",
+          "label": "GTA avg days on market"
         }
       ],
       "hoods": [
@@ -1555,30 +1543,26 @@
     {
       "slug": "thornhill",
       "name": "Thornhill",
-      "cashback": "$24,000",
+      "cashback": "$25,870",
       "heroSub": "We are a licensed Thornhill buyer agent. We charge a flat $4,999 fee and return the rest of the buyer agent commission to you as cash back after closing. On a typical Thornhill home, that is over $24,000 back.",
       "calcDefault": 1150000,
-      "marketDate": "July 2026",
+      "marketDate": "August 2026",
       "marketTitle": "The Thornhill Market Right Now",
-      "marketText": "Thornhill sits along the Yonge Street corridor, straddling the Vaughan and Markham border, and has stayed one of the most stable markets in York Region despite higher borrowing costs. Tight supply, mature tree-lined streets, and consistently strong schools keep it attracting move-up buyers and established families. Detached homes remain the dominant and most expensive segment, with well-priced homes still moving quickly.",
+      "marketText": "TRREB does not report Thornhill as its own separate area \u2014 it straddles the Vaughan/Markham border, so we use Vaughan's figures as the closest available estimate. As of August 2026, the average sale price across Vaughan was $1,234,758. Across the GTA overall, the average selling price was down 2.7% year-over-year and the MLS\u00ae HPI Composite benchmark was down 4.5%, with new listings falling faster than sales, a combination that continues to favour buyers with more room to negotiate than in recent years.",
       "marketNote": null,
       "stats": [
         {
-          "val": "$1.15M",
-          "label": "Average home price",
+          "val": "$1.23M",
+          "label": "Avg. price, Vaughan",
           "highlight": true
         },
         {
-          "val": "$650K",
-          "label": "Average condo/townhouse"
+          "val": "-2.7%",
+          "label": "GTA avg price, YoY"
         },
         {
-          "val": "$1.6M",
-          "label": "Average detached"
-        },
-        {
-          "val": "25 days",
-          "label": "Avg days on market"
+          "val": "35 days",
+          "label": "GTA avg days on market"
         }
       ],
       "hoods": [
@@ -1658,30 +1642,30 @@
     {
       "slug": "burlington",
       "name": "Burlington",
-      "cashback": "$22,000",
+      "cashback": "$20,524",
       "heroSub": "We are a licensed Burlington buyer agent. We charge a flat $4,999 fee and return the rest of the buyer agent commission to you as cash back after closing. On a typical Burlington home, that is over $22,000 back.",
       "calcDefault": 1100000,
-      "marketDate": "July 2026",
+      "marketDate": "August 2026",
       "marketTitle": "The Burlington Market Right Now",
-      "marketText": "Burlington sits at the western edge of the GTA directly on Lake Ontario, and it has held up better through this cycle than most of Halton Region expected. The average price of $1.09M reflects genuine, steady demand rather than a seasonal bump, driven by waterfront access and a downtown core people can actually walk to. Aldershot remains the more accessible entry point for buyers who want the city without the Old Oakville-adjacent price tag.",
+      "marketText": "As of TRREB's August 2026 Market Watch, the average sale price in Burlington was $1,020,937. Detached homes averaged $1,421,482. Across the GTA overall, the average selling price was down 2.7% year-over-year and the MLS\u00ae HPI Composite benchmark was down 4.5%, with new listings falling faster than sales, a combination that continues to favour buyers with more room to negotiate than in recent years.",
       "marketNote": null,
       "stats": [
         {
-          "val": "$1.09M",
+          "val": "$1.02M",
           "label": "Average home price",
           "highlight": true
         },
         {
-          "val": "$620K",
-          "label": "Average condo/townhouse"
-        },
-        {
-          "val": "$1.4M",
+          "val": "$1.42M",
           "label": "Average detached"
         },
         {
-          "val": "22 days",
-          "label": "Avg days on market"
+          "val": "-2.7%",
+          "label": "GTA avg price, YoY"
+        },
+        {
+          "val": "35 days",
+          "label": "GTA avg days on market"
         }
       ],
       "hoods": [
@@ -1761,30 +1745,30 @@
     {
       "slug": "milton",
       "name": "Milton",
-      "cashback": "$20,000",
+      "cashback": "$19,440",
       "heroSub": "We are a licensed Milton buyer agent. We charge a flat $4,999 fee and return the rest of the buyer agent commission to you as cash back after closing. On a typical Milton home, that is over $20,000 back.",
       "calcDefault": 1000000,
-      "marketDate": "July 2026",
+      "marketDate": "August 2026",
       "marketTitle": "The Milton Market Right Now",
-      "marketText": "New listings have outpaced sales in Milton for months running, which has firmly tilted 2026 in favour of buyers, a real shift from the market conditions of recent years. At $1.0M average, it remains one of the more accessible entry points into Halton Region, especially set against Oakville and Burlington next door. Willmott and the Ford/Beaty corridor have absorbed most of the newer family-oriented construction.",
+      "marketText": "As of TRREB's August 2026 Market Watch, the average sale price in Milton was $977,576. Detached homes averaged $1,238,259. Across the GTA overall, the average selling price was down 2.7% year-over-year and the MLS\u00ae HPI Composite benchmark was down 4.5%, with new listings falling faster than sales, a combination that continues to favour buyers with more room to negotiate than in recent years.",
       "marketNote": null,
       "stats": [
         {
-          "val": "$1.0M",
+          "val": "$978K",
           "label": "Average home price",
           "highlight": true
         },
         {
-          "val": "$580K",
-          "label": "Average condo/townhouse"
-        },
-        {
-          "val": "$1.25M",
+          "val": "$1.24M",
           "label": "Average detached"
         },
         {
-          "val": "30 days",
-          "label": "Avg days on market"
+          "val": "-2.7%",
+          "label": "GTA avg price, YoY"
+        },
+        {
+          "val": "35 days",
+          "label": "GTA avg days on market"
         }
       ],
       "hoods": [
@@ -1864,30 +1848,30 @@
     {
       "slug": "halton-hills",
       "name": "Halton Hills",
-      "cashback": "$19,000",
+      "cashback": "$18,060",
       "heroSub": "We are a licensed Halton Hills buyer agent. We charge a flat $4,999 fee and return the rest of the buyer agent commission to you as cash back after closing. On a typical Halton Hills home, that is over $19,000 back.",
       "calcDefault": 960000,
-      "marketDate": "July 2026",
+      "marketDate": "August 2026",
       "marketTitle": "The Halton Hills Market Right Now",
-      "marketText": "Halton Hills, built around Georgetown and Acton, is the small-town alternative inside Halton Region, with larger lots and a slower pace than Oakville, Burlington, or Milton offer. The average price of $958K has softened alongside the rest of the region in 2026, opening up more room to negotiate than buyers have seen recently. Glen Williams sits apart from the rest as a genuine heritage premium pocket within the township.",
+      "marketText": "As of TRREB's August 2026 Market Watch, the average sale price in Halton Hills was $922,377. Detached homes averaged $1,020,038. Across the GTA overall, the average selling price was down 2.7% year-over-year and the MLS\u00ae HPI Composite benchmark was down 4.5%, with new listings falling faster than sales, a combination that continues to favour buyers with more room to negotiate than in recent years.",
       "marketNote": null,
       "stats": [
         {
-          "val": "$958K",
+          "val": "$922K",
           "label": "Average home price",
           "highlight": true
         },
         {
-          "val": "$550K",
-          "label": "Average condo/townhouse"
-        },
-        {
-          "val": "$1.15M",
+          "val": "$1.02M",
           "label": "Average detached"
         },
         {
-          "val": "22 days",
-          "label": "Avg days on market"
+          "val": "-2.7%",
+          "label": "GTA avg price, YoY"
+        },
+        {
+          "val": "35 days",
+          "label": "GTA avg days on market"
         }
       ],
       "hoods": [
@@ -1967,30 +1951,26 @@
     {
       "slug": "ajax",
       "name": "Ajax",
-      "cashback": "$17,000",
+      "cashback": "$16,797",
       "heroSub": "We are a licensed Ajax buyer agent. We charge a flat $4,999 fee and return the rest of the buyer agent commission to you as cash back after closing. On a typical Ajax home, that is over $17,000 back.",
       "calcDefault": 888000,
-      "marketDate": "July 2026",
+      "marketDate": "August 2026",
       "marketTitle": "The Ajax Market Right Now",
-      "marketText": "Ajax is where a lot of buyers land once Toronto and even nearby Whitby price them out, a lakeshore community that still delivers real value for the money. The average home price of $888K sits comfortably below the GTA average, and the Lakeshore East GO line keeps a Union Station commute realistic. Northeast Ajax has been the strongest draw for families moving from condos into their first detached home.",
+      "marketText": "As of TRREB's August 2026 Market Watch, the average sale price in Ajax was $871,853. Across the GTA overall, the average selling price was down 2.7% year-over-year and the MLS\u00ae HPI Composite benchmark was down 4.5%, with new listings falling faster than sales, a combination that continues to favour buyers with more room to negotiate than in recent years.",
       "marketNote": null,
       "stats": [
         {
-          "val": "$888K",
+          "val": "$872K",
           "label": "Average home price",
           "highlight": true
         },
         {
-          "val": "$540K",
-          "label": "Average condo/townhouse"
+          "val": "-2.7%",
+          "label": "GTA avg price, YoY"
         },
         {
-          "val": "$1.05M",
-          "label": "Average detached"
-        },
-        {
-          "val": "25 days",
-          "label": "Avg days on market"
+          "val": "35 days",
+          "label": "GTA avg days on market"
         }
       ],
       "hoods": [
@@ -2069,30 +2049,26 @@
     {
       "slug": "pickering",
       "name": "Pickering",
-      "cashback": "$17,900",
+      "cashback": "$13,895",
       "heroSub": "We are a licensed Pickering buyer agent. We charge a flat $4,999 fee and return the rest of the buyer agent commission to you as cash back after closing. On a typical Pickering home, that is over $17,900 back.",
       "calcDefault": 917000,
-      "marketDate": "July 2026",
+      "marketDate": "August 2026",
       "marketTitle": "The Pickering Market Right Now",
-      "marketText": "Seaton is the story in Pickering right now, one of the largest master-planned communities in the GTA, still actively under development. That's part of why Pickering typically runs a touch ahead of the rest of Durham on price, alongside its direct GO Transit line into Union Station. West Shore and Bay Ridges remain the more established, lower-cost alternative for buyers who want proximity to the lake without new-construction pricing.",
+      "marketText": "As of TRREB's August 2026 Market Watch, the average sale price in Pickering was $755,759. Across the GTA overall, the average selling price was down 2.7% year-over-year and the MLS\u00ae HPI Composite benchmark was down 4.5%, with new listings falling faster than sales, a combination that continues to favour buyers with more room to negotiate than in recent years.",
       "marketNote": null,
       "stats": [
         {
-          "val": "$917K",
+          "val": "$756K",
           "label": "Average home price",
           "highlight": true
         },
         {
-          "val": "$560K",
-          "label": "Average condo/townhouse"
+          "val": "-2.7%",
+          "label": "GTA avg price, YoY"
         },
         {
-          "val": "$1.1M",
-          "label": "Average detached"
-        },
-        {
-          "val": "24 days",
-          "label": "Avg days on market"
+          "val": "35 days",
+          "label": "GTA avg days on market"
         }
       ],
       "hoods": [
@@ -2171,30 +2147,26 @@
     {
       "slug": "whitby",
       "name": "Whitby",
-      "cashback": "$17,600",
+      "cashback": "$13,536",
       "heroSub": "We are a licensed Whitby buyer agent. We charge a flat $4,999 fee and return the rest of the buyer agent commission to you as cash back after closing. On a typical Whitby home, that is over $17,600 back.",
       "calcDefault": 904000,
-      "marketDate": "July 2026",
+      "marketDate": "August 2026",
       "marketTitle": "The Whitby Market Right Now",
-      "marketText": "Whitby doesn't get the same attention as Ajax or Pickering, but Brooklin specifically is one of the most consistently in-demand family pockets in Durham Region. A walkable heritage downtown, direct GO access, and strong schools have kept Whitby's $904K average price stable even as some neighbouring markets softened more. It's a market that rewards buyers who do their research rather than just following the headlines.",
+      "marketText": "As of TRREB's August 2026 Market Watch, the average sale price in Whitby was $741,394. Across the GTA overall, the average selling price was down 2.7% year-over-year and the MLS\u00ae HPI Composite benchmark was down 4.5%, with new listings falling faster than sales, a combination that continues to favour buyers with more room to negotiate than in recent years.",
       "marketNote": null,
       "stats": [
         {
-          "val": "$904K",
+          "val": "$741K",
           "label": "Average home price",
           "highlight": true
         },
         {
-          "val": "$550K",
-          "label": "Average condo/townhouse"
+          "val": "-2.7%",
+          "label": "GTA avg price, YoY"
         },
         {
-          "val": "$1.08M",
-          "label": "Average detached"
-        },
-        {
-          "val": "23 days",
-          "label": "Avg days on market"
+          "val": "35 days",
+          "label": "GTA avg days on market"
         }
       ],
       "hoods": [
@@ -2273,30 +2245,26 @@
     {
       "slug": "oshawa",
       "name": "Oshawa",
-      "cashback": "$13,000",
+      "cashback": "$15,481",
       "heroSub": "We are a licensed Oshawa buyer agent. We charge a flat $4,999 fee and return the rest of the buyer agent commission to you as cash back after closing. On a typical Oshawa home, that is over $13,000 back.",
       "calcDefault": 722000,
-      "marketDate": "July 2026",
+      "marketDate": "August 2026",
       "marketTitle": "The Oshawa Market Right Now",
-      "marketText": "At $722K average, Oshawa remains the most affordable municipality in Durham Region and one of the most affordable anywhere in the GTA. Downtown revitalization has been genuinely underway for several years now, not just a talking point, and GO Transit still connects Oshawa buyers into Union Station. This is where a lot of first-time buyers land when every market closer to Toronto has stopped making financial sense.",
+      "marketText": "As of TRREB's August 2026 Market Watch, the average sale price in Oshawa was $819,217. Across the GTA overall, the average selling price was down 2.7% year-over-year and the MLS\u00ae HPI Composite benchmark was down 4.5%, with new listings falling faster than sales, a combination that continues to favour buyers with more room to negotiate than in recent years.",
       "marketNote": null,
       "stats": [
         {
-          "val": "$722K",
+          "val": "$819K",
           "label": "Average home price",
           "highlight": true
         },
         {
-          "val": "$460K",
-          "label": "Average condo/townhouse"
+          "val": "-2.7%",
+          "label": "GTA avg price, YoY"
         },
         {
-          "val": "$850K",
-          "label": "Average detached"
-        },
-        {
-          "val": "28 days",
-          "label": "Avg days on market"
+          "val": "35 days",
+          "label": "GTA avg days on market"
         }
       ],
       "hoods": [
@@ -2375,30 +2343,30 @@
     {
       "slug": "king-city",
       "name": "King City",
-      "cashback": "$42,500",
+      "cashback": "$41,284",
       "heroSub": "We are a licensed King City buyer agent. We charge a flat $4,999 fee and return the rest of the buyer agent commission to you as cash back after closing. On a typical King City home, that is over $42,500 back.",
       "calcDefault": 1900000,
-      "marketDate": "July 2026",
+      "marketDate": "August 2026",
       "marketTitle": "The King City Market Right Now",
-      "marketText": "King City and the surrounding Township of King are among the most exclusive markets in the GTA, known for large estate lots, equestrian properties, and executive homes well outside typical suburban density. Prices run significantly above the York Region average, reflecting the scarcity of large-lot inventory this close to Toronto.",
+      "marketText": "As of TRREB's August 2026 Market Watch, the average sale price in King City was $1,851,310. Detached homes averaged $2,119,853. Across the GTA overall, the average selling price was down 2.7% year-over-year and the MLS\u00ae HPI Composite benchmark was down 4.5%, with new listings falling faster than sales, a combination that continues to favour buyers with more room to negotiate than in recent years.",
       "marketNote": null,
       "stats": [
         {
-          "val": "$1.9M",
+          "val": "$1.85M",
           "label": "Average home price",
           "highlight": true
         },
         {
-          "val": "$600K",
-          "label": "Average condo/townhouse"
-        },
-        {
-          "val": "$2.3M",
+          "val": "$2.12M",
           "label": "Average detached"
         },
         {
-          "val": "27 days",
-          "label": "Avg days on market"
+          "val": "-2.7%",
+          "label": "GTA avg price, YoY"
+        },
+        {
+          "val": "35 days",
+          "label": "GTA avg days on market"
         }
       ],
       "hoods": [
@@ -2477,30 +2445,30 @@
     {
       "slug": "east-gwillimbury",
       "name": "East Gwillimbury",
-      "cashback": "$22,500",
+      "cashback": "$21,474",
       "heroSub": "We are a licensed East Gwillimbury buyer agent. We charge a flat $4,999 fee and return the rest of the buyer agent commission to you as cash back after closing. On a typical East Gwillimbury home, that is over $22,500 back.",
       "calcDefault": 1100000,
-      "marketDate": "July 2026",
+      "marketDate": "August 2026",
       "marketTitle": "The East Gwillimbury Market Right Now",
-      "marketText": "East Gwillimbury is one of York Region's fastest-growing municipalities, anchored by GO Transit's northern terminus at East Gwillimbury Station. Newer master-planned communities in Queensville sit alongside older, more rural hamlets like Holland Landing and Mount Albert, giving buyers a wider range of lot sizes and price points than most of York Region.",
+      "marketText": "As of TRREB's August 2026 Market Watch, the average sale price in East Gwillimbury was $1,058,938. Detached homes averaged $1,112,592. Across the GTA overall, the average selling price was down 2.7% year-over-year and the MLS\u00ae HPI Composite benchmark was down 4.5%, with new listings falling faster than sales, a combination that continues to favour buyers with more room to negotiate than in recent years.",
       "marketNote": null,
       "stats": [
         {
-          "val": "$1.1M",
+          "val": "$1.06M",
           "label": "Average home price",
           "highlight": true
         },
         {
-          "val": "$620K",
-          "label": "Average condo/townhouse"
-        },
-        {
-          "val": "$1.35M",
+          "val": "$1.11M",
           "label": "Average detached"
         },
         {
-          "val": "26 days",
-          "label": "Avg days on market"
+          "val": "-2.7%",
+          "label": "GTA avg price, YoY"
+        },
+        {
+          "val": "35 days",
+          "label": "GTA avg days on market"
         }
       ],
       "hoods": [

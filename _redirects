@@ -89,3 +89,10 @@
 /condo-vs-freehold-toronto  /condo-vs-freehold-toronto.html  301!
 /selling-a-condo-toronto  /selling-a-condo-toronto.html  301!
 /downsizing-to-a-condo-toronto  /downsizing-to-a-condo-toronto.html  301!
+
+# Old page slug — replaces the closing-costs-ontario-2026.html meta-refresh stub
+/closing-costs-ontario-2026.html  /closing-costs-ontario.html  301!
+
+# Clean short links for social bios — redirect to the full UTM-tagged homepage
+/ig  https://homecashbacks.ca/?utm_source=instagram&utm_medium=social&utm_campaign=bio  301!
+/tiktok  https://homecashbacks.ca/?utm_source=tiktok&utm_medium=social&utm_campaign=bio  301!

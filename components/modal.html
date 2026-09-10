@@ -10,18 +10,22 @@
         <input type="hidden" name="form-name" value="contact"/>
         <p style="display:none"><input name="bot-field"/></p>
         <div class="f-field">
-          <label class="f-label" for="f-name">Full name <span style="color:var(--muted);font-size:11px">(required)</span></label>
+          <label class="f-label" for="f-name">Full name <span style="color:var(--red)">*</span></label>
           <input class="f-input" type="text" id="f-name" name="name" autocomplete="name"/>
           <div class="f-error" id="err-name"></div>
         </div>
         <div class="f-field">
-          <label class="f-label" for="f-email">Email address <span style="color:var(--muted);font-size:11px">(required)</span></label>
-          <input class="f-input" type="text" id="f-email" name="email" inputmode="email" autocomplete="email"/>
+          <label class="f-label" for="f-email">Email address <span style="color:var(--red)">*</span></label>
+          <input class="f-input" type="text" id="f-email" name="email" inputmode="email" autocomplete="email" maxlength="100"/>
         </div>
         <div class="f-field">
-          <label class="f-label" for="f-phone">Phone number <span style="color:var(--muted);font-size:11px">(required)</span></label>
+          <label class="f-label" for="f-phone">Phone number <span style="color:var(--red)">*</span></label>
           <input class="f-input" type="tel" id="f-phone" name="phone" inputmode="tel" autocomplete="tel"/>
           <div class="f-error" id="err-contact"></div>
+        </div>
+        <div class="f-field">
+          <label class="f-label" for="f-note">Tell us what you're looking for <span style="color:var(--muted);font-size:11px">(optional)</span></label>
+          <textarea class="f-textarea" id="f-note" name="note" rows="3" maxlength="2000" placeholder="I'm looking for a $1M house in Toronto"></textarea>
         </div>
         <p class="f-consent">By submitting, you agree to be contacted by HomeCashbacks. View our <a href="/privacy.html" target="_blank">Privacy Policy</a>.</p>
         <input type="hidden" id="f-source" name="source" value="buyer"/>

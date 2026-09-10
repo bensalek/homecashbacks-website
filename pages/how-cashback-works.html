@@ -17,6 +17,7 @@
 <link rel="stylesheet" href="/assets/fonts.css"/>
 <link rel="stylesheet" href="/assets/styles.css"/>
 <link rel="stylesheet" href="/assets/guide-article.css"/>
+<link rel="stylesheet" href="/assets/explainer-video.css"/>
 <style>
 /* ── HERO ── */
 .hiw-hero{background:var(--dark);padding:3rem 2rem 2.5rem;text-align:center}
@@ -118,6 +119,19 @@
 
 <div class="hiw-body">
 
+  <!-- Video -->
+  <div class="hiw-video-wrap">
+    <div class="hiw-step-label">Watch First</div>
+    <div class="hiw-video" id="hiw-video" onclick="playHiwVideo()">
+      <video id="hiw-video-el" playsinline preload="none" poster="/assets/homecashbacks-explainer-poster.jpg">
+        <source src="/assets/homecashbacks-explainer.mp4" type="video/mp4">
+      </video>
+      <div class="hiw-video-play">
+        <div class="hiw-video-play-btn" aria-label="Play video"></div>
+      </div>
+    </div>
+  </div>
+
   <!-- Step 1 -->
   <div class="hiw-step">
     <div class="hiw-step-label">Step 1</div>
@@ -144,13 +158,48 @@
     </div>
   </div>
 
+  <!-- Embedded calculator -->
+  <div class="calc-embed">
+    <div class="calc-card">
+      <div class="calc-card-eyebrow">Cashback calculator</div>
+      <div class="calc-card-title">See your cashback estimate</div>
+      <div class="calc-inputs-row" style="display:flex;align-items:flex-end;gap:.75rem;margin-bottom:1.25rem">
+        <div style="display:flex;flex-direction:column;gap:.35rem;width:190px">
+          <label class="calc-input-label" for="hiw-price-text">Home price</label>
+          <div class="calc-price-wrap">
+            <span class="calc-price-sym">$</span>
+            <input class="calc-price-input" type="text" id="hiw-price-text" aria-label="Home price" value="900,000" inputmode="numeric" autocomplete="off"/>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:.35rem;width:120px">
+          <label class="calc-input-label" for="hiw-commission-pct">Buyer commission</label>
+          <div class="calc-pct-wrap">
+            <input class="calc-pct-input" type="number" id="hiw-commission-pct" aria-label="Buyer commission percentage" value="2.5" min="1" max="5" step="0.25"/>
+            <span class="calc-pct-sym">%</span>
+          </div>
+        </div>
+      </div>
+      <div class="calc-slider-wrap">
+        <input type="range" id="hiw-price-slider" aria-label="Home price slider" class="calc-slider" min="300000" max="3000000" step="10000" value="900000"/>
+        <div class="calc-ticks">
+          <span>$300K</span><span>$750K</span><span>$1.2M</span><span>$1.65M</span><span>$2.1M</span><span>$3M</span>
+        </div>
+      </div>
+      <div class="calc-result">
+        <div class="calc-result-label">Your estimated cashback</div>
+        <div class="calc-result-amt" id="hiw-calc-cashback">$17,500</div>
+      </div>
+      <div class="calc-note">Estimates only. Amount depends on the seller's commission offer. For land transfer tax and closing cost estimates too, see our <a href="/calculators.html" style="color:var(--cta);text-decoration:none;font-weight:500">full calculator suite →</a></div>
+    </div>
+  </div>
+
   <div class="hiw-divider"></div>
 
   <!-- Step 2 -->
   <div class="hiw-step">
     <div class="hiw-step-label">Step 2</div>
     <div class="hiw-step-title">Start with a free showing. No paperwork.</div>
-    <p class="hiw-step-text">See a home before you commit to anything. The buyer representation agreement — which locks in your cashback amount in writing — is only signed when you are ready to make an offer, as legally required.</p>
+    <p class="hiw-step-text">See a home before you commit to anything. The buyer representation agreement — which locks in your cashback amount in writing — is only signed for that specific property when you are ready to make an offer, as legally required.</p>
     <div class="hiw-showing">
       <div class="hiw-showing-item">
         <div class="hiw-showing-val">Free</div>
@@ -239,6 +288,57 @@
 </div>
 
 <script>
+// Embedded cashback calculator
+(function(){
+  function fmt(n){ return '$'+Math.round(n).toLocaleString('en-CA'); }
+  function updateCalc(){
+    var raw = document.getElementById('hiw-price-text').value.replace(/,/g,'').replace(/[^0-9]/g,'');
+    var price = parseInt(raw) || 900000;
+    var pct = parseFloat(document.getElementById('hiw-commission-pct').value) || 2.5;
+    var commission = price * (pct/100);
+    var cashback = Math.max(0, commission - 4999);
+    document.getElementById('hiw-calc-cashback').textContent = fmt(cashback);
+  }
+  var slider = document.getElementById('hiw-price-slider');
+  var priceText = document.getElementById('hiw-price-text');
+  var commInput = document.getElementById('hiw-commission-pct');
+  if(!slider || !priceText || !commInput) return;
+  slider.addEventListener('input', function(){
+    priceText.value = Math.round(parseInt(this.value)).toLocaleString('en-CA');
+    updateCalc();
+  });
+  priceText.addEventListener('input', function(){
+    var raw = parseInt(this.value.replace(/,/g,'').replace(/[^0-9]/g,'')) || 0;
+    var clamped = Math.min(3000000, Math.max(300000, raw));
+    slider.value = clamped;
+    updateCalc();
+  });
+  priceText.addEventListener('blur', function(){
+    var raw = parseInt(this.value.replace(/,/g,'').replace(/[^0-9]/g,'')) || 900000;
+    var clamped = Math.min(3000000, Math.max(300000, raw));
+    this.value = Math.round(clamped).toLocaleString('en-CA');
+    slider.value = clamped;
+    updateCalc();
+  });
+  commInput.addEventListener('input', updateCalc);
+  commInput.addEventListener('change', updateCalc);
+  updateCalc();
+})();
+
+function playHiwVideo(){
+  var wrap = document.getElementById('hiw-video');
+  var vid = document.getElementById('hiw-video-el');
+  wrap.classList.add('playing');
+  vid.setAttribute('controls', 'controls');
+  vid.play();
+  if (typeof fireEvent === 'function') {
+    fireEvent('video_play', {
+      event_category: 'engagement',
+      video_name: 'how_it_works_explainer',
+      page_path: window.location.pathname
+    });
+  }
+}
 document.querySelectorAll('.faq-q').forEach(function(q){
   q.addEventListener('click',function(){
     this.parentElement.classList.toggle('open');
