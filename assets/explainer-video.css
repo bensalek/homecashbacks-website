@@ -1,5 +1,5 @@
 /* Explainer video card — homepage and how-cashback-works page */
-.explainer-section{padding:1rem 2rem 0}
+.explainer-section{padding:1rem 2rem 3rem}
 .explainer-card{max-width:480px;margin:0 auto;text-align:center}
 .explainer-video{position:relative;border-radius:8px;overflow:hidden;background:#000;cursor:pointer;margin-top:.75rem}
 .explainer-video video{width:100%;display:block;border-radius:8px}

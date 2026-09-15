@@ -327,6 +327,7 @@
 
 function playHiwVideo(){
   var wrap = document.getElementById('hiw-video');
+  if (wrap.classList.contains('playing')) return;
   var vid = document.getElementById('hiw-video-el');
   wrap.classList.add('playing');
   vid.setAttribute('controls', 'controls');

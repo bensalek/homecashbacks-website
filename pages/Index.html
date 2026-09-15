@@ -796,6 +796,7 @@ function emailMyCashback(){
 <script>
 function playHomeVideo(){
   var wrap = document.getElementById('home-video');
+  if (wrap.classList.contains('playing')) return;
   var vid = document.getElementById('home-video-el');
   wrap.classList.add('playing');
   vid.setAttribute('controls', 'controls');
