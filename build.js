@@ -1,23 +1,24 @@
 // HomeCashbacks Build Script
 // node build.js — Netlify runs this on every push
-const fs   = require('fs');
+const fs = require('fs');
 const path = require('path');
 const CleanCSS = require('clean-css');
 
 const COMPONENTS_DIR = './components';
-const PAGES_DIR      = './pages';
-const ASSETS_DIR     = './assets';
-const DIST_DIR       = './dist';
+const PAGES_DIR = './pages';
+const ASSETS_DIR = './assets';
+const DIST_DIR = './dist';
 
 // Read shared components
-const head     = fs.readFileSync(path.join(COMPONENTS_DIR, 'head.html'),   'utf8');
-const nav      = fs.readFileSync(path.join(COMPONENTS_DIR, 'nav.html'),    'utf8');
-const modal    = fs.readFileSync(path.join(COMPONENTS_DIR, 'modal.html'),  'utf8');
-const footer   = fs.readFileSync(path.join(COMPONENTS_DIR, 'footer.html'), 'utf8');
-const sharedJs = fs.readFileSync(path.join(ASSETS_DIR,     'shared.js'),   'utf8');
+const head = fs.readFileSync(path.join(COMPONENTS_DIR, 'head.html'), 'utf8');
+const nav = fs.readFileSync(path.join(COMPONENTS_DIR, 'nav.html'), 'utf8');
+const modal = fs.readFileSync(path.join(COMPONENTS_DIR, 'modal.html'), 'utf8');
+const footer = fs.readFileSync(path.join(COMPONENTS_DIR, 'footer.html'), 'utf8');
+const sharedJs = fs.readFileSync(path.join(ASSETS_DIR, 'shared.js'), 'utf8');
 
 // Netlify form detection — off-screen, never visible
-const NETLIFY_FORM = '<div aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden"><form name="contact" data-netlify="true" netlify-honeypot="bot-field"><input type="text" name="name" tabindex="-1"/><input type="text" name="email" tabindex="-1"/><input type="tel" name="phone" tabindex="-1"/><input type="hidden" name="source" tabindex="-1"/><textarea name="note" tabindex="-1"></textarea></form></div>';
+// Field names must match components/modal.html, or Netlify drops those values.
+const NETLIFY_FORM = '<div aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden"><form name="contact" data-netlify="true" netlify-honeypot="bot-field"><input type="text" name="firstname" tabindex="-1"/><input type="text" name="lastname" tabindex="-1"/><input type="text" name="email" tabindex="-1"/><input type="tel" name="phone" tabindex="-1"/><input type="hidden" name="source" tabindex="-1"/><textarea name="note" tabindex="-1"></textarea><input type="checkbox" name="marketing_updates" value="yes" tabindex="-1"/></form></div>';
 
 // Prepare /dist
 if (fs.existsSync(DIST_DIR)) fs.rmSync(DIST_DIR, { recursive: true });
@@ -99,7 +100,7 @@ pages.forEach(function(filename) {
 
   // ── Extract head content ────────────────────────────────────────────────
   var headMatch = page.match(/<head[^>]*>([\s\S]*?)<\/head>/i);
-  var fullHead  = headMatch ? headMatch[1] : '';
+  var fullHead = headMatch ? headMatch[1] : '';
 
   // Page-specific styles (keep as-is)
   var pageStyles = (fullHead.match(/<style[^>]*>[\s\S]*?<\/style>/gi) || []).join('\n');
@@ -125,7 +126,7 @@ pages.forEach(function(filename) {
 
   // ── Extract body content ────────────────────────────────────────────────
   var bodyMatch = page.match(/<body[^>]*>([\s\S]*?)<\/body>/i);
-  var rawBody   = bodyMatch ? bodyMatch[1] : '';
+  var rawBody = bodyMatch ? bodyMatch[1] : '';
 
   // Remove any leftover shared structural elements (safety net)
   var bodyClean = rawBody
@@ -151,17 +152,17 @@ pages.forEach(function(filename) {
     '<head>\n' +
     '<meta charset="UTF-8"/>\n' +
     '<meta name="viewport" content="width=device-width,initial-scale=1.0"/>\n' +
-    pageMeta  + '\n' +
-    head      + '\n' +
+    pageMeta + '\n' +
+    head + '\n' +
     pageCssLinks + '\n' +
-    pageStyles+ '\n' +
+    pageStyles + '\n' +
     '</head>\n' +
     '<body>\n' +
     NETLIFY_FORM + '\n' +
-    modal    + '\n\n' +
-    nav      + '\n\n' +
-    bodyClean+ '\n\n' +
-    footer   + '\n\n' +
+    modal + '\n\n' +
+    nav + '\n\n' +
+    bodyClean + '\n\n' +
+    footer + '\n\n' +
     pageScripts + '\n' +
     '<script>\n' + sharedJs + '\n</script>\n' +
     '</body>\n' +
@@ -170,8 +171,8 @@ pages.forEach(function(filename) {
   // Seller page overrides — replace shared component text in built HTML
   if (filename === 'toronto-listing-agent.html') {
     assembled = assembled
-      .replace(/(<button class="foot-cta-btn"[^>]*>)[^<]*/,  '$1Get My Home Value')
-      .replace(/(<span class="foot-cta-sub">)[^<]*/,         '$1No upfront fees. Due at closing only.')
+      .replace(/(<button class="foot-cta-btn"[^>]*>)[^<]*/, '$1Get My Home Value')
+      .replace(/(<span class="foot-cta-sub">)[^<]*/, '$1No upfront fees. Due at closing only.')
       .replace(/(<div class="modal-tag" id="modal-tag">)[^<]*/, '$1Get My Home Value')
       .replace(/(<div class="modal-title" id="modal-title">)[^<]*/, '$1Tell us about your home')
       .replace(/(<div class="modal-sub">)[^<]*/, '$1We will walk through your home, review the market, and give you an honest price estimate. No commitment required.')
@@ -188,14 +189,14 @@ console.log('\n✓ Build complete — ' + pages.length + ' pages assembled into 
 // ── CITY PAGE GENERATOR ────────────────────────────────────────────────────
 (function generateCityPages() {
   var citiesData = JSON.parse(fs.readFileSync('./data/cities.json', 'utf8'));
-  var template   = fs.readFileSync('./templates/city-template.html', 'utf8');
+  var template = fs.readFileSync('./templates/city-template.html', 'utf8');
 
   // Also inject shared components (same as regular pages)
   function assembleCityPage(html, city) {
-    var headMatch  = html.match(/<head[^>]*>([\s\S]*?)<\/head>/i);
-    var fullHead   = headMatch ? headMatch[1] : '';
+    var headMatch = html.match(/<head[^>]*>([\s\S]*?)<\/head>/i);
+    var fullHead = headMatch ? headMatch[1] : '';
     var pageStyles = (fullHead.match(/<style[^>]*>[\s\S]*?<\/style>/gi) || []).join('\n');
-    var pageMeta   = fullHead
+    var pageMeta = fullHead
       .replace(/<style[^>]*>[\s\S]*?<\/style>/gi, '')
       .replace(/<meta charset[^>]*>/gi, '')
       .replace(/<meta name="viewport"[^>]*>/gi, '')
@@ -203,7 +204,7 @@ console.log('\n✓ Build complete — ' + pages.length + ' pages assembled into 
       .trim();
 
     var bodyMatch = html.match(/<body[^>]*>([\s\S]*?)<\/body>/i);
-    var rawBody   = bodyMatch ? bodyMatch[1] : '';
+    var rawBody = bodyMatch ? bodyMatch[1] : '';
     var pageScripts = (rawBody.match(/<script(?![^>]*src)[^>]*>[\s\S]*?<\/script>/gi) || []).join('\n');
     var bodyClean = rawBody.replace(/<script[^>]*>[\s\S]*?<\/script>/gi, '').trim();
 
@@ -222,20 +223,20 @@ console.log('\n✓ Build complete — ' + pages.length + ' pages assembled into 
     // Basic tokens
     html = html.replace(/{{PAGE_TITLE}}/g,
       city.pageTitle || ('Cashback Realtor ' + city.name + ' | Flat $4,999 Fee | Home Cashbacks'));
-    html = html.replace(/{{META_DESC}}/g,   city.metaDesc);
-    html = html.replace(/{{NAME}}/g,        city.name);
-    html = html.replace(/{{SLUG}}/g,        city.slug);
-    html = html.replace(/{{CASHBACK}}/g,    city.cashback);
-    html = html.replace(/{{HERO_SUB}}/g,    city.heroSub);
+    html = html.replace(/{{META_DESC}}/g, city.metaDesc);
+    html = html.replace(/{{NAME}}/g, city.name);
+    html = html.replace(/{{SLUG}}/g, city.slug);
+    html = html.replace(/{{CASHBACK}}/g, city.cashback);
+    html = html.replace(/{{HERO_SUB}}/g, city.heroSub);
     html = html.replace(/{{MARKET_DATE}}/g, city.marketDate);
-    html = html.replace(/{{MARKET_TITLE}}/g,city.marketTitle);
+    html = html.replace(/{{MARKET_TITLE}}/g, city.marketTitle);
     html = html.replace(/{{MARKET_TEXT}}/g, city.marketText);
     html = html.replace(/{{LALEH_QUOTE}}/g, city.laleh);
     html = html.replace(/{{SOURCE_SLUG}}/g, city.sourceSlug);
-    html = html.replace(/{{CALC_DEFAULT}}/g,city.calcDefault);
-    html = html.replace(/{{GEO_LAT}}/g,     city.geo.lat);
-    html = html.replace(/{{GEO_LNG}}/g,     city.geo.lng);
-    html = html.replace(/{{DATA_DATE_ISO}}/g,'2026-06-09');
+    html = html.replace(/{{CALC_DEFAULT}}/g, city.calcDefault);
+    html = html.replace(/{{GEO_LAT}}/g, city.geo.lat);
+    html = html.replace(/{{GEO_LNG}}/g, city.geo.lng);
+    html = html.replace(/{{DATA_DATE_ISO}}/g, '2026-06-09');
 
     // Formatted calc default
     html = html.replace(/{{CALC_DEFAULT_FMT}}/g,
@@ -276,11 +277,11 @@ console.log('\n✓ Build complete — ' + pages.length + ' pages assembled into 
         tagClose;
     }
     var visibleHoods = city.hoods.slice(0, 6);
-    var hiddenHoods  = city.hoods.slice(6);
+    var hiddenHoods = city.hoods.slice(6);
     var visibleCards = visibleHoods.map(renderHoodCard).join('\n');
-    var hiddenCount  = hiddenHoods.length;
-    var hiddenCards  = hiddenHoods.map(renderHoodCard).join('\n');
-    var showMoreBtn  = hiddenCount > 0
+    var hiddenCount = hiddenHoods.length;
+    var hiddenCards = hiddenHoods.map(renderHoodCard).join('\n');
+    var showMoreBtn = hiddenCount > 0
       ? '<div class="hood-show-more-wrap">' +
           '<button class="hood-show-more-btn" onclick="toggleHoods(this)">' +
             'Show more neighbourhoods <span class="hood-arrow">↓</span>' +
@@ -319,7 +320,7 @@ console.log('\n✓ Build complete — ' + pages.length + ' pages assembled into 
 
     // Assemble with shared components and write to dist
     var assembled = assembleCityPage(html, city);
-    var filename  = city.slug + '-cashback-realtor.html';
+    var filename = city.slug + '-cashback-realtor.html';
     fs.writeFileSync(path.join(DIST_DIR, filename), assembled, 'utf8');
     console.log('  generated city: ' + filename);
   });
@@ -329,23 +330,23 @@ console.log('\n✓ Build complete — ' + pages.length + ' pages assembled into 
 
 // ── NEIGHBOURHOOD PAGE GENERATOR ───────────────────────────────────────────
 (function generateNeighbourhoodPages() {
-  var data     = JSON.parse(fs.readFileSync('./data/neighbourhoods.json', 'utf8'));
+  var data = JSON.parse(fs.readFileSync('./data/neighbourhoods.json', 'utf8'));
   var template = fs.readFileSync('./templates/neighbourhood-template.html', 'utf8');
 
   function assemblePage(html) {
-    var headMatch  = html.match(/<head[^>]*>([\s\S]*?)<\/head>/i);
-    var fullHead   = headMatch ? headMatch[1] : '';
+    var headMatch = html.match(/<head[^>]*>([\s\S]*?)<\/head>/i);
+    var fullHead = headMatch ? headMatch[1] : '';
     var pageStyles = (fullHead.match(/<style[^>]*>[\s\S]*?<\/style>/gi) || []).join('\n');
-    var pageMeta   = fullHead
+    var pageMeta = fullHead
       .replace(/<style[^>]*>[\s\S]*?<\/style>/gi, '')
       .replace(/<meta charset[^>]*>/gi, '')
       .replace(/<meta name="viewport"[^>]*>/gi, '')
       .replace(/<link rel="icon"[^>]*>/gi, '')
       .trim();
-    var bodyMatch   = html.match(/<body[^>]*>([\s\S]*?)<\/body>/i);
-    var rawBody     = bodyMatch ? bodyMatch[1] : '';
+    var bodyMatch = html.match(/<body[^>]*>([\s\S]*?)<\/body>/i);
+    var rawBody = bodyMatch ? bodyMatch[1] : '';
     var pageScripts = (rawBody.match(/<script(?![^>]*src)[^>]*>[\s\S]*?<\/script>/gi) || []).join('\n');
-    var bodyClean   = rawBody.replace(/<script[^>]*>[\s\S]*?<\/script>/gi, '').trim();
+    var bodyClean = rawBody.replace(/<script[^>]*>[\s\S]*?<\/script>/gi, '').trim();
 
     return '<!DOCTYPE html>\n<html lang="en">\n<head>\n' +
       '<meta charset="UTF-8"/>\n<meta name="viewport" content="width=device-width,initial-scale=1.0"/>\n' +
@@ -360,20 +361,20 @@ console.log('\n✓ Build complete — ' + pages.length + ' pages assembled into 
     var html = template;
 
     // Basic tokens
-    html = html.replace(/{{META_DESC}}/g,    nbr.metaDesc || '');
-    html = html.replace(/{{NAME}}/g,        nbr.name);
-    html = html.replace(/{{SLUG}}/g,        nbr.slug);
-    html = html.replace(/{{CITY_NAME}}/g,   nbr.cityName);
-    html = html.replace(/{{CITY_SLUG}}/g,   nbr.citySlug);
-    html = html.replace(/{{HERO_SUB}}/g,    nbr.heroSub);
-    html = html.replace(/{{OVERVIEW}}/g,    nbr.overview);
-    html = html.replace(/{{WALK_SCORE}}/g,  nbr.walkScore);
+    html = html.replace(/{{META_DESC}}/g, nbr.metaDesc || '');
+    html = html.replace(/{{NAME}}/g, nbr.name);
+    html = html.replace(/{{SLUG}}/g, nbr.slug);
+    html = html.replace(/{{CITY_NAME}}/g, nbr.cityName);
+    html = html.replace(/{{CITY_SLUG}}/g, nbr.citySlug);
+    html = html.replace(/{{HERO_SUB}}/g, nbr.heroSub);
+    html = html.replace(/{{OVERVIEW}}/g, nbr.overview);
+    html = html.replace(/{{WALK_SCORE}}/g, nbr.walkScore);
     html = html.replace(/{{TRANSIT_SCORE}}/g, nbr.transitScore);
-    html = html.replace(/{{COMMUTE_TIME}}/g,nbr.commuteTime);
+    html = html.replace(/{{COMMUTE_TIME}}/g, nbr.commuteTime);
     html = html.replace(/{{CONDOS_FROM}}/g, nbr.condosFrom);
     html = html.replace(/{{MARKET_DATE}}/g, nbr.marketDate);
-    html = html.replace(/{{LALEH}}/g,       nbr.laleh);
-    html = html.replace(/{{DATA_DATE_ISO}}/g,'2026-06-09');
+    html = html.replace(/{{LALEH}}/g, nbr.laleh);
+    html = html.replace(/{{DATA_DATE_ISO}}/g, '2026-06-09');
     html = html.replace(/{{CALC_DEFAULT}}/g, nbr.calcDefault);
     html = html.replace(/{{CALC_DEFAULT_FMT}}/g,
       Math.round(nbr.calcDefault).toLocaleString('en-CA'));
@@ -443,7 +444,7 @@ console.log('\n✓ Build complete — ' + pages.length + ' pages assembled into 
     html = html.replace('{{RELATED_CARDS}}', relatedCards);
 
     var assembled = assemblePage(html);
-    var filename  = nbr.slug + '.html';
+    var filename = nbr.slug + '.html';
     fs.writeFileSync(path.join(DIST_DIR, filename), assembled, 'utf8');
     console.log('  generated neighbourhood: ' + filename);
   });

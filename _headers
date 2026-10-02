@@ -1,9 +1,17 @@
-# CSS and JS — short cache so updates show immediately
+# HTML pages — always check for the latest version (Netlify answers with a
+# fast "not modified" when nothing changed, so pages stay quick)
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/
+  Cache-Control: public, max-age=0, must-revalidate
+
+# CSS and JS — same, so design and script updates show right after a deploy
 /assets/*.css
-  Cache-Control: public, max-age=3600, must-revalidate
+  Cache-Control: public, max-age=0, must-revalidate
 
 /assets/*.js
-  Cache-Control: public, max-age=3600, must-revalidate
+  Cache-Control: public, max-age=0, must-revalidate
 
 # Images and fonts — longer cache is fine (they don't change often)
 /assets/fonts/*
@@ -20,10 +28,3 @@
 
 /assets/*.ico
   Cache-Control: public, max-age=2592000
-
-# HTML pages — short cache
-/*.html
-  Cache-Control: public, max-age=3600, must-revalidate
-
-/
-  Cache-Control: public, max-age=3600, must-revalidate

@@ -23,7 +23,7 @@ function closeModal() {
   document.body.style.overflow = '';
 }
 document.addEventListener('DOMContentLoaded', function () {
-  // ── Phone click tracking (all tel: links) ────────────────────────────────
+  // ── Phone click tracking (all tel: links) ──
   document.querySelectorAll('a[href^="tel:"]').forEach(function (el) {
     el.addEventListener('click', function () {
       fireEvent('close_convert_lead', {
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // ── WhatsApp click tracking (all wa.me links) ────────────────────────────
+  // ── WhatsApp click tracking (all wa.me links) ──
   document.querySelectorAll('a[href*="wa.me"]').forEach(function (el) {
     el.addEventListener('click', function () {
       fireEvent('close_convert_lead', {
@@ -49,7 +49,7 @@ document.addEventListener('keydown', function (e) {
   if (e.key === 'Escape') closeModal();
 });
 
-// ── Nav ──────────────────────────────────────────────────────────────────────
+// ── Nav ─────────────────────────────────────────────────────────────────────
 function toggleMobMenu() {
   document.getElementById('nav-links').classList.toggle('open');
   document.getElementById('hamburger').classList.toggle('open');
@@ -59,30 +59,118 @@ function closeMobMenu() {
   document.getElementById('hamburger').classList.remove('open');
 }
 
-// ── Validation helpers ───────────────────────────────────────────────────────
+// ── Validation helpers ──────────────────────────────────────────────────────
 function isValidEmail(v) { return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v); }
 function isValidPhone(v) { return v.replace(/\D/g, '').length >= 10; }
 
-// ── Form submission ──────────────────────────────────────────────────────────
-function handleFormSubmit(formName) {
+// ── HubSpot ─────────────────────────────────────────────────────────────────
+// Sends each booking-form lead to the "Contact Us" form in HubSpot, alongside
+// Netlify Forms. The consent text below must match the wording in the HubSpot
+// form and in components/modal.html, since HubSpot stores it as the record of
+// what the person agreed to.
+var HC_HUBSPOT = {
+  portalId: '343715542',
+  formId: '236d40c0-aa1b-4819-86d7-398fc51cd30d',
+  marketingSubscriptionId: 3708911144,
+  // Custom contact property (hidden field on the HubSpot form) that records
+  // which page and form button the lead came from, e.g. "buyer-our-story | /our-story.html"
+  leadSourceProperty: 'lead_source',
+  // Custom single-checkbox contact property (hidden field on the HubSpot form)
+  // set to true/false from the market updates checkbox, for easy filtering.
+  optinProperty: 'market_updates_optin',
+  processText: 'By submitting, you agree to be contacted by Home Cashbacks about your inquiry.',
+  optinText: 'Yes, email me occasional GTA market updates and home buying tips from Home Cashbacks. You can unsubscribe at any time.'
+};
+
+function sendToHubSpot(lead) {
+  try {
+    var fields = [
+      { objectTypeId: '0-1', name: 'firstname', value: lead.firstname },
+      { objectTypeId: '0-1', name: 'lastname', value: lead.lastname },
+      { objectTypeId: '0-1', name: 'email', value: lead.email },
+      { objectTypeId: '0-1', name: 'phone', value: lead.phone }
+    ];
+    if (lead.note) fields.push({ objectTypeId: '0-1', name: 'message', value: lead.note });
+    if (lead.source) fields.push({ objectTypeId: '0-1', name: HC_HUBSPOT.leadSourceProperty, value: lead.source });
+    if (!lead.basicOnly) fields.push({ objectTypeId: '0-1', name: HC_HUBSPOT.optinProperty, value: lead.optin ? 'true' : 'false' });
+
+    // hubspotutk is the HubSpot tracking cookie; passing it links the visitor's
+    // earlier page views to the new contact.
+    var context = { pageUri: window.location.href, pageName: document.title };
+    var cookie = document.cookie.match(/(?:^|;\s*)hubspotutk=([^;]+)/);
+    if (cookie) context.hutk = cookie[1];
+
+    var body = {
+      submittedAt: String(Date.now()),
+      fields: fields,
+      context: context,
+      legalConsentOptions: {
+        consent: {
+          consentToProcess: true,
+          text: HC_HUBSPOT.processText,
+          communications: [{
+            value: !!lead.optin,
+            subscriptionTypeId: HC_HUBSPOT.marketingSubscriptionId,
+            text: HC_HUBSPOT.optinText
+          }]
+        }
+      }
+    };
+
+    var url = 'https://api.hsforms.com/submissions/v3/integration/submit/' +
+      HC_HUBSPOT.portalId + '/' + HC_HUBSPOT.formId;
+
+    return fetch(url, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(body),
+      keepalive: true
+    }).then(function (res) {
+      if (!res.ok) {
+        return res.text().then(function (t) {
+          console.warn('HubSpot submission failed:', res.status, t);
+          // If a custom property (lead source or opt-in) is missing or rejected,
+          // retry once without the custom fields so the contact is still created.
+          if (!lead.basicOnly) {
+            var retry = Object.assign({}, lead, { source: '', basicOnly: true });
+            return sendToHubSpot(retry);
+          }
+        });
+      }
+    }).catch(function (err) {
+      console.warn('HubSpot submission error:', err);
+    });
+  } catch (err) {
+    console.warn('HubSpot submission error:', err);
+    return Promise.resolve();
+  }
+}
+
+// ── Form submission ─────────────────────────────────────────────────────────
+function hcHandleFormSubmit(formName) {
   var form = document.getElementById('form-showing');
   if (!form) return;
-  var nameEl = document.getElementById('f-name');
+  var firstEl = document.getElementById('f-name');
+  var lastEl = document.getElementById('f-lastname');
   var emailEl = document.getElementById('f-email');
   var phoneEl = document.getElementById('f-phone');
+  var noteEl = document.getElementById('f-note');
+  var optinEl = document.getElementById('f-optin');
   var errNameEl = document.getElementById('err-name');
   var errContactEl = document.getElementById('err-contact');
-  var name = nameEl ? nameEl.value.trim() : '';
+  var firstname = firstEl ? firstEl.value.trim() : '';
+  var lastname = lastEl ? lastEl.value.trim() : '';
   var email = emailEl ? emailEl.value.trim() : '';
   var phone = phoneEl ? phoneEl.value.trim() : '';
   var ok = true;
 
   document.querySelectorAll('.f-error').forEach(function (el) { el.classList.remove('show'); el.textContent = ''; });
-  document.querySelectorAll('.f-input').forEach(function (el) { el.classList.remove('err'); });
+  document.querySelectorAll('.f-input').forEach(function (el) { el.classList.remove('err'); el.style.borderColor = ''; });
 
-  if (!name) {
-    if (errNameEl) { errNameEl.textContent = 'Please enter your name.'; errNameEl.classList.add('show'); }
-    if (nameEl) nameEl.classList.add('err');
+  if (!firstname || !lastname) {
+    if (errNameEl) { errNameEl.textContent = 'Please enter your first and last name.'; errNameEl.classList.add('show'); }
+    if (firstEl && !firstname) firstEl.classList.add('err');
+    if (lastEl && !lastname) lastEl.classList.add('err');
     ok = false;
   }
   if (!email || !phone) {
@@ -107,27 +195,46 @@ function handleFormSubmit(formName) {
   var leadSource = sourceEl ? sourceEl.value : 'buyer';
   var leadPage = window.location.pathname;
 
+  // HubSpot runs in parallel with Netlify; a HubSpot failure never blocks the lead.
+  sendToHubSpot({
+    firstname: firstname,
+    lastname: lastname,
+    email: email,
+    phone: phone,
+    note: noteEl ? noteEl.value.trim() : '',
+    optin: optinEl ? optinEl.checked : false,
+    source: leadSource + ' | ' + leadPage
+  });
+
+  function showSuccess() {
+    document.getElementById('modal-form-wrap').style.display = 'none';
+    document.getElementById('form-success').style.display = 'block';
+    fireEvent('qualify_lead', {
+      event_category: 'lead',
+      event_label: leadSource,
+      page_path: leadPage
+    });
+  }
+
   var fd = new FormData(form);
   fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams(fd).toString() })
-    .then(function () {
-      document.getElementById('modal-form-wrap').style.display = 'none';
-      document.getElementById('form-success').style.display = 'block';
-      fireEvent('qualify_lead', {
-        event_category: 'lead',
-        event_label: leadSource,
-        page_path: leadPage
-      });
-    })
-    .catch(function () {
-      document.getElementById('modal-form-wrap').style.display = 'none';
-      document.getElementById('form-success').style.display = 'block';
-      fireEvent('qualify_lead', {
-        event_category: 'lead',
-        event_label: leadSource,
-        page_path: leadPage
-      });
-    });
+    .then(showSuccess)
+    .catch(showSuccess);
 }
+
+// Some pages (homepage, our-story) still define their own older
+// handleFormSubmit inline. Point the global back to this version once the
+// page has loaded, so every page sends leads the same way.
+function handleFormSubmit(formName) { return hcHandleFormSubmit(formName); }
+(function () {
+  function useSharedSubmit() { window.handleFormSubmit = hcHandleFormSubmit; }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', useSharedSubmit);
+  } else {
+    useSharedSubmit();
+  }
+  window.addEventListener('load', useSharedSubmit);
+})();
 
 // ── Visible breadcrumb trail, built from each page's own BreadcrumbList schema ──
 (function () {
@@ -176,7 +283,7 @@ function handleFormSubmit(formName) {
   }
 })();
 
-// ── Dynamic city placeholder for the note field on city pages ─────────────
+// ── Dynamic city placeholder for the note field on city pages ───────────────
 (function () {
   function setCityPlaceholder() {
     var noteField = document.getElementById('f-note');
@@ -196,7 +303,7 @@ function handleFormSubmit(formName) {
   }
 })();
 
-// ── FAQ expansion tracking (site-wide, works on any page with .faq-q) ─────
+// ── FAQ expansion tracking (site-wide, works on any page with .faq-q) ───────
 // Uses event delegation so it doesn't require editing individual pages,
 // and doesn't interfere with each page's own existing toggle-open logic.
 document.addEventListener('click', function (e) {
@@ -211,7 +318,7 @@ document.addEventListener('click', function (e) {
   });
 });
 
-// ── Calculator engagement tracking (any slider on any calculator variant) ─
+// ── Calculator engagement tracking (any slider on any calculator variant) ───
 // Fires once per page load on first interaction, not on every slider tick,
 // so it signals genuine engagement rather than flooding GA4 with noise.
 (function () {
