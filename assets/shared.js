@@ -5,6 +5,37 @@ function fireEvent(name, params) {
   if (typeof gtag === 'function') gtag('event', name, params);
 }
 
+// ── CTA A/B test ────────────────────────────────────────────────────────────
+// Buttons with data-ab-cta="<test-name>" and data-ab-text-b="<variant B copy>"
+// are split 50/50 per visitor (remembered in localStorage). The variant is sent
+// to GA4 as ab_variant on ab_exposure, modal_open and qualify_lead, so the test
+// can be read in GA4 by comparing variant A vs B on qualify_lead.
+var hcAbVariant = null;
+(function () {
+  function init() {
+    var els = document.querySelectorAll('[data-ab-cta]');
+    if (!els.length) return;
+    var test = els[0].getAttribute('data-ab-cta');
+    var key = 'hc_ab_' + test;
+    var v = null;
+    try { v = localStorage.getItem(key); } catch (e) {}
+    if (v !== 'A' && v !== 'B') {
+      v = Math.random() < 0.5 ? 'A' : 'B';
+      try { localStorage.setItem(key, v); } catch (e) {}
+    }
+    hcAbVariant = test + ':' + v;
+    if (v === 'B') {
+      els.forEach(function (el) {
+        var t = el.getAttribute('data-ab-text-b');
+        if (t) el.textContent = t;
+      });
+    }
+    fireEvent('ab_exposure', { event_category: 'experiment', ab_variant: hcAbVariant, page_path: window.location.pathname });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+  else init();
+})();
+
 // ── Modal ───────────────────────────────────────────────────────────────────
 function openModal() {
   document.getElementById('modal').classList.add('open');
@@ -14,6 +45,7 @@ function openModal() {
   fireEvent('modal_open', {
     event_category: 'engagement',
     event_label: src,
+    ab_variant: hcAbVariant || undefined,
     page_path: window.location.pathname
   });
   // Note: modal_open is engagement only, not a key event
@@ -212,6 +244,7 @@ function hcHandleFormSubmit(formName) {
     fireEvent('qualify_lead', {
       event_category: 'lead',
       event_label: leadSource,
+      ab_variant: hcAbVariant || undefined,
       page_path: leadPage
     });
   }

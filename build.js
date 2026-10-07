@@ -228,6 +228,37 @@ console.log('\n✓ Build complete — ' + pages.length + ' pages assembled into 
     html = html.replace(/{{SLUG}}/g, city.slug);
     html = html.replace(/{{CASHBACK}}/g, city.cashback);
     html = html.replace(/{{HERO_SUB}}/g, city.heroSub);
+
+    // H1: optional per-city override (e.g. Toronto targets "Cash back realtor Toronto")
+    var h1Html = city.h1
+      ? city.h1 + (city.h1Tagline ? '<br>' + city.h1Tagline : '')
+      : 'Buy in ' + city.name + '.<br><em>Keep the commission.</em>';
+    html = html.replace('{{H1_HTML}}', h1Html);
+
+    // Local facts block (optional): neighbourhood examples + recent comps
+    var localHtml = '';
+    if (city.localFacts) {
+      var lf = city.localFacts;
+      var rows = (lf.examples || []).map(function(e) {
+        var area = e.link ? '<a href="' + e.link + '">' + e.area + '</a>' : e.area;
+        return '<tr><td>' + area + '</td><td>' + e.price + '</td><td>' + e.cashback + '</td></tr>';
+      }).join('');
+      var compsHtml = lf.comps
+        ? '<p class="miss-body"><strong>Recent deals:</strong> ' + lf.comps + '</p>'
+        : '';
+      localHtml =
+        '<section class="miss-section" style="background:var(--bg)" id="local-facts">' +
+        '<div class="miss-inner">' +
+        '<div class="miss-eyebrow-sm">' + city.name + ' examples</div>' +
+        '<h2 class="miss-h2">' + lf.title + '</h2>' +
+        '<p class="miss-body">' + lf.intro + '</p>' +
+        '<div style="overflow-x:auto"><table class="local-facts-table" style="width:100%;border-collapse:collapse;font-size:14px;margin:1rem 0">' +
+        '<thead><tr><th style="text-align:left;padding:8px;border-bottom:2px solid var(--border)">Area</th><th style="text-align:left;padding:8px;border-bottom:2px solid var(--border)">Typical price</th><th style="text-align:left;padding:8px;border-bottom:2px solid var(--border)">Cash back</th></tr></thead>' +
+        '<tbody>' + rows + '</tbody></table></div>' +
+        compsHtml +
+        '</div></section>';
+    }
+    html = html.replace('{{LOCAL_FACTS}}', localHtml);
     html = html.replace(/{{MARKET_DATE}}/g, city.marketDate);
     html = html.replace(/{{MARKET_TITLE}}/g, city.marketTitle);
     html = html.replace(/{{MARKET_TEXT}}/g, city.marketText);
