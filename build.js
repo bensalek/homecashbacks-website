@@ -252,8 +252,8 @@ console.log('\n✓ Build complete — ' + pages.length + ' pages assembled into 
         '<div class="miss-eyebrow-sm">' + city.name + ' examples</div>' +
         '<h2 class="miss-h2">' + lf.title + '</h2>' +
         '<p class="miss-body">' + lf.intro + '</p>' +
-        '<div style="overflow-x:auto"><table class="local-facts-table" style="width:100%;border-collapse:collapse;font-size:14px;margin:1rem 0">' +
-        '<thead><tr><th style="text-align:left;padding:8px;border-bottom:2px solid var(--border)">Area</th><th style="text-align:left;padding:8px;border-bottom:2px solid var(--border)">Typical price</th><th style="text-align:left;padding:8px;border-bottom:2px solid var(--border)">Cash back</th></tr></thead>' +
+        '<div style="overflow-x:auto"><table class="local-facts-table">' +
+        '<thead><tr><th>Area</th><th>Typical price</th><th>Cash back</th></tr></thead>' +
         '<tbody>' + rows + '</tbody></table></div>' +
         compsHtml +
         '</div></section>';
