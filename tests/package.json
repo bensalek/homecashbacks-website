@@ -1,0 +1,7 @@
+{
+  "name": "homecashbacks-tests",
+  "private": true,
+  "description": "Browser tests. Kept out of the root package.json so Netlify never installs them.",
+  "scripts": { "test": "node run.js" },
+  "devDependencies": { "playwright": "^1.56.1" }
+}

@@ -1,0 +1,4 @@
+{
+  "_note": "Problems that already existed on the live site. Fix them, then delete the entry so the test guards against them coming back.",
+  "allowedFailedRequests": ["closing-costs-ontario-2026.html:/favicon.svg"]
+}

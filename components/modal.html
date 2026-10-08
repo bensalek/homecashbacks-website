@@ -1,7 +1,7 @@
 <!-- MODAL -->
 <div class="modal-overlay" id="modal">
-  <div class="modal">
-    <button class="modal-close" onclick="closeModal()">✕</button>
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-sub" tabindex="-1">
+    <button type="button" class="modal-close" onclick="closeModal()" aria-label="Close dialog"><span aria-hidden="true">✕</span></button>
     <div id="modal-form-wrap">
       <div class="modal-tag" id="modal-tag"></div>
       <div class="modal-title" id="modal-title">Let's get started</div>
@@ -19,7 +19,7 @@
             <input class="f-input" type="text" id="f-lastname" name="lastname" autocomplete="family-name" maxlength="60"/>
           </div>
         </div>
-        <div class="f-error" id="err-name"></div>
+        <div class="f-error" id="err-name" role="alert"></div>
         <div class="f-field">
           <label class="f-label" for="f-email">Email address <span style="color:var(--red)">*</span></label>
           <input class="f-input" type="text" id="f-email" name="email" inputmode="email" autocomplete="email" maxlength="100"/>
@@ -27,7 +27,7 @@
         <div class="f-field">
           <label class="f-label" for="f-phone">Phone number <span style="color:var(--red)">*</span></label>
           <input class="f-input" type="tel" id="f-phone" name="phone" inputmode="tel" autocomplete="tel"/>
-          <div class="f-error" id="err-contact"></div>
+          <div class="f-error" id="err-contact" role="alert"></div>
         </div>
         <div class="f-field">
           <label class="f-label" for="f-note">Tell us what you're looking for <span style="color:var(--muted);font-size:11px">(optional)</span></label>
@@ -42,7 +42,7 @@
         <button type="button" id="f-submit" class="f-submit" onclick="handleFormSubmit('contact')">Claim My Free Consultation</button>
       </form>
     </div>
-    <div class="f-success" id="form-success">
+    <div class="f-success" id="form-success" role="status" aria-live="polite">
       <div class="f-success-icon">✓</div>
       <h3>We'll be in touch!</h3>
       <p>Expect a call or email from us within a few hours.</p>
