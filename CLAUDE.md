@@ -31,6 +31,7 @@ Cashback buyer-agent business in the GTA. Owner/website: **Ben**. Realtor: **Lal
 - Run from the repo root: `npm test`. It builds the site, serves `dist/`, and checks every page at 390px (script errors, missing files, sideways scrolling, one H1, pop-up opens), plus sitemap, share image, each feature, the form payloads (Netlify + HubSpot), the A/B test, and pop-up accessibility. Must end with `0 failed`.
 - `tests/known-issues.json` lists problems that already existed; fix them and delete the entry.
 - `tests/` has its own package.json so Netlify never installs Playwright.
+- **GitHub check:** `.github/workflows/test.yml` runs `npm test` on every pull request into `main` (on GitHub's servers, not Netlify). For it to block bad merges, `main` needs a branch rule requiring the **test** check — set in GitHub → Settings → Rules (Ben does this once).
 
 ## Integrations
 - HubSpot (Hub ID 343715542): tracking code in `components/head.html`; form posts to the HubSpot Forms API from `shared.js`. Test with Gmail plus-addresses and realistic names — fake data gets flagged as spam.
