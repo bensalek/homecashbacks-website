@@ -4,7 +4,7 @@ Cashback buyer-agent business in the GTA. Owner/website: **Ben**. Realtor: **Lal
 
 ## Working rules (read first)
 - **Branches:** work happens on `dev`. `main` is production (homecashbacks.ca) — **never push or merge to `main` unless Ben says so for that specific change.**
-- **Netlify credits:** every push to `dev` triggers a build. Do all edits locally, run `npm test`, and push once as a batch. Do not push in small pieces. Add `[skip netlify]` to a commit message when it needs no deploy.
+- **Netlify credits:** every push to `dev` triggers a build. Do all edits locally, run `npm test`, and push once as a batch. Do not push in small pieces. Add `[skip netlify]` only when **every** commit in the push needs no deploy — Netlify skips the whole push if the **newest** commit has the tag (this once hid real site changes from the dev site). Never put it on the last commit of a push that contains site changes.
 - **Test fully before asking Ben to test.** Run `npm test` (see Tests), and look at changed pages in a browser at phone width (390px) and desktop.
 - Dev site: https://homecashbacksdev.netlify.app (deploys the `dev` branch). Ben tests there, then says "approved" before anything merges to `main`.
 - **Never bring back the AI chatbot** (no widget, no `netlify/functions/chatbot.js`, no `build-search-index.js`). Ben removed it on purpose.
