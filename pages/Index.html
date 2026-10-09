@@ -36,7 +36,6 @@
   "employee": {"@type":"Person","name":"Laleh Mousavi","jobTitle":"Realtor"}
 }
 </script>
-<link rel="preload" href="/assets/hero-home.webp" as="image" fetchpriority="high">
 <link rel="preload" href="/assets/index.css?v=10" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
 <link rel="stylesheet" href="/assets/explainer-video.css"/>
 <noscript><link rel="stylesheet" href="/assets/index.css?v=10"/></noscript>
@@ -44,6 +43,8 @@
 /* Critical above-fold CSS — prevents FOUC while index.css loads async */
 body{font-family:'Rubik',sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;padding-top:118px}
 .hero--fullbleed{min-height:480px;background-size:cover;background-position:center;background-repeat:no-repeat;position:relative;display:flex;align-items:stretch}
+.hero-bg{position:absolute;inset:0;z-index:0}
+.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center;display:block}
 .hero-overlay{position:absolute;inset:0;background:linear-gradient(to right,rgba(26,35,50,.92) 0%,rgba(26,35,50,.75) 45%,rgba(26,35,50,.45) 70%,rgba(26,35,50,.3) 100%);z-index:0}
 .hero-text-col{padding:3rem 2.5rem;display:flex;flex-direction:column;justify-content:center;gap:.75rem;position:relative;z-index:2;text-align:left}
 @media(max-width:680px){
@@ -174,7 +175,11 @@ body{font-family:'Rubik',sans-serif;background:var(--bg);color:var(--ink);line-h
 <!-- TOP BAR -->
 <!-- TOP BAR -->
 <!-- HERO -->
-<section class="hero hero--fullbleed" style="background-image:url('/assets/hero-home.webp')">
+<section class="hero hero--fullbleed">
+  <picture class="hero-bg">
+    <source type="image/avif" srcset="/assets/hero-home-800.avif 800w, /assets/hero-home.avif 1200w" sizes="100vw"/>
+    <img src="/assets/hero-home.webp" srcset="/assets/hero-home-800.webp 800w, /assets/hero-home.webp 1200w" sizes="100vw" width="1200" height="661" alt="" fetchpriority="high" decoding="async"/>
+  </picture>
   <div class="hero-overlay"></div>
   <div class="hero-text-col">
     <h1>Full-Service Toronto Realtor.<br><em>$4,999 Flat Fee.</em></h1>

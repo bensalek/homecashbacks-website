@@ -215,7 +215,40 @@
       },
       "sourceSlug": "buyer-toronto",
       "metaDesc": "Low commission real estate agent in Toronto. Flat $4,999 fee \u2014 keep $20,000 cash back rebate on a $1M home. Full buyer representation, no upfront commitment.",
-      "pageTitle": "Toronto Cashback Realtor | $20,000+ Back on a $1M Home | Home Cashbacks"
+      "pageTitle": "Cash Back Realtor Toronto | Cashback Realtor, $20,000+ Back | Home Cashbacks",
+      "h1": "Cash back realtor Toronto",
+      "h1Tagline": "Flat $4,999 fee. <em>Keep the rest of the commission.</em>",
+      "localFacts": {
+        "title": "Cash back by Toronto neighbourhood",
+        "intro": "Starting prices by area and the cash back on a purchase at that price, using a 2.5% buyer commission less our flat $4,999 fee. Your actual amount depends on the commission the seller offers.",
+        "examples": [
+          {
+            "area": "Liberty Village condos",
+            "price": "~$600K",
+            "cashback": "about $10,000",
+            "link": "/liberty-village-toronto.html"
+          },
+          {
+            "area": "Yonge & Eglinton condos",
+            "price": "~$700K",
+            "cashback": "about $12,500",
+            "link": "/yonge-eglinton-toronto.html"
+          },
+          {
+            "area": "Leslieville semis",
+            "price": "~$1.1M",
+            "cashback": "about $22,500",
+            "link": "/leslieville-toronto.html"
+          },
+          {
+            "area": "Leaside detached",
+            "price": "~$1.7M",
+            "cashback": "about $37,500",
+            "link": "/leaside-toronto.html"
+          }
+        ],
+        "comps": ""
+      }
     },
     {
       "slug": "mississauga",

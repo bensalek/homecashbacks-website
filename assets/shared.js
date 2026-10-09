@@ -5,15 +5,52 @@ function fireEvent(name, params) {
   if (typeof gtag === 'function') gtag('event', name, params);
 }
 
+// ── CTA A/B test ────────────────────────────────────────────────────────────
+// Buttons with data-ab-cta="<test-name>" and data-ab-text-b="<variant B copy>"
+// are split 50/50 per visitor (remembered in localStorage). The variant is sent
+// to GA4 as ab_variant on ab_exposure, modal_open and qualify_lead, so the test
+// can be read in GA4 by comparing variant A vs B on qualify_lead.
+var hcAbVariant = null;
+(function () {
+  function init() {
+    var els = document.querySelectorAll('[data-ab-cta]');
+    if (!els.length) return;
+    var test = els[0].getAttribute('data-ab-cta');
+    var key = 'hc_ab_' + test;
+    var v = null;
+    try { v = localStorage.getItem(key); } catch (e) {}
+    if (v !== 'A' && v !== 'B') {
+      v = Math.random() < 0.5 ? 'A' : 'B';
+      try { localStorage.setItem(key, v); } catch (e) {}
+    }
+    hcAbVariant = test + ':' + v;
+    if (v === 'B') {
+      els.forEach(function (el) {
+        var t = el.getAttribute('data-ab-text-b');
+        if (t) el.textContent = t;
+      });
+    }
+    fireEvent('ab_exposure', { event_category: 'experiment', ab_variant: hcAbVariant, page_path: window.location.pathname });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+  else init();
+})();
+
 // ── Modal ───────────────────────────────────────────────────────────────────
+var hcModalOpener = null;
 function openModal() {
+  hcModalOpener = document.activeElement;
   document.getElementById('modal').classList.add('open');
   document.body.style.overflow = 'hidden';
+  // Move focus into the dialog (the dialog itself, so phones don't pop the keyboard open).
+  var dlg = document.querySelector('#modal .modal');
+  if (dlg) dlg.focus();
   var sourceEl = document.getElementById('f-source');
   var src = sourceEl ? sourceEl.value : 'unknown';
   fireEvent('modal_open', {
     event_category: 'engagement',
     event_label: src,
+    ab_variant: hcAbVariant || undefined,
     page_path: window.location.pathname
   });
   // Note: modal_open is engagement only, not a key event
@@ -21,6 +58,9 @@ function openModal() {
 function closeModal() {
   document.getElementById('modal').classList.remove('open');
   document.body.style.overflow = '';
+  // Give focus back to the button that opened the dialog.
+  if (hcModalOpener && typeof hcModalOpener.focus === 'function') { try { hcModalOpener.focus(); } catch (e) {} }
+  hcModalOpener = null;
 }
 document.addEventListener('DOMContentLoaded', function () {
   // ── Phone click tracking (all tel: links) ──
@@ -46,7 +86,20 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 document.addEventListener('keydown', function (e) {
-  if (e.key === 'Escape') closeModal();
+  var overlay = document.getElementById('modal');
+  var isOpen = overlay && overlay.classList.contains('open');
+  if (e.key === 'Escape' && isOpen) closeModal();
+  // Keep Tab / Shift+Tab inside the dialog while it is open.
+  if (e.key === 'Tab' && isOpen) {
+    var items = Array.prototype.filter.call(
+      overlay.querySelectorAll('button, [href], input:not([type=hidden]), textarea, select, [tabindex]:not([tabindex="-1"])'),
+      function (el) { return !el.disabled && el.offsetParent !== null; }
+    );
+    if (!items.length) return;
+    var first = items[0], last = items[items.length - 1], active = document.activeElement;
+    if (e.shiftKey && (active === first || active === overlay.querySelector('.modal'))) { e.preventDefault(); last.focus(); }
+    else if (!e.shiftKey && active === last) { e.preventDefault(); first.focus(); }
+  }
 });
 
 // ── Nav ─────────────────────────────────────────────────────────────────────
@@ -165,7 +218,7 @@ function hcHandleFormSubmit(formName) {
   var ok = true;
 
   document.querySelectorAll('.f-error').forEach(function (el) { el.classList.remove('show'); el.textContent = ''; });
-  document.querySelectorAll('.f-input').forEach(function (el) { el.classList.remove('err'); el.style.borderColor = ''; });
+  document.querySelectorAll('.f-input').forEach(function (el) { el.classList.remove('err'); el.style.borderColor = ''; el.removeAttribute('aria-invalid'); });
 
   if (!firstname || !lastname) {
     if (errNameEl) { errNameEl.textContent = 'Please enter your first and last name.'; errNameEl.classList.add('show'); }
@@ -189,7 +242,13 @@ function hcHandleFormSubmit(formName) {
     if (phoneEl) phoneEl.classList.add('err');
     ok = false;
   }
-  if (!ok) return;
+  if (!ok) {
+    // Tell assistive tech which fields are wrong and put the cursor on the first one.
+    var bad = document.querySelectorAll('#form-showing .f-input.err');
+    bad.forEach(function (el) { el.setAttribute('aria-invalid', 'true'); });
+    if (bad[0]) bad[0].focus();
+    return;
+  }
 
   var sourceEl = document.getElementById('f-source');
   var leadSource = sourceEl ? sourceEl.value : 'buyer';
@@ -208,10 +267,14 @@ function hcHandleFormSubmit(formName) {
 
   function showSuccess() {
     document.getElementById('modal-form-wrap').style.display = 'none';
-    document.getElementById('form-success').style.display = 'block';
+    var successEl = document.getElementById('form-success');
+    successEl.style.display = 'block';
+    successEl.setAttribute('tabindex', '-1');
+    successEl.focus();   // the submit button just disappeared, so keep keyboard focus somewhere sensible
     fireEvent('qualify_lead', {
       event_category: 'lead',
       event_label: leadSource,
+      ab_variant: hcAbVariant || undefined,
       page_path: leadPage
     });
   }

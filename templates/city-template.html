@@ -8,6 +8,10 @@
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="https://homecashbacks.ca/{{SLUG}}-cashback-realtor.html"/>
 <meta property="og:image" content="https://homecashbacks.ca/og-image.png"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://homecashbacks.ca/og-image.png"/>
 <meta name="robots" content="index, follow"/>
 <link rel="canonical" href="https://homecashbacks.ca/{{SLUG}}-cashback-realtor.html"/>
 <script type="application/ld+json">
@@ -86,6 +90,13 @@
 .stat-box-label{font-size:11px;color:var(--muted);line-height:1.4}
 .stat-box.highlight .stat-box-val{color:var(--cta)}
 .stat-source{font-size:12px;color:var(--muted);margin-top:.35rem}
+.local-facts-table{width:100%;border-collapse:collapse;font-size:14px;margin:1rem 0;background:var(--white);border:1px solid var(--border);border-radius:4px}
+.local-facts-table th{text-align:left;padding:10px 14px;font-size:11px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--muted);border-bottom:2px solid var(--border)}
+.local-facts-table td{padding:12px 14px;border-bottom:1px solid var(--border);color:var(--ink2);vertical-align:middle}
+.local-facts-table tr:last-child td{border-bottom:none}
+.local-facts-table td:last-child{font-weight:700;color:var(--cta)}
+.local-facts-table a{color:var(--ink);font-weight:600;text-decoration:none;border-bottom:1px solid var(--cta)}
+.local-facts-table a:hover{color:var(--cta)}
 .hood-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem;margin:1.5rem 0}
 .hood-grid--hidden{display:none!important}
 .hood-grid--hidden.revealed{display:grid!important}
@@ -215,7 +226,7 @@
 <div class="miss-hero">
   <div class="miss-hero-inner">
     <div class="page-hero-eyebrow">Cashback Realtor · {{NAME}}</div>
-    <h1 class="miss-h1">Buy in {{NAME}}.<br><em>Keep the commission.</em></h1>
+    <h1 class="miss-h1">{{H1_HTML}}</h1>
     <p class="miss-hero-sub">{{HERO_SUB}}</p>
     <div class="miss-hero-actions">
       <button class="miss-hero-cta" onclick="openModal()">Book a Free Consultation</button>
@@ -289,6 +300,7 @@
     <p class="stat-source">Source: TRREB, CREA. {{MARKET_DATE}}. Numbers are approximate and change monthly.</p>
   </div>
 </section>
+{{LOCAL_FACTS}}
 
 <section class="miss-section" style="background:var(--bg)" id="neighbourhoods">
   <div class="miss-inner">

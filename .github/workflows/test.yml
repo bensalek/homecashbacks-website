@@ -1,0 +1,51 @@
+name: Site tests
+
+# Runs the full test suite (npm test) on every pull request into main, so a broken change
+# can't be merged. Runs on GitHub's servers — it does not use Netlify build minutes.
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:      # lets you run it by hand from the Actions tab
+
+concurrency:
+  group: tests-${{ github.ref }}
+  cancel-in-progress: true   # a newer push replaces an older run
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: test
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: |
+            package-lock.json
+            tests/package-lock.json
+
+      - name: Install site build tools
+        run: npm ci
+
+      - name: Install test tools and browser
+        working-directory: tests
+        run: |
+          npm ci
+          npx playwright install --with-deps chromium
+
+      - name: Run tests
+        run: npm test
+
+      - name: Keep the built site if the tests fail (for debugging)
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist-after-failed-tests
+          path: dist
+          retention-days: 3

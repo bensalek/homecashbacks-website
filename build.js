@@ -78,7 +78,7 @@ if (fs.existsSync(dealsDir)) {
 }
 
 // Copy root-level files to /dist
-['favicon.ico','favicon.svg','favicon-32.png','apple-touch-icon.png','sitemap.xml','_redirects','robots.txt','llms.txt','083dafa7dee34db2a1e46a7adce57fe5.txt'].forEach(function(file) {
+['favicon.ico','favicon.svg','favicon-32.png','apple-touch-icon.png','sitemap.xml','_redirects','robots.txt','llms.txt','083dafa7dee34db2a1e46a7adce57fe5.txt','og-image.png'].forEach(function(file) {
   if (fs.existsSync(file)) {
     fs.copyFileSync(file, path.join(DIST_DIR, file));
     console.log('  copied: ' + file);
@@ -228,6 +228,37 @@ console.log('\n✓ Build complete — ' + pages.length + ' pages assembled into 
     html = html.replace(/{{SLUG}}/g, city.slug);
     html = html.replace(/{{CASHBACK}}/g, city.cashback);
     html = html.replace(/{{HERO_SUB}}/g, city.heroSub);
+
+    // H1: optional per-city override (e.g. Toronto targets "Cash back realtor Toronto")
+    var h1Html = city.h1
+      ? city.h1 + (city.h1Tagline ? '<br>' + city.h1Tagline : '')
+      : 'Buy in ' + city.name + '.<br><em>Keep the commission.</em>';
+    html = html.replace('{{H1_HTML}}', h1Html);
+
+    // Local facts block (optional): neighbourhood examples + recent comps
+    var localHtml = '';
+    if (city.localFacts) {
+      var lf = city.localFacts;
+      var rows = (lf.examples || []).map(function(e) {
+        var area = e.link ? '<a href="' + e.link + '">' + e.area + '</a>' : e.area;
+        return '<tr><td>' + area + '</td><td>' + e.price + '</td><td>' + e.cashback + '</td></tr>';
+      }).join('');
+      var compsHtml = lf.comps
+        ? '<p class="miss-body"><strong>Recent deals:</strong> ' + lf.comps + '</p>'
+        : '';
+      localHtml =
+        '<section class="miss-section" style="background:var(--bg)" id="local-facts">' +
+        '<div class="miss-inner">' +
+        '<div class="miss-eyebrow-sm">' + city.name + ' examples</div>' +
+        '<h2 class="miss-h2">' + lf.title + '</h2>' +
+        '<p class="miss-body">' + lf.intro + '</p>' +
+        '<div style="overflow-x:auto"><table class="local-facts-table">' +
+        '<thead><tr><th>Area</th><th>Typical price</th><th>Cash back</th></tr></thead>' +
+        '<tbody>' + rows + '</tbody></table></div>' +
+        compsHtml +
+        '</div></section>';
+    }
+    html = html.replace('{{LOCAL_FACTS}}', localHtml);
     html = html.replace(/{{MARKET_DATE}}/g, city.marketDate);
     html = html.replace(/{{MARKET_TITLE}}/g, city.marketTitle);
     html = html.replace(/{{MARKET_TEXT}}/g, city.marketText);
@@ -450,4 +481,64 @@ console.log('\n✓ Build complete — ' + pages.length + ' pages assembled into 
   });
 
   console.log('\n✓ Neighbourhood pages generated: ' + data.neighbourhoods.length);
+})();
+
+// ── SITEMAP GENERATOR ──────────────────────────────────────────────────────
+// Builds dist/sitemap.xml from the pages that actually exist, so new pages are never forgotten
+// and noindex pages are never listed. The root sitemap.xml is only used as a "seed": any page
+// already in it keeps its lastmod / changefreq / priority. New pages are added without a lastmod
+// (an invented date is worse than none).
+(function generateSitemap() {
+  var SITE = 'https://homecashbacks.ca/';
+  var seed = {};
+  if (fs.existsSync('./sitemap.xml')) {
+    var seedXml = fs.readFileSync('./sitemap.xml', 'utf8');
+    (seedXml.match(/<url>[\s\S]*?<\/url>/g) || []).forEach(function(block) {
+      var loc = (block.match(/<loc>([^<]*)<\/loc>/) || [])[1];
+      if (!loc) return;
+      var pick = function(tag) { var m = block.match(new RegExp('<' + tag + '>([^<]*)</' + tag + '>')); return m ? m[1] : null; };
+      seed[loc] = { lastmod: pick('lastmod'), changefreq: pick('changefreq'), priority: pick('priority') };
+    });
+  }
+
+  var files = fs.readdirSync(DIST_DIR).filter(function(f) { return f.endsWith('.html') && f !== '404.html'; });
+  var entries = [];
+  files.forEach(function(f) {
+    var html = fs.readFileSync(path.join(DIST_DIR, f), 'utf8');
+    if (/<meta[^>]+name="robots"[^>]+noindex/i.test(html)) return;   // never list noindex pages
+    var loc = SITE + (f === 'Index.html' ? '' : f);
+    var s = seed[loc] || {};
+    var isCity = /-cashback-realtor\.html$/.test(f);
+    var isHood = /-toronto\.html$/.test(f) && fs.existsSync('./data/neighbourhoods.json') &&
+      JSON.parse(fs.readFileSync('./data/neighbourhoods.json', 'utf8')).neighbourhoods.some(function(n) { return n.slug + '-toronto.html' === f; });
+    entries.push({
+      loc: loc,
+      lastmod: s.lastmod || null,
+      changefreq: s.changefreq || 'monthly',
+      priority: s.priority || (f === 'Index.html' ? '1.0' : isCity ? '0.7' : isHood ? '0.6' : '0.7'),
+      isNew: !seed[loc]
+    });
+  });
+
+  // Keep the seed's order for known pages; new pages go at the end, alphabetically.
+  var order = Object.keys(seed);
+  entries.sort(function(a, b) {
+    var ia = order.indexOf(a.loc), ib = order.indexOf(b.loc);
+    if (ia === -1 && ib === -1) return a.loc < b.loc ? -1 : 1;
+    if (ia === -1) return 1;
+    if (ib === -1) return -1;
+    return ia - ib;
+  });
+
+  var xml = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
+    entries.map(function(e) {
+      return '  <url><loc>' + e.loc + '</loc>' + (e.lastmod ? '<lastmod>' + e.lastmod + '</lastmod>' : '') +
+        '<changefreq>' + e.changefreq + '</changefreq><priority>' + e.priority + '</priority></url>';
+    }).join('\n') + '\n</urlset>\n';
+  fs.writeFileSync(path.join(DIST_DIR, 'sitemap.xml'), xml, 'utf8');
+
+  var dropped = Object.keys(seed).filter(function(l) { return !entries.some(function(e) { return e.loc === l; }); });
+  console.log('\n✓ Sitemap generated — ' + entries.length + ' URLs' +
+    (entries.some(function(e) { return e.isNew; }) ? ' | new: ' + entries.filter(function(e) { return e.isNew; }).map(function(e) { return e.loc.replace(SITE, '') || '/'; }).join(', ') : '') +
+    (dropped.length ? ' | dropped (no page / noindex): ' + dropped.map(function(l) { return l.replace(SITE, '') || '/'; }).join(', ') : ''));
 })();

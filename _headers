@@ -28,3 +28,6 @@
 
 /assets/*.ico
   Cache-Control: public, max-age=2592000
+
+/assets/*.avif
+  Cache-Control: public, max-age=2592000
