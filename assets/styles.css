@@ -303,3 +303,13 @@ footer a{color:var(--cta);text-decoration:none}
 .foot-social-icons{display:flex;gap:.6rem;margin-top:.5rem}
 .foot-icon-link{display:flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.5);transition:all .2s}
 .foot-icon-link:hover{border-color:var(--cta);color:var(--cta)}
+
+/* Very small phones (320-380px): keep the footer inside the screen */
+@media(max-width:380px){
+  footer{padding-left:1.25rem;padding-right:1.25rem}
+  .foot-grid>*{min-width:0}
+  .foot-contact-val,.foot-address-val{overflow-wrap:anywhere}
+}
+
+/* Tables are wrapped by build.js in .table-scroll so a wide table scrolls inside its own box instead of the whole page */
+.table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%}

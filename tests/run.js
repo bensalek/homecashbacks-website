@@ -94,6 +94,18 @@ function serve() {
     await p._ctx.close();
   }
 
+  section('Every page on the smallest phones (320px)');
+  for (const f of htmlFiles) {
+    if (f === '404.html') continue;
+    const p = await open(320);
+    try {
+      await p.goto(base + '/' + f, { waitUntil: 'load' }); await p.waitForTimeout(120);
+      ok((await p.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth)) <= 1, f + ': no sideways scrolling @320px');
+      ok(await p.evaluate(() => { const b = document.querySelector('.top-btn.light'), ph = document.querySelector('.top-bar-phone'); if (!b || !ph) return false; const r = b.getBoundingClientRect(), q = ph.getBoundingClientRect(); return r.right <= innerWidth && q.left >= 0 && r.bottom <= document.querySelector('.top-bar').getBoundingClientRect().bottom; }), f + ': top-bar phone and Book button fit on screen @320px');
+    } catch (e) { ok(false, f + ': test error @320 ' + e.message.split('\n')[0]); }
+    await p._ctx.close();
+  }
+
   section('Internal links (warnings only)');
   const exists = u => { const clean = u.split('#')[0].split('?')[0]; if (!clean || clean === '/') return true; const rel = clean.replace(/^\//, ''); return fs.existsSync(path.join(DIST, rel)) || fs.existsSync(path.join(DIST, rel + '.html')) || redirects.has('/' + rel.replace(/\.html$/, '')); };
   const redirects = new Set((fs.readFileSync(path.join(ROOT, '_redirects'), 'utf8').match(/^\/\S+/gm) || []).map(x => x.replace(/\.html$/, '')));

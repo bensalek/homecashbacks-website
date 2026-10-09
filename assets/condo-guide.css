@@ -181,3 +181,4 @@
 @media(max-width:680px){
   .jump-nav{top:146px}
 }
+@media(max-width:680px){.faq-cols{grid-template-columns:1fr}.faq-cols>*{min-width:0}}

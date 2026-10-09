@@ -20,6 +20,14 @@ const sharedJs = fs.readFileSync(path.join(ASSETS_DIR, 'shared.js'), 'utf8');
 // Field names must match components/modal.html, or Netlify drops those values.
 const NETLIFY_FORM = '<div aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden"><form name="contact" data-netlify="true" netlify-honeypot="bot-field"><input type="text" name="firstname" tabindex="-1"/><input type="text" name="lastname" tabindex="-1"/><input type="text" name="email" tabindex="-1"/><input type="tel" name="phone" tabindex="-1"/><input type="hidden" name="source" tabindex="-1"/><textarea name="note" tabindex="-1"></textarea><input type="checkbox" name="marketing_updates" value="yes" tabindex="-1"/></form></div>';
 
+
+// Wrap every <table> (outside <script> blocks) in a scrollable box so wide tables never make a phone page scroll sideways.
+function wrapTables(html) {
+  return html.replace(/(<script[\s\S]*?<\/script>)|(<table\b[\s\S]*?<\/table>)/gi, function(m, script, table) {
+    return script ? script : '<div class="table-scroll">' + table + '</div>';
+  });
+}
+
 // Prepare /dist
 if (fs.existsSync(DIST_DIR)) fs.rmSync(DIST_DIR, { recursive: true });
 fs.mkdirSync(DIST_DIR, { recursive: true });
@@ -180,7 +188,7 @@ pages.forEach(function(filename) {
       .replace(/(<input type="hidden" id="f-source"[^>]*value=")[^"]*"/, '$1seller"');
   }
 
-  fs.writeFileSync(path.join(DIST_DIR, filename), assembled, 'utf8');
+  fs.writeFileSync(path.join(DIST_DIR, filename), wrapTables(assembled), 'utf8');
   console.log('  built: ' + filename);
 });
 
@@ -352,7 +360,7 @@ console.log('\n✓ Build complete — ' + pages.length + ' pages assembled into 
     // Assemble with shared components and write to dist
     var assembled = assembleCityPage(html, city);
     var filename = city.slug + '-cashback-realtor.html';
-    fs.writeFileSync(path.join(DIST_DIR, filename), assembled, 'utf8');
+    fs.writeFileSync(path.join(DIST_DIR, filename), wrapTables(assembled), 'utf8');
     console.log('  generated city: ' + filename);
   });
 
@@ -476,7 +484,7 @@ console.log('\n✓ Build complete — ' + pages.length + ' pages assembled into 
 
     var assembled = assemblePage(html);
     var filename = nbr.slug + '.html';
-    fs.writeFileSync(path.join(DIST_DIR, filename), assembled, 'utf8');
+    fs.writeFileSync(path.join(DIST_DIR, filename), wrapTables(assembled), 'utf8');
     console.log('  generated neighbourhood: ' + filename);
   });
 
