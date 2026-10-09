@@ -398,3 +398,26 @@ document.addEventListener('click', function (e) {
     }
   });
 })();
+
+// ── Wide tables scroll inside their own box ─────────────────────────────────
+// Only a table that is wider than the space it sits in gets wrapped (in .table-scroll), so tables that
+// already fit are left exactly as they were, and a wide table never makes the whole page scroll sideways.
+(function () {
+  function wrapWideTables() {
+    document.querySelectorAll('table').forEach(function (t) {
+      if (t.closest('.table-scroll')) return;
+      var p = t.parentElement;
+      if (!p || t.offsetWidth <= p.clientWidth + 1) return;
+      var box = document.createElement('div');
+      box.className = 'table-scroll';
+      p.insertBefore(box, t);
+      box.appendChild(t);
+    });
+  }
+  var timer;
+  function later() { clearTimeout(timer); timer = setTimeout(wrapWideTables, 150); }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', wrapWideTables);
+  else wrapWideTables();
+  window.addEventListener('load', wrapWideTables);
+  window.addEventListener('resize', later);
+})();

@@ -311,5 +311,5 @@ footer a{color:var(--cta);text-decoration:none}
   .foot-contact-val,.foot-address-val{overflow-wrap:anywhere}
 }
 
-/* Tables are wrapped by build.js in .table-scroll so a wide table scrolls inside its own box instead of the whole page */
+/* shared.js wraps a table in .table-scroll only when it is wider than its page, so it scrolls inside its own box instead of the whole page */
 .table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%}
