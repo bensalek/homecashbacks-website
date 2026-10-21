@@ -141,33 +141,43 @@
   <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png"/>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=2"/>
+  <!-- Only the real site (homecashbacks.ca) is tracked. The dev site, deploy previews and localhost load no analytics, HubSpot or Clarity,
+       and send no leads to HubSpot, so test visits never mix into the SEO / lead numbers. (Tests set window.HC_FORCE_PROD to exercise the live code path.) -->
+  <script>
+  window.HC_PROD = /(^|\.)homecashbacks\.ca$/.test(location.hostname) || window.HC_FORCE_PROD === true;
+  </script>
+
   <!-- Google tag (gtag.js) — loaded after parse to reduce reflow -->
   <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-068EB5V10X');
+  if (window.HC_PROD) { var gs = document.createElement('script'); gs.defer = true; gs.src = 'https://www.googletagmanager.com/gtag/js?id=G-068EB5V10X'; document.head.appendChild(gs); }
   </script>
-  <script defer src="https://www.googletagmanager.com/gtag/js?id=G-068EB5V10X"></script>
 
   <!-- Start of HubSpot Embed Code -->
-  <script type="text/javascript" id="hs-script-loader" async defer src="https://js-na3.hs-scripts.com/343715542.js"></script>
+  <script>
+  if (window.HC_PROD) { var hs = document.createElement('script'); hs.id = 'hs-script-loader'; hs.async = true; hs.defer = true; hs.src = 'https://js-na3.hs-scripts.com/343715542.js'; document.head.appendChild(hs); }
+  </script>
   <!-- End of HubSpot Embed Code -->
 
   <!-- Microsoft Clarity (project: HomeCashbacks) -->
   <script>
+  if (window.HC_PROD) {
   (function(c,l,a,r,i,t,y){
     c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
     t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
     y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
   })(window, document, "clarity", "script", "yr9kpuqs35");
+  }
   </script>
 
 <link rel="preload" href="/assets/fonts/cormorant-garamond-v21-latin-600.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/rubik-v31-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/rubik-v31-latin-500.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/fonts.css">
-  <link rel="stylesheet" href="/assets/styles.css?v=8">
+  <link rel="stylesheet" href="/assets/styles.css?v=9">
   <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{--bg:#f0f4f8;--bg2:#e2eaf2;--bg3:#ccd8e8;--white:#fff;--ink:#1a2332;--ink2:#2d3d52;--muted:#5a6a82;--taupe:#6b7fa0;--cta:#1c864e;--cta-text:#ffffff;--cta-dark:#155f38;--dark:#1a2332;--border:rgba(26,35,50,.1);--border-on-dark:rgba(255,255,255,.08);--overlay:rgba(26,35,50,.72);--red:#b83232;--amber:var(--cta);--charcoal:var(--dark);--star:#fbbc05;--wa-green:#25d147;--red-text:#dc2626;--red-light-bg:#fff9f9;--green-light:#5ec490}
@@ -184,6 +194,13 @@ nav{position:fixed;top:58px;left:0;right:0;z-index:570;background:var(--white);b
   body{padding-top:146px}
   .top-bar{height:66px}
   nav{padding:0 1rem 0 .65rem;justify-content:flex-start;top:66px;height:80px}
+}
+/* Very small phones (320-380px): keep the top bar button on screen (text wraps to two lines) */
+@media(max-width:380px){
+  .top-bar{padding:0 .6rem;gap:6px}
+  .top-bar-sep{display:none}
+  .top-bar-phone{font-size:12px}
+  .top-btn{min-width:0;padding:8px 12px;font-size:13px;white-space:normal;line-height:1.15;text-align:center}
 }
   </style>
 <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>

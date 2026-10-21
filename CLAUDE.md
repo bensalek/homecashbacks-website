@@ -28,12 +28,13 @@ Cashback buyer-agent business in the GTA. Owner/website: **Ben**. Realtor: **Lal
 
 ## Tests
 - One-time: `cd tests && npm install && npx playwright install chromium`
-- Run from the repo root: `npm test`. It builds the site, serves `dist/`, and checks every page at 390px (script errors, missing files, sideways scrolling, one H1, pop-up opens), plus sitemap, share image, each feature, the form payloads (Netlify + HubSpot), the A/B test, and pop-up accessibility. Must end with `0 failed`.
+- Run from the repo root: `npm test`. It builds the site, serves `dist/`, and checks every page at 390px and 320px (script errors, missing files, sideways scrolling, one H1, pop-up opens), plus sitemap, share image, each feature, the form payloads (Netlify + HubSpot), the A/B test, and pop-up accessibility. Must end with `0 failed`.
 - `tests/known-issues.json` lists problems that already existed; fix them and delete the entry.
 - `tests/` has its own package.json so Netlify never installs Playwright.
 - **GitHub check:** `.github/workflows/test.yml` runs `npm test` on every pull request into `main` (on GitHub's servers, not Netlify). For it to block bad merges, `main` needs a branch rule requiring the **test** check — set in GitHub → Settings → Rules (Ben does this once).
 
 ## Integrations
 - HubSpot (Hub ID 343715542): tracking code in `components/head.html`; form posts to the HubSpot Forms API from `shared.js`. Test with Gmail plus-addresses and realistic names — fake data gets flagged as spam.
+- **Only the live site is tracked.** `components/head.html` sets `window.HC_PROD` (true only on `homecashbacks.ca`). On the dev site and previews, GA4, Clarity, the HubSpot tracking script and the HubSpot form post are all off; Netlify Forms still works there. Test the HubSpot step on the live site with a plus-address. Tests force it on with `window.HC_FORCE_PROD`. If a new live domain is added, update the regex in `head.html`.
 - Microsoft Clarity and Google Analytics are in `components/head.html`.
 - Netlify Forms is the backup copy of every lead.

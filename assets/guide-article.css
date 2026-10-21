@@ -114,7 +114,7 @@
   .art-table{font-size:12px}
   .art-table th,.art-table td{padding:.5rem .75rem}
   .art-cta{flex-direction:column;align-items:flex-start}
-  .art-cta-btn{width:100%;text-align:center}
+  .art-cta-btn{width:100%;text-align:center;white-space:normal}
   .art-related-grid{grid-template-columns:1fr}
   .art-section p{font-size:14px}
   .calc-card{padding:1.25rem}

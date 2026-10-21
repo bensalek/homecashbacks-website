@@ -20,6 +20,7 @@ const sharedJs = fs.readFileSync(path.join(ASSETS_DIR, 'shared.js'), 'utf8');
 // Field names must match components/modal.html, or Netlify drops those values.
 const NETLIFY_FORM = '<div aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden"><form name="contact" data-netlify="true" netlify-honeypot="bot-field"><input type="text" name="firstname" tabindex="-1"/><input type="text" name="lastname" tabindex="-1"/><input type="text" name="email" tabindex="-1"/><input type="tel" name="phone" tabindex="-1"/><input type="hidden" name="source" tabindex="-1"/><textarea name="note" tabindex="-1"></textarea><input type="checkbox" name="marketing_updates" value="yes" tabindex="-1"/></form></div>';
 
+
 // Prepare /dist
 if (fs.existsSync(DIST_DIR)) fs.rmSync(DIST_DIR, { recursive: true });
 fs.mkdirSync(DIST_DIR, { recursive: true });
