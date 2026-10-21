@@ -235,6 +235,20 @@ function serve() {
   ok(!/\$40/.test(read('Index.html').match(/id="modal-sub"[^>]*>[^<]*/)[0]) && !/success-fee/.test(read('Index.html')) && !/\$40/.test(read('our-story.html').match(/id="form-success"[\s\S]*?<\/div>\s*<\/div>/)[0]), 'booking pop-up and confirmation message do not mention the showing fee');
   ok(/\$40 CAD plus HST/.test(fs.readFileSync(path.join(DIST, 'llms.txt'), 'utf8')) && !/\$30 each|First showing is free/.test(fs.readFileSync(path.join(DIST, 'llms.txt'), 'utf8')), 'llms.txt states the new showing fee');
   ok(/Showings are \$40 \+ HST each/.test(read('Index.html')) && /\$40 \+ HST/.test(read('how-cashback-works.html')) && /\$40 \+ HST/.test(read('toronto-cashback-realtor.html')), 'homepage, how-it-works and city pages state the fee');
+  section('Farsi page');
+  p = await open(); await p.goto(base + '/farsi-speaking-realtor-toronto.html');
+  ok(await p.evaluate(() => { const w = document.querySelector('.fa-page'); return !!w && w.getAttribute('lang') === 'fa' && w.getAttribute('dir') === 'rtl'; }), 'Farsi page content is marked lang="fa" dir="rtl"');
+  ok((await p.$$('h1')).length === 1 && /[\u0600-\u06FF]/.test(await p.textContent('h1')), 'Farsi page has one H1, written in Farsi');
+  const faText = await p.textContent('.fa-page');
+  ok(/Smart Brokerages/.test(faText) && /RECO/.test(faText), 'Farsi page names Smart Brokerages and RECO');
+  ok(/\$4,999/.test(faText) && /\$20,001/.test(faText) && /2\.5%/.test(faText), 'Farsi page states the fee, cashback and 2.5% assumption behind the example');
+  ok(await p.evaluate(() => getComputedStyle(document.querySelector('.guide-eyebrow')).letterSpacing === 'normal' || getComputedStyle(document.querySelector('.guide-eyebrow')).letterSpacing === '0px'), 'Farsi page has no letter-spacing (it breaks Persian letters)');
+  await p.evaluate(() => openModal()); ok(await p.isVisible('#f-name'), 'Farsi page: booking pop-up opens');
+  await p._ctx.close();
+  const faLinkers = htmlFiles.filter(f => read(f).includes('href="/farsi-speaking-realtor-toronto.html"'));
+  ok(faLinkers.length === htmlFiles.length, 'Farsi page is linked from every page through the footer (' + faLinkers.length + ' of ' + htmlFiles.length + ')');
+  ok(/farsi-speaking-realtor-toronto\.html/.test(read('our-story.html')), 'Our Story links to the Farsi page');
+  ok(/farsi-speaking-realtor-toronto\.html/.test(fs.readFileSync(path.join(DIST, 'sitemap.xml'), 'utf8')), 'Farsi page is in the sitemap');
 
   section('Dev site stays out of analytics and HubSpot');
   const hcRe = /window\.HC_PROD = (\/.*?\/)\.test\(location\.hostname\)/.exec(read('Index.html'));
