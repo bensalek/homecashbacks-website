@@ -219,7 +219,7 @@ function serve() {
   section('Showing fee ($40 + HST, no free first showing)');
   const stale = [], bareFee = [];
   htmlFiles.forEach(f => { const t = read(f).replace(/<script[^>]*src[^>]*>/g, '');
-    if (/first showing (is |always |with us is )?free|free (first )?showing|first free|\$30 (each|per)|\(\$30|after the first (free )?one|first one -- typically/i.test(t)) stale.push(f);
+    if (/first showing (is |always |with us is )?free|free (first )?showing|first free|still free|showing[^.<]{0,30}\\bfree\\b|\$30 (each|per)|\(\$30|after the first (free )?one|first one -- typically/i.test(t)) stale.push(f);
     (t.match(/\$40(?![,\dK])[^<]{0,14}/g) || []).forEach(m => { if (!/^\$40\s*(\+ HST|each|per showing|CAD plus HST)/.test(m)) bareFee.push(f + ': ' + m); }); });
   ok(stale.length === 0, 'no page still says the first showing is free or $30: ' + stale.slice(0, 5).join(', '));
   ok(bareFee.length === 0, 'every $40 is clearly a per-showing fee ("each", "per showing" or "+ HST"): ' + bareFee.slice(0, 3).join(' | '));
@@ -227,6 +227,18 @@ function serve() {
   ok(htmlFiles.every(f => /Flat fee \$4,999 \+ HST\. Showings \$40 \+ HST each\./.test(read(f))), 'every page footer has the visible fee line ($4,999 + HST and $40 + HST)');
   ok(/\$4,999 \+ HST/.test(read('Index.html')) && /\$4,999 \+ HST fee/.test(read('how-cashback-works.html')), 'homepage and how-it-works FAQs say the $4,999 fee is plus HST');
   ok(/"priceRange": "\$4,999 \+ HST flat fee"/.test(read('Index.html')) && /Flat fee: \$4,999 \+ HST/.test(fs.readFileSync(path.join(DIST, 'llms.txt'), 'utf8')), 'structured data and llms.txt say $4,999 + HST');
+  p = await open(); await p.goto(base + '/Index.html');
+  const faqFirst = await p.textContent('#faq-service .faq-q');
+  ok(/How much do showings cost\?/.test(faqFirst), 'homepage FAQ: "How much do showings cost?" is the first question: ' + faqFirst.trim().slice(0, 40));
+  ok(/\$40 \+ HST per showing/.test(await p.textContent('.how-steps-desktop')) && /\$40 \+ HST per showing/.test(await p.textContent('.how-steps-mobile, .how-steps-mob, .how-section')), 'homepage "Book a showing" step states $40 + HST per showing');
+  await p.evaluate(() => openModal());
+  ok(/\$40 \+ HST each/.test(await p.textContent('#modal-sub')), 'homepage pop-up says showings are $40 + HST each: ' + (await p.textContent('#modal-sub')).trim());
+  ok(await p.evaluate(() => getComputedStyle(document.getElementById('success-fee')).display !== 'none'), 'success message shows the showing fee for a buyer booking');
+  await p._ctx.close();
+  p = await open(); await p.goto(base + '/our-story.html'); await p.evaluate(() => openModal());
+  ok(/\$40 \+ HST each/.test(await p.textContent('#modal-sub')) && /\$40 \+ HST each/.test(await p.textContent('#form-success')), 'other pages: pop-up and success message state the showing fee');
+  await p._ctx.close();
+  ok(!/\$40/.test(read('toronto-listing-agent.html').match(/id="form-success"[\s\S]*?<\/div>\s*<\/div>/)[0]) && !/Showings are \$40/.test(read('toronto-listing-agent.html').match(/<div class="modal-sub"[^>]*>[^<]*/)[0]), 'seller page pop-up does not mention the buyer showing fee');
   ok(/\$40 CAD plus HST/.test(fs.readFileSync(path.join(DIST, 'llms.txt'), 'utf8')) && !/\$30 each|First showing is free/.test(fs.readFileSync(path.join(DIST, 'llms.txt'), 'utf8')), 'llms.txt states the new showing fee');
   ok(/Showings are \$40 \+ HST each/.test(read('Index.html')) && /\$40 \+ HST/.test(read('how-cashback-works.html')) && /\$40 \+ HST/.test(read('toronto-cashback-realtor.html')), 'homepage, how-it-works and city pages state the fee');
 

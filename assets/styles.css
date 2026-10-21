@@ -140,6 +140,7 @@ nav{position:fixed;top:58px;left:0;right:0;z-index:570;background:var(--white);b
 .f-success-icon{font-size:36px;margin-bottom:.6rem}
 .f-success h3{font-family:'Cormorant Garamond',serif;font-size:21px;color:var(--ink);margin-bottom:.3rem}
 .f-success p{font-size:13px;color:var(--muted)}
+.f-success .f-success-fee{margin-top:.5rem}
 
 /* ── SHARED LAYOUT ───────────────────────────────────────── */
 .section{padding:3rem 2rem}

@@ -542,7 +542,7 @@ body{font-family:'Rubik',sans-serif;background:var(--bg);color:var(--ink);line-h
       <div class="how-step">
         <div class="how-step-left">
           <div class="how-step-name">Book a showing</div>
-          <div class="how-step-desc">We coordinate private showings and help buyers evaluate properties based on location, condition, and market value.</div>
+          <div class="how-step-desc"><strong>$40 + HST per showing.</strong> We coordinate private showings and help buyers evaluate properties based on location, condition, and market value.</div>
         </div>
         <div class="how-step-center"><div class="how-step-num">2</div></div>
         <div class="how-step-empty"></div>
@@ -590,7 +590,7 @@ body{font-family:'Rubik',sans-serif;background:var(--bg);color:var(--ink);line-h
         <div class="how-step-mob-card">
           <div class="how-step-mob-badge">2</div>
           <div class="how-step-mob-card-name">Book a showing</div>
-          <div class="how-step-mob-card-desc">We coordinate private showings across Toronto and the GTA.</div>
+          <div class="how-step-mob-card-desc"><strong>$40 + HST per showing.</strong> We coordinate private showings across Toronto and the GTA.</div>
         </div>
         <div class="how-step-mob-card">
           <div class="how-step-mob-badge">3</div>
@@ -835,6 +835,7 @@ function playHomeVideo(){
   }
 }
 const FAQ_SERVICE=[
+  {q:'How much do showings cost?',a:'Showings are $40 + HST each, with no commitment and no exclusive agreement. All offers are free and unlimited.'},
   {q:'What is the catch?',a:'There is not one. But we understand why you are asking. Traditional agents earn $20,000 to $25,000 on a $1M home. Giving most of that back requires a different business model, not a different level of service. Ours runs leaner. We use technology where it makes sense, we work with buyers who know what they want, and we do not price in hours we do not spend. What you get is the same thing: a licensed realtor, full brokerage legal protections, showings, offer strategy, negotiation, and closing coordination. What you keep is the commission that was always yours to begin with.'},
   {q:'Is a flat fee realtor better than a percentage cashback competitor?',a:'Mathematically yes, by thousands of dollars. Most cashback competitors give you 50% of the commission back. On a $1M GTA home with a 2.5% buyer commission, that means $12,500 to you and $12,500 kept by the brokerage. We charge $4,999 flat and give you $20,000. Same professional representation, same legal protections, $7,500 more in your pocket. Actual amounts depend on the commission the seller has offered.'},
   {q:'Do I really get cashback? How does it work?',a:'Yes. When a home sells, the seller\'s agreement includes a buyer agent commission, typically 2 to 2.5% of the sale price. That money flows to your agent. We take a flat $4,999 from that commission and send you everything above that 6 to 8 weeks after closing. On the average GTA home ($993,410), you would receive approximately $19,836 back.'},
@@ -849,7 +850,6 @@ const FAQ_SERVICE=[
   {q:'Why do traditional agents charge so much?',a:'The percentage commission model was built for an era when agents did all the research. Today buyers shortlist online, research neighbourhoods on Google, and often find the home themselves. The industry has not caught up. We have.'},
   {q:'How do you make money?',a:'Straightforward: the seller pays a buyer agent commission on every deal, typically 2 to 2.5% of the sale price. We take a flat $4,999 of that for our time and expertise, and send you the rest after closing. We keep this sustainable by running lean, one dedicated realtor rather than a team splitting commissions, so the model works even though our share of each deal is smaller than a traditional agent\'s.'},
   {q:'Why don\'t all realtors do this?',a:'Because giving most of it back means earning far less per deal, and most brokerages are not willing to make that trade. The traditional commission model has paid agents extremely well for decades, so there has been no pressure to change it. Cashback is not complicated or new, it is simply a different business decision that puts more of the commission in your pocket instead of the agent\'s.'},
-  {q:'How much do showings cost?',a:'Showings are $40 + HST each, with no commitment and no exclusive agreement. All offers are free and unlimited.'},
 ];
 
 const FAQ_BUYING=[
@@ -875,7 +875,8 @@ function openModal(type){
   if(mortgageForm){ mortgageForm.style.display=isMortgage?'block':'none'; }
   document.getElementById('modal-tag').textContent=isMortgage?'Mortgage pre-approval':(isCalculator?'Your cashback estimate':'Book a Free Consultation');
   document.getElementById('modal-title').textContent=isMortgage?"Get pre-approved":(isCalculator?"Let's confirm your number":"Let's get started");
-  document.getElementById('modal-sub').textContent=isMortgage?"We'll connect you with a trusted mortgage broker within one business day.":(isCalculator?"We'll email you your exact cashback estimate and confirm it's accurate for your situation.":"Your first showing is still free. We'll follow up within a few hours.");
+  var sf=document.getElementById('success-fee'); if(sf) sf.style.display=isMortgage?'none':'';
+  document.getElementById('modal-sub').textContent=isMortgage?"We'll connect you with a trusted mortgage broker within one business day.":(isCalculator?"We'll email you your exact cashback estimate and confirm it's accurate for your situation.":"Showings are $40 + HST each, no commitment. We'll follow up within a few hours.");
   ['err-name','err-contact','err-m-name','err-m-contact'].forEach(id=>{
     const el=document.getElementById(id);
     if(el){el.textContent='',el.classList.remove('show');}
