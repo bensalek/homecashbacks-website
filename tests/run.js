@@ -216,6 +216,17 @@ function serve() {
   const mortgageLinkers = htmlFiles.filter(f => read(f).includes('href="/cashback-realtor-vs-cashback-mortgage.html"') && f !== 'cashback-realtor-vs-cashback-mortgage.html');
   ok(mortgageLinkers.length >= 6, 'cashback-vs-mortgage page is linked from ' + mortgageLinkers.length + ' pages (need 6+)');
 
+  section('Showing fee ($40 + HST, no free first showing)');
+  const stale = [], bareFee = [];
+  htmlFiles.forEach(f => { const t = read(f).replace(/<script[^>]*src[^>]*>/g, '');
+    if (/first showing (is |always |with us is )?free|free (first )?showing|first free|\$30 (each|per)|\(\$30|after the first (free )?one|first one -- typically/i.test(t)) stale.push(f);
+    (t.match(/\$40(?![,\dK])[^<]{0,14}/g) || []).forEach(m => { if (!/HST/.test(m)) bareFee.push(f + ': ' + m); }); });
+  ok(stale.length === 0, 'no page still says the first showing is free or $30: ' + stale.slice(0, 5).join(', '));
+  ok(bareFee.length === 0, 'every $40 showing fee is followed by "+ HST": ' + bareFee.slice(0, 3).join(' | '));
+  ok(htmlFiles.every(f => /Showings \$40 \+ HST each/.test(read(f))), 'every page footer states "Showings $40 + HST each"');
+  ok(/\$40 CAD plus HST/.test(fs.readFileSync(path.join(DIST, 'llms.txt'), 'utf8')) && !/\$30 each|First showing is free/.test(fs.readFileSync(path.join(DIST, 'llms.txt'), 'utf8')), 'llms.txt states the new showing fee');
+  ok(/Showings are \$40 \+ HST each/.test(read('Index.html')) && /\$40 \+ HST/.test(read('how-cashback-works.html')) && /\$40 \+ HST/.test(read('toronto-cashback-realtor.html')), 'homepage, how-it-works and city pages state the fee');
+
   section('Dev site stays out of analytics and HubSpot');
   const hcRe = /window\.HC_PROD = (\/.*?\/)\.test\(location\.hostname\)/.exec(read('Index.html'));
   ok(!!hcRe, 'live-site detector is present in every page head');

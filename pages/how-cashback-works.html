@@ -16,7 +16,7 @@
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://homecashbacks.ca/og-image.png"/>
 <meta property="og:title" content="How It Works | Home Cashbacks Toronto"/>
-<meta property="og:description" content="Flat $4,999 from the commission the seller already set aside. Nothing upfront. No commitment. Everything above $4,999 comes back to you."/>
+<meta property="og:description" content="Flat $4,999 from the commission the seller already set aside. No commitment. Everything above $4,999 comes back to you."/>
 <meta property="og:url" content="https://homecashbacks.ca/how-cashback-works.html"/>
 <meta property="og:type" content="website"/>
 <link rel="stylesheet" href="/assets/fonts.css"/>
@@ -54,7 +54,8 @@
 /* ── SHOWING STRIP — always 3 col ── */
 .hiw-showing{display:grid;grid-template-columns:1fr 1px 1fr 1px 1fr;gap:0;background:var(--bg2);border-radius:8px;padding:1.25rem 1rem;margin-top:1.25rem;align-items:center}
 .hiw-showing-item{text-align:center;padding:0 .5rem}
-.hiw-showing-val{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:600;color:var(--ink);line-height:1}
+.hiw-showing-val{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:600;color:var(--ink);line-height:1;white-space:nowrap}
+@media(max-width:480px){.hiw-showing-val{font-size:22px}}
 .hiw-showing-label{font-size:12px;color:var(--muted);margin-top:.3rem}
 .hiw-showing-div{background:var(--border);align-self:stretch}
 
@@ -89,7 +90,7 @@
     {
       "@type": "Question",
       "name": "Does Home Cashbacks charge the buyer anything?",
-      "acceptedAnswer": {"@type": "Answer", "text": "No. The $4,999 fee comes entirely from the buyer agent commission the seller already set aside. You pay nothing out of pocket and nothing upfront."}
+      "acceptedAnswer": {"@type": "Answer", "text": "No. The $4,999 fee comes entirely from the buyer agent commission the seller already set aside. You pay nothing out of pocket for it and no upfront fee. Showings are $40 + HST each."}
     },
     {
       "@type": "Question",
@@ -203,17 +204,12 @@
   <!-- Step 2 -->
   <div class="hiw-step">
     <div class="hiw-step-label">Step 2</div>
-    <div class="hiw-step-title">Start with a free showing. No paperwork.</div>
+    <div class="hiw-step-title">Start with a showing. No paperwork.</div>
     <p class="hiw-step-text">See a home before you commit to anything. The buyer representation agreement — which locks in your cashback amount in writing — is only signed for that specific property when you are ready to make an offer, as legally required.</p>
     <div class="hiw-showing">
       <div class="hiw-showing-item">
-        <div class="hiw-showing-val">Free</div>
-        <div class="hiw-showing-label">First showing</div>
-      </div>
-      <div class="hiw-showing-div"></div>
-      <div class="hiw-showing-item">
-        <div class="hiw-showing-val">$30</div>
-        <div class="hiw-showing-label">Per additional showing</div>
+        <div class="hiw-showing-val">$40 + HST</div>
+        <div class="hiw-showing-label">Per showing</div>
       </div>
       <div class="hiw-showing-div"></div>
       <div class="hiw-showing-item">
@@ -249,7 +245,7 @@
           <span class="faq-q-text">Does Home Cashbacks charge the buyer anything?</span>
           <span class="faq-icon">+</span>
         </div>
-        <div class="faq-a">No. The $4,999 fee comes from the buyer agent commission the seller already set aside. You pay nothing out of pocket. If you do not buy, you owe nothing beyond any showings after the first free one.</div>
+        <div class="faq-a">No. The $4,999 fee comes from the buyer agent commission the seller already set aside. You pay nothing out of pocket for it. If you do not buy, you owe only the showings you have had ($40 + HST each).</div>
       </div>
       <div class="faq-item">
         <div class="faq-q">
@@ -277,17 +273,17 @@
           <span class="faq-q-text">What if I do not end up buying?</span>
           <span class="faq-icon">+</span>
         </div>
-        <div class="faq-a">You owe nothing except showing fees after the first free one ($30 each). No commission, no cancellation fee, no pressure.</div>
+        <div class="faq-a">You owe only showing fees ($40 + HST each). No commission, no cancellation fee, no pressure.</div>
       </div>
     </div>
   </div>
 
   <!-- CTA -->
   <div class="hiw-cta">
-    <div class="hiw-cta-title">Start with a free showing.</div>
+    <div class="hiw-cta-title">Start with a showing.</div>
     <div class="hiw-cta-sub">No paperwork. No commitment. See how we work before you decide anything.</div>
     <button class="hiw-cta-btn" onclick="openModal()">Book a Free Consultation →</button>
-    <div class="hiw-cta-note">First showing always free · No buyer agreement required · Walk away any time</div>
+    <div class="hiw-cta-note">Showings $40 + HST each · No buyer agreement required · Walk away any time</div>
   </div>
 
 </div>

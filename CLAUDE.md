@@ -11,6 +11,7 @@ Cashback buyer-agent business in the GTA. Owner/website: **Ben**. Realtor: **Lal
 - **Booking form keeps separate First name and Last name fields** (many clients have compound Farsi names — no automatic name splitting). `f-name` is the first-name field; legacy inline code on `pages/Index.html` and `pages/our-story.html` still references it.
 - **Any new tracking or data collection needs a matching update to `pages/privacy.html`** (PIPEDA and CASL apply). The A/B test (browser storage + GA4 `ab_variant`) is already disclosed there.
 - **Ontario advertising rules (TRESA/RECO):** ads must clearly identify the brokerage (Smart Brokerages). Flag wording changes about who operates or provides services for a compliance check. Dollar figures must be traceable to a stated assumption (cashback = 2.5% buyer commission − flat $4,999 fee).
+- **Showing fee:** every showing is **$40 CAD + HST** (there is no free first showing). Never write a bare "$40" — always "$40 + HST". The footer, `llms.txt`, structured data (`components/head.html`) and FAQs must agree. "Free consultation" wording is separate and unchanged. Tests guard this.
 - **Don't invent data.** `data/cities.json` → Toronto → `localFacts.comps` (recent sales) is empty on purpose until Ben supplies real sales.
 - Colours and fonts live only in the `:root` variables of `assets/styles.css` (brand green `--cta #1c864e`, navy `#1a2332`; Rubik body, Cormorant Garamond headings). Change them there, nowhere else.
 - Explain things to Ben in plain language, tell him exactly what to do, and verify before saying "done".
