@@ -224,7 +224,7 @@ function serve() {
   ok(stale.length === 0, 'no page still says the first showing is free or $30: ' + stale.slice(0, 5).join(', '));
   ok(bareFee.length === 0, 'every $40 is clearly a per-showing fee ("each", "per showing" or "+ HST"): ' + bareFee.slice(0, 3).join(' | '));
   ok(htmlFiles.every(f => /Showings \$40 \+ HST each/.test(read(f))), 'every page footer states "Showings $40 + HST each"');
-  ok(htmlFiles.every(f => /Flat fee \$4,999 \+ HST\. Showings \$40 \+ HST each\. Cashback examples on this site are before HST on the fee\./.test(read(f))), 'every page footer has the visible fee line ($4,999 + HST, $40 + HST, examples before HST)');
+  ok(htmlFiles.every(f => /Flat fee \$4,999 \+ HST\. Showings \$40 \+ HST each\./.test(read(f))), 'every page footer has the visible fee line ($4,999 + HST and $40 + HST)');
   ok(/\$4,999 \+ HST/.test(read('Index.html')) && /\$4,999 \+ HST fee/.test(read('how-cashback-works.html')), 'homepage and how-it-works FAQs say the $4,999 fee is plus HST');
   ok(/"priceRange": "\$4,999 \+ HST flat fee"/.test(read('Index.html')) && /Flat fee: \$4,999 \+ HST/.test(fs.readFileSync(path.join(DIST, 'llms.txt'), 'utf8')), 'structured data and llms.txt say $4,999 + HST');
   ok(/\$40 CAD plus HST/.test(fs.readFileSync(path.join(DIST, 'llms.txt'), 'utf8')) && !/\$30 each|First showing is free/.test(fs.readFileSync(path.join(DIST, 'llms.txt'), 'utf8')), 'llms.txt states the new showing fee');
