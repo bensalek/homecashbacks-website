@@ -875,8 +875,7 @@ function openModal(type){
   if(mortgageForm){ mortgageForm.style.display=isMortgage?'block':'none'; }
   document.getElementById('modal-tag').textContent=isMortgage?'Mortgage pre-approval':(isCalculator?'Your cashback estimate':'Book a Free Consultation');
   document.getElementById('modal-title').textContent=isMortgage?"Get pre-approved":(isCalculator?"Let's confirm your number":"Let's get started");
-  var sf=document.getElementById('success-fee'); if(sf) sf.style.display=isMortgage?'none':'';
-  document.getElementById('modal-sub').textContent=isMortgage?"We'll connect you with a trusted mortgage broker within one business day.":(isCalculator?"We'll email you your exact cashback estimate and confirm it's accurate for your situation.":"Showings are $40 + HST each, no commitment. We'll follow up within a few hours.");
+  document.getElementById('modal-sub').textContent=isMortgage?"We'll connect you with a trusted mortgage broker within one business day.":(isCalculator?"We'll email you your exact cashback estimate and confirm it's accurate for your situation.":"No commitment. We'll follow up within a few hours.");
   ['err-name','err-contact','err-m-name','err-m-contact'].forEach(id=>{
     const el=document.getElementById(id);
     if(el){el.textContent='',el.classList.remove('show');}

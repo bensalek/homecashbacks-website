@@ -231,14 +231,8 @@ function serve() {
   const faqFirst = await p.textContent('#faq-service .faq-q');
   ok(/How much do showings cost\?/.test(faqFirst), 'homepage FAQ: "How much do showings cost?" is the first question: ' + faqFirst.trim().slice(0, 40));
   ok(/\$40 \+ HST per showing/.test(await p.textContent('.how-steps-desktop')) && /\$40 \+ HST per showing/.test(await p.textContent('.how-steps-mobile, .how-steps-mob, .how-section')), 'homepage "Book a showing" step states $40 + HST per showing');
-  await p.evaluate(() => openModal());
-  ok(/\$40 \+ HST each/.test(await p.textContent('#modal-sub')), 'homepage pop-up says showings are $40 + HST each: ' + (await p.textContent('#modal-sub')).trim());
-  ok(await p.evaluate(() => getComputedStyle(document.getElementById('success-fee')).display !== 'none'), 'success message shows the showing fee for a buyer booking');
   await p._ctx.close();
-  p = await open(); await p.goto(base + '/our-story.html'); await p.evaluate(() => openModal());
-  ok(/\$40 \+ HST each/.test(await p.textContent('#modal-sub')) && /\$40 \+ HST each/.test(await p.textContent('#form-success')), 'other pages: pop-up and success message state the showing fee');
-  await p._ctx.close();
-  ok(!/\$40/.test(read('toronto-listing-agent.html').match(/id="form-success"[\s\S]*?<\/div>\s*<\/div>/)[0]) && !/Showings are \$40/.test(read('toronto-listing-agent.html').match(/<div class="modal-sub"[^>]*>[^<]*/)[0]), 'seller page pop-up does not mention the buyer showing fee');
+  ok(!/\$40/.test(read('Index.html').match(/id="modal-sub"[^>]*>[^<]*/)[0]) && !/success-fee/.test(read('Index.html')) && !/\$40/.test(read('our-story.html').match(/id="form-success"[\s\S]*?<\/div>\s*<\/div>/)[0]), 'booking pop-up and confirmation message do not mention the showing fee');
   ok(/\$40 CAD plus HST/.test(fs.readFileSync(path.join(DIST, 'llms.txt'), 'utf8')) && !/\$30 each|First showing is free/.test(fs.readFileSync(path.join(DIST, 'llms.txt'), 'utf8')), 'llms.txt states the new showing fee');
   ok(/Showings are \$40 \+ HST each/.test(read('Index.html')) && /\$40 \+ HST/.test(read('how-cashback-works.html')) && /\$40 \+ HST/.test(read('toronto-cashback-realtor.html')), 'homepage, how-it-works and city pages state the fee');
 

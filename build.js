@@ -178,7 +178,6 @@ pages.forEach(function(filename) {
       .replace(/(<div class="modal-title" id="modal-title">)[^<]*/, '$1Tell us about your home')
       .replace(/(<div class="modal-sub"[^>]*>)[^<]*/, '$1We will walk through your home, review the market, and give you an honest price estimate. No commitment required.')
       .replace(/>Claim My Free Showing<\/button>/, '>Request My Home Value</button>')
-      .replace(/<p class="f-success-fee"[^>]*>[^<]*<\/p>\s*/, '')
       .replace(/(<input type="hidden" id="f-source"[^>]*value=")[^"]*"/, '$1seller"');
   }
 
