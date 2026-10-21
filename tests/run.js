@@ -241,7 +241,8 @@ function serve() {
   ok((await p.$$('h1')).length === 1 && /[\u0600-\u06FF]/.test(await p.textContent('h1')), 'Farsi page has one H1, written in Farsi');
   const faText = await p.textContent('.fa-page');
   ok(/Smart Brokerages/.test(faText) && /RECO/.test(faText), 'Farsi page names Smart Brokerages and RECO');
-  ok(/\$4,999/.test(faText) && /\$20,001/.test(faText) && /2\.5%/.test(faText), 'Farsi page states the fee, cashback and 2.5% assumption behind the example');
+  ok(/۴٬۹۹۹/.test(faText) && /۲۰٬۰۰۱/.test(faText) && /۲٫۵٪/.test(faText) && !/\d/.test(faText.replace(/\(437\) 443-7556/, '')), 'Farsi page states the fee, cashback and 2.5% assumption in Persian digits (only the phone number keeps Latin digits)');
+  ok(/ریلتور/.test(await p.title()) && /ریلتور/.test(await p.textContent('h1')) && /مشاور املاک/.test(faText), 'Farsi page uses both "ریلتور" (realtor) and "مشاور املاک" in the title and H1/body');
   ok(await p.evaluate(() => getComputedStyle(document.querySelector('.guide-eyebrow')).letterSpacing === 'normal' || getComputedStyle(document.querySelector('.guide-eyebrow')).letterSpacing === '0px'), 'Farsi page has no letter-spacing (it breaks Persian letters)');
   ok(await p.evaluate(async () => { await document.fonts.ready; return document.fonts.check('16px "Vazirmatn NL"', '\u0641\u0627\u0631\u0633\u06cc'); }), 'Farsi page: the Vazirmatn font loads and is used for Persian text');
   await p.evaluate(() => openModal()); ok(await p.isVisible('#f-name'), 'Farsi page: booking pop-up opens');
