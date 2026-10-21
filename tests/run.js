@@ -243,6 +243,7 @@ function serve() {
   ok(/Smart Brokerages/.test(faText) && /RECO/.test(faText), 'Farsi page names Smart Brokerages and RECO');
   ok(/\$4,999/.test(faText) && /\$20,001/.test(faText) && /2\.5%/.test(faText), 'Farsi page states the fee, cashback and 2.5% assumption behind the example');
   ok(await p.evaluate(() => getComputedStyle(document.querySelector('.guide-eyebrow')).letterSpacing === 'normal' || getComputedStyle(document.querySelector('.guide-eyebrow')).letterSpacing === '0px'), 'Farsi page has no letter-spacing (it breaks Persian letters)');
+  ok(await p.evaluate(async () => { await document.fonts.ready; return document.fonts.check('16px "Vazirmatn NL"', '\u0641\u0627\u0631\u0633\u06cc'); }), 'Farsi page: the Vazirmatn font loads and is used for Persian text');
   await p.evaluate(() => openModal()); ok(await p.isVisible('#f-name'), 'Farsi page: booking pop-up opens');
   await p._ctx.close();
   const faLinkers = htmlFiles.filter(f => read(f).includes('href="/farsi-speaking-realtor-toronto.html"'));

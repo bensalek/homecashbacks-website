@@ -11,12 +11,23 @@
 <meta property="og:image" content="https://homecashbacks.ca/og-image.png"/>
 <meta name="robots" content="index, follow"/>
 <link rel="canonical" href="https://homecashbacks.ca/farsi-speaking-realtor-toronto.html"/>
+<link rel="preload" href="/assets/fonts/vazirmatn-nl-regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/vazirmatn-nl-bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/guide-pillar.css"/>
 <style>
-/* Farsi page: right-to-left, system fonts (Rubik and Cormorant have no Persian letters). */
-.fa-page,.fa-page .guide-h1,.fa-page .guide-cta-title,.fa-page .guide-h2,.fa-page .guide-cta-btn{font-family:Tahoma,'Segoe UI','Noto Naskh Arabic','Noto Sans Arabic',system-ui,sans-serif}
+/* Farsi page: right-to-left. Vazirmatn (SIL Open Font License) draws the Persian letters; Rubik still draws Latin letters and digits. Loaded on this page only. */
+@font-face{font-family:'Vazirmatn NL';font-style:normal;font-weight:400;font-display:swap;src:url('/assets/fonts/vazirmatn-nl-regular.woff2') format('woff2')}
+@font-face{font-family:'Vazirmatn NL';font-style:normal;font-weight:700;font-display:swap;src:url('/assets/fonts/vazirmatn-nl-bold.woff2') format('woff2')}
+.fa-page,.fa-page .guide-h1,.fa-page .guide-cta-title,.fa-page .guide-h2,.fa-page .guide-cta-btn,.fa-page .guide-eyebrow,.fa-page .guide-eyebrow-sm,.fa-page .guide-cta-eyebrow{font-family:'Vazirmatn NL','Rubik',Tahoma,'Segoe UI','Noto Naskh Arabic',system-ui,sans-serif}
+.fa-page .guide-h1,.fa-page .guide-h2,.fa-page .guide-cta-title{font-weight:700}
+.fa-page .guide-p,.fa-page .fa-list li{font-size:16px}
+.fa-page .guide-sub{font-size:16.5px}
+.fa-page .guide-eyebrow,.fa-page .guide-eyebrow-sm,.fa-page .guide-cta-eyebrow,.fa-page .example-box-label{font-size:13px;font-weight:700}
+.fa-page .guide-sub{color:rgba(232,237,245,.78)}
+.fa-page .fa-note{font-size:13px}
 .fa-page *{letter-spacing:0!important;text-transform:none!important}
-.fa-page .guide-h1{line-height:1.45}
+.fa-page .guide-h1{line-height:1.5}
+.fa-page .guide-h2,.fa-page .guide-cta-title{line-height:1.6}
 .fa-page .guide-p,.fa-page .guide-sub{line-height:2}
 .fa-page .num{direction:ltr;unicode-bidi:isolate;display:inline-block}
 .fa-list{list-style:none;padding:0;margin:0 0 1rem}
