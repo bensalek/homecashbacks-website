@@ -136,6 +136,8 @@ var HC_HUBSPOT = {
 };
 
 function sendToHubSpot(lead) {
+  // Only the real site sends leads to HubSpot. The dev site and previews still post to Netlify Forms, so forms can be tested there.
+  if (!window.HC_PROD) { console.info('HubSpot submission skipped (not the live site).'); return Promise.resolve(); }
   try {
     var fields = [
       { objectTypeId: '0-1', name: 'firstname', value: lead.firstname },

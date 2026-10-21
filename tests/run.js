@@ -68,8 +68,9 @@ function serve() {
   const { s: server, base } = await serve();
   let browser;
   try { browser = await pw.chromium.launch(); } catch (e) { browser = await pw.chromium.launch({ executablePath: process.env.CHROME_PATH || '/opt/pw-browsers/chromium' }); }
-  const open = async (w = 390, init) => {
+  const open = async (w = 390, init, dev = false) => {
     const ctx = await browser.newContext({ viewport: { width: w, height: 800 } });
+    if (!dev) await ctx.addInitScript('window.HC_FORCE_PROD = true;');   // exercise the live-site code path (HubSpot, analytics)
     if (init) await ctx.addInitScript(init);
     const p = await ctx.newPage();
     await p.route(u => !u.href.startsWith(base) && !u.href.includes('api.hsforms.com'), r => r.abort());   // no external sites
@@ -190,6 +191,43 @@ function serve() {
   section('Moved shared styles (guide pages)');
   for (const f of ['choose-cashback-realtor-toronto', 'fsbo-vs-flat-fee-realtor', 'home-repairs-before-selling', 'home-staging-tips-toronto', 'low-commission-realtor-toronto', 'pricing-strategy-toronto']) ok(read(f + '.html').includes('guide-pillar.css'), f + ' loads guide-pillar.css');
   p = await open(); await p.goto(base + '/pricing-strategy-toronto.html'); ok((await p.evaluate(() => getComputedStyle(document.querySelector('.guide-hero')).backgroundColor)) !== 'rgba(0, 0, 0, 0)', 'guide hero is styled from the shared file'); await p._ctx.close();
+
+  section('Homepage and guide wording (SEO)');
+  p = await open(); await p.goto(base + '/Index.html');
+  const hTitle = await p.title(), hMeta = await p.getAttribute('meta[name=description]', 'content'), hH1 = (await p.textContent('h1')).replace(/\s+/g, ' ').trim();
+  ok(/^Cash Back Realtor Toronto/.test(hTitle) && hTitle.length <= 62, 'homepage title starts with "Cash Back Realtor Toronto" and fits Google: ' + hTitle + ' (' + hTitle.length + ')');
+  ok(/cash back realtor/i.test(hMeta) && hMeta.length <= 160, 'homepage meta description has "cash back realtor" and fits (' + hMeta.length + ')');
+  ok(/^Toronto Cash Back Realtor/.test(hH1), 'homepage H1 starts "Toronto Cash Back Realtor": ' + hH1);
+  ok((await p.getAttribute('meta[property="og:title"]', 'content')) === hTitle && (await p.getAttribute('meta[property="og:description"]', 'content')) === hMeta && (await p.getAttribute('meta[name="twitter:title"]', 'content')) === hTitle, 'homepage share tags match the title and description');
+  const homeLinks = await p.$$eval('a', a => a.map(x => x.getAttribute('href')));
+  ['/how-cashback-works-ontario.html', '/flat-fee-realtor-toronto.html', '/low-commission-realtor-toronto.html', '/cashback-realtor-vs-cashback-mortgage.html'].forEach(h => ok(homeLinks.includes(h) && fs.existsSync(path.join(DIST, h)), 'homepage links to ' + h));
+  await p._ctx.close();
+  p = await open(); await p.goto(base + '/how-cashback-works-ontario.html');
+  ok(/Cash Back Real Estate/.test(await p.title()) && /Cash Back Real Estate/.test(await p.textContent('h1')), 'how-cashback-works-ontario: title and H1 use "cash back real estate"');
+  ok(/cash back real estate/i.test(await p.textContent('.page-hero-sub')), 'how-cashback-works-ontario: intro paragraph uses "cash back real estate"');
+  await p._ctx.close();
+  p = await open(); await p.goto(base + '/cashback-legal-ontario.html');
+  const faqVisible = await p.textContent('#faq'); const faqLd = await p.$$eval('script[type="application/ld+json"]', els => els.map(e => JSON.parse(e.textContent)).find(j => j['@type'] === 'FAQPage'));
+  ok(/Can real estate cashback in Canada help with my home purchase\?/.test(faqVisible), 'legal page shows the new FAQ question');
+  ok(faqLd.mainEntity.some(q => /Can real estate cashback in Canada/.test(q.name)), 'legal page FAQ schema includes the new question');
+  ok(faqLd.mainEntity.every(q => faqVisible.includes(q.name)), 'every FAQ schema question is also visible on the page (' + faqLd.mainEntity.length + ')');
+  ok(!faqLd.mainEntity.some(q => /   /.test(q.acceptedAnswer.text)), 'FAQ answers have no stray gaps');
+  await p._ctx.close();
+  const mortgageLinkers = htmlFiles.filter(f => read(f).includes('href="/cashback-realtor-vs-cashback-mortgage.html"') && f !== 'cashback-realtor-vs-cashback-mortgage.html');
+  ok(mortgageLinkers.length >= 6, 'cashback-vs-mortgage page is linked from ' + mortgageLinkers.length + ' pages (need 6+)');
+
+  section('Dev site stays out of analytics and HubSpot');
+  const hcRe = /window\.HC_PROD = (\/.*?\/)\.test\(location\.hostname\)/.exec(read('Index.html'));
+  ok(!!hcRe, 'live-site detector is present in every page head');
+  if (hcRe) { const re = eval(hcRe[1]); ok(['homecashbacks.ca', 'www.homecashbacks.ca'].every(h => re.test(h)) && ['homecashbacksdev.netlify.app', 'deploy-preview-1--homecashbacksdev.netlify.app', 'localhost', 'homecashbacks.ca.evil.com', 'evilhomecashbacks.ca'].every(h => !re.test(h)), 'only homecashbacks.ca and www.homecashbacks.ca count as the live site'); }
+  p = await open(390, null, true); const devReqs = [];
+  p.on('request', r => devReqs.push(r.method() + ' ' + r.url()));
+  await p.goto(base + '/Index.html'); await p.waitForTimeout(300); await p.evaluate(() => openModal());
+  await p.fill('#f-name', 'Dev'); await p.fill('#f-lastname', 'Tester'); await p.fill('#f-email', 'dev+test@example.com'); await p.fill('#f-phone', '416-555-1234'); await p.click('#f-submit'); await p.waitForTimeout(600);
+  ok(await p.evaluate(() => window.HC_PROD === false), 'non-live host: window.HC_PROD is false');
+  ok(!devReqs.some(u => /hsforms|hs-scripts|hubspot|clarity\.ms|googletagmanager|google-analytics/.test(u)), 'non-live host: no requests to HubSpot, Clarity or Google Analytics');
+  ok(devReqs.some(u => u.startsWith('POST ' + base)) && await p.isVisible('#form-success'), 'non-live host: form still posts to Netlify Forms and shows success');
+  await p._ctx.close();
 
   section('Privacy policy');
   p = await open(); await p.goto(base + '/privacy.html'); ok(/test different wording on buttons/.test(await p.textContent('body')), 'discloses the button test'); await p._ctx.close();
