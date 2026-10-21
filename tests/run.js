@@ -220,10 +220,13 @@ function serve() {
   const stale = [], bareFee = [];
   htmlFiles.forEach(f => { const t = read(f).replace(/<script[^>]*src[^>]*>/g, '');
     if (/first showing (is |always |with us is )?free|free (first )?showing|first free|\$30 (each|per)|\(\$30|after the first (free )?one|first one -- typically/i.test(t)) stale.push(f);
-    (t.match(/\$40(?![,\dK])[^<]{0,14}/g) || []).forEach(m => { if (!/HST/.test(m)) bareFee.push(f + ': ' + m); }); });
+    (t.match(/\$40(?![,\dK])[^<]{0,14}/g) || []).forEach(m => { if (!/^\$40\s*(\+ HST|each|per showing|CAD plus HST)/.test(m)) bareFee.push(f + ': ' + m); }); });
   ok(stale.length === 0, 'no page still says the first showing is free or $30: ' + stale.slice(0, 5).join(', '));
-  ok(bareFee.length === 0, 'every $40 showing fee is followed by "+ HST": ' + bareFee.slice(0, 3).join(' | '));
+  ok(bareFee.length === 0, 'every $40 is clearly a per-showing fee ("each", "per showing" or "+ HST"): ' + bareFee.slice(0, 3).join(' | '));
   ok(htmlFiles.every(f => /Showings \$40 \+ HST each/.test(read(f))), 'every page footer states "Showings $40 + HST each"');
+  ok(htmlFiles.every(f => /Flat fee \$4,999 \+ HST\. Showings \$40 \+ HST each\. Cashback examples on this site are before HST on the fee\./.test(read(f))), 'every page footer has the visible fee line ($4,999 + HST, $40 + HST, examples before HST)');
+  ok(/\$4,999 \+ HST/.test(read('Index.html')) && /\$4,999 \+ HST fee/.test(read('how-cashback-works.html')), 'homepage and how-it-works FAQs say the $4,999 fee is plus HST');
+  ok(/"priceRange": "\$4,999 \+ HST flat fee"/.test(read('Index.html')) && /Flat fee: \$4,999 \+ HST/.test(fs.readFileSync(path.join(DIST, 'llms.txt'), 'utf8')), 'structured data and llms.txt say $4,999 + HST');
   ok(/\$40 CAD plus HST/.test(fs.readFileSync(path.join(DIST, 'llms.txt'), 'utf8')) && !/\$30 each|First showing is free/.test(fs.readFileSync(path.join(DIST, 'llms.txt'), 'utf8')), 'llms.txt states the new showing fee');
   ok(/Showings are \$40 \+ HST each/.test(read('Index.html')) && /\$40 \+ HST/.test(read('how-cashback-works.html')) && /\$40 \+ HST/.test(read('toronto-cashback-realtor.html')), 'homepage, how-it-works and city pages state the fee');
 
