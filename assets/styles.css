@@ -140,6 +140,7 @@ nav{position:fixed;top:58px;left:0;right:0;z-index:570;background:var(--white);b
 .f-success-icon{font-size:36px;margin-bottom:.6rem}
 .f-success h3{font-family:'Cormorant Garamond',serif;font-size:21px;color:var(--ink);margin-bottom:.3rem}
 .f-success p{font-size:13px;color:var(--muted)}
+.f-success .f-success-fee{margin-top:.5rem}
 
 /* ── SHARED LAYOUT ───────────────────────────────────────── */
 .section{padding:3rem 2rem}
@@ -216,6 +217,7 @@ footer{background:var(--dark);padding:2.5rem 2rem 1.25rem;font-family:'Rubik',sa
 /* Bottom row */
 .foot-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.5rem;padding-top:.85rem}
 .foot-copy{font-size:11px;color:rgba(255,255,255,.2)}
+.foot-fees{font-size:12px;line-height:1.55;color:rgba(255,255,255,.55);padding-top:.85rem;margin:0}
 .foot-privacy{font-size:11px;color:rgba(255,255,255,.25);text-decoration:none;transition:color .2s}
 .foot-privacy:hover{color:var(--cta)}
 
