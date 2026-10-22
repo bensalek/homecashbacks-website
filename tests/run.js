@@ -245,6 +245,11 @@ function serve() {
   ok(/ریلتور/.test(await p.title()) && /ریلتور/.test(await p.textContent('h1')) && /مشاور املاک/.test(faText), 'Farsi page uses both "ریلتور" (realtor) and "مشاور املاک" in the title and H1/body');
   ok(await p.evaluate(() => getComputedStyle(document.querySelector('.guide-eyebrow')).letterSpacing === 'normal' || getComputedStyle(document.querySelector('.guide-eyebrow')).letterSpacing === '0px'), 'Farsi page has no letter-spacing (it breaks Persian letters)');
   ok(await p.evaluate(async () => { await document.fonts.ready; return document.fonts.check('16px "Vazirmatn NL"', '\u0641\u0627\u0631\u0633\u06cc'); }), 'Farsi page: the Vazirmatn font loads and is used for Persian text');
+  const faLd = await p.$$eval('script[type="application/ld+json"]', els => els.map(e => JSON.parse(e.textContent)).find(j => j['@type'] === 'FAQPage'));
+  const faQs = await p.$$eval('details.fa-faq summary', els => els.map(e => e.textContent.replace(/\s+/g, ' ').trim()));
+  ok(faQs.length === 8 && !!faLd && faLd.mainEntity.length === faQs.length && faLd.mainEntity.every(q => faQs.includes(q.name.replace(/\s+/g, ' ').trim())), 'Farsi FAQ: ' + faQs.length + ' questions, each also in the FAQPage markup');
+  await p.click('details.fa-faq summary'); ok(await p.evaluate(() => document.querySelector('details.fa-faq').open && document.querySelector('details.fa-faq p').offsetHeight > 0), 'Farsi FAQ: a question opens and shows its answer');
+  ok(/۴۰ دلار/.test(faQs.join(' ') + await p.textContent('.fa-faq-list')) && !/\$30|رایگان بود/.test(await p.textContent('.fa-faq-list')), 'Farsi FAQ states the showing fee and no free first showing');
   await p.evaluate(() => openModal()); ok(await p.isVisible('#f-name'), 'Farsi page: booking pop-up opens');
   await p._ctx.close();
   const faLinkers = htmlFiles.filter(f => read(f).includes('href="/farsi-speaking-realtor-toronto.html"'));
