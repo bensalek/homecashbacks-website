@@ -109,6 +109,17 @@
 .fa-list li{position:relative;padding:.35rem 1.6rem .35rem 0;font-size:15px;color:var(--muted);line-height:1.9}
 .fa-list li::before{content:'✓';position:absolute;right:0;top:.35rem;color:var(--cta);font-weight:700}
 .fa-page .guide-cta-sub a{color:var(--cta);font-weight:600;text-decoration:none}
+.fa-trust{display:flex;gap:1.1rem;align-items:flex-start;background:var(--white);border:1px solid var(--border);border-radius:8px;padding:1.1rem;margin-bottom:2rem}
+.fa-trust img{width:96px;height:120px;object-fit:cover;object-position:top;border-radius:6px;flex-shrink:0;border:2px solid var(--cta)}
+.fa-trust-text{min-width:0}
+.fa-trust-name{font-weight:700;font-size:18px;color:var(--ink);line-height:1.6}
+.fa-trust-title{font-size:15px;color:var(--ink);line-height:1.8}
+.fa-trust-meta{font-size:13px;color:var(--muted);line-height:1.9}
+.fa-google{display:inline-flex;gap:.45rem;align-items:center;margin:.4rem 0 .2rem;padding:.3rem .7rem;border:1px solid var(--border);border-radius:999px;font-size:13px;color:var(--ink);text-decoration:none;background:var(--bg)}
+.fa-stars{color:#e8a317;letter-spacing:1px!important;font-size:14px}
+.fa-trust-line{margin:.35rem 0 .7rem;font-size:15px;color:var(--muted);line-height:1.9}
+.fa-trust .guide-cta-btn{padding:10px 22px;font-size:14px}
+@media(max-width:480px){.fa-trust{flex-direction:column;align-items:center;text-align:center}.fa-trust-text{width:100%}}
 .fa-faq-list{display:flex;flex-direction:column;gap:.6rem}
 .fa-faq{background:var(--white);border:1px solid var(--border);border-radius:6px}
 .fa-faq summary{cursor:pointer;list-style:none;padding:1rem 1.1rem;font-weight:700;font-size:16px;line-height:1.8;color:var(--ink);display:flex;justify-content:space-between;gap:1rem;align-items:flex-start}
@@ -134,6 +145,18 @@
 </div>
 
 <div class="guide-body">
+
+  <div class="fa-trust">
+    <img src="/assets/headshot.webp" alt="لاله موسوی، ریلتور" width="96" height="120" loading="lazy" decoding="async"/>
+    <div class="fa-trust-text">
+      <div class="fa-trust-name">لاله موسوی</div>
+      <div class="fa-trust-title">ریلتور (مشاور املاک) دارای مجوز در انتاریو</div>
+      <div class="fa-trust-meta"><span class="num">Smart Brokerages</span> · عضو <span class="num">RECO</span>، <span class="num">TRREB</span>، <span class="num">CREA</span> و <span class="num">OREA</span></div>
+      <a class="fa-google" href="https://share.google/fu2wgAYhOFcjSZTxX" target="_blank" rel="noopener"><span class="fa-stars" aria-hidden="true">★★★★★</span> امتیاز ۵٫۰ در <span class="num">Google</span></a>
+      <p class="fa-trust-line">مشاوره و پیگیری کامل به زبان فارسی.</p>
+      <button class="guide-cta-btn" onclick="openModal()">رزرو مشاورهٔ رایگان</button>
+    </div>
+  </div>
 
   <div class="guide-section">
     <div class="guide-eyebrow-sm">کش‌بک چطور کار می‌کند؟</div>

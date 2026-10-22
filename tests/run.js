@@ -261,6 +261,7 @@ function serve() {
   ok(faQs.length === 8 && !!faLd && faLd.mainEntity.length === faQs.length && faLd.mainEntity.every(q => faQs.includes(q.name.replace(/\s+/g, ' ').trim())), 'Farsi FAQ: ' + faQs.length + ' questions, each also in the FAQPage markup');
   await p.click('details.fa-faq summary'); ok(await p.evaluate(() => document.querySelector('details.fa-faq').open && document.querySelector('details.fa-faq p').offsetHeight > 0), 'Farsi FAQ: a question opens and shows its answer');
   ok(/۴۰ دلار/.test(faQs.join(' ') + await p.textContent('.fa-faq-list')) && !/\$30|رایگان بود/.test(await p.textContent('.fa-faq-list')), 'Farsi FAQ states the showing fee and no free first showing');
+  ok(await p.evaluate(() => { const c = document.querySelector('.fa-trust'); const i = c && c.querySelector('img'); return !!c && !!i && i.complete && i.naturalWidth > 0 && /لاله موسوی/.test(c.textContent) && /RECO/.test(c.textContent) && !!c.querySelector('a[href*="share.google"]') && !!c.querySelector('button'); }), 'Farsi page: trust card near the top (photo, name, licence and membership, Google rating, booking button)');
   await p.evaluate(() => openModal()); ok(await p.isVisible('#f-name'), 'Farsi page: booking pop-up opens');
   await p._ctx.close();
   const faLinkers = htmlFiles.filter(f => read(f).includes('href="/farsi-speaking-realtor-toronto.html"'));
