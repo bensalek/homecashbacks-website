@@ -216,6 +216,17 @@ function serve() {
   const mortgageLinkers = htmlFiles.filter(f => read(f).includes('href="/cashback-realtor-vs-cashback-mortgage.html"') && f !== 'cashback-realtor-vs-cashback-mortgage.html');
   ok(mortgageLinkers.length >= 6, 'cashback-vs-mortgage page is linked from ' + mortgageLinkers.length + ' pages (need 6+)');
 
+  section('Market data (TRREB September 2026)');
+  const cityFiles = htmlFiles.filter(f => /-cashback-realtor\.html$/.test(f) && f !== 'toronto-listing-agent.html');
+  const staleMonth = [], badCashback = [];
+  cityFiles.forEach(f => { const h = read(f);
+    if (!/September 2026/.test(h) || /August 2026|July 2026/.test(h.replace(/<script[\s\S]*?<\/script>/g, ''))) staleMonth.push(f);
+    const m = /average sale price (?:in|across)[^$]*\$([\d,]+)/.exec(h.replace(/<[^>]+>/g, ' ')); const c = /Average cashback[^$]*\$([\d,]+)|\$([\d,]+)<\/[^>]*>\s*<[^>]*>[^<]*(?:avg|average) cashback/i.exec(h);
+    if (m) { const exp = Math.round(parseInt(m[1].replace(/,/g, ''), 10) * 0.025 - 4999).toLocaleString('en-US'); if (!h.includes('$' + exp)) badCashback.push(f + ' expects $' + exp); } });
+  ok(cityFiles.length >= 20 && staleMonth.length === 0, cityFiles.length + ' city pages all cite September 2026 and none still cite August/July: ' + staleMonth.slice(0, 4).join(', '));
+  ok(badCashback.length === 0, 'each city page shows the cashback worked out from its own average price (avg x 2.5% - $4,999): ' + badCashback.slice(0, 3).join(' | '));
+  ok(/September 2026/.test(read('toronto-market-trends.html')) && !/August 2026(?!\\?'s)/.test(read('toronto-market-trends.html').replace(/August 2026\\?'s/g, '').replace(/Change from August 2026/g, '')) && /\$1,006,409/.test(read('toronto-market-trends.html')), 'market trends page shows September 2026 and the GTA average $1,006,409');
+
   section('Showing fee ($40 + HST, no free first showing)');
   const stale = [], bareFee = [];
   htmlFiles.forEach(f => { const t = read(f).replace(/<script[^>]*src[^>]*>/g, '');
