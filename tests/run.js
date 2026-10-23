@@ -216,6 +216,17 @@ function serve() {
   const mortgageLinkers = htmlFiles.filter(f => read(f).includes('href="/cashback-realtor-vs-cashback-mortgage.html"') && f !== 'cashback-realtor-vs-cashback-mortgage.html');
   ok(mortgageLinkers.length >= 6, 'cashback-vs-mortgage page is linked from ' + mortgageLinkers.length + ' pages (need 6+)');
 
+  section('Market data (TRREB September 2026)');
+  const cityFiles = htmlFiles.filter(f => /-cashback-realtor\.html$/.test(f) && f !== 'toronto-listing-agent.html');
+  const staleMonth = [], badCashback = [];
+  cityFiles.forEach(f => { const h = read(f);
+    if (!/September 2026/.test(h) || /August 2026|July 2026/.test(h.replace(/<script[\s\S]*?<\/script>/g, ''))) staleMonth.push(f);
+    const m = /average sale price (?:in|across)[^$]*\$([\d,]+)/.exec(h.replace(/<[^>]+>/g, ' ')); const c = /Average cashback[^$]*\$([\d,]+)|\$([\d,]+)<\/[^>]*>\s*<[^>]*>[^<]*(?:avg|average) cashback/i.exec(h);
+    if (m) { const exp = Math.round(parseInt(m[1].replace(/,/g, ''), 10) * 0.025 - 4999).toLocaleString('en-US'); if (!h.includes('$' + exp)) badCashback.push(f + ' expects $' + exp); } });
+  ok(cityFiles.length >= 20 && staleMonth.length === 0, cityFiles.length + ' city pages all cite September 2026 and none still cite August/July: ' + staleMonth.slice(0, 4).join(', '));
+  ok(badCashback.length === 0, 'each city page shows the cashback worked out from its own average price (avg x 2.5% - $4,999): ' + badCashback.slice(0, 3).join(' | '));
+  ok(/September 2026/.test(read('toronto-market-trends.html')) && !/August 2026(?!\\?'s)/.test(read('toronto-market-trends.html').replace(/August 2026\\?'s/g, '').replace(/Change from August 2026/g, '')) && /\$1,006,409/.test(read('toronto-market-trends.html')), 'market trends page shows September 2026 and the GTA average $1,006,409');
+
   section('Showing fee ($40 + HST, no free first showing)');
   const stale = [], bareFee = [];
   htmlFiles.forEach(f => { const t = read(f).replace(/<script[^>]*src[^>]*>/g, '');
@@ -231,16 +242,32 @@ function serve() {
   const faqFirst = await p.textContent('#faq-service .faq-q');
   ok(/How much do showings cost\?/.test(faqFirst), 'homepage FAQ: "How much do showings cost?" is the first question: ' + faqFirst.trim().slice(0, 40));
   ok(/\$40 \+ HST per showing/.test(await p.textContent('.how-steps-desktop')) && /\$40 \+ HST per showing/.test(await p.textContent('.how-steps-mobile, .how-steps-mob, .how-section')), 'homepage "Book a showing" step states $40 + HST per showing');
-  await p.evaluate(() => openModal());
-  ok(/\$40 \+ HST each/.test(await p.textContent('#modal-sub')), 'homepage pop-up says showings are $40 + HST each: ' + (await p.textContent('#modal-sub')).trim());
-  ok(await p.evaluate(() => getComputedStyle(document.getElementById('success-fee')).display !== 'none'), 'success message shows the showing fee for a buyer booking');
   await p._ctx.close();
-  p = await open(); await p.goto(base + '/our-story.html'); await p.evaluate(() => openModal());
-  ok(/\$40 \+ HST each/.test(await p.textContent('#modal-sub')) && /\$40 \+ HST each/.test(await p.textContent('#form-success')), 'other pages: pop-up and success message state the showing fee');
-  await p._ctx.close();
-  ok(!/\$40/.test(read('toronto-listing-agent.html').match(/id="form-success"[\s\S]*?<\/div>\s*<\/div>/)[0]) && !/Showings are \$40/.test(read('toronto-listing-agent.html').match(/<div class="modal-sub"[^>]*>[^<]*/)[0]), 'seller page pop-up does not mention the buyer showing fee');
+  ok(!/\$40/.test(read('Index.html').match(/id="modal-sub"[^>]*>[^<]*/)[0]) && !/success-fee/.test(read('Index.html')) && !/\$40/.test(read('our-story.html').match(/id="form-success"[\s\S]*?<\/div>\s*<\/div>/)[0]), 'booking pop-up and confirmation message do not mention the showing fee');
   ok(/\$40 CAD plus HST/.test(fs.readFileSync(path.join(DIST, 'llms.txt'), 'utf8')) && !/\$30 each|First showing is free/.test(fs.readFileSync(path.join(DIST, 'llms.txt'), 'utf8')), 'llms.txt states the new showing fee');
   ok(/Showings are \$40 \+ HST each/.test(read('Index.html')) && /\$40 \+ HST/.test(read('how-cashback-works.html')) && /\$40 \+ HST/.test(read('toronto-cashback-realtor.html')), 'homepage, how-it-works and city pages state the fee');
+  section('Farsi page');
+  p = await open(); await p.goto(base + '/farsi-speaking-realtor-toronto.html');
+  ok(await p.evaluate(() => { const w = document.querySelector('.fa-page'); return !!w && w.getAttribute('lang') === 'fa' && w.getAttribute('dir') === 'rtl'; }), 'Farsi page content is marked lang="fa" dir="rtl"');
+  ok((await p.$$('h1')).length === 1 && /[\u0600-\u06FF]/.test(await p.textContent('h1')), 'Farsi page has one H1, written in Farsi');
+  const faText = await p.textContent('.fa-page');
+  ok(/Smart Brokerages/.test(faText) && /RECO/.test(faText), 'Farsi page names Smart Brokerages and RECO');
+  ok(/۴٬۹۹۹/.test(faText) && /۲۰٬۰۰۱/.test(faText) && /۲٫۵٪/.test(faText) && !/\d/.test(faText.replace(/\(437\) 443-7556/, '')), 'Farsi page states the fee, cashback and 2.5% assumption in Persian digits (only the phone number keeps Latin digits)');
+  ok(/ریلتور/.test(await p.title()) && /ریلتور/.test(await p.textContent('h1')) && /مشاور املاک/.test(faText), 'Farsi page uses both "ریلتور" (realtor) and "مشاور املاک" in the title and H1/body');
+  ok(await p.evaluate(() => getComputedStyle(document.querySelector('.guide-eyebrow')).letterSpacing === 'normal' || getComputedStyle(document.querySelector('.guide-eyebrow')).letterSpacing === '0px'), 'Farsi page has no letter-spacing (it breaks Persian letters)');
+  ok(await p.evaluate(async () => { await document.fonts.ready; return document.fonts.check('16px "Vazirmatn NL"', '\u0641\u0627\u0631\u0633\u06cc'); }), 'Farsi page: the Vazirmatn font loads and is used for Persian text');
+  const faLd = await p.$$eval('script[type="application/ld+json"]', els => els.map(e => JSON.parse(e.textContent)).find(j => j['@type'] === 'FAQPage'));
+  const faQs = await p.$$eval('details.fa-faq summary', els => els.map(e => e.textContent.replace(/\s+/g, ' ').trim()));
+  ok(faQs.length === 8 && !!faLd && faLd.mainEntity.length === faQs.length && faLd.mainEntity.every(q => faQs.includes(q.name.replace(/\s+/g, ' ').trim())), 'Farsi FAQ: ' + faQs.length + ' questions, each also in the FAQPage markup');
+  await p.click('details.fa-faq summary'); ok(await p.evaluate(() => document.querySelector('details.fa-faq').open && document.querySelector('details.fa-faq p').offsetHeight > 0), 'Farsi FAQ: a question opens and shows its answer');
+  ok(/۴۰ دلار/.test(faQs.join(' ') + await p.textContent('.fa-faq-list')) && !/\$30|رایگان بود/.test(await p.textContent('.fa-faq-list')), 'Farsi FAQ states the showing fee and no free first showing');
+  ok(await p.evaluate(() => { const c = document.querySelector('.fa-trust'); const i = c && c.querySelector('img'); return !!c && !!i && i.complete && i.naturalWidth > 0 && /لاله موسوی/.test(c.textContent) && /RECO/.test(c.textContent) && !!c.querySelector('a[href*="share.google"]') && !!c.querySelector('button'); }), 'Farsi page: trust card near the top (photo, name, licence and membership, Google rating, booking button)');
+  await p.evaluate(() => openModal()); ok(await p.isVisible('#f-name'), 'Farsi page: booking pop-up opens');
+  await p._ctx.close();
+  const faLinkers = htmlFiles.filter(f => read(f).includes('href="/farsi-speaking-realtor-toronto.html"'));
+  ok(faLinkers.length === htmlFiles.length, 'Farsi page is linked from every page through the footer (' + faLinkers.length + ' of ' + htmlFiles.length + ')');
+  ok(/farsi-speaking-realtor-toronto\.html/.test(read('our-story.html')), 'Our Story links to the Farsi page');
+  ok(/farsi-speaking-realtor-toronto\.html/.test(fs.readFileSync(path.join(DIST, 'sitemap.xml'), 'utf8')), 'Farsi page is in the sitemap');
 
   section('Dev site stays out of analytics and HubSpot');
   const hcRe = /window\.HC_PROD = (\/.*?\/)\.test\(location\.hostname\)/.exec(read('Index.html'));
