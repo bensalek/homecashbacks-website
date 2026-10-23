@@ -227,6 +227,9 @@ function serve() {
   ok(badCashback.length === 0, 'each city page shows the cashback worked out from its own average price (avg x 2.5% - $4,999): ' + badCashback.slice(0, 3).join(' | '));
   ok(/September 2026/.test(read('toronto-market-trends.html')) && !/August 2026(?!\\?'s)/.test(read('toronto-market-trends.html').replace(/August 2026\\?'s/g, '').replace(/Change from August 2026/g, '')) && /\$1,006,409/.test(read('toronto-market-trends.html')), 'market trends page shows September 2026 and the GTA average $1,006,409');
 
+  section('Brokerage name');
+  ok(!htmlFiles.some(f => /Realty Plus/i.test(read(f))) && !/Realty Plus/i.test(fs.readFileSync(path.join(DIST, 'llms.txt'), 'utf8')), 'the brokerage is always named Smart Brokerages (no "Realty Plus" anywhere)');
+
   section('Showing fee ($40 + HST, no free first showing)');
   const stale = [], bareFee = [];
   htmlFiles.forEach(f => { const t = read(f).replace(/<script[^>]*src[^>]*>/g, '');
