@@ -268,7 +268,7 @@ console.log('\n✓ Build complete — ' + pages.length + ' pages assembled into 
     html = html.replace(/{{CALC_DEFAULT}}/g, city.calcDefault);
     html = html.replace(/{{GEO_LAT}}/g, city.geo.lat);
     html = html.replace(/{{GEO_LNG}}/g, city.geo.lng);
-    html = html.replace(/{{DATA_DATE_ISO}}/g, '2026-06-09');
+    html = html.replace(/{{DATA_DATE_ISO}}/g, '2026-10-24');
 
     // Formatted calc default
     html = html.replace(/{{CALC_DEFAULT_FMT}}/g,
@@ -405,8 +405,18 @@ console.log('\n✓ Build complete — ' + pages.length + ' pages assembled into 
     html = html.replace(/{{COMMUTE_TIME}}/g, nbr.commuteTime);
     html = html.replace(/{{CONDOS_FROM}}/g, nbr.condosFrom);
     html = html.replace(/{{MARKET_DATE}}/g, nbr.marketDate);
+    // TRREB district strip (real figures; types only shown when based on 10+ sales)
+    var dist = nbr.district;
+    var money = function(v) { return '$' + Math.round(v).toLocaleString('en-CA'); };
+    var districtStrip = '<div class="district-strip">' +
+      '<div class="district-strip-title">TRREB ' + nbr.marketDate + ' &middot; District ' + dist.code + '</div>' +
+      '<div class="district-strip-main"><strong>' + money(dist.avg) + '</strong> average price across <strong>' + dist.sales + '</strong> sales</div>' +
+      (dist.types.length ? '<div class="district-strip-types">' + dist.types.map(function(t) { return '<span>' + t.type + ' <strong>' + money(t.avg) + '</strong> (' + t.sales + ' sales)</span>'; }).join('') + '</div>' : '') +
+      '<div class="district-strip-note">TRREB reports by district, so these figures cover the whole district, not only ' + nbr.name + '. Source: TRREB Market Watch.</div>' +
+      '</div>';
+    html = html.replace('{{DISTRICT_STRIP}}', districtStrip);
     html = html.replace(/{{LALEH}}/g, nbr.laleh);
-    html = html.replace(/{{DATA_DATE_ISO}}/g, '2026-06-09');
+    html = html.replace(/{{DATA_DATE_ISO}}/g, '2026-10-24');
     html = html.replace(/{{CALC_DEFAULT}}/g, nbr.calcDefault);
     html = html.replace(/{{CALC_DEFAULT_FMT}}/g,
       Math.round(nbr.calcDefault).toLocaleString('en-CA'));
