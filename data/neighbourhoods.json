@@ -1,5 +1,5 @@
 {
-  "dataDate": "July 2026",
+  "dataDate": "September 2026",
   "neighbourhoods": [
     {
       "slug": "annex-toronto",
@@ -14,7 +14,7 @@
       "commuteTime": "~12 min",
       "condosFrom": "$750K+",
       "calcDefault": 1200000,
-      "marketDate": "July 2026",
+      "marketDate": "September 2026",
       "prices": [
         {
           "type": "Condos",
@@ -150,7 +150,24 @@
           "href": "/closing-costs-ontario.html"
         }
       ],
-      "metaDesc": "The Annex Toronto: schools, commute times, and real estate prices. Condos from $750K. See how much cashback you'd get on a typical purchase."
+      "metaDesc": "The Annex Toronto: schools, commute times, and real estate prices. Condos from $750K. See how much cashback you'd get on a typical purchase.",
+      "district": {
+        "code": "C02",
+        "avg": 1773011,
+        "sales": 58,
+        "types": [
+          {
+            "type": "Semi-detached",
+            "avg": 1853000,
+            "sales": 10
+          },
+          {
+            "type": "Condo apartments",
+            "avg": 1690737,
+            "sales": 30
+          }
+        ]
+      }
     },
     {
       "slug": "st-lawrence-market-toronto",
@@ -165,7 +182,7 @@
       "commuteTime": "~10 min",
       "condosFrom": "$650K+",
       "calcDefault": 750000,
-      "marketDate": "July 2026",
+      "marketDate": "September 2026",
       "prices": [
         {
           "type": "Condos",
@@ -296,7 +313,19 @@
           "href": "/closing-costs-ontario.html"
         }
       ],
-      "metaDesc": "St. Lawrence Market Toronto: waterfront condos, commute times, and schools. Steps from Union Station. See your cashback on a typical purchase."
+      "metaDesc": "St. Lawrence Market Toronto: waterfront condos, commute times, and schools. Steps from Union Station. See your cashback on a typical purchase.",
+      "district": {
+        "code": "C08",
+        "avg": 646347,
+        "sales": 146,
+        "types": [
+          {
+            "type": "Condo apartments",
+            "avg": 608022,
+            "sales": 131
+          }
+        ]
+      }
     },
     {
       "slug": "leslieville-toronto",
@@ -311,7 +340,7 @@
       "commuteTime": "~20 min",
       "condosFrom": "$600K+",
       "calcDefault": 1100000,
-      "marketDate": "July 2026",
+      "marketDate": "September 2026",
       "prices": [
         {
           "type": "Semis & Row Houses",
@@ -442,7 +471,29 @@
           "href": "/first-time-buyer-guide.html"
         }
       ],
-      "metaDesc": "Leslieville Toronto: freehold prices, schools, and commute times. Semis from $1M. See how much cashback you'd get with Home Cashbacks."
+      "metaDesc": "Leslieville Toronto: freehold prices, schools, and commute times. Semis from $1M. See how much cashback you'd get with Home Cashbacks.",
+      "district": {
+        "code": "E01",
+        "avg": 1223544,
+        "sales": 64,
+        "types": [
+          {
+            "type": "Detached",
+            "avg": 1506231,
+            "sales": 13
+          },
+          {
+            "type": "Semi-detached",
+            "avg": 1286913,
+            "sales": 28
+          },
+          {
+            "type": "Condo apartments",
+            "avg": 927946,
+            "sales": 14
+          }
+        ]
+      }
     },
     {
       "slug": "the-junction-toronto",
@@ -457,7 +508,7 @@
       "commuteTime": "~22 min",
       "condosFrom": "$550K+",
       "calcDefault": 1000000,
-      "marketDate": "July 2026",
+      "marketDate": "September 2026",
       "prices": [
         {
           "type": "Semis & Row Houses",
@@ -588,7 +639,29 @@
           "href": "/choose-cashback-realtor-toronto.html"
         }
       ],
-      "metaDesc": "The Junction Toronto: freehold value, Humberside catchment, and commute times. Semis from $950K. Calculate your cashback before you buy."
+      "metaDesc": "The Junction Toronto: freehold value, Humberside catchment, and commute times. Semis from $950K. Calculate your cashback before you buy.",
+      "district": {
+        "code": "W02",
+        "avg": 1311978,
+        "sales": 60,
+        "types": [
+          {
+            "type": "Detached",
+            "avg": 1771180,
+            "sales": 25
+          },
+          {
+            "type": "Semi-detached",
+            "avg": 1214982,
+            "sales": 14
+          },
+          {
+            "type": "Condo apartments",
+            "avg": 668908,
+            "sales": 12
+          }
+        ]
+      }
     },
     {
       "slug": "leaside-toronto",
@@ -603,7 +676,7 @@
       "commuteTime": "~28 min",
       "condosFrom": "$700K+",
       "calcDefault": 1900000,
-      "marketDate": "July 2026",
+      "marketDate": "September 2026",
       "prices": [
         {
           "type": "Detached",
@@ -734,7 +807,19 @@
           "href": "/buyer-agent-cost-ontario.html"
         }
       ],
-      "metaDesc": "Leaside Toronto: top schools, detached prices, and commute times. One of Toronto's most in-demand family neighbourhoods. See your cashback."
+      "metaDesc": "Leaside Toronto: top schools, detached prices, and commute times. One of Toronto's most in-demand family neighbourhoods. See your cashback.",
+      "district": {
+        "code": "C11",
+        "avg": 993370,
+        "sales": 27,
+        "types": [
+          {
+            "type": "Condo apartments",
+            "avg": 445133,
+            "sales": 15
+          }
+        ]
+      }
     },
     {
       "slug": "harbourfront-toronto",
@@ -749,7 +834,7 @@
       "commuteTime": "~12 min",
       "condosFrom": "$550K+",
       "calcDefault": 750000,
-      "marketDate": "July 2026",
+      "marketDate": "September 2026",
       "prices": [
         {
           "type": "Condos (studio/1BR)",
@@ -875,7 +960,29 @@
           "href": "/condo-buying-guide.html"
         }
       ],
-      "metaDesc": "Harbourfront Toronto: lake view condos, commute times, and prices. Steps from Union Station. See how much cashback you'd get on a typical purchase."
+      "metaDesc": "Harbourfront Toronto: lake view condos, commute times, and prices. Steps from Union Station. See how much cashback you'd get on a typical purchase.",
+      "district": {
+        "code": "C01",
+        "avg": 804651,
+        "sales": 241,
+        "types": [
+          {
+            "type": "Semi-detached",
+            "avg": 1703482,
+            "sales": 15
+          },
+          {
+            "type": "Townhouses",
+            "avg": 1358412,
+            "sales": 17
+          },
+          {
+            "type": "Condo apartments",
+            "avg": 654366,
+            "sales": 196
+          }
+        ]
+      }
     },
     {
       "slug": "yonge-eglinton-toronto",
@@ -890,7 +997,7 @@
       "commuteTime": "~18 min",
       "condosFrom": "$580K+",
       "calcDefault": 750000,
-      "marketDate": "July 2026",
+      "marketDate": "September 2026",
       "prices": [
         {
           "type": "Condos",
@@ -1021,7 +1128,29 @@
           "href": "/closing-costs-ontario.html"
         }
       ],
-      "metaDesc": "Yonge & Eglinton Toronto: schools, commute times, and condo prices. Studios from $580K. See your cashback estimate on a typical Midtown purchase."
+      "metaDesc": "Yonge & Eglinton Toronto: schools, commute times, and condo prices. Studios from $580K. See your cashback estimate on a typical Midtown purchase.",
+      "district": {
+        "code": "C10",
+        "avg": 1114261,
+        "sales": 54,
+        "types": [
+          {
+            "type": "Detached",
+            "avg": 1884350,
+            "sales": 10
+          },
+          {
+            "type": "Semi-detached",
+            "avg": 1526591,
+            "sales": 13
+          },
+          {
+            "type": "Condo apartments",
+            "avg": 645925,
+            "sales": 28
+          }
+        ]
+      }
     },
     {
       "slug": "corso-italia-toronto",
@@ -1036,7 +1165,7 @@
       "commuteTime": "~28 min",
       "condosFrom": "$520K+",
       "calcDefault": 950000,
-      "marketDate": "July 2026",
+      "marketDate": "September 2026",
       "prices": [
         {
           "type": "Semis",
@@ -1167,7 +1296,24 @@
           "href": "/the-junction-toronto.html"
         }
       ],
-      "metaDesc": "Corso Italia Toronto: schools, commute times, and real estate prices. Semis from $900K. See how much cashback you'd get on a typical west end purchase."
+      "metaDesc": "Corso Italia Toronto: schools, commute times, and real estate prices. Semis from $900K. See how much cashback you'd get on a typical west end purchase.",
+      "district": {
+        "code": "W03",
+        "avg": 839905,
+        "sales": 42,
+        "types": [
+          {
+            "type": "Detached",
+            "avg": 831263,
+            "sales": 19
+          },
+          {
+            "type": "Semi-detached",
+            "avg": 946268,
+            "sales": 18
+          }
+        ]
+      }
     },
     {
       "slug": "danforth-toronto",
@@ -1182,7 +1328,7 @@
       "commuteTime": "~20 min",
       "condosFrom": "$550K+",
       "calcDefault": 1050000,
-      "marketDate": "July 2026",
+      "marketDate": "September 2026",
       "prices": [
         {
           "type": "Semis",
@@ -1313,7 +1459,19 @@
           "href": "/calculators.html"
         }
       ],
-      "metaDesc": "Danforth / Greektown Toronto: schools, commute times, and real estate prices. Semis from $950K. See your cashback estimate on a typical east end purchase."
+      "metaDesc": "Danforth / Greektown Toronto: schools, commute times, and real estate prices. Semis from $950K. See your cashback estimate on a typical east end purchase.",
+      "district": {
+        "code": "E03",
+        "avg": 1122091,
+        "sales": 66,
+        "types": [
+          {
+            "type": "Detached",
+            "avg": 1222315,
+            "sales": 48
+          }
+        ]
+      }
     },
     {
       "slug": "liberty-village-toronto",
@@ -1328,7 +1486,7 @@
       "commuteTime": "~10 min",
       "condosFrom": "$550K+",
       "calcDefault": 650000,
-      "marketDate": "July 2026",
+      "marketDate": "September 2026",
       "prices": [
         {
           "type": "Condos",
@@ -1444,7 +1602,29 @@
           "href": "/condo-buying-guide.html"
         }
       ],
-      "metaDesc": "Liberty Village Toronto: condo prices, schools, commute times, and walk score. Condos from $550K. See how much cashback you'd get on a typical purchase."
+      "metaDesc": "Liberty Village Toronto: condo prices, schools, commute times, and walk score. Condos from $550K. See how much cashback you'd get on a typical purchase.",
+      "district": {
+        "code": "C01",
+        "avg": 804651,
+        "sales": 241,
+        "types": [
+          {
+            "type": "Semi-detached",
+            "avg": 1703482,
+            "sales": 15
+          },
+          {
+            "type": "Townhouses",
+            "avg": 1358412,
+            "sales": 17
+          },
+          {
+            "type": "Condo apartments",
+            "avg": 654366,
+            "sales": 196
+          }
+        ]
+      }
     },
     {
       "slug": "the-beaches-toronto",
@@ -1459,7 +1639,7 @@
       "commuteTime": "~30 min",
       "condosFrom": "$798K+",
       "calcDefault": 1500000,
-      "marketDate": "July 2026",
+      "marketDate": "September 2026",
       "prices": [
         {
           "type": "Condos",
@@ -1580,7 +1760,24 @@
           "href": "/first-time-buyer-guide.html"
         }
       ],
-      "metaDesc": "The Beaches Toronto: schools, commute times, and real estate prices. Detached homes from $2M. See how much cashback you'd get on a typical purchase."
+      "metaDesc": "The Beaches Toronto: schools, commute times, and real estate prices. Detached homes from $2M. See how much cashback you'd get on a typical purchase.",
+      "district": {
+        "code": "E02",
+        "avg": 1395051,
+        "sales": 41,
+        "types": [
+          {
+            "type": "Detached",
+            "avg": 2046038,
+            "sales": 13
+          },
+          {
+            "type": "Semi-detached",
+            "avg": 1153173,
+            "sales": 18
+          }
+        ]
+      }
     },
     {
       "slug": "roncesvalles-toronto",
@@ -1595,7 +1792,7 @@
       "commuteTime": "~18 min",
       "condosFrom": "$650K+",
       "calcDefault": 1300000,
-      "marketDate": "July 2026",
+      "marketDate": "September 2026",
       "prices": [
         {
           "type": "Condos",
@@ -1716,7 +1913,24 @@
           "href": "/closing-costs-ontario.html"
         }
       ],
-      "metaDesc": "Roncesvalles Toronto: schools, commute times, and real estate prices. Semis from $1.3M. See how much cashback you'd get on a typical purchase."
+      "metaDesc": "Roncesvalles Toronto: schools, commute times, and real estate prices. Semis from $1.3M. See how much cashback you'd get on a typical purchase.",
+      "district": {
+        "code": "W01",
+        "avg": 1200544,
+        "sales": 34,
+        "types": [
+          {
+            "type": "Detached",
+            "avg": 1760545,
+            "sales": 11
+          },
+          {
+            "type": "Condo apartments",
+            "avg": 743583,
+            "sales": 12
+          }
+        ]
+      }
     }
   ]
 }

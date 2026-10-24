@@ -73,6 +73,13 @@ body{font-family:'Rubik',sans-serif;background:var(--bg);color:var(--ink);line-h
 .nbr-two-col{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-top:.75rem}
 .nbr-price-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-top:.75rem}
 .nbr-price-grid>*{min-width:0}
+.district-strip{background:var(--white);border:1px solid var(--border);border-left:3px solid var(--cta);border-radius:6px;padding:.95rem 1.1rem;margin-bottom:1rem}
+.district-strip-title{font-size:11px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;color:var(--cta);margin-bottom:.3rem}
+.district-strip-main{font-size:15px;color:var(--ink);line-height:1.6}
+.district-strip-main strong{font-family:'Cormorant Garamond',serif;font-size:20px}
+.district-strip-types{display:flex;flex-wrap:wrap;gap:.35rem .9rem;margin-top:.45rem;font-size:13px;color:var(--muted)}
+.district-strip-note{font-size:11px;color:var(--muted);margin-top:.5rem;line-height:1.5}
+.price-range-label{font-size:12px;font-weight:600;color:var(--muted);margin:.25rem 0 .1rem}
 .price-date-note{font-size:11px;color:var(--muted);margin-bottom:.75rem;display:flex;align-items:center;gap:.35rem}
 .price-date-note::before{content:'📅';font-size:10px}
 .price-card{background:var(--white);border:1px solid var(--border);border-radius:6px;padding:1.1rem 1.25rem}
@@ -186,7 +193,8 @@ body{font-family:'Rubik',sans-serif;background:var(--bg);color:var(--ink);line-h
 
   <div class="nbr-section" id="prices">
     <h2>What you'll pay</h2>
-    <div class="price-date-note">Market data: {{MARKET_DATE}} · Source: TRREB</div>
+    {{DISTRICT_STRIP}}
+    <div class="price-range-label">Typical price ranges (our estimate)</div>
     <div class="nbr-price-grid">{{PRICE_CARDS}}</div>
   </div>
 

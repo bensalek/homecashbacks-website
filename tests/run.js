@@ -227,6 +227,12 @@ function serve() {
   ok(badCashback.length === 0, 'each city page shows the cashback worked out from its own average price (avg x 2.5% - $4,999): ' + badCashback.slice(0, 3).join(' | '));
   ok(/September 2026/.test(read('toronto-market-trends.html')) && !/August 2026(?!\\?'s)/.test(read('toronto-market-trends.html').replace(/August 2026\\?'s/g, '').replace(/Change from August 2026/g, '')) && /\$1,006,409/.test(read('toronto-market-trends.html')), 'market trends page shows September 2026 and the GTA average $1,006,409');
 
+  const nbrData = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'neighbourhoods.json'), 'utf8'));
+  const nbrBad = [];
+  nbrData.neighbourhoods.forEach(n => { const h = read(n.slug + '.html'); const avg = '$' + n.district.avg.toLocaleString('en-CA');
+    if (!/September 2026/.test(h) || /July 2026|August 2026/.test(h) || !h.includes('District ' + n.district.code) || !h.includes(avg) || !/across <strong>\d+<\/strong> sales/.test(h) || !/Typical price ranges/.test(h)) nbrBad.push(n.slug); });
+  ok(nbrData.neighbourhoods.length === 12 && nbrBad.length === 0, 'all 12 neighbourhood pages show the TRREB September 2026 district figures and label the price ranges as estimates: ' + nbrBad.join(', '));
+
   section('Brokerage name');
   ok(!htmlFiles.some(f => /Realty Plus/i.test(read(f))) && !/Realty Plus/i.test(fs.readFileSync(path.join(DIST, 'llms.txt'), 'utf8')), 'the brokerage is always named Smart Brokerages (no "Realty Plus" anywhere)');
 
