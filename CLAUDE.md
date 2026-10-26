@@ -27,6 +27,11 @@ Cashback buyer-agent business in the GTA. Owner/website: **Ben**. Realtor: **Lal
 - Share image: `design/og-image.html` → `og-image.png` (render with `node scripts/render-og-image.js`).
 - Repeated guide-page styles live in `assets/guide-pillar.css` and `assets/guide-pillar-alt.css`.
 
+## Monthly market data (TRREB Market Watch, published in the first week of the next month)
+- City pages (`data/cities.json`) and neighbourhood pages (`data/neighbourhoods.json`) cite the latest TRREB report. Download the PDF from trreb.ca (the session network must allow `trreb.ca`), then run `python3 scripts/update-market-data.py --pdf <file> --month <Month> --gta-yoy <n> --hpi-yoy <n> --ldom <n>` (it explains the arguments). It only changes the figures; it was checked by re-running it on September 2026 with zero changes.
+- Then update by hand: `pages/toronto-market-trends.html`, the condo pages (Toronto condo benchmark), the "average GTA home" figures on the homepage FAQ and calculators page (average x 2.5% - $4,999), and re-read the "new listings falling faster than sales" sentence in `cities.json`. Never invent a number: every figure must come from the PDF. `npm test` fails if a city page still cites an old month.
+- Neighbourhood price ranges are hand-written estimates (Laleh); only the TRREB district strip is data.
+
 ## Tests
 - One-time: `cd tests && npm install && npx playwright install chromium`
 - Run from the repo root: `npm test`. It builds the site, serves `dist/`, and checks every page at 390px and 320px (script errors, missing files, sideways scrolling, one H1, pop-up opens), plus sitemap, share image, each feature, the form payloads (Netlify + HubSpot), the A/B test, and pop-up accessibility. Must end with `0 failed`.
