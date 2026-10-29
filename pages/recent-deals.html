@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Recent Deals | Home Cashbacks</title>
+<meta name="description" content="Recent home purchases and sales across the GTA, with the estimated cashback each client received. Flat $4,999 + HST fee, Smart Brokerages."/>
+<meta name="robots" content="noindex, follow"/>
+<link rel="canonical" href="https://homecashbacks.ca/recent-deals.html"/>
+<meta property="og:title" content="Recent Deals | Home Cashbacks"/>
+<meta property="og:description" content="Recent GTA home purchases and sales with the estimated cashback each client received."/>
+<meta property="og:url" content="https://homecashbacks.ca/recent-deals.html"/>
+<meta property="og:type" content="website"/>
+<meta property="og:image" content="https://homecashbacks.ca/og-image.png"/>
+<style>
+.rd-hero{background:var(--dark);padding:3rem 2rem 2.5rem}
+.rd-hero-inner{max-width:960px;margin:0 auto}
+.rd-title{font-family:'Cormorant Garamond',serif;font-size:clamp(30px,4.5vw,46px);font-weight:600;color:#fff;line-height:1.1;margin-bottom:.7rem}
+.rd-sub{font-size:15px;color:rgba(255,255,255,.6);line-height:1.6;max-width:560px}
+.rd-body{max-width:960px;margin:0 auto;padding:2rem 2rem 1rem}
+.rd-filters{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1.5rem}
+.rd-chip{font:inherit;font-size:13px;font-weight:500;color:var(--muted);background:var(--white);border:1px solid var(--border);border-radius:999px;padding:.45rem .95rem;cursor:pointer}
+.rd-chip.active{background:var(--cta);border-color:var(--cta);color:#fff;font-weight:600}
+.rd-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.rd-card{background:var(--white);border:1px solid var(--border);border-radius:8px;overflow:hidden;display:flex;flex-direction:column}
+.rd-photo{aspect-ratio:400/210;background:linear-gradient(135deg,#e7ecf2,#cfd8e3);display:flex;align-items:center;justify-content:center;color:#8794a6;overflow:hidden}
+.rd-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.rd-photo svg{width:56px;height:56px}
+.rd-info{padding:1rem 1.1rem 1.15rem;display:flex;flex-direction:column;gap:.3rem;flex:1}
+.rd-tag{align-self:flex-start;font-size:10px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;color:var(--cta)}
+.rd-loc{font-size:17px;font-weight:600;color:var(--ink);line-height:1.3}
+.rd-spec{font-size:13px;color:var(--muted)}
+.rd-out{margin-top:auto;padding-top:.6rem;font-size:15px;font-weight:700;color:var(--cta)}
+.rd-note{max-width:960px;margin:0 auto;padding:1rem 2rem 2.5rem;font-size:12px;line-height:1.6;color:var(--muted)}
+.rd-cta{max-width:960px;margin:0 auto 3rem;padding:0 2rem}
+.rd-cta-box{background:var(--dark);border-radius:8px;padding:1.75rem;text-align:center}
+.rd-cta-title{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:600;color:#fff;margin-bottom:.4rem}
+.rd-cta-sub{font-size:14px;color:rgba(255,255,255,.55);margin-bottom:1.1rem}
+.rd-cta-btn{background:var(--cta);color:var(--cta-text);padding:13px 28px;border-radius:4px;font-size:15px;font-weight:700;border:none;cursor:pointer;font-family:'Rubik',sans-serif}
+@media(max-width:820px){.rd-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.rd-hero{padding:2.25rem 1.25rem 2rem}.rd-body{padding:1.5rem 1.25rem .5rem}.rd-note,.rd-cta{padding-left:1.25rem;padding-right:1.25rem}.rd-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<section class="rd-hero">
+  <div class="rd-hero-inner">
+    <h1 class="rd-title">Recent deals</h1>
+    <p class="rd-sub">Homes we have helped GTA clients buy and sell, and the estimated cashback each buyer received. Laleh Mousavi, Realtor, Smart Brokerages.</p>
+  </div>
+</section>
+
+<section class="rd-body">
+  <div class="rd-filters" id="rd-filters">
+    <button class="rd-chip active" data-f="all">All</button>
+    <button class="rd-chip" data-f="Buyer">Buyers</button>
+    <button class="rd-chip" data-f="Seller">Sellers</button>
+    <button class="rd-chip" data-f="Pre-construction">Pre-construction</button>
+  </div>
+  <div class="rd-grid" id="rd-grid">
+{{DEALS_GRID}}
+  </div>
+</section>
+
+<p class="rd-note">Buyer cashback is an estimate: sale price &times; 2.5% buyer agent commission, less our flat $4,999 fee, rounded to the nearest $100. Actual amounts depend on the commission offered in each listing. Showings are $40 + HST each and the flat fee is $4,999 + HST. Addresses and building names are left out to protect client privacy.</p>
+
+<div class="rd-cta">
+  <div class="rd-cta-box">
+    <div class="rd-cta-title">Buying or selling in the GTA?</div>
+    <div class="rd-cta-sub">See what your cashback could be. No commitment.</div>
+    <button class="rd-cta-btn" onclick="openModal()">Book a Free Consultation &rarr;</button>
+  </div>
+</div>
+
+<script>
+(function(){
+  var chips=document.querySelectorAll('.rd-chip'),cards=document.querySelectorAll('.rd-card');
+  chips.forEach(function(c){c.addEventListener('click',function(){
+    chips.forEach(function(x){x.classList.remove('active')});c.classList.add('active');
+    var f=c.getAttribute('data-f');
+    cards.forEach(function(d){d.style.display=(f==='all'||d.getAttribute('data-type')===f)?'':'none'});
+  })});
+})();
+</script>
+</body>
+</html>

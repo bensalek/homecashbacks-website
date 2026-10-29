@@ -1,0 +1,13 @@
+{
+  "note": "Deals shown on /recent-deals.html, newest first. price = sale price in dollars (buyer deals); cashback is estimated as price x 2.5% - $4,999, rounded to the nearest $100. Anything in [square brackets] is a placeholder to replace before the page goes live. Do not show street addresses for houses or building names for condos.",
+  "deals": [
+    {"type": "Buyer", "property": "Condo apartment", "city": "Toronto", "neighbourhood": "[Neighbourhood]", "beds": 2, "baths": 2, "price": 760000, "image": null},
+    {"type": "Buyer", "property": "Detached house", "city": "Toronto", "neighbourhood": "[Neighbourhood]", "beds": 5, "baths": 4, "price": 2060000, "image": null},
+    {"type": "Buyer", "property": "Detached house", "city": "Richmond Hill", "neighbourhood": "[Neighbourhood]", "beds": 3, "baths": 3, "price": 980000, "image": null},
+    {"type": "Buyer", "property": "Semi-detached house", "city": "Vaughan", "neighbourhood": "[Neighbourhood]", "beds": 3, "baths": 3, "price": 955000, "image": null},
+    {"type": "Buyer", "property": "Condo apartment", "city": "Toronto", "neighbourhood": "[Neighbourhood]", "beds": 1, "baths": 1, "price": 450000, "image": null},
+    {"type": "Buyer", "property": "Home", "city": "Whitby", "neighbourhood": "West Lynde", "beds": null, "baths": null, "outcome": "$22,500 cashback returned", "image": "/assets/deals/nettles-court-thumb.jpg"},
+    {"type": "Seller", "property": "Condo", "city": "Toronto", "neighbourhood": "Waterworks", "beds": null, "baths": null, "outcome": "$17,000 saved vs. traditional commission", "image": "/assets/deals/waterworks-thumb.jpg"},
+    {"type": "Pre-construction", "property": "New-build home", "city": "Oakville", "neighbourhood": "Oak Point", "beds": null, "baths": null, "outcome": "$25,000 cashback", "image": "/assets/deals/oak-point-thumb.jpg"}
+  ]
+}

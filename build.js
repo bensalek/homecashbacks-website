@@ -99,6 +99,33 @@ var pages = fs.readdirSync(PAGES_DIR).filter(function(f) {
 pages.forEach(function(filename) {
   var page = fs.readFileSync(path.join(PAGES_DIR, filename), 'utf8');
 
+  // Recent deals page: cards come from data/deals.json
+  if (page.indexOf('{{DEALS_GRID}}') !== -1) {
+    var esc = function(t) { return String(t).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); };
+    var icon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg>';
+    var dealsGrid = JSON.parse(fs.readFileSync('./data/deals.json', 'utf8')).deals.map(function(d) {
+      var outcome = d.outcome;
+      if (!outcome && d.price) {
+        var cb = Math.round((d.price * 0.025 - 4999) / 100) * 100;
+        outcome = 'About $' + cb.toLocaleString('en-CA') + ' cashback';
+      }
+      var spec = d.property + ' &middot; ' + (d.beds ? d.beds : '[Beds]') + ' bed &middot; ' + (d.baths ? d.baths : '[Baths]') + ' bath';
+      var photo = d.image
+        ? '<img src="' + esc(d.image) + '" alt="' + esc(d.neighbourhood + ', ' + d.city) + '" width="400" height="210" loading="lazy"/>'
+        : icon;
+      return '    <div class="rd-card" data-type="' + esc(d.type) + '">\n' +
+        '      <div class="rd-photo">' + photo + '</div>\n' +
+        '      <div class="rd-info">\n' +
+        '        <span class="rd-tag">' + esc(d.type) + '</span>\n' +
+        '        <div class="rd-loc">' + esc(d.neighbourhood) + ', ' + esc(d.city) + '</div>\n' +
+        '        <div class="rd-spec">' + spec + '</div>\n' +
+        '        <div class="rd-out">' + esc(outcome) + '</div>\n' +
+        '      </div>\n' +
+        '    </div>';
+    }).join('\n');
+    page = page.replace('{{DEALS_GRID}}', dealsGrid);
+  }
+
   // ── Extract head content ────────────────────────────────────────────────
   var headMatch = page.match(/<head[^>]*>([\s\S]*?)<\/head>/i);
   var fullHead = headMatch ? headMatch[1] : '';
