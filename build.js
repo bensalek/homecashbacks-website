@@ -109,7 +109,7 @@ pages.forEach(function(filename) {
         var cb = Math.round((d.price * 0.025 - 4999) / 100) * 100;
         outcome = 'About $' + cb.toLocaleString('en-CA') + ' cashback';
       }
-      var spec = d.property + ' &middot; ' + (d.beds ? d.beds : '[Beds]') + ' bed &middot; ' + (d.baths ? d.baths : '[Baths]') + ' bath';
+      var spec = esc(d.property);
       var photo = d.image
         ? '<img src="' + esc(d.image) + '" alt="' + esc(d.neighbourhood + ', ' + d.city) + '" width="400" height="210" loading="lazy"/>'
         : icon;
