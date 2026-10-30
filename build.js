@@ -112,7 +112,7 @@ pages.forEach(function(filename) {
     var homeCards = homeDeals.map(function(d) {
       var o = dealOutcome(d);
       return '      <div class="deal-card">\n' +
-        '        <img src="' + dealsEsc(d.image) + '" alt="' + dealsEsc(d.neighbourhood + ', ' + d.city) + '" class="deal-thumb" width="400" height="210" loading="lazy"/>\n' +
+        '        <div class="deal-photo"><img src="' + dealsEsc(d.image) + '" alt="' + dealsEsc(d.neighbourhood + ', ' + d.city) + '" class="deal-thumb" width="400" height="210" loading="lazy"/>' + (d.illustration ? '<span class="deal-badge">Illustration</span>' : '') + '</div>\n' +
         '        <div class="deal-info">\n' +
         '          <span class="deal-tag">' + dealsEsc(d.type) + '</span>\n' +
         '          <div class="deal-location">' + dealsEsc(d.neighbourhood) + ', ' + dealsEsc(d.city) + '</div>\n' +
@@ -139,7 +139,7 @@ pages.forEach(function(filename) {
         ? '<img src="' + esc(d.image) + '" alt="' + esc(d.neighbourhood + ', ' + d.city) + '" width="400" height="210" loading="lazy"/>'
         : '<div class="rd-tile">' + (/condo/i.test(d.property) ? iconCondo : icon) + '<span class="rd-tile-city">' + esc(d.city) + '</span><span class="rd-tile-type">' + esc(d.property) + '</span></div>';
       return '    <div class="rd-card" data-type="' + esc(d.type) + '">\n' +
-        '      <div class="rd-photo">' + photo + '</div>\n' +
+        '      <div class="rd-photo">' + photo + (d.illustration ? '<span class="rd-badge">Illustration</span>' : '') + '</div>\n' +
         '      <div class="rd-info">\n' +
         '        <span class="rd-tag">' + esc(d.type) + '</span>\n' +
         '        <div class="rd-loc">' + esc(d.neighbourhood) + ', ' + esc(d.city) + '</div>\n' +

@@ -534,7 +534,9 @@ footer a{color:var(--cta);text-decoration:none}
 .deals-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1.5rem}
 .deal-card{background:var(--white);border:1px solid var(--border);border-radius:8px;overflow:hidden;transition:border-color .2s,box-shadow .2s}
 .deal-card:hover{border-color:var(--cta);box-shadow:0 4px 12px rgba(28,134,78,.1)}
+.deal-photo{position:relative}
 .deal-thumb{width:100%;height:210px;object-fit:cover;display:block}
+.deal-badge{position:absolute;left:8px;bottom:8px;background:rgba(26,35,50,.78);color:#fff;font-size:10px;font-weight:600;letter-spacing:.6px;text-transform:uppercase;padding:3px 8px;border-radius:3px}
 .deal-info{padding:1.25rem}
 .deal-tag{display:inline-block;background:rgba(28,134,78,.1);color:#155f38;font-size:11px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;padding:3px 10px;border-radius:3px;margin-bottom:.6rem}
 .deal-location{font-size:19px;font-weight:700;color:var(--ink);line-height:1.3;margin-bottom:.5rem}
