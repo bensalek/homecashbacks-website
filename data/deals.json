@@ -13,7 +13,7 @@
       "type": "Buyer",
       "property": "Detached house",
       "city": "Toronto",
-      "neighbourhood": "[Neighbourhood]",
+      "neighbourhood": "Corso Italia-Davenport",
       "price": 2060000,
       "image": "/assets/deals/toronto-detached-illustration-thumb.jpg",
       "illustration": true
