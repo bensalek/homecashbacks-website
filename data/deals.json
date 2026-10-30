@@ -1,5 +1,5 @@
 {
-  "note": "Deals shown on /recent-deals.html, newest first. price = sale price in dollars (buyer deals); cashback is estimated as price x 2.5% - $4,999, rounded to the nearest $100. Anything in [square brackets] is a placeholder to replace before the page goes live. Beds and baths are intentionally not shown. For houses show the neighbourhood only (no street address). For condos the building address or name is fine. Each card shows lead + amount + tail; buyer deals with a price get \"Buyer received about $X in cashback\" calculated automatically.",
+  "note": "Deals shown on /recent-deals.html, newest first. price = sale price in dollars (buyer deals); cashback is estimated as price x 2.5% - $4,999, rounded to the nearest $100. Anything in [square brackets] is a placeholder to replace before the page goes live. Beds and baths are intentionally not shown. For houses show the neighbourhood only (no street address). For condos the building address or name is fine. Each card shows lead + amount + tail; buyer deals with a price get \"Buyer received about $X in cashback\" calculated automatically. illustration:true marks an AI-generated image; it gets an \"Illustration\" badge.",
   "deals": [
     {
       "type": "Buyer",
@@ -15,7 +15,8 @@
       "city": "Toronto",
       "neighbourhood": "[Neighbourhood]",
       "price": 2060000,
-      "image": null
+      "image": "/assets/deals/northcliffe-illustration-thumb.jpg",
+      "illustration": true
     },
     {
       "type": "Buyer",
@@ -23,7 +24,8 @@
       "city": "Richmond Hill",
       "neighbourhood": "Crosby",
       "price": 980000,
-      "image": null
+      "image": "/assets/deals/richmond-hill-illustration-thumb.jpg",
+      "illustration": true
     },
     {
       "type": "Buyer",
