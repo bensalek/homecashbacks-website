@@ -407,39 +407,12 @@ body{font-family:'Rubik',sans-serif;background:var(--bg);color:var(--ink);line-h
     <div class="eyebrow">Recent Deals</div>
     <h2 class="sec-title">A few recent wins</h2>
     <div class="deals-grid">
-      <div class="deal-card">
-        <img src="/assets/deals/nettles-court-thumb.jpg" alt="West Lynde, Whitby neighbourhood" class="deal-thumb" width="400" height="210" loading="lazy"/>
-        <div class="deal-info">
-          <span class="deal-tag">Buyer</span>
-          <div class="deal-location">West Lynde, Whitby</div>
-          <p class="deal-desc">We helped this family find, negotiate, and close on their new home in Whitby, from the first showing through to the closing table.</p>
-          <div class="deal-outcome">$22,500 cashback returned</div>
-        </div>
-      </div>
-      <div class="deal-card">
-        <img src="/assets/deals/waterworks-thumb.jpg" alt="Waterworks, Toronto" class="deal-thumb" width="400" height="210" loading="lazy"/>
-        <div class="deal-info">
-          <span class="deal-tag">Seller</span>
-          <div class="deal-location">Waterworks, Toronto</div>
-          <p class="deal-desc">We listed and sold this Toronto condo at our flat $4,999 fee instead of a traditional percentage-based commission.</p>
-          <div class="deal-outcome">$17,000 saved vs. traditional commission</div>
-        </div>
-      </div>
-      <div class="deal-card">
-        <img src="/assets/deals/oak-point-thumb.jpg" alt="Oak Point pre-construction, Great Gulf" class="deal-thumb" width="400" height="210" loading="lazy"/>
-        <div class="deal-info">
-          <span class="deal-tag">Pre-Construction</span>
-          <div class="deal-location">Oak Point, Oakville</div>
-          <p class="deal-desc">We represented this buyer on a new-build purchase in Oakville, handling the builder paperwork and negotiation on their behalf.</p>
-          <div class="deal-outcome">$25,000 cashback</div>
-        </div>
-      </div>
+{{HOME_DEALS}}
     </div>
     <div class="deals-dots" id="deals-dots" style="display:none">
-      <button class="deals-dot active" onclick="dealsGoTo(0)"></button>
-      <button class="deals-dot" onclick="dealsGoTo(1)"></button>
-      <button class="deals-dot" onclick="dealsGoTo(2)"></button>
+{{HOME_DEALS_DOTS}}
     </div>
+{{HOME_DEALS_LINK}}
   </div>
 </section>
 

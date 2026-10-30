@@ -99,17 +99,40 @@ var pages = fs.readdirSync(PAGES_DIR).filter(function(f) {
 pages.forEach(function(filename) {
   var page = fs.readFileSync(path.join(PAGES_DIR, filename), 'utf8');
 
+  // Recent deals: cards come from data/deals.json (page + homepage strip)
+  var dealsAll = JSON.parse(fs.readFileSync('./data/deals.json', 'utf8')).deals;
+  var dealsEsc = function(t) { return String(t).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); };
+  var dealOutcome = function(d) {
+    if (d.amount) return { lead: d.lead, amount: d.amount, tail: d.tail };
+    return { lead: 'Buyer received about', amount: '$' + (Math.round((d.price * 0.025 - 4999) / 100) * 100).toLocaleString('en-CA'), tail: 'in cashback' };
+  };
+  var dealsHavePlaceholders = JSON.stringify(dealsAll).indexOf('[') !== -1;
+  if (page.indexOf('{{HOME_DEALS}}') !== -1) {
+    var homeDeals = dealsAll.filter(function(d) { return d.image; }).slice(0, 6);
+    var homeCards = homeDeals.map(function(d) {
+      var o = dealOutcome(d);
+      return '      <div class="deal-card">\n' +
+        '        <img src="' + dealsEsc(d.image) + '" alt="' + dealsEsc(d.neighbourhood + ', ' + d.city) + '" class="deal-thumb" width="400" height="210" loading="lazy"/>\n' +
+        '        <div class="deal-info">\n' +
+        '          <span class="deal-tag">' + dealsEsc(d.type) + '</span>\n' +
+        '          <div class="deal-location">' + dealsEsc(d.neighbourhood) + ', ' + dealsEsc(d.city) + '</div>\n' +
+        '          <p class="deal-desc">' + dealsEsc(d.property) + '</p>\n' +
+        '          <div class="deal-out"><span class="deal-lead">' + dealsEsc(o.lead) + '</span><span class="deal-amt">' + dealsEsc(o.amount) + '</span><span class="deal-tail">' + dealsEsc(o.tail) + '</span></div>\n' +
+        '        </div>\n' +
+        '      </div>';
+    }).join('\n');
+    var homeDots = homeDeals.map(function(d, i) { return '      <button class="deals-dot' + (i === 0 ? ' active' : '') + '" aria-label="Deal ' + (i + 1) + '" onclick="dealsGoTo(' + i + ')"></button>'; }).join('\n');
+    // the link to the full page stays hidden while that page still has [placeholders]
+    var homeLink = dealsHavePlaceholders ? '' : '    <p class="deals-more"><a href="/recent-deals.html">See all recent deals &rarr;</a></p>';
+    page = page.replace('{{HOME_DEALS}}', homeCards).replace('{{HOME_DEALS_DOTS}}', homeDots).replace('{{HOME_DEALS_LINK}}', homeLink);
+  }
+
   // Recent deals page: cards come from data/deals.json
   if (page.indexOf('{{DEALS_GRID}}') !== -1) {
-    var esc = function(t) { return String(t).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); };
+    var esc = dealsEsc;
     var icon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg>';
-    var dealsGrid = JSON.parse(fs.readFileSync('./data/deals.json', 'utf8')).deals.map(function(d) {
-      var lead = d.lead, amount = d.amount, tail = d.tail;
-      if (!amount && d.price) {
-        amount = '$' + (Math.round((d.price * 0.025 - 4999) / 100) * 100).toLocaleString('en-CA');
-        lead = 'Buyer received about';
-        tail = 'in cashback';
-      }
+    var dealsGrid = dealsAll.map(function(d) {
+      var o = dealOutcome(d), lead = o.lead, amount = o.amount, tail = o.tail;
       var spec = esc(d.property);
       var photo = d.image
         ? '<img src="' + esc(d.image) + '" alt="' + esc(d.neighbourhood + ', ' + d.city) + '" width="400" height="210" loading="lazy"/>'

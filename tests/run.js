@@ -242,6 +242,10 @@ function serve() {
   ok(dealsNoindex || !/\[(Neighbourhood|Beds|Baths)\]/.test(dealsHtml), 'recent-deals.html has no [placeholders] left unless it is still noindex');
   ok(!/Northcliffe|Dunsmore|Terra R/i.test(dealsHtml.split('<section class="rd-body">')[1] || ''), 'recent-deals.html shows no house street addresses (condo addresses are allowed)');
 
+  const homeHtml = read('Index.html');
+  ok(!/\{\{HOME_DEALS|\[Neighbourhood\]/.test(homeHtml) && (homeHtml.match(/class="deal-card"/g) || []).length >= 3, 'homepage shows the recent deals strip (3+ cards, no placeholders)');
+  ok(!/href="\/recent-deals\.html"/.test(homeHtml) || !/\[(Neighbourhood|Beds|Baths)\]/.test(dealsHtml), 'the homepage only links to the deals page once that page has no [placeholders]');
+
   section('Showing fee ($40 + HST, no free first showing)');
   const stale = [], bareFee = [];
   htmlFiles.forEach(f => { const t = read(f).replace(/<script[^>]*src[^>]*>/g, '');
