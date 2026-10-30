@@ -106,7 +106,7 @@ pages.forEach(function(filename) {
     if (d.amount) return { lead: d.lead, amount: d.amount, tail: d.tail };
     return { lead: 'Buyer received about', amount: '$' + (Math.round((d.price * 0.025 - 4999) / 100) * 100).toLocaleString('en-CA'), tail: 'in cashback' };
   };
-  var dealsHavePlaceholders = JSON.stringify(dealsAll).indexOf('[') !== -1;
+  var dealsHavePlaceholders = dealsAll.some(function(d) { return JSON.stringify(d).indexOf('[') !== -1; });
   if (page.indexOf('{{HOME_DEALS}}') !== -1) {
     var homeDeals = dealsAll.filter(function(d) { return d.image && d.neighbourhood.indexOf('[') === -1; }).sort(function(a, b) { return (a.illustration ? 1 : 0) - (b.illustration ? 1 : 0); }).slice(0, 3);
     var homeCards = homeDeals.map(function(d) {
