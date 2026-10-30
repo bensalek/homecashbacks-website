@@ -104,10 +104,11 @@ pages.forEach(function(filename) {
     var esc = function(t) { return String(t).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); };
     var icon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg>';
     var dealsGrid = JSON.parse(fs.readFileSync('./data/deals.json', 'utf8')).deals.map(function(d) {
-      var outcome = d.outcome;
-      if (!outcome && d.price) {
-        var cb = Math.round((d.price * 0.025 - 4999) / 100) * 100;
-        outcome = 'About $' + cb.toLocaleString('en-CA') + ' cashback';
+      var lead = d.lead, amount = d.amount, tail = d.tail;
+      if (!amount && d.price) {
+        amount = '$' + (Math.round((d.price * 0.025 - 4999) / 100) * 100).toLocaleString('en-CA');
+        lead = 'Buyer received about';
+        tail = 'in cashback';
       }
       var spec = esc(d.property);
       var photo = d.image
@@ -119,7 +120,7 @@ pages.forEach(function(filename) {
         '        <span class="rd-tag">' + esc(d.type) + '</span>\n' +
         '        <div class="rd-loc">' + esc(d.neighbourhood) + ', ' + esc(d.city) + '</div>\n' +
         '        <div class="rd-spec">' + spec + '</div>\n' +
-        '        <div class="rd-out">' + esc(outcome) + '</div>\n' +
+        '        <div class="rd-out"><span class="rd-lead">' + esc(lead) + '</span><span class="rd-amt">' + esc(amount) + '</span><span class="rd-tail">' + esc(tail) + '</span></div>\n' +
         '      </div>\n' +
         '    </div>';
     }).join('\n');

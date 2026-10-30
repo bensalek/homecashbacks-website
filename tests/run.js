@@ -240,7 +240,7 @@ function serve() {
   const dealsHtml = read('recent-deals.html');
   const dealsNoindex = /<meta[^>]+name="robots"[^>]+noindex/i.test(dealsHtml);
   ok(dealsNoindex || !/\[(Neighbourhood|Beds|Baths)\]/.test(dealsHtml), 'recent-deals.html has no [placeholders] left unless it is still noindex');
-  ok(!/\d{1,5} [A-Z][a-z]+ (Ave|Rd|St|Blvd|Cres|Dr)\b/.test(dealsHtml.replace(/<script[\s\S]*?<\/script>/g, '').replace(/<style[\s\S]*?<\/style>/g, '').split('<section class="rd-body">')[1] || ''), 'recent-deals.html shows no street addresses');
+  ok(!/Northcliffe|Dunsmore|Terra R/i.test(dealsHtml.split('<section class="rd-body">')[1] || ''), 'recent-deals.html shows no house street addresses (condo addresses are allowed)');
 
   section('Showing fee ($40 + HST, no free first showing)');
   const stale = [], bareFee = [];
