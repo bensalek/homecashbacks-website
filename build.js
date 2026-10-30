@@ -131,12 +131,13 @@ pages.forEach(function(filename) {
   if (page.indexOf('{{DEALS_GRID}}') !== -1) {
     var esc = dealsEsc;
     var icon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg>';
+    var iconCondo = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="1"/><path d="M9 7h2M13 7h2M9 11h2M13 11h2M9 15h2M13 15h2M11 21v-3h2v3"/></svg>';
     var dealsGrid = dealsAll.map(function(d) {
       var o = dealOutcome(d), lead = o.lead, amount = o.amount, tail = o.tail;
       var spec = esc(d.property);
       var photo = d.image
         ? '<img src="' + esc(d.image) + '" alt="' + esc(d.neighbourhood + ', ' + d.city) + '" width="400" height="210" loading="lazy"/>'
-        : icon;
+        : '<div class="rd-tile">' + (/condo/i.test(d.property) ? iconCondo : icon) + '<span class="rd-tile-city">' + esc(d.city) + '</span><span class="rd-tile-type">' + esc(d.property) + '</span></div>';
       return '    <div class="rd-card" data-type="' + esc(d.type) + '">\n' +
         '      <div class="rd-photo">' + photo + '</div>\n' +
         '      <div class="rd-info">\n' +
