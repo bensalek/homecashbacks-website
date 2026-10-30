@@ -108,7 +108,7 @@ pages.forEach(function(filename) {
   };
   var dealsHavePlaceholders = JSON.stringify(dealsAll).indexOf('[') !== -1;
   if (page.indexOf('{{HOME_DEALS}}') !== -1) {
-    var homeDeals = dealsAll.filter(function(d) { return d.image; }).slice(0, 6);
+    var homeDeals = dealsAll.filter(function(d) { return d.image && d.neighbourhood.indexOf('[') === -1; }).slice(0, 6);
     var homeCards = homeDeals.map(function(d) {
       var o = dealOutcome(d);
       return '      <div class="deal-card">\n' +
