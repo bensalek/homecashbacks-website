@@ -33,7 +33,8 @@
       "city": "Vaughan",
       "neighbourhood": "East Woodbridge",
       "price": 955000,
-      "image": null
+      "image": "/assets/deals/vaughan-semi-illustration-thumb.jpg",
+      "illustration": true
     },
     {
       "type": "Buyer",
