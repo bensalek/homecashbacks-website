@@ -21,6 +21,8 @@
 .rd-filters{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1.5rem}
 .rd-chip{font:inherit;font-size:13px;font-weight:500;color:var(--muted);background:var(--white);border:1px solid var(--border);border-radius:999px;padding:.45rem .95rem;cursor:pointer}
 .rd-chip.active{background:var(--cta);border-color:var(--cta);color:#fff;font-weight:600}
+.rd-privacy{font-size:14px;line-height:1.6;color:var(--muted);margin:0 0 1.25rem;max-width:720px}
+.rd-privacy a{color:var(--cta);font-weight:600}
 .rd-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
 .rd-card{background:var(--white);border:1px solid var(--border);border-radius:8px;overflow:hidden;display:flex;flex-direction:column}
 .rd-photo{position:relative;aspect-ratio:400/210;background:linear-gradient(135deg,#e7ecf2,#cfd8e3);display:flex;align-items:center;justify-content:center;color:#8794a6;overflow:hidden}
@@ -64,12 +66,13 @@
     <button class="rd-chip" data-f="Seller">Sellers</button>
     <button class="rd-chip" data-f="Pre-construction">Pre-construction</button>
   </div>
+  <p class="rd-privacy">To protect our clients' privacy we can't share the exact details of these deals, and some images are illustrations, not photos of the actual homes. <a href="#" onclick="openModal();return false">Get in touch</a> if you'd like to know more.</p>
   <div class="rd-grid" id="rd-grid">
 {{DEALS_GRID}}
   </div>
 </section>
 
-<p class="rd-note">Buyer cashback is an estimate: sale price &times; the buyer agent commission offered in the listing (2.5% on most of these deals, 4% on one), less our flat $4,999 fee, rounded to the nearest $100. Actual amounts depend on the commission offered in each listing. Showings are $40 + HST each and the flat fee is $4,999 + HST. House addresses are left out to protect client privacy.</p>
+<p class="rd-note">Buyer cashback is an estimate: sale price &times; the buyer agent commission offered in the listing (2.5% on most of these deals, 4% on one), less our flat $4,999 fee, rounded to the nearest $100. Actual amounts depend on the commission offered in each listing. Showings are $40 + HST each and the flat fee is $4,999 + HST.</p>
 
 <div class="rd-cta">
   <div class="rd-cta-box">

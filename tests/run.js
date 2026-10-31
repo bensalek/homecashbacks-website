@@ -242,6 +242,8 @@ function serve() {
   ok(dealsNoindex || !/\[(Neighbourhood|Beds|Baths)\]/.test(dealsHtml), 'recent-deals.html has no [placeholders] left unless it is still noindex');
   ok(!/Northcliffe|Dunsmore|Terra R/i.test(dealsHtml.split('<section class="rd-body">')[1] || ''), 'recent-deals.html shows no house street addresses (condo addresses are allowed)');
 
+  const dealsData = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'deals.json'), 'utf8')).deals;
+  ok(!dealsData.some(d => d.illustration) || /some images are illustrations/i.test(dealsHtml), 'recent-deals.html says so in plain view when any image is an AI illustration');
   const homeHtml = read('Index.html');
   ok(!/\{\{HOME_DEALS|\[Neighbourhood\]/.test(homeHtml) && (homeHtml.match(/class="deal-card"/g) || []).length >= 3, 'homepage shows the recent deals strip (3+ cards, no placeholders)');
   ok(!/href="\/recent-deals\.html"/.test(homeHtml) || !/\[(Neighbourhood|Beds|Baths)\]/.test(dealsHtml), 'the homepage only links to the deals page once that page has no [placeholders]');
