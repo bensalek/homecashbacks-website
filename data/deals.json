@@ -1,5 +1,5 @@
 {
-  "note": "Deals shown on /recent-deals.html, newest first. price = sale price in dollars (buyer deals); cashback is estimated as price x 2.5% - $4,999, rounded to the nearest $100. Anything in [square brackets] is a placeholder to replace before the page goes live. Beds and baths are intentionally not shown. For houses show the neighbourhood only (no street address). For condos the building address or name is fine. Each card shows lead + amount + tail; buyer deals with a price get \"Buyer received about $X in cashback\" calculated automatically. illustration:true marks an AI-generated image; it gets an \"Illustration\" badge.",
+  "note": "Deals shown on /recent-deals.html, newest first. price = sale price in dollars (buyer deals); cashback is estimated as price x 2.5% - $4,999, rounded to the nearest $100. Anything in [square brackets] is a placeholder to replace before the page goes live. Beds and baths are intentionally not shown. For houses show the neighbourhood only (no street address). For condos the building address or name is fine. Each card shows lead + amount + tail; buyer deals with a price get \"Buyer received about $X in cashback\" calculated automatically. illustration:true marks an AI-generated image; it gets an \"Illustration\" badge. commission (optional, default 0.025) is the buyer agent commission rate used for the cashback estimate.",
   "deals": [
     {
       "type": "Buyer",
@@ -7,7 +7,8 @@
       "city": "Toronto",
       "neighbourhood": "858 Dupont St",
       "price": 760000,
-      "image": null
+      "image": "/assets/deals/858-dupont-thumb.jpg",
+      "commission": 0.04
     },
     {
       "type": "Buyer",

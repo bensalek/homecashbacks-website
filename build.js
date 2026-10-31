@@ -104,7 +104,7 @@ pages.forEach(function(filename) {
   var dealsEsc = function(t) { return String(t).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); };
   var dealOutcome = function(d) {
     if (d.amount) return { lead: d.lead, amount: d.amount, tail: d.tail };
-    return { lead: 'Buyer received about', amount: '$' + (Math.round((d.price * 0.025 - 4999) / 100) * 100).toLocaleString('en-CA'), tail: 'in cashback' };
+    return { lead: 'Buyer received about', amount: '$' + (Math.round((d.price * (d.commission || 0.025) - 4999) / 100) * 100).toLocaleString('en-CA'), tail: 'in cashback' };
   };
   var dealsHavePlaceholders = dealsAll.some(function(d) { return JSON.stringify(d).indexOf('[') !== -1; });
   if (page.indexOf('{{HOME_DEALS}}') !== -1) {
