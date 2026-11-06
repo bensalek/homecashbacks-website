@@ -7,7 +7,7 @@
 <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png"/>
 <title>How It Works | Home Cashbacks Toronto</title>
-<meta name="description" content="How the home buyer rebate works in Toronto. Flat $4,999 fee, the seller sets aside a buyer agent commission on every deal, we take our fee and return the rest to you after closing."/>
+<meta name="description" content="How the home buyer rebate works in Toronto. Flat {{BUYER_FEE}} fee, the seller sets aside a buyer agent commission on every deal, we take our fee and return the rest to you after closing."/>
 <meta name="robots" content="index, follow"/>
 <link rel="canonical" href="https://homecashbacks.ca/how-cashback-works.html"/>
 <meta property="og:image" content="https://homecashbacks.ca/og-image.png"/>
@@ -16,7 +16,7 @@
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://homecashbacks.ca/og-image.png"/>
 <meta property="og:title" content="How It Works | Home Cashbacks Toronto"/>
-<meta property="og:description" content="Flat $4,999 from the commission the seller already set aside. No commitment. Everything above $4,999 comes back to you."/>
+<meta property="og:description" content="Flat {{BUYER_FEE}} from the commission the seller already set aside. No commitment. Everything above {{BUYER_FEE}} comes back to you."/>
 <meta property="og:url" content="https://homecashbacks.ca/how-cashback-works.html"/>
 <meta property="og:type" content="website"/>
 <link rel="stylesheet" href="/assets/fonts.css"/>
@@ -90,12 +90,12 @@
     {
       "@type": "Question",
       "name": "Does Home Cashbacks charge the buyer anything?",
-      "acceptedAnswer": {"@type": "Answer", "text": "No. The $4,999 + HST fee comes entirely from the buyer agent commission the seller already set aside. You pay nothing out of pocket for it and no upfront fee. Showings are $40 + HST each."}
+      "acceptedAnswer": {"@type": "Answer", "text": "No. The {{BUYER_FEE}} + HST fee comes entirely from the buyer agent commission the seller already set aside. You pay nothing out of pocket for it and no upfront fee. Showings are $40 + HST each."}
     },
     {
       "@type": "Question",
-      "name": "What if the seller offers less than $4,999 buyer agent commission?",
-      "acceptedAnswer": {"@type": "Answer", "text": "Our fee is capped at whatever the seller offered. We disclose the commission before you make any offer. In practice, most GTA listings offer 2 to 2.5% — well above our flat fee on any home over $200,000."}
+      "name": "What if the seller offers less than {{BUYER_FEE}} buyer agent commission?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Our fee is capped at whatever the seller offered. We disclose the commission before you make any offer. In practice, most GTA listings offer 2 to 2.5% — well above our flat fee on any home over {{X:0}}."}
     },
     {
       "@type": "Question",
@@ -118,8 +118,8 @@
 
 <section class="hiw-hero">
   <div class="hiw-hero-inner">
-    <h1 class="hiw-title">Flat $4,999 fee.<br><em>Everything else is yours.</em></h1>
-    <p class="hiw-sub">The seller sets aside a buyer agent commission in every deal. We take $4,999. The rest comes back to you after closing, as a home buyer rebate paid directly to you.</p>
+    <h1 class="hiw-title">Flat {{BUYER_FEE}} fee.<br><em>Everything else is yours.</em></h1>
+    <p class="hiw-sub">The seller sets aside a buyer agent commission in every deal. We take {{BUYER_FEE}}. The rest comes back to you after closing, as a home buyer rebate paid directly to you.</p>
   </div>
 </section>
 
@@ -141,8 +141,8 @@
   <!-- Step 1 -->
   <div class="hiw-step">
     <div class="hiw-step-label">Step 1</div>
-    <div class="hiw-step-title">We take $4,999. You keep the rest.</div>
-    <p class="hiw-step-text">When a seller lists on MLS, they set aside a buyer agent commission — typically 2 to 2.5%. On a $1M home that's $25,000. It exists in every deal regardless of which agent you choose. Traditional agents keep all of it. We take $4,999 flat and return the difference to you.</p>
+    <div class="hiw-step-title">We take {{BUYER_FEE}}. You keep the rest.</div>
+    <p class="hiw-step-text">When a seller lists on MLS, they set aside a buyer agent commission — typically 2 to 2.5%. On a $1M home that's $25,000. It exists in every deal regardless of which agent you choose. Traditional agents keep all of it. We take {{BUYER_FEE}} flat and return the difference to you.</p>
     <div class="hiw-math">
       <div class="hiw-math-heading">On a $1M home at 2.5% buyer commission</div>
       <div class="hiw-math-row">
@@ -155,11 +155,11 @@
       </div>
       <div class="hiw-math-row">
         <span class="hiw-math-row-label">Home Cashbacks fee</span>
-        <span class="hiw-math-row-val">$4,999</span>
+        <span class="hiw-math-row-val">{{BUYER_FEE}}</span>
       </div>
       <div class="hiw-math-row">
         <span class="hiw-math-row-label">You receive after closing</span>
-        <span class="hiw-math-row-val green">$20,000</span>
+        <span class="hiw-math-row-val green">{{CB:1000000}}</span>
       </div>
     </div>
   </div>
@@ -193,7 +193,7 @@
       </div>
       <div class="calc-result">
         <div class="calc-result-label">Your estimated cashback</div>
-        <div class="calc-result-amt" id="hiw-calc-cashback">$17,500</div>
+        <div class="calc-result-amt" id="hiw-calc-cashback">{{CB:900000}}</div>
       </div>
       <div class="calc-note">Estimates only. Amount depends on the seller's commission offer. For land transfer tax and closing cost estimates too, see our <a href="/calculators.html" style="color:var(--cta);text-decoration:none;font-weight:500">full calculator suite →</a></div>
     </div>
@@ -245,14 +245,14 @@
           <span class="faq-q-text">Does Home Cashbacks charge the buyer anything?</span>
           <span class="faq-icon">+</span>
         </div>
-        <div class="faq-a">No. The $4,999 + HST fee comes from the buyer agent commission the seller already set aside. You pay nothing out of pocket for it. If you do not buy, you owe only the showings you have had ($40 + HST each).</div>
+        <div class="faq-a">No. The {{BUYER_FEE}} + HST fee comes from the buyer agent commission the seller already set aside. You pay nothing out of pocket for it. If you do not buy, you owe only the showings you have had ($40 + HST each).</div>
       </div>
       <div class="faq-item">
         <div class="faq-q">
-          <span class="faq-q-text">What if the seller offers less than $4,999?</span>
+          <span class="faq-q-text">What if the seller offers less than {{BUYER_FEE}}?</span>
           <span class="faq-icon">+</span>
         </div>
-        <div class="faq-a">Our fee is capped at whatever the seller offered. We disclose the commission before you make any offer. In practice, most GTA listings offer 2 to 2.5% — well above our flat fee on any home over $200,000.</div>
+        <div class="faq-a">Our fee is capped at whatever the seller offered. We disclose the commission before you make any offer. In practice, most GTA listings offer 2 to 2.5% — well above our flat fee on any home over {{X:0}}.</div>
       </div>
       <div class="faq-item">
         <div class="faq-q">
@@ -299,7 +299,7 @@
     var price = parseInt(raw) || 900000;
     var pct = parseFloat(document.getElementById('hiw-commission-pct').value) || 2.5;
     var commission = price * (pct/100);
-    var cashback = Math.max(0, commission - 4999);
+    var cashback = Math.max(0, commission - {{BUYER_FEE_NUM}});
     document.getElementById('hiw-calc-cashback').textContent = fmt(cashback);
   }
   var slider = document.getElementById('hiw-price-slider');

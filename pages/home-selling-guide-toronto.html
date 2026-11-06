@@ -8,7 +8,7 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <title>Home Selling Guide Toronto | HomeCashbacks</title>
-<meta name="description" content="A practical guide to selling your home in Toronto and the GTA. Pricing, staging, closing costs, and what a flat $4,999 fee actually saves you."/>
+<meta name="description" content="A practical guide to selling your home in Toronto and the GTA. Pricing, staging, closing costs, and what a flat {{SELLER_FEE}} fee actually saves you."/>
 <meta name="author" content="Laleh Mousavi, HomeCashbacks"/>
 <meta property="og:title" content="Home Selling Guide Toronto | HomeCashbacks"/>
 <meta property="og:description" content="Everything Toronto sellers need to know, from pricing and staging to closing costs and what a flat fee actually saves you."/>
@@ -26,7 +26,7 @@
     {
       "@type": "Question",
       "name": "How much does it cost to sell a house in Toronto?",
-      "acceptedAnswer": {"@type": "Answer", "text": "With a traditional agent, expect to pay 2.5% to 5% in commission (split between your listing agent and the buyer's agent), plus legal fees of $1,200 to $1,800, a mortgage discharge fee of $300 to $400, and moving costs. On a $1M home, our flat $4,999 fee replaces the standard 2.5% listing commission, but you'll still offer a buyer agent commission separately, typically 2% to 2.5%, plus legal and discharge fees, so total selling costs come to roughly $26,500 to $32,200 including the buyer agent commission."}
+      "acceptedAnswer": {"@type": "Answer", "text": "With a traditional agent, expect to pay 2.5% to 5% in commission (split between your listing agent and the buyer's agent), plus legal fees of $1,200 to $1,800, a mortgage discharge fee of $300 to $400, and moving costs. On a $1M home, our flat {{SELLER_FEE}} fee replaces the standard 2.5% listing commission, but you'll still offer a buyer agent commission separately, typically 2% to 2.5%, plus legal and discharge fees, so total selling costs come to roughly $26,500 to $32,200 including the buyer agent commission."}
     },
     {
       "@type": "Question",
@@ -107,7 +107,7 @@
   <div class="page-hero-inner">
     <div class="page-hero-eyebrow">Home Selling Guide</div>
     <h1>Home Selling<br>Guide Toronto</h1>
-    <p class="page-hero-sub">A practical guide to selling your home in Toronto and the GTA, from pricing and staging to closing costs and what a flat $4,999 fee actually saves you.</p>
+    <p class="page-hero-sub">A practical guide to selling your home in Toronto and the GTA, from pricing and staging to closing costs and what a flat {{SELLER_FEE}} fee actually saves you.</p>
     <p style="font-size:12px;color:rgba(232,237,245,.3);margin-top:1rem;letter-spacing:.5px">Last updated July 2026</p>
   </div>
 </div>
@@ -179,7 +179,7 @@
     <div class="costs-grid">
       <div class="cost-card cost-highlight">
         <div class="cost-label">Agent Commission or Flat Fee</div>
-        <div class="cost-desc" style="margin-top:.25rem">The largest selling cost by far, and it's really two separate pieces. A traditional listing agent charges roughly 2.5% for their own side. Sellers also offer a separate buyer agent commission, typically 2% to 2.5%, to attract agents who bring buyers. Together that's the 2.5% to 5% total sellers usually pay. Our flat $4,999 fee replaces the listing side only, you'll still offer a buyer agent commission separately at closing. See the <a href="#savings" style="color:var(--cta);text-decoration:none;font-weight:500">exact math below</a>.</div>
+        <div class="cost-desc" style="margin-top:.25rem">The largest selling cost by far, and it's really two separate pieces. A traditional listing agent charges roughly 2.5% for their own side. Sellers also offer a separate buyer agent commission, typically 2% to 2.5%, to attract agents who bring buyers. Together that's the 2.5% to 5% total sellers usually pay. Our flat {{SELLER_FEE}} fee replaces the listing side only, you'll still offer a buyer agent commission separately at closing. See the <a href="#savings" style="color:var(--cta);text-decoration:none;font-weight:500">exact math below</a>.</div>
       </div>
       <div class="cost-card">
         <div class="cost-label">Legal Fees</div>
@@ -215,7 +215,7 @@
   <div class="cashback-inner">
     <div class="cashback-eyebrow">How the flat fee helps sellers</div>
     <h2 class="cashback-title">Your Savings vs. Standard Commission</h2>
-    <p class="cashback-sub">We charge a flat $4,999 instead of a percentage commission. On a $1M home at standard 2.5%, that's a savings of over $20,000, money that stays in your pocket at closing instead of going to commission. <a href="/low-commission-realtor-toronto.html" style="color:var(--cta);text-decoration:none;font-weight:500">See the full savings breakdown →</a></p>
+    <p class="cashback-sub">We charge a flat {{SELLER_FEE}} instead of a percentage commission. On a $1M home at standard 2.5%, that's a savings of over $20,000, money that stays in your pocket at closing instead of going to commission. <a href="/low-commission-realtor-toronto.html" style="color:var(--cta);text-decoration:none;font-weight:500">See the full savings breakdown →</a></p>
     <div class="cashback-uses">
       <div class="cashback-use">
         <div class="cashback-use-label">Your next down payment</div>
@@ -337,7 +337,7 @@ window.addEventListener('scroll',function(){
 
 // FAQ
 const FAQ_COSTS=[
-  {q:'How much does it cost to sell a house in Toronto?',a:'With a traditional agent, expect to pay 2.5% to 5% in commission (split between your listing agent and the buyer\'s agent), plus legal fees of $1,200 to $1,800, a mortgage discharge fee of $300 to $400, and moving costs. On a $1M home, our flat $4,999 fee replaces the standard 2.5% listing commission, but you\'ll still offer a buyer agent commission separately, typically 2% to 2.5%, plus legal and discharge fees, so total selling costs come to roughly $26,500 to $32,200 including the buyer agent commission.'},
+  {q:'How much does it cost to sell a house in Toronto?',a:'With a traditional agent, expect to pay 2.5% to 5% in commission (split between your listing agent and the buyer\'s agent), plus legal fees of $1,200 to $1,800, a mortgage discharge fee of $300 to $400, and moving costs. On a $1M home, our flat {{SELLER_FEE}} fee replaces the standard 2.5% listing commission, but you\'ll still offer a buyer agent commission separately, typically 2% to 2.5%, plus legal and discharge fees, so total selling costs come to roughly $26,500 to $32,200 including the buyer agent commission.'},
   {q:'Do I pay land transfer tax when selling a home in Ontario?',a:'No. Land transfer tax is paid by the buyer, not the seller. Sellers sometimes confuse this with other closing costs, but LTT never appears on a seller\'s closing statement.'},
   {q:'What is a mortgage discharge fee?',a:'A fee your lender charges to formally release and remove their claim on the property once your mortgage is paid off at closing. It typically runs $300 to $400 and is set by your lender, not negotiable through your realtor or lawyer.'},
   {q:'Is a flat fee listing agent legal in Ontario?',a:'Yes. RECO does not require a specific commission structure or percentage. A flat fee is a legal, disclosed alternative to percentage commission, and the exact fee is written into your listing agreement before you sign anything.'},

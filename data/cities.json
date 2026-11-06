@@ -4,8 +4,8 @@
     {
       "slug": "toronto",
       "name": "Toronto",
-      "cashback": "$20,859",
-      "heroSub": "We are a licensed Toronto buyer agent. We charge a flat $4,999 fee and return the rest of the buyer agent commission to you after closing. On a typical Toronto home, that is over $20,000 cash back.",
+      "cashback": "{{CB:1034320}}",
+      "heroSub": "We are a licensed Toronto buyer agent. We charge a flat {{BUYER_FEE}} fee and return the rest of the buyer agent commission to you after closing. On a typical Toronto home, that is over {{CBF:1034320}} cash back.",
       "calcDefault": 900000,
       "marketDate": "September 2026",
       "marketTitle": "The Toronto Market Right Now",
@@ -176,11 +176,11 @@
       "faqCity": [
         {
           "q": "Is there a cashback realtor in Toronto?",
-          "a": "Yes. Home Cashbacks is a RECO-registered buyer agent serving Toronto and the GTA. We charge a flat $4,999 fee and return the rest of the buyer agent commission to you after closing."
+          "a": "Yes. Home Cashbacks is a RECO-registered buyer agent serving Toronto and the GTA. We charge a flat {{BUYER_FEE}} fee and return the rest of the buyer agent commission to you after closing."
         },
         {
           "q": "How much cashback can I get on a Toronto home?",
-          "a": "On a $1,000,000 Toronto home with a 2.5% buyer agent commission, the total commission is $25,000. We take our flat $4,999 and you receive approximately $20,000 back after closing."
+          "a": "On a $1,000,000 Toronto home with a 2.5% buyer agent commission, the total commission is $25,000. We take our flat {{BUYER_FEE}} and you receive approximately {{CB:1000000}} back after closing."
         },
         {
           "q": "Do you serve condos in Toronto?",
@@ -214,36 +214,36 @@
         "lng": -79.3832
       },
       "sourceSlug": "buyer-toronto",
-      "metaDesc": "Low commission real estate agent in Toronto. Flat $4,999 fee \u2014 keep $20,000 cash back rebate on a $1M home. Full buyer representation, no upfront commitment.",
-      "pageTitle": "Cash Back Realtor Toronto | Cashback Realtor, $20,000+ Back | Home Cashbacks",
+      "metaDesc": "Low commission real estate agent in Toronto. Flat {{BUYER_FEE}} fee \u2014 keep {{CBF:1000000}} cash back rebate on a $1M home. Full buyer representation, no upfront commitment.",
+      "pageTitle": "Cash Back Realtor Toronto | Cashback Realtor, {{CBF:1000000}}+ Back | Home Cashbacks",
       "h1": "Cash back realtor Toronto",
-      "h1Tagline": "Flat $4,999 fee. <em>Keep the rest of the commission.</em>",
+      "h1Tagline": "Flat {{BUYER_FEE}} fee. <em>Keep the rest of the commission.</em>",
       "localFacts": {
         "title": "Cash back by Toronto neighbourhood",
-        "intro": "Starting prices by area and the cash back on a purchase at that price, using a 2.5% buyer commission less our flat $4,999 fee. Your actual amount depends on the commission the seller offers.",
+        "intro": "Starting prices by area and the cash back on a purchase at that price, using a 2.5% buyer commission less our flat {{BUYER_FEE}} fee. Your actual amount depends on the commission the seller offers.",
         "examples": [
           {
             "area": "Liberty Village condos",
             "price": "~$600K",
-            "cashback": "about $10,000",
+            "cashback": "about {{CBR:600000}}",
             "link": "/liberty-village-toronto.html"
           },
           {
             "area": "Yonge & Eglinton condos",
             "price": "~$700K",
-            "cashback": "about $12,500",
+            "cashback": "about {{CBR:700000}}",
             "link": "/yonge-eglinton-toronto.html"
           },
           {
             "area": "Leslieville semis",
             "price": "~$1.1M",
-            "cashback": "about $22,500",
+            "cashback": "about {{CBR:1100000}}",
             "link": "/leslieville-toronto.html"
           },
           {
             "area": "Leaside detached",
             "price": "~$1.7M",
-            "cashback": "about $37,500",
+            "cashback": "about {{CBR:1700000}}",
             "link": "/leaside-toronto.html"
           }
         ],
@@ -253,8 +253,8 @@
     {
       "slug": "mississauga",
       "name": "Mississauga",
-      "cashback": "$18,241",
-      "heroSub": "We are a licensed Mississauga buyer agent. We charge a flat $4,999 fee and return the rest of the buyer agent commission to you after closing. On a typical Mississauga home, that is over $19,000 back.",
+      "cashback": "{{CB:929600}}",
+      "heroSub": "We are a licensed Mississauga buyer agent. We charge a flat {{BUYER_FEE}} fee and return the rest of the buyer agent commission to you after closing. On a typical Mississauga home, that is over {{CBF:929600}} back.",
       "calcDefault": 960000,
       "marketDate": "September 2026",
       "marketTitle": "The Mississauga Market Right Now",
@@ -324,11 +324,11 @@
       "faqCity": [
         {
           "q": "Is there a cashback realtor in Mississauga?",
-          "a": "Yes. Home Cashbacks is a RECO-registered buyer agent serving Mississauga and the GTA. We charge a flat $4,999 fee and return the rest of the buyer agent commission to you after closing."
+          "a": "Yes. Home Cashbacks is a RECO-registered buyer agent serving Mississauga and the GTA. We charge a flat {{BUYER_FEE}} fee and return the rest of the buyer agent commission to you after closing."
         },
         {
           "q": "How much cashback can I get on a Mississauga home?",
-          "a": "On a $960,000 Mississauga home with a 2.5% buyer agent commission, the total commission is $24,000. We take our flat $4,999 and you receive approximately $19,000 back after closing."
+          "a": "On a $960,000 Mississauga home with a 2.5% buyer agent commission, the total commission is $24,000. We take our flat {{BUYER_FEE}} and you receive approximately {{CB:960000}} back after closing."
         },
         {
           "q": "Is Mississauga a good place to buy right now?",
@@ -362,13 +362,14 @@
         "lng": -79.6441
       },
       "sourceSlug": "buyer-mississauga",
-      "metaDesc": "Cashback realtor in Mississauga. Flat $4,999 fee \u2014 on a typical Mississauga home you keep $19,000. Full service, no upfront commitment."
+      "metaDesc": "Cashback realtor in Mississauga. Flat {{BUYER_FEE}} fee \u2014 on a typical Mississauga home you keep {{CBF:929600}}. Full service, no upfront commitment.",
+      "h1Tagline": null
     },
     {
       "slug": "etobicoke",
       "name": "Etobicoke",
-      "cashback": "$19,649",
-      "heroSub": "We are a licensed Etobicoke buyer agent. We charge a flat $4,999 fee and return the rest of the buyer agent commission to you as cash back after closing. On a typical Etobicoke home, that is over $18,000 back.",
+      "cashback": "{{CB:985920}}",
+      "heroSub": "We are a licensed Etobicoke buyer agent. We charge a flat {{BUYER_FEE}} fee and return the rest of the buyer agent commission to you as cash back after closing. On a typical Etobicoke home, that is over {{CBF:985920}} back.",
       "calcDefault": 950000,
       "marketDate": "September 2026",
       "marketTitle": "The Etobicoke Market Right Now",
@@ -434,11 +435,11 @@
       "faqCity": [
         {
           "q": "Is there a cashback realtor in Etobicoke?",
-          "a": "Yes. Home Cashbacks is a RECO-registered buyer agent serving Etobicoke and the GTA. We charge a flat $4,999 fee and return the rest of the buyer agent commission to you after closing."
+          "a": "Yes. Home Cashbacks is a RECO-registered buyer agent serving Etobicoke and the GTA. We charge a flat {{BUYER_FEE}} fee and return the rest of the buyer agent commission to you after closing."
         },
         {
           "q": "How much cashback can I get in Etobicoke?",
-          "a": "On a $950,000 Etobicoke home with a 2.5% buyer agent commission, the total commission is $23,750. We take our flat $4,999 and you receive approximately $18,751 back after closing."
+          "a": "On a $950,000 Etobicoke home with a 2.5% buyer agent commission, the total commission is $23,750. We take our flat {{BUYER_FEE}} and you receive approximately {{CB:950000}} back after closing."
         },
         {
           "q": "Do Etobicoke buyers pay Toronto land transfer tax?",
@@ -472,13 +473,14 @@
         "lng": -79.5132
       },
       "sourceSlug": "buyer-etobicoke",
-      "metaDesc": "Cashback realtor in Etobicoke. Flat $4,999 fee \u2014 on a typical Etobicoke home you keep $18,000. Full service, no upfront commitment."
+      "metaDesc": "Cashback realtor in Etobicoke. Flat {{BUYER_FEE}} fee \u2014 on a typical Etobicoke home you keep {{CBF:985920}}. Full service, no upfront commitment.",
+      "h1Tagline": null
     },
     {
       "slug": "scarborough",
       "name": "Scarborough",
-      "cashback": "$18,901",
-      "heroSub": "We are a licensed Scarborough buyer agent. We charge a flat $4,999 fee and return the rest of the buyer agent commission to you as cash back after closing. Scarborough offers some of the best freehold value in Toronto, and your cashback makes it even better.",
+      "cashback": "{{CB:956004}}",
+      "heroSub": "We are a licensed Scarborough buyer agent. We charge a flat {{BUYER_FEE}} fee and return the rest of the buyer agent commission to you as cash back after closing. Scarborough offers some of the best freehold value in Toronto, and your cashback makes it even better.",
       "calcDefault": 760000,
       "marketDate": "September 2026",
       "marketTitle": "The Scarborough Market Right Now",
@@ -544,11 +546,11 @@
       "faqCity": [
         {
           "q": "Is there a cashback realtor in Scarborough?",
-          "a": "Yes. Home Cashbacks is a RECO-registered buyer agent serving Scarborough and all of Toronto. We charge a flat $4,999 fee and return the rest of the buyer agent commission after closing."
+          "a": "Yes. Home Cashbacks is a RECO-registered buyer agent serving Scarborough and all of Toronto. We charge a flat {{BUYER_FEE}} fee and return the rest of the buyer agent commission after closing."
         },
         {
           "q": "How much cashback can I get in Scarborough?",
-          "a": "On a $760,000 Scarborough home with a 2.5% buyer agent commission, the total commission is $19,000. We take our flat $4,999 and you receive approximately $14,000 back after closing."
+          "a": "On a $760,000 Scarborough home with a 2.5% buyer agent commission, the total commission is $19,000. We take our flat {{BUYER_FEE}} and you receive approximately {{CB:760000}} back after closing."
         },
         {
           "q": "Do Scarborough buyers pay Toronto land transfer tax?",
@@ -582,13 +584,14 @@
         "lng": -79.2576
       },
       "sourceSlug": "buyer-scarborough",
-      "metaDesc": "Cashback realtor in Scarborough. Flat $4,999 fee \u2014 on a typical Scarborough home you keep $14,000. Full service, no upfront commitment."
+      "metaDesc": "Cashback realtor in Scarborough. Flat {{BUYER_FEE}} fee \u2014 on a typical Scarborough home you keep {{CBF:956004}}. Full service, no upfront commitment.",
+      "h1Tagline": null
     },
     {
       "slug": "north-york",
       "name": "North York",
-      "cashback": "$22,575",
-      "heroSub": "We are a licensed North York buyer agent. We charge a flat $4,999 fee and return the rest of the buyer agent commission to you as cash back after closing. On a typical North York home, that is over $17,500 back.",
+      "cashback": "{{CB:1102955}}",
+      "heroSub": "We are a licensed North York buyer agent. We charge a flat {{BUYER_FEE}} fee and return the rest of the buyer agent commission to you as cash back after closing. On a typical North York home, that is over {{CBF:1102955}} back.",
       "calcDefault": 900000,
       "marketDate": "September 2026",
       "marketTitle": "The North York Market Right Now",
@@ -654,11 +657,11 @@
       "faqCity": [
         {
           "q": "Is there a cashback realtor in North York?",
-          "a": "Yes. Home Cashbacks is a RECO-registered buyer agent serving North York and the GTA. We charge a flat $4,999 fee and return the rest of the buyer agent commission after closing."
+          "a": "Yes. Home Cashbacks is a RECO-registered buyer agent serving North York and the GTA. We charge a flat {{BUYER_FEE}} fee and return the rest of the buyer agent commission after closing."
         },
         {
           "q": "How much cashback can I get in North York?",
-          "a": "On a $900,000 North York home with a 2.5% buyer agent commission, the total commission is $22,500. We take our flat $4,999 and you receive approximately $17,501 back after closing."
+          "a": "On a $900,000 North York home with a 2.5% buyer agent commission, the total commission is $22,500. We take our flat {{BUYER_FEE}} and you receive approximately {{CB:900000}} back after closing."
         },
         {
           "q": "Do North York buyers pay Toronto land transfer tax?",
@@ -692,13 +695,14 @@
         "lng": -79.4111
       },
       "sourceSlug": "buyer-north-york",
-      "metaDesc": "Cashback realtor in North York. Flat $4,999 fee \u2014 on a typical North York home you keep $17,500. Full service, no upfront commitment."
+      "metaDesc": "Cashback realtor in North York. Flat {{BUYER_FEE}} fee \u2014 on a typical North York home you keep {{CBF:1102955}}. Full service, no upfront commitment.",
+      "h1Tagline": null
     },
     {
       "slug": "vaughan",
       "name": "Vaughan",
-      "cashback": "$24,087",
-      "heroSub": "We are a licensed Vaughan buyer agent. We charge a flat $4,999 fee and return the rest of the buyer agent commission to you as cash back after closing. On a typical Vaughan home, that is over $18,500 back.",
+      "cashback": "{{CB:1163441}}",
+      "heroSub": "We are a licensed Vaughan buyer agent. We charge a flat {{BUYER_FEE}} fee and return the rest of the buyer agent commission to you as cash back after closing. On a typical Vaughan home, that is over {{CBF:1163441}} back.",
       "calcDefault": 980000,
       "marketDate": "September 2026",
       "marketTitle": "The Vaughan Market Right Now",
@@ -768,11 +772,11 @@
       "faqCity": [
         {
           "q": "Is there a cashback realtor in Vaughan?",
-          "a": "Yes. Home Cashbacks is a RECO-registered buyer agent serving Vaughan and the GTA. We charge a flat $4,999 fee and return the rest of the buyer agent commission after closing."
+          "a": "Yes. Home Cashbacks is a RECO-registered buyer agent serving Vaughan and the GTA. We charge a flat {{BUYER_FEE}} fee and return the rest of the buyer agent commission after closing."
         },
         {
           "q": "How much cashback can I get in Vaughan?",
-          "a": "On a $980,000 Vaughan home with a 2.5% buyer agent commission, the total commission is $24,500. We take our flat $4,999 and you receive approximately $19,501 back after closing."
+          "a": "On a $980,000 Vaughan home with a 2.5% buyer agent commission, the total commission is $24,500. We take our flat {{BUYER_FEE}} and you receive approximately {{CB:980000}} back after closing."
         },
         {
           "q": "Is Vaughan connected to Toronto by transit?",
@@ -806,13 +810,14 @@
         "lng": -79.5085
       },
       "sourceSlug": "buyer-vaughan",
-      "metaDesc": "Cashback realtor in Vaughan. Flat $4,999 fee \u2014 on a typical Vaughan home you keep $18,000. Full service, no upfront commitment."
+      "metaDesc": "Cashback realtor in Vaughan. Flat {{BUYER_FEE}} fee \u2014 on a typical Vaughan home you keep {{CBF:1163441}}. Full service, no upfront commitment.",
+      "h1Tagline": null
     },
     {
       "slug": "oakville",
       "name": "Oakville",
-      "cashback": "$29,130",
-      "heroSub": "We are a licensed Oakville buyer agent. We charge a flat $4,999 fee and return the rest of the buyer agent commission to you as cash back after closing. On a typical Oakville home, that is over $22,000 back.",
+      "cashback": "{{CB:1365169}}",
+      "heroSub": "We are a licensed Oakville buyer agent. We charge a flat {{BUYER_FEE}} fee and return the rest of the buyer agent commission to you as cash back after closing. On a typical Oakville home, that is over {{CBF:1365169}} back.",
       "calcDefault": 1100000,
       "marketDate": "September 2026",
       "marketTitle": "The Oakville Market Right Now",
@@ -878,15 +883,15 @@
           "price": "Detached from ~$1.6M"
         }
       ],
-      "laleh": "\"Oakville buyers are often surprised by how much their cashback actually means in real terms. On a $1.1M home that is over $22,000 back -- which covers months of carrying costs, moving expenses, or goes straight to your mortgage. Old Oakville is exceptional but buyers willing to look at Kerr Village or Bronte are finding real character at much more accessible prices.\"",
+      "laleh": "\"Oakville buyers are often surprised by how much their cashback actually means in real terms. On a $1.1M home that is over {{CBF:1100000}} back -- which covers months of carrying costs, moving expenses, or goes straight to your mortgage. Old Oakville is exceptional but buyers willing to look at Kerr Village or Bronte are finding real character at much more accessible prices.\"",
       "faqCity": [
         {
           "q": "Is there a cashback realtor in Oakville?",
-          "a": "Yes. Home Cashbacks is a RECO-registered buyer agent serving Oakville and the GTA. We charge a flat $4,999 fee and return the rest of the buyer agent commission after closing."
+          "a": "Yes. Home Cashbacks is a RECO-registered buyer agent serving Oakville and the GTA. We charge a flat {{BUYER_FEE}} fee and return the rest of the buyer agent commission after closing."
         },
         {
           "q": "How much cashback can I get in Oakville?",
-          "a": "On a $1,100,000 Oakville home with a 2.5% buyer agent commission, the total commission is $27,500. We take our flat $4,999 and you receive approximately $22,501 back after closing."
+          "a": "On a $1,100,000 Oakville home with a 2.5% buyer agent commission, the total commission is $27,500. We take our flat {{BUYER_FEE}} and you receive approximately {{CB:1100000}} back after closing."
         },
         {
           "q": "What is the best neighbourhood in Oakville for families?",
@@ -920,13 +925,14 @@
         "lng": -79.6877
       },
       "sourceSlug": "buyer-oakville",
-      "metaDesc": "Cashback realtor in Oakville. Flat $4,999 fee \u2014 on a typical Oakville home you keep $22,000. Full service, no upfront commitment."
+      "metaDesc": "Cashback realtor in Oakville. Flat {{BUYER_FEE}} fee \u2014 on a typical Oakville home you keep {{CBF:1365169}}. Full service, no upfront commitment.",
+      "h1Tagline": null
     },
     {
       "slug": "markham",
       "name": "Markham",
-      "cashback": "$23,135",
-      "heroSub": "We are a licensed Markham buyer agent. We charge a flat $4,999 fee and return the rest of the buyer agent commission to you as cash back after closing. On a typical Markham home, that is over $18,000 back.",
+      "cashback": "{{CB:1125353}}",
+      "heroSub": "We are a licensed Markham buyer agent. We charge a flat {{BUYER_FEE}} fee and return the rest of the buyer agent commission to you as cash back after closing. On a typical Markham home, that is over {{CBF:1125353}} back.",
       "calcDefault": 960000,
       "marketDate": "September 2026",
       "marketTitle": "The Markham Market Right Now",
@@ -996,11 +1002,11 @@
       "faqCity": [
         {
           "q": "Is there a cashback realtor in Markham?",
-          "a": "Yes. Home Cashbacks is a RECO-registered buyer agent serving Markham and the GTA. We charge a flat $4,999 fee and return the rest of the buyer agent commission after closing."
+          "a": "Yes. Home Cashbacks is a RECO-registered buyer agent serving Markham and the GTA. We charge a flat {{BUYER_FEE}} fee and return the rest of the buyer agent commission after closing."
         },
         {
           "q": "How much cashback can I get in Markham?",
-          "a": "On a $960,000 Markham home with a 2.5% buyer agent commission, the total commission is $24,000. We take our flat $4,999 and you receive approximately $19,000 back after closing."
+          "a": "On a $960,000 Markham home with a 2.5% buyer agent commission, the total commission is $24,000. We take our flat {{BUYER_FEE}} and you receive approximately {{CB:960000}} back after closing."
         },
         {
           "q": "Is Markham good for tech workers?",
@@ -1034,13 +1040,14 @@
         "lng": -79.337
       },
       "sourceSlug": "buyer-markham",
-      "metaDesc": "Cashback realtor in Markham. Flat $4,999 fee \u2014 on a typical Markham home you keep $18,000. Full service, no upfront commitment."
+      "metaDesc": "Cashback realtor in Markham. Flat {{BUYER_FEE}} fee \u2014 on a typical Markham home you keep {{CBF:1125353}}. Full service, no upfront commitment.",
+      "h1Tagline": null
     },
     {
       "slug": "richmond-hill",
       "name": "Richmond Hill",
-      "cashback": "$24,731",
-      "heroSub": "We are a licensed Richmond Hill buyer agent. We charge a flat $4,999 fee and return the rest of the buyer agent commission to you as cash back after closing. On a typical Richmond Hill home, that is over $19,000 back.",
+      "cashback": "{{CB:1189203}}",
+      "heroSub": "We are a licensed Richmond Hill buyer agent. We charge a flat {{BUYER_FEE}} fee and return the rest of the buyer agent commission to you as cash back after closing. On a typical Richmond Hill home, that is over {{CBF:1189203}} back.",
       "calcDefault": 1000000,
       "marketDate": "September 2026",
       "marketTitle": "The Richmond Hill Market Right Now",
@@ -1106,15 +1113,15 @@
           "price": "Detached from ~$1.4M"
         }
       ],
-      "laleh": "\"Richmond Hill consistently comes up when buyers want the best of both worlds, close enough to Toronto to commute, far enough to get a proper backyard. The school options here are genuinely exceptional and that drives consistent demand. Your cashback on a Richmond Hill purchase is real money, on a $1M home that is over $20,000 back in your pocket after closing.\"",
+      "laleh": "\"Richmond Hill consistently comes up when buyers want the best of both worlds, close enough to Toronto to commute, far enough to get a proper backyard. The school options here are genuinely exceptional and that drives consistent demand. Your cashback on a Richmond Hill purchase is real money, on a $1M home that is over {{CBF:1000000}} back in your pocket after closing.\"",
       "faqCity": [
         {
           "q": "Is there a cashback realtor in Richmond Hill?",
-          "a": "Yes. Home Cashbacks is a RECO-registered buyer agent serving Richmond Hill and York Region. We charge a flat $4,999 fee and return the rest of the buyer agent commission after closing."
+          "a": "Yes. Home Cashbacks is a RECO-registered buyer agent serving Richmond Hill and York Region. We charge a flat {{BUYER_FEE}} fee and return the rest of the buyer agent commission after closing."
         },
         {
           "q": "How much cashback can I get in Richmond Hill?",
-          "a": "On a $1,000,000 Richmond Hill home with a 2.5% buyer agent commission, the total commission is $25,000. We take our flat $4,999 and you receive approximately $20,000 back after closing."
+          "a": "On a $1,000,000 Richmond Hill home with a 2.5% buyer agent commission, the total commission is $25,000. We take our flat {{BUYER_FEE}} and you receive approximately {{CB:1000000}} back after closing."
         },
         {
           "q": "What are the best schools in Richmond Hill?",
@@ -1148,13 +1155,14 @@
         "lng": -79.4403
       },
       "sourceSlug": "buyer-richmond-hill",
-      "metaDesc": "Cashback realtor in Richmond Hill. Flat $4,999 fee \u2014 on a typical Richmond Hill home you keep $19,000. Full service, no upfront commitment."
+      "metaDesc": "Cashback realtor in Richmond Hill. Flat {{BUYER_FEE}} fee \u2014 on a typical Richmond Hill home you keep {{CBF:1189203}}. Full service, no upfront commitment.",
+      "h1Tagline": null
     },
     {
       "slug": "brampton",
       "name": "Brampton",
-      "cashback": "$16,359",
-      "heroSub": "We are a licensed Brampton buyer agent. We charge a flat $4,999 fee and return the rest of the buyer agent commission to you as cash back after closing. Brampton offers some of the best freehold value in the GTA and your cashback makes it even more accessible.",
+      "cashback": "{{CB:854322}}",
+      "heroSub": "We are a licensed Brampton buyer agent. We charge a flat {{BUYER_FEE}} fee and return the rest of the buyer agent commission to you as cash back after closing. Brampton offers some of the best freehold value in the GTA and your cashback makes it even more accessible.",
       "calcDefault": 780000,
       "marketDate": "September 2026",
       "marketTitle": "The Brampton Market Right Now",
@@ -1224,11 +1232,11 @@
       "faqCity": [
         {
           "q": "Is there a cashback realtor in Brampton?",
-          "a": "Yes. Home Cashbacks is a RECO-registered buyer agent serving Brampton and the GTA. We charge a flat $4,999 fee and return the rest of the buyer agent commission after closing."
+          "a": "Yes. Home Cashbacks is a RECO-registered buyer agent serving Brampton and the GTA. We charge a flat {{BUYER_FEE}} fee and return the rest of the buyer agent commission after closing."
         },
         {
           "q": "How much cashback can I get in Brampton?",
-          "a": "On a $780,000 Brampton home with a 2.5% buyer agent commission, the total commission is $19,500. We take our flat $4,999 and you receive approximately $14,501 back after closing."
+          "a": "On a $780,000 Brampton home with a 2.5% buyer agent commission, the total commission is $19,500. We take our flat {{BUYER_FEE}} and you receive approximately {{CB:780000}} back after closing."
         },
         {
           "q": "Is Brampton a good place to buy for first-time buyers?",
@@ -1262,13 +1270,14 @@
         "lng": -79.7624
       },
       "sourceSlug": "buyer-brampton",
-      "metaDesc": "Cashback realtor in Brampton. Flat $4,999 fee \u2014 on a typical Brampton home you keep $14,000. Full service, no upfront commitment."
+      "metaDesc": "Cashback realtor in Brampton. Flat {{BUYER_FEE}} fee \u2014 on a typical Brampton home you keep {{CBF:854322}}. Full service, no upfront commitment.",
+      "h1Tagline": null
     },
     {
       "slug": "aurora",
       "name": "Aurora",
-      "cashback": "$24,143",
-      "heroSub": "We are a licensed Aurora buyer agent. We charge a flat $4,999 fee and return the rest of the buyer agent commission to you as cash back after closing. On a typical Aurora home, that is over $26,000 back.",
+      "cashback": "{{CB:1165686}}",
+      "heroSub": "We are a licensed Aurora buyer agent. We charge a flat {{BUYER_FEE}} fee and return the rest of the buyer agent commission to you as cash back after closing. On a typical Aurora home, that is over {{CBF:1165686}} back.",
       "calcDefault": 1250000,
       "marketDate": "September 2026",
       "marketTitle": "The Aurora Market Right Now",
@@ -1322,15 +1331,15 @@
           "price": "Detached from ~$1.8M"
         }
       ],
-      "laleh": "\"Aurora buyers are usually there for the schools, and the school-catchment premium is real, sometimes well over $150,000 between a top-ranked zone and a home two streets over. On a $1.25M home your cashback is over $26,000, which is real leverage when you are weighing whether that premium is worth it for your family.\"",
+      "laleh": "\"Aurora buyers are usually there for the schools, and the school-catchment premium is real, sometimes well over $150,000 between a top-ranked zone and a home two streets over. On a $1.25M home your cashback is over {{CBF:1250000}}, which is real leverage when you are weighing whether that premium is worth it for your family.\"",
       "faqCity": [
         {
           "q": "Is there a cashback realtor in Aurora?",
-          "a": "Yes. Home Cashbacks is a RECO-registered buyer agent serving Aurora and York Region. We charge a flat $4,999 fee and return the rest of the buyer agent commission after closing."
+          "a": "Yes. Home Cashbacks is a RECO-registered buyer agent serving Aurora and York Region. We charge a flat {{BUYER_FEE}} fee and return the rest of the buyer agent commission after closing."
         },
         {
           "q": "How much cashback can I get in Aurora?",
-          "a": "On a $1,250,000 Aurora home with a 2.5% buyer agent commission, the total commission is $31,250. We take our flat $4,999 and you receive approximately $26,251 back after closing."
+          "a": "On a $1,250,000 Aurora home with a 2.5% buyer agent commission, the total commission is $31,250. We take our flat {{BUYER_FEE}} and you receive approximately {{CB:1250000}} back after closing."
         },
         {
           "q": "What is the best neighbourhood in Aurora for families?",
@@ -1364,14 +1373,15 @@
         "lng": -79.4504
       },
       "sourceSlug": "buyer-aurora",
-      "metaDesc": "Cashback realtor in Aurora. Flat $4,999 fee, on a typical Aurora home you keep $26,000. Full service, no upfront commitment.",
-      "pageTitle": "Aurora Cashback Realtor | Home Cashbacks"
+      "metaDesc": "Cashback realtor in Aurora. Flat {{BUYER_FEE}} fee, on a typical Aurora home you keep {{CBF:1165686}}. Full service, no upfront commitment.",
+      "pageTitle": "Aurora Cashback Realtor | Home Cashbacks",
+      "h1Tagline": null
     },
     {
       "slug": "newmarket",
       "name": "Newmarket",
-      "cashback": "$17,901",
-      "heroSub": "We are a licensed Newmarket buyer agent. We charge a flat $4,999 fee and return the rest of the buyer agent commission to you as cash back after closing. On a typical Newmarket home, that is over $20,000 back.",
+      "cashback": "{{CB:915986}}",
+      "heroSub": "We are a licensed Newmarket buyer agent. We charge a flat {{BUYER_FEE}} fee and return the rest of the buyer agent commission to you as cash back after closing. On a typical Newmarket home, that is over {{CBF:915986}} back.",
       "calcDefault": 1000000,
       "marketDate": "September 2026",
       "marketTitle": "The Newmarket Market Right Now",
@@ -1425,15 +1435,15 @@
           "price": "Detached from ~$1.1M"
         }
       ],
-      "laleh": "\"Newmarket is the value play in York Region right now. A comparable detached home runs about $195,000 less than in Aurora, and you still get GO Transit access and a genuine downtown. On a $1M home your cashback is over $20,000, which goes a long way toward closing costs or the first year of carrying costs in a new town.\"",
+      "laleh": "\"Newmarket is the value play in York Region right now. A comparable detached home runs about $195,000 less than in Aurora, and you still get GO Transit access and a genuine downtown. On a $1M home your cashback is over {{CBF:1000000}}, which goes a long way toward closing costs or the first year of carrying costs in a new town.\"",
       "faqCity": [
         {
           "q": "Is there a cashback realtor in Newmarket?",
-          "a": "Yes. Home Cashbacks is a RECO-registered buyer agent serving Newmarket and York Region. We charge a flat $4,999 fee and return the rest of the buyer agent commission after closing."
+          "a": "Yes. Home Cashbacks is a RECO-registered buyer agent serving Newmarket and York Region. We charge a flat {{BUYER_FEE}} fee and return the rest of the buyer agent commission after closing."
         },
         {
           "q": "How much cashback can I get in Newmarket?",
-          "a": "On a $1,000,000 Newmarket home with a 2.5% buyer agent commission, the total commission is $25,000. We take our flat $4,999 and you receive approximately $20,001 back after closing."
+          "a": "On a $1,000,000 Newmarket home with a 2.5% buyer agent commission, the total commission is $25,000. We take our flat {{BUYER_FEE}} and you receive approximately {{CB:1000000}} back after closing."
         },
         {
           "q": "What is the best neighbourhood in Newmarket for families?",
@@ -1467,14 +1477,15 @@
         "lng": -79.4613
       },
       "sourceSlug": "buyer-newmarket",
-      "metaDesc": "Cashback realtor in Newmarket. Flat $4,999 fee, on a typical Newmarket home you keep $20,000. Full service, no upfront commitment.",
-      "pageTitle": "Newmarket Cashback Realtor | Home Cashbacks"
+      "metaDesc": "Cashback realtor in Newmarket. Flat {{BUYER_FEE}} fee, on a typical Newmarket home you keep {{CBF:915986}}. Full service, no upfront commitment.",
+      "pageTitle": "Newmarket Cashback Realtor | Home Cashbacks",
+      "h1Tagline": null
     },
     {
       "slug": "stouffville",
       "name": "Stouffville",
-      "cashback": "$23,495",
-      "heroSub": "We are a licensed Stouffville buyer agent. We charge a flat $4,999 fee and return the rest of the buyer agent commission to you as cash back after closing. On a typical Stouffville home, that is over $24,000 back.",
+      "cashback": "{{CB:1139770}}",
+      "heroSub": "We are a licensed Stouffville buyer agent. We charge a flat {{BUYER_FEE}} fee and return the rest of the buyer agent commission to you as cash back after closing. On a typical Stouffville home, that is over {{CBF:1139770}} back.",
       "calcDefault": 1150000,
       "marketDate": "September 2026",
       "marketTitle": "The Stouffville Market Right Now",
@@ -1528,15 +1539,15 @@
           "price": "Detached from ~$1.8M"
         }
       ],
-      "laleh": "\"Stouffville is a town in transition, still small-town in feel but growing fast, and that shows up in the market. Detached homes have real negotiating room right now, but row townhomes are moving quickly and sometimes above asking. On a $1.15M home your cashback is over $24,000, and I always walk buyers through which segment they are actually shopping in before we set a strategy.\"",
+      "laleh": "\"Stouffville is a town in transition, still small-town in feel but growing fast, and that shows up in the market. Detached homes have real negotiating room right now, but row townhomes are moving quickly and sometimes above asking. On a $1.15M home your cashback is over {{CBF:1150000}}, and I always walk buyers through which segment they are actually shopping in before we set a strategy.\"",
       "faqCity": [
         {
           "q": "Is there a cashback realtor in Stouffville?",
-          "a": "Yes. Home Cashbacks is a RECO-registered buyer agent serving Stouffville and York Region. We charge a flat $4,999 fee and return the rest of the buyer agent commission after closing."
+          "a": "Yes. Home Cashbacks is a RECO-registered buyer agent serving Stouffville and York Region. We charge a flat {{BUYER_FEE}} fee and return the rest of the buyer agent commission after closing."
         },
         {
           "q": "How much cashback can I get in Stouffville?",
-          "a": "On a $1,150,000 Stouffville home with a 2.5% buyer agent commission, the total commission is $28,750. We take our flat $4,999 and you receive approximately $23,751 back after closing."
+          "a": "On a $1,150,000 Stouffville home with a 2.5% buyer agent commission, the total commission is $28,750. We take our flat {{BUYER_FEE}} and you receive approximately {{CB:1150000}} back after closing."
         },
         {
           "q": "What is the best neighbourhood in Stouffville for families?",
@@ -1570,14 +1581,15 @@
         "lng": -79.2429
       },
       "sourceSlug": "buyer-stouffville",
-      "metaDesc": "Cashback realtor in Stouffville. Flat $4,999 fee, on a typical Stouffville home you keep $24,000. Full service, no upfront commitment.",
-      "pageTitle": "Stouffville Cashback Realtor | Home Cashbacks"
+      "metaDesc": "Cashback realtor in Stouffville. Flat {{BUYER_FEE}} fee, on a typical Stouffville home you keep {{CBF:1139770}}. Full service, no upfront commitment.",
+      "pageTitle": "Stouffville Cashback Realtor | Home Cashbacks",
+      "h1Tagline": null
     },
     {
       "slug": "thornhill",
       "name": "Thornhill",
-      "cashback": "$24,087",
-      "heroSub": "We are a licensed Thornhill buyer agent. We charge a flat $4,999 fee and return the rest of the buyer agent commission to you as cash back after closing. On a typical Thornhill home, that is over $24,000 back.",
+      "cashback": "{{CB:1163441}}",
+      "heroSub": "We are a licensed Thornhill buyer agent. We charge a flat {{BUYER_FEE}} fee and return the rest of the buyer agent commission to you as cash back after closing. On a typical Thornhill home, that is over {{CBF:1163441}} back.",
       "calcDefault": 1150000,
       "marketDate": "September 2026",
       "marketTitle": "The Thornhill Market Right Now",
@@ -1627,15 +1639,15 @@
           "price": "Detached from ~$1.1M"
         }
       ],
-      "laleh": "\"Thornhill is a straddle market, part Vaughan, part Markham, and buyers often don't realize that until they're comparing school boards or property tax rates. It has stayed remarkably steady through the rate cycle because supply never really loosens up here. On a $1.15M home your cashback is over $24,000, which matters in a market where well-priced homes still move in under two weeks.\"",
+      "laleh": "\"Thornhill is a straddle market, part Vaughan, part Markham, and buyers often don't realize that until they're comparing school boards or property tax rates. It has stayed remarkably steady through the rate cycle because supply never really loosens up here. On a $1.15M home your cashback is over {{CBF:1150000}}, which matters in a market where well-priced homes still move in under two weeks.\"",
       "faqCity": [
         {
           "q": "Is there a cashback realtor in Thornhill?",
-          "a": "Yes. Home Cashbacks is a RECO-registered buyer agent serving Thornhill, which spans both Vaughan and Markham. We charge a flat $4,999 fee and return the rest of the buyer agent commission after closing."
+          "a": "Yes. Home Cashbacks is a RECO-registered buyer agent serving Thornhill, which spans both Vaughan and Markham. We charge a flat {{BUYER_FEE}} fee and return the rest of the buyer agent commission after closing."
         },
         {
           "q": "How much cashback can I get in Thornhill?",
-          "a": "On a $1,150,000 Thornhill home with a 2.5% buyer agent commission, the total commission is $28,750. We take our flat $4,999 and you receive approximately $23,751 back after closing."
+          "a": "On a $1,150,000 Thornhill home with a 2.5% buyer agent commission, the total commission is $28,750. We take our flat {{BUYER_FEE}} and you receive approximately {{CB:1150000}} back after closing."
         },
         {
           "q": "Is Thornhill in Vaughan or Markham?",
@@ -1670,13 +1682,14 @@
       },
       "sourceSlug": "buyer-thornhill",
       "pageTitle": "Thornhill Cashback Realtor | Home Cashbacks",
-      "metaDesc": "Cashback realtor in Thornhill. Flat $4,999 fee, on a typical Thornhill home you keep $24,000. Full service, no upfront commitment."
+      "metaDesc": "Cashback realtor in Thornhill. Flat {{BUYER_FEE}} fee, on a typical Thornhill home you keep {{CBF:1163441}}. Full service, no upfront commitment.",
+      "h1Tagline": null
     },
     {
       "slug": "burlington",
       "name": "Burlington",
-      "cashback": "$20,837",
-      "heroSub": "We are a licensed Burlington buyer agent. We charge a flat $4,999 fee and return the rest of the buyer agent commission to you as cash back after closing. On a typical Burlington home, that is over $22,000 back.",
+      "cashback": "{{CB:1033458}}",
+      "heroSub": "We are a licensed Burlington buyer agent. We charge a flat {{BUYER_FEE}} fee and return the rest of the buyer agent commission to you as cash back after closing. On a typical Burlington home, that is over {{CBF:1033458}} back.",
       "calcDefault": 1100000,
       "marketDate": "September 2026",
       "marketTitle": "The Burlington Market Right Now",
@@ -1730,15 +1743,15 @@
           "price": "Detached from ~$1.1M"
         }
       ],
-      "laleh": "\"What surprises buyers about Burlington is how steady it's stayed, a lot of people assume all of Halton moved the same direction and it just isn't true here. The lake and the walkable downtown are doing real work. Cashback on a typical home runs over $22,000, which goes a long way whether you're upsizing from a condo or coming out from Toronto entirely.\"",
+      "laleh": "\"What surprises buyers about Burlington is how steady it's stayed, a lot of people assume all of Halton moved the same direction and it just isn't true here. The lake and the walkable downtown are doing real work. Cashback on a typical home runs over {{CBF:1033458}}, which goes a long way whether you're upsizing from a condo or coming out from Toronto entirely.\"",
       "faqCity": [
         {
           "q": "Is there a cashback realtor in Burlington?",
-          "a": "Yes. Home Cashbacks is a RECO-registered buyer agent serving Burlington and the wider Halton Region. We charge a flat $4,999 fee and return the rest of the buyer agent commission after closing."
+          "a": "Yes. Home Cashbacks is a RECO-registered buyer agent serving Burlington and the wider Halton Region. We charge a flat {{BUYER_FEE}} fee and return the rest of the buyer agent commission after closing."
         },
         {
           "q": "How much cashback can I get in Burlington?",
-          "a": "On a $1,090,000 Burlington home with a 2.5% buyer agent commission, the total commission is $27,250. We take our flat $4,999 and you receive approximately $22,251 back after closing."
+          "a": "On a $1,090,000 Burlington home with a 2.5% buyer agent commission, the total commission is $27,250. We take our flat {{BUYER_FEE}} and you receive approximately {{CB:1090000}} back after closing."
         },
         {
           "q": "What is the best neighbourhood in Burlington for families?",
@@ -1773,13 +1786,14 @@
       },
       "sourceSlug": "buyer-burlington",
       "pageTitle": "Burlington Cashback Realtor | Home Cashbacks",
-      "metaDesc": "Cashback realtor in Burlington. Flat $4,999 fee, on a typical Burlington home you keep $22,000. Full service, no upfront commitment."
+      "metaDesc": "Cashback realtor in Burlington. Flat {{BUYER_FEE}} fee, on a typical Burlington home you keep {{CBF:1033458}}. Full service, no upfront commitment.",
+      "h1Tagline": null
     },
     {
       "slug": "milton",
       "name": "Milton",
-      "cashback": "$20,475",
-      "heroSub": "We are a licensed Milton buyer agent. We charge a flat $4,999 fee and return the rest of the buyer agent commission to you as cash back after closing. On a typical Milton home, that is over $20,000 back.",
+      "cashback": "{{CB:1018973}}",
+      "heroSub": "We are a licensed Milton buyer agent. We charge a flat {{BUYER_FEE}} fee and return the rest of the buyer agent commission to you as cash back after closing. On a typical Milton home, that is over {{CBF:1018973}} back.",
       "calcDefault": 1000000,
       "marketDate": "September 2026",
       "marketTitle": "The Milton Market Right Now",
@@ -1833,15 +1847,15 @@
           "price": "Detached from ~$950K"
         }
       ],
-      "laleh": "\"Milton is the clearest buyer's market in Halton right now, plain and simple, more homes coming on than selling for months straight. That's real leverage buyers haven't had here in years. On a $1M home the cashback is over $20,000, which covers a meaningful chunk of closing costs in a city that's still genuinely growing.\"",
+      "laleh": "\"Milton is the clearest buyer's market in Halton right now, plain and simple, more homes coming on than selling for months straight. That's real leverage buyers haven't had here in years. On a $1M home the cashback is over {{CBF:1000000}}, which covers a meaningful chunk of closing costs in a city that's still genuinely growing.\"",
       "faqCity": [
         {
           "q": "Is there a cashback realtor in Milton?",
-          "a": "Yes. Home Cashbacks is a RECO-registered buyer agent serving Milton and the wider Halton Region. We charge a flat $4,999 fee and return the rest of the buyer agent commission after closing."
+          "a": "Yes. Home Cashbacks is a RECO-registered buyer agent serving Milton and the wider Halton Region. We charge a flat {{BUYER_FEE}} fee and return the rest of the buyer agent commission after closing."
         },
         {
           "q": "How much cashback can I get in Milton?",
-          "a": "On a $1,000,000 Milton home with a 2.5% buyer agent commission, the total commission is $25,000. We take our flat $4,999 and you receive approximately $20,001 back after closing."
+          "a": "On a $1,000,000 Milton home with a 2.5% buyer agent commission, the total commission is $25,000. We take our flat {{BUYER_FEE}} and you receive approximately {{CB:1000000}} back after closing."
         },
         {
           "q": "Is Milton a buyer's market right now?",
@@ -1876,13 +1890,14 @@
       },
       "sourceSlug": "buyer-milton",
       "pageTitle": "Milton Cashback Realtor | Home Cashbacks",
-      "metaDesc": "Cashback realtor in Milton. Flat $4,999 fee, on a typical Milton home you keep $20,000. Full service, no upfront commitment."
+      "metaDesc": "Cashback realtor in Milton. Flat {{BUYER_FEE}} fee, on a typical Milton home you keep {{CBF:1018973}}. Full service, no upfront commitment.",
+      "h1Tagline": null
     },
     {
       "slug": "halton-hills",
       "name": "Halton Hills",
-      "cashback": "$21,375",
-      "heroSub": "We are a licensed Halton Hills buyer agent. We charge a flat $4,999 fee and return the rest of the buyer agent commission to you as cash back after closing. On a typical Halton Hills home, that is over $19,000 back.",
+      "cashback": "{{CB:1054940}}",
+      "heroSub": "We are a licensed Halton Hills buyer agent. We charge a flat {{BUYER_FEE}} fee and return the rest of the buyer agent commission to you as cash back after closing. On a typical Halton Hills home, that is over {{CBF:1054940}} back.",
       "calcDefault": 960000,
       "marketDate": "September 2026",
       "marketTitle": "The Halton Hills Market Right Now",
@@ -1936,15 +1951,15 @@
           "price": "Detached from ~$2M+"
         }
       ],
-      "laleh": "\"Halton Hills is who I recommend when a buyer tells me they want space and quiet more than they want to be close to everything. Georgetown gives you a real downtown and GO access, Acton is even more affordable, and Glen Williams is its own thing entirely. Cashback here is over $19,000, meaningful in a town where people are trading commute time for actual land.\"",
+      "laleh": "\"Halton Hills is who I recommend when a buyer tells me they want space and quiet more than they want to be close to everything. Georgetown gives you a real downtown and GO access, Acton is even more affordable, and Glen Williams is its own thing entirely. Cashback here is over {{CBF:1054940}}, meaningful in a town where people are trading commute time for actual land.\"",
       "faqCity": [
         {
           "q": "Is there a cashback realtor in Halton Hills?",
-          "a": "Yes. Home Cashbacks is a RECO-registered buyer agent serving Halton Hills, including Georgetown and Acton. We charge a flat $4,999 fee and return the rest of the buyer agent commission after closing."
+          "a": "Yes. Home Cashbacks is a RECO-registered buyer agent serving Halton Hills, including Georgetown and Acton. We charge a flat {{BUYER_FEE}} fee and return the rest of the buyer agent commission after closing."
         },
         {
           "q": "How much cashback can I get in Halton Hills?",
-          "a": "On a $958,000 Halton Hills home with a 2.5% buyer agent commission, the total commission is $23,950. We take our flat $4,999 and you receive approximately $18,951 back after closing."
+          "a": "On a $958,000 Halton Hills home with a 2.5% buyer agent commission, the total commission is $23,950. We take our flat {{BUYER_FEE}} and you receive approximately {{CB:958000}} back after closing."
         },
         {
           "q": "What is the difference between Georgetown and Acton?",
@@ -1979,13 +1994,14 @@
       },
       "sourceSlug": "buyer-halton-hills",
       "pageTitle": "Halton Hills Cashback Realtor | Home Cashbacks",
-      "metaDesc": "Cashback realtor in Halton Hills. Flat $4,999 fee, on a typical Halton Hills home you keep $19,000. Full service, no upfront commitment."
+      "metaDesc": "Cashback realtor in Halton Hills. Flat {{BUYER_FEE}} fee, on a typical Halton Hills home you keep {{CBF:1054940}}. Full service, no upfront commitment.",
+      "h1Tagline": null
     },
     {
       "slug": "ajax",
       "name": "Ajax",
-      "cashback": "$15,722",
-      "heroSub": "We are a licensed Ajax buyer agent. We charge a flat $4,999 fee and return the rest of the buyer agent commission to you as cash back after closing. On a typical Ajax home, that is over $17,000 back.",
+      "cashback": "{{CB:828835}}",
+      "heroSub": "We are a licensed Ajax buyer agent. We charge a flat {{BUYER_FEE}} fee and return the rest of the buyer agent commission to you as cash back after closing. On a typical Ajax home, that is over {{CBF:828835}} back.",
       "calcDefault": 888000,
       "marketDate": "September 2026",
       "marketTitle": "The Ajax Market Right Now",
@@ -2035,15 +2051,15 @@
           "price": "Detached from ~$850K"
         }
       ],
-      "laleh": "\"I send a lot of first-time buyers to Ajax specifically because the math still works here. $17,000 in cashback on top of an already-affordable purchase price covers real moving costs, not just a nice-to-have. Northeast Ajax is where I'd start looking if schools and a newer build matter to you.\"",
+      "laleh": "\"I send a lot of first-time buyers to Ajax specifically because the math still works here. {{CBF:828835}} in cashback on top of an already-affordable purchase price covers real moving costs, not just a nice-to-have. Northeast Ajax is where I'd start looking if schools and a newer build matter to you.\"",
       "faqCity": [
         {
           "q": "Is there a cashback realtor in Ajax?",
-          "a": "Yes. Home Cashbacks is a RECO-registered buyer agent serving Ajax and Durham Region. We charge a flat $4,999 fee and return the rest of the buyer agent commission after closing."
+          "a": "Yes. Home Cashbacks is a RECO-registered buyer agent serving Ajax and Durham Region. We charge a flat {{BUYER_FEE}} fee and return the rest of the buyer agent commission after closing."
         },
         {
           "q": "How much cashback can I get in Ajax?",
-          "a": "On an $888,000 Ajax home with a 2.5% buyer agent commission, the total commission is $22,200. We take our flat $4,999 and you receive approximately $17,201 back after closing."
+          "a": "On an $888,000 Ajax home with a 2.5% buyer agent commission, the total commission is $22,200. We take our flat {{BUYER_FEE}} and you receive approximately {{CB:888000}} back after closing."
         },
         {
           "q": "Is Ajax commutable to Toronto?",
@@ -2077,13 +2093,14 @@
         "lng": -79.0204
       },
       "sourceSlug": "buyer-ajax",
-      "metaDesc": "Cashback realtor in Ajax. Flat $4,999 fee, on a typical Ajax home you keep $17,000. Full service, no upfront commitment."
+      "metaDesc": "Cashback realtor in Ajax. Flat {{BUYER_FEE}} fee, on a typical Ajax home you keep {{CBF:828835}}. Full service, no upfront commitment.",
+      "h1Tagline": null
     },
     {
       "slug": "pickering",
       "name": "Pickering",
-      "cashback": "$17,347",
-      "heroSub": "We are a licensed Pickering buyer agent. We charge a flat $4,999 fee and return the rest of the buyer agent commission to you as cash back after closing. On a typical Pickering home, that is over $17,900 back.",
+      "cashback": "{{CB:893842}}",
+      "heroSub": "We are a licensed Pickering buyer agent. We charge a flat {{BUYER_FEE}} fee and return the rest of the buyer agent commission to you as cash back after closing. On a typical Pickering home, that is over {{CBF:893842}} back.",
       "calcDefault": 917000,
       "marketDate": "September 2026",
       "marketTitle": "The Pickering Market Right Now",
@@ -2133,15 +2150,15 @@
           "price": "Detached from ~$900K"
         }
       ],
-      "laleh": "\"People underestimate how much Seaton has changed Pickering. It's genuinely one of the biggest planned communities in the GTA, and the direct Union line makes it a real option even for downtown commuters. Cashback here runs close to $18,000, which stacks up well whether you're going new-build or resale near the water.\"",
+      "laleh": "\"People underestimate how much Seaton has changed Pickering. It's genuinely one of the biggest planned communities in the GTA, and the direct Union line makes it a real option even for downtown commuters. Cashback here runs close to {{CBR:893842}}, which stacks up well whether you're going new-build or resale near the water.\"",
       "faqCity": [
         {
           "q": "Is there a cashback realtor in Pickering?",
-          "a": "Yes. Home Cashbacks is a RECO-registered buyer agent serving Pickering and Durham Region. We charge a flat $4,999 fee and return the rest of the buyer agent commission after closing."
+          "a": "Yes. Home Cashbacks is a RECO-registered buyer agent serving Pickering and Durham Region. We charge a flat {{BUYER_FEE}} fee and return the rest of the buyer agent commission after closing."
         },
         {
           "q": "How much cashback can I get in Pickering?",
-          "a": "On a $917,000 Pickering home with a 2.5% buyer agent commission, the total commission is $22,925. We take our flat $4,999 and you receive approximately $17,926 back after closing."
+          "a": "On a $917,000 Pickering home with a 2.5% buyer agent commission, the total commission is $22,925. We take our flat {{BUYER_FEE}} and you receive approximately {{CB:917000}} back after closing."
         },
         {
           "q": "What is Seaton in Pickering?",
@@ -2175,13 +2192,14 @@
         "lng": -79.0868
       },
       "sourceSlug": "buyer-pickering",
-      "metaDesc": "Cashback realtor in Pickering. Flat $4,999 fee, on a typical Pickering home you keep $17,900. Full service, no upfront commitment."
+      "metaDesc": "Cashback realtor in Pickering. Flat {{BUYER_FEE}} fee, on a typical Pickering home you keep {{CBF:893842}}. Full service, no upfront commitment.",
+      "h1Tagline": null
     },
     {
       "slug": "whitby",
       "name": "Whitby",
-      "cashback": "$17,070",
-      "heroSub": "We are a licensed Whitby buyer agent. We charge a flat $4,999 fee and return the rest of the buyer agent commission to you as cash back after closing. On a typical Whitby home, that is over $17,600 back.",
+      "cashback": "{{CB:882772}}",
+      "heroSub": "We are a licensed Whitby buyer agent. We charge a flat {{BUYER_FEE}} fee and return the rest of the buyer agent commission to you as cash back after closing. On a typical Whitby home, that is over {{CBF:882772}} back.",
       "calcDefault": 904000,
       "marketDate": "September 2026",
       "marketTitle": "The Whitby Market Right Now",
@@ -2231,15 +2249,15 @@
           "price": "Detached from ~$950K"
         }
       ],
-      "laleh": "\"Whitby gets overlooked next to its neighbours, and I think that's a mistake. Brooklin in particular is one of the most in-demand family pockets in all of Durham, it just doesn't make headlines the way Ajax does. Cashback on a typical purchase here is over $17,600, and I'd rather clients know about Brooklin before they default to somewhere flashier.\"",
+      "laleh": "\"Whitby gets overlooked next to its neighbours, and I think that's a mistake. Brooklin in particular is one of the most in-demand family pockets in all of Durham, it just doesn't make headlines the way Ajax does. Cashback on a typical purchase here is over {{CBF:882772}}, and I'd rather clients know about Brooklin before they default to somewhere flashier.\"",
       "faqCity": [
         {
           "q": "Is there a cashback realtor in Whitby?",
-          "a": "Yes. Home Cashbacks is a RECO-registered buyer agent serving Whitby and Durham Region. We charge a flat $4,999 fee and return the rest of the buyer agent commission after closing."
+          "a": "Yes. Home Cashbacks is a RECO-registered buyer agent serving Whitby and Durham Region. We charge a flat {{BUYER_FEE}} fee and return the rest of the buyer agent commission after closing."
         },
         {
           "q": "How much cashback can I get in Whitby?",
-          "a": "On a $904,000 Whitby home with a 2.5% buyer agent commission, the total commission is $22,600. We take our flat $4,999 and you receive approximately $17,601 back after closing."
+          "a": "On a $904,000 Whitby home with a 2.5% buyer agent commission, the total commission is $22,600. We take our flat {{BUYER_FEE}} and you receive approximately {{CB:904000}} back after closing."
         },
         {
           "q": "What is the best neighbourhood in Whitby for families?",
@@ -2273,13 +2291,14 @@
         "lng": -78.9429
       },
       "sourceSlug": "buyer-whitby",
-      "metaDesc": "Cashback realtor in Whitby. Flat $4,999 fee, on a typical Whitby home you keep $17,600. Full service, no upfront commitment."
+      "metaDesc": "Cashback realtor in Whitby. Flat {{BUYER_FEE}} fee, on a typical Whitby home you keep {{CBF:882772}}. Full service, no upfront commitment.",
+      "h1Tagline": null
     },
     {
       "slug": "oshawa",
       "name": "Oshawa",
-      "cashback": "$11,998",
-      "heroSub": "We are a licensed Oshawa buyer agent. We charge a flat $4,999 fee and return the rest of the buyer agent commission to you as cash back after closing. On a typical Oshawa home, that is over $13,000 back.",
+      "cashback": "{{CB:679861}}",
+      "heroSub": "We are a licensed Oshawa buyer agent. We charge a flat {{BUYER_FEE}} fee and return the rest of the buyer agent commission to you as cash back after closing. On a typical Oshawa home, that is over {{CBF:679861}} back.",
       "calcDefault": 722000,
       "marketDate": "September 2026",
       "marketTitle": "The Oshawa Market Right Now",
@@ -2329,15 +2348,15 @@
           "price": "Detached from ~$750K"
         }
       ],
-      "laleh": "\"For a lot of first-time buyers, Oshawa is where the numbers finally work, and that's not a knock on the city, it's genuinely one of the last affordable entry points left in the GTA. The $13,000 cashback here can be the difference between qualifying comfortably and stretching every month to make it work.\"",
+      "laleh": "\"For a lot of first-time buyers, Oshawa is where the numbers finally work, and that's not a knock on the city, it's genuinely one of the last affordable entry points left in the GTA. The {{CBF:679861}} cashback here can be the difference between qualifying comfortably and stretching every month to make it work.\"",
       "faqCity": [
         {
           "q": "Is there a cashback realtor in Oshawa?",
-          "a": "Yes. Home Cashbacks is a RECO-registered buyer agent serving Oshawa and Durham Region. We charge a flat $4,999 fee and return the rest of the buyer agent commission after closing."
+          "a": "Yes. Home Cashbacks is a RECO-registered buyer agent serving Oshawa and Durham Region. We charge a flat {{BUYER_FEE}} fee and return the rest of the buyer agent commission after closing."
         },
         {
           "q": "How much cashback can I get in Oshawa?",
-          "a": "On a $722,000 Oshawa home with a 2.5% buyer agent commission, the total commission is $18,050. We take our flat $4,999 and you receive approximately $13,051 back after closing."
+          "a": "On a $722,000 Oshawa home with a 2.5% buyer agent commission, the total commission is $18,050. We take our flat {{BUYER_FEE}} and you receive approximately {{CB:722000}} back after closing."
         },
         {
           "q": "Is Oshawa the most affordable city in the GTA?",
@@ -2371,13 +2390,14 @@
         "lng": -78.8658
       },
       "sourceSlug": "buyer-oshawa",
-      "metaDesc": "Cashback realtor in Oshawa. Flat $4,999 fee, on a typical Oshawa home you keep $13,000. Full service, no upfront commitment."
+      "metaDesc": "Cashback realtor in Oshawa. Flat {{BUYER_FEE}} fee, on a typical Oshawa home you keep {{CBF:679861}}. Full service, no upfront commitment.",
+      "h1Tagline": null
     },
     {
       "slug": "king-city",
       "name": "King City",
-      "cashback": "$41,895",
-      "heroSub": "We are a licensed King City buyer agent. We charge a flat $4,999 fee and return the rest of the buyer agent commission to you as cash back after closing. On a typical King City home, that is over $42,500 back.",
+      "cashback": "{{CB:1875750}}",
+      "heroSub": "We are a licensed King City buyer agent. We charge a flat {{BUYER_FEE}} fee and return the rest of the buyer agent commission to you as cash back after closing. On a typical King City home, that is over {{CBF:1875750}} back.",
       "calcDefault": 1900000,
       "marketDate": "September 2026",
       "marketTitle": "The King City Market Right Now",
@@ -2431,15 +2451,15 @@
           "price": "Detached from ~$2.5M+"
         }
       ],
-      "laleh": "\"King City is a different kind of market entirely, buyers here are usually trading proximity for land, privacy, and often an equestrian setup you can't get closer to Toronto. Schomberg is genuinely the value entry point into the township if King City proper is out of reach. On a $1.9M home your cashback is over $42,500, which is significant even relative to the price point.\"",
+      "laleh": "\"King City is a different kind of market entirely, buyers here are usually trading proximity for land, privacy, and often an equestrian setup you can't get closer to Toronto. Schomberg is genuinely the value entry point into the township if King City proper is out of reach. On a $1.9M home your cashback is over {{CBF:1900000}}, which is significant even relative to the price point.\"",
       "faqCity": [
         {
           "q": "Is there a cashback realtor in King City?",
-          "a": "Yes. Home Cashbacks is a RECO-registered buyer agent serving King City and the wider Township of King. We charge a flat $4,999 fee and return the rest of the buyer agent commission after closing."
+          "a": "Yes. Home Cashbacks is a RECO-registered buyer agent serving King City and the wider Township of King. We charge a flat {{BUYER_FEE}} fee and return the rest of the buyer agent commission after closing."
         },
         {
           "q": "How much cashback can I get in King City?",
-          "a": "On a $1,900,000 King City home with a 2.5% buyer agent commission, the total commission is $47,500. We take our flat $4,999 and you receive approximately $42,501 back after closing."
+          "a": "On a $1,900,000 King City home with a 2.5% buyer agent commission, the total commission is $47,500. We take our flat {{BUYER_FEE}} and you receive approximately {{CB:1900000}} back after closing."
         },
         {
           "q": "Why are homes in King City so much more expensive?",
@@ -2473,13 +2493,14 @@
         "lng": -79.5261
       },
       "sourceSlug": "buyer-king-city",
-      "metaDesc": "Cashback realtor in King City. Flat $4,999 fee, on a typical King City home you keep $42,500. Full service, no upfront commitment."
+      "metaDesc": "Cashback realtor in King City. Flat {{BUYER_FEE}} fee, on a typical King City home you keep {{CBF:1875750}}. Full service, no upfront commitment.",
+      "h1Tagline": null
     },
     {
       "slug": "east-gwillimbury",
       "name": "East Gwillimbury",
-      "cashback": "$22,270",
-      "heroSub": "We are a licensed East Gwillimbury buyer agent. We charge a flat $4,999 fee and return the rest of the buyer agent commission to you as cash back after closing. On a typical East Gwillimbury home, that is over $22,500 back.",
+      "cashback": "{{CB:1090748}}",
+      "heroSub": "We are a licensed East Gwillimbury buyer agent. We charge a flat {{BUYER_FEE}} fee and return the rest of the buyer agent commission to you as cash back after closing. On a typical East Gwillimbury home, that is over {{CBF:1090748}} back.",
       "calcDefault": 1100000,
       "marketDate": "September 2026",
       "marketTitle": "The East Gwillimbury Market Right Now",
@@ -2533,15 +2554,15 @@
           "price": "Detached from ~$1.1M"
         }
       ],
-      "laleh": "\"East Gwillimbury is genuinely one of the fastest-growing parts of York Region right now, and East Gwillimbury GO being the northern end of the line matters more than people realize, it means guaranteed seating on the way into the city. Queensville is where most of the new construction is happening, while Mount Albert and Sharon keep more of a rural, small-town character. On a $1.1M home your cashback is over $22,500, real money whether you're buying new in Queensville or an older home in one of the hamlets.\"",
+      "laleh": "\"East Gwillimbury is genuinely one of the fastest-growing parts of York Region right now, and East Gwillimbury GO being the northern end of the line matters more than people realize, it means guaranteed seating on the way into the city. Queensville is where most of the new construction is happening, while Mount Albert and Sharon keep more of a rural, small-town character. On a $1.1M home your cashback is over {{CBF:1100000}}, real money whether you're buying new in Queensville or an older home in one of the hamlets.\"",
       "faqCity": [
         {
           "q": "Is there a cashback realtor in East Gwillimbury?",
-          "a": "Yes. Home Cashbacks is a RECO-registered buyer agent serving East Gwillimbury and York Region. We charge a flat $4,999 fee and return the rest of the buyer agent commission after closing."
+          "a": "Yes. Home Cashbacks is a RECO-registered buyer agent serving East Gwillimbury and York Region. We charge a flat {{BUYER_FEE}} fee and return the rest of the buyer agent commission after closing."
         },
         {
           "q": "How much cashback can I get in East Gwillimbury?",
-          "a": "On a $1,100,000 East Gwillimbury home with a 2.5% buyer agent commission, the total commission is $27,500. We take our flat $4,999 and you receive approximately $22,501 back after closing."
+          "a": "On a $1,100,000 East Gwillimbury home with a 2.5% buyer agent commission, the total commission is $27,500. We take our flat {{BUYER_FEE}} and you receive approximately {{CB:1100000}} back after closing."
         },
         {
           "q": "Is East Gwillimbury commutable to Toronto?",
@@ -2575,7 +2596,8 @@
         "lng": -79.4468
       },
       "sourceSlug": "buyer-east-gwillimbury",
-      "metaDesc": "Cashback realtor in East Gwillimbury. Flat $4,999 fee, on a typical East Gwillimbury home you keep $22,500. Full service, no upfront commitment."
+      "metaDesc": "Cashback realtor in East Gwillimbury. Flat {{BUYER_FEE}} fee, on a typical East Gwillimbury home you keep {{CBF:1090748}}. Full service, no upfront commitment.",
+      "h1Tagline": null
     }
   ]
 }

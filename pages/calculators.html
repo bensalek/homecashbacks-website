@@ -255,7 +255,7 @@ footer{background:#1a2332;padding:2.5rem 2rem 1.5rem}
     {"@type": "Question", "name": "What are closing costs when buying a home in Ontario?", "acceptedAnswer": {"@type": "Answer", "text": "Closing costs are what you pay on top of your down payment to complete the purchase. The biggest item is land transfer tax, calculated on a sliding scale from 0.5% to 2.5% of the purchase price. Toronto buyers pay this twice, provincial and municipal. You also pay legal fees, title insurance, and a home inspection. Budget 2% to 4% of the purchase price in total."}},
     {"@type": "Question", "name": "How does Toronto's land transfer tax work?", "acceptedAnswer": {"@type": "Answer", "text": "Ontario's provincial LTT starts at 0.5% on the first $55,000 and goes up to 2.5% on amounts above $2,000,000. Toronto adds a municipal LTT on top for any property within city limits, roughly doubling the total land transfer tax compared to elsewhere in Ontario."}},
     {"@type": "Question", "name": "What is included in the true monthly cost of owning a home?", "acceptedAnswer": {"@type": "Answer", "text": "Beyond the mortgage payment: property tax, utilities, home insurance, and condo fees if applicable. The monthly ownership calculator adds all of these together for a realistic monthly budget."}},
-    {"@type": "Question", "name": "How does the cashback calculator work?", "acceptedAnswer": {"@type": "Answer", "text": "Enter your home price and the buyer agent commission rate, typically 2.5% in the GTA. That commission is already set aside by the seller in every deal. Home Cashbacks takes a flat $4,999 fee and returns the rest after closing."}},
+    {"@type": "Question", "name": "How does the cashback calculator work?", "acceptedAnswer": {"@type": "Answer", "text": "Enter your home price and the buyer agent commission rate, typically 2.5% in the GTA. That commission is already set aside by the seller in every deal. Home Cashbacks takes a flat {{BUYER_FEE}} fee and returns the rest after closing."}},
     {"@type": "Question", "name": "What does the mortgage payment calculator include?", "acceptedAnswer": {"@type": "Answer", "text": "Just the principal and interest portion of your monthly payment, based on purchase price, down payment, interest rate, and amortization. It does not include property tax, utilities, or insurance."}}
   ]
 }
@@ -430,7 +430,7 @@ footer{background:#1a2332;padding:2.5rem 2rem 1.5rem}
           <div class="calc-results">
             <div class="calc-results-title" id="cb-results-title">Your cashback</div>
             <div class="calc-line"><span class="calc-line-label" id="cb-total-label">Total buyer agent commission</span><span class="calc-line-val" id="cb-total">—</span></div>
-            <div class="calc-line"><span class="calc-line-label">HomeCashbacks flat fee</span><span class="calc-line-val" id="cb-fee">−$4,999</span></div>
+            <div class="calc-line"><span class="calc-line-label">HomeCashbacks flat fee</span><span class="calc-line-val" id="cb-fee">−{{BUYER_FEE}}</span></div>
             <div class="calc-line-total"><span id="cb-result-label">You receive</span><span id="cb-result">—</span></div>
             <p class="calc-disclaimer" id="cb-disclaimer">Cashback arrives 6 to 8 weeks after closing. Estimate only, actual commission is set by the seller.</p>
           </div>
@@ -485,7 +485,7 @@ footer{background:#1a2332;padding:2.5rem 2rem 1.5rem}
   <!-- CTA -->
   <div class="cta-strip">
     <h3>Ready to buy? Your cashback is waiting.</h3>
-    <p>Flat $4,999 fee. Avg. $20,161 back on a GTA home. Showings $40 each.</p>
+    <p>Flat {{BUYER_FEE}} fee. Avg. {{CB:1006409}} back on a GTA home. Showings $40 each.</p>
     <button class="cta-strip-btn" onclick="openModal()">Book a Free Consultation</button>
   </div>
 </div>
@@ -599,7 +599,7 @@ function calcCashback(){
   const p=parseFloat(document.getElementById('cb-price').value)||0;
   const rate=parseFloat(document.getElementById('cb-comm').value)||0;
   const commission=p*(rate/100);
-  const fee=4999;
+  const fee=(cbMode==='sell')?{{SELLER_FEE_NUM}}:{{BUYER_FEE_NUM}};
   const net=Math.max(0,commission-fee);
   document.getElementById('cb-fee').textContent='−'+fmtC(fee);
   if(cbMode==='buy'){
@@ -670,14 +670,14 @@ const FAQ_MONTHLY=[
   {q:'What is included in the true monthly cost of owning a home?',a:'Most buyers only think about the mortgage payment, but monthly ownership costs more than that. Property tax in the GTA typically runs $400 to $800 per month depending on location and assessed value. Utilities (hydro, gas, water) average $110 to $220 per month for a condo, since heat and water are often bundled into condo fees, versus $400 or more for a house. Home insurance runs $30 to $60 per month for a condo, since the building itself is covered by condo fees, versus $150 to $200 per month for a house. If you are buying a condo, monthly fees in Toronto often run $500 to $1,200 or more on top of that. The calculator above adjusts its defaults automatically based on the property type you select. Ready to start the process? Use our <a href="/checklist.html" style="color:var(--cta);text-decoration:none;font-weight:500">home buyer checklist</a>.'},
   {q:'How is my monthly mortgage payment calculated?',a:'Your payment depends on four things: purchase price, down payment, interest rate, and amortization period. A longer amortization lowers your monthly payment but you pay more interest over time. A shorter amortization means a higher payment but you build equity faster and pay less interest overall. The calculator shows the principal and interest portion of your payment, which is the same number your lender will give you once your rate is confirmed.'},
   {q:'How does amortization length affect my monthly costs?',a:'A 25-year amortization is the standard for insured mortgages in Canada. Going to 30 years reduces your monthly payment but costs more in interest over the life of the loan and slows equity growth. Dropping to 20 years raises your monthly payment but saves a lot in interest. Use the calculator to compare all three side by side.'},
-  {q:'How does HomeCashbacks reduce the cost of buying?',a:'The seller pays a buyer agent commission of roughly 2.5% of the purchase price. HomeCashbacks takes a flat $4,999 from that and sends you everything above it after closing. On a $900,000 home you would get back roughly $17,500. You still get full service: showings, offer writing, negotiation, and closing support. Cashback arrives 6 to 8 weeks after your closing date.'},
+  {q:'How does HomeCashbacks reduce the cost of buying?',a:'The seller pays a buyer agent commission of roughly 2.5% of the purchase price. HomeCashbacks takes a flat {{BUYER_FEE}} from that and sends you everything above it after closing. On a $900,000 home you would get back roughly {{CBR:900000}}. You still get full service: showings, offer writing, negotiation, and closing support. Cashback arrives 6 to 8 weeks after your closing date.'},
 ];
 
 const FAQ_CASHBACK=[
-  {q:'How does the cashback calculator work?',a:'Enter your home price and the buyer agent commission rate, typically 2.5% in the GTA. That commission is already set aside by the seller in every deal. We take a flat $4,999 fee and send you the rest after closing. If you\'re selling, switch to "Selling" to see your savings vs. a standard percentage commission instead.'},
+  {q:'How does the cashback calculator work?',a:'Enter your home price and the buyer agent commission rate, typically 2.5% in the GTA. That commission is already set aside by the seller in every deal. We take a flat {{BUYER_FEE}} fee and send you the rest after closing. If you\'re selling, switch to "Selling" to see your savings vs. a standard percentage commission instead.'},
   {q:'Is the commission rate always 2.5%?',a:'It varies by listing, typically 2% to 2.5% for the buyer agent portion in the GTA, set by the seller and disclosed on the MLS listing. Use the exact rate shown on a specific listing for the most accurate estimate.'},
-  {q:'How much cashback would I get on a $1,000,000 home?',a:'At a 2.5% buyer agent commission, the total commission is $25,000. After our flat $4,999 fee, you\'d receive approximately $20,001 back after closing.'},
-  {q:'How much would I save selling a $1,000,000 home?',a:'A standard 2.5% listing commission on a $1,000,000 home is $25,000. Our flat $4,999 fee saves you approximately $20,001 compared to that standard commission.'},
+  {q:'How much cashback would I get on a $1,000,000 home?',a:'At a 2.5% buyer agent commission, the total commission is $25,000. After our flat {{BUYER_FEE}} fee, you\'d receive approximately {{CB:1000000}} back after closing.'},
+  {q:'How much would I save selling a $1,000,000 home?',a:'A standard 2.5% listing commission on a $1,000,000 home is $25,000. Our flat {{SELLER_FEE}} fee saves you approximately $20,001 compared to that standard commission.'},
 ];
 const FAQ_MORTGAGE=[
   {q:'What does this mortgage calculator include?',a:'Just the principal and interest portion of your monthly payment, calculated using your purchase price, down payment, interest rate, and amortization. It does not include property tax, utilities, home insurance, or condo fees. Use the Monthly Ownership Cost tab for the complete picture.'},

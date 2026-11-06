@@ -50,7 +50,7 @@
     {
       "@type": "Question",
       "name": "How much more do you save with a cashback realtor in Toronto?",
-      "acceptedAnswer": {"@type": "Answer", "text": "On a $1M Toronto home with a 2.5% buyer agent commission, a flat-fee cashback realtor charging $4,999 returns $20,000 that a traditional agent would keep. On a $1.5M home, that difference is $32,500."}
+      "acceptedAnswer": {"@type": "Answer", "text": "On a $1M Toronto home with a 2.5% buyer agent commission, a flat-fee cashback realtor charging {{BUYER_FEE}} returns {{CBR:1000000}} that a traditional agent would keep. On a $1.5M home, that difference is {{CBR:1500000}}."}
     }
   ]
 }
@@ -117,7 +117,7 @@
         <tr>
           <td>Fee model</td>
           <td class="them">Keeps full commission (2–2.5%) — <span class="cross">$0 back on a $1M home</span></td>
-          <td class="us">Flat $4,999 — <span class="tick">$20,000 back on a $1M home</span></td>
+          <td class="us">Flat {{BUYER_FEE}} — <span class="tick">{{CBR:1000000}} back on a $1M home</span></td>
         </tr>
         <tr>
           <td>RECO registered</td>
@@ -178,7 +178,7 @@
     </div>
     <div class="callout navy">
       <span class="callout-icon">💰</span>
-      <div class="callout-body"><strong>Home Cashbacks</strong>Takes $4,999 flat. Returns $20,000 to you after closing on that same $1M home. The seller pays the same either way.</div>
+      <div class="callout-body"><strong>Home Cashbacks</strong>Takes {{BUYER_FEE}} flat. Returns {{CBR:1000000}} to you after closing on that same $1M home. The seller pays the same either way.</div>
     </div>
   </div>
 
@@ -197,13 +197,13 @@
         <tr><th>Home price</th><th>Commission (2.5%)</th><th>Traditional keeps</th><th>You receive</th></tr>
       </thead>
       <tbody>
-        <tr><td>$700,000</td><td>$17,500</td><td class="red">$17,500</td><td class="green">$12,500</td></tr>
-        <tr><td>$800,000</td><td>$20,000</td><td class="red">$20,000</td><td class="green">$15,000</td></tr>
-        <tr><td>$900,000</td><td>$22,500</td><td class="red">$22,500</td><td class="green">$17,500</td></tr>
-        <tr><td>$1,000,000</td><td>$25,000</td><td class="red">$25,000</td><td class="green">$20,000</td></tr>
-        <tr><td>$1,200,000</td><td>$30,000</td><td class="red">$30,000</td><td class="green">$25,000</td></tr>
-        <tr><td>$1,500,000</td><td>$37,500</td><td class="red">$37,500</td><td class="green">$32,500</td></tr>
-        <tr><td>$2,000,000</td><td>$50,000</td><td class="red">$50,000</td><td class="green">$45,000</td></tr>
+        <tr><td>$700,000</td><td>$17,500</td><td class="red">$17,500</td><td class="green">{{CBR:700000}}</td></tr>
+        <tr><td>$800,000</td><td>$20,000</td><td class="red">$20,000</td><td class="green">{{CBR:800000}}</td></tr>
+        <tr><td>$900,000</td><td>$22,500</td><td class="red">$22,500</td><td class="green">{{CBR:900000}}</td></tr>
+        <tr><td>$1,000,000</td><td>$25,000</td><td class="red">$25,000</td><td class="green">{{CBR:1000000}}</td></tr>
+        <tr><td>$1,200,000</td><td>$30,000</td><td class="red">$30,000</td><td class="green">{{CBR:1200000}}</td></tr>
+        <tr><td>$1,500,000</td><td>$37,500</td><td class="red">$37,500</td><td class="green">{{CBR:1500000}}</td></tr>
+        <tr><td>$2,000,000</td><td>$50,000</td><td class="red">$50,000</td><td class="green">{{CBR:2000000}}</td></tr>
       </tbody>
     </table>
   </div>
