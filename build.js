@@ -9,6 +9,49 @@ const PAGES_DIR = './pages';
 const ASSETS_DIR = './assets';
 const DIST_DIR = './dist';
 
+// ── PRICING TOKENS ──────────────────────────────────────────────────────────
+// The flat fees live in data/pricing.json. Pages, templates, data files and llms.txt use tokens;
+// they are replaced in every built .html file and llms.txt (see applyPricingTokens below).
+//   {{BUYER_FEE}} -> $5,999    {{BUYER_FEE_NUM}} -> 5999    {{BUYER_FEE_FA}} -> ۵٬۹۹۹    {{SELLER_FEE}} -> $4,999
+//   {{CB:1000000}}      cashback on a $1,000,000 purchase (commission % x price - buyer fee), exact, e.g. $19,001
+//   {{CB:1000000:2}}    same with a 2% commission
+//   {{CBR:1000000}}     same, rounded to the nearest $500    {{CBF:1000000}} rounded down to the nearest $500
+//   {{CBFA:..}} {{CBRFA:..}} {{CBFFA:..}}  the same figures in Persian digits without the $ sign (Farsi page)
+//   {{CBD:1000000:50}}  how much more the flat fee returns than a plan that gives back 50% of the commission (nearest $500)
+//   {{X:50}}            home price above which the flat fee returns more than a plan that gives back 50% of the commission
+const PRICING = JSON.parse(fs.readFileSync('./data/pricing.json', 'utf8'));
+function moneyEn(n) { return '$' + Math.round(n).toLocaleString('en-CA'); }
+function toFa(str) {
+  return String(str).replace(/\d/g, function(d) { return '۰۱۲۳۴۵۶۷۸۹'[d]; }).replace(/,/g, '٬');
+}
+function cashbackAt(price, pct) { return Math.round(price * (pct === undefined ? PRICING.commissionPct : pct) / 100 - PRICING.buyerFee); }
+function applyPricingTokens(text) {
+  return text
+    .replace(/\{\{BUYER_FEE_NUM\}\}/g, String(PRICING.buyerFee))
+    .replace(/\{\{BUYER_FEE_FA\}\}/g, toFa(PRICING.buyerFee.toLocaleString('en-CA')))
+    .replace(/\{\{BUYER_FEE\}\}/g, moneyEn(PRICING.buyerFee))
+    .replace(/\{\{SELLER_FEE_NUM\}\}/g, String(PRICING.sellerFee))
+    .replace(/\{\{SELLER_FEE\}\}/g, moneyEn(PRICING.sellerFee))
+    .replace(/\{\{(CB|CBR|CBF)(FA)?:(\d+)(?::([\d.]+))?\}\}/g, function(m, kind, fa, price, pct) {
+      var v = cashbackAt(Number(price), pct === undefined ? undefined : Number(pct));
+      if (kind === 'CBR') v = Math.round(v / 500) * 500;
+      if (kind === 'CBF') v = Math.floor(v / 500) * 500;
+      var out = moneyEn(v);
+      return fa ? toFa(out.slice(1)) : out;   // Persian digits, no $ sign (the Farsi page writes "دلار")
+    })
+    .replace(/\{\{CBD(FA)?:(\d+):(\d+)\}\}/g, function(m, fa, price, share) {
+      // how much more the flat fee returns than a plan that gives back `share`% of the commission, rounded to the nearest $500
+      var v = Math.round((cashbackAt(Number(price)) - Number(price) * PRICING.commissionPct / 100 * Number(share) / 100) / 500) * 500;
+      var out = moneyEn(v);
+      return fa ? toFa(out.slice(1)) : out;   // Persian digits, no $ sign (the Farsi page writes "دلار")
+    })
+    .replace(/\{\{X:(\d+)(FA)?\}\}/g, function(m, share, fa) {
+      var p = PRICING.buyerFee / (PRICING.commissionPct / 100 * (1 - Number(share) / 100));
+      var out = moneyEn(Math.round(p / 10000) * 10000);
+      return fa ? toFa(out.slice(1)) : out;   // Persian digits, no $ sign (the Farsi page writes "دلار")
+    });
+}
+
 // Read shared components
 const head = fs.readFileSync(path.join(COMPONENTS_DIR, 'head.html'), 'utf8');
 const nav = fs.readFileSync(path.join(COMPONENTS_DIR, 'nav.html'), 'utf8');
@@ -98,6 +141,64 @@ var pages = fs.readdirSync(PAGES_DIR).filter(function(f) {
 
 pages.forEach(function(filename) {
   var page = fs.readFileSync(path.join(PAGES_DIR, filename), 'utf8');
+
+  // Recent deals: cards come from data/deals.json (page + homepage strip)
+  var dealsFile = JSON.parse(fs.readFileSync('./data/deals.json', 'utf8'));
+  var dealsAll = dealsFile.deals;
+  var dealsFee = dealsFile.fee; // the buyer fee when these deals closed (not today's fee)
+  var dealsEsc = function(t) { return String(t).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); };
+  var dealOutcome = function(d) {
+    if (d.amount) return { lead: d.lead, amount: d.amount, tail: d.tail };
+    return { lead: 'Buyer received about', amount: '$' + (Math.round((d.price * (d.commission || 0.025) - dealsFee) / 100) * 100).toLocaleString('en-CA'), tail: 'in cashback' };
+  };
+  var dealsHavePlaceholders = dealsAll.some(function(d) { return JSON.stringify(d).indexOf('[') !== -1; });
+  if (page.indexOf('{{HOME_DEALS}}') !== -1) {
+    // Homepage strip: the buyer deals with the biggest cashback (worked out at the fee they closed at), best first
+    var dealAmount = function(d) { return d.amount ? Number(String(d.amount).replace(/[^\d]/g, '')) : d.price * (d.commission || 0.025) - dealsFee; };
+    var homeDeals = dealsAll.filter(function(d) { return d.image && d.type !== 'Seller' && d.neighbourhood.indexOf('[') === -1; })
+      .sort(function(a, b) { return dealAmount(b) - dealAmount(a); }).slice(0, 3);
+    var homeCards = homeDeals.map(function(d) {
+      var o = dealOutcome(d);
+      return '      <div class="deal-card">\n' +
+        '        <div class="deal-photo"><img src="' + dealsEsc(d.image) + '" alt="' + dealsEsc(d.neighbourhood + ', ' + d.city) + '" class="deal-thumb" width="400" height="210" loading="lazy"/>' + (d.illustration ? '<span class="deal-badge">Illustration</span>' : '') + '</div>\n' +
+        '        <div class="deal-info">\n' +
+        '          <span class="deal-tag">' + dealsEsc(d.type) + '</span>\n' +
+        '          <div class="deal-location">' + dealsEsc(d.neighbourhood) + ', ' + dealsEsc(d.city) + '</div>\n' +
+        '          <p class="deal-desc">' + dealsEsc(d.property) + '</p>\n' +
+        '          <div class="deal-out"><span class="deal-lead">' + dealsEsc(o.lead) + '</span><span class="deal-amt">' + dealsEsc(o.amount) + '</span><span class="deal-tail">' + dealsEsc(o.tail) + '</span></div>\n' +
+        '        </div>\n' +
+        '      </div>';
+    }).join('\n');
+    var homeDots = homeDeals.map(function(d, i) { return '      <button class="deals-dot' + (i === 0 ? ' active' : '') + '" aria-label="Deal ' + (i + 1) + '" onclick="dealsGoTo(' + i + ')"></button>'; }).join('\n');
+    // the link to the full page stays hidden while that page still has [placeholders]
+    var homeNote = '    <p class="deals-note">Cashback amounts are estimates, worked out at the lower fee in place when each deal closed.' + (homeDeals.some(function(d) { return d.illustration; }) ? ' Some images are illustrations, not photos of the actual homes.' : '') + '</p>';
+    var homeLink = homeNote + (dealsHavePlaceholders ? '' : '\n    <p class="deals-more"><a href="/recent-deals.html">See all recent deals &rarr;</a></p>');
+    page = page.replace('{{HOME_DEALS}}', homeCards).replace('{{HOME_DEALS_DOTS}}', homeDots).replace('{{HOME_DEALS_LINK}}', homeLink);
+  }
+
+  // Recent deals page: cards come from data/deals.json
+  if (page.indexOf('{{DEALS_GRID}}') !== -1) {
+    var esc = dealsEsc;
+    var icon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg>';
+    var iconCondo = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="1"/><path d="M9 7h2M13 7h2M9 11h2M13 11h2M9 15h2M13 15h2M11 21v-3h2v3"/></svg>';
+    var dealsGrid = dealsAll.map(function(d) {
+      var o = dealOutcome(d), lead = o.lead, amount = o.amount, tail = o.tail;
+      var spec = esc(d.property);
+      var photo = d.image
+        ? '<img src="' + esc(d.image) + '" alt="' + esc(d.neighbourhood + ', ' + d.city) + '" width="400" height="210" loading="lazy"/>'
+        : '<div class="rd-tile">' + (/condo/i.test(d.property) ? iconCondo : icon) + '<span class="rd-tile-city">' + esc(d.city) + '</span><span class="rd-tile-type">' + esc(d.property) + '</span></div>';
+      return '    <div class="rd-card" data-type="' + esc(d.type) + '">\n' +
+        '      <div class="rd-photo">' + photo + '' + '</div>\n' +
+        '      <div class="rd-info">\n' +
+        '        <span class="rd-tag">' + esc(d.type) + '</span>\n' +
+        '        <div class="rd-loc">' + esc(d.neighbourhood) + ', ' + esc(d.city) + '</div>\n' +
+        '        <div class="rd-spec">' + spec + '</div>\n' +
+        '        <div class="rd-out"><span class="rd-lead">' + esc(lead) + '</span><span class="rd-amt">' + esc(amount) + '</span><span class="rd-tail">' + esc(tail) + '</span></div>\n' +
+        '      </div>\n' +
+        '    </div>';
+    }).join('\n');
+    page = page.replace('{{DEALS_GRID}}', dealsGrid);
+  }
 
   // ── Extract head content ────────────────────────────────────────────────
   var headMatch = page.match(/<head[^>]*>([\s\S]*?)<\/head>/i);
@@ -223,7 +324,7 @@ console.log('\n✓ Build complete — ' + pages.length + ' pages assembled into 
 
     // Basic tokens
     html = html.replace(/{{PAGE_TITLE}}/g,
-      city.pageTitle || ('Cashback Realtor ' + city.name + ' | Flat $4,999 Fee | Home Cashbacks'));
+      city.pageTitle || ('Cashback Realtor ' + city.name + ' | Flat {{BUYER_FEE}} Fee | Home Cashbacks'));
     html = html.replace(/{{META_DESC}}/g, city.metaDesc);
     html = html.replace(/{{NAME}}/g, city.name);
     html = html.replace(/{{SLUG}}/g, city.slug);
@@ -492,6 +593,20 @@ console.log('\n✓ Build complete — ' + pages.length + ' pages assembled into 
   });
 
   console.log('\n✓ Neighbourhood pages generated: ' + data.neighbourhoods.length);
+})();
+
+// ── PRICING TOKENS: replace in every built page and in llms.txt ─────────────────
+(function applyPricingEverywhere() {
+  var left = [];
+  fs.readdirSync(DIST_DIR).filter(function(f) { return f.endsWith('.html') || f === 'llms.txt'; }).forEach(function(f) {
+    var file = path.join(DIST_DIR, f);
+    var before = fs.readFileSync(file, 'utf8');
+    var after = applyPricingTokens(before);
+    if (/\{\{(BUYER_FEE|SELLER_FEE|CB|CBR|CBF|X)[A-Z_]*[:}]/.test(after)) left.push(f);
+    if (after !== before) fs.writeFileSync(file, after, 'utf8');
+  });
+  if (left.length) { console.error('Unreplaced pricing tokens in: ' + left.join(', ')); process.exit(1); }
+  console.log('✓ Pricing tokens applied (buyer fee $' + PRICING.buyerFee + ', seller fee $' + PRICING.sellerFee + ')');
 })();
 
 // ── SITEMAP GENERATOR ──────────────────────────────────────────────────────

@@ -50,7 +50,7 @@
     {
       "@type": "Question",
       "name": "How does cashback work on a condo purchase?",
-      "acceptedAnswer": {"@type": "Answer", "text": "Same as any purchase. HomeCashbacks charges a flat $4,999 and returns the rest of the buyer agent commission to you after closing. On a $700,000 condo at 2.5% commission, that is $12,501 back. Arrives 6 to 8 weeks after closing."}
+      "acceptedAnswer": {"@type": "Answer", "text": "Same as any purchase. HomeCashbacks charges a flat {{BUYER_FEE}} and returns the rest of the buyer agent commission to you after closing. On a $700,000 condo at 2.5% commission, that is {{CB:700000}} back. Arrives 6 to 8 weeks after closing."}
     }
   ]
 }
@@ -90,7 +90,7 @@
     <div class="page-hero-eyebrow">Step-by-step guide</div>
     <h1>Buying a Condo in Toronto</h1>
     <p class="page-hero-sub">From first search to firm offer. What's different about condos, what to check before you fall in love with a unit, and what to never skip. The Toronto condo apartment benchmark price is <strong>$543,800</strong> as of September 2026, down 6.36% year-over-year.</p>
-    <p style="font-size:11px;color:rgba(232,237,245,.25);margin-top:1.25rem">Last updated September 2026</p>
+    <p style="font-size:12px;color:rgba(232,237,245,.25);margin-top:1.25rem">Last updated September 2026</p>
   </div>
 </div>
 
@@ -398,12 +398,12 @@
   <div class="cashback-inner">
     <div class="cashback-eyebrow">How HomeCashbacks works on a condo</div>
     <h2 class="cashback-title">Cashback on a Condo Purchase</h2>
-    <p class="cashback-sub">We charge a flat $4,999 and return the rest of the buyer agent commission after closing. <a href="/#calculator">Calculate your exact cashback on the homepage.</a></p>
+    <p class="cashback-sub">We charge a flat {{BUYER_FEE}} and return the rest of the buyer agent commission after closing. <a href="/#calculator">Calculate your exact cashback on the homepage.</a></p>
     <div class="cashback-math">
       <div class="cm-row"><span>Purchase price</span><span>$700,000</span></div>
       <div class="cm-row"><span>Buyer commission (2.5%)</span><span>$17,500</span></div>
-      <div class="cm-row"><span>Our flat fee</span><span>$4,999</span></div>
-      <div class="cm-row total"><span>Your cashback</span><span class="cm-amt">$12,501</span></div>
+      <div class="cm-row"><span>Our flat fee</span><span>{{BUYER_FEE}}</span></div>
+      <div class="cm-row total"><span>Your cashback</span><span class="cm-amt">{{CB:700000}}</span></div>
     </div>
     <p style="font-size:12px;color:rgba(232,237,245,.3);margin-bottom:1.5rem">Example only. Actual cashback depends on the seller's commission offer. Arrives 6 to 8 weeks after closing.</p>
     <button class="cashback-cta-btn" onclick="openModal()">Book a Free Consultation</button>
@@ -434,7 +434,7 @@
 <section style="background:var(--white);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:1.25rem 2rem">
   <div style="max-width:860px;margin:0 auto">
     <div style="display:flex;align-items:center;flex-wrap:wrap;gap:.5rem">
-      <span style="font-size:11px;font-weight:600;letter-spacing:.8px;text-transform:uppercase;color:var(--taupe);margin-right:.25rem;white-space:nowrap;flex-shrink:0">Buying in</span>
+      <span style="font-size:12px;font-weight:600;letter-spacing:.8px;text-transform:uppercase;color:var(--taupe);margin-right:.25rem;white-space:nowrap;flex-shrink:0">Buying in</span>
       <a href="/toronto-cashback-realtor.html" style="font-size:12px;color:var(--muted);text-decoration:none;padding:4px 11px;border:1px solid var(--border);border-radius:3px;transition:all .15s;white-space:nowrap" onmouseover="this.style.borderColor='var(--amber)';this.style.color='var(--ink)';this.style.background='var(--bg)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)';this.style.background='transparent'">Toronto</a>
       <a href="/north-york-cashback-realtor.html" style="font-size:12px;color:var(--muted);text-decoration:none;padding:4px 11px;border:1px solid var(--border);border-radius:3px;transition:all .15s;white-space:nowrap" onmouseover="this.style.borderColor='var(--amber)';this.style.color='var(--ink)';this.style.background='var(--bg)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)';this.style.background='transparent'">North York</a>
       <a href="/etobicoke-cashback-realtor.html" style="font-size:12px;color:var(--muted);text-decoration:none;padding:4px 11px;border:1px solid var(--border);border-radius:3px;transition:all .15s;white-space:nowrap" onmouseover="this.style.borderColor='var(--amber)';this.style.color='var(--ink)';this.style.background='var(--bg)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)';this.style.background='transparent'">Etobicoke</a>
@@ -563,7 +563,7 @@ var FAQ_PROCESS=[
   {q:'Do I need a home inspection?',a:'Less common on condos than freehold but worth it on buildings from the 1980s or 1990s. A condo inspector assesses in-suite systems and flags visible issues.'},
   {q:'Can I walk away after getting the status certificate?',a:'Yes. Ontario law gives you a review period after receiving the certificate. You can rescind the agreement without penalty during that window. Waiving this condition in your offer removes that protection entirely.'},
   {q:'What does closing look like?',a:'Your lawyer handles the transfer. You provide certified funds for the balance, closing costs, and any adjustments. Keys on closing day. Use our <a href="/calculators.html" style="color:var(--cta);text-decoration:none;font-weight:500">closing cost calculator</a> to estimate what you need.'},
-  {q:'How does cashback work on a condo?',a:'Same as any purchase. We charge a flat $4,999 and return the rest of the buyer agent commission to you after closing. On a $700K condo at 2.5% commission, that is $12,501 back. Arrives 6 to 8 weeks after closing.'},
+  {q:'How does cashback work on a condo?',a:'Same as any purchase. We charge a flat {{BUYER_FEE}} and return the rest of the buyer agent commission to you after closing. On a $700K condo at 2.5% commission, that is {{CB:700000}} back. Arrives 6 to 8 weeks after closing.'},
 ];
 
 function renderFAQ(){

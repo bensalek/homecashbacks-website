@@ -54,7 +54,7 @@
     {
       "@type": "Question",
       "name": "How does cashback work on a pre-construction purchase?",
-      "acceptedAnswer": {"@type": "Answer", "text": "When a builder does work with agents, the builder pays the buyer's agent commission directly, the buyer pays nothing extra either way. We take a flat $4,999 from that commission and return the rest to you after closing, the same model as a resale purchase."}
+      "acceptedAnswer": {"@type": "Answer", "text": "When a builder does work with agents, the builder pays the buyer's agent commission directly, the buyer pays nothing extra either way. We take a flat {{BUYER_FEE}} from that commission and return the rest to you after closing, the same model as a resale purchase."}
     }
   ]
 }
@@ -170,7 +170,7 @@
   <div class="guide-section">
     <div class="guide-eyebrow-sm">How cashback applies</div>
     <h2 class="guide-h2">Cashback on a pre-construction purchase</h2>
-    <p class="guide-p">Where a builder does work with buyer agents, the mechanics are the same as a resale purchase. The builder pays the buyer's agent commission directly, you pay nothing extra either way. We take a flat $4,999 from that commission and return the rest to you after closing.</p>
+    <p class="guide-p">Where a builder does work with buyer agents, the mechanics are the same as a resale purchase. The builder pays the buyer's agent commission directly, you pay nothing extra either way. We take a flat {{BUYER_FEE}} from that commission and return the rest to you after closing.</p>
     <div class="example-box">
       <div class="example-box-label">Example &middot; $900,000 pre-construction unit, 4% commission</div>
       <div class="example-row">
@@ -179,11 +179,11 @@
       </div>
       <div class="example-row">
         <span class="example-row-label">HomeCashbacks flat fee</span>
-        <span class="example-row-val">&minus;$4,999</span>
+        <span class="example-row-val">&minus;{{BUYER_FEE}}</span>
       </div>
       <div class="example-row">
         <span class="example-row-label">Your cashback after closing</span>
-        <span class="example-row-val highlight">$31,001</span>
+        <span class="example-row-val highlight">{{CB:900000:4}}</span>
       </div>
     </div>
     <p class="guide-p">Pre-construction commissions are often set higher than resale, typically 3% to 5%, since the sale can take months to close and the agent supports you through the entire build. Confirm the exact commission rate for a specific project before you register, it varies by builder.</p>
@@ -199,7 +199,7 @@
 
   <hr class="divider"/>
   <div style="display:flex;align-items:center;flex-wrap:wrap;gap:.6rem;margin-bottom:2rem">
-    <span style="font-size:11px;font-weight:500;letter-spacing:.8px;text-transform:uppercase;color:var(--taupe);margin-right:.25rem">Related guides</span>
+    <span style="font-size:12px;font-weight:500;letter-spacing:.8px;text-transform:uppercase;color:var(--taupe);margin-right:.25rem">Related guides</span>
     <a href="/assignment-sale-toronto.html" style="font-size:12px;color:var(--muted);text-decoration:none;padding:4px 11px;border:1px solid var(--border);border-radius:3px;transition:all .15s" onmouseover="this.style.borderColor='var(--amber)';this.style.color='var(--ink)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)'">Assignment Sale Guide</a>
     <a href="/real-estate-investors-toronto.html" style="font-size:12px;color:var(--muted);text-decoration:none;padding:4px 11px;border:1px solid var(--border);border-radius:3px;transition:all .15s" onmouseover="this.style.borderColor='var(--amber)';this.style.color='var(--ink)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)'">Guide for Investors</a>
     <a href="/condo-buying-guide.html" style="font-size:12px;color:var(--muted);text-decoration:none;padding:4px 11px;border:1px solid var(--border);border-radius:3px;transition:all .15s" onmouseover="this.style.borderColor='var(--amber)';this.style.color='var(--ink)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)'">Condo Buying Guide</a>
@@ -226,7 +226,7 @@ var PRECON_FAQ = [
   {q:'How do builders calculate and apply the HST rebate?', a:'Builders typically advertise a price that already has the standard rebate built in, called the Stated Price Net of Rebates. At closing, you sign a document assigning your rebate rights to the builder, and the builder credits the rebate directly against your closing costs. You do not receive a cheque directly in most cases, the builder claims it and passes the saving to you as a price reduction.'},
   {q:'Do I lose the HST rebate if I don\'t live in the unit myself?', a:'The rebate generally requires the buyer or an immediate family member to use the unit as a primary residence, typically for at least one year. If you sell or rent it out instead without qualifying under the separate rental rebate program, the builder can reclaim the rebate amount from you, sometimes with interest.'},
   {q:'Do all pre-construction builders work with buyer agents?', a:'No. Policies vary by builder and by project. Some builders welcome buyer agents and pay a commission, others do not accept agent representation for certain buildings or phases. Always confirm directly with the specific builder before assuming your agent can represent you on a project you\'re interested in.'},
-  {q:'How does cashback work on a pre-construction purchase?', a:'When a builder does work with agents, the builder pays the buyer\'s agent commission directly, the buyer pays nothing extra either way. We take a flat $4,999 from that commission and return the rest to you after closing, the same model as a resale purchase.'},
+  {q:'How does cashback work on a pre-construction purchase?', a:'When a builder does work with agents, the builder pays the buyer\'s agent commission directly, the buyer pays nothing extra either way. We take a flat {{BUYER_FEE}} from that commission and return the rest to you after closing, the same model as a resale purchase.'},
 ];
 
 var faqEl = document.getElementById('precon-faq-list');

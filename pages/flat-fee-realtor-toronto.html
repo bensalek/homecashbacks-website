@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <title>Flat Fee Realtor Toronto | Home Cashbacks</title>
-<meta name="description" content="What is a flat fee realtor in Toronto, how it differs from a discount broker, and what to check before you choose one. Full service, flat $4,999."/>
+<meta name="description" content="What is a flat fee realtor in Toronto, how it differs from a discount broker, and what to check before you choose one. Full service, flat {{SELLER_FEE}}."/>
 <meta name="author" content="Laleh Mousavi, HomeCashbacks"/>
 <meta property="og:title" content="Flat Fee Realtor Toronto | HomeCashbacks"/>
 <meta property="og:description" content="What a flat fee realtor actually is, how it differs from a discount broker, and what to check before you choose one in Toronto."/>
@@ -34,7 +34,7 @@
     {
       "@type": "Question",
       "name": "What is a flat fee realtor?",
-      "acceptedAnswer": {"@type": "Answer", "text": "A flat fee realtor charges a fixed dollar amount to list and sell your home, instead of a percentage of the sale price. In Toronto, flat fees generally run from about $4,999 to $6,000 or more, compared to a standard 2.5% commission, which is $25,000 on a $1,000,000 home."}
+      "acceptedAnswer": {"@type": "Answer", "text": "A flat fee realtor charges a fixed dollar amount to list and sell your home, instead of a percentage of the sale price. In Toronto, flat fees generally run from about {{SELLER_FEE}} to $6,000 or more, compared to a standard 2.5% commission, which is $25,000 on a $1,000,000 home."}
     },
     {
       "@type": "Question",
@@ -49,7 +49,7 @@
     {
       "@type": "Question",
       "name": "How much does a flat fee realtor cost in Toronto?",
-      "acceptedAnswer": {"@type": "Answer", "text": "Flat fees in the Toronto market generally range from about $4,999 to $6,000 or more, depending on the brokerage. Compare that to a standard 2.5% commission, which scales with your home's price and runs $25,000 on a $1,000,000 home, or $37,500 on a $1,500,000 home."}
+      "acceptedAnswer": {"@type": "Answer", "text": "Flat fees in the Toronto market generally range from about {{SELLER_FEE}} to $6,000 or more, depending on the brokerage. Compare that to a standard 2.5% commission, which scales with your home's price and runs $25,000 on a $1,000,000 home, or $37,500 on a $1,500,000 home."}
     },
     {
       "@type": "Question",
@@ -75,7 +75,7 @@
 .guide-hero{background:var(--ink);padding:3.5rem 2rem 4rem;position:relative;overflow:hidden}
 .guide-hero::before{content:'';position:absolute;top:-60px;right:-60px;width:280px;height:280px;border-radius:50%;border:50px solid rgba(110,175,140,.06)}
 .guide-hero-inner{max-width:760px;margin:0 auto;position:relative;z-index:1}
-.guide-eyebrow{font-size:11px;font-weight:500;letter-spacing:1.2px;text-transform:uppercase;color:var(--amber);margin-bottom:.75rem}
+.guide-eyebrow{font-size:12px;font-weight:500;letter-spacing:1.2px;text-transform:uppercase;color:var(--amber);margin-bottom:.75rem}
 .guide-h1{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,4.5vw,48px);font-weight:600;color:var(--white);line-height:1.1;margin-bottom:.85rem}
 .guide-sub{font-size:15px;color:rgba(232,237,245,.55);max-width:560px;line-height:1.75}
 .guide-body{max-width:760px;margin:0 auto;padding:3rem 2rem}
@@ -83,7 +83,7 @@
 .guide-h2{font-family:'Cormorant Garamond',serif;font-size:clamp(22px,3vw,32px);font-weight:600;color:var(--ink);line-height:1.15;margin-bottom:.75rem}
 .guide-p{font-size:15px;color:var(--muted);line-height:1.8;margin-bottom:1rem}
 .guide-p strong{color:var(--ink)}
-.guide-eyebrow-sm{font-size:11px;font-weight:500;letter-spacing:1px;text-transform:uppercase;color:var(--amber);margin-bottom:.5rem}
+.guide-eyebrow-sm{font-size:12px;font-weight:500;letter-spacing:1px;text-transform:uppercase;color:var(--amber);margin-bottom:.5rem}
 .quick-box{background:var(--white);border:1.5px solid var(--amber);border-radius:6px;padding:1.5rem;margin:1.5rem 0}
 .quick-box-title{font-size:13px;font-weight:700;color:var(--ink);margin-bottom:1rem}
 .quick-grid{display:grid;grid-template-columns:1fr 1fr;gap:.6rem}
@@ -91,7 +91,7 @@
 .quick-item svg{flex-shrink:0;margin-top:2px}
 .quick-item-text{font-size:13px;color:var(--ink);font-weight:500;line-height:1.4}
 .example-box{background:var(--ink);border-radius:6px;padding:1.5rem;margin:1.5rem 0}
-.example-box-label{font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--amber);margin-bottom:.75rem}
+.example-box-label{font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--amber);margin-bottom:.75rem}
 .example-row{display:flex;justify-content:space-between;align-items:center;padding:.5rem 0;border-bottom:1px solid rgba(255,255,255,.08)}
 .example-row:last-child{border-bottom:none;padding-top:.75rem}
 .example-row-label{font-size:13px;color:rgba(255,255,255,.65)}
@@ -111,7 +111,7 @@
 .checklist-text span{display:block;font-size:12px;color:var(--muted);margin-top:2px}
 .redflag{display:flex;flex-direction:column;gap:.5rem;margin:1rem 0 1.5rem}
 .redflag-item{display:flex;align-items:flex-start;gap:.75rem;padding:.85rem 1rem;background:#fff5f5;border:1px solid #fecaca;border-radius:4px}
-.redflag-icon{width:20px;height:20px;border-radius:50%;background:#fee2e2;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;font-size:11px;color:#dc2626;font-weight:700}
+.redflag-icon{width:20px;height:20px;border-radius:50%;background:#fee2e2;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;font-size:12px;color:#dc2626;font-weight:700}
 .redflag-text{font-size:14px;color:var(--ink);line-height:1.5}
 .redflag-text span{display:block;font-size:12px;color:#b91c1c;margin-top:2px}
 .faq-list{display:flex;flex-direction:column;gap:7px;margin-top:1.5rem}
@@ -124,7 +124,7 @@
 .faq-item.open .faq-a{display:block}
 .guide-cta{background:var(--bg2);padding:3rem 2rem;text-align:center;border-top:1px solid var(--border)}
 .guide-cta-inner{max-width:480px;margin:0 auto}
-.guide-cta-eyebrow{font-size:11px;font-weight:500;letter-spacing:1.2px;text-transform:uppercase;color:var(--cta);margin-bottom:.75rem}
+.guide-cta-eyebrow{font-size:12px;font-weight:500;letter-spacing:1.2px;text-transform:uppercase;color:var(--cta);margin-bottom:.75rem}
 .guide-cta-title{font-family:'Cormorant Garamond',serif;font-size:clamp(22px,3.5vw,32px);font-weight:600;color:var(--ink);line-height:1.15;margin-bottom:.75rem}
 .guide-cta-sub{font-size:15px;color:var(--muted);margin-bottom:1.75rem;line-height:1.75}
 .guide-cta-btn{background:var(--amber);color:var(--ink);padding:13px 28px;border-radius:4px;font-size:14px;font-weight:700;border:none;cursor:pointer;font-family:'Rubik',sans-serif;transition:opacity .2s}
@@ -155,7 +155,7 @@
   <div class="guide-section">
     <div class="guide-eyebrow-sm">The short answer</div>
     <h2 class="guide-h2">A fixed price instead of a percentage</h2>
-    <p class="guide-p">A flat fee realtor is a fully licensed REALTOR® who charges a fixed dollar amount to list and sell your home, instead of the standard percentage commission. In Toronto, flat fees generally run from about $4,999 to $6,000 or more depending on the brokerage, compared to a standard 2.5% commission, which is $25,000 on a $1,000,000 home. The fee structure is a business decision, not a difference in licensing or legal obligation to you as a client.</p>
+    <p class="guide-p">A flat fee realtor is a fully licensed REALTOR® who charges a fixed dollar amount to list and sell your home, instead of the standard percentage commission. In Toronto, flat fees generally run from about {{SELLER_FEE}} to $6,000 or more depending on the brokerage, compared to a standard 2.5% commission, which is $25,000 on a $1,000,000 home. The fee structure is a business decision, not a difference in licensing or legal obligation to you as a client.</p>
     <div class="quick-box">
       <div class="quick-box-title">What "flat fee" should mean, at minimum</div>
       <div class="quick-grid">
@@ -188,25 +188,25 @@
       <tr>
         <th>Home price</th>
         <th>Standard 2.5% commission</th>
-        <th>Flat $4,999 fee</th>
+        <th>Flat {{SELLER_FEE}} fee</th>
         <th>You save</th>
       </tr>
       <tr>
         <td>$800,000</td>
         <td>$20,000</td>
-        <td class="good">$4,999</td>
+        <td class="good">{{SELLER_FEE}}</td>
         <td class="good">$15,001</td>
       </tr>
       <tr>
         <td>$1,000,000</td>
         <td>$25,000</td>
-        <td class="good">$4,999</td>
+        <td class="good">{{SELLER_FEE}}</td>
         <td class="good">$20,001</td>
       </tr>
       <tr>
         <td>$1,500,000</td>
         <td>$37,500</td>
-        <td class="good">$4,999</td>
+        <td class="good">{{SELLER_FEE}}</td>
         <td class="good">$32,501</td>
       </tr>
     </table>
@@ -284,7 +284,7 @@
 
   <div class="guide-section">
     <div class="guide-eyebrow-sm">How this works with us</div>
-    <h2 class="guide-h2">Full service, flat $4,999, paid at closing</h2>
+    <h2 class="guide-h2">Full service, flat {{SELLER_FEE}}, paid at closing</h2>
     <p class="guide-p">HomeCashbacks is a RECO-registered flat fee realtor in Toronto. One dedicated agent, full MLS exposure, professional photography and a 3D tour, floor plan, negotiation, and closing support, all included in the flat fee. Nothing upfront, and nothing added on after you've signed. See the <a href="/toronto-listing-agent.html" class="link">full details of what's included</a>.</p>
   </div>
 
@@ -298,7 +298,7 @@
 
   <hr class="divider"/>
   <div style="display:flex;align-items:center;flex-wrap:wrap;gap:.6rem;margin-bottom:2rem">
-    <span style="font-size:11px;font-weight:500;letter-spacing:.8px;text-transform:uppercase;color:var(--taupe);margin-right:.25rem">Related guides</span>
+    <span style="font-size:12px;font-weight:500;letter-spacing:.8px;text-transform:uppercase;color:var(--taupe);margin-right:.25rem">Related guides</span>
     <a href="/toronto-listing-agent.html" style="font-size:12px;color:var(--muted);text-decoration:none;padding:4px 11px;border:1px solid var(--border);border-radius:3px;transition:all .15s" onmouseover="this.style.borderColor='var(--amber)';this.style.color='var(--ink)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)'">Flat Fee Listing Agent</a>
     <a href="/low-commission-realtor-toronto.html" style="font-size:12px;color:var(--muted);text-decoration:none;padding:4px 11px;border:1px solid var(--border);border-radius:3px;transition:all .15s" onmouseover="this.style.borderColor='var(--amber)';this.style.color='var(--ink)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)'">Low Commission Realtor Toronto</a>
     <a href="/fsbo-vs-flat-fee-realtor.html" style="font-size:12px;color:var(--muted);text-decoration:none;padding:4px 11px;border:1px solid var(--border);border-radius:3px;transition:all .15s" onmouseover="this.style.borderColor='var(--amber)';this.style.color='var(--ink)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)'">FSBO vs Flat Fee Realtor</a>
@@ -311,7 +311,7 @@
   <div class="guide-cta-inner">
     <div class="guide-cta-eyebrow">HomeCashbacks &middot; Toronto</div>
     <h2 class="guide-cta-title">A flat fee realtor with nothing cut to make the price work.</h2>
-    <p class="guide-cta-sub">Full MLS exposure, professional photography, a dedicated agent, and closing support, all included in a flat $4,999.</p>
+    <p class="guide-cta-sub">Full MLS exposure, professional photography, a dedicated agent, and closing support, all included in a flat {{SELLER_FEE}}.</p>
     <button class="guide-cta-btn" onclick="openModal()">Book a Free Consultation</button>
     <p class="guide-cta-note">First consultation is free &middot; No exclusive agreement required &middot; Licensed with RECO &middot; Serving Toronto and GTA</p>
   </div>
@@ -319,10 +319,10 @@
 
 <script>
 var FFR_FAQ = [
-  {q:'What is a flat fee realtor?', a:'A flat fee realtor charges a fixed dollar amount to list and sell your home, instead of a percentage of the sale price. In Toronto, flat fees generally run from about $4,999 to $6,000 or more, compared to a standard 2.5% commission, which is $25,000 on a $1,000,000 home.'},
+  {q:'What is a flat fee realtor?', a:'A flat fee realtor charges a fixed dollar amount to list and sell your home, instead of a percentage of the sale price. In Toronto, flat fees generally run from about {{SELLER_FEE}} to $6,000 or more, compared to a standard 2.5% commission, which is $25,000 on a $1,000,000 home.'},
   {q:'Is a flat fee realtor the same as a discount broker?', a:'Not always. Some services marketed as flat fee or discount cut what\'s included to make the lower price work, such as no professional photography, no MLS listing, or no agent-attended showings. A genuine flat fee realtor should include the same full service as a percentage-commission agent, just at a fixed price.'},
   {q:'Are flat fee realtors licensed the same as regular realtors?', a:'Yes. A flat fee realtor is a fully licensed REALTOR\u00ae registered with RECO, just like any other agent. The fee structure is a business decision, not a difference in licensing, qualifications, or legal obligations to you as a client.'},
-  {q:'How much does a flat fee realtor cost in Toronto?', a:'Flat fees in the Toronto market generally range from about $4,999 to $6,000 or more, depending on the brokerage. Compare that to a standard 2.5% commission, which scales with your home\'s price and runs $25,000 on a $1,000,000 home, or $37,500 on a $1,500,000 home.'},
+  {q:'How much does a flat fee realtor cost in Toronto?', a:'Flat fees in the Toronto market generally range from about {{SELLER_FEE}} to $6,000 or more, depending on the brokerage. Compare that to a standard 2.5% commission, which scales with your home\'s price and runs $25,000 on a $1,000,000 home, or $37,500 on a $1,500,000 home.'},
   {q:'What should I check before choosing a flat fee realtor?', a:'Confirm the fee is genuinely flat with no hidden add-ons, verify the realtor\'s RECO registration, and ask directly whether MLS listing, professional photography, agent-attended showings, and negotiation are all included. Get the full list of what\'s included in writing before you sign anything.'},
 ];
 

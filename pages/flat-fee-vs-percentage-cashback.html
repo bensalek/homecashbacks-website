@@ -40,12 +40,12 @@
     {
       "@type": "Question",
       "name": "What is the difference between a flat fee and percentage cashback realtor?",
-      "acceptedAnswer": {"@type": "Answer", "text": "A flat fee realtor charges a fixed amount, such as $4,999, and returns everything above that from the buyer agent commission. A percentage model returns a fixed share of the commission, such as 50%, while the realtor keeps the other half. As home prices rise, the realtor's cut grows under a percentage model but stays fixed under a flat fee model."}
+      "acceptedAnswer": {"@type": "Answer", "text": "A flat fee realtor charges a fixed amount, such as {{BUYER_FEE}}, and returns everything above that from the buyer agent commission. A percentage model returns a fixed share of the commission, such as 50%, while the realtor keeps the other half. As home prices rise, the realtor's cut grows under a percentage model but stays fixed under a flat fee model."}
     },
     {
       "@type": "Question",
       "name": "Which model gives more cashback, flat fee or percentage?",
-      "acceptedAnswer": {"@type": "Answer", "text": "On any home above roughly $400,000 to $500,000, a flat fee model around $4,999 returns more cashback than a 50% percentage split. The gap widens as the home price increases, since the flat fee never changes while the realtor's cut under a percentage model grows with price."}
+      "acceptedAnswer": {"@type": "Answer", "text": "On any home above roughly {{X:50}}, a flat fee model around {{BUYER_FEE}} returns more cashback than a 50% percentage split. The gap widens as the home price increases, since the flat fee never changes while the realtor's cut under a percentage model grows with price."}
     },
     {
       "@type": "Question",
@@ -65,7 +65,7 @@
 .fee-model-table td.flat-col{background:rgba(28,134,78,.05);font-weight:600;color:var(--cta-dark)}
 .fee-model-table tr:last-child td{border-bottom:none}
 .crossover-box{background:var(--dark);border-radius:10px;padding:1.75rem;margin:1.5rem 0;text-align:center}
-.crossover-label{font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:.5rem}
+.crossover-label{font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:.5rem}
 .crossover-val{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:600;color:#fff;margin-bottom:.5rem}
 .crossover-sub{font-size:13px;color:rgba(255,255,255,.6);max-width:480px;margin:0 auto;line-height:1.6}
 </style>
@@ -135,33 +135,33 @@
 
   <div class="art-section" id="crossover">
     <h2>Where the flat fee starts winning</h2>
-    <p>Using a common 50% cashback model as the comparison and a flat $4,999 fee, here is the price point where flat fee overtakes percentage:</p>
+    <p>Using a common 50% cashback model as the comparison and a flat {{BUYER_FEE}} fee, here is the price point where flat fee overtakes percentage:</p>
     <div class="crossover-box">
       <div class="crossover-label">Crossover point</div>
-      <div class="crossover-val">~$450,000</div>
-      <div class="crossover-sub">Above this price, a flat $4,999 fee returns more cashback than a 50% split. Since the average GTA home price is over $1,000,000, the flat fee model wins on the vast majority of Toronto and GTA purchases.</div>
+      <div class="crossover-val">~{{X:50}}</div>
+      <div class="crossover-sub">Above this price, a flat {{BUYER_FEE}} fee returns more cashback than a 50% split. Since the average GTA home price is over $1,000,000, the flat fee model wins on the vast majority of Toronto and GTA purchases.</div>
     </div>
   </div>
 
   <div class="art-section" id="numbers">
     <h2>The math at every price point</h2>
-    <p>Comparing a flat $4,999 fee against a 50% cashback split, at 2.5% buyer agent commission.</p>
+    <p>Comparing a flat {{BUYER_FEE}} fee against a 50% cashback split, at 2.5% buyer agent commission.</p>
     <table class="art-table">
       <thead>
-        <tr><th>Home price</th><th>Commission (2.5%)</th><th>50% model returns</th><th>Flat $4,999 returns</th></tr>
+        <tr><th>Home price</th><th>Commission (2.5%)</th><th>50% model returns</th><th>Flat {{BUYER_FEE}} returns</th></tr>
       </thead>
       <tbody>
-        <tr><td>$400,000</td><td>$10,000</td><td>$5,000</td><td class="green">$5,000</td></tr>
-        <tr><td>$600,000</td><td>$15,000</td><td>$7,500</td><td class="green">$10,000</td></tr>
-        <tr><td>$800,000</td><td>$20,000</td><td>$10,000</td><td class="green">$15,000</td></tr>
-        <tr><td>$1,000,000</td><td>$25,000</td><td>$12,500</td><td class="green">$20,000</td></tr>
-        <tr><td>$1,500,000</td><td>$37,500</td><td>$18,750</td><td class="green">$32,500</td></tr>
-        <tr><td>$2,000,000</td><td>$50,000</td><td>$25,000</td><td class="green">$45,000</td></tr>
+        <tr><td>$400,000</td><td>$10,000</td><td>$5,000</td><td>{{CBR:400000}}</td></tr>
+        <tr><td>$600,000</td><td>$15,000</td><td>$7,500</td><td class="green">{{CBR:600000}}</td></tr>
+        <tr><td>$800,000</td><td>$20,000</td><td>$10,000</td><td class="green">{{CBR:800000}}</td></tr>
+        <tr><td>$1,000,000</td><td>$25,000</td><td>$12,500</td><td class="green">{{CBR:1000000}}</td></tr>
+        <tr><td>$1,500,000</td><td>$37,500</td><td>$18,750</td><td class="green">{{CBR:1500000}}</td></tr>
+        <tr><td>$2,000,000</td><td>$50,000</td><td>$25,000</td><td class="green">{{CBR:2000000}}</td></tr>
       </tbody>
     </table>
     <div class="callout green">
       <span class="callout-icon">💡</span>
-      <div class="callout-body"><strong>The gap compounds with price</strong>At $1M the flat fee returns $7,501 more than the 50% model. At $2M that gap grows to $20,000. The higher the home price, the more a percentage model costs you.</div>
+      <div class="callout-body"><strong>The gap compounds with price</strong>At $1M the flat fee returns {{CBD:1000000:50}} more than the 50% model. At $2M that gap grows to {{CBD:2000000:50}}. The higher the home price, the more a percentage model costs you.</div>
     </div>
   </div>
 
@@ -177,8 +177,8 @@
 
   <div class="art-cta">
     <div class="art-cta-text">
-      <strong>Home Cashbacks uses a flat $4,999 fee</strong>
-      On a $1M Toronto home, that means $20,000 back to you — more than any percentage model would return.
+      <strong>Home Cashbacks uses a flat {{BUYER_FEE}} fee</strong>
+      On a $1M Toronto home, that means {{CBR:1000000}} back to you — more than a 50% percentage model would return.
     </div>
     <button class="art-cta-btn" onclick="openModal()">Book a Free Consultation →</button>
   </div>
@@ -191,7 +191,7 @@
           <span class="faq-q-text">Is a percentage model ever better for the buyer?</span>
           <span class="faq-icon">+</span>
         </div>
-        <div class="faq-a">On homes below roughly $450,000, a 50% percentage split can return slightly more than a flat $4,999 fee, since the commission itself is small. Below the GTA's typical price range, it is worth comparing both models directly using the actual commission offered.</div>
+        <div class="faq-a">On homes below roughly {{X:50}}, a 50% percentage split can return slightly more than a flat {{BUYER_FEE}} fee, since the commission itself is small. Below the GTA's typical price range, it is worth comparing both models directly using the actual commission offered.</div>
       </div>
       <div class="faq-item">
         <div class="faq-q">

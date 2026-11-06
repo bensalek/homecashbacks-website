@@ -1,0 +1,80 @@
+{
+  "note": "Deals shown on /recent-deals.html, newest first. price = sale price in dollars (buyer deals); cashback is estimated as price x 2.5% - $4,999, rounded to the nearest $100. Anything in [square brackets] is a placeholder to replace before the page goes live. Beds and baths are intentionally not shown. For houses show the neighbourhood only (no street address). For condos the building address or name is fine. Each card shows lead + amount + tail; buyer deals with a price get \"Buyer received about $X in cashback\" calculated automatically. illustration:true marks an AI-generated image; it gets an \"Illustration\" badge. commission (optional, default 0.025) is the buyer agent commission rate used for the cashback estimate. fee is the buyer fee these deals were done at ($4,999); it does not follow data/pricing.json.",
+  "fee": 4999,
+  "deals": [
+    {
+      "type": "Buyer",
+      "property": "Condo apartment",
+      "city": "Toronto",
+      "neighbourhood": "858 Dupont St",
+      "price": 760000,
+      "image": "/assets/deals/858-dupont-thumb.jpg",
+      "commission": 0.04
+    },
+    {
+      "type": "Buyer",
+      "property": "Detached house",
+      "city": "Toronto",
+      "neighbourhood": "Corso Italia-Davenport",
+      "price": 2060000,
+      "image": "/assets/deals/toronto-detached-illustration-thumb.jpg",
+      "illustration": true
+    },
+    {
+      "type": "Buyer",
+      "property": "Detached house",
+      "city": "Richmond Hill",
+      "neighbourhood": "Crosby",
+      "price": 980000,
+      "image": "/assets/deals/richmond-hill-illustration-thumb.jpg",
+      "illustration": true
+    },
+    {
+      "type": "Buyer",
+      "property": "Semi-detached house",
+      "city": "Vaughan",
+      "neighbourhood": "East Woodbridge",
+      "price": 955000,
+      "image": "/assets/deals/vaughan-semi-illustration-thumb.jpg",
+      "illustration": true
+    },
+    {
+      "type": "Buyer",
+      "property": "Condo apartment",
+      "city": "Toronto",
+      "neighbourhood": "530 St Clair Ave W",
+      "price": 450000,
+      "image": "/assets/deals/st-clair-west-thumb.jpg"
+    },
+    {
+      "type": "Buyer",
+      "property": "Home",
+      "city": "Whitby",
+      "neighbourhood": "West Lynde",
+      "image": "/assets/deals/nettles-court-thumb.jpg",
+      "lead": "Buyer received",
+      "amount": "$22,500",
+      "tail": "in cashback"
+    },
+    {
+      "type": "Seller",
+      "property": "Condo",
+      "city": "Toronto",
+      "neighbourhood": "Waterworks",
+      "image": "/assets/deals/waterworks-thumb.jpg",
+      "lead": "Seller saved",
+      "amount": "$17,000",
+      "tail": "vs. traditional commission"
+    },
+    {
+      "type": "Pre-construction",
+      "property": "New-build home",
+      "city": "Oakville",
+      "neighbourhood": "Oak Point",
+      "image": "/assets/deals/oak-point-thumb.jpg",
+      "lead": "Buyer received",
+      "amount": "$25,000",
+      "tail": "in cashback"
+    }
+  ]
+}

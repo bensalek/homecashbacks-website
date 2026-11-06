@@ -1,0 +1,6 @@
+{
+  "note": "The flat fees (before HST). Pages, templates, data files and llms.txt use tokens such as {{BUYER_FEE}} and {{CB:1000000}}; build.js replaces them from these numbers. Seller pages keep the literal $4,999 seller fee. Past deals on /recent-deals.html were done at the old $4,999 buyer fee and are calculated with deals.fee in data/deals.json.",
+  "buyerFee": 5999,
+  "sellerFee": 4999,
+  "commissionPct": 2.5
+}

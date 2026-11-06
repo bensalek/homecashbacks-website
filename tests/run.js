@@ -7,6 +7,9 @@ const fs = require('fs'), path = require('path'), http = require('http'), { exec
 
 const ROOT = path.join(__dirname, '..');
 const DIST = path.join(ROOT, 'dist');
+const PRICING = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'pricing.json'), 'utf8'));   // buyerFee / sellerFee
+const BUYER = PRICING.buyerFee, SELLER = PRICING.sellerFee;
+const usd = n => '$' + n.toLocaleString('en-US');
 
 function loadPlaywright() {
   const tries = [path.join(__dirname, 'node_modules/playwright'), process.env.PLAYWRIGHT_PATH, '/opt/node-tools/node_modules/playwright', 'playwright'].filter(Boolean);
@@ -128,7 +131,7 @@ function serve() {
   ok(/^Cash back realtor Toronto/.test((await p.textContent('h1')).trim()), 'H1 is "Cash back realtor Toronto"');
   const rows = await p.$$eval('#local-facts tbody tr', r => r.map(x => x.innerText.replace(/\s+/g, ' ')));
   ok(rows.length === 4, 'local-facts table has 4 rows');
-  const calc = pr => Math.round((pr * 0.025 - 4999) / 100) * 100;      // 2.5% commission less flat $4,999 fee
+  const calc = pr => Math.round((pr * 0.025 - BUYER) / 100) * 100;      // 2.5% commission less the flat buyer fee
   ok(rows[0].includes('$' + calc(600000).toLocaleString('en-US')) && rows[3].includes('$' + calc(1700000).toLocaleString('en-US')), 'table amounts match the cashback formula');
   const hrefs = await p.$$eval('#local-facts a', a => a.map(x => x.getAttribute('href'))); ok(hrefs.every(h => fs.existsSync(path.join(DIST, h))), 'table links point to real pages');
   ok((await p.locator('#local-facts p:has-text("Recent deals")').count()) === 0, 'no empty "Recent deals" line (fill localFacts.comps in data/cities.json to show it)');
@@ -222,9 +225,9 @@ function serve() {
   cityFiles.forEach(f => { const h = read(f);
     if (!/September 2026/.test(h) || /August 2026|July 2026/.test(h.replace(/<script[\s\S]*?<\/script>/g, ''))) staleMonth.push(f);
     const m = /average sale price (?:in|across)[^$]*\$([\d,]+)/.exec(h.replace(/<[^>]+>/g, ' ')); const c = /Average cashback[^$]*\$([\d,]+)|\$([\d,]+)<\/[^>]*>\s*<[^>]*>[^<]*(?:avg|average) cashback/i.exec(h);
-    if (m) { const exp = Math.round(parseInt(m[1].replace(/,/g, ''), 10) * 0.025 - 4999).toLocaleString('en-US'); if (!h.includes('$' + exp)) badCashback.push(f + ' expects $' + exp); } });
+    if (m) { const exp = Math.round(parseInt(m[1].replace(/,/g, ''), 10) * 0.025 - BUYER).toLocaleString('en-US'); if (!h.includes('$' + exp)) badCashback.push(f + ' expects $' + exp); } });
   ok(cityFiles.length >= 20 && staleMonth.length === 0, cityFiles.length + ' city pages all cite September 2026 and none still cite August/July: ' + staleMonth.slice(0, 4).join(', '));
-  ok(badCashback.length === 0, 'each city page shows the cashback worked out from its own average price (avg x 2.5% - $4,999): ' + badCashback.slice(0, 3).join(' | '));
+  ok(badCashback.length === 0, 'each city page shows the cashback worked out from its own average price (avg x 2.5% - the buyer fee): ' + badCashback.slice(0, 3).join(' | '));
   ok(/September 2026/.test(read('toronto-market-trends.html')) && !/August 2026(?!\\?'s)/.test(read('toronto-market-trends.html').replace(/August 2026\\?'s/g, '').replace(/Change from August 2026/g, '')) && /\$1,006,409/.test(read('toronto-market-trends.html')), 'market trends page shows September 2026 and the GTA average $1,006,409');
 
   const nbrData = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'neighbourhoods.json'), 'utf8'));
@@ -236,6 +239,39 @@ function serve() {
   section('Brokerage name');
   ok(!htmlFiles.some(f => /Realty Plus/i.test(read(f))) && !/Realty Plus/i.test(fs.readFileSync(path.join(DIST, 'llms.txt'), 'utf8')), 'the brokerage is always named Smart Brokerages (no "Realty Plus" anywhere)');
 
+  section('Recent deals page');
+  const dealsHtml = read('recent-deals.html');
+  const dealsNoindex = /<meta[^>]+name="robots"[^>]+noindex/i.test(dealsHtml);
+  ok(dealsNoindex || !/\[(Neighbourhood|Beds|Baths)\]/.test(dealsHtml), 'recent-deals.html has no [placeholders] left unless it is still noindex');
+  ok(!/Northcliffe|Dunsmore|Terra R/i.test(dealsHtml.split('<section class="rd-body">')[1] || ''), 'recent-deals.html shows no house street addresses (condo addresses are allowed)');
+
+  const dealsData = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'deals.json'), 'utf8')).deals;
+  ok(!dealsData.some(d => d.illustration) || /some images are illustrations/i.test(dealsHtml), 'recent-deals.html says so in plain view when any image is an AI illustration');
+  const homeHtml = read('Index.html');
+  ok(!/\{\{HOME_DEALS|\[Neighbourhood\]/.test(homeHtml) && (homeHtml.match(/class="deal-card"/g) || []).length >= 3, 'homepage shows the recent deals strip (3+ cards, no placeholders)');
+  ok(!/href="\/recent-deals\.html"/.test(homeHtml) || !/\[(Neighbourhood|Beds|Baths)\]/.test(dealsHtml), 'the homepage only links to the deals page once that page has no [placeholders]');
+
+  section('Pricing (buyer ' + usd(BUYER) + ' + HST, seller ' + usd(SELLER) + ' + HST)');
+  // Shared bits that legitimately show both fees on every page: the footer fee line and the business "priceRange".
+  const withoutShared = f => read(f).replace(/<p class="foot-fees">[^<]*<\/p>/, '').replace(/"priceRange": "[^"]*"/g, '');
+  // Pages about selling (or buying and selling), where the seller fee may appear.
+  const sellerPages = ['toronto-listing-agent', 'flat-fee-realtor-toronto', 'selling-guides', 'selling-a-condo-toronto', 'home-selling-guide-toronto', 'fsbo-vs-flat-fee-realtor', 'low-commission-realtor-toronto', 'downsizing-to-a-condo-toronto', 'toronto-market-trends', 'calculators', 'recent-deals'].map(x => x + '.html');
+  const oldFeeLeaks = htmlFiles.filter(f => !sellerPages.includes(f) && withoutShared(f).includes(usd(SELLER)));
+  ok(oldFeeLeaks.length === 0, 'no buyer page still shows the seller fee ' + usd(SELLER) + ': ' + oldFeeLeaks.slice(0, 6).join(', '));
+  ok(!htmlFiles.some(f => /\{\{[A-Z]/.test(read(f))) && !/\{\{[A-Z]/.test(fs.readFileSync(path.join(DIST, 'llms.txt'), 'utf8')), 'no unreplaced {{pricing tokens}} on any page or in llms.txt');
+  ok((read('toronto-listing-agent.html').match(/\$4,999/g) || []).length >= 8 && read('toronto-listing-agent.html').includes('<h1>Full Service.<br><em>Flat ' + usd(SELLER) + '.</em></h1>'), 'the seller page keeps its ' + usd(SELLER) + ' listing fee in the headline and body')
+  p = await open(); await p.goto(base + '/Index.html'); await p.waitForTimeout(300);
+  ok((await p.textContent('#calc-cashback')).trim() === usd(Math.round(900000 * 0.025 - BUYER)), 'homepage calculator starts at $900,000 x 2.5% less the buyer fee');
+  await p.fill('#price-text', '1,000,000'); await p.dispatchEvent('#price-text', 'input'); await p.waitForTimeout(200);
+  ok((await p.textContent('#calc-cashback')).trim() === usd(Math.round(1000000 * 0.025 - BUYER)), 'homepage calculator: $1,000,000 gives ' + usd(Math.round(1000000 * 0.025 - BUYER)));
+  p = await open(); await p.goto(base + '/calculators.html'); await p.waitForTimeout(300);
+  await p.evaluate(() => { document.getElementById('cb-price').value = 1000000; document.getElementById('cb-comm').value = 2.5; cbSetMode('buy'); });
+  ok((await p.textContent('#cb-result')).replace(/\s/g, '') === usd(Math.round(1000000 * 0.025 - BUYER)), 'calculators page, buying: $1,000,000 gives the cashback less the buyer fee');
+  await p.evaluate(() => cbSetMode('sell'));
+  ok((await p.textContent('#cb-fee')).includes(SELLER.toLocaleString('en-US')), 'calculators page, selling: the fee shown is the seller fee ' + usd(SELLER));
+  const dealsRaw = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'deals.json'), 'utf8'));
+  ok(dealsRaw.fee === 4999 && /fee in place when each deal closed/.test(read('recent-deals.html')) && read('recent-deals.html').includes(usd(BUYER) + ' + HST'), 'recent deals are worked out at the fee they closed at ($4,999) and the page says so');
+
   section('Showing fee ($40 + HST, no free first showing)');
   const stale = [], bareFee = [];
   htmlFiles.forEach(f => { const t = read(f).replace(/<script[^>]*src[^>]*>/g, '');
@@ -244,9 +280,9 @@ function serve() {
   ok(stale.length === 0, 'no page still says the first showing is free or $30: ' + stale.slice(0, 5).join(', '));
   ok(bareFee.length === 0, 'every $40 is clearly a per-showing fee ("each", "per showing" or "+ HST"): ' + bareFee.slice(0, 3).join(' | '));
   ok(htmlFiles.every(f => /Showings \$40 \+ HST each/.test(read(f))), 'every page footer states "Showings $40 + HST each"');
-  ok(htmlFiles.every(f => /Flat fee \$4,999 \+ HST\. Showings \$40 \+ HST each\./.test(read(f))), 'every page footer has the visible fee line ($4,999 + HST and $40 + HST)');
-  ok(/\$4,999 \+ HST/.test(read('Index.html')) && /\$4,999 \+ HST fee/.test(read('how-cashback-works.html')), 'homepage and how-it-works FAQs say the $4,999 fee is plus HST');
-  ok(/"priceRange": "\$4,999 \+ HST flat fee"/.test(read('Index.html')) && /Flat fee: \$4,999 \+ HST/.test(fs.readFileSync(path.join(DIST, 'llms.txt'), 'utf8')), 'structured data and llms.txt say $4,999 + HST');
+  ok(htmlFiles.every(f => read(f).includes('Flat fee ' + usd(BUYER) + ' + HST to buy, ' + usd(SELLER) + ' + HST to sell. Showings $40 + HST each.')), 'every page footer has the visible fee line (buy fee, sell fee and $40 + HST)');
+  ok(read('Index.html').includes(usd(BUYER) + ' + HST') && read('how-cashback-works.html').includes(usd(BUYER) + ' + HST fee'), 'homepage and how-it-works FAQs say the buyer fee is plus HST');
+  ok(read('Index.html').includes('"priceRange": "' + usd(SELLER) + ' to ' + usd(BUYER) + ' + HST flat fee"') && fs.readFileSync(path.join(DIST, 'llms.txt'), 'utf8').includes('Flat buyer fee: ' + usd(BUYER) + ' + HST'), 'structured data and llms.txt state the buyer and seller fee plus HST');
   p = await open(); await p.goto(base + '/Index.html');
   const faqFirst = await p.textContent('#faq-service .faq-q');
   ok(/How much do showings cost\?/.test(faqFirst), 'homepage FAQ: "How much do showings cost?" is the first question: ' + faqFirst.trim().slice(0, 40));
@@ -261,7 +297,8 @@ function serve() {
   ok((await p.$$('h1')).length === 1 && /[\u0600-\u06FF]/.test(await p.textContent('h1')), 'Farsi page has one H1, written in Farsi');
   const faText = await p.textContent('.fa-page');
   ok(/Smart Brokerages/.test(faText) && /RECO/.test(faText), 'Farsi page names Smart Brokerages and RECO');
-  ok(/۴٬۹۹۹/.test(faText) && /۲۰٬۰۰۱/.test(faText) && /۲٫۵٪/.test(faText) && !/\d/.test(faText.replace(/\(437\) 443-7556/, '')), 'Farsi page states the fee, cashback and 2.5% assumption in Persian digits (only the phone number keeps Latin digits)');
+  const fa = n => String(n).replace(/\d/g, d => '۰۱۲۳۴۵۶۷۸۹'[d]).replace(/,/g, '٬');
+  ok(faText.includes(fa(BUYER.toLocaleString('en-US'))) && faText.includes(fa(Math.round(1000000 * 0.025 - BUYER).toLocaleString('en-US'))) && /۲٫۵٪/.test(faText) && !/\d/.test(faText.replace(/\(437\) 443-7556/, '')), 'Farsi page states the fee, cashback and 2.5% assumption in Persian digits (only the phone number keeps Latin digits)');
   ok(/ریلتور/.test(await p.title()) && /ریلتور/.test(await p.textContent('h1')) && /مشاور املاک/.test(faText), 'Farsi page uses both "ریلتور" (realtor) and "مشاور املاک" in the title and H1/body');
   ok(await p.evaluate(() => getComputedStyle(document.querySelector('.guide-eyebrow')).letterSpacing === 'normal' || getComputedStyle(document.querySelector('.guide-eyebrow')).letterSpacing === '0px'), 'Farsi page has no letter-spacing (it breaks Persian letters)');
   ok(await p.evaluate(async () => { await document.fonts.ready; return document.fonts.check('16px "Vazirmatn NL"', '\u0641\u0627\u0631\u0633\u06cc'); }), 'Farsi page: the Vazirmatn font loads and is used for Persian text');

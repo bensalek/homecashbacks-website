@@ -59,12 +59,12 @@
     {
       "@type": "Question",
       "name": "How much cashback can a Toronto home buyer get?",
-      "acceptedAnswer": {"@type": "Answer", "text": "It depends on the purchase price and the buyer agent commission the seller offered. On a $900,000 Toronto home with a 2.5% buyer agent commission, HomeCashbacks charges a flat $4,999 and the buyer receives approximately $17,501 back after closing."}
+      "acceptedAnswer": {"@type": "Answer", "text": "It depends on the purchase price and the buyer agent commission the seller offered. On a $900,000 Toronto home with a 2.5% buyer agent commission, HomeCashbacks charges a flat {{BUYER_FEE}} and the buyer receives approximately {{CB:900000}} back after closing."}
     },
     {
       "@type": "Question",
       "name": "Can real estate cashback in Canada help with my home purchase?",
-      "acceptedAnswer": {"@type": "Answer", "text": "Yes, in Ontario. A buyer agent can return part of their commission to you as cashback, as long as it is disclosed in writing before you sign. The seller funds the commission, so you pay nothing extra. With HomeCashbacks you receive the rest of the buyer agent commission after our flat $4,999 fee, about 6 to 8 weeks after closing. Because it arrives after closing, it does not count toward your down payment or mortgage qualification, so plan your closing costs separately. CRA treats cashback as a reduction in the purchase price of the home, not income. Rules differ by province, and we serve buyers in Ontario."}
+      "acceptedAnswer": {"@type": "Answer", "text": "Yes, in Ontario. A buyer agent can return part of their commission to you as cashback, as long as it is disclosed in writing before you sign. The seller funds the commission, so you pay nothing extra. With HomeCashbacks you receive the rest of the buyer agent commission after our flat {{BUYER_FEE}} fee, about 6 to 8 weeks after closing. Because it arrives after closing, it does not count toward your down payment or mortgage qualification, so plan your closing costs separately. CRA treats cashback as a reduction in the purchase price of the home, not income. Rules differ by province, and we serve buyers in Ontario."}
     }
   ]
 }
@@ -119,6 +119,7 @@
     <a href="#why-agents-dont" class="legal-jbtn">Why agents don't offer it</a>
     <a href="#watch-out" class="legal-jbtn">What to watch for</a>
     <a href="#laleh" class="legal-jbtn">Laleh's take</a>
+    <a href="#rebate" class="legal-jbtn">Commission rebate</a>
     <a href="#toronto" class="legal-jbtn">Toronto specifics</a>
     <a href="#calculator" class="legal-jbtn">Your cashback</a>
   </div>
@@ -144,7 +145,7 @@
       <div class="flow-arrow">→</div>
       <div class="flow-node">
         <div class="flow-node-label">HomeCashbacks</div>
-        <div class="flow-node-val">Keeps flat<br>$4,999 fee</div>
+        <div class="flow-node-val">Keeps flat<br>{{BUYER_FEE}} fee</div>
       </div>
       <div class="flow-arrow">→</div>
       <div class="flow-node highlight">
@@ -177,7 +178,7 @@
   <div class="legal-inner">
     <div class="legal-eyebrow-sm">The honest answer</div>
     <h2 class="legal-h2">Why most agents don't offer it</h2>
-    <p class="legal-body">It is not because it is illegal. It is because it is not in their financial interest. A traditional agent on a $1M home earns $25,000. Giving back $20,000 of that requires a fundamentally different business model   lower volume fees, higher transaction volume, and the belief that transparency wins in the long run.</p>
+    <p class="legal-body">It is not because it is illegal. It is because it is not in their financial interest. A traditional agent on a $1M home earns $25,000. Giving back {{CBR:1000000}} of that requires a fundamentally different business model   lower volume fees, higher transaction volume, and the belief that transparency wins in the long run.</p>
     <div class="why-grid">
       <div class="why-card">
         <div class="why-card-label red">Traditional agent</div>
@@ -185,7 +186,7 @@
       </div>
       <div class="why-card">
         <div class="why-card-label green">HomeCashbacks</div>
-        <div class="why-card-body">Charges a flat $4,999. Everything above that goes back to you. Works because the model is built around volume and referrals, not per-deal maximization.</div>
+        <div class="why-card-body">Charges a flat {{BUYER_FEE}}. Everything above that goes back to you. Works because the model is built around volume and referrals, not per-deal maximization.</div>
       </div>
     </div>
     <p class="legal-body">Some agents will tell you cashback realtors provide less service. That is a convenient argument from people who earn more when you believe it. <a href="/how-cashback-works.html" class="link">See exactly what is included.</a></p>
@@ -262,13 +263,24 @@
         <div style="display:flex;flex-direction:column;gap:.3rem">
           <span class="mini-calc-input-label">Your estimated cashback</span>
           <div class="mini-result">
-            <div class="mini-result-amt" id="mini-result">$17,501</div>
+            <div class="mini-result-amt" id="mini-result">{{CB:900000}}</div>
           </div>
-          <div class="mini-result-sub" id="mini-sub">Commission of $22,500 minus our flat $4,999 fee</div>
+          <div class="mini-result-sub" id="mini-sub">Commission of $22,500 minus our flat {{BUYER_FEE}} fee</div>
         </div>
       </div>
     </div>
     <p style="font-size:13px;color:#5a6a82">Assumes 2.5% buyer agent commission. Actual amount depends on the seller's commission offer. <a href="/#calculator" class="link">Full calculator on the homepage.</a></p>
+  </div>
+</section>
+
+<!-- COMMISSION REBATE -->
+<section class="legal-section" style="background:#fff;border-top:1px solid rgba(26,35,50,.1)" id="rebate">
+  <div class="legal-inner">
+    <div class="legal-eyebrow-sm">Another name for cashback</div>
+    <h2 class="legal-h2">Commission rebate in Ontario</h2>
+    <p class="legal-body">A <strong>commission rebate</strong> is the same thing as cashback: the buyer agent returns part of the commission the seller already offered. In Ontario, a realtor commission rebate is allowed when it is agreed in writing and paid through the agent's brokerage.</p>
+    <p class="legal-body"><strong>Example:</strong> on a $1,000,000 home with a 2.5% buyer agent commission ($25,000), a flat {{BUYER_FEE}} + HST fee leaves a commission rebate of about {{CBR:1000000}} for the buyer, paid 6 to 8 weeks after closing. Other agents rebate a percentage of the commission instead, so compare the dollar amount in writing before you sign, not just the headline.</p>
+    <p class="legal-body">Searching for a realtor commission rebate in Ontario? See <a href="/how-cashback-works.html" class="link">how the rebate works step by step</a> or <a href="/flat-fee-vs-percentage-cashback.html" class="link">compare flat-fee and percentage rebates</a>.</p>
   </div>
 </section>
 
@@ -278,7 +290,7 @@
     <div class="legal-eyebrow-sm">Toronto and GTA</div>
     <h2 class="legal-h2">Specific to Toronto buyers</h2>
     <p class="legal-body">Toronto real estate operates under Ontario law, so everything above applies directly to you. A few things worth knowing for the GTA specifically:</p>
-    <p class="legal-body"><strong>Toronto's average home price sits above $1M.</strong> At that price point, the buyer agent commission typically ranges from $20,000 to $25,000. HomeCashbacks charges $4,999 flat, which means Toronto buyers receive some of the largest cashback amounts in the country.</p>
+    <p class="legal-body"><strong>Toronto's average home price sits above $1M.</strong> At that price point, the buyer agent commission typically ranges from $20,000 to $25,000. HomeCashbacks charges {{BUYER_FEE}} flat, which means Toronto buyers receive some of the largest cashback amounts in the country.</p>
     <p class="legal-body"><strong>Toronto condos are no different.</strong> The same rules apply whether you are buying a freehold home in Scarborough or a condo in Liberty Village. The seller specifies the buyer agent commission in the MLS listing and you are entitled to the rebate regardless of property type.</p>
     <p class="legal-body"><strong>First-time buyers in Toronto</strong> can combine cashback with the Ontario and Toronto land transfer tax rebates. That combination can add up to over $25,000 in savings on a first purchase. See the <a href="/first-time-buyer-guide.html" class="link">First-Time Buyer Guide</a> for the full breakdown.</p>
   </div>
@@ -293,8 +305,8 @@
     <p class="legal-body"><strong>Who pays the cashback?</strong><br>The seller funds the commission. The buyer agent receives their portion and rebates part of it back to the buyer. The buyer pays nothing extra — the commission already exists in the transaction.</p>
     <p class="legal-body"><strong>When does the cashback arrive?</strong><br>Cashback arrives 6 to 8 weeks after closing, once the commission is released from the brokerage trust account.</p>
     <p class="legal-body"><strong>Is cashback from a realtor legal in Toronto?</strong><br>Yes. Toronto falls under Ontario real estate law, which is governed by RECO. Cashback from a buyer agent is fully legal across Toronto and the entire GTA, provided it is disclosed in writing and the agent is RECO registered.</p>
-    <p class="legal-body"><strong>How much cashback can a Toronto home buyer get?</strong><br>It depends on the purchase price and the buyer agent commission the seller offered. On a $900,000 Toronto home with a 2.5% buyer agent commission, HomeCashbacks charges a flat $4,999 and the buyer receives approximately $17,501 back after closing.</p>
-    <p class="legal-body"><strong>Can real estate cashback in Canada help with my home purchase?</strong><br>Yes, in Ontario. A buyer agent can return part of their commission to you as cashback, as long as it is disclosed in writing before you sign. The seller funds the commission, so you pay nothing extra. With HomeCashbacks you receive the rest of the buyer agent commission after our flat $4,999 fee, about 6 to 8 weeks after closing. Because it arrives after closing, it does not count toward your down payment or mortgage qualification, so plan your closing costs separately. CRA treats cashback as a reduction in the purchase price of the home, not income. Rules differ by province, and we serve buyers in Ontario.</p>
+    <p class="legal-body"><strong>How much cashback can a Toronto home buyer get?</strong><br>It depends on the purchase price and the buyer agent commission the seller offered. On a $900,000 Toronto home with a 2.5% buyer agent commission, HomeCashbacks charges a flat {{BUYER_FEE}} and the buyer receives approximately {{CB:900000}} back after closing.</p>
+    <p class="legal-body"><strong>Can real estate cashback in Canada help with my home purchase?</strong><br>Yes, in Ontario. A buyer agent can return part of their commission to you as cashback, as long as it is disclosed in writing before you sign. The seller funds the commission, so you pay nothing extra. With HomeCashbacks you receive the rest of the buyer agent commission after our flat {{BUYER_FEE}} fee, about 6 to 8 weeks after closing. Because it arrives after closing, it does not count toward your down payment or mortgage qualification, so plan your closing costs separately. CRA treats cashback as a reduction in the purchase price of the home, not income. Rules differ by province, and we serve buyers in Ontario.</p>
   </div>
 </section>
 
@@ -304,7 +316,7 @@
 <section style="background:var(--white);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:1.25rem 2rem">
   <div style="max-width:860px;margin:0 auto">
     <div style="display:flex;align-items:center;flex-wrap:wrap;gap:.5rem">
-      <span style="font-size:11px;font-weight:600;letter-spacing:.8px;text-transform:uppercase;color:var(--taupe);margin-right:.25rem;white-space:nowrap;flex-shrink:0">Buying in</span>
+      <span style="font-size:12px;font-weight:600;letter-spacing:.8px;text-transform:uppercase;color:var(--taupe);margin-right:.25rem;white-space:nowrap;flex-shrink:0">Buying in</span>
       <a href="/toronto-cashback-realtor.html" style="font-size:12px;color:var(--muted);text-decoration:none;padding:4px 11px;border:1px solid var(--border);border-radius:3px;transition:all .15s;white-space:nowrap" onmouseover="this.style.borderColor='var(--amber)';this.style.color='var(--ink)';this.style.background='var(--bg)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)';this.style.background='transparent'">Toronto</a>
       <a href="/north-york-cashback-realtor.html" style="font-size:12px;color:var(--muted);text-decoration:none;padding:4px 11px;border:1px solid var(--border);border-radius:3px;transition:all .15s;white-space:nowrap" onmouseover="this.style.borderColor='var(--amber)';this.style.color='var(--ink)';this.style.background='var(--bg)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)';this.style.background='transparent'">North York</a>
       <a href="/etobicoke-cashback-realtor.html" style="font-size:12px;color:var(--muted);text-decoration:none;padding:4px 11px;border:1px solid var(--border);border-radius:3px;transition:all .15s;white-space:nowrap" onmouseover="this.style.borderColor='var(--amber)';this.style.color='var(--ink)';this.style.background='var(--bg)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)';this.style.background='transparent'">Etobicoke</a>
@@ -332,10 +344,10 @@ function miniCalc(){
   var raw = parseInt(document.getElementById('mini-price').value.replace(/,/g,'')) || 0;
   var price = Math.min(3000000, Math.max(0, raw));
   var commission = price * 0.025;
-  var cashback = Math.max(0, commission - 4999);
+  var cashback = Math.max(0, commission - {{BUYER_FEE_NUM}});
   var fmt = function(n){ return '$' + Math.round(n).toLocaleString('en-CA'); };
   document.getElementById('mini-result').textContent = fmt(cashback);
-  document.getElementById('mini-sub').textContent = 'Commission of ' + fmt(commission) + ' minus our flat $4,999 fee';
+  document.getElementById('mini-sub').textContent = 'Commission of ' + fmt(commission) + ' minus our flat {{BUYER_FEE}} fee';
 }
 
 var miniInput = document.getElementById('mini-price');

@@ -1,26 +1,26 @@
 # Home Cashbacks
 
-> Home Cashbacks is a licensed flat-fee cashback real estate brokerage serving Toronto and the GTA. Buyers pay a flat $4,999 fee instead of letting their agent keep the full buyer agent commission, and receive the remainder back in cash after closing.
+> Home Cashbacks is a licensed flat-fee cashback real estate brokerage serving Toronto and the GTA. Buyers pay a flat {{BUYER_FEE}} + HST fee instead of letting their agent keep the full buyer agent commission, and receive the remainder back in cash after closing.
 
 Laleh Mousavi is the licensed RECO realtor representing buyers, registered with Smart Brokerages, and a member of RECO, TRREB, CREA, and OREA.
 
 ## Key facts
 
-- Flat fee: $4,999 + HST regardless of home price
-- On a $1,000,000 Toronto home at 2.5% buyer agent commission, the buyer receives $20,001 cash back after closing
+- Flat buyer fee: {{BUYER_FEE}} + HST regardless of home price
+- On a $1,000,000 Toronto home at 2.5% buyer agent commission, the buyer receives {{CB:1000000}} cash back after closing
 - Showings are $40 CAD plus HST each
 - All offers are free and unlimited
 - The buyer representation agreement is signed at offer stage, not before showings — buyers can walk away at any time before that with no commitment
 - Cashback is written into the buyer representation agreement before any offer is made
 - Cashback is paid after closing, typically within a few weeks
 - Cashback is generally treated by the CRA as a reduction in purchase price, not taxable income, for primary residences
-- A seller listing service is also offered at the same flat $4,999 fee
+- A seller listing service is also offered at a flat {{SELLER_FEE}} + HST fee
 - Serves Toronto, Mississauga, Etobicoke, Scarborough, North York, Vaughan, Oakville, Markham, Richmond Hill, and Brampton
 - Laleh Mousavi is fluent in Farsi and serves Farsi-speaking buyers
 
 ## How the model works
 
-When a home is listed for sale in Ontario, the seller sets aside a buyer agent commission, typically 2 to 2.5% of the sale price, payable to whichever agent represents the buyer. A traditional agent keeps this commission in full. Home Cashbacks charges a flat $4,999 for the same buyer representation service and returns everything above that to the buyer after closing. This is legal in Ontario and regulated by RECO.
+When a home is listed for sale in Ontario, the seller sets aside a buyer agent commission, typically 2 to 2.5% of the sale price, payable to whichever agent represents the buyer. A traditional agent keeps this commission in full. Home Cashbacks charges a flat {{BUYER_FEE}} + HST for the same buyer representation service and returns everything above that to the buyer after closing. This is legal in Ontario and regulated by RECO.
 
 ## Primary pages
 

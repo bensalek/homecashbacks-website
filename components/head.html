@@ -8,7 +8,7 @@
       "@id": "https://homecashbacks.ca/#business",
       "name": "Home Cashbacks",
       "legalName": "Home Cashbacks",
-      "description": "Full-service Toronto buyer agent offering cashback on every home purchase. We charge a flat $4,999 fee and return the rest of the buyer agent commission to you after closing.",
+      "description": "Full-service Toronto buyer agent offering cashback on every home purchase. We charge a flat {{BUYER_FEE}} fee and return the rest of the buyer agent commission to you after closing.",
       "url": "https://homecashbacks.ca",
       "telephone": "+14374437556",
       "email": "Laleh@homecashbacks.ca",
@@ -111,10 +111,14 @@
         {"@type": "City", "name": "East Gwillimbury"}
       ],
       "serviceType": "Buyer Agent with Cashback",
-      "priceRange": "$4,999 + HST flat fee",
+      "priceRange": "{{SELLER_FEE}} to {{BUYER_FEE}} + HST flat fee",
       "sameAs": [
         "https://www.linkedin.com/company/homecashbacks/about/",
-        "https://www.instagram.com/homecashbacks/"
+        "https://www.instagram.com/homecashbacks/",
+        "https://x.com/Homecashbacks",
+        "https://facebook.com/HomecashbacksGTA",
+        "https://www.youtube.com/@Homecashback",
+        "https://www.tiktok.com/@home.cashbacks"
       ]
     },
     {
@@ -122,10 +126,10 @@
       "@id": "https://homecashbacks.ca/#service",
       "name": "Cashback Buyer Agent Service",
       "provider": {"@id": "https://homecashbacks.ca/#business"},
-      "description": "Full-service buyer representation in the Greater Toronto Area. Showings, offer writing, negotiation, and closing coordination. We charge a flat $4,999 fee and return everything above that from the buyer agent commission back to you after closing.",
+      "description": "Full-service buyer representation in the Greater Toronto Area. Showings, offer writing, negotiation, and closing coordination. We charge a flat {{BUYER_FEE}} fee and return everything above that from the buyer agent commission back to you after closing.",
       "offers": {
         "@type": "Offer",
-        "price": "4999",
+        "price": "{{BUYER_FEE_NUM}}",
         "priceCurrency": "CAD",
         "description": "Flat buyer agent fee. The remaining buyer agent commission (typically 2 to 2.5% of purchase price) is returned to the buyer 6 to 8 weeks after closing.",
         "eligibleRegion": {"@type": "AdministrativeArea", "name": "Greater Toronto Area, Ontario, Canada"}
@@ -180,7 +184,7 @@
   <link rel="stylesheet" href="/assets/styles.css?v=9">
   <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--bg:#f0f4f8;--bg2:#e2eaf2;--bg3:#ccd8e8;--white:#fff;--ink:#1a2332;--ink2:#2d3d52;--muted:#5a6a82;--taupe:#6b7fa0;--cta:#1c864e;--cta-text:#ffffff;--cta-dark:#155f38;--dark:#1a2332;--border:rgba(26,35,50,.1);--border-on-dark:rgba(255,255,255,.08);--overlay:rgba(26,35,50,.72);--red:#b83232;--amber:var(--cta);--charcoal:var(--dark);--star:#fbbc05;--wa-green:#25d147;--red-text:#dc2626;--red-light-bg:#fff9f9;--green-light:#5ec490}
+:root{--bg:#f0f4f8;--bg2:#e2eaf2;--bg3:#ccd8e8;--white:#fff;--ink:#1a2332;--ink2:#2d3d52;--muted:#5a6a82;--taupe:#55688a;--cta:#1c864e;--cta-text:#ffffff;--cta-dark:#155f38;--dark:#1a2332;--border:rgba(26,35,50,.1);--border-on-dark:rgba(255,255,255,.08);--overlay:rgba(26,35,50,.72);--red:#b83232;--amber:var(--cta);--charcoal:var(--dark);--star:#fbbc05;--wa-green:#25d147;--red-text:#dc2626;--red-light-bg:#fff9f9;--green-light:#5ec490}
 html{scroll-behavior:smooth}
 body{font-family:'Rubik',sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;padding-top:118px}
 .top-bar{position:fixed;top:0;left:0;right:0;z-index:600;background:var(--dark);height:58px;padding:0 1.5rem;display:flex;align-items:center;justify-content:center;gap:12px}

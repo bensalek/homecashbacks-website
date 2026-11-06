@@ -54,7 +54,7 @@
     {
       "@type": "Question",
       "name": "Does cashback stack with rental property rebates?",
-      "acceptedAnswer": {"@type": "Answer", "text": "Yes. Cashback relates to the buyer agent commission, which is entirely separate from any GST/HST rebate program. We take a flat $4,999 and return the rest of the commission to you after closing, on every property, regardless of what rebates you also qualify for."}
+      "acceptedAnswer": {"@type": "Answer", "text": "Yes. Cashback relates to the buyer agent commission, which is entirely separate from any GST/HST rebate program. We take a flat {{BUYER_FEE}} and return the rest of the commission to you after closing, on every property, regardless of what rebates you also qualify for."}
     }
   ]
 }
@@ -75,7 +75,7 @@
 .guide-hero{background:var(--ink);padding:3.5rem 2rem 4rem;position:relative;overflow:hidden}
 .guide-hero::before{content:'';position:absolute;top:-60px;right:-60px;width:280px;height:280px;border-radius:50%;border:50px solid rgba(110,175,140,.06)}
 .guide-hero-inner{max-width:760px;margin:0 auto;position:relative;z-index:1}
-.guide-eyebrow{font-size:11px;font-weight:500;letter-spacing:1.2px;text-transform:uppercase;color:var(--amber);margin-bottom:.75rem}
+.guide-eyebrow{font-size:12px;font-weight:500;letter-spacing:1.2px;text-transform:uppercase;color:var(--amber);margin-bottom:.75rem}
 .guide-h1{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,4.5vw,48px);font-weight:600;color:var(--white);line-height:1.1;margin-bottom:.85rem}
 .guide-sub{font-size:15px;color:rgba(232,237,245,.55);max-width:560px;line-height:1.75}
 .guide-body{max-width:760px;margin:0 auto;padding:3rem 2rem}
@@ -83,7 +83,7 @@
 .guide-h2{font-family:'Cormorant Garamond',serif;font-size:clamp(22px,3vw,32px);font-weight:600;color:var(--ink);line-height:1.15;margin-bottom:.75rem}
 .guide-p{font-size:15px;color:var(--muted);line-height:1.8;margin-bottom:1rem}
 .guide-p strong{color:var(--ink)}
-.guide-eyebrow-sm{font-size:11px;font-weight:500;letter-spacing:1px;text-transform:uppercase;color:var(--amber);margin-bottom:.5rem}
+.guide-eyebrow-sm{font-size:12px;font-weight:500;letter-spacing:1px;text-transform:uppercase;color:var(--amber);margin-bottom:.5rem}
 .quick-box{background:var(--white);border:1.5px solid var(--amber);border-radius:6px;padding:1.5rem;margin:1.5rem 0}
 .quick-box-title{font-size:13px;font-weight:700;color:var(--ink);margin-bottom:1rem}
 .quick-grid{display:grid;grid-template-columns:1fr 1fr;gap:.6rem}
@@ -91,7 +91,7 @@
 .quick-item svg{flex-shrink:0;margin-top:2px}
 .quick-item-text{font-size:13px;color:var(--ink);font-weight:500;line-height:1.4}
 .example-box{background:var(--ink);border-radius:6px;padding:1.5rem;margin:1.5rem 0}
-.example-box-label{font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--amber);margin-bottom:.75rem}
+.example-box-label{font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--amber);margin-bottom:.75rem}
 .example-row{display:flex;justify-content:space-between;align-items:center;padding:.5rem 0;border-bottom:1px solid rgba(255,255,255,.08)}
 .example-row:last-child{border-bottom:none;padding-top:.75rem}
 .example-row-label{font-size:13px;color:rgba(255,255,255,.65)}
@@ -126,7 +126,7 @@
 .faq-item.open .faq-a{display:block}
 .guide-cta{background:var(--bg2);padding:3rem 2rem;text-align:center;border-top:1px solid var(--border)}
 .guide-cta-inner{max-width:480px;margin:0 auto}
-.guide-cta-eyebrow{font-size:11px;font-weight:500;letter-spacing:1.2px;text-transform:uppercase;color:var(--cta);margin-bottom:.75rem}
+.guide-cta-eyebrow{font-size:12px;font-weight:500;letter-spacing:1.2px;text-transform:uppercase;color:var(--cta);margin-bottom:.75rem}
 .guide-cta-title{font-family:'Cormorant Garamond',serif;font-size:clamp(22px,3.5vw,32px);font-weight:600;color:var(--ink);line-height:1.15;margin-bottom:.75rem}
 .guide-cta-sub{font-size:15px;color:var(--muted);margin-bottom:1.75rem;line-height:1.75}
 .guide-cta-btn{background:var(--amber);color:var(--ink);padding:13px 28px;border-radius:4px;font-size:14px;font-weight:700;border:none;cursor:pointer;font-family:'Rubik',sans-serif;transition:opacity .2s}
@@ -157,7 +157,7 @@
   <div class="guide-section">
     <div class="guide-eyebrow-sm">The short answer</div>
     <h2 class="guide-h2">Cashback is a numbers improvement, not a lifestyle perk</h2>
-    <p class="guide-p">For an investor, cashback isn't a nice-to-have, it's a direct reduction in your effective acquisition cost, which improves your cap rate and cash-on-cash return the moment you close. The mechanics don't change from a resale purchase: the seller sets aside a buyer agent commission in every deal, we take a flat $4,999, and you receive the rest after closing.</p>
+    <p class="guide-p">For an investor, cashback isn't a nice-to-have, it's a direct reduction in your effective acquisition cost, which improves your cap rate and cash-on-cash return the moment you close. The mechanics don't change from a resale purchase: the seller sets aside a buyer agent commission in every deal, we take a flat {{BUYER_FEE}}, and you receive the rest after closing.</p>
     <div class="example-box">
       <div class="example-box-label">$800,000 investment property &middot; 2.5% buyer agent commission</div>
       <div class="example-row">
@@ -166,11 +166,11 @@
       </div>
       <div class="example-row">
         <span class="example-row-label">HomeCashbacks flat fee</span>
-        <span class="example-row-val">&minus;$4,999</span>
+        <span class="example-row-val">&minus;{{BUYER_FEE}}</span>
       </div>
       <div class="example-row">
         <span class="example-row-label">Your cashback, reduces effective acquisition cost</span>
-        <span class="example-row-val highlight">$15,001</span>
+        <span class="example-row-val highlight">{{CB:800000}}</span>
       </div>
     </div>
     <p class="guide-p">On a portfolio, this compounds. Every property you acquire through us returns cashback, not just your first one.</p>
@@ -294,7 +294,7 @@
 
   <hr class="divider"/>
   <div style="display:flex;align-items:center;flex-wrap:wrap;gap:.6rem;margin-bottom:2rem">
-    <span style="font-size:11px;font-weight:500;letter-spacing:.8px;text-transform:uppercase;color:var(--taupe);margin-right:.25rem">Related guides</span>
+    <span style="font-size:12px;font-weight:500;letter-spacing:.8px;text-transform:uppercase;color:var(--taupe);margin-right:.25rem">Related guides</span>
     <a href="/gst-hst-rebate-new-construction-canada.html" style="font-size:12px;color:var(--muted);text-decoration:none;padding:4px 11px;border:1px solid var(--border);border-radius:3px;transition:all .15s" onmouseover="this.style.borderColor='var(--amber)';this.style.color='var(--ink)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)'">GST/HST Rebate Deep-Dive</a>
     <a href="/pre-construction-condo-cashback-toronto.html" style="font-size:12px;color:var(--muted);text-decoration:none;padding:4px 11px;border:1px solid var(--border);border-radius:3px;transition:all .15s" onmouseover="this.style.borderColor='var(--amber)';this.style.color='var(--ink)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)'">Pre-Construction Guide</a>
     <a href="/condo-buying-guide.html" style="font-size:12px;color:var(--muted);text-decoration:none;padding:4px 11px;border:1px solid var(--border);border-radius:3px;transition:all .15s" onmouseover="this.style.borderColor='var(--amber)';this.style.color='var(--ink)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)'">Condo Buying Guide</a>
@@ -319,7 +319,7 @@ var INVESTOR_FAQ = [
   {q:'Is there any HST rebate available to investors right now?', a:'Yes. The New Residential Rental Property Rebate (NRRPR) applies to new construction purchased to rent out long-term, on a lease of at least one year. Ontario\'s current temporary enhancement, for agreements signed between April 1, 2026 and March 31, 2027, extends this to a combined maximum of $130,000, the same cap as the owner-occupied version, and it is not limited to first-time buyers.'},
   {q:'Can I buy a condo in Toronto and run it as an Airbnb?', a:'Generally, no. Toronto\'s short-term rental bylaw restricts stays under 28 days to the host\'s principal residence only. A pure investment property, where you don\'t actually live, cannot be legally operated as a short-term rental in the city, regardless of what the condo corporation allows. This is a common and costly assumption new investors make.'},
   {q:'Do I have to pay the HST upfront on a rental property purchase?', a:'Often, yes. Unlike an owner-occupied purchase where the builder can sometimes credit the rebate directly, investment property purchasers commonly need to pay the full HST at closing and claim the New Residential Rental Property Rebate from CRA afterward, once they have a signed long-term lease in place. This creates a real, temporary cash flow requirement worth planning for.'},
-  {q:'Does cashback stack with rental property rebates?', a:'Yes. Cashback relates to the buyer agent commission, which is entirely separate from any GST/HST rebate program. We take a flat $4,999 and return the rest of the commission to you after closing, on every property, regardless of what rebates you also qualify for.'},
+  {q:'Does cashback stack with rental property rebates?', a:'Yes. Cashback relates to the buyer agent commission, which is entirely separate from any GST/HST rebate program. We take a flat {{BUYER_FEE}} and return the rest of the commission to you after closing, on every property, regardless of what rebates you also qualify for.'},
 ];
 
 var faqEl = document.getElementById('investor-faq-list');

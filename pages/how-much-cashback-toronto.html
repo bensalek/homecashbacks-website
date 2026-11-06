@@ -7,7 +7,7 @@
 <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png"/>
 <title>How Much Cashback Can You Get from a Realtor in Toronto? (2026)</title>
-<meta name="description" content="On a $1M Toronto home at 2.5% commission you get $20,000 back with a flat-fee cashback realtor. See exact numbers at every price point with our free calculator."/>
+<meta name="description" content="On a $1M Toronto home at 2.5% commission you get {{CBR:1000000}} back with a flat-fee cashback realtor. See exact numbers at every price point with our free calculator."/>
 <meta name="robots" content="index, follow"/>
 <link rel="canonical" href="https://homecashbacks.ca/how-much-cashback-toronto.html"/>
 <meta property="og:image" content="https://homecashbacks.ca/og-image.png"/>
@@ -16,7 +16,7 @@
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://homecashbacks.ca/og-image.png"/>
 <meta property="og:title" content="How Much Cashback Can You Get from a Realtor in Toronto?"/>
-<meta property="og:description" content="On a $1M Toronto home you get $20,000 back. See exact cashback amounts at every price point."/>
+<meta property="og:description" content="On a $1M Toronto home you get {{CBR:1000000}} back. See exact cashback amounts at every price point."/>
 <meta property="og:url" content="https://homecashbacks.ca/how-much-cashback-toronto.html"/>
 <meta property="og:type" content="article"/>
 <link rel="stylesheet" href="/assets/guide-article.css"/>
@@ -41,7 +41,7 @@
     {
       "@type": "Question",
       "name": "How much cashback can I get from a realtor in Toronto?",
-      "acceptedAnswer": {"@type": "Answer", "text": "On a $1M Toronto home with a 2.5% buyer agent commission, a flat-fee cashback realtor charging $4,999 returns $20,000 to you after closing. On an $800K home the cashback is $15,000. On a $1.5M home it is $32,500."}
+      "acceptedAnswer": {"@type": "Answer", "text": "On a $1M Toronto home with a 2.5% buyer agent commission, a flat-fee cashback realtor charging {{BUYER_FEE}} returns {{CBR:1000000}} to you after closing. On an $800K home the cashback is {{CBR:800000}}. On a $1.5M home it is {{CBR:1500000}}."}
     },
     {
       "@type": "Question",
@@ -51,7 +51,7 @@
     {
       "@type": "Question",
       "name": "What is the difference between a flat-fee and percentage cashback realtor?",
-      "acceptedAnswer": {"@type": "Answer", "text": "A flat-fee cashback realtor charges a fixed fee (e.g. $4,999) and returns everything above that. A percentage model returns a share of the commission (e.g. 50%). On any GTA home above $700K, the flat-fee model returns significantly more."}
+      "acceptedAnswer": {"@type": "Answer", "text": "A flat-fee cashback realtor charges a fixed fee (e.g. {{BUYER_FEE}}) and returns everything above that. A percentage model returns a share of the commission (e.g. 50%). On any GTA home above $700K, the flat-fee model returns significantly more."}
     },
     {
       "@type": "Question",
@@ -67,20 +67,20 @@
 .cb-calc-title{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;color:var(--white);margin-bottom:1.25rem}
 .cb-inputs{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.25rem}
 .cb-input-group{display:flex;flex-direction:column;gap:.35rem}
-.cb-label{font-size:11px;font-weight:600;letter-spacing:.6px;text-transform:uppercase;color:rgba(255,255,255,.4)}
+.cb-label{font-size:12px;font-weight:600;letter-spacing:.6px;text-transform:uppercase;color:rgba(255,255,255,.4)}
 .cb-input{padding:10px 13px;border-radius:5px;border:1.5px solid rgba(255,255,255,.12);background:rgba(255,255,255,.07);font-size:16px;font-weight:600;color:var(--white);font-family:'Rubik',sans-serif;outline:none;width:100%;box-sizing:border-box}
 .cb-input:focus{border-color:var(--cta)}
 .cb-slider{width:100%;accent-color:var(--cta);margin:0;cursor:pointer}
 .cb-slider-wrap{margin-top:.75rem}
-.cb-slider-labels{display:flex;justify-content:space-between;font-size:10px;color:rgba(255,255,255,.3);margin-top:.3rem}
+.cb-slider-labels{display:flex;justify-content:space-between;font-size:12px;color:rgba(255,255,255,.3);margin-top:.3rem}
 .cb-result{background:var(--cta);border-radius:7px;padding:1.25rem 1.5rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.75rem;margin-top:.25rem}
 .cb-result-label{font-size:13px;color:rgba(255,255,255,.8)}
 .cb-result-amt{font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:600;color:var(--white);line-height:1}
 .cb-breakdown{display:grid;grid-template-columns:1fr 1fr 1fr;gap:.5rem;margin-top:.75rem}
 .cb-breakdown-item{background:rgba(255,255,255,.06);border-radius:5px;padding:.65rem .85rem;text-align:center}
-.cb-breakdown-label{font-size:10px;color:rgba(255,255,255,.35);text-transform:uppercase;letter-spacing:.5px;margin-bottom:.2rem}
+.cb-breakdown-label{font-size:12px;color:rgba(255,255,255,.35);text-transform:uppercase;letter-spacing:.5px;margin-bottom:.2rem}
 .cb-breakdown-val{font-size:14px;font-weight:600;color:rgba(255,255,255,.8)}
-.cb-note{font-size:11px;color:rgba(255,255,255,.25);margin-top:.75rem;line-height:1.5}
+.cb-note{font-size:12px;color:rgba(255,255,255,.25);margin-top:.75rem;line-height:1.5}
 
 @media(max-width:680px){
   .cb-inputs{grid-template-columns:1fr}
@@ -98,7 +98,7 @@
   <div class="page-hero-inner">
     <div class="page-hero-eyebrow">Toronto Cashback Realtor · 2026</div>
     <h1>How Much Cashback Can You Get from a Realtor in Toronto?</h1>
-    <p class="page-hero-sub">The short answer: on a $1M home, $20,000. Calculate your exact number below.</p>
+    <p class="page-hero-sub">The short answer: on a $1M home, {{CBR:1000000}}. Calculate your exact number below.</p>
   </div>
 </section>
 
@@ -143,7 +143,7 @@
       <div class="cb-result">
         <div>
           <div class="cb-result-label">Your estimated cashback</div>
-          <div class="cb-result-amt" id="cb-result">$20,000</div>
+          <div class="cb-result-amt" id="cb-result">{{CB:1000000}}</div>
         </div>
       </div>
       <div class="cb-breakdown">
@@ -153,14 +153,14 @@
         </div>
         <div class="cb-breakdown-item">
           <div class="cb-breakdown-label">Our flat fee</div>
-          <div class="cb-breakdown-val">$4,999</div>
+          <div class="cb-breakdown-val">{{BUYER_FEE}}</div>
         </div>
         <div class="cb-breakdown-item">
           <div class="cb-breakdown-label">You receive</div>
-          <div class="cb-breakdown-val" id="cb-you">$20,000</div>
+          <div class="cb-breakdown-val" id="cb-you">{{CB:1000000}}</div>
         </div>
       </div>
-      <div class="cb-note">Estimate based on a flat $4,999 fee. Actual cashback depends on the commission offered in the MLS listing. Most GTA listings offer 2–2.5%.</div>
+      <div class="cb-note">Estimate based on a flat {{BUYER_FEE}} fee. Actual cashback depends on the commission offered in the MLS listing. Most GTA listings offer 2–2.5%.</div>
     </div>
   </div>
 
@@ -173,19 +173,19 @@
         <tr><th>Home price</th><th>Your cashback at 2.5% commission</th></tr>
       </thead>
       <tbody>
-        <tr><td>$600,000</td><td class="green">$10,000</td></tr>
-        <tr><td>$700,000</td><td class="green">$12,500</td></tr>
-        <tr><td>$800,000</td><td class="green">$15,000</td></tr>
-        <tr><td>$900,000</td><td class="green">$17,500</td></tr>
-        <tr><td>$1,000,000</td><td class="green">$20,000</td></tr>
-        <tr><td>$1,200,000</td><td class="green">$25,000</td></tr>
-        <tr><td>$1,500,000</td><td class="green">$32,500</td></tr>
-        <tr><td>$2,000,000</td><td class="green">$45,000</td></tr>
+        <tr><td>$600,000</td><td class="green">{{CBR:600000}}</td></tr>
+        <tr><td>$700,000</td><td class="green">{{CBR:700000}}</td></tr>
+        <tr><td>$800,000</td><td class="green">{{CBR:800000}}</td></tr>
+        <tr><td>$900,000</td><td class="green">{{CBR:900000}}</td></tr>
+        <tr><td>$1,000,000</td><td class="green">{{CBR:1000000}}</td></tr>
+        <tr><td>$1,200,000</td><td class="green">{{CBR:1200000}}</td></tr>
+        <tr><td>$1,500,000</td><td class="green">{{CBR:1500000}}</td></tr>
+        <tr><td>$2,000,000</td><td class="green">{{CBR:2000000}}</td></tr>
       </tbody>
     </table>
     <div class="callout green">
       <span class="callout-icon">💡</span>
-      <div class="callout-body"><strong>The math is simple</strong>Total commission minus $4,999 flat fee equals your cashback. The higher the price, the bigger the gap.</div>
+      <div class="callout-body"><strong>The math is simple</strong>Total commission minus {{BUYER_FEE}} flat fee equals your cashback. The higher the price, the bigger the gap.</div>
     </div>
   </div>
 
@@ -211,10 +211,10 @@
       <tbody>
         <tr><td>Traditional agent</td><td class="red">$0 back</td><td class="red">$0 back</td><td class="red">$0 back</td></tr>
         <tr><td>50% cashback model</td><td>$8,750</td><td>$12,500</td><td>$18,750</td></tr>
-        <tr><td>Flat $4,999 fee (Home Cashbacks)</td><td class="green">$12,500</td><td class="green">$20,000</td><td class="green">$32,500</td></tr>
+        <tr><td>Flat {{BUYER_FEE}} fee (Home Cashbacks)</td><td class="green">{{CBR:700000}}</td><td class="green">{{CBR:1000000}}</td><td class="green">{{CBR:1500000}}</td></tr>
       </tbody>
     </table>
-    <p>At $700K and above — which covers most Toronto and GTA purchases — the flat-fee model returns $3,750 to $13,750 more than a 50% cashback model.</p>
+    <p>At $700K and above — which covers most Toronto and GTA purchases — the flat-fee model returns {{CBD:700000:50}} to {{CBD:1500000:50}} more than a 50% cashback model.</p>
   </div>
 
   <!-- CTA -->
@@ -249,7 +249,7 @@
           <span class="faq-q-text">What if the seller offers less than 2.5% commission?</span>
           <span class="faq-icon">+</span>
         </div>
-        <div class="faq-a">Our fee is capped at whatever the seller offered. We disclose the commission before you make any offer. In practice, most GTA listings offer 2 to 2.5% — well above our flat fee on any home above $200,000.</div>
+        <div class="faq-a">Our fee is capped at whatever the seller offered. We disclose the commission before you make any offer. In practice, most GTA listings offer 2 to 2.5% — well above our flat fee on any home above {{X:0}}.</div>
       </div>
       <div class="faq-item">
         <div class="faq-q">
@@ -315,7 +315,7 @@ document.querySelectorAll('.faq-q').forEach(function(q){
     var price = parseInt(raw,10) || 1000000;
     var pct   = parseFloat(pctEl.value) || 2.5;
     var commission = price * (pct / 100);
-    var cashback   = Math.max(0, commission - 4999);
+    var cashback   = Math.max(0, commission - {{BUYER_FEE_NUM}});
     resultEl.textContent = fmt(cashback);
     commEl.textContent   = fmt(commission);
     youEl.textContent    = fmt(cashback);
