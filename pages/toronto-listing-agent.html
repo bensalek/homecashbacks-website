@@ -3,10 +3,10 @@
 <head>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <title>Flat Fee Listing Agent Toronto | Home Cashbacks</title>
-<meta name="description" content="Flat $4,999 listing fee in Toronto. Full service: photography, MLS listing, negotiations, and closing. No percentage commission."/>
+<meta name="description" content="Flat {{SELLER_FEE}} listing fee in Toronto. Full service: photography, MLS listing, negotiations, and closing. No percentage commission."/>
 <meta name="author" content="Laleh Mousavi, HomeCashbacks"/>
 <meta property="og:title" content="Toronto Listing Agent | Flat Fee Listing Agent Toronto | Home Cashbacks"/>
-<meta property="og:description" content="Full-service listing in Toronto and the GTA. Flat $4,999. Nothing upfront. Photography, floor plan, agent outreach, offer strategy and closing support."/>
+<meta property="og:description" content="Full-service listing in Toronto and the GTA. Flat {{SELLER_FEE}}. Nothing upfront. Photography, floor plan, agent outreach, offer strategy and closing support."/>
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="https://homecashbacks.ca/toronto-listing-agent.html"/>
 <meta property="og:image" content="https://homecashbacks.ca/og-image.png"/>
@@ -18,8 +18,8 @@
 {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "Toronto Listing Agent - Flat $4,999 Full-Service",
-  "description": "HomeCashbacks is a full-service Toronto listing agent charging a flat $4,999 fee. Photography, floor plan, negotiation, and closing support included.",
+  "headline": "Toronto Listing Agent - Flat {{SELLER_FEE}} Full-Service",
+  "description": "HomeCashbacks is a full-service Toronto listing agent charging a flat {{SELLER_FEE}} fee. Photography, floor plan, negotiation, and closing support included.",
   "author": {"@type": "Person", "name": "Laleh Mousavi", "jobTitle": "Realtor", "url": "https://homecashbacks.ca"},
   "publisher": {"@type": "Organization", "name": "HomeCashbacks", "url": "https://homecashbacks.ca"},
   "url": "https://homecashbacks.ca/toronto-listing-agent.html",
@@ -42,7 +42,7 @@
       "name": "HomeCashbacks - Toronto Listing Agent",
       "url": "https://homecashbacks.ca/toronto-listing-agent.html",
       "telephone": "+14374437556",
-      "priceRange": "$4,999 flat listing fee",
+      "priceRange": "{{SELLER_FEE}} flat listing fee",
       "areaServed": [
         {"@type":"City","name":"Toronto"},{"@type":"City","name":"Mississauga"},
         {"@type":"City","name":"Etobicoke"},{"@type":"City","name":"North York"},
@@ -54,9 +54,9 @@
     {
       "@type": "FAQPage",
       "mainEntity": [
-        {"@type":"Question","name":"Is $4,999 the total commission I pay as a seller?","acceptedAnswer":{"@type":"Answer","text":"No. In Ontario, sellers also offer a buyer agent commission (typically 2 to 2.5% of the sale price) to attract buyer agents. That is separate from our $4,999 and goes to the buyer agent at closing. Our fee covers the listing side only."}},
+        {"@type":"Question","name":"Is {{SELLER_FEE}} the total commission I pay as a seller?","acceptedAnswer":{"@type":"Answer","text":"No. In Ontario, sellers also offer a buyer agent commission (typically 2 to 2.5% of the sale price) to attract buyer agents. That is separate from our {{SELLER_FEE}} and goes to the buyer agent at closing. Our fee covers the listing side only."}},
         {"@type":"Question","name":"Will I get less for my home if I pay less commission?","acceptedAnswer":{"@type":"Answer","text":"No. What gets you the best price is preparation, timing, and negotiation, not the size of the listing fee. We deliver the same marketing and negotiation quality. The only difference is what you pay for it."}},
-        {"@type":"Question","name":"What if my home does not sell?","acceptedAnswer":{"@type":"Answer","text":"You owe us nothing. Our $4,999 fee is due at closing only. No upfront fees, no cancellation fees."}}
+        {"@type":"Question","name":"What if my home does not sell?","acceptedAnswer":{"@type":"Answer","text":"You owe us nothing. Our {{SELLER_FEE}} fee is due at closing only. No upfront fees, no cancellation fees."}}
       ]
     },
     {
@@ -88,7 +88,7 @@
   <div class="s-hero-overlay"></div>
   <div class="s-hero-text">
     <div class="s-hero-eye">Toronto Listing Agent</div>
-    <h1>Full Service.<br><em>Flat $4,999.</em></h1>
+    <h1>Full Service.<br><em>Flat {{SELLER_FEE}}.</em></h1>
     <p class="s-hero-sub">Full-service listing in Toronto and the GTA. Nothing upfront.</p>
     <button class="s-btn" onclick="openModal()">Get My Home Value</button>
     <p class="s-hero-note">Fee due at closing only. No commitment to list.</p>
@@ -145,7 +145,7 @@
         </div>
         <div class="sl-compare-row">
           <span class="sl-compare-label">HomeCashbacks listing fee</span>
-          <span class="sl-compare-val gold">$4,999</span>
+          <span class="sl-compare-val gold">{{SELLER_FEE}}</span>
         </div>
       </div>
       <div class="sl-calc-note">Buyer agent commission (typically 2 to 2.5%) is separate and still offered by you as the seller. This is standard in Ontario.</div>
@@ -228,7 +228,7 @@
           <tr class="comp-row-price">
             <td class="comp-feature comp-feature-price">What you pay</td>
             <td class="comp-cell comp-price-bad">1 to 2.5% listing fee</td>
-            <td class="comp-cell comp-cell-us comp-price-us">$4,999 flat</td>
+            <td class="comp-cell comp-cell-us comp-price-us">{{SELLER_FEE}} flat</td>
           </tr>
         </tbody>
       </table>
@@ -326,10 +326,10 @@
 
       <div class="faq-item">
         <div class="faq-q" onclick="this.closest('.faq-item').classList.toggle('open')">
-          <span class="faq-q-text">Is $4,999 the total commission I pay?</span>
+          <span class="faq-q-text">Is {{SELLER_FEE}} the total commission I pay?</span>
           <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
         </div>
-        <div class="faq-a">No. In Ontario, sellers also offer a buyer agent commission (typically 2 to 2.5% of the sale price) to attract buyer agents. That is separate from our $4,999 and goes to the buyer agent at closing. Our fee covers the listing side only - marketing, representation, negotiation, and closing support.</div>
+        <div class="faq-a">No. In Ontario, sellers also offer a buyer agent commission (typically 2 to 2.5% of the sale price) to attract buyer agents. That is separate from our {{SELLER_FEE}} and goes to the buyer agent at closing. Our fee covers the listing side only - marketing, representation, negotiation, and closing support.</div>
       </div>
 
       <div class="faq-item">
@@ -361,7 +361,7 @@
           <span class="faq-q-text">What if my home does not sell?</span>
           <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
         </div>
-        <div class="faq-a">You owe us nothing. Our $4,999 fee is due at closing only. No upfront fees, no cancellation fees, no obligation to relist with us.</div>
+        <div class="faq-a">You owe us nothing. Our {{SELLER_FEE}} fee is due at closing only. No upfront fees, no cancellation fees, no obligation to relist with us.</div>
       </div>
 
     </div>
@@ -374,7 +374,7 @@
   <h2>Every home is different.<br>Let's talk about yours.</h2>
   <p class="s-cta-sub">Walk-through, market review, and strategy - before you commit to anything.</p>
   <button class="s-btn" onclick="openModal()">Get My Home Value</button>
-  <p class="s-cta-note">No upfront fees. No commitment to list. $4,999 due at closing only.</p>
+  <p class="s-cta-note">No upfront fees. No commitment to list. {{SELLER_FEE}} due at closing only.</p>
 </section>
 
 <script>
@@ -390,7 +390,7 @@ function updateCalc(){
   var price = parseInt(slider.value);
   var pct = parseFloat(document.getElementById('sl-comm-pct').value) || 2.5;
   var tradFee = price * (pct/100);
-  var saving = tradFee - 4999;
+  var saving = tradFee - {{SELLER_FEE_NUM}};
   document.getElementById('sl-price-text').value = Math.round(price).toLocaleString('en-CA');
   document.getElementById('sl-saving-amt').textContent = fmtFull(Math.max(0,saving));
   document.getElementById('sl-trad-fee').textContent = fmtFull(tradFee);

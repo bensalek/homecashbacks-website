@@ -54,7 +54,7 @@
     {
       "@type": "Question",
       "name": "Does cashback stack with rental property rebates?",
-      "acceptedAnswer": {"@type": "Answer", "text": "Yes. Cashback relates to the buyer agent commission, which is entirely separate from any GST/HST rebate program. We take a flat $4,999 and return the rest of the commission to you after closing, on every property, regardless of what rebates you also qualify for."}
+      "acceptedAnswer": {"@type": "Answer", "text": "Yes. Cashback relates to the buyer agent commission, which is entirely separate from any GST/HST rebate program. We take a flat {{BUYER_FEE}} and return the rest of the commission to you after closing, on every property, regardless of what rebates you also qualify for."}
     }
   ]
 }
@@ -157,7 +157,7 @@
   <div class="guide-section">
     <div class="guide-eyebrow-sm">The short answer</div>
     <h2 class="guide-h2">Cashback is a numbers improvement, not a lifestyle perk</h2>
-    <p class="guide-p">For an investor, cashback isn't a nice-to-have, it's a direct reduction in your effective acquisition cost, which improves your cap rate and cash-on-cash return the moment you close. The mechanics don't change from a resale purchase: the seller sets aside a buyer agent commission in every deal, we take a flat $4,999, and you receive the rest after closing.</p>
+    <p class="guide-p">For an investor, cashback isn't a nice-to-have, it's a direct reduction in your effective acquisition cost, which improves your cap rate and cash-on-cash return the moment you close. The mechanics don't change from a resale purchase: the seller sets aside a buyer agent commission in every deal, we take a flat {{BUYER_FEE}}, and you receive the rest after closing.</p>
     <div class="example-box">
       <div class="example-box-label">$800,000 investment property &middot; 2.5% buyer agent commission</div>
       <div class="example-row">
@@ -166,11 +166,11 @@
       </div>
       <div class="example-row">
         <span class="example-row-label">HomeCashbacks flat fee</span>
-        <span class="example-row-val">&minus;$4,999</span>
+        <span class="example-row-val">&minus;{{BUYER_FEE}}</span>
       </div>
       <div class="example-row">
         <span class="example-row-label">Your cashback, reduces effective acquisition cost</span>
-        <span class="example-row-val highlight">$15,001</span>
+        <span class="example-row-val highlight">{{CB:800000}}</span>
       </div>
     </div>
     <p class="guide-p">On a portfolio, this compounds. Every property you acquire through us returns cashback, not just your first one.</p>
@@ -319,7 +319,7 @@ var INVESTOR_FAQ = [
   {q:'Is there any HST rebate available to investors right now?', a:'Yes. The New Residential Rental Property Rebate (NRRPR) applies to new construction purchased to rent out long-term, on a lease of at least one year. Ontario\'s current temporary enhancement, for agreements signed between April 1, 2026 and March 31, 2027, extends this to a combined maximum of $130,000, the same cap as the owner-occupied version, and it is not limited to first-time buyers.'},
   {q:'Can I buy a condo in Toronto and run it as an Airbnb?', a:'Generally, no. Toronto\'s short-term rental bylaw restricts stays under 28 days to the host\'s principal residence only. A pure investment property, where you don\'t actually live, cannot be legally operated as a short-term rental in the city, regardless of what the condo corporation allows. This is a common and costly assumption new investors make.'},
   {q:'Do I have to pay the HST upfront on a rental property purchase?', a:'Often, yes. Unlike an owner-occupied purchase where the builder can sometimes credit the rebate directly, investment property purchasers commonly need to pay the full HST at closing and claim the New Residential Rental Property Rebate from CRA afterward, once they have a signed long-term lease in place. This creates a real, temporary cash flow requirement worth planning for.'},
-  {q:'Does cashback stack with rental property rebates?', a:'Yes. Cashback relates to the buyer agent commission, which is entirely separate from any GST/HST rebate program. We take a flat $4,999 and return the rest of the commission to you after closing, on every property, regardless of what rebates you also qualify for.'},
+  {q:'Does cashback stack with rental property rebates?', a:'Yes. Cashback relates to the buyer agent commission, which is entirely separate from any GST/HST rebate program. We take a flat {{BUYER_FEE}} and return the rest of the commission to you after closing, on every property, regardless of what rebates you also qualify for.'},
 ];
 
 var faqEl = document.getElementById('investor-faq-list');

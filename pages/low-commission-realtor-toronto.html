@@ -5,7 +5,7 @@
 <meta name="description" content="A low commission realtor in Toronto charges a flat fee instead of the standard 2.5% to 5%. See how much you'd save buying or selling, and what to check first."/>
 <meta name="author" content="Laleh Mousavi, HomeCashbacks"/>
 <meta property="og:title" content="Low Commission Realtor Toronto | HomeCashbacks"/>
-<meta property="og:description" content="Flat $4,999 whether you're buying or selling. See the real math against a standard 2.5% commission, and what to check before you sign."/>
+<meta property="og:description" content="Flat {{SELLER_FEE}} to sell, {{BUYER_FEE}} to buy. See the real math against a standard 2.5% commission, and what to check before you sign."/>
 <meta property="og:type" content="article"/>
 <meta property="og:url" content="https://homecashbacks.ca/low-commission-realtor-toronto.html"/>
 <meta property="og:image" content="https://homecashbacks.ca/og-image.png"/>
@@ -34,7 +34,7 @@
     {
       "@type": "Question",
       "name": "What is a low commission realtor in Toronto?",
-      "acceptedAnswer": {"@type": "Answer", "text": "A low commission realtor charges a flat fee or a reduced percentage instead of the standard 2.5% to 5% commission on a home sale. In Toronto, standard commission on a $1M home runs $25,000 to $50,000. A low commission realtor charging a flat $4,999 fee saves a seller tens of thousands of dollars, or, on the buyer side, returns most of the buyer agent commission back to the buyer as cashback."}
+      "acceptedAnswer": {"@type": "Answer", "text": "A low commission realtor charges a flat fee or a reduced percentage instead of the standard 2.5% to 5% commission on a home sale. In Toronto, standard commission on a $1M home runs $25,000 to $50,000. A low commission realtor charging a flat {{SELLER_FEE}} fee saves a seller tens of thousands of dollars, or, on the buyer side, returns most of the buyer agent commission back to the buyer as cashback."}
     },
     {
       "@type": "Question",
@@ -44,7 +44,7 @@
     {
       "@type": "Question",
       "name": "How much can I save with a low commission realtor when selling in Toronto?",
-      "acceptedAnswer": {"@type": "Answer", "text": "On a $1M home, a standard 2.5% listing commission is $25,000. A flat $4,999 fee saves approximately $20,000. On a $1.5M home, standard commission is $37,500, versus the same flat $4,999 fee, a savings of over $32,000."}
+      "acceptedAnswer": {"@type": "Answer", "text": "On a $1M home, a standard 2.5% listing commission is $25,000. A flat {{SELLER_FEE}} fee saves approximately $20,000. On a $1.5M home, standard commission is $37,500, versus the same flat {{SELLER_FEE}} fee, a savings of over $32,000."}
     },
     {
       "@type": "Question",
@@ -95,7 +95,7 @@
   <div class="guide-section">
     <div class="guide-eyebrow-sm">The short answer</div>
     <h2 class="guide-h2">What does "low commission realtor" actually mean?</h2>
-    <p class="guide-p">A low commission realtor charges a flat fee or reduced percentage instead of the standard commission structure. In Toronto, that standard is typically 2.5% per side, meaning 5% total on a home sale. A low commission model, like a flat $4,999 fee, saves a seller real money on the way out, and lets a buyer keep most of the commission the seller already set aside, as cashback.</p>
+    <p class="guide-p">A low commission realtor charges a flat fee or reduced percentage instead of the standard commission structure. In Toronto, that standard is typically 2.5% per side, meaning 5% total on a home sale. A low commission model, like a flat fee ({{SELLER_FEE}} to sell, {{BUYER_FEE}} to buy), saves a seller real money on the way out, and lets a buyer keep most of the commission the seller already set aside, as cashback.</p>
     <div class="quick-box">
       <div class="quick-box-title">Two ways "low commission" applies</div>
       <div class="quick-grid">
@@ -130,31 +130,31 @@
       <tr>
         <th>Home price</th>
         <th>Standard 2.5% listing commission</th>
-        <th>Flat $4,999 fee</th>
+        <th>Flat {{SELLER_FEE}} fee</th>
         <th>You save</th>
       </tr>
       <tr>
         <td>$800,000</td>
         <td>$20,000</td>
-        <td class="good">$4,999</td>
+        <td class="good">{{SELLER_FEE}}</td>
         <td class="good">$15,001</td>
       </tr>
       <tr>
         <td>$1,000,000</td>
         <td>$25,000</td>
-        <td class="good">$4,999</td>
+        <td class="good">{{SELLER_FEE}}</td>
         <td class="good">$20,001</td>
       </tr>
       <tr>
         <td>$1,500,000</td>
         <td>$37,500</td>
-        <td class="good">$4,999</td>
+        <td class="good">{{SELLER_FEE}}</td>
         <td class="good">$32,501</td>
       </tr>
       <tr>
         <td>$2,000,000</td>
         <td>$50,000</td>
-        <td class="good">$4,999</td>
+        <td class="good">{{SELLER_FEE}}</td>
         <td class="good">$45,001</td>
       </tr>
     </table>
@@ -175,11 +175,11 @@
       </div>
       <div class="example-row">
         <span class="example-row-label">HomeCashbacks flat fee</span>
-        <span class="example-row-val">- $4,999</span>
+        <span class="example-row-val">- {{BUYER_FEE}}</span>
       </div>
       <div class="example-row">
         <span class="example-row-label">Your cashback after closing</span>
-        <span class="example-row-val highlight">$20,001</span>
+        <span class="example-row-val highlight">{{CB:1000000}}</span>
       </div>
     </div>
   </div>
@@ -278,7 +278,7 @@
 <section class="guide-cta">
   <div class="guide-cta-inner">
     <div class="guide-cta-eyebrow">HomeCashbacks &middot; Toronto</div>
-    <h2 class="guide-cta-title">Flat $4,999. Full service. Whether you're buying or selling.</h2>
+    <h2 class="guide-cta-title">{{SELLER_FEE}} to sell. {{BUYER_FEE}} to buy. Full service.</h2>
     <p class="guide-cta-sub">No hidden add-ons, no rotating agents, nothing cut to justify the lower fee. Laleh represents you from first showing (or first consultation) to closing.</p>
     <button class="guide-cta-btn" onclick="openModal()">Book a Free Consultation</button>
     <p class="guide-cta-note">No exclusive agreement &middot; Licensed with RECO &middot; Serving Toronto and GTA</p>
@@ -287,9 +287,9 @@
 
 <script>
 var LOWCOMM_FAQ = [
-  {q:'What is a low commission realtor in Toronto?', a:'A low commission realtor charges a flat fee or a reduced percentage instead of the standard 2.5% to 5% commission on a home sale. In Toronto, standard commission on a $1M home runs $25,000 to $50,000. A low commission realtor charging a flat $4,999 fee saves a seller tens of thousands of dollars, or, on the buyer side, returns most of the buyer agent commission back to the buyer as cashback.'},
+  {q:'What is a low commission realtor in Toronto?', a:'A low commission realtor charges a flat fee or a reduced percentage instead of the standard 2.5% to 5% commission on a home sale. In Toronto, standard commission on a $1M home runs $25,000 to $50,000. A low commission realtor charging a flat {{SELLER_FEE}} fee saves a seller tens of thousands of dollars, or, on the buyer side, returns most of the buyer agent commission back to the buyer as cashback.'},
   {q:'Is a low commission realtor the same as a discount brokerage?', a:'Not necessarily. Some discount brokerages cut commission by also cutting service, such as no professional photography, no MLS listing, or no agent-attended showings. A genuine low commission model, like a flat fee, should include full service. Always confirm exactly what is included before assuming lower cost means lower service.'},
-  {q:'How much can I save with a low commission realtor when selling in Toronto?', a:'On a $1M home, a standard 2.5% listing commission is $25,000. A flat $4,999 fee saves approximately $20,000. On a $1.5M home, standard commission is $37,500, versus the same flat $4,999 fee, a savings of over $32,000.'},
+  {q:'How much can I save with a low commission realtor when selling in Toronto?', a:'On a $1M home, a standard 2.5% listing commission is $25,000. A flat {{SELLER_FEE}} fee saves approximately $20,000. On a $1.5M home, standard commission is $37,500, versus the same flat {{SELLER_FEE}} fee, a savings of over $32,000.'},
   {q:'How does a low commission realtor work for buyers?', a:'For buyers, the mechanism is cashback rather than a reduced fee, since the seller sets aside the buyer agent commission in every deal regardless of which agent you use. A cashback realtor charges a flat fee for that work and returns the rest of the commission to the buyer after closing, which functions as a low, or even negative, net cost to the buyer.'},
   {q:'Do low commission realtors provide full service in Toronto?', a:'It depends entirely on the specific realtor or brokerage. Some do, some cut service to justify the lower fee. Ask explicitly whether MLS listing, professional photography, showings, offer negotiation, and closing coordination are all included before you sign anything.'},
   {q:'Why don\'t more realtors offer low commission in Toronto?', a:'Because the standard percentage model pays significantly more per deal, and most agents have little financial incentive to change it. A flat low commission fee only works at scale, with a leaner operating model, which is a business decision most traditional brokerages have not made.'},

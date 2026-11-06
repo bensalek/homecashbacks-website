@@ -46,7 +46,7 @@
     {
       "@type": "Question",
       "name": "How much cashback can a buyer get in Ontario?",
-      "acceptedAnswer": {"@type": "Answer", "text": "On a $1M home at 2.5% buyer agent commission ($25,000), a flat-fee cashback realtor charging $4,999 returns $20,000. A 50% cashback model returns $12,500."}
+      "acceptedAnswer": {"@type": "Answer", "text": "On a $1M home at 2.5% buyer agent commission ($25,000), a flat-fee cashback realtor charging {{BUYER_FEE}} returns {{CBR:1000000}}. A 50% cashback model returns $12,500."}
     },
     {
       "@type": "Question",
@@ -132,7 +132,7 @@
       <tbody>
         <tr><td>Traditional agent</td><td class="red">$0 back</td><td class="red">$0 back</td><td class="red">$0 back</td></tr>
         <tr><td>50% cashback model</td><td>$8,750 back</td><td>$12,500 back</td><td>$18,750 back</td></tr>
-        <tr><td>Flat $4,999 fee model</td><td class="green">$12,500 back</td><td class="green">$20,000 back</td><td class="green">$32,500 back</td></tr>
+        <tr><td>Flat {{BUYER_FEE}} fee model</td><td class="green">{{CBR:700000}} back</td><td class="green">{{CBR:1000000}} back</td><td class="green">{{CBR:1500000}} back</td></tr>
       </tbody>
     </table>
     <p>For GTA buyers above $700K, the flat fee model returns significantly more. The higher the price, the bigger the gap.</p>
@@ -183,7 +183,7 @@
       </div>
       <div class="calc-result">
         <div class="calc-result-label">Your estimated cashback</div>
-        <div class="calc-result-amt" id="hcw-calc-cashback">$17,500</div>
+        <div class="calc-result-amt" id="hcw-calc-cashback">{{CB:900000}}</div>
       </div>
       <div class="calc-note">Estimates only. Amount depends on the seller's commission offer. For land transfer tax and closing cost estimates too, see our <a href="/calculators.html" style="color:var(--cta);text-decoration:none;font-weight:500">full calculator suite →</a></div>
     </div>
@@ -286,7 +286,7 @@
     var price = parseInt(raw) || 900000;
     var pct = parseFloat(document.getElementById('hcw-commission-pct').value) || 2.5;
     var commission = price * (pct/100);
-    var cashback = Math.max(0, commission - 4999);
+    var cashback = Math.max(0, commission - {{BUYER_FEE_NUM}});
     document.getElementById('hcw-calc-cashback').textContent = fmt(cashback);
   }
   var slider = document.getElementById('hcw-price-slider');

@@ -11,7 +11,8 @@ Usage (from the repo root):
 
 What it changes (and nothing else):
   data/cities.json         marketDate, the month and average/detached prices in marketText, stats, cashback
-                           (cashback = average price x 2.5% - $4,999, rounded half up)
+                           (cashback is written as a {{CB:average price}} token; build.js turns it into
+                           average price x 2.5% - the buyer fee in data/pricing.json)
   data/neighbourhoods.json marketDate and the TRREB district figures (average, sales, house types with 10+ sales)
 
 What it does NOT change (review by hand, see CLAUDE.md):
@@ -112,7 +113,7 @@ def main():
         t, n = clause_re.subn(clause, t)
         assert n == 1, c['slug'] + ' GTA clause'
         c['marketText'], c['marketDate'] = t, label
-        c['cashback'] = '${:,}'.format(half_up(avg * 0.025 - 4999))
+        c['cashback'] = '{{CB:%d}}' % avg   # token: build.js works out the cashback from data/pricing.json
         for s in c['stats']:
             l = s['label']
             if l == 'Average home price' or l.startswith('Avg. price,'):

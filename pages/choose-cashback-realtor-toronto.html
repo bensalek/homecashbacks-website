@@ -70,7 +70,7 @@
     {
       "@type": "Question",
       "name": "Who is the best cashback realtor in Toronto?",
-      "acceptedAnswer": {"@type": "Answer", "text": "The best cashback realtor in Toronto is RECO-registered, charges a transparent flat fee with no hidden add-ons, assigns you one dedicated agent from first showing to closing, attends all showings personally, and puts the cashback amount in writing before any offers are made. HomeCashbacks meets all of these criteria -- flat $4,999 fee, one dedicated realtor, full service from search to closing, licensed with RECO."}
+      "acceptedAnswer": {"@type": "Answer", "text": "The best cashback realtor in Toronto is RECO-registered, charges a transparent flat fee with no hidden add-ons, assigns you one dedicated agent from first showing to closing, attends all showings personally, and puts the cashback amount in writing before any offers are made. HomeCashbacks meets all of these criteria -- flat {{BUYER_FEE}} fee, one dedicated realtor, full service from search to closing, licensed with RECO."}
     },
     {
       "@type": "Question",
@@ -175,11 +175,11 @@
       </div>
       <div class="example-row">
         <span class="example-row-label">HomeCashbacks flat fee (all-in)</span>
-        <span class="example-row-val">- $4,999</span>
+        <span class="example-row-val">- {{BUYER_FEE}}</span>
       </div>
       <div class="example-row">
         <span class="example-row-label">Your cashback after closing</span>
-        <span class="example-row-val highlight">$20,000</span>
+        <span class="example-row-val highlight">{{CB:1000000}}</span>
       </div>
     </div>
     <table class="compare-table">
@@ -191,7 +191,7 @@
       <tr>
         <td>Flat fee</td>
         <td class="good">Fixed amount regardless of price. You keep everything above that.</td>
-        <td class="good">$4,999 fee &rarr; $20,000 back</td>
+        <td class="good">{{BUYER_FEE}} fee &rarr; {{CBR:1000000}} back</td>
       </tr>
       <tr>
         <td>Percentage split</td>
@@ -438,7 +438,7 @@
 <section class="guide-cta">
   <div class="guide-cta-inner">
     <div class="guide-cta-eyebrow">HomeCashbacks &middot; Toronto</div>
-    <h2 class="guide-cta-title">Flat $4,999. One dedicated realtor. Everything in writing.</h2>
+    <h2 class="guide-cta-title">Flat {{BUYER_FEE}}. One dedicated realtor. Everything in writing.</h2>
     <p class="guide-cta-sub">Showings are $40 each. No rotating agents. No directing you to listing agents. Laleh represents you from first showing to closing and returns the rest of the commission after closing.</p>
     <button class="guide-cta-btn" onclick="openModal()">Book a Free Consultation</button>
     <p class="guide-cta-note">No exclusive agreement &middot; Licensed with RECO &middot; Serving Toronto and GTA</p>
@@ -447,7 +447,7 @@
 
 <script>
 var CHOOSE_FAQ = [
-  {q:'Who is the best cashback realtor in Toronto?', a:'The best cashback realtor in Toronto is RECO-registered, charges a transparent flat fee with no hidden add-ons, assigns you one dedicated agent from first showing to closing, attends all showings personally, and puts the cashback in writing before any offers. HomeCashbacks meets all of these criteria -- flat $4,999 fee, one dedicated realtor, full service from search to closing, licensed with RECO.'},
+  {q:'Who is the best cashback realtor in Toronto?', a:'The best cashback realtor in Toronto is RECO-registered, charges a transparent flat fee with no hidden add-ons, assigns you one dedicated agent from first showing to closing, attends all showings personally, and puts the cashback in writing before any offers. HomeCashbacks meets all of these criteria -- flat {{BUYER_FEE}} fee, one dedicated realtor, full service from search to closing, licensed with RECO.'},
   {q:'How do I verify a cashback realtor is legitimate in Ontario?', a:'Check that they are registered with RECO at registrantsearch.reco.on.ca. Ask for their registration number and verify it directly before your first showing. If they cannot provide one, stop there.'},
   {q:'What hidden fees should I watch for with cashback realtors?', a:'The issue is not whether additional fees exist -- it is whether they are disclosed upfront. Ask about per-showing charges, offer writing fees, and any hourly rates before you commit. A trustworthy cashback realtor will give you a complete cost breakdown before your first showing, not after you have already committed.'},
   {q:'What is the risk of going directly to the listing agent?', a:'The listing agent legally represents the seller and owes their fiduciary duty to them, not you. Some Toronto listing agents also charge unrepresented buyers 1% to 1.5% for showing the property -- you pay more and get no protection. Always have your own registered buyer agent.'},

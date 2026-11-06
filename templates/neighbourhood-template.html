@@ -229,7 +229,7 @@ body{font-family:'Rubik',sans-serif;background:var(--bg);color:var(--ink);line-h
       <div class="nbr-calc-result-label">Your estimated cashback</div>
       <div class="nbr-calc-result-val" id="nbr-result">—</div>
     </div>
-    <div class="nbr-calc-note">Based on flat $4,999 fee. Actual cashback depends on the commission offered in the MLS listing.</div>
+    <div class="nbr-calc-note">Based on flat {{BUYER_FEE}} fee. Actual cashback depends on the commission offered in the MLS listing.</div>
   </div>
 
   <div class="nbr-section" id="laleh">
@@ -243,7 +243,7 @@ body{font-family:'Rubik',sans-serif;background:var(--bg);color:var(--ink);line-h
   <div class="nbr-cta">
     <div class="nbr-cta-text">
       <strong>Buying in {{NAME}}?</strong>
-      Flat $4,999 fee. The rest comes back to you. Showings are $40 each.
+      Flat {{BUYER_FEE}} fee. The rest comes back to you. Showings are $40 each.
     </div>
     <button class="nbr-cta-btn" onclick="openModal()">Book a Free Consultation →</button>
   </div>
@@ -284,7 +284,7 @@ document.querySelectorAll('.faq-q').forEach(function(q){
   function calc(){
     var price=parseFloat((priceEl.value||'').replace(/[^0-9.]/g,''))||0;
     var pct=parseFloat((pctEl.value||'').replace(/[^0-9.]/g,''))||2.5;
-    var cashback=Math.max(0,price*(pct/100)-4999);
+    var cashback=Math.max(0,price*(pct/100)-{{BUYER_FEE_NUM}});
     result.textContent=cashback>0?'$'+Math.round(cashback).toLocaleString('en-CA'):'$0';
   }
   function fmt(){

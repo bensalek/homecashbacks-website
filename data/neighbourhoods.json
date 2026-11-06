@@ -114,7 +114,7 @@
           "text": "First-time buyers on a tight budget. Entry-level detached is rare under $2M. Condos are more accessible but competition is real and the neighbourhood commands a premium."
         }
       ],
-      "laleh": "\"The Annex rewards buyers who are patient. It does not have a lot of turnover, which means when the right property comes up, you need to be ready to move. The buyers who do best here have their financing locked, understand the market, and are not trying to lowball a neighbourhood that hasn't needed to discount itself in decades. The cashback on a typical Annex purchase is meaningful — on a $1.2M semi, you're looking at over $25,000 back in your pocket after closing.\"",
+      "laleh": "\"The Annex rewards buyers who are patient. It does not have a lot of turnover, which means when the right property comes up, you need to be ready to move. The buyers who do best here have their financing locked, understand the market, and are not trying to lowball a neighbourhood that hasn't needed to discount itself in decades. The cashback on a typical Annex purchase is meaningful — on a $1.2M semi, you're looking at over {{CBF:1200000}} back in your pocket after closing.\"",
       "faqs": [
         {
           "q": "Is The Annex good for families?",
@@ -130,7 +130,7 @@
         },
         {
           "q": "How much cashback would I get on a typical Annex purchase?",
-          "a": "On a $1.2M semi at 2.5% buyer agent commission, you'd receive $25,000 back after closing with Home Cashbacks. On a $2M detached at 2.5%, that's $45,000 back. Use the calculator above to run your own numbers."
+          "a": "On a $1.2M semi at 2.5% buyer agent commission, you'd receive {{CBR:1200000}} back after closing with Home Cashbacks. On a $2M detached at 2.5%, that's {{CBR:2000000}} back. Use the calculator above to run your own numbers."
         }
       ],
       "related": [
@@ -293,7 +293,7 @@
         },
         {
           "q": "How much cashback would I get in St. Lawrence Market?",
-          "a": "On a $750,000 condo at 2.5% buyer agent commission, you would receive approximately $13,750 back after closing with Home Cashbacks. On a $1M loft at 2.5%, that is $20,000 back. Use the calculator above for your specific price."
+          "a": "On a $750,000 condo at 2.5% buyer agent commission, you would receive approximately {{CB:750000}} back after closing with Home Cashbacks. On a $1M loft at 2.5%, that is {{CBR:1000000}} back. Use the calculator above for your specific price."
         }
       ],
       "related": [
@@ -435,7 +435,7 @@
           "text": "Possible at the lower end — some semis and condos are accessible — but competition is real and budget stretching is required. The Junction may offer more room at lower price points."
         }
       ],
-      "laleh": "\"Leslieville buyers tend to fall in love with the neighbourhood before they fall in love with any specific house. The Queen Street strip, the community feel, the fact that people actually know their neighbours — that is what sells it. The freehold market here is genuinely consistent. On a $1.1M semi at 2.5% commission, you are looking at over $22,000 back after closing. That is real money toward the renovations most of these homes need.\"",
+      "laleh": "\"Leslieville buyers tend to fall in love with the neighbourhood before they fall in love with any specific house. The Queen Street strip, the community feel, the fact that people actually know their neighbours — that is what sells it. The freehold market here is genuinely consistent. On a $1.1M semi at 2.5% commission, you are looking at over {{CBF:1100000}} back after closing. That is real money toward the renovations most of these homes need.\"",
       "faqs": [
         {
           "q": "Is Leslieville good for families?",
@@ -451,7 +451,7 @@
         },
         {
           "q": "How much cashback would I get in Leslieville?",
-          "a": "On a $1.1M semi at 2.5% buyer agent commission, you would receive approximately $22,501 back after closing with Home Cashbacks. On a $1.5M detached at 2.5%, that is $32,501 back."
+          "a": "On a $1.1M semi at 2.5% buyer agent commission, you would receive approximately {{CB:1100000}} back after closing with Home Cashbacks. On a $1.5M detached at 2.5%, that is {{CB:1500000}} back."
         }
       ],
       "related": [
@@ -603,7 +603,7 @@
           "text": "Consistent rental demand from students and young professionals near Keele subway. Semi-detached homes with basement apartments are a popular buy-and-hold play."
         }
       ],
-      "laleh": "\"The Junction is where I send buyers who have been priced out of Roncesvalles or Bloor West Village but still want to own a freehold in the west end. The Humberside Collegiate catchment alone drives consistent demand. And with prices running below comparable east-end streets, buyers here have more negotiating room. On a $1M semi at 2.5% commission, your cashback is over $20,000. That covers a bathroom renovation.\"",
+      "laleh": "\"The Junction is where I send buyers who have been priced out of Roncesvalles or Bloor West Village but still want to own a freehold in the west end. The Humberside Collegiate catchment alone drives consistent demand. And with prices running below comparable east-end streets, buyers here have more negotiating room. On a $1M semi at 2.5% commission, your cashback is over {{CBF:1000000}}. That covers a bathroom renovation.\"",
       "faqs": [
         {
           "q": "Is The Junction good for families?",
@@ -619,7 +619,7 @@
         },
         {
           "q": "How much cashback would I get in The Junction?",
-          "a": "On a $1M semi at 2.5% buyer agent commission, you would receive approximately $20,000 back after closing with Home Cashbacks. On a $1.4M detached at 2.5%, that is $30,000 back."
+          "a": "On a $1M semi at 2.5% buyer agent commission, you would receive approximately {{CB:1000000}} back after closing with Home Cashbacks. On a $1.4M detached at 2.5%, that is {{CBR:1400000}} back."
         }
       ],
       "related": [
@@ -771,7 +771,7 @@
           "text": "Effectively out of reach. The freehold market starts at $1.7M and condos in the area are a different lifestyle proposition. First-time buyers will get more for their money in North York or Leslieville."
         }
       ],
-      "laleh": "\"Leaside is not a neighbourhood you stumble into — buyers come here intentionally, usually because of the schools or because they have rented nearby and know exactly what the community is like. The cashback on a Leaside purchase is the largest I work with day-to-day. On a $2M home at 2.5%, you are getting over $45,000 back. That is a meaningful number that changes what your first years in the house look like.\"",
+      "laleh": "\"Leaside is not a neighbourhood you stumble into — buyers come here intentionally, usually because of the schools or because they have rented nearby and know exactly what the community is like. The cashback on a Leaside purchase is the largest I work with day-to-day. On a $2M home at 2.5%, you are getting over {{CBF:2000000}} back. That is a meaningful number that changes what your first years in the house look like.\"",
       "faqs": [
         {
           "q": "Is Leaside worth the premium over comparable neighbourhoods?",
@@ -787,7 +787,7 @@
         },
         {
           "q": "How much cashback would I get in Leaside?",
-          "a": "On a $1.9M detached at 2.5% buyer agent commission, you would receive approximately $42,501 back after closing with Home Cashbacks. On a $2.5M home, that is $57,501. The cashback at Leaside price points is among the largest in Toronto."
+          "a": "On a $1.9M detached at 2.5% buyer agent commission, you would receive approximately {{CB:1900000}} back after closing with Home Cashbacks. On a $2.5M home, that is {{CB:2500000}}. The cashback at Leaside price points is among the largest in Toronto."
         }
       ],
       "related": [
@@ -924,7 +924,7 @@
           "text": "Possible but uncommon. School options are limited and 2-3 bedroom condos are expensive. Sugar Beach and Harbourfront Centre parks are great for young children, but families needing space typically look further afield."
         }
       ],
-      "laleh": "\"Harbourfront is one of the few parts of Toronto where the 2026 market has created genuine buying opportunities. Condo supply is up, days on market have stretched, and sellers are negotiating. Buyers who have wanted a lake-view unit but have been priced out in previous years should be looking here now. On a $750K condo at 2.5% commission, you get over $13,000 back — which covers a year of condo fees in most buildings.\"",
+      "laleh": "\"Harbourfront is one of the few parts of Toronto where the 2026 market has created genuine buying opportunities. Condo supply is up, days on market have stretched, and sellers are negotiating. Buyers who have wanted a lake-view unit but have been priced out in previous years should be looking here now. On a $750K condo at 2.5% commission, you get over {{CBF:750000}} back — which covers a year of condo fees in most buildings.\"",
       "faqs": [
         {
           "q": "Are Harbourfront condos good investments?",
@@ -940,7 +940,7 @@
         },
         {
           "q": "How much cashback would I get in Harbourfront?",
-          "a": "On a $750,000 condo at 2.5% buyer agent commission, you would receive approximately $13,750 back after closing with Home Cashbacks. On a $1.1M lake-view unit at 2.5%, that is $22,501 back."
+          "a": "On a $750,000 condo at 2.5% buyer agent commission, you would receive approximately {{CB:750000}} back after closing with Home Cashbacks. On a $1.1M lake-view unit at 2.5%, that is {{CB:1100000}} back."
         }
       ],
       "related": [
@@ -1087,7 +1087,7 @@
           "text": "Families seeking freehold with a yard and strong public school access at an entry-level price. Detached homes are rare and expensive; the catchment schools are good but competition is real."
         }
       ],
-      "laleh": "\"Yonge and Eglinton is one of the best-connected midtown locations in Toronto. The Crosstown LRT has changed the calculus here — you can now get across the city east–west without going downtown first, which is a genuine shift. For buyers who want walkability and fast transit without the premium of downtown glass towers, this neighbourhood consistently delivers. On a typical 2-bedroom condo purchase around $800K, you're looking at roughly $15,000 back in cashback after closing.\"",
+      "laleh": "\"Yonge and Eglinton is one of the best-connected midtown locations in Toronto. The Crosstown LRT has changed the calculus here — you can now get across the city east–west without going downtown first, which is a genuine shift. For buyers who want walkability and fast transit without the premium of downtown glass towers, this neighbourhood consistently delivers. On a typical 2-bedroom condo purchase around $800K, you're looking at roughly {{CBR:800000}} back in cashback after closing.\"",
       "faqs": [
         {
           "q": "Is Yonge & Eglinton good for first-time buyers?",
@@ -1103,7 +1103,7 @@
         },
         {
           "q": "How much cashback would I get on a Yonge & Eglinton condo?",
-          "a": "On an $800K condo at 2.5% buyer agent commission, you'd receive $15,000 back after closing with Home Cashbacks. On a $950K unit, that's $18,750 back. Use the calculator above for your specific price."
+          "a": "On an $800K condo at 2.5% buyer agent commission, you'd receive {{CBR:800000}} back after closing with Home Cashbacks. On a $950K unit, that's {{CBR:950000}} back. Use the calculator above for your specific price."
         }
       ],
       "related": [
@@ -1255,7 +1255,7 @@
           "text": "Buyers who need a short subway commute to downtown. St. Clair West station is walkable but the commute is longer than Annex or Midtown options. The neighbourhood rewards buyers who value community over convenience."
         }
       ],
-      "laleh": "\"Corso Italia is genuinely undervalued relative to what it offers. The housing stock is solid, the community is established, and you're not paying a trendiness premium the way you would in Roncesvalles or Little Portugal. For first-time freehold buyers, this is one of the areas I actively recommend exploring. On a typical semi purchase around $1M, you're looking at $20,000 back in cashback after closing — which meaningfully offsets closing costs.\"",
+      "laleh": "\"Corso Italia is genuinely undervalued relative to what it offers. The housing stock is solid, the community is established, and you're not paying a trendiness premium the way you would in Roncesvalles or Little Portugal. For first-time freehold buyers, this is one of the areas I actively recommend exploring. On a typical semi purchase around $1M, you're looking at {{CBR:1000000}} back in cashback after closing — which meaningfully offsets closing costs.\"",
       "faqs": [
         {
           "q": "Is Corso Italia a good area to buy in Toronto?",
@@ -1271,7 +1271,7 @@
         },
         {
           "q": "How much cashback would I get buying in Corso Italia?",
-          "a": "On a $1M semi at 2.5% buyer agent commission, you'd receive $20,000 back after closing with Home Cashbacks. On a $1.2M detached, that's $25,000 back. Use the calculator above for your specific price."
+          "a": "On a $1M semi at 2.5% buyer agent commission, you'd receive {{CBR:1000000}} back after closing with Home Cashbacks. On a $1.2M detached, that's {{CBR:1200000}} back. Use the calculator above for your specific price."
         }
       ],
       "related": [
@@ -1418,7 +1418,7 @@
           "text": "Buyers who need quiet and maximum privacy. Danforth Avenue itself is busy and the neighbourhood has genuine urban density. The residential streets off Danforth are calmer, but this is an active urban neighbourhood at its core."
         }
       ],
-      "laleh": "\"The Danforth is one of the east end's most consistent performers. The subway access is excellent, the main strip has real life to it, and you're getting better value per square foot than comparable west-end streets. Families in particular do very well here — the school catchments are strong and the semis have enough space to grow into. On a typical semi purchase around $1.1M, you're looking at $22,500 back in cashback after closing.\"",
+      "laleh": "\"The Danforth is one of the east end's most consistent performers. The subway access is excellent, the main strip has real life to it, and you're getting better value per square foot than comparable west-end streets. Families in particular do very well here — the school catchments are strong and the semis have enough space to grow into. On a typical semi purchase around $1.1M, you're looking at {{CBR:1100000}} back in cashback after closing.\"",
       "faqs": [
         {
           "q": "Is the Danforth a good place to buy in Toronto?",
@@ -1434,7 +1434,7 @@
         },
         {
           "q": "How much cashback would I get buying on the Danforth?",
-          "a": "On a $1.1M semi at 2.5% buyer agent commission, you'd receive $22,500 back after closing with Home Cashbacks. On a $1.5M detached, that's $32,500 back. Use the calculator above for your exact number."
+          "a": "On a $1.1M semi at 2.5% buyer agent commission, you'd receive {{CBR:1100000}} back after closing with Home Cashbacks. On a $1.5M detached, that's {{CBR:1500000}} back. Use the calculator above for your exact number."
         }
       ],
       "related": [
@@ -1566,7 +1566,7 @@
           "text": "Families needing more than one bedroom of real space, or anyone wanting a yard, a house, or a quiet street. This is a dense, young, condo-first neighbourhood."
         }
       ],
-      "laleh": "\"Liberty Village buyers are almost always trading space for lifestyle and commute. It is one of the only neighbourhoods in Toronto where you can walk to work, the gym, and dinner without a car, and that is exactly what the buyers here are paying for. The resale market has softened over the past year, which actually gives buyers more room to negotiate than they had in 2021 and 2022. On a $650K condo, your cashback is still meaningful, over $11,000 back after closing.\"",
+      "laleh": "\"Liberty Village buyers are almost always trading space for lifestyle and commute. It is one of the only neighbourhoods in Toronto where you can walk to work, the gym, and dinner without a car, and that is exactly what the buyers here are paying for. The resale market has softened over the past year, which actually gives buyers more room to negotiate than they had in 2021 and 2022. On a $650K condo, your cashback is still meaningful, over {{CBF:650000}} back after closing.\"",
       "faqs": [
         {
           "q": "Is Liberty Village good for families?",
@@ -1582,7 +1582,7 @@
         },
         {
           "q": "How much cashback would I get on a typical Liberty Village purchase?",
-          "a": "On a $650K condo at 2.5% buyer agent commission, you'd receive approximately $11,250 back after closing with Home Cashbacks. Use the calculator above to run your own numbers based on the specific unit you're considering."
+          "a": "On a $650K condo at 2.5% buyer agent commission, you'd receive approximately {{CB:650000}} back after closing with Home Cashbacks. Use the calculator above to run your own numbers based on the specific unit you're considering."
         }
       ],
       "related": [
@@ -1724,7 +1724,7 @@
           "text": "Buyers needing a fast downtown subway commute. There is no subway directly in The Beaches, and the streetcar/bus commute downtown runs longer than more central neighbourhoods."
         }
       ],
-      "laleh": "\"The Beaches is not a speculation market, it is a neighbourhood people buy into for the long term. Homes here sell fast, often in under three weeks, and well-presented properties frequently go over asking. Buyers need to have financing sorted before they start looking seriously, because hesitation costs you the property. On a $1.5M home, the cashback is over $32,000, which matters a lot in a market where you are competing against other serious, prepared buyers.\"",
+      "laleh": "\"The Beaches is not a speculation market, it is a neighbourhood people buy into for the long term. Homes here sell fast, often in under three weeks, and well-presented properties frequently go over asking. Buyers need to have financing sorted before they start looking seriously, because hesitation costs you the property. On a $1.5M home, the cashback is over {{CBF:1500000}}, which matters a lot in a market where you are competing against other serious, prepared buyers.\"",
       "faqs": [
         {
           "q": "Is The Beaches good for families?",
@@ -1740,7 +1740,7 @@
         },
         {
           "q": "How much cashback would I get on a typical Beaches purchase?",
-          "a": "On a $1.5M home at 2.5% buyer agent commission, you'd receive approximately $32,500 back after closing with Home Cashbacks. On a $2.45M detached at 2.5%, that's over $56,000 back. Use the calculator above to run your own numbers."
+          "a": "On a $1.5M home at 2.5% buyer agent commission, you'd receive approximately {{CB:1500000}} back after closing with Home Cashbacks. On a $2.45M detached at 2.5%, that's over {{CBF:2450000}} back. Use the calculator above to run your own numbers."
         }
       ],
       "related": [
@@ -1877,7 +1877,7 @@
           "text": "Buyers on a tight entry-level budget. Semis regularly clear $1.3M, and detached homes push toward $2M and above. Condos are the more accessible entry point but supply is limited."
         }
       ],
-      "laleh": "\"Roncesvalles buyers are usually choosing it over the Annex or Leslieville for one reason: High Park. You get the same walkable main-street energy, the same subway access, but with a real park on your doorstep. It moves fast, homes here sell in under two weeks on average, so buyers need financing locked before they start touring. On a $1.3M semi, the cashback is over $27,000, which is real money to have in hand when you are competing in a market this quick.\"",
+      "laleh": "\"Roncesvalles buyers are usually choosing it over the Annex or Leslieville for one reason: High Park. You get the same walkable main-street energy, the same subway access, but with a real park on your doorstep. It moves fast, homes here sell in under two weeks on average, so buyers need financing locked before they start touring. On a $1.3M semi, the cashback is over {{CBF:1300000}}, which is real money to have in hand when you are competing in a market this quick.\"",
       "faqs": [
         {
           "q": "Is Roncesvalles good for families?",
@@ -1893,7 +1893,7 @@
         },
         {
           "q": "How much cashback would I get on a typical Roncesvalles purchase?",
-          "a": "On a $1.3M semi at 2.5% buyer agent commission, you'd receive approximately $27,500 back after closing with Home Cashbacks. On a $1.8M detached at 2.5%, that's $40,000 back. Use the calculator above to run your own numbers."
+          "a": "On a $1.3M semi at 2.5% buyer agent commission, you'd receive approximately {{CB:1300000}} back after closing with Home Cashbacks. On a $1.8M detached at 2.5%, that's {{CBR:1800000}} back. Use the calculator above to run your own numbers."
         }
       ],
       "related": [

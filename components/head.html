@@ -8,7 +8,7 @@
       "@id": "https://homecashbacks.ca/#business",
       "name": "Home Cashbacks",
       "legalName": "Home Cashbacks",
-      "description": "Full-service Toronto buyer agent offering cashback on every home purchase. We charge a flat $4,999 fee and return the rest of the buyer agent commission to you after closing.",
+      "description": "Full-service Toronto buyer agent offering cashback on every home purchase. We charge a flat {{BUYER_FEE}} fee and return the rest of the buyer agent commission to you after closing.",
       "url": "https://homecashbacks.ca",
       "telephone": "+14374437556",
       "email": "Laleh@homecashbacks.ca",
@@ -111,7 +111,7 @@
         {"@type": "City", "name": "East Gwillimbury"}
       ],
       "serviceType": "Buyer Agent with Cashback",
-      "priceRange": "$4,999 + HST flat fee",
+      "priceRange": "{{SELLER_FEE}} to {{BUYER_FEE}} + HST flat fee",
       "sameAs": [
         "https://www.linkedin.com/company/homecashbacks/about/",
         "https://www.instagram.com/homecashbacks/",
@@ -126,10 +126,10 @@
       "@id": "https://homecashbacks.ca/#service",
       "name": "Cashback Buyer Agent Service",
       "provider": {"@id": "https://homecashbacks.ca/#business"},
-      "description": "Full-service buyer representation in the Greater Toronto Area. Showings, offer writing, negotiation, and closing coordination. We charge a flat $4,999 fee and return everything above that from the buyer agent commission back to you after closing.",
+      "description": "Full-service buyer representation in the Greater Toronto Area. Showings, offer writing, negotiation, and closing coordination. We charge a flat {{BUYER_FEE}} fee and return everything above that from the buyer agent commission back to you after closing.",
       "offers": {
         "@type": "Offer",
-        "price": "4999",
+        "price": "{{BUYER_FEE_NUM}}",
         "priceCurrency": "CAD",
         "description": "Flat buyer agent fee. The remaining buyer agent commission (typically 2 to 2.5% of purchase price) is returned to the buyer 6 to 8 weeks after closing.",
         "eligibleRegion": {"@type": "AdministrativeArea", "name": "Greater Toronto Area, Ontario, Canada"}
