@@ -3,11 +3,12 @@
 Dates are Toronto time, when the change went live on homecashbacks.ca (the `main` branch). Not published on the website.
 When two changes land in the same week, we cannot separate their effects, so note that in the weekly report.
 
-## PENDING RELEASE — buyer flat fee raised from $4,999 to $5,999 + HST (test period 2-3 months)
+## 2026-11-06 (about 5:45 pm Toronto time) — PR #6: buyer flat fee raised from $4,999 to $5,999 + HST (test period 2-3 months)
 - Buyer flat fee is now **$5,999 + HST**. Seller (listing) fee stays **$4,999 + HST**. Clients quoted $4,999 earlier keep $4,999.
 - Every cashback example drops by exactly $1,000 (for example $1M home: about $19,000 back instead of $20,000). Comparison pages were recalculated: the flat fee now beats a 50% split above about $480,000 (was about $400,000); the footer shows both fees.
 - Past deals on /recent-deals.html stay calculated at the old fee, with a note.
-- When this goes live, write the exact date and time here. The showing-fee change (2026-10-21) was only a few weeks earlier, so the two changes overlap in any before/after comparison.
+- Same release: Recent deals page (indexable) and homepage strip of the three biggest cashbacks, design quick wins (12px minimum text, darker labels, bigger tap areas), Our Story photo hero, explainer video and homepage "How it works" intro hidden until a new video is ready, X link and extra profiles in structured data, "Commission rebate in Ontario" section.
+- The showing-fee change (2026-10-21) was only a few weeks earlier, so the two changes overlap in any before/after comparison. Baseline for the fee test: the 4 weeks before 2026-11-06; read rates per 100 visits and real HubSpot leads after 6 to 8 weeks.
 
 ## 2026-10-21 (about 1:50 pm) — PR #3: showing fee
 - Every showing is **$40 + HST**. The free first showing and the old $30 fee are gone from all pages, templates, structured data and `llms.txt`.
