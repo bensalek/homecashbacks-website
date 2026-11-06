@@ -125,12 +125,12 @@
   <div class="guide-section">
     <div class="guide-eyebrow-sm">If you're selling</div>
     <h2 class="guide-h2">How much a low commission realtor saves you as a seller</h2>
-    <p class="guide-p">Standard listing commission in Toronto is typically 2.5% of the sale price. On a flat fee model, that cost is fixed regardless of your home's price, so the savings grow the more your home is worth.</p>
+    <p class="guide-p">Standard listing commission in Toronto is typically 2.5% of the sale price. On a flat fee model, that cost is fixed regardless of your home's price, so the savings grow the more your home is worth. Our flat fee for selling is {{SELLER_FEE}} + HST (our buyer fee is {{BUYER_FEE}} + HST, see the buying numbers below).</p>
     <table class="compare-table">
       <tr>
         <th>Home price</th>
         <th>Standard 2.5% listing commission</th>
-        <th>Flat {{SELLER_FEE}} fee</th>
+        <th>Flat {{SELLER_FEE}} listing fee</th>
         <th>You save</th>
       </tr>
       <tr>
@@ -167,6 +167,38 @@
     <div class="guide-eyebrow-sm">If you're buying</div>
     <h2 class="guide-h2">How a low commission model works when you're the buyer</h2>
     <p class="guide-p">Buyers don't pay their realtor directly. The seller sets aside a buyer agent commission in every deal, typically 2.5%, regardless of which agent represents you. A low commission buyer agent takes a flat fee from that amount and returns the rest to you after closing.</p>
+    <table class="compare-table">
+      <tr>
+        <th>Home price</th>
+        <th>Buyer agent commission (2.5%)</th>
+        <th>Flat {{BUYER_FEE}} fee</th>
+        <th>Your cashback</th>
+      </tr>
+      <tr>
+        <td>$800,000</td>
+        <td>$20,000</td>
+        <td class="good">{{BUYER_FEE}}</td>
+        <td class="good">{{CB:800000}}</td>
+      </tr>
+      <tr>
+        <td>$1,000,000</td>
+        <td>$25,000</td>
+        <td class="good">{{BUYER_FEE}}</td>
+        <td class="good">{{CB:1000000}}</td>
+      </tr>
+      <tr>
+        <td>$1,500,000</td>
+        <td>$37,500</td>
+        <td class="good">{{BUYER_FEE}}</td>
+        <td class="good">{{CB:1500000}}</td>
+      </tr>
+      <tr>
+        <td>$2,000,000</td>
+        <td>$50,000</td>
+        <td class="good">{{BUYER_FEE}}</td>
+        <td class="good">{{CB:2000000}}</td>
+      </tr>
+    </table>
     <div class="example-box">
       <div class="example-box-label">$1,000,000 Toronto home &middot; 2.5% buyer agent commission</div>
       <div class="example-row">

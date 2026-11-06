@@ -153,7 +153,10 @@ pages.forEach(function(filename) {
   };
   var dealsHavePlaceholders = dealsAll.some(function(d) { return JSON.stringify(d).indexOf('[') !== -1; });
   if (page.indexOf('{{HOME_DEALS}}') !== -1) {
-    var homeDeals = dealsAll.filter(function(d) { return d.image && d.neighbourhood.indexOf('[') === -1; }).sort(function(a, b) { return (a.illustration ? 1 : 0) - (b.illustration ? 1 : 0); }).slice(0, 3);
+    // Homepage strip: the buyer deals with the biggest cashback (worked out at the fee they closed at), best first
+    var dealAmount = function(d) { return d.amount ? Number(String(d.amount).replace(/[^\d]/g, '')) : d.price * (d.commission || 0.025) - dealsFee; };
+    var homeDeals = dealsAll.filter(function(d) { return d.image && d.type !== 'Seller' && d.neighbourhood.indexOf('[') === -1; })
+      .sort(function(a, b) { return dealAmount(b) - dealAmount(a); }).slice(0, 3);
     var homeCards = homeDeals.map(function(d) {
       var o = dealOutcome(d);
       return '      <div class="deal-card">\n' +
@@ -168,7 +171,8 @@ pages.forEach(function(filename) {
     }).join('\n');
     var homeDots = homeDeals.map(function(d, i) { return '      <button class="deals-dot' + (i === 0 ? ' active' : '') + '" aria-label="Deal ' + (i + 1) + '" onclick="dealsGoTo(' + i + ')"></button>'; }).join('\n');
     // the link to the full page stays hidden while that page still has [placeholders]
-    var homeLink = dealsHavePlaceholders ? '' : '    <p class="deals-more"><a href="/recent-deals.html">See all recent deals &rarr;</a></p>';
+    var homeNote = '    <p class="deals-note">Cashback amounts are estimates, worked out at the lower fee in place when each deal closed.' + (homeDeals.some(function(d) { return d.illustration; }) ? ' Some images are illustrations, not photos of the actual homes.' : '') + '</p>';
+    var homeLink = homeNote + (dealsHavePlaceholders ? '' : '\n    <p class="deals-more"><a href="/recent-deals.html">See all recent deals &rarr;</a></p>');
     page = page.replace('{{HOME_DEALS}}', homeCards).replace('{{HOME_DEALS_DOTS}}', homeDots).replace('{{HOME_DEALS_LINK}}', homeLink);
   }
 

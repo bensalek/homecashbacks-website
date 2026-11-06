@@ -546,7 +546,8 @@ footer a{color:var(--cta);text-decoration:none}
 .deal-lead{font-size:12px;font-weight:600;letter-spacing:.3px;color:var(--muted)}
 .deal-amt{font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:700;line-height:1.1;color:var(--cta)}
 .deal-tail{font-size:13px;font-weight:500;color:var(--ink)}
-.deals-more{text-align:center;margin-top:1.5rem}
+.deals-note{font-size:12px;line-height:1.6;color:var(--muted);text-align:center;margin:1.25rem auto 0;max-width:620px}
+.deals-more{text-align:center;margin-top:.75rem}
 .deals-more a{color:var(--cta);font-weight:600;font-size:15px;text-decoration:none}
 @media(max-width:680px){
   .deals-section{padding:2rem 1.25rem}
