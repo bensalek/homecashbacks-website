@@ -354,23 +354,20 @@ body{font-family:'Rubik',sans-serif;background:var(--bg);color:var(--ink);line-h
 
 <!-- RECENT DEALS -->
 <!-- EXPLAINER VIDEO -->
-<!-- HIDDEN for now (Ben): the "How it works" intro text. Remove style="display:none" to show it again, together with the video block inside it. -->
-<section class="explainer-section section" style="display:none">
+<section class="explainer-section section">
   <div class="sec-inner">
     <div class="explainer-card">
       <div class="eyebrow">How it works</div>
       <h2 class="sec-title" style="font-size:clamp(26px,4vw,36px);margin-bottom:1.25rem">Cash back realtors in Toronto: how cashback actually works</h2>
       <p style="margin:0 0 1.25rem;line-height:1.6">Cash back real estate agents return part of the buyer agent commission to you after closing. Some cash back brokerages return a percentage of it. Laleh Mousavi, a registered Realtor with Smart Brokerages, charges a flat {{BUYER_FEE}} + HST and returns the rest, about {{CBR:1000000}} on a $1M home at a 2.5% commission.</p>
-      <!-- VIDEO HIDDEN until the updated explainer video is ready (it still said ~$20K back). To show it again, remove these comment markers.
       <div class="explainer-video" id="home-video" onclick="playHomeVideo()">
-        <video id="home-video-el" playsinline preload="none" poster="/assets/homecashbacks-explainer-poster.jpg">
+        <video id="home-video-el" playsinline preload="none" aria-label="HomeCashbacks explainer video" poster="/assets/homecashbacks-explainer-poster.jpg">
           <source src="/assets/homecashbacks-explainer.mp4" type="video/mp4">
         </video>
         <div class="explainer-video-play">
           <div class="explainer-video-play-btn" aria-label="Play video"></div>
         </div>
       </div>
-      -->
     </div>
   </div>
 </section>
